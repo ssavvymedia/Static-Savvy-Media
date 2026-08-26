@@ -1,0 +1,534 @@
+import { useEffect, useRef, useState } from 'react'
+import { Link } from 'react-router-dom'
+import Breadcrumbs from '../../../components/common/Breadcrumbs.jsx'
+import Button from '../../../components/common/Button.jsx'
+import FAQSection from '../../../components/sections/FAQSection.jsx'
+import CTASection from '../../../components/sections/CTASection.jsx'
+import { ScrollReveal } from '../../../components/animations/ScrollReveal.jsx'
+import { setSeo } from '../../../utils/seo.js'
+import {
+  serviceSchema,
+  faqPageSchema,
+  breadcrumbListSchema,
+} from '../../../utils/schema.js'
+import { buildWhatsAppLink } from '../../../utils/helpers.js'
+import {
+  WHATSAPP_NUMBER,
+  WHATSAPP_MESSAGE,
+  SITE_URL,
+} from '../../../utils/constants.js'
+import '../../../styles/pages/ai-business-automation-malaysia.css'
+
+/* ============================================================
+   CONTENT, AI Business Automation Malaysia
+   ============================================================ */
+
+const PAGE_TITLE =
+  'AI Business Automation Malaysia, SME Grant-Eligible Digital Services | Static Savvy Media'
+
+const PAGE_DESCRIPTION =
+  "AI business automation for Malaysian SMEs, WhatsApp workflows, lead automation, customer service, reporting and document processing. Explore grant-eligible digital transformation options with Static Savvy Media."
+
+const HERO_EYEBROW = 'AI BUSINESS AUTOMATION · MALAYSIA'
+
+const HERO_TITLE =
+  'AI Business Automation Malaysia, SME Grant-Eligible Digital Services'
+
+const HERO_PARAGRAPH =
+  'AI business automation is now accessible to every SME in Malaysia, and we build it for you without requiring your team to have a technical background. From lead capture to WhatsApp workflows, we create practical automation systems that help Malaysian businesses operate more efficiently.'
+
+const AUTOMATIONS = [
+  {
+    number: '01',
+    title: 'Lead capture and qualification',
+    text: 'AI chatbots that collect lead information, qualify enquiries, and route hot leads directly to WhatsApp, 24/7, without staff involvement.',
+  },
+  {
+    number: '02',
+    title: 'WhatsApp automation',
+    text: 'Automated follow-up sequences, appointment reminders, and status updates through WhatsApp Business API.',
+  },
+  {
+    number: '03',
+    title: 'Customer service workflows',
+    text: 'FAQ chatbots handling your 20 most common customer questions without human involvement, freeing your team for complex interactions.',
+  },
+  {
+    number: '04',
+    title: 'Content workflow automation',
+    text: 'Automated content scheduling, social media posting pipelines, and email newsletter workflows integrated with your CMS.',
+  },
+  {
+    number: '05',
+    title: 'Reporting automation',
+    text: 'Automated weekly and monthly performance reports pulled from GA4, GSC, and ad platforms, delivered to your WhatsApp or email without manual assembly.',
+  },
+  {
+    number: '06',
+    title: 'Document and data processing',
+    text: 'AI tools that extract, categorise, and summarize documents, useful for businesses processing invoices, contracts, or high volumes of enquiry forms.',
+  },
+]
+
+const WHY_MALAYSIA = [
+  'Handle customer enquiries outside office hours with automated WhatsApp responses',
+  'Follow up consistently with leads who enquired but did not convert immediately',
+  'Reduce repetitive administrative work that consumes team time',
+  'Centralise customer communication through WhatsApp Business API',
+  'Automate reporting across GA4, Google Ads, and social media platforms',
+  'Process documents and enquiry forms without manual data entry',
+  'Maintain content workflows across multiple platforms simultaneously',
+]
+
+const TOOLS = [
+  'Make',
+  'Zapier',
+  'n8n',
+  'WhatsApp Business API',
+  'OpenAI API',
+  'Google Apps Script',
+  'Notion',
+  'Airtable',
+]
+
+const TOOLS_TEXT =
+  'We build automations using tools your team can manage without ongoing developer dependency: Make (formerly Integromat), Zapier, n8n, WhatsApp Business API, OpenAI API integration, Google Apps Script, and Notion/Airtable as lightweight data layers. Every automation includes documentation so your team can troubleshoot basic issues independently.'
+
+const GRANTS = [
+  {
+    number: '01',
+    title: 'MDEC, Digital Economy Programme',
+    text: 'Supports SME adoption of digital tools and automation. Our AI automation services may qualify under the digital transformation spend category.',
+  },
+  {
+    number: '02',
+    title: 'SMECorp, SME Digitalisation Initiative',
+    text: 'Government matching grants for SME digital adoption. AI automation and workflow tools from registered vendors may be eligible for matching grants.',
+  },
+  {
+    number: '03',
+    title: 'TEKUN, Bumiputera Digital Grant',
+    text: 'Digital tools and automation support grants for Bumiputera-owned businesses.',
+  },
+  {
+    number: '04',
+    title: 'Cradle Fund, CIP Spark',
+    text: 'Technology commercialisation funding that can support automation and digital presence building for technology-related SMEs.',
+  },
+]
+
+const GRANT_DISCLAIMER =
+  'Grant programme terms, eligibility criteria, and funding availability change regularly. Contact us on WhatsApp to discuss which current programmes may be applicable to your business. We do not guarantee grant approval, we help you understand your options and connect you with the right channels.'
+
+const PROCESS_STEPS = [
+  {
+    number: '01',
+    title: 'Understand',
+    text: 'Understand your business process, repetitive tasks, customer communication patterns and operational bottlenecks.',
+  },
+  {
+    number: '02',
+    title: 'Map',
+    text: 'Map the existing workflow and identify what can be automated for maximum efficiency gain.',
+  },
+  {
+    number: '03',
+    title: 'Build',
+    text: 'Build the automation using appropriate no-code, low-code, API and AI tools.',
+  },
+  {
+    number: '04',
+    title: 'Test',
+    text: 'Test the workflow, integrations, notifications and exception handling thoroughly.',
+  },
+  {
+    number: '05',
+    title: 'Handover',
+    text: 'Provide documentation and a handover walkthrough so your team can manage basic issues independently.',
+  },
+]
+
+const TRUST_POINTS = [
+  'Practical, business-focused automation, not technical demos',
+  'No-code and low-code implementation, no developer dependency',
+  'Complete documentation and handover for every automation',
+  'WhatsApp Business API workflows built and managed for you',
+  'Grant-aware project planning for Malaysian SMEs',
+  'Reduced operational costs through workflow automation',
+]
+
+const FAQS = [
+  {
+    question: 'Do I need technical staff to use AI automation tools?',
+    answer:
+      'No. We build automations using no-code and low-code tools such as Make, Zapier and n8n that non-technical business owners can monitor, adjust and expand with minimal training. We provide documentation and a handover walkthrough for every automation we build.',
+  },
+  {
+    question: 'Can AI automation work with my existing WhatsApp Business number?',
+    answer:
+      'Yes, but WhatsApp Business API, which is required for automation, is different from the standard WhatsApp Business app. We handle the API setup and provider onboarding. Your existing phone number can typically be migrated to the API with minimal disruption.',
+  },
+  {
+    question: 'Is AI automation relevant for small businesses, not just larger companies?',
+    answer:
+      'It is most impactful for small businesses. A 5-person team running a well-built automation stack can handle the enquiry volume and customer communication of a 10-person team, without the corresponding payroll. The ROI per ringgit spent on automation is typically higher for SMEs than for large companies because the relative efficiency gain is larger.',
+  },
+  {
+    question: 'Can Malaysian SMEs use government grants for AI automation?',
+    answer:
+      'Qualifying Malaysian SMEs may be able to use applicable digitalisation or digital transformation grant programmes, depending on the current programme rules and the business’s eligibility. Static Savvy Media can help you understand which current programmes may be relevant to your automation project, but grant approval is not guaranteed.',
+  },
+]
+
+const CTA = {
+  title: 'Work smarter. Automate the repetitive. Focus on what only you can do.',
+  label: 'WhatsApp Us About Automation',
+}
+
+const WHATSAPP_MSG = 'Hi Static Savvy Media, I would like to know more about AI business automation for my Malaysian business.'
+
+/* ============================================================
+   COMPONENT
+   ============================================================ */
+
+export default function AIBusinessAutomation_Malaysia() {
+  const jsonLdRef = useRef([])
+
+  useEffect(() => {
+    setSeo({
+      title: PAGE_TITLE,
+      description: PAGE_DESCRIPTION,
+      canonical: `${SITE_URL}/services/ai-business-automation/malaysia/`,
+      ogType: 'website',
+    })
+
+    const service = serviceSchema({
+      name: 'AI Business Automation Malaysia',
+      description:
+        'AI business automation services for Malaysian SMEs, including lead capture, WhatsApp automation, customer service workflows, content workflows, reporting automation and document/data processing.',
+      url: `${SITE_URL}/services/ai-business-automation/malaysia/`,
+      areaServed: 'Malaysia',
+    })
+
+    const faq = faqPageSchema({
+      faqs: FAQS.map((faq) => ({
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+      })),
+    })
+
+    const breadcrumbs = breadcrumbListSchema({
+      items: [
+        { name: 'Home', item: `${SITE_URL}/` },
+        { name: 'Services', item: `${SITE_URL}/services/` },
+        { name: 'AI Business Automation', item: `${SITE_URL}/services/ai-business-automation/` },
+        { name: 'Malaysia', item: `${SITE_URL}/services/ai-business-automation/malaysia/` },
+      ],
+    })
+
+    const scripts = [service, faq, breadcrumbs].map((data) => {
+      const script = document.createElement('script')
+      script.type = 'application/ld+json'
+      script.text = JSON.stringify(data)
+      document.head.appendChild(script)
+      return script
+    })
+    jsonLdRef.current = scripts
+
+    return () => {
+      jsonLdRef.current.forEach((s) => s.remove())
+      jsonLdRef.current = []
+    }
+  }, [])
+
+  const whatsappHref = buildWhatsAppLink(WHATSAPP_NUMBER, WHATSAPP_MSG)
+
+  return (
+    <div className="aba-malaysia-page">
+      <Breadcrumbs />
+
+      {/* HERO */}
+      <section className="section">
+        <div className="container">
+          <div className="aba-malaysia-hero">
+            <span className="aba-malaysia-hero__badge">{HERO_EYEBROW}</span>
+            <h1 className="hero__title aba-malaysia-hero__title">{HERO_TITLE}</h1>
+            <p className="aba-malaysia-hero__text">{HERO_PARAGRAPH}</p>
+            <div className="aba-malaysia-hero__ctas">
+              <Button
+                href={whatsappHref}
+                variant="primary"
+                size="lg"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {CTA.label}
+              </Button>
+              <Button href="/services/ai-business-automation/" variant="ghost" size="lg">
+                Explore AI Business Automation
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* WHAT WE AUTOMATE */}
+      <section className="section section--alt">
+        <div className="container">
+          <ScrollReveal>
+            <div className="section-heading section-heading--left">
+              <span className="section-heading__eyebrow">Services</span>
+              <h2 className="section-heading__title">What We Automate</h2>
+              <p className="section-heading__subtitle">
+                Six core automation areas designed for Malaysian SME operations.
+              </p>
+            </div>
+          </ScrollReveal>
+          <div className="aba-malaysia-automations">
+            {AUTOMATIONS.map((item) => (
+              <ScrollReveal key={item.number}>
+                <div className="aba-malaysia-automation glass-card">
+                  <span className="aba-malaysia-automation__number">{item.number}</span>
+                  <h3 className="aba-malaysia-automation__title">{item.title}</h3>
+                  <p className="aba-malaysia-automation__text">{item.text}</p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* WHY MALAYSIA */}
+      <section className="section">
+        <div className="container">
+          <ScrollReveal>
+            <div className="section-heading section-heading--left">
+              <span className="section-heading__eyebrow">Malaysia</span>
+              <h2 className="section-heading__title">Why AI Automation Matters for Malaysian SMEs</h2>
+              <p className="section-heading__subtitle">
+                Malaysian businesses face unique operational challenges. Automation helps you
+                handle more with the team you have.
+              </p>
+            </div>
+          </ScrollReveal>
+          <div className="aba-malaysia-why">
+            <ul className="aba-malaysia-why__list">
+              {WHY_MALAYSIA.map((item, i) => (
+                <li key={i} className="aba-malaysia-why__item">
+                  <span className="aba-malaysia-why__check" aria-hidden="true">&#10003;</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* TOOLS */}
+      <section className="section section--alt">
+        <div className="container">
+          <ScrollReveal>
+            <div className="section-heading section-heading--left">
+              <span className="section-heading__eyebrow">Tools</span>
+              <h2 className="section-heading__title">Tools We Use</h2>
+            </div>
+          </ScrollReveal>
+          <p className="aba-malaysia-tools__text">{TOOLS_TEXT}</p>
+          <div className="aba-malaysia-tools">
+            {TOOLS.map((tool) => (
+              <span key={tool} className="aba-malaysia-tool glass-card">
+                {tool}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* GRANTS */}
+      <section className="section">
+        <div className="container">
+          <ScrollReveal>
+            <div className="section-heading section-heading--left">
+              <span className="section-heading__eyebrow">Grants</span>
+              <h2 className="section-heading__title">Malaysia SME Digital Transformation Grants</h2>
+              <p className="section-heading__subtitle">
+                Our AI automation service is eligible for MDEC and SMECorp digital transformation
+                grants for qualifying Malaysian SMEs.
+              </p>
+            </div>
+          </ScrollReveal>
+          <div className="aba-malaysia-grants">
+            {GRANTS.map((item) => (
+              <ScrollReveal key={item.number}>
+                <div className="aba-malaysia-grant glass-card">
+                  <span className="aba-malaysia-grant__number">{item.number}</span>
+                  <h3 className="aba-malaysia-grant__title">{item.title}</h3>
+                  <p className="aba-malaysia-grant__text">{item.text}</p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+          <div className="aba-malaysia-grant-disclaimer glass-card">
+            <p>{GRANT_DISCLAIMER}</p>
+          </div>
+        </div>
+      </section>
+
+      {/* MALAYSIA CONTEXT */}
+      <section className="section section--alt">
+        <div className="container">
+          <ScrollReveal>
+            <div className="section-heading section-heading--left">
+              <span className="section-heading__eyebrow">Local</span>
+              <h2 className="section-heading__title">AI Automation for Businesses in Malaysia</h2>
+            </div>
+          </ScrollReveal>
+          <div className="aba-malaysia-context">
+            <p>
+              Malaysian SMEs in Selangor, Rawang, Kuala Lumpur and the Klang Valley are
+              increasingly adopting AI automation to stay competitive. Whether you run a
+              service business, retail operation, or professional practice, automation helps
+              you handle customer enquiries, manage workflows and process information more
+              efficiently.
+            </p>
+            <p>
+              We work with businesses operating in English and Bahasa Malaysia environments,
+              building WhatsApp-based automation systems that match how Malaysian customers
+              actually communicate. From SME digitalisation to workflow optimisation, our
+              automation services are designed for the Malaysian business context.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* PROCESS */}
+      <section className="section">
+        <div className="container">
+          <ScrollReveal>
+            <div className="section-heading section-heading--left">
+              <span className="section-heading__eyebrow">Process</span>
+              <h2 className="section-heading__title">How AI Automation Works</h2>
+            </div>
+          </ScrollReveal>
+          <div className="aba-malaysia-process">
+            {PROCESS_STEPS.map((step) => (
+              <div key={step.number} className="aba-malaysia-process__step">
+                <span className="aba-malaysia-process__number">{step.number}</span>
+                <div className="aba-malaysia-process__content">
+                  <h3 className="aba-malaysia-process__title">{step.title}</h3>
+                  <p className="aba-malaysia-process__text">{step.text}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* TRUST */}
+      <section className="section section--alt">
+        <div className="container">
+          <ScrollReveal>
+            <div className="section-heading section-heading--left">
+              <span className="section-heading__eyebrow">Why Us</span>
+              <h2 className="section-heading__title">Why Malaysian SMEs Work With Static Savvy Media</h2>
+            </div>
+          </ScrollReveal>
+          <div className="aba-malaysia-trust">
+            {TRUST_POINTS.map((point, i) => (
+              <div key={i} className="aba-malaysia-trust__point glass-card">
+                <span className="aba-malaysia-trust__check" aria-hidden="true">&#10003;</span>
+                <span>{point}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* NAP */}
+      <section className="section">
+        <div className="container">
+          <ScrollReveal>
+            <div className="aba-malaysia-nap glass-card">
+              <h2 className="aba-malaysia-nap__title">Static Savvy Media, Malaysia</h2>
+              <div className="aba-malaysia-nap__details">
+                <p>Rawang, Selangor, Malaysia</p>
+                <p>WhatsApp: +91-99440-40345</p>
+                <p>Hours: Monday–Friday, 9:00 AM – 6:00 PM MYT</p>
+              </div>
+              <div className="aba-malaysia-nap__links">
+                <a
+                  href={whatsappHref}
+                  className="btn btn--primary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {CTA.label}
+                </a>
+              </div>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="section section--alt">
+        <div className="container">
+          <ScrollReveal>
+            <div className="section-heading section-heading--left">
+              <span className="section-heading__eyebrow">FAQ</span>
+              <h2 className="section-heading__title">AI Business Automation Malaysia, Frequently Asked Questions</h2>
+            </div>
+          </ScrollReveal>
+          <div className="aba-malaysia-faqs">
+            {FAQS.map((faq, i) => (
+              <FAQItem key={i} faq={faq} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <CTASection title={CTA.title} />
+    </div>
+  )
+}
+
+/* ============================================================
+   FAQ ITEM COMPONENT
+   ============================================================ */
+
+function FAQItem({ faq }) {
+  const [open, setOpen] = useState(false)
+  const answerId = `aba-malaysia-faq-answer-${faq.question.slice(0, 30).replace(/\s/g, '-')}`
+  const questionId = `aba-malaysia-faq-question-${faq.question.slice(0, 30).replace(/\s/g, '-')}`
+
+  return (
+    <div className={`aba-malaysia-faq glass-card ${open ? 'aba-malaysia-faq--open' : ''}`}>
+      <button
+        className="aba-malaysia-faq__trigger"
+        onClick={() => setOpen(!open)}
+        aria-expanded={open}
+        aria-controls={answerId}
+        id={questionId}
+      >
+        <span className="aba-malaysia-faq__question">{faq.question}</span>
+        <span className="aba-malaysia-faq__icon" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <line x1="12" y1="5" x2="12" y2="19" />
+            <line x1="5" y1="12" x2="19" y2="12" />
+          </svg>
+        </span>
+      </button>
+      <div
+        className="aba-malaysia-faq__answer-wrap"
+        id={answerId}
+        role="region"
+        aria-labelledby={questionId}
+        hidden={!open}
+      >
+        <p className="aba-malaysia-faq__answer">{faq.answer}</p>
+      </div>
+    </div>
+  )
+}

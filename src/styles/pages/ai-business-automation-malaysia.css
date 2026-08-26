@@ -1,0 +1,372 @@
+/* AI Business Automation Malaysia — Service × Location Page */
+
+/* Hero */
+.aba-malaysia-hero {
+  max-width: 800px;
+}
+
+.aba-malaysia-hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid rgba(139, 92, 246, 0.4);
+  background: rgba(139, 92, 246, 0.12);
+  color: var(--color-violet);
+  font-size: var(--fs-small);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.aba-malaysia-hero__title {
+  margin-bottom: 1rem;
+}
+
+.aba-malaysia-hero__text {
+  font-size: clamp(1rem, 1.3vw, 1.1rem);
+  line-height: 1.8;
+  color: var(--color-text-muted);
+  margin-bottom: 2rem;
+  max-width: 700px;
+}
+
+.aba-malaysia-hero__ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Automations Grid */
+.aba-malaysia-automations {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.aba-malaysia-automation {
+  padding: 1.75rem;
+}
+
+.aba-malaysia-automation__number {
+  display: inline-block;
+  color: var(--color-violet);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.75rem;
+}
+
+.aba-malaysia-automation__title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--color-text);
+}
+
+.aba-malaysia-automation__text {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+}
+
+/* Why Malaysia */
+.aba-malaysia-why__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.aba-malaysia-why__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-md);
+  background: var(--color-surface-glass);
+  border: 1px solid var(--color-border);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+.aba-malaysia-why__check {
+  flex-shrink: 0;
+  color: #10b981;
+  font-weight: 700;
+}
+
+/* Tools */
+.aba-malaysia-tools__text {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--color-text-muted);
+  margin-bottom: 1.5rem;
+  max-width: 800px;
+}
+
+.aba-malaysia-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.aba-malaysia-tool {
+  padding: 0.75rem 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+/* Grants */
+.aba-malaysia-grants {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.aba-malaysia-grant {
+  padding: 1.75rem;
+}
+
+.aba-malaysia-grant__number {
+  display: inline-block;
+  color: var(--color-violet);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.75rem;
+}
+
+.aba-malaysia-grant__title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--color-text);
+}
+
+.aba-malaysia-grant__text {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+}
+
+.aba-malaysia-grant-disclaimer {
+  margin-top: 1.5rem;
+  padding: 1.25rem 1.5rem;
+  border-left: 3px solid var(--color-violet);
+}
+
+.aba-malaysia-grant-disclaimer p {
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+}
+
+/* Context */
+.aba-malaysia-context {
+  max-width: 800px;
+}
+
+.aba-malaysia-context p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+}
+
+.aba-malaysia-context p:last-child {
+  margin-bottom: 0;
+}
+
+/* Process */
+.aba-malaysia-process {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 700px;
+}
+
+.aba-malaysia-process__step {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+
+.aba-malaysia-process__number {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(139, 92, 246, 0.15);
+  border: 1px solid rgba(139, 92, 246, 0.4);
+  color: var(--color-violet);
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.aba-malaysia-process__title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+}
+
+.aba-malaysia-process__text {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+}
+
+/* Trust */
+.aba-malaysia-trust {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.aba-malaysia-trust__point {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1.25rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+.aba-malaysia-trust__check {
+  flex-shrink: 0;
+  color: #10b981;
+  font-weight: 700;
+}
+
+/* NAP */
+.aba-malaysia-nap {
+  text-align: center;
+  padding: 2.5rem;
+}
+
+.aba-malaysia-nap__title {
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.aba-malaysia-nap__details {
+  margin-bottom: 1.5rem;
+}
+
+.aba-malaysia-nap__details p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--color-text-muted);
+}
+
+.aba-malaysia-nap__links {
+  display: flex;
+  justify-content: center;
+}
+
+/* FAQs */
+.aba-malaysia-faqs {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 800px;
+}
+
+.aba-malaysia-faq {
+  padding: 1.25rem 1.5rem;
+}
+
+.aba-malaysia-faq__trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  color: var(--color-text);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  font-family: inherit;
+}
+
+.aba-malaysia-faq__icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(139, 92, 246, 0.15);
+  color: var(--color-violet);
+  transition: transform var(--transition);
+}
+
+.aba-malaysia-faq--open .aba-malaysia-faq__icon {
+  transform: rotate(45deg);
+}
+
+.aba-malaysia-faq__answer-wrap {
+  overflow: hidden;
+}
+
+.aba-malaysia-faq__answer {
+  padding-top: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--color-text-muted);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .aba-malaysia-automations {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .aba-malaysia-grants {
+    grid-template-columns: 1fr;
+  }
+
+  .aba-malaysia-trust {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .aba-malaysia-hero__ctas {
+    flex-direction: column;
+  }
+
+  .aba-malaysia-automations {
+    grid-template-columns: 1fr;
+  }
+
+  .aba-malaysia-why__list {
+    grid-template-columns: 1fr;
+  }
+
+  .aba-malaysia-trust {
+    grid-template-columns: 1fr;
+  }
+
+  .aba-malaysia-nap {
+    padding: 1.5rem;
+  }
+}

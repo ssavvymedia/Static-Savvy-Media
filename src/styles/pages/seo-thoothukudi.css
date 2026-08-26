@@ -1,0 +1,539 @@
+/* ====================================================
+   SEO Thoothukudi — Service × Location Page
+   ==================================================== */
+
+/* ---- Hero ---- */
+.seo-tut-hero {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.seo-tut-hero__badge {
+  display: inline-block;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: rgba(34, 211, 238, 0.12);
+  border: 1px solid rgba(34, 211, 238, 0.3);
+  color: var(--color-cyan);
+  align-self: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.seo-tut-hero__title {
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.seo-tut-hero__paragraph {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--color-text-muted);
+  max-width: 720px;
+}
+
+.seo-tut-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+/* ---- Flow ---- */
+.seo-tut-flow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.seo-tut-flow-step {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1.5rem;
+  background: var(--color-surface-glass);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(14px);
+  min-width: 160px;
+}
+
+.seo-tut-flow-step__text {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-cyan);
+}
+
+.seo-tut-flow-arrow {
+  display: flex;
+  align-items: center;
+  color: var(--color-cyan);
+  opacity: 0.5;
+}
+
+/* ---- Services Grid ---- */
+.seo-tut-services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+.seo-tut-service-card {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.seo-tut-service-card__number {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-cyan);
+  opacity: 0.8;
+  margin-bottom: 0.25rem;
+}
+
+.seo-tut-service-card__title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.seo-tut-service-card__text {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--color-text-muted);
+}
+
+/* ---- Technical SEO Grid ---- */
+.seo-tut-technical-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.seo-tut-technical-item {
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.seo-tut-technical-item__check {
+  font-size: 1rem;
+  color: var(--color-cyan);
+  flex-shrink: 0;
+}
+
+.seo-tut-technical-item__text {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--color-text);
+}
+
+/* ---- Keyword Grid ---- */
+.seo-tut-keyword-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.seo-tut-keyword-card {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.seo-tut-keyword-card__stage {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-cyan);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.seo-tut-keyword-card__example {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+  font-style: italic;
+}
+
+/* ---- On-Page Grid ---- */
+.seo-tut-onpage-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.seo-tut-onpage-item {
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.seo-tut-onpage-item__check {
+  font-size: 1rem;
+  color: var(--color-cyan);
+  flex-shrink: 0;
+}
+
+.seo-tut-onpage-item__text {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--color-text);
+}
+
+/* ---- Content Grid ---- */
+.seo-tut-content-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.seo-tut-content-card {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.seo-tut-content-card__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.seo-tut-content-card__text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+/* ---- Local SEO Card ---- */
+.seo-tut-local-card {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.seo-tut-local-card__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.seo-tut-local-card__text {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--color-text-muted);
+  max-width: 720px;
+}
+
+.seo-tut-local-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-cyan);
+  text-decoration: none;
+  transition: color var(--transition), transform var(--transition);
+}
+
+.seo-tut-local-card__link:hover {
+  color: var(--color-violet);
+  transform: translateX(4px);
+}
+
+.seo-tut-local-card__link svg {
+  transition: transform var(--transition);
+}
+
+.seo-tut-local-card__link:hover svg {
+  transform: translateX(4px);
+}
+
+/* ---- Industries Grid ---- */
+.seo-tut-industry-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.seo-tut-industry-card {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.seo-tut-industry-card__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.seo-tut-industry-card__text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+/* ---- Process Grid ---- */
+.seo-tut-process-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.seo-tut-process-card {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.seo-tut-process-card__number {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-cyan);
+  opacity: 0.8;
+  margin-bottom: 0.25rem;
+}
+
+.seo-tut-process-card__title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.seo-tut-process-card__text {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--color-text-muted);
+}
+
+/* ---- Measurement Grid ---- */
+.seo-tut-measurement-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.seo-tut-measurement-item {
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.seo-tut-measurement-item__check {
+  font-size: 1rem;
+  color: var(--color-cyan);
+  flex-shrink: 0;
+}
+
+.seo-tut-measurement-item__text {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--color-text);
+}
+
+/* ---- Why Us Grid ---- */
+.seo-tut-why-us-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+.seo-tut-why-us-card {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.seo-tut-why-us-card__number {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-cyan);
+  opacity: 0.8;
+  margin-bottom: 0.25rem;
+}
+
+.seo-tut-why-us-card__title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.seo-tut-why-us-card__text {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--color-text-muted);
+}
+
+/* ---- Related Links ---- */
+.seo-tut-related-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.seo-tut-related-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.25rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-decoration: none;
+  transition: all var(--transition);
+}
+
+.seo-tut-related-link:hover {
+  background: rgba(34, 211, 238, 0.15);
+  border-color: rgba(34, 211, 238, 0.4);
+  color: var(--color-cyan);
+  transform: translateY(-2px);
+}
+
+/* ---- Location Grid ---- */
+.seo-tut-location-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.seo-tut-location-card {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  text-decoration: none;
+  transition: all var(--transition);
+}
+
+.seo-tut-location-card:not(.seo-tut-location-card--current):hover {
+  transform: translateY(-4px);
+  border-color: rgba(34, 211, 238, 0.4);
+}
+
+.seo-tut-location-card--current {
+  border-color: rgba(34, 211, 238, 0.4);
+  background: rgba(34, 211, 238, 0.05);
+}
+
+.seo-tut-location-card__badge {
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(34, 211, 238, 0.15);
+  border: 1px solid rgba(34, 211, 238, 0.3);
+  color: var(--color-cyan);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  width: fit-content;
+}
+
+.seo-tut-location-card__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.seo-tut-location-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-cyan);
+  transition: color var(--transition), transform var(--transition);
+}
+
+.seo-tut-location-card:hover .seo-tut-location-card__link {
+  color: var(--color-violet);
+  transform: translateX(4px);
+}
+
+.seo-tut-location-card__link svg {
+  transition: transform var(--transition);
+}
+
+.seo-tut-location-card:hover .seo-tut-location-card__link svg {
+  transform: translateX(4px);
+}
+
+/* ---- Responsive: Tablet ---- */
+@media (max-width: 1024px) {
+  .seo-tut-services-grid,
+  .seo-tut-why-us-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .seo-tut-keyword-grid,
+  .seo-tut-industry-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .seo-tut-process-grid,
+  .seo-tut-content-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .seo-tut-location-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .seo-tut-technical-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ---- Responsive: Mobile ---- */
+@media (max-width: 768px) {
+  .seo-tut-hero__actions {
+    flex-direction: column;
+  }
+
+  .seo-tut-services-grid,
+  .seo-tut-why-us-grid,
+  .seo-tut-keyword-grid,
+  .seo-tut-industry-grid,
+  .seo-tut-process-grid,
+  .seo-tut-content-grid,
+  .seo-tut-location-grid,
+  .seo-tut-technical-grid,
+  .seo-tut-onpage-grid,
+  .seo-tut-measurement-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .seo-tut-flow {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .seo-tut-flow-arrow {
+    transform: rotate(90deg);
+  }
+}

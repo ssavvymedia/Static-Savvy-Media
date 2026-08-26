@@ -1,0 +1,588 @@
+/* ====================================================
+   Local Marketing Article — Custom Styles
+   Short Blog Post — Premium Futuristic Design
+   ==================================================== */
+
+/* ---- Hero ---- */
+.local-marketing-hero {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.local-marketing-hero__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.local-marketing-hero__badge {
+  display: inline-block;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: rgba(139, 92, 246, 0.12);
+  color: var(--color-violet);
+  align-self: flex-start;
+}
+
+.local-marketing-hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.local-marketing-hero__meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.local-marketing-hero__intro {
+  color: var(--color-text-muted);
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+.local-marketing-hero__visual {
+  display: flex;
+  justify-content: center;
+}
+
+.local-marketing-hero__visual-card {
+  width: 100%;
+  max-width: 380px;
+  padding: 2rem;
+  border-radius: var(--radius-xl);
+  background: var(--color-surface-glass);
+  border: 1px solid var(--color-border);
+  backdrop-filter: blur(14px);
+  text-align: center;
+}
+
+.local-marketing-hero__visual-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+}
+
+.local-marketing-hero__visual-flow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.local-marketing-hero__visual-step {
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.local-marketing-hero__visual-step--query {
+  background: rgba(139, 92, 246, 0.15);
+  color: var(--color-violet);
+}
+
+.local-marketing-hero__visual-step--maps {
+  background: rgba(34, 197, 94, 0.15);
+  color: #22c55e;
+}
+
+.local-marketing-hero__visual-step--ai {
+  background: rgba(6, 182, 212, 0.15);
+  color: var(--color-cyan);
+}
+
+.local-marketing-hero__visual-step--business {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(236, 72, 153, 0.2));
+  color: var(--color-pink);
+}
+
+.local-marketing-hero__visual-arrow {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  opacity: 0.5;
+}
+
+/* ---- Article Intro ---- */
+.local-marketing-intro {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.local-marketing-intro__text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--color-text-muted);
+}
+
+/* ---- Service Cards ---- */
+.local-marketing-services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.local-marketing-service-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  border-radius: var(--radius-xl);
+  background: var(--color-surface-glass);
+  border: 1px solid var(--color-border);
+  backdrop-filter: blur(14px);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.local-marketing-service-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-violet);
+  box-shadow: 0 8px 32px rgba(139, 92, 246, 0.15);
+}
+
+.local-marketing-service-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.local-marketing-service-card__number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  font-size: 0.65rem;
+  font-weight: 700;
+}
+
+.local-marketing-service-card__number--purple {
+  background: rgba(139, 92, 246, 0.15);
+  color: var(--color-violet);
+}
+
+.local-marketing-service-card__number--pink {
+  background: rgba(236, 72, 153, 0.15);
+  color: var(--color-pink);
+}
+
+.local-marketing-service-card__number--cyan {
+  background: rgba(6, 182, 212, 0.15);
+  color: var(--color-cyan);
+}
+
+.local-marketing-service-card__number--blue {
+  background: rgba(59, 130, 246, 0.15);
+  color: #3b82f6;
+}
+
+.local-marketing-service-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  transition: transform 0.3s ease;
+}
+
+.local-marketing-service-card:hover .local-marketing-service-card__icon {
+  transform: translateX(4px);
+}
+
+.local-marketing-service-card__icon--purple {
+  background: rgba(139, 92, 246, 0.1);
+  color: var(--color-violet);
+}
+
+.local-marketing-service-card__icon--pink {
+  background: rgba(236, 72, 153, 0.1);
+  color: var(--color-pink);
+}
+
+.local-marketing-service-card__icon--cyan {
+  background: rgba(6, 182, 212, 0.1);
+  color: var(--color-cyan);
+}
+
+.local-marketing-service-card__icon--blue {
+  background: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+}
+
+.local-marketing-service-card__title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+.local-marketing-service-card__text {
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  flex: 1;
+}
+
+/* ---- Market / Location Cards ---- */
+.local-marketing-markets {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.local-marketing-market-card {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.5rem;
+  border-radius: var(--radius-xl);
+  background: var(--color-surface-glass);
+  border: 1px solid var(--color-border);
+  backdrop-filter: blur(14px);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.local-marketing-market-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-cyan);
+  box-shadow: 0 8px 32px rgba(6, 182, 212, 0.15);
+}
+
+.local-marketing-market-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-lg);
+  background: rgba(6, 182, 212, 0.1);
+  color: var(--color-cyan);
+  margin-bottom: 1rem;
+}
+
+.local-marketing-market-card__badge {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: rgba(139, 92, 246, 0.12);
+  color: var(--color-violet);
+  margin-bottom: 0.75rem;
+  align-self: flex-start;
+}
+
+.local-marketing-market-card__location {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+.local-marketing-market-card__text {
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  flex: 1;
+  margin-bottom: 1rem;
+}
+
+.local-marketing-market-card__arrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-cyan);
+  transition: transform 0.3s ease;
+}
+
+.local-marketing-market-card:hover .local-marketing-market-card__arrow {
+  transform: translateX(4px);
+}
+
+/* ---- Why Local Marketing Matters ---- */
+.local-marketing-matters {
+  max-width: 720px;
+  margin: 2rem auto 0;
+}
+
+.local-marketing-matters__text {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--color-text-muted);
+  margin-bottom: 2rem;
+}
+
+.local-marketing-matters__visual {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.local-marketing-matters__channels {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.local-marketing-matters__channel {
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--radius-md);
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background: var(--color-surface-glass);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+
+.local-marketing-matters__plus {
+  font-size: 0.75rem;
+  color: var(--color-violet);
+  font-weight: 700;
+}
+
+.local-marketing-matters__flow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.local-marketing-matters__flow-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.local-marketing-matters__flow-step {
+  padding: 0.6rem 1.5rem;
+  border-radius: var(--radius-md);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background: var(--color-surface-glass);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+}
+
+.local-marketing-matters__flow-step--active {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(236, 72, 153, 0.2));
+  border-color: var(--color-violet);
+  color: var(--color-text);
+}
+
+.local-marketing-matters__flow-arrow {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  opacity: 0.5;
+  padding: 0.25rem 0;
+}
+
+/* ---- Why Choose Static Savvy Media ---- */
+.local-marketing-why-us {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.local-marketing-why-card {
+  padding: 2rem 1.5rem;
+  border-radius: var(--radius-xl);
+  background: var(--color-surface-glass);
+  border: 1px solid var(--color-border);
+  backdrop-filter: blur(14px);
+}
+
+.local-marketing-why-card__number {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--color-violet);
+  margin-bottom: 0.75rem;
+}
+
+.local-marketing-why-card__title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+.local-marketing-why-card__text {
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+}
+
+/* ---- Key Takeaway ---- */
+.local-marketing-takeaway {
+  padding: 3rem;
+  text-align: center;
+  border-radius: var(--radius-xl);
+  background: var(--color-surface-glass);
+  border: 1px solid var(--color-border);
+  backdrop-filter: blur(14px);
+}
+
+.local-marketing-takeaway__label {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--color-text);
+  margin-bottom: 0.25rem;
+}
+
+.local-marketing-takeaway__sublabel {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+}
+
+.local-marketing-takeaway__intro {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+}
+
+.local-marketing-takeaway__items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.local-marketing-takeaway__item {
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background: rgba(139, 92, 246, 0.12);
+  color: var(--color-violet);
+}
+
+.local-marketing-takeaway__plus {
+  margin: 0 0.15rem;
+  opacity: 0.5;
+}
+
+.local-marketing-takeaway__supporting {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* ====================================================
+   Responsive
+   ==================================================== */
+
+@media (max-width: 1024px) {
+  .local-marketing-services {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .local-marketing-markets {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .local-marketing-hero {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .local-marketing-hero__visual {
+    order: -1;
+  }
+
+  .local-marketing-hero__visual-card {
+    max-width: 320px;
+  }
+
+  .local-marketing-services {
+    grid-template-columns: 1fr;
+  }
+
+  .local-marketing-markets {
+    grid-template-columns: 1fr;
+  }
+
+  .local-marketing-why-us {
+    grid-template-columns: 1fr;
+  }
+
+  .local-marketing-takeaway {
+    padding: 2rem 1.5rem;
+  }
+
+  .local-marketing-matters__channels {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .local-marketing-matters__plus {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .local-marketing-hero__meta {
+    gap: 0.5rem;
+  }
+
+  .local-marketing-service-card {
+    padding: 1.25rem;
+  }
+
+  .local-marketing-market-card {
+    padding: 1.5rem 1.25rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .local-marketing-service-card,
+  .local-marketing-market-card {
+    transition: none;
+  }
+
+  .local-marketing-service-card:hover,
+  .local-marketing-market-card:hover {
+    transform: none;
+  }
+
+  .local-marketing-service-card__icon,
+  .local-marketing-market-card__arrow {
+    transition: none;
+  }
+
+  .local-marketing-service-card:hover .local-marketing-service-card__icon,
+  .local-marketing-market-card:hover .local-marketing-market-card__arrow {
+    transform: none;
+  }
+}

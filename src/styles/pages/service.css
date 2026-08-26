@@ -1,0 +1,159 @@
+/* ====================================================
+   SERVICES HUB — /services/
+   Premium futuristic digital marketing agency UI.
+   ==================================================== */
+
+/* ---- Hub template ---- */
+.hub-template {
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* ---- Hub hero overrides ---- */
+.hub-template .hero {
+  position: relative;
+  padding-block: clamp(4rem, 9vw, 7rem) clamp(2.5rem, 5vw, 4rem);
+  background:
+    radial-gradient(55% 45% at 12% 12%, rgba(139, 92, 246, 0.15), transparent 60%),
+    radial-gradient(45% 40% at 88% 20%, rgba(34, 211, 238, 0.12), transparent 60%),
+    radial-gradient(40% 40% at 50% 100%, rgba(236, 72, 153, 0.09), transparent 55%);
+}
+
+.hub-template .hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(148, 163, 184, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.06) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(70% 70% at 50% 30%, #000, transparent);
+}
+
+.hub-template .hero__inner {
+  position: relative;
+  z-index: 2;
+}
+
+.hub-template .hero__title {
+  max-width: 20ch;
+}
+
+/* ---- Hub hero visual ---- */
+.services-hub-visual {
+  position: relative;
+  margin: clamp(2rem, 5vw, 3.5rem) auto 0;
+  max-width: 820px;
+  width: 100%;
+}
+
+.services-hub-visual .hero-dashboard {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ---- Hub grid wrapper ---- */
+.hub-grid {
+  position: relative;
+}
+
+/* ---- Services section overrides for hub page ---- */
+.hub-template .services-section {
+  background: transparent;
+}
+
+.hub-template .services-section .section-heading {
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+/* ---- Card grid responsive overrides ---- */
+/* Desktop: 4 columns */
+.hub-template .services-section .grid.grid--3 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+/* Service cards */
+.hub-template .service-card {
+  padding: clamp(1.25rem, 2vw, 1.75rem);
+  width: 100%;
+  min-width: 0;
+}
+
+.hub-template .service-card__title {
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+}
+
+.hub-template .service-card__text {
+  font-size: clamp(0.875rem, 1.2vw, 1rem);
+}
+
+.hub-template .service-card__link {
+  font-size: var(--fs-small);
+}
+
+.hub-template .service-card__badge {
+  width: clamp(44px, 5vw, 52px);
+  height: clamp(44px, 5vw, 52px);
+}
+
+/* ---- CTA section responsive ---- */
+.hub-template .cta-section__panel {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ---- Responsive: Tablet ---- */
+@media (max-width: 1024px) {
+  .hub-template .services-section .grid.grid--3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ---- Responsive: Mobile ---- */
+@media (max-width: 768px) {
+  .hub-template .hero {
+    padding-block: 3.5rem 3rem;
+  }
+
+  .hub-template .services-section .grid.grid--3 {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .hub-template .services-section .container {
+    padding-inline: clamp(1rem, 4vw, 1.5rem);
+  }
+
+  .hub-template .service-card {
+    padding: 1.5rem;
+  }
+
+  .floating-icons {
+    display: none;
+  }
+}
+
+/* ---- Responsive: Small Mobile ---- */
+@media (max-width: 480px) {
+  .hub-template .hero {
+    padding-block: 2.5rem 2rem;
+  }
+
+  .hub-template .hero__title {
+    max-width: 100%;
+  }
+
+  .hub-template .hero__actions .btn {
+    width: 100%;
+  }
+
+  .services-hub-visual {
+    margin-top: 1.5rem;
+  }
+
+  .hub-template .service-card {
+    padding: 1.25rem;
+  }
+}

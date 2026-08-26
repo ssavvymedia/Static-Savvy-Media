@@ -1,0 +1,734 @@
+/* ====================================================
+   What Is AEO — Custom Styles
+   Long-form Blog Post — Premium Editorial Design
+   ==================================================== */
+
+/* ---- Reading Progress Bar ---- */
+.aeo-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: transparent;
+  z-index: 9999;
+}
+
+.aeo-progress__bar {
+  height: 100%;
+  width: 0%;
+  background: var(--gradient-neon);
+  transition: width 0.1s linear;
+  box-shadow: 0 0 8px rgba(139, 92, 246, 0.6);
+}
+
+/* ---- Hero ---- */
+.aeo-hero {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.aeo-hero__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.aeo-hero__badge {
+  display: inline-block;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: rgba(139, 92, 246, 0.12);
+  color: var(--color-violet);
+  align-self: flex-start;
+}
+
+.aeo-hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.aeo-hero__meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.aeo-hero__intro {
+  color: var(--color-text-muted);
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+.aeo-hero__visual {
+  display: flex;
+  justify-content: center;
+}
+
+.aeo-hero__visual-card {
+  width: 100%;
+  max-width: 380px;
+  padding: 2rem;
+  border-radius: var(--radius-xl);
+  background: var(--color-surface-glass);
+  border: 1px solid var(--color-border);
+  backdrop-filter: blur(14px);
+  text-align: center;
+}
+
+.aeo-hero__visual-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+}
+
+.aeo-hero__visual-flow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.aeo-hero__visual-step {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius-md);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.aeo-hero__visual-step--q {
+  background: rgba(139, 92, 246, 0.12);
+  color: var(--color-violet);
+  border: 1px solid rgba(139, 92, 246, 0.25);
+}
+
+.aeo-hero__visual-step--ai {
+  background: rgba(236, 72, 153, 0.12);
+  color: var(--color-pink);
+  border: 1px solid rgba(236, 72, 153, 0.25);
+}
+
+.aeo-hero__visual-step--extract {
+  background: rgba(34, 211, 238, 0.12);
+  color: var(--color-cyan);
+  border: 1px solid rgba(34, 211, 238, 0.25);
+}
+
+.aeo-hero__visual-step--cite {
+  background: rgba(59, 130, 246, 0.12);
+  color: var(--color-blue);
+  border: 1px solid rgba(59, 130, 246, 0.25);
+}
+
+.aeo-hero__visual-arrow {
+  font-size: 1.2rem;
+  color: var(--color-text-muted);
+  line-height: 1;
+}
+
+/* ---- Article Layout ---- */
+.aeo-article {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 4rem;
+  align-items: start;
+}
+
+.aeo-article__body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.aeo-article__body h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-heading);
+  margin-top: 0.5rem;
+  scroll-margin-top: 2rem;
+}
+
+.aeo-article__body p {
+  color: var(--color-text-muted);
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+
+/* ---- Sticky TOC ---- */
+.aeo-toc {
+  position: sticky;
+  top: 6rem;
+  padding: 1.25rem;
+  border-radius: var(--radius-xl);
+  background: var(--color-surface-glass);
+  border: 1px solid var(--color-border);
+  backdrop-filter: blur(14px);
+  max-height: calc(100vh - 8rem);
+  overflow-y: auto;
+}
+
+.aeo-toc__title {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+}
+
+.aeo-toc__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.aeo-toc__link {
+  display: block;
+  padding: 0.3rem 0.5rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.aeo-toc__link:hover {
+  background: rgba(139, 92, 246, 0.1);
+  color: var(--color-violet);
+}
+
+/* ---- Tag List ---- */
+.aeo-tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.75rem 0;
+}
+
+.aeo-tag {
+  display: inline-block;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  background: rgba(139, 92, 246, 0.1);
+  color: var(--color-violet);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+.aeo-tag--cyan {
+  background: rgba(34, 211, 238, 0.1);
+  color: var(--color-cyan);
+  border-color: rgba(34, 211, 238, 0.2);
+}
+
+/* ---- Flow Diagram ---- */
+.aeo-flow {
+  padding: 1.5rem;
+  border-radius: var(--radius-xl);
+  background: var(--color-surface-glass);
+  border: 1px solid var(--color-border);
+  backdrop-filter: blur(14px);
+}
+
+.aeo-flow__title {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.aeo-flow__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.aeo-flow__step {
+  width: 100%;
+  max-width: 260px;
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius-md);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-align: center;
+  background: rgba(139, 92, 246, 0.08);
+  color: var(--color-text);
+  border: 1px solid rgba(139, 92, 246, 0.15);
+}
+
+.aeo-flow__step--highlight {
+  background: rgba(236, 72, 153, 0.12);
+  color: var(--color-pink);
+  border-color: rgba(236, 72, 153, 0.25);
+}
+
+.aeo-flow__arrow {
+  font-size: 1.2rem;
+  color: var(--color-text-muted);
+  line-height: 1;
+}
+
+/* ---- Core Element Cards ---- */
+.aeo-elements {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.aeo-element-card {
+  padding: 1.25rem;
+  border-radius: var(--radius-xl);
+  background: var(--color-surface-glass);
+  border: 1px solid var(--color-border);
+  backdrop-filter: blur(14px);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.aeo-element-card__number {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--color-violet);
+  font-family: var(--font-mono);
+}
+
+.aeo-element-card__title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-heading);
+}
+
+.aeo-element-card__text {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+.aeo-element-card__example {
+  margin-top: 0.5rem;
+  padding: 0.75rem;
+  border-radius: var(--radius-md);
+  background: rgba(34, 211, 238, 0.06);
+  border: 1px solid rgba(34, 211, 238, 0.15);
+}
+
+.aeo-element-card__example-q,
+.aeo-element-card__example-a {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.aeo-element-card__example-a {
+  margin-top: 0.25rem;
+  color: var(--color-cyan);
+}
+
+/* ---- Steps ---- */
+.aeo-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.aeo-step {
+  display: flex;
+  gap: 1rem;
+  padding: 1.25rem;
+  border-radius: var(--radius-xl);
+  background: var(--color-surface-glass);
+  border: 1px solid var(--color-border);
+  backdrop-filter: blur(14px);
+  align-items: start;
+}
+
+.aeo-step__number {
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  border-radius: var(--radius-md);
+  background: rgba(139, 92, 246, 0.12);
+  color: var(--color-violet);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+}
+
+.aeo-step__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.aeo-step__title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-heading);
+}
+
+.aeo-step__text {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+/* ---- Comparison Table ---- */
+.aeo-comparison {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface-glass);
+  backdrop-filter: blur(14px);
+}
+
+.aeo-comparison__header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  background: rgba(139, 92, 246, 0.08);
+}
+
+.aeo-comparison__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  border-top: 1px solid var(--color-border);
+}
+
+.aeo-comparison__cell {
+  padding: 0.75rem 1rem;
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.aeo-comparison__cell--dim {
+  font-weight: 700;
+  color: var(--color-heading);
+}
+
+.aeo-comparison__cell--seo {
+  color: var(--color-text-muted);
+}
+
+.aeo-comparison__cell--aeo {
+  color: var(--color-pink);
+}
+
+.aeo-comparison__cell--geo {
+  color: var(--color-cyan);
+}
+
+.aeo-comparison__header .aeo-comparison__cell {
+  font-weight: 700;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* ---- Takeaway Box ---- */
+.aeo-takeaway {
+  padding: 1.5rem;
+  border-radius: var(--radius-xl);
+  background: var(--gradient-neon);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.aeo-takeaway__line {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.aeo-takeaway__arrow {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.aeo-takeaway__result {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+/* ---- Mistake Cards ---- */
+.aeo-mistakes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.aeo-mistake-card {
+  position: relative;
+  padding: 1.25rem;
+  border-radius: var(--radius-xl);
+  background: var(--color-surface-glass);
+  border: 1px solid var(--color-border);
+  backdrop-filter: blur(14px);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.aeo-mistake-card__warning {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: var(--color-pink);
+  opacity: 0.5;
+}
+
+.aeo-mistake-card__number {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--color-pink);
+  font-family: var(--font-mono);
+}
+
+.aeo-mistake-card__title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-heading);
+}
+
+.aeo-mistake-card__text {
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+/* ---- Content Template ---- */
+.aeo-template {
+  padding: 1.5rem;
+  border-radius: var(--radius-xl);
+  background: var(--color-surface-glass);
+  border: 1px solid var(--color-border);
+  backdrop-filter: blur(14px);
+}
+
+.aeo-template__row {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.8rem;
+}
+
+.aeo-template__row:last-child {
+  border-bottom: none;
+}
+
+.aeo-template__label {
+  font-weight: 700;
+  color: var(--color-violet);
+  margin-right: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+}
+
+.aeo-template__value {
+  color: var(--color-text-muted);
+}
+
+/* ---- Checklist ---- */
+.aeo-checklist {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+
+.aeo-checklist__item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-md);
+  background: rgba(34, 211, 238, 0.06);
+  border: 1px solid rgba(34, 211, 238, 0.12);
+}
+
+.aeo-checklist__check {
+  flex-shrink: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: var(--radius-sm);
+  background: rgba(34, 211, 238, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-cyan);
+}
+
+.aeo-checklist__text {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+/* ---- FAQ ---- */
+.aeo-faq {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.aeo-faq__details {
+  padding: 1rem 1.25rem;
+  cursor: pointer;
+}
+
+.aeo-faq__question {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-heading);
+  cursor: pointer;
+  list-style: none;
+}
+
+.aeo-faq__question::-webkit-details-marker {
+  display: none;
+}
+
+.aeo-faq__question::marker {
+  display: none;
+}
+
+.aeo-faq__details[open] .aeo-faq__question {
+  margin-bottom: 0.5rem;
+}
+
+.aeo-faq__answer {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+/* ---- Author Bio ---- */
+.aeo-author {
+  display: flex;
+  gap: 1rem;
+  padding: 1.25rem;
+  border-radius: var(--radius-xl);
+  background: var(--color-surface-glass);
+  border: 1px solid var(--color-border);
+  backdrop-filter: blur(14px);
+  align-items: center;
+}
+
+.aeo-author__avatar {
+  flex-shrink: 0;
+  width: 3rem;
+  height: 3rem;
+  border-radius: var(--radius-md);
+  background: var(--gradient-neon);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.aeo-author__name {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-heading);
+}
+
+.aeo-author__role {
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+}
+
+.aeo-author__link {
+  display: inline-block;
+  margin-top: 0.25rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--color-violet);
+  text-decoration: none;
+}
+
+.aeo-author__link:hover {
+  text-decoration: underline;
+}
+
+/* ====================================================
+   Responsive
+   ==================================================== */
+
+@media (max-width: 1024px) {
+  .aeo-article {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .aeo-toc {
+    position: static;
+    max-height: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .aeo-hero {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .aeo-hero__visual {
+    order: -1;
+  }
+
+  .aeo-hero__visual-card {
+    max-width: 100%;
+  }
+
+  .aeo-elements {
+    grid-template-columns: 1fr;
+  }
+
+  .aeo-comparison__header,
+  .aeo-comparison__row {
+    grid-template-columns: 1fr;
+  }
+
+  .aeo-comparison__cell {
+    padding: 0.5rem 1rem;
+  }
+
+  .aeo-comparison__cell--dim::before {
+    content: attr(data-label) ': ';
+    font-weight: 700;
+    color: var(--color-heading);
+  }
+
+  .aeo-mistakes {
+    grid-template-columns: 1fr;
+  }
+
+  .aeo-checklist {
+    grid-template-columns: 1fr;
+  }
+}

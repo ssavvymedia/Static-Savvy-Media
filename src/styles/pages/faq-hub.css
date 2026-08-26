@@ -1,0 +1,222 @@
+/* ====================================================
+   FAQ Hub Page — Premium Accordion Design
+   Static Savvy Media
+   ==================================================== */
+
+/* ---- Hero ---- */
+.faq-hub-hero {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.faq-hub-hero__badge {
+  display: inline-block;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: rgba(139, 92, 246, 0.12);
+  color: var(--color-violet);
+}
+
+.faq-hub-hero__title {
+  font-size: clamp(1.75rem, 4.5vw, 2.75rem);
+  line-height: 1.2;
+}
+
+.faq-hub-hero__text {
+  color: var(--color-text-muted);
+  line-height: 1.75;
+  font-size: 1.05rem;
+  max-width: 600px;
+}
+
+/* ---- Content Layout ---- */
+.faq-hub-content {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* ---- Section ---- */
+.faq-hub-section__title {
+  font-size: clamp(1.375rem, 3vw, 1.75rem);
+  font-weight: 800;
+  color: var(--color-text);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.faq-hub-section__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* ---- FAQ Item ---- */
+.faq-item {
+  padding: 0;
+  overflow: hidden;
+  transition: border-color 0.25s ease;
+}
+
+.faq-item--open {
+  border-color: rgba(139, 92, 246, 0.35);
+}
+
+.faq-item__trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+}
+
+.faq-item__trigger:focus-visible {
+  outline: 2px solid var(--color-violet);
+  outline-offset: -2px;
+  border-radius: var(--radius-lg);
+}
+
+.faq-item__question {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-text);
+  line-height: 1.5;
+  flex: 1;
+}
+
+.faq-item__icon {
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  border-radius: var(--radius-sm);
+  background: rgba(139, 92, 246, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-violet);
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.faq-item--open .faq-item__icon {
+  transform: rotate(45deg);
+  background: rgba(139, 92, 246, 0.2);
+}
+
+.faq-item__answer-wrap {
+  padding: 0 1.5rem 1.5rem;
+}
+
+.faq-item__answer-wrap[hidden] {
+  display: none;
+}
+
+.faq-item__answer {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ---- CTA ---- */
+.faq-hub-cta {
+  padding: 2.5rem 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.06), rgba(236, 72, 153, 0.06));
+  margin-top: 1rem;
+}
+
+.faq-hub-cta__title {
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  font-weight: 800;
+  color: var(--color-text);
+}
+
+.faq-hub-cta__text {
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  font-size: 1rem;
+  max-width: 480px;
+}
+
+.faq-hub-whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #25D366;
+  color: #fff;
+  border: none;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.faq-hub-whatsapp-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(37, 211, 102, 0.35);
+}
+
+/* ====================================================
+   Responsive
+   ==================================================== */
+
+@media (max-width: 768px) {
+  .faq-hub-content {
+    gap: 2.5rem;
+  }
+
+  .faq-item__trigger {
+    padding: 1rem 1.25rem;
+  }
+
+  .faq-item__question {
+    font-size: 1rem;
+  }
+
+  .faq-item__answer-wrap {
+    padding: 0 1.25rem 1.25rem;
+  }
+
+  .faq-hub-cta {
+    padding: 2rem 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .faq-hub-hero__cta {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .faq-hub-whatsapp-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .faq-item__icon {
+    transition: none;
+  }
+}

@@ -1,0 +1,502 @@
+/* ====================================================
+   THOOTHUKUDI LOCATION PAGE
+   Premium futuristic digital marketing agency UI.
+   Port city - industrial, marine, B2B visual identity.
+   ==================================================== */
+
+.thoothukudi-page {
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* ---- Hero Overrides ---- */
+.thoothukudi-page .hero {
+  position: relative;
+  padding-block: clamp(4rem, 9vw, 7rem) clamp(2.5rem, 5vw, 4rem);
+  background:
+    radial-gradient(55% 45% at 12% 12%, rgba(59, 130, 246, 0.15), transparent 60%),
+    radial-gradient(45% 40% at 88% 20%, rgba(34, 211, 238, 0.12), transparent 60%),
+    radial-gradient(40% 40% at 50% 100%, rgba(99, 102, 241, 0.09), transparent 55%);
+}
+
+.thoothukudi-page .hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(148, 163, 184, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.06) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(70% 70% at 50% 30%, #000, transparent);
+}
+
+.thoothukudi-page .hero__inner {
+  position: relative;
+  z-index: 2;
+}
+
+.thoothukudi-page .hero__title {
+  max-width: 22ch;
+}
+
+.thoothukudi-page .hero__subtitle {
+  max-width: 720px;
+  font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+  line-height: 1.8;
+}
+
+/* ---- Services Grid ---- */
+.thoothukudi-services {
+  position: relative;
+  background:
+    radial-gradient(50% 50% at 15% 10%, rgba(59, 130, 246, 0.08), transparent 60%),
+    var(--color-bg-secondary);
+}
+
+.thoothukudi-services__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+/* Last row of 3 centers in the 4-col grid */
+.thoothukudi-services__grid > :nth-child(n+5) {
+  grid-column: span 1;
+}
+
+/* ---- Service Card ---- */
+.thoothukudi-service-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: clamp(1.5rem, 2.5vw, 2rem);
+  background: var(--color-surface-glass);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(14px);
+  box-shadow: var(--shadow-card);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  height: 100%;
+}
+
+.thoothukudi-service-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(59, 130, 246, 0.5);
+  box-shadow: 0 0 24px rgba(59, 130, 246, 0.45);
+}
+
+.thoothukudi-service-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.thoothukudi-service-card__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: #fff;
+  background: linear-gradient(135deg, var(--color-blue), var(--color-cyan));
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+  transition: transform var(--transition), box-shadow var(--transition);
+  flex-shrink: 0;
+}
+
+.thoothukudi-service-card:nth-child(even) .thoothukudi-service-card__badge {
+  background: linear-gradient(135deg, var(--color-cyan), var(--color-blue));
+}
+
+.thoothukudi-service-card:nth-child(3n) .thoothukudi-service-card__badge {
+  background: linear-gradient(135deg, #6366f1, var(--color-cyan));
+}
+
+.thoothukudi-service-card:hover .thoothukudi-service-card__badge {
+  transform: translateY(-3px) scale(1.06);
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.65);
+}
+
+.thoothukudi-service-card__number {
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: var(--color-text-muted);
+}
+
+.thoothukudi-service-card__title {
+  font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+}
+
+.thoothukudi-service-card__title a {
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.thoothukudi-service-card__title a:hover {
+  color: var(--color-cyan);
+}
+
+.thoothukudi-service-card__text {
+  flex: 1;
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
+  line-height: 1.7;
+}
+
+.thoothukudi-service-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  align-self: flex-start;
+  font-size: var(--fs-small);
+  font-weight: 700;
+  color: var(--color-cyan);
+  transition: color var(--transition), transform var(--transition);
+}
+
+.thoothukudi-service-card__link svg {
+  transition: transform var(--transition);
+}
+
+.thoothukudi-service-card__link:hover {
+  color: var(--color-blue);
+}
+
+.thoothukudi-service-card__link:hover svg {
+  transform: translateX(4px);
+}
+
+/* ---- Industries Grid ---- */
+.thoothukudi-industries {
+  position: relative;
+  background:
+    radial-gradient(50% 50% at 85% 90%, rgba(34, 211, 238, 0.08), transparent 60%),
+    var(--color-bg-secondary);
+}
+
+.thoothukudi-industries__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1.25rem, 2.5vw, 1.75rem);
+}
+
+/* ---- Industry Card ---- */
+.thoothukudi-industry-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: clamp(1.5rem, 2.5vw, 2rem);
+  background: var(--color-surface-glass);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(14px);
+  box-shadow: var(--shadow-card);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  height: 100%;
+}
+
+.thoothukudi-industry-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(59, 130, 246, 0.5);
+  box-shadow: 0 0 24px rgba(59, 130, 246, 0.45);
+}
+
+.thoothukudi-industry-card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  background: rgba(59, 130, 246, 0.12);
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  color: var(--color-blue);
+  flex-shrink: 0;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.thoothukudi-industry-card:hover .thoothukudi-industry-card__icon {
+  transform: translateY(-3px) scale(1.06);
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+}
+
+/* Port / Logistics — cyan */
+.thoothukudi-industry-card:nth-child(1) .thoothukudi-industry-card__icon {
+  background: rgba(34, 211, 238, 0.12);
+  border-color: rgba(34, 211, 238, 0.25);
+  color: var(--color-cyan);
+}
+
+.thoothukudi-industry-card:nth-child(1):hover {
+  border-color: rgba(34, 211, 238, 0.5);
+  box-shadow: 0 0 24px rgba(34, 211, 238, 0.45);
+}
+
+.thoothukudi-industry-card:nth-child(1):hover .thoothukudi-industry-card__icon {
+  box-shadow: 0 0 20px rgba(34, 211, 238, 0.4);
+}
+
+/* Fishing / Marine — emerald */
+.thoothukudi-industry-card:nth-child(3) .thoothukudi-industry-card__icon {
+  background: rgba(16, 185, 129, 0.12);
+  border-color: rgba(16, 185, 129, 0.25);
+  color: #10b981;
+}
+
+.thoothukudi-industry-card:nth-child(3):hover {
+  border-color: rgba(16, 185, 129, 0.5);
+  box-shadow: 0 0 24px rgba(16, 185, 129, 0.45);
+}
+
+.thoothukudi-industry-card:nth-child(3):hover .thoothukudi-industry-card__icon {
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
+}
+
+.thoothukudi-industry-card__title {
+  font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+}
+
+.thoothukudi-industry-card__text {
+  flex: 1;
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
+  line-height: 1.7;
+}
+
+/* ---- Office / Service Presence ---- */
+.thoothukudi-office {
+  position: relative;
+  background:
+    radial-gradient(50% 50% at 50% 50%, rgba(59, 130, 246, 0.06), transparent 55%),
+    var(--color-bg);
+}
+
+.thoothukudi-office__inner {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: clamp(2rem, 4vw, 3rem);
+  align-items: center;
+  padding: clamp(2rem, 4vw, 3rem);
+  background: var(--color-surface-glass);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  backdrop-filter: blur(14px);
+  box-shadow: var(--shadow-card);
+}
+
+.thoothukudi-office__visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(2rem, 4vw, 3rem);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.12), rgba(34, 211, 238, 0.06));
+  border: 1px solid var(--color-border);
+}
+
+.thoothukudi-office__route {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.75rem, 2vw, 1.5rem);
+}
+
+.thoothukudi-office__city {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.thoothukudi-office__city svg {
+  width: 36px;
+  height: 36px;
+}
+
+.thoothukudi-office__city--madurai {
+  color: var(--color-violet);
+}
+
+.thoothukudi-office__city--madurai svg {
+  background: rgba(139, 92, 246, 0.15);
+  border: 2px solid rgba(139, 92, 246, 0.3);
+  border-radius: 50%;
+  padding: 6px;
+  animation: thoothukudi-pin-pulse 3s ease-in-out infinite;
+}
+
+.thoothukudi-office__city--thoothukudi {
+  color: var(--color-blue);
+}
+
+.thoothukudi-office__city--thoothukudi svg {
+  background: rgba(59, 130, 246, 0.15);
+  border: 2px solid rgba(59, 130, 246, 0.3);
+  border-radius: 50%;
+  padding: 6px;
+}
+
+.thoothukudi-office__city span {
+  font-size: clamp(0.75rem, 1vw, 0.85rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.thoothukudi-office__connector {
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+}
+
+.thoothukudi-office__details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.thoothukudi-office__title {
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+}
+
+.thoothukudi-office__text {
+  font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+  line-height: 1.8;
+  color: var(--color-text-muted);
+}
+
+/* ---- Related Content ---- */
+.thoothukudi-related {
+  position: relative;
+}
+
+.thoothukudi-related__group {
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+.thoothukudi-related__group:last-child {
+  margin-bottom: 0;
+}
+
+.thoothukudi-related__group-title {
+  font-size: var(--fs-small);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-blue);
+  margin-bottom: 1rem;
+}
+
+.thoothukudi-related__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.thoothukudi-related__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.65rem 1.25rem;
+  background: var(--color-surface-glass);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--color-text);
+  backdrop-filter: blur(12px);
+  transition: all var(--transition);
+}
+
+.thoothukudi-related__link:hover {
+  border-color: var(--color-blue);
+  color: var(--color-cyan);
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-2px);
+}
+
+.thoothukudi-related__link svg {
+  transition: transform var(--transition);
+}
+
+.thoothukudi-related__link:hover svg {
+  transform: translateX(3px);
+}
+
+/* ---- Keyframes ---- */
+@keyframes thoothukudi-pin-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.3); }
+  50% { box-shadow: 0 0 0 12px rgba(139, 92, 246, 0); }
+}
+
+/* ---- Responsive: Tablet (1024px) ---- */
+@media (max-width: 1024px) {
+  .thoothukudi-services__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .thoothukudi-industries__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---- Responsive: Mobile (768px) ---- */
+@media (max-width: 768px) {
+  .thoothukudi-page .hero {
+    padding-block: 3.5rem 3rem;
+  }
+
+  .thoothukudi-services__grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .thoothukudi-office__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .thoothukudi-office__route {
+    flex-direction: column;
+  }
+
+  .thoothukudi-office__connector {
+    transform: rotate(90deg);
+  }
+}
+
+/* ---- Responsive: Small Mobile (480px) ---- */
+@media (max-width: 480px) {
+  .thoothukudi-page .hero {
+    padding-block: 2.5rem 2rem;
+  }
+
+  .thoothukudi-page .hero__title {
+    max-width: 100%;
+  }
+
+  .thoothukudi-page .hero__actions .btn {
+    width: 100%;
+  }
+}
+
+/* ---- Reduced Motion ---- */
+@media (prefers-reduced-motion: reduce) {
+  .thoothukudi-service-card:hover,
+  .thoothukudi-industry-card:hover,
+  .thoothukudi-related__link:hover {
+    transform: none !important;
+  }
+
+  .thoothukudi-service-card__link:hover svg,
+  .thoothukudi-related__link:hover svg {
+    transform: none !important;
+  }
+
+  .thoothukudi-office__city--madurai svg {
+    animation: none !important;
+  }
+}

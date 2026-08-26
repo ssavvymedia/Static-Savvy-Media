@@ -1,0 +1,550 @@
+/* ====================================================
+   MALAYSIA LOCATION PAGE
+   Premium futuristic digital marketing agency UI.
+   ==================================================== */
+
+.malaysia-page {
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* ---- Hero Overrides ---- */
+.malaysia-page .hero {
+  position: relative;
+  padding-block: clamp(4rem, 9vw, 7rem) clamp(2.5rem, 5vw, 4rem);
+  background:
+    radial-gradient(55% 45% at 12% 12%, rgba(34, 211, 238, 0.15), transparent 60%),
+    radial-gradient(45% 40% at 88% 20%, rgba(16, 185, 129, 0.12), transparent 60%),
+    radial-gradient(40% 40% at 50% 100%, rgba(59, 130, 246, 0.09), transparent 55%);
+}
+
+.malaysia-page .hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(148, 163, 184, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.06) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(70% 70% at 50% 30%, #000, transparent);
+}
+
+.malaysia-page .hero__inner {
+  position: relative;
+  z-index: 2;
+}
+
+.malaysia-page .hero__title {
+  max-width: 22ch;
+}
+
+.malaysia-page .hero__subtitle {
+  max-width: 720px;
+  font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+  line-height: 1.8;
+}
+
+/* ---- Grants Grid ---- */
+.malaysia-grants {
+  position: relative;
+  background:
+    radial-gradient(50% 50% at 15% 10%, rgba(34, 211, 238, 0.08), transparent 60%),
+    var(--color-bg-secondary);
+}
+
+.malaysia-grants__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+/* ---- Grant Card ---- */
+.malaysia-grant-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: clamp(1.5rem, 2.5vw, 2rem);
+  background: var(--color-surface-glass);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(14px);
+  box-shadow: var(--shadow-card);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  height: 100%;
+}
+
+.malaysia-grant-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(16, 185, 129, 0.5);
+  box-shadow: 0 0 24px rgba(16, 185, 129, 0.45);
+}
+
+.malaysia-grant-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.malaysia-grant-card__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: #fff;
+  background: linear-gradient(135deg, var(--color-cyan), #10b981);
+  box-shadow: 0 0 20px rgba(34, 211, 238, 0.5);
+  transition: transform var(--transition), box-shadow var(--transition);
+  flex-shrink: 0;
+}
+
+.malaysia-grant-card:nth-child(even) .malaysia-grant-card__badge {
+  background: linear-gradient(135deg, #10b981, var(--color-blue));
+}
+
+.malaysia-grant-card:nth-child(3n) .malaysia-grant-card__badge {
+  background: linear-gradient(135deg, var(--color-cyan), #10b981);
+}
+
+.malaysia-grant-card:hover .malaysia-grant-card__badge {
+  transform: translateY(-3px) scale(1.06);
+  box-shadow: 0 0 30px rgba(16, 185, 129, 0.65);
+}
+
+.malaysia-grant-card__number {
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: var(--color-text-muted);
+}
+
+.malaysia-grant-card__title {
+  font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+}
+
+.malaysia-grant-card__text {
+  flex: 1;
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
+  line-height: 1.7;
+}
+
+/* ---- Grant Disclaimer ---- */
+.malaysia-grants__disclaimer {
+  margin-top: clamp(1.5rem, 3vw, 2rem);
+}
+
+.malaysia-grants__disclaimer-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: clamp(1.25rem, 2.5vw, 1.75rem);
+  background: rgba(245, 158, 11, 0.08);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  border-radius: var(--radius-lg);
+}
+
+.malaysia-grants__disclaimer-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(245, 158, 11, 0.15);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  color: #f59e0b;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.malaysia-grants__disclaimer-text {
+  font-size: clamp(0.88rem, 1.1vw, 0.95rem);
+  line-height: 1.7;
+  color: var(--color-text-muted);
+}
+
+/* ---- Services Grid ---- */
+.malaysia-services {
+  position: relative;
+  background:
+    radial-gradient(50% 50% at 85% 90%, rgba(16, 185, 129, 0.08), transparent 60%),
+    var(--color-bg-secondary);
+}
+
+.malaysia-services__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+/* ---- Service Card ---- */
+.malaysia-service-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: clamp(1.5rem, 2.5vw, 2rem);
+  background: var(--color-surface-glass);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(14px);
+  box-shadow: var(--shadow-card);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  height: 100%;
+}
+
+.malaysia-service-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(34, 211, 238, 0.5);
+  box-shadow: var(--shadow-glow);
+}
+
+.malaysia-service-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.malaysia-service-card__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: #fff;
+  background: var(--gradient-primary);
+  box-shadow: var(--shadow-glow);
+  transition: transform var(--transition), box-shadow var(--transition);
+  flex-shrink: 0;
+}
+
+.malaysia-service-card:nth-child(even) .malaysia-service-card__badge {
+  background: linear-gradient(135deg, #10b981, var(--color-cyan));
+}
+
+.malaysia-service-card:nth-child(3n) .malaysia-service-card__badge {
+  background: linear-gradient(135deg, var(--color-cyan), #10b981);
+}
+
+.malaysia-service-card:hover .malaysia-service-card__badge {
+  transform: translateY(-3px) scale(1.06);
+  box-shadow: 0 0 30px rgba(34, 211, 238, 0.65);
+}
+
+.malaysia-service-card__number {
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: var(--color-text-muted);
+}
+
+.malaysia-service-card__title {
+  font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+}
+
+.malaysia-service-card__title a {
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.malaysia-service-card__title a:hover {
+  color: var(--color-cyan);
+}
+
+.malaysia-service-card__text {
+  flex: 1;
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
+  line-height: 1.7;
+}
+
+.malaysia-service-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  align-self: flex-start;
+  font-size: var(--fs-small);
+  font-weight: 700;
+  color: var(--color-cyan);
+  transition: color var(--transition), transform var(--transition);
+}
+
+.malaysia-service-card__link svg {
+  transition: transform var(--transition);
+}
+
+.malaysia-service-card__link:hover {
+  color: #10b981;
+}
+
+.malaysia-service-card__link:hover svg {
+  transform: translateX(4px);
+}
+
+/* ---- Office Section ---- */
+.malaysia-office {
+  position: relative;
+  background:
+    radial-gradient(50% 50% at 50% 50%, rgba(34, 211, 238, 0.06), transparent 55%),
+    var(--color-bg);
+}
+
+.malaysia-office__inner {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: clamp(2rem, 4vw, 3rem);
+  align-items: center;
+  padding: clamp(2rem, 4vw, 3rem);
+  background: var(--color-surface-glass);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  backdrop-filter: blur(14px);
+  box-shadow: var(--shadow-card);
+}
+
+.malaysia-office__visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: clamp(2rem, 4vw, 3rem);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, rgba(34, 211, 238, 0.12), rgba(16, 185, 129, 0.06));
+  border: 1px solid var(--color-border);
+  text-align: center;
+}
+
+.malaysia-office__pin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(34, 211, 238, 0.15);
+  border: 2px solid rgba(34, 211, 238, 0.3);
+  color: var(--color-cyan);
+  animation: malaysia-pin-pulse 3s ease-in-out infinite;
+}
+
+.malaysia-office__label {
+  font-size: clamp(0.9rem, 1.2vw, 1.05rem);
+  font-weight: 700;
+  color: var(--color-text);
+  letter-spacing: 0.02em;
+}
+
+.malaysia-office__details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.malaysia-office__title {
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+}
+
+.malaysia-office__card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: clamp(1.25rem, 2.5vw, 1.75rem);
+  background: rgba(15, 23, 42, 0.5);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.malaysia-office__name {
+  font-size: clamp(1rem, 1.4vw, 1.15rem);
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.malaysia-office__address {
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
+  line-height: 1.7;
+  color: var(--color-text-muted);
+}
+
+.malaysia-office__meta {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.malaysia-office__meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.malaysia-office__meta-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-cyan);
+}
+
+.malaysia-office__meta-value {
+  font-size: clamp(0.85rem, 1.1vw, 0.95rem);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.malaysia-office__meta-value[href] {
+  color: var(--color-cyan);
+  transition: color var(--transition);
+}
+
+.malaysia-office__meta-value[href]:hover {
+  color: #10b981;
+}
+
+/* ---- Related Content ---- */
+.malaysia-related {
+  position: relative;
+}
+
+.malaysia-related__group {
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+.malaysia-related__group:last-child {
+  margin-bottom: 0;
+}
+
+.malaysia-related__group-title {
+  font-size: var(--fs-small);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-cyan);
+  margin-bottom: 1rem;
+}
+
+.malaysia-related__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.malaysia-related__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.65rem 1.25rem;
+  background: var(--color-surface-glass);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--color-text);
+  backdrop-filter: blur(12px);
+  transition: all var(--transition);
+}
+
+.malaysia-related__link:hover {
+  border-color: var(--color-cyan);
+  color: var(--color-cyan);
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-2px);
+}
+
+.malaysia-related__link svg {
+  transition: transform var(--transition);
+}
+
+.malaysia-related__link:hover svg {
+  transform: translateX(3px);
+}
+
+/* ---- Keyframes ---- */
+@keyframes malaysia-pin-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(34, 211, 238, 0.3); }
+  50% { box-shadow: 0 0 0 12px rgba(34, 211, 238, 0); }
+}
+
+/* ---- Responsive: Tablet (1024px) ---- */
+@media (max-width: 1024px) {
+  .malaysia-grants__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .malaysia-services__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ---- Responsive: Mobile (768px) ---- */
+@media (max-width: 768px) {
+  .malaysia-page .hero {
+    padding-block: 3.5rem 3rem;
+  }
+
+  .malaysia-services__grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .malaysia-office__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .malaysia-office__meta {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---- Responsive: Small Mobile (480px) ---- */
+@media (max-width: 480px) {
+  .malaysia-page .hero {
+    padding-block: 2.5rem 2rem;
+  }
+
+  .malaysia-page .hero__title {
+    max-width: 100%;
+  }
+
+  .malaysia-page .hero__actions .btn {
+    width: 100%;
+  }
+
+  .malaysia-office__visual {
+    padding: 1.5rem;
+  }
+
+  .malaysia-office__pin {
+    width: 52px;
+    height: 52px;
+  }
+}
+
+/* ---- Reduced Motion ---- */
+@media (prefers-reduced-motion: reduce) {
+  .malaysia-grant-card:hover,
+  .malaysia-service-card:hover,
+  .malaysia-related__link:hover {
+    transform: none !important;
+  }
+
+  .malaysia-service-card__link:hover svg,
+  .malaysia-related__link:hover svg {
+    transform: none !important;
+  }
+
+  .malaysia-office__pin {
+    animation: none !important;
+  }
+}

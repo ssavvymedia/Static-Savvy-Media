@@ -1,0 +1,451 @@
+﻿/* ====================================================
+   SOCIAL MEDIA MARKETING PRICING PAGE
+   Premium futuristic social media pricing UI.
+   ==================================================== */
+
+.sm-pricing-page {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.sm-pricing-page .hero {
+  position: relative;
+  padding-block: clamp(4rem, 9vw, 7rem) clamp(2.5rem, 5vw, 4rem);
+  background:
+    radial-gradient(55% 45% at 12% 12%, rgba(236, 72, 153, 0.12), transparent 60%),
+    radial-gradient(45% 40% at 88% 20%, rgba(168, 85, 247, 0.12), transparent 60%),
+    radial-gradient(40% 40% at 50% 100%, rgba(59, 130, 246, 0.09), transparent 55%);
+}
+
+.sm-pricing-page .hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(148, 163, 184, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.06) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(70% 70% at 50% 30%, #000, transparent);
+}
+
+.sm-pricing-page .hero__inner { position: relative; z-index: 2; }
+.sm-pricing-page .hero__title { max-width: 18ch; }
+.sm-pricing-page .hero__subtitle { max-width: 640px; font-size: clamp(1.05rem, 1.4vw, 1.2rem); line-height: 1.8; }
+
+/* ---- Hero Visual ---- */
+.sm-hero-visual {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  width: clamp(200px, 22vw, 300px);
+  pointer-events: none;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sm-hero-visual__card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: var(--radius-md);
+  background: rgba(17, 26, 51, 0.6);
+  border: 1px solid var(--color-border);
+  backdrop-filter: blur(10px);
+}
+
+.sm-hero-visual__card--ig { animation: sm-card-float 3s ease-in-out infinite; }
+.sm-hero-visual__card--fb { animation: sm-card-float 3s ease-in-out 0.5s infinite; }
+.sm-hero-visual__card--li { animation: sm-card-float 3s ease-in-out 1s infinite; }
+
+.sm-hero-visual__card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: rgba(236, 72, 153, 0.12);
+  color: var(--color-pink);
+  flex-shrink: 0;
+}
+
+.sm-hero-visual__card--fb .sm-hero-visual__card-icon {
+  background: rgba(59, 130, 246, 0.12);
+  color: var(--color-blue);
+}
+
+.sm-hero-visual__card--li .sm-hero-visual__card-icon {
+  background: rgba(34, 211, 238, 0.12);
+  color: var(--color-cyan);
+}
+
+.sm-hero-visual__card-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.sm-hero-visual__line {
+  height: 4px;
+  border-radius: 999px;
+  background: rgba(148, 163, 184, 0.2);
+}
+
+.sm-hero-visual__line--img {
+  width: 40px;
+  height: 28px;
+  border-radius: 4px;
+  background: rgba(236, 72, 153, 0.15);
+}
+
+.sm-hero-visual__line--long { width: 90%; }
+.sm-hero-visual__line--med { width: 70%; }
+.sm-hero-visual__line--short { width: 50%; }
+.sm-hero-visual__line--xs { width: 30%; }
+
+.sm-hero-visual__engagement {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.sm-hero-visual__eng-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(17, 26, 51, 0.5);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+}
+/* ---- Pricing Cards ---- */
+.sm-pricing-cards {
+  position: relative;
+  background:
+    radial-gradient(50% 50% at 50% 20%, rgba(236, 72, 153, 0.06), transparent 60%),
+    var(--color-bg-secondary);
+}
+
+.sm-pricing-cards__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1.25rem, 2.5vw, 1.75rem);
+  align-items: start;
+}
+
+.sm-pricing-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: clamp(2rem, 3vw, 2.5rem);
+  background: var(--color-surface-glass);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(14px);
+  box-shadow: var(--shadow-card);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  height: 100%;
+}
+
+.sm-pricing-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(236, 72, 153, 0.5);
+  box-shadow: 0 0 32px rgba(236, 72, 153, 0.35);
+}
+
+.sm-pricing-card:nth-child(2):hover {
+  border-color: rgba(168, 85, 247, 0.5);
+  box-shadow: 0 0 32px rgba(168, 85, 247, 0.35);
+}
+
+.sm-pricing-card:nth-child(3):hover {
+  border-color: rgba(59, 130, 246, 0.5);
+  box-shadow: 0 0 32px rgba(59, 130, 246, 0.35);
+}
+
+.sm-pricing-card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: rgba(236, 72, 153, 0.1);
+  border: 1px solid rgba(236, 72, 153, 0.2);
+  color: var(--color-pink);
+  flex-shrink: 0;
+}
+
+.sm-pricing-card:nth-child(2) .sm-pricing-card__icon {
+  background: rgba(168, 85, 247, 0.1);
+  border-color: rgba(168, 85, 247, 0.2);
+  color: var(--color-violet);
+}
+
+.sm-pricing-card:nth-child(3) .sm-pricing-card__icon {
+  background: rgba(59, 130, 246, 0.1);
+  border-color: rgba(59, 130, 246, 0.2);
+  color: var(--color-blue);
+}
+
+.sm-pricing-card__name {
+  font-size: clamp(1.2rem, 1.8vw, 1.5rem);
+  font-weight: 700;
+}
+
+.sm-pricing-card__price-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.sm-pricing-card__price {
+  font-size: clamp(1.4rem, 2.2vw, 1.8rem);
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--color-pink), var(--color-violet));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.2;
+}
+
+.sm-pricing-card:nth-child(2) .sm-pricing-card__price {
+  background: linear-gradient(135deg, var(--color-violet), var(--color-blue));
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.sm-pricing-card:nth-child(3) .sm-pricing-card__price {
+  background: linear-gradient(135deg, var(--color-blue), var(--color-pink));
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.sm-pricing-card__price-alt {
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.sm-pricing-card__unit {
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.sm-pricing-card__divider {
+  height: 1px;
+  background: var(--color-border);
+  margin: 0.25rem 0;
+}
+
+.sm-pricing-card__includes {
+  font-size: var(--fs-small);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.sm-pricing-card__features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  flex: 1;
+}
+
+.sm-pricing-card__feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: clamp(0.88rem, 1.1vw, 0.95rem);
+  line-height: 1.5;
+  color: var(--color-text);
+}
+
+.sm-pricing-card__feature svg {
+  color: var(--color-pink);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.sm-pricing-card:nth-child(2) .sm-pricing-card__feature svg {
+  color: var(--color-violet);
+}
+
+.sm-pricing-card:nth-child(3) .sm-pricing-card__feature svg {
+  color: var(--color-blue);
+}
+/* ---- Progression ---- */
+.sm-progression__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1.25rem, 2.5vw, 1.75rem);
+  align-items: stretch;
+}
+
+.sm-progression__step {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: clamp(1.5rem, 2.5vw, 2rem);
+}
+
+.sm-progression__step-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.sm-progression__step-num {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(236, 72, 153, 0.1);
+  border: 1px solid rgba(236, 72, 153, 0.25);
+  color: var(--color-pink);
+  flex-shrink: 0;
+}
+
+.sm-progression__step:nth-child(2) .sm-progression__step-num {
+  background: rgba(168, 85, 247, 0.1);
+  border-color: rgba(168, 85, 247, 0.25);
+  color: var(--color-violet);
+}
+
+.sm-progression__step:nth-child(3) .sm-progression__step-num {
+  background: rgba(59, 130, 246, 0.1);
+  border-color: rgba(59, 130, 246, 0.25);
+  color: var(--color-blue);
+}
+
+.sm-progression__step-tier {
+  font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+  font-weight: 700;
+}
+
+.sm-progression__step-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.sm-progression__step-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: clamp(0.85rem, 1.05vw, 0.92rem);
+  line-height: 1.5;
+  color: var(--color-text);
+}
+
+.sm-progression__step-item svg {
+  color: var(--color-pink);
+  flex-shrink: 0;
+}
+
+.sm-progression__step:nth-child(2) .sm-progression__step-item svg {
+  color: var(--color-violet);
+}
+
+.sm-progression__step:nth-child(3) .sm-progression__step-item svg {
+  color: var(--color-blue);
+}
+
+/* ---- Related ---- */
+.sm-pricing-related__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.sm-pricing-related__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.65rem 1.25rem;
+  background: var(--color-surface-glass);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--color-text);
+  backdrop-filter: blur(12px);
+  transition: all var(--transition);
+}
+
+.sm-pricing-related__link:hover {
+  border-color: var(--color-pink);
+  color: var(--color-pink);
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-2px);
+}
+
+.sm-pricing-related__link svg {
+  transition: transform var(--transition);
+}
+
+.sm-pricing-related__link:hover svg {
+  transform: translateX(3px);
+}
+
+/* ---- Keyframes ---- */
+@keyframes sm-card-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* ---- Responsive: Tablet (1024px) ---- */
+@media (max-width: 1024px) {
+  .sm-pricing-cards__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .sm-pricing-cards__grid > :last-child {
+    grid-column: 1 / -1;
+    max-width: 50%;
+    justify-self: center;
+  }
+  .sm-progression__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .sm-progression__grid > :last-child {
+    grid-column: 1 / -1;
+    max-width: 50%;
+    justify-self: center;
+  }
+  .sm-hero-visual { display: none; }
+}
+
+/* ---- Responsive: Mobile (768px) ---- */
+@media (max-width: 768px) {
+  .sm-pricing-page .hero { padding-block: 3.5rem 3rem; }
+  .sm-pricing-cards__grid { grid-template-columns: 1fr; }
+  .sm-pricing-cards__grid > :last-child { max-width: 100%; }
+  .sm-progression__grid { grid-template-columns: 1fr; }
+  .sm-progression__grid > :last-child { max-width: 100%; }
+  .sm-hero-visual { display: none; }
+}
+
+/* ---- Responsive: Small Mobile (480px) ---- */
+@media (max-width: 480px) {
+  .sm-pricing-page .hero { padding-block: 2.5rem 2rem; }
+  .sm-pricing-page .hero__title { max-width: 100%; }
+  .sm-pricing-page .hero__actions .btn { width: 100%; }
+  .sm-pricing-card { padding: 1.5rem; }
+}
+
+/* ---- Reduced Motion ---- */
+@media (prefers-reduced-motion: reduce) {
+  .sm-pricing-card:hover { transform: none !important; }
+  .sm-hero-visual__card { animation: none !important; }
+}

@@ -1,0 +1,90 @@
+/* ====================================================
+   RESPONSIVE BREAKPOINTS
+   Desktop  > 1024px
+   Laptop   768px - 1024px
+   Tablet   480px - 768px
+   Mobile   < 480px
+   ==================================================== */
+
+/* ---- Laptop ---- */
+@media (max-width: 1024px) {
+  .grid--4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .grid--3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .site-footer__grid {
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+/* ---- Small laptop ---- */
+@media (max-width: 900px) {
+  .site-footer__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ---- Tablet ---- */
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .site-header__toggle {
+    display: flex;
+  }
+
+  .site-header__actions .btn {
+    display: none;
+  }
+
+  .site-header__whatsapp-number {
+    font-size: 0.8rem;
+  }
+
+  .grid--3,
+  .grid--4,
+  .grid--2 {
+    grid-template-columns: 1fr;
+  }
+
+  .site-footer__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .section-heading--left {
+    text-align: center;
+  }
+
+  .section-heading--left .section-heading__subtitle {
+    margin-inline: auto;
+  }
+}
+
+/* ---- Mobile ---- */
+@media (max-width: 480px) {
+  :root {
+    --section-pad: 3rem;
+  }
+
+  .site-header__whatsapp-number {
+    display: none;
+  }
+
+  .site-header__whatsapp {
+    padding: 0.4rem;
+  }
+
+  .site-header__actions {
+    gap: 0.75rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}

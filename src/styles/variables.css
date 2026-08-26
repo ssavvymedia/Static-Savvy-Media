@@ -1,0 +1,51 @@
+:root {
+  /* ---- Color Tokens ---- */
+  --color-bg: #070b18;
+  --color-bg-secondary: #0b1124;
+  --color-surface: #111a33;
+  --color-surface-glass: rgba(17, 26, 51, 0.55);
+  --color-purple: #a855f7;
+  --color-violet: #8b5cf6;
+  --color-pink: #ec4899;
+  --color-blue: #3b82f6;
+  --color-cyan: #22d3ee;
+  --color-text: #f1f5f9;
+  --color-text-muted: #94a3b8;
+  --color-border: rgba(148, 163, 184, 0.16);
+
+  /* ---- Gradients ---- */
+  --gradient-primary: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+  --gradient-neon: linear-gradient(135deg, #22d3ee 0%, #3b82f6 50%, #a855f7 100%);
+
+  /* ---- Shadows ---- */
+  --shadow-glow: 0 0 24px rgba(139, 92, 246, 0.45);
+  --shadow-card: 0 10px 30px rgba(2, 6, 23, 0.45);
+  --shadow-lift: 0 20px 50px rgba(2, 6, 23, 0.6);
+
+  /* ---- Radii ---- */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+
+  /* ---- Typography ---- */
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --fs-hero: clamp(2.5rem, 6vw, 4.5rem);
+  --fs-h2: clamp(1.75rem, 4vw, 2.75rem);
+  --fs-h3: 1.35rem;
+  --fs-body: 1rem;
+  --fs-small: 0.875rem;
+
+  /* ---- Spacing ---- */
+  --container-max: 1200px;
+  --section-pad: clamp(4rem, 9vw, 7rem);
+  --gutter: clamp(1.25rem, 4vw, 2.5rem);
+
+  /* ---- Layout ---- */
+  --header-height: 72px;
+
+  /* ---- Motion ---- */
+  --transition: 0.3s ease;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}

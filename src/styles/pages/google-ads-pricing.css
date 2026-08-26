@@ -1,0 +1,411 @@
+/* ====================================================
+   GOOGLE ADS PRICING PAGE
+   Premium futuristic PPC management pricing UI.
+   ==================================================== */
+
+.gads-pricing-page {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.gads-pricing-page .hero {
+  position: relative;
+  padding-block: clamp(4rem, 9vw, 7rem) clamp(2.5rem, 5vw, 4rem);
+  background:
+    radial-gradient(55% 45% at 12% 12%, rgba(59, 130, 246, 0.15), transparent 60%),
+    radial-gradient(45% 40% at 88% 20%, rgba(34, 211, 238, 0.12), transparent 60%),
+    radial-gradient(40% 40% at 50% 100%, rgba(139, 92, 246, 0.09), transparent 55%);
+}
+
+.gads-pricing-page .hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(148, 163, 184, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.06) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(70% 70% at 50% 30%, #000, transparent);
+}
+
+.gads-pricing-page .hero__inner { position: relative; z-index: 2; }
+.gads-pricing-page .hero__title { max-width: 18ch; }
+.gads-pricing-page .hero__subtitle { max-width: 640px; font-size: clamp(1.05rem, 1.4vw, 1.2rem); line-height: 1.8; }
+
+/* ---- Hero Visual ---- */
+.gads-pricing-page .gads-hero-visual {
+  position: absolute;
+  top: 50%;
+  right: 1.5%;
+  transform: translateY(-50%);
+  width: clamp(220px, 20vw, 320px);
+  pointer-events: none;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.gads-pricing-page .gads-hero-visual__search { display: flex; flex-direction: column; gap: 12px; }
+
+.gads-pricing-page .gads-hero-visual__bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  background: rgba(17, 26, 51, 0.6);
+  border: 1px solid var(--color-border);
+  backdrop-filter: blur(10px);
+  color: var(--color-text-muted);
+}
+
+.gads-pricing-page .gads-hero-visual__bar-line {
+  flex: 1;
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(59, 130, 246, 0.4), rgba(34, 211, 238, 0.3));
+  animation: gads-bar-fill 2s ease-in-out infinite;
+}
+
+.gads-pricing-page .gads-hero-visual__bar-cursor {
+  width: 2px;
+  height: 16px;
+  background: var(--color-cyan);
+  animation: gads-blink 1s step-end infinite;
+}
+
+.gads-pricing-page .gads-hero-visual__ad {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 14px 16px;
+  border-radius: var(--radius-md);
+  background: rgba(17, 26, 51, 0.5);
+  border: 1px solid var(--color-border);
+  border-left: 3px solid rgba(59, 130, 246, 0.6);
+}
+
+.gads-pricing-page .gads-hero-visual__ad-badge {
+  display: inline-flex;
+  align-self: flex-start;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: rgba(59, 130, 246, 0.2);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--color-blue);
+  letter-spacing: 0.05em;
+}
+
+.gads-pricing-page .gads-hero-visual__ad-url { font-size: 0.7rem; color: var(--color-text-muted); }
+.gads-pricing-page .gads-hero-visual__ad-title { font-size: 0.85rem; font-weight: 600; color: var(--color-cyan); }
+.gads-pricing-page .gads-hero-visual__ad-desc { font-size: 0.72rem; color: var(--color-text-muted); line-height: 1.4; }
+
+.gads-pricing-page .gads-hero-visual__bars {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 14px;
+  border-radius: var(--radius-md);
+  background: rgba(17, 26, 51, 0.4);
+  border: 1px solid var(--color-border);
+}
+
+.gads-pricing-page .gads-hero-visual__bar-line-sm {
+  height: 6px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(139, 92, 246, 0.5), rgba(34, 211, 238, 0.3));
+  width: 80%;
+  animation: gads-bar-fill 3s ease-in-out infinite;
+}
+
+.gads-pricing-page .gads-hero-visual__bar-line-sm--short {
+  width: 55%;
+  background: linear-gradient(90deg, rgba(34, 211, 238, 0.5), rgba(59, 130, 246, 0.3));
+  animation-delay: 0.5s;
+}
+
+.gads-pricing-page .gads-hero-visual__bar-line-sm--mid {
+  width: 68%;
+  background: linear-gradient(90deg, rgba(236, 72, 153, 0.4), rgba(139, 92, 246, 0.3));
+  animation-delay: 1s;
+}
+
+/* ---- Pricing Cards ---- */
+.gads-pricing-cards {
+  position: relative;
+  background:
+    radial-gradient(50% 50% at 50% 20%, rgba(59, 130, 246, 0.08), transparent 60%),
+    var(--color-bg-secondary);
+}
+
+.gads-pricing-cards__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1.25rem, 2.5vw, 1.75rem);
+  align-items: start;
+}
+
+/* ---- Pricing Card ---- */
+.gads-pricing-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: clamp(2rem, 3vw, 2.5rem);
+  background: var(--color-surface-glass);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(14px);
+  box-shadow: var(--shadow-card);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  height: 100%;
+}
+
+.gads-pricing-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(59, 130, 246, 0.5);
+  box-shadow: 0 0 32px rgba(59, 130, 246, 0.45);
+}
+
+.gads-pricing-card:nth-child(2):hover {
+  border-color: rgba(139, 92, 246, 0.5);
+  box-shadow: 0 0 32px rgba(139, 92, 246, 0.45);
+}
+
+.gads-pricing-card:nth-child(3):hover {
+  border-color: rgba(34, 211, 238, 0.5);
+  box-shadow: 0 0 32px rgba(34, 211, 238, 0.45);
+}
+
+.gads-pricing-card__name {
+  font-size: clamp(1.2rem, 1.8vw, 1.5rem);
+  font-weight: 700;
+}
+
+.gads-pricing-card__fee-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.gads-pricing-card__fee-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.gads-pricing-card__fee {
+  font-size: clamp(1.4rem, 2.2vw, 1.8rem);
+  font-weight: 800;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.2;
+}
+
+.gads-pricing-card:nth-child(2) .gads-pricing-card__fee {
+  background: linear-gradient(135deg, var(--color-violet), var(--color-cyan));
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.gads-pricing-card:nth-child(3) .gads-pricing-card__fee {
+  background: linear-gradient(135deg, var(--color-cyan), var(--color-blue));
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.gads-pricing-card__unit {
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+/* ---- Ad Spend Block ---- */
+.gads-pricing-card__ad-spend-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  background: rgba(34, 211, 238, 0.06);
+  border: 1px dashed rgba(34, 211, 238, 0.25);
+}
+
+.gads-pricing-card__ad-spend-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-cyan);
+}
+
+.gads-pricing-card__ad-spend {
+  font-size: clamp(1rem, 1.4vw, 1.15rem);
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+/* ---- Divider ---- */
+.gads-pricing-card__divider {
+  height: 1px;
+  background: var(--color-border);
+  margin: 0.25rem 0;
+}
+
+/* ---- Features ---- */
+.gads-pricing-card__features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  flex: 1;
+}
+
+.gads-pricing-card__feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: clamp(0.88rem, 1.1vw, 0.95rem);
+  line-height: 1.5;
+  color: var(--color-text);
+}
+
+.gads-pricing-card__feature svg {
+  color: var(--color-cyan);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+/* ---- Explainer ---- */
+.gads-pricing-explainer__inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: clamp(1.5rem, 3vw, 2rem);
+}
+
+.gads-pricing-explainer__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(59, 130, 246, 0.12);
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  color: var(--color-blue);
+  flex-shrink: 0;
+}
+
+.gads-pricing-explainer__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.gads-pricing-explainer__title {
+  font-size: clamp(1.05rem, 1.5vw, 1.2rem);
+  font-weight: 700;
+}
+
+.gads-pricing-explainer__text {
+  font-size: clamp(0.9rem, 1.1vw, 0.98rem);
+  line-height: 1.7;
+  color: var(--color-text-muted);
+}
+
+.gads-pricing-explainer__text strong {
+  color: var(--color-text);
+  font-weight: 700;
+}
+
+/* ---- Related ---- */
+.gads-pricing-related__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.gads-pricing-related__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.65rem 1.25rem;
+  background: var(--color-surface-glass);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--color-text);
+  backdrop-filter: blur(12px);
+  transition: all var(--transition);
+}
+
+.gads-pricing-related__link:hover {
+  border-color: var(--color-violet);
+  color: var(--color-cyan);
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-2px);
+}
+
+.gads-pricing-related__link svg {
+  transition: transform var(--transition);
+}
+
+.gads-pricing-related__link:hover svg {
+  transform: translateX(3px);
+}
+
+/* ---- Keyframes ---- */
+@keyframes gads-bar-fill {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+@keyframes gads-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* ---- Responsive: Tablet (1024px) ---- */
+@media (max-width: 1024px) {
+  .gads-pricing-cards__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .gads-pricing-cards__grid > :last-child {
+    grid-column: 1 / -1;
+    max-width: 50%;
+    justify-self: center;
+  }
+  .gads-pricing-page .gads-hero-visual { display: none; }
+}
+
+/* ---- Responsive: Mobile (768px) ---- */
+@media (max-width: 768px) {
+  .gads-pricing-page .hero { padding-block: 3.5rem 3rem; }
+  .gads-pricing-cards__grid { grid-template-columns: 1fr; }
+  .gads-pricing-cards__grid > :last-child { max-width: 100%; }
+  .gads-pricing-page .gads-hero-visual { display: none; }
+}
+
+/* ---- Responsive: Small Mobile (480px) ---- */
+@media (max-width: 480px) {
+  .gads-pricing-page .hero { padding-block: 2.5rem 2rem; }
+  .gads-pricing-page .hero__title { max-width: 100%; }
+  .gads-pricing-page .hero__actions .btn { width: 100%; }
+  .gads-pricing-card { padding: 1.5rem; }
+}
+
+/* ---- Reduced Motion ---- */
+@media (prefers-reduced-motion: reduce) {
+  .gads-pricing-card:hover { transform: none !important; }
+  .gads-pricing-page .gads-hero-visual__bar-line,
+  .gads-pricing-page .gads-hero-visual__bar-cursor,
+  .gads-pricing-page .gads-hero-visual__bar-line-sm { animation: none !important; }
+}

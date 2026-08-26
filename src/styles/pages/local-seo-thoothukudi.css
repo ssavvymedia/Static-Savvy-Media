@@ -1,0 +1,535 @@
+/* ====================================================
+   Local SEO Thoothukudi — Service × Location Page
+   ==================================================== */
+
+/* ---- Hero ---- */
+.lseo-tut-hero {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.lseo-tut-hero__badge {
+  display: inline-block;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: rgba(34, 211, 238, 0.12);
+  border: 1px solid rgba(34, 211, 238, 0.3);
+  color: var(--color-cyan);
+  align-self: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.lseo-tut-hero__title {
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.lseo-tut-hero__paragraph {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--color-text-muted);
+  max-width: 720px;
+}
+
+.lseo-tut-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+/* ---- Services Grid ---- */
+.lseo-tut-services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+.lseo-tut-service-card {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.lseo-tut-service-card__number {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-cyan);
+  opacity: 0.8;
+  margin-bottom: 0.25rem;
+}
+
+.lseo-tut-service-card__title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.lseo-tut-service-card__text {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--color-text-muted);
+}
+
+/* ---- GBP Grid ---- */
+.lseo-tut-gbp-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.lseo-tut-gbp-item {
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.lseo-tut-gbp-item__check {
+  font-size: 1rem;
+  color: var(--color-cyan);
+  flex-shrink: 0;
+}
+
+.lseo-tut-gbp-item__text {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--color-text);
+}
+
+/* ---- NAP Grid ---- */
+.lseo-tut-nap-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.lseo-tut-nap-item {
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.lseo-tut-nap-item__check {
+  font-size: 1rem;
+  color: var(--color-cyan);
+  flex-shrink: 0;
+}
+
+.lseo-tut-nap-item__text {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--color-text);
+}
+
+/* ---- Citations Grid ---- */
+.lseo-tut-citations-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.lseo-tut-citation-card {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.lseo-tut-citation-card__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+/* ---- Review Flow ---- */
+.lseo-tut-review-flow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.lseo-tut-review-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.5rem;
+  background: var(--color-surface-glass);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(14px);
+  text-align: center;
+  min-width: 140px;
+  flex: 1;
+}
+
+.lseo-tut-review-step__number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(34, 211, 238, 0.15);
+  border: 1px solid rgba(34, 211, 238, 0.3);
+  color: var(--color-cyan);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.lseo-tut-review-step__title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.lseo-tut-review-step__text {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+}
+
+.lseo-tut-review-arrow {
+  display: flex;
+  align-items: center;
+  color: var(--color-cyan);
+  opacity: 0.5;
+  padding-top: 1rem;
+}
+
+/* ---- Industries Grid ---- */
+.lseo-tut-industry-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.lseo-tut-industry-card {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.lseo-tut-industry-card__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.lseo-tut-industry-card__text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+/* ---- Process Grid ---- */
+.lseo-tut-process-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.lseo-tut-process-card {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.lseo-tut-process-card__number {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-cyan);
+  opacity: 0.8;
+  margin-bottom: 0.25rem;
+}
+
+.lseo-tut-process-card__title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.lseo-tut-process-card__text {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--color-text-muted);
+}
+
+/* ---- Comparison Table ---- */
+.lseo-tut-comparison-table {
+  padding: 0;
+  overflow: hidden;
+}
+
+.lseo-tut-comparison-header {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1.5fr;
+  gap: 0;
+  padding: 1rem 1.5rem;
+  background: rgba(34, 211, 238, 0.08);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.lseo-tut-comparison-header__aspect,
+.lseo-tut-comparison-header__traditional,
+.lseo-tut-comparison-header__local {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-text);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.lseo-tut-comparison-row {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1.5fr;
+  gap: 0;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.lseo-tut-comparison-row:last-child {
+  border-bottom: none;
+}
+
+.lseo-tut-comparison-row__aspect {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.lseo-tut-comparison-row__traditional {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--color-text-muted);
+}
+
+.lseo-tut-comparison-row__local {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--color-cyan);
+}
+
+/* ---- Why Us Grid ---- */
+.lseo-tut-why-us-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+.lseo-tut-why-us-card {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.lseo-tut-why-us-card__number {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-cyan);
+  opacity: 0.8;
+  margin-bottom: 0.25rem;
+}
+
+.lseo-tut-why-us-card__title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.lseo-tut-why-us-card__text {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--color-text-muted);
+}
+
+/* ---- Related Links ---- */
+.lseo-tut-related-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.lseo-tut-related-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.25rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-decoration: none;
+  transition: all var(--transition);
+}
+
+.lseo-tut-related-link:hover {
+  background: rgba(34, 211, 238, 0.15);
+  border-color: rgba(34, 211, 238, 0.4);
+  color: var(--color-cyan);
+  transform: translateY(-2px);
+}
+
+/* ---- Location Grid ---- */
+.lseo-tut-location-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.lseo-tut-location-card {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  text-decoration: none;
+  transition: all var(--transition);
+}
+
+.lseo-tut-location-card:not(.lseo-tut-location-card--current):hover {
+  transform: translateY(-4px);
+  border-color: rgba(34, 211, 238, 0.4);
+}
+
+.lseo-tut-location-card--current {
+  border-color: rgba(34, 211, 238, 0.4);
+  background: rgba(34, 211, 238, 0.05);
+}
+
+.lseo-tut-location-card__badge {
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(34, 211, 238, 0.15);
+  border: 1px solid rgba(34, 211, 238, 0.3);
+  color: var(--color-cyan);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  width: fit-content;
+}
+
+.lseo-tut-location-card__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.lseo-tut-location-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-cyan);
+  transition: color var(--transition), transform var(--transition);
+}
+
+.lseo-tut-location-card:hover .lseo-tut-location-card__link {
+  color: var(--color-violet);
+  transform: translateX(4px);
+}
+
+.lseo-tut-location-card__link svg {
+  transition: transform var(--transition);
+}
+
+.lseo-tut-location-card:hover .lseo-tut-location-card__link svg {
+  transform: translateX(4px);
+}
+
+/* ---- Responsive: Tablet ---- */
+@media (max-width: 1024px) {
+  .lseo-tut-services-grid,
+  .lseo-tut-why-us-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .lseo-tut-industry-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .lseo-tut-process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .lseo-tut-location-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .lseo-tut-citations-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ---- Responsive: Mobile ---- */
+@media (max-width: 768px) {
+  .lseo-tut-hero__actions {
+    flex-direction: column;
+  }
+
+  .lseo-tut-services-grid,
+  .lseo-tut-why-us-grid,
+  .lseo-tut-industry-grid,
+  .lseo-tut-process-grid,
+  .lseo-tut-location-grid,
+  .lseo-tut-citations-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lseo-tut-gbp-grid,
+  .lseo-tut-nap-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lseo-tut-review-flow {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .lseo-tut-review-arrow {
+    transform: rotate(90deg);
+    padding-top: 0;
+  }
+
+  .lseo-tut-comparison-header,
+  .lseo-tut-comparison-row {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .lseo-tut-comparison-header__traditional,
+  .lseo-tut-comparison-header__local {
+    display: none;
+  }
+
+  .lseo-tut-comparison-row__traditional::before {
+    content: 'Traditional: ';
+    font-weight: 600;
+    color: var(--color-text);
+  }
+
+  .lseo-tut-comparison-row__local::before {
+    content: 'Local: ';
+    font-weight: 600;
+    color: var(--color-cyan);
+  }
+}

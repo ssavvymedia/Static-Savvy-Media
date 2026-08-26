@@ -1,0 +1,355 @@
+/* ====================================================
+   AI PRICING PAGE
+   Premium futuristic AI services pricing UI.
+   ==================================================== */
+
+.ai-pricing-page {
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* ---- Hero Overrides ---- */
+.ai-pricing-page .hero {
+  position: relative;
+  padding-block: clamp(4rem, 9vw, 7rem) clamp(2.5rem, 5vw, 4rem);
+  background:
+    radial-gradient(55% 45% at 12% 12%, rgba(139, 92, 246, 0.15), transparent 60%),
+    radial-gradient(45% 40% at 88% 20%, rgba(34, 211, 238, 0.12), transparent 60%),
+    radial-gradient(40% 40% at 50% 100%, rgba(236, 72, 153, 0.09), transparent 55%);
+}
+
+.ai-pricing-page .hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(148, 163, 184, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.06) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(70% 70% at 50% 30%, #000, transparent);
+}
+
+.ai-pricing-page .hero__inner {
+  position: relative;
+  z-index: 2;
+}
+
+.ai-pricing-page .hero__title {
+  max-width: 18ch;
+}
+
+.ai-pricing-page .hero__subtitle {
+  max-width: 640px;
+  font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+  line-height: 1.8;
+}
+
+/* ---- Hero Visual ---- */
+.ai-pricing-hero__visual {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  width: clamp(200px, 22vw, 320px);
+  height: clamp(200px, 22vw, 320px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.ai-pricing-hero__orb {
+  position: absolute;
+  inset: 15%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.25), rgba(34, 211, 238, 0.1), transparent 70%);
+  filter: blur(30px);
+  animation: ai-pricing-orb-pulse 4s ease-in-out infinite;
+}
+
+.ai-pricing-hero__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  padding: 20px;
+  border-radius: var(--radius-xl);
+  background: rgba(17, 26, 51, 0.4);
+  border: 1px solid var(--color-border);
+  backdrop-filter: blur(10px);
+}
+
+.ai-pricing-hero__node {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(139, 92, 246, 0.4);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  animation: ai-pricing-node-glow 3s ease-in-out infinite;
+}
+
+.ai-pricing-hero__node:nth-child(even) {
+  background: rgba(34, 211, 238, 0.4);
+  border-color: rgba(34, 211, 238, 0.3);
+  animation-delay: 1.5s;
+}
+
+.ai-pricing-hero__node:nth-child(3n) {
+  background: rgba(236, 72, 153, 0.4);
+  border-color: rgba(236, 72, 153, 0.3);
+  animation-delay: 0.8s;
+}
+
+/* ---- Pricing Cards Section ---- */
+.ai-pricing-cards {
+  position: relative;
+  background:
+    radial-gradient(50% 50% at 50% 20%, rgba(139, 92, 246, 0.08), transparent 60%),
+    var(--color-bg-secondary);
+}
+
+.ai-pricing-cards__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1.25rem, 2.5vw, 1.75rem);
+  align-items: start;
+}
+
+/* ---- Pricing Card ---- */
+.ai-pricing-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: clamp(2rem, 3vw, 2.5rem);
+  background: var(--color-surface-glass);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(14px);
+  box-shadow: var(--shadow-card);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  height: 100%;
+}
+
+.ai-pricing-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(139, 92, 246, 0.5);
+  box-shadow: 0 0 32px rgba(139, 92, 246, 0.45);
+}
+
+.ai-pricing-card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(34, 211, 238, 0.1));
+  border: 1px solid rgba(139, 92, 246, 0.25);
+  color: var(--color-violet);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.ai-pricing-card:hover .ai-pricing-card__icon {
+  transform: translateY(-3px) scale(1.06);
+  box-shadow: 0 0 24px rgba(139, 92, 246, 0.5);
+}
+
+.ai-pricing-card:nth-child(2) .ai-pricing-card__icon {
+  background: linear-gradient(135deg, rgba(34, 211, 238, 0.2), rgba(59, 130, 246, 0.1));
+  border-color: rgba(34, 211, 238, 0.25);
+  color: var(--color-cyan);
+}
+
+.ai-pricing-card:nth-child(2):hover .ai-pricing-card__icon {
+  box-shadow: 0 0 24px rgba(34, 211, 238, 0.5);
+}
+
+.ai-pricing-card:nth-child(3) .ai-pricing-card__icon {
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.2), rgba(139, 92, 246, 0.1));
+  border-color: rgba(236, 72, 153, 0.25);
+  color: var(--color-pink);
+}
+
+.ai-pricing-card:nth-child(3):hover .ai-pricing-card__icon {
+  box-shadow: 0 0 24px rgba(236, 72, 153, 0.5);
+}
+
+.ai-pricing-card__name {
+  font-size: clamp(1.15rem, 1.6vw, 1.35rem);
+  font-weight: 700;
+}
+
+.ai-pricing-card__price {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 800;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.2;
+}
+
+.ai-pricing-card:nth-child(2) .ai-pricing-card__price {
+  background: linear-gradient(135deg, var(--color-cyan), var(--color-blue));
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.ai-pricing-card:nth-child(3) .ai-pricing-card__price {
+  background: linear-gradient(135deg, var(--color-pink), var(--color-violet));
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.ai-pricing-card__unit {
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--color-text-muted);
+  letter-spacing: 0.02em;
+}
+
+.ai-pricing-card__divider {
+  height: 1px;
+  background: var(--color-border);
+  margin: 0.25rem 0;
+}
+
+.ai-pricing-card__includes {
+  font-size: var(--fs-small);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.ai-pricing-card__features {
+  flex: 1;
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
+  line-height: 1.7;
+  color: var(--color-text);
+}
+
+.ai-pricing-card__cta {
+  align-self: flex-start;
+  margin-top: 0.5rem;
+}
+
+/* ---- Related Pricing ---- */
+.ai-pricing-related {
+  position: relative;
+}
+
+.ai-pricing-related__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.ai-pricing-related__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.65rem 1.25rem;
+  background: var(--color-surface-glass);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--color-text);
+  backdrop-filter: blur(12px);
+  transition: all var(--transition);
+}
+
+.ai-pricing-related__link:hover {
+  border-color: var(--color-violet);
+  color: var(--color-cyan);
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-2px);
+}
+
+.ai-pricing-related__link svg {
+  transition: transform var(--transition);
+}
+
+.ai-pricing-related__link:hover svg {
+  transform: translateX(3px);
+}
+
+/* ---- Keyframes ---- */
+@keyframes ai-pricing-orb-pulse {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.1); }
+}
+
+@keyframes ai-pricing-node-glow {
+  0%, 100% { opacity: 0.5; box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.3); }
+  50% { opacity: 1; box-shadow: 0 0 12px 2px rgba(139, 92, 246, 0.4); }
+}
+
+/* ---- Responsive: Tablet (1024px) ---- */
+@media (max-width: 1024px) {
+  .ai-pricing-cards__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ai-pricing-cards__grid > :last-child {
+    grid-column: 1 / -1;
+    max-width: 50%;
+    justify-self: center;
+  }
+
+  .ai-pricing-hero__visual {
+    display: none;
+  }
+}
+
+/* ---- Responsive: Mobile (768px) ---- */
+@media (max-width: 768px) {
+  .ai-pricing-page .hero {
+    padding-block: 3.5rem 3rem;
+  }
+
+  .ai-pricing-cards__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-pricing-cards__grid > :last-child {
+    max-width: 100%;
+  }
+
+  .ai-pricing-hero__visual {
+    display: none;
+  }
+}
+
+/* ---- Responsive: Small Mobile (480px) ---- */
+@media (max-width: 480px) {
+  .ai-pricing-page .hero {
+    padding-block: 2.5rem 2rem;
+  }
+
+  .ai-pricing-page .hero__title {
+    max-width: 100%;
+  }
+
+  .ai-pricing-page .hero__actions .btn {
+    width: 100%;
+  }
+
+  .ai-pricing-card {
+    padding: 1.5rem;
+  }
+}
+
+/* ---- Reduced Motion ---- */
+@media (prefers-reduced-motion: reduce) {
+  .ai-pricing-card:hover {
+    transform: none !important;
+  }
+
+  .ai-pricing-hero__orb {
+    animation: none !important;
+  }
+
+  .ai-pricing-hero__node {
+    animation: none !important;
+  }
+}

@@ -1,0 +1,1018 @@
+/* ====================================================
+   AI VIDEO CREATION — Service Page Styles
+   Premium AI / video production agency UI.
+   ==================================================== */
+
+.aiv-page {
+  --aiv-glow-soft: 0 0 24px rgba(139, 92, 246, 0.3);
+  --aiv-glow-strong: 0 0 40px rgba(236, 72, 153, 0.55);
+}
+
+/* ---- Page container tuning ---- */
+.aiv-page .container {
+  max-width: var(--container-max);
+}
+
+.aiv-page .section-heading__title {
+  font-size: clamp(1.625rem, 4vw, 2.625rem);
+}
+
+.aiv-page .hero__title {
+  font-size: clamp(2rem, 6vw, 4rem);
+  max-width: 100%;
+}
+
+/* ====================================================
+   HERO — AI VIDEO STUDIO
+   ==================================================== */
+
+.aiv-page .hero {
+  position: relative;
+}
+
+.aiv-hero-visual {
+  position: relative;
+  margin: clamp(2rem, 5vw, 3.5rem) auto 0;
+  max-width: 860px;
+  width: 100%;
+}
+
+.aiv-studio {
+  position: relative;
+  padding: clamp(1.25rem, 2.5vw, 2rem);
+  border-radius: var(--radius-xl);
+  background:
+    radial-gradient(60% 60% at 50% 0%, rgba(236, 72, 153, 0.12), transparent 60%),
+    radial-gradient(45% 50% at 85% 100%, rgba(139, 92, 246, 0.14), transparent 60%),
+    linear-gradient(180deg, rgba(17, 26, 51, 0.72), rgba(7, 11, 24, 0.9)),
+    var(--color-surface-glass);
+  border: 1px solid rgba(139, 92, 246, 0.28);
+  box-shadow:
+    0 30px 60px rgba(2, 6, 23, 0.55),
+    var(--shadow-glow);
+  backdrop-filter: blur(16px);
+  overflow: hidden;
+}
+
+.aiv-studio__glow {
+  position: absolute;
+  inset: -40% -20% auto -20%;
+  height: 60%;
+  background: radial-gradient(closest-side, rgba(34, 211, 238, 0.16), transparent 70%);
+  pointer-events: none;
+  animation: aivGlowPulse 6s ease-in-out infinite;
+}
+
+/* ---- Floating chips ---- */
+.aiv-chip {
+  position: absolute;
+  z-index: 4;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: var(--color-surface-glass);
+  border: 1px solid var(--color-border);
+  backdrop-filter: blur(10px);
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: var(--color-text);
+  box-shadow: 0 8px 24px rgba(2, 6, 23, 0.5);
+  animation: aivChipFloat 6s ease-in-out infinite;
+  white-space: nowrap;
+}
+
+.aiv-chip--avatar {
+  top: 6%;
+  left: -2%;
+  color: var(--color-violet);
+  border-color: rgba(139, 92, 246, 0.45);
+}
+
+.aiv-chip--tamil {
+  top: 14%;
+  right: -2%;
+  color: var(--color-cyan);
+  border-color: rgba(34, 211, 238, 0.4);
+  animation-delay: 0.7s;
+}
+
+.aiv-chip--english {
+  top: 55%;
+  left: -3%;
+  color: var(--color-pink);
+  border-color: rgba(236, 72, 153, 0.4);
+  animation-delay: 1.2s;
+}
+
+.aiv-chip--malay {
+  top: 62%;
+  right: -3%;
+  color: var(--color-blue);
+  border-color: rgba(59, 130, 246, 0.45);
+  animation-delay: 0.4s;
+}
+
+.aiv-chip--cost {
+  bottom: 14%;
+  left: -1%;
+  color: #4ade80;
+  border-color: rgba(74, 222, 128, 0.4);
+  animation-delay: 1.6s;
+}
+
+.aiv-chip--ratio {
+  bottom: 8%;
+  right: 4%;
+  color: var(--color-cyan);
+  border-color: rgba(34, 211, 238, 0.4);
+  animation-delay: 2s;
+}
+
+/* ---- Main frame ---- */
+.aiv-frame {
+  position: relative;
+  border-radius: var(--radius-lg);
+  background: rgba(7, 11, 24, 0.6);
+  border: 1px solid var(--color-border);
+  box-shadow:
+    0 24px 48px rgba(2, 6, 23, 0.6),
+    0 0 0 1px rgba(139, 92, 246, 0.12);
+  padding: clamp(0.9rem, 2vw, 1.4rem);
+  overflow: hidden;
+}
+
+.aiv-frame__corner {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border: 2px solid var(--color-cyan);
+  opacity: 0.55;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.aiv-frame__corner--tl {
+  top: 8px;
+  left: 8px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.aiv-frame__corner--tr {
+  top: 8px;
+  right: 8px;
+  border-left: none;
+  border-bottom: none;
+}
+
+.aiv-frame__corner--bl {
+  bottom: 8px;
+  left: 8px;
+  border-right: none;
+  border-top: none;
+}
+
+.aiv-frame__corner--br {
+  bottom: 8px;
+  right: 8px;
+  border-left: none;
+  border-top: none;
+}
+
+/* ---- Screen ---- */
+.aiv-screen {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-md);
+  background: linear-gradient(180deg, rgba(17, 26, 51, 0.9), rgba(7, 11, 24, 0.95));
+  border: 1px solid rgba(139, 92, 246, 0.22);
+  overflow: hidden;
+}
+
+.aiv-screen__backdrop {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(60% 80% at 50% 0%, rgba(139, 92, 246, 0.22), transparent 65%),
+    radial-gradient(45% 60% at 80% 90%, rgba(34, 211, 238, 0.12), transparent 60%);
+}
+
+.aiv-screen__scan {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -20%;
+  height: 18%;
+  background: linear-gradient(180deg, transparent, rgba(34, 211, 238, 0.16), transparent);
+  animation: aivScan 3.4s linear infinite;
+  pointer-events: none;
+}
+
+.aiv-screen__silhouette {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.aiv-screen__head {
+  width: clamp(28px, 4vw, 44px);
+  height: clamp(28px, 4vw, 44px);
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.55), rgba(34, 211, 238, 0.55));
+  box-shadow: 0 0 24px rgba(139, 92, 246, 0.5);
+  animation: aivAvatarPulse 3s ease-in-out infinite;
+}
+
+.aiv-screen__body {
+  width: clamp(58px, 8vw, 96px);
+  height: clamp(52px, 7vw, 86px);
+  margin-top: -4px;
+  border-radius: 46% 46% 20% 20%;
+  background: linear-gradient(180deg, rgba(139, 92, 246, 0.35), rgba(34, 211, 238, 0.2));
+  border: 1px solid rgba(139, 92, 246, 0.35);
+  border-top: none;
+}
+
+.aiv-screen__play {
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(52px, 7vw, 72px);
+  height: clamp(52px, 7vw, 72px);
+  border-radius: 50%;
+  background: rgba(7, 11, 24, 0.55);
+  border: 1px solid rgba(236, 72, 153, 0.5);
+  color: #fff;
+  backdrop-filter: blur(8px);
+  box-shadow:
+    0 0 0 6px rgba(236, 72, 153, 0.12),
+    0 0 30px rgba(236, 72, 153, 0.4);
+  animation: aivPlayPulse 2.4s ease-in-out infinite;
+}
+
+.aiv-screen__play svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+  stroke: none;
+  margin-left: 3px;
+}
+
+/* ---- Frame chrome ---- */
+.aiv-frame__rec {
+  position: absolute;
+  top: clamp(0.9rem, 2vw, 1.4rem);
+  left: clamp(1.4rem, 3vw, 2.2rem);
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  color: #f87171;
+}
+
+.aiv-frame__rec::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ef4444;
+  box-shadow: 0 0 12px rgba(239, 68, 68, 0.9);
+  animation: aivRecPulse 1.4s ease-in-out infinite;
+}
+
+.aiv-frame__counter {
+  position: absolute;
+  top: clamp(0.9rem, 2vw, 1.4rem);
+  right: clamp(1.4rem, 3vw, 2.2rem);
+  z-index: 3;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--color-text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.aiv-frame__timeline {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: clamp(0.35rem, 0.8vw, 0.6rem);
+  margin-top: clamp(0.9rem, 2vw, 1.4rem);
+  height: 26px;
+  padding: 0.3rem clamp(0.6rem, 1.5vw, 1rem);
+  border-radius: var(--radius-sm);
+  background: rgba(17, 26, 51, 0.8);
+  border: 1px solid rgba(139, 92, 246, 0.18);
+}
+
+.aiv-frame__clip {
+  flex: 1;
+  height: 12px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, rgba(34, 211, 238, 0.55), rgba(139, 92, 246, 0.55));
+  opacity: 0.8;
+}
+
+.aiv-frame__clip:nth-child(2) {
+  background: linear-gradient(90deg, rgba(236, 72, 153, 0.55), rgba(139, 92, 246, 0.55));
+}
+
+.aiv-frame__clip:nth-child(3) {
+  background: linear-gradient(90deg, rgba(34, 211, 238, 0.4), rgba(59, 130, 246, 0.55));
+}
+
+.aiv-frame__playhead {
+  position: absolute;
+  top: -3px;
+  bottom: -3px;
+  width: 2px;
+  background: #fff;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.9);
+  animation: aivPlayhead 3s linear infinite;
+}
+
+/* ---- Filmstrip ---- */
+.aiv-studio__filmstrip {
+  position: absolute;
+  top: clamp(1.25rem, 2.5vw, 2rem);
+  right: -14px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px 6px;
+  border-radius: 6px;
+  background: rgba(17, 26, 51, 0.85);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  opacity: 0.7;
+}
+
+.aiv-studio__filmstrip i {
+  width: 18px;
+  height: 12px;
+  border-radius: 2px;
+  background: linear-gradient(135deg, rgba(34, 211, 238, 0.7), rgba(139, 92, 246, 0.7));
+  animation: aivChipFloat 5s ease-in-out infinite;
+}
+
+.aiv-studio__filmstrip i:nth-child(2n) {
+  animation-delay: 0.5s;
+}
+
+.aiv-studio__filmstrip i:nth-child(3n) {
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.7), rgba(139, 92, 246, 0.7));
+}
+
+/* ---- Cost badge ---- */
+.aiv-studio__badge {
+  position: absolute;
+  bottom: clamp(1.25rem, 2.5vw, 2rem);
+  left: -14px;
+  z-index: 4;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 0.9rem;
+  border-radius: var(--radius-md);
+  background: rgba(7, 11, 24, 0.85);
+  border: 1px solid rgba(74, 222, 128, 0.45);
+  backdrop-filter: blur(10px);
+  color: #4ade80;
+  box-shadow: 0 8px 24px rgba(2, 6, 23, 0.5);
+  animation: aivChipFloat 6s ease-in-out infinite;
+}
+
+.aiv-studio__badge span {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  color: var(--color-text);
+}
+
+.aiv-studio__badge strong {
+  color: #4ade80;
+  font-size: 0.82rem;
+}
+
+/* ====================================================
+   WORKFLOW PRIMITIVES
+   ==================================================== */
+
+.aiv-flow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  width: 100%;
+  min-width: 0;
+}
+
+.aiv-flow--horizontal {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.aiv-node {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  padding: 0.45rem 0.8rem;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(180deg, rgba(17, 26, 51, 0.85), rgba(11, 17, 36, 0.9));
+  border: 1px solid var(--color-border);
+  box-shadow: 0 6px 18px rgba(2, 6, 23, 0.45);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--color-text);
+  white-space: nowrap;
+  max-width: 100%;
+  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+}
+
+.aiv-node:hover {
+  transform: translateY(-2px);
+  border-color: rgba(236, 72, 153, 0.55);
+  box-shadow: var(--aiv-glow-soft);
+}
+
+.aiv-node__icon {
+  display: inline-flex;
+  align-items: center;
+  color: var(--color-cyan);
+  flex-shrink: 0;
+}
+
+.aiv-node:nth-child(odd) .aiv-node__icon {
+  color: var(--color-violet);
+}
+
+.aiv-node--hot {
+  border-color: rgba(236, 72, 153, 0.5);
+  box-shadow: 0 0 18px rgba(236, 72, 153, 0.3);
+}
+
+.aiv-node--hot .aiv-node__icon {
+  color: var(--color-pink);
+}
+
+.aiv-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-cyan);
+  flex-shrink: 0;
+  position: relative;
+}
+
+.aiv-arrow svg {
+  animation: aivArrowPulse 1.6s ease-in-out infinite;
+}
+
+.aiv-flow--horizontal .aiv-arrow svg {
+  transform: rotate(-90deg);
+  animation-name: aivArrowPulseH;
+}
+
+/* ====================================================
+   WHAT WE CREATE — CARDS
+   ==================================================== */
+
+.aiv-create {
+  position: relative;
+  background:
+    radial-gradient(50% 50% at 12% 8%, rgba(236, 72, 153, 0.08), transparent 60%),
+    radial-gradient(45% 45% at 90% 90%, rgba(139, 92, 246, 0.08), transparent 60%),
+    var(--color-bg-secondary);
+}
+
+.aiv-create__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+.aiv-create-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: clamp(1.5rem, 2.5vw, 2rem);
+  background: var(--color-surface-glass);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(14px);
+  box-shadow: var(--shadow-card);
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition),
+    border-color var(--transition);
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.aiv-create-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-pink), var(--color-cyan), transparent);
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.aiv-create-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(236, 72, 153, 0.5);
+  box-shadow: var(--shadow-glow);
+}
+
+.aiv-create-card:hover::before {
+  opacity: 1;
+}
+
+.aiv-create-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.aiv-create-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  background: var(--gradient-primary);
+  color: #fff;
+  box-shadow: var(--shadow-glow);
+  transition: transform var(--transition), box-shadow var(--transition);
+  flex-shrink: 0;
+}
+
+.aiv-create-card:nth-child(even) .aiv-create-card__icon {
+  background: linear-gradient(135deg, var(--color-violet), var(--color-pink));
+}
+
+.aiv-create-card:nth-child(3n) .aiv-create-card__icon {
+  background: linear-gradient(135deg, var(--color-cyan), var(--color-blue));
+}
+
+.aiv-create-card:hover .aiv-create-card__icon {
+  transform: translateY(-3px) scale(1.06);
+  box-shadow: 0 0 30px rgba(236, 72, 153, 0.65);
+}
+
+.aiv-create-card__number {
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: var(--color-text-muted);
+}
+
+.aiv-create-card__title {
+  font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+}
+
+.aiv-create-card__text {
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
+  line-height: 1.7;
+  flex: 1;
+}
+
+.aiv-create-card__flow {
+  padding-top: 0.75rem;
+  border-top: 1px dashed var(--color-border);
+}
+
+.aiv-create-card__flow .aiv-node {
+  font-size: 0.64rem;
+  padding: 0.4rem 0.7rem;
+}
+
+/* ====================================================
+   TRADITIONAL VIDEO VS AI VIDEO — COMPARISON
+   ==================================================== */
+
+.aiv-compare {
+  position: relative;
+  background:
+    radial-gradient(50% 60% at 85% 10%, rgba(139, 92, 246, 0.09), transparent 60%),
+    radial-gradient(40% 50% at 8% 90%, rgba(34, 211, 238, 0.08), transparent 55%),
+    var(--color-bg);
+}
+
+.aiv-compare__table {
+  max-width: 920px;
+  margin-inline: auto;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface-glass);
+  backdrop-filter: blur(14px);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+
+.aiv-compare__head,
+.aiv-compare__row {
+  display: grid;
+  grid-template-columns: 0.9fr 1.15fr 1.15fr;
+}
+
+.aiv-compare__head {
+  background: rgba(17, 26, 51, 0.9);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.aiv-compare__row {
+  border-bottom: 1px solid rgba(139, 92, 246, 0.14);
+  transition: background var(--transition);
+}
+
+.aiv-compare__row:last-child {
+  border-bottom: none;
+}
+
+.aiv-compare__row:hover {
+  background: rgba(139, 92, 246, 0.06);
+}
+
+.aiv-compare__factor {
+  display: flex;
+  align-items: center;
+  padding: clamp(1rem, 2vw, 1.35rem);
+  font-size: clamp(0.85rem, 1.2vw, 1rem);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: var(--color-text);
+  border-right: 1px solid var(--color-border);
+}
+
+.aiv-compare__head .aiv-compare__factor {
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.aiv-compare__cell {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  padding: clamp(1rem, 2vw, 1.35rem);
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
+  line-height: 1.6;
+}
+
+.aiv-compare__cell--trad {
+  color: var(--color-text);
+  border-right: 1px solid var(--color-border);
+}
+
+.aiv-compare__cell--ai {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.16), rgba(34, 211, 238, 0.1));
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.aiv-compare__cell--ai .aiv-compare__cell-value svg {
+  color: var(--color-violet);
+}
+
+.aiv-compare__head .aiv-compare__cell--ai {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.28), rgba(34, 211, 238, 0.16));
+}
+
+.aiv-compare__head .aiv-compare__cell-value {
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text);
+}
+
+.aiv-compare__cell-value {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.aiv-compare__cell-label {
+  display: none;
+}
+
+/* ====================================================
+   RELATED SERVICES
+   ==================================================== */
+
+.aiv-related {
+  position: relative;
+  background: var(--color-bg);
+}
+
+.aiv-related__links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+/* ====================================================
+   KEYFRAMES
+   ==================================================== */
+
+@keyframes aivGlowPulse {
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes aivScan {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(760%);
+  }
+}
+
+@keyframes aivAvatarPulse {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.45);
+  }
+  50% {
+    box-shadow: 0 0 34px rgba(139, 92, 246, 0.8);
+  }
+}
+
+@keyframes aivPlayPulse {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 6px rgba(236, 72, 153, 0.12),
+      0 0 24px rgba(236, 72, 153, 0.4);
+  }
+  50% {
+    box-shadow:
+      0 0 0 12px rgba(236, 72, 153, 0.08),
+      0 0 42px rgba(236, 72, 153, 0.7);
+  }
+}
+
+@keyframes aivRecPulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+
+@keyframes aivPlayhead {
+  from {
+    left: 0%;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes aivChipFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes aivArrowPulse {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+@keyframes aivArrowPulseH {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: rotate(-90deg) scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: rotate(-90deg) scale(1.15);
+  }
+}
+
+/* ====================================================
+   RESPONSIVE
+   ==================================================== */
+
+/* ---- Tablet ---- */
+@media (max-width: 1024px) {
+  .aiv-create__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .aiv-chip--avatar,
+  .aiv-chip--english {
+    display: none;
+  }
+}
+
+/* ---- Mobile ---- */
+@media (max-width: 768px) {
+  .aiv-page .container {
+    padding-inline: 16px;
+  }
+
+  .aiv-create__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .aiv-flow--horizontal {
+    flex-direction: column;
+  }
+
+  .aiv-flow--horizontal .aiv-arrow svg {
+    transform: rotate(0deg);
+    animation-name: aivArrowPulse;
+  }
+
+  .aiv-chip--tamil,
+  .aiv-chip--malay {
+    display: none;
+  }
+
+  .aiv-studio__filmstrip {
+    display: none;
+  }
+
+  .aiv-studio__badge {
+    left: 4px;
+    bottom: clamp(1.25rem, 2.5vw, 2rem);
+  }
+
+  .aiv-chip--cost {
+    left: 4px;
+  }
+
+  .aiv-chip--ratio {
+    right: 4px;
+  }
+
+  /* Comparison table stacks to cards */
+  .aiv-compare__head {
+    display: none;
+  }
+
+  .aiv-compare__table {
+    display: grid;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    backdrop-filter: none;
+  }
+
+  .aiv-compare__row {
+    grid-template-columns: 1fr;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+    background: var(--color-surface-glass);
+    overflow: hidden;
+  }
+
+  .aiv-compare__factor {
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
+    background: rgba(17, 26, 51, 0.8);
+    font-size: 0.8rem;
+  }
+
+  .aiv-compare__cell {
+    padding: 0.9rem 1rem;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .aiv-compare__cell--trad {
+    border-right: none;
+    border-bottom: 1px solid rgba(139, 92, 246, 0.14);
+  }
+
+  .aiv-compare__cell-label {
+    display: block;
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+  }
+
+  .aiv-compare__cell--ai .aiv-compare__cell-label {
+    color: var(--color-violet);
+  }
+}
+
+/* ---- Small mobile ---- */
+@media (max-width: 480px) {
+  .aiv-page .container {
+    padding-inline: 12px;
+  }
+
+  .aiv-page .hero__title {
+    font-size: clamp(2rem, 8vw, 3.5rem);
+  }
+
+  .aiv-studio {
+    padding: 1rem;
+  }
+
+  .aiv-chip {
+    font-size: 0.56rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .aiv-chip--cost {
+    display: none;
+  }
+
+  .aiv-frame__counter {
+    display: none;
+  }
+
+  .aiv-frame__rec {
+    top: auto;
+    bottom: clamp(0.9rem, 2vw, 1.4rem);
+  }
+
+  .aiv-create-card__flow .aiv-node {
+    font-size: 0.6rem;
+    padding: 0.35rem 0.6rem;
+  }
+
+  .aiv-node {
+    white-space: normal;
+    text-align: center;
+  }
+}
+
+/* ---- Reduced motion ---- */
+@media (prefers-reduced-motion: reduce) {
+  .aiv-studio__glow,
+  .aiv-screen__scan,
+  .aiv-screen__head,
+  .aiv-screen__play,
+  .aiv-frame__rec::before,
+  .aiv-frame__playhead,
+  .aiv-studio__filmstrip i,
+  .aiv-studio__badge,
+  .aiv-chip,
+  .aiv-arrow svg {
+    animation: none !important;
+  }
+}

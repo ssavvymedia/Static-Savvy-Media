@@ -1,0 +1,1133 @@
+/* ====================================================
+   AI BUSINESS AUTOMATION — Service Page Styles
+   Premium futuristic AI automation agency UI.
+   ==================================================== */
+
+.aba-page {
+  --aba-glow-soft: 0 0 24px rgba(139, 92, 246, 0.3);
+  --aba-glow-strong: 0 0 40px rgba(139, 92, 246, 0.6);
+}
+
+/* ---- Page container tuning ---- */
+.aba-page .container {
+  max-width: var(--container-max);
+}
+
+.aba-page .section-heading__title {
+  font-size: clamp(1.625rem, 4vw, 2.625rem);
+}
+
+.aba-page .hero__title {
+  font-size: clamp(2rem, 6vw, 4rem);
+  max-width: 100%;
+}
+
+/* ====================================================
+   HERO — AI COMMAND CENTER
+   ==================================================== */
+
+.aba-page .hero {
+  position: relative;
+}
+
+.aba-hero-visual {
+  position: relative;
+  margin: clamp(2rem, 5vw, 3.5rem) auto 0;
+  max-width: 860px;
+  width: 100%;
+}
+
+.aba-command {
+  position: relative;
+  display: grid;
+  gap: clamp(0.85rem, 1.8vw, 1.4rem);
+  padding: clamp(1.25rem, 2.5vw, 2rem);
+  border-radius: var(--radius-xl);
+  background:
+    radial-gradient(60% 60% at 50% 0%, rgba(139, 92, 246, 0.14), transparent 60%),
+    linear-gradient(180deg, rgba(17, 26, 51, 0.72), rgba(7, 11, 24, 0.9)),
+    var(--color-surface-glass);
+  border: 1px solid rgba(139, 92, 246, 0.28);
+  box-shadow:
+    0 30px 60px rgba(2, 6, 23, 0.55),
+    var(--shadow-glow);
+  backdrop-filter: blur(16px);
+  overflow: hidden;
+}
+
+.aba-command__glow {
+  position: absolute;
+  inset: -40% -20% auto -20%;
+  height: 60%;
+  background: radial-gradient(closest-side, rgba(34, 211, 238, 0.18), transparent 70%);
+  pointer-events: none;
+  animation: abaGlowPulse 6s ease-in-out infinite;
+}
+
+/* ---- Command rows ---- */
+.aba-command__row {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.aba-command__row--core,
+.aba-command__row--result {
+  grid-template-columns: 1fr;
+}
+
+.aba-command__row--branches {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(0.75rem, 2vw, 1.5rem);
+}
+
+/* ---- Command nodes ---- */
+.aba-node {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1rem;
+  border-radius: var(--radius-md);
+  background: linear-gradient(180deg, rgba(17, 26, 51, 0.9), rgba(11, 17, 36, 0.92));
+  border: 1px solid var(--color-border);
+  box-shadow: 0 8px 24px rgba(2, 6, 23, 0.5);
+  color: var(--color-text);
+  font-size: clamp(0.68rem, 1vw, 0.8rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+}
+
+.aba-node:hover {
+  transform: translateY(-3px);
+  border-color: rgba(34, 211, 238, 0.5);
+  box-shadow: var(--aba-glow-soft);
+}
+
+.aba-node__icon {
+  display: inline-flex;
+  align-items: center;
+  color: var(--color-cyan);
+  flex-shrink: 0;
+}
+
+.aba-node--core {
+  gap: 0.65rem;
+  padding: 0.9rem 1.5rem;
+  font-size: clamp(0.8rem, 1.2vw, 0.95rem);
+  border-color: rgba(139, 92, 246, 0.55);
+  background:
+    radial-gradient(80% 120% at 50% 0%, rgba(139, 92, 246, 0.28), transparent 70%),
+    linear-gradient(180deg, rgba(17, 26, 51, 0.95), rgba(11, 17, 36, 0.95));
+  box-shadow:
+    0 0 0 1px rgba(139, 92, 246, 0.25),
+    0 0 34px rgba(139, 92, 246, 0.5);
+  animation: abaCorePulse 3.2s ease-in-out infinite;
+}
+
+.aba-node--core .aba-node__icon {
+  color: var(--color-violet);
+  filter: drop-shadow(0 0 6px rgba(139, 92, 246, 0.9));
+}
+
+.aba-node--wa {
+  border-color: rgba(34, 211, 238, 0.35);
+}
+
+.aba-node--wa .aba-node__icon {
+  color: var(--color-cyan);
+}
+
+.aba-node--data .aba-node__icon {
+  color: var(--color-blue);
+}
+
+.aba-node--lead .aba-node__icon {
+  color: var(--color-pink);
+}
+
+.aba-node--qualify .aba-node__icon {
+  color: var(--color-violet);
+}
+
+.aba-node--follow .aba-node__icon {
+  color: var(--color-cyan);
+}
+
+.aba-node--process .aba-node__icon {
+  color: var(--color-pink);
+}
+
+.aba-node--business {
+  border-color: rgba(34, 211, 238, 0.4);
+  background:
+    radial-gradient(80% 120% at 50% 0%, rgba(34, 211, 238, 0.16), transparent 70%),
+    linear-gradient(180deg, rgba(17, 26, 51, 0.95), rgba(11, 17, 36, 0.95));
+  box-shadow: 0 0 26px rgba(34, 211, 238, 0.35);
+}
+
+.aba-node--business .aba-node__icon {
+  color: var(--color-cyan);
+}
+
+/* ---- Command connectors ---- */
+.aba-command__connector {
+  position: relative;
+  z-index: 2;
+  height: clamp(1.1rem, 2.2vw, 1.8rem);
+  width: 2px;
+  margin-inline: auto;
+  background: linear-gradient(180deg, var(--color-violet), var(--color-cyan));
+  opacity: 0.6;
+  overflow: hidden;
+}
+
+.aba-command__connector::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -12px;
+  height: 12px;
+  background: var(--color-cyan);
+  filter: drop-shadow(0 0 6px rgba(34, 211, 238, 0.9));
+  animation: abaDashFlow 1.8s linear infinite;
+}
+
+/* ---- Command floating elements ---- */
+.aba-command__float {
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  background: var(--color-surface-glass);
+  border: 1px solid var(--color-border);
+  backdrop-filter: blur(10px);
+  color: var(--color-cyan);
+  box-shadow: var(--aba-glow-soft);
+  animation: float 6s ease-in-out infinite;
+}
+
+.aba-command__float--1 {
+  top: 12%;
+  left: 3%;
+  color: #25d366;
+}
+
+.aba-command__float--2 {
+  top: 20%;
+  right: 4%;
+  color: var(--color-pink);
+  animation-delay: 0.8s;
+}
+
+.aba-command__float--3 {
+  top: 55%;
+  left: 1%;
+  color: var(--color-violet);
+  animation-delay: 1.4s;
+}
+
+.aba-command__float--4 {
+  top: 58%;
+  right: 1%;
+  color: var(--color-blue);
+  animation-delay: 0.4s;
+}
+
+.aba-command__float--5 {
+  bottom: 12%;
+  left: 6%;
+  color: var(--color-pink);
+  animation-delay: 2s;
+}
+
+.aba-command__float--6 {
+  bottom: 16%;
+  right: 6%;
+  color: var(--color-cyan);
+  animation-delay: 1.1s;
+}
+
+/* ====================================================
+   WORKFLOW PRIMITIVES
+   ==================================================== */
+
+.aba-flow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  width: 100%;
+  min-width: 0;
+}
+
+.aba-flow--horizontal {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.aba-flow__node {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  padding: 0.5rem 0.85rem;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(180deg, rgba(17, 26, 51, 0.85), rgba(11, 17, 36, 0.9));
+  border: 1px solid var(--color-border);
+  box-shadow: 0 6px 18px rgba(2, 6, 23, 0.45);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--color-text);
+  white-space: nowrap;
+  max-width: 100%;
+  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+}
+
+.aba-flow__node:hover {
+  transform: translateY(-2px);
+  border-color: rgba(139, 92, 246, 0.55);
+  box-shadow: var(--aba-glow-soft);
+}
+
+.aba-flow__node-icon {
+  display: inline-flex;
+  align-items: center;
+  color: var(--color-cyan);
+  flex-shrink: 0;
+}
+
+.aba-flow__node:nth-child(odd) .aba-flow__node-icon {
+  color: var(--color-violet);
+}
+
+.aba-flow__node--hot {
+  border-color: rgba(236, 72, 153, 0.5);
+  box-shadow: 0 0 18px rgba(236, 72, 153, 0.3);
+}
+
+.aba-flow__node--hot .aba-flow__node-icon {
+  color: var(--color-pink);
+}
+
+.aba-flow__arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-cyan);
+  flex-shrink: 0;
+  position: relative;
+}
+
+.aba-flow__arrow svg {
+  animation: abaArrowPulse 1.6s ease-in-out infinite;
+}
+
+.aba-flow--horizontal .aba-flow__arrow svg {
+  transform: rotate(-90deg);
+  animation-name: abaArrowPulseH;
+}
+
+/* ---- Split flow (customer service card) ---- */
+.aba-flow--split {
+  gap: 0.7rem;
+}
+
+.aba-flow__or {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.aba-flow__or::before,
+.aba-flow__or::after {
+  content: '';
+  height: 1px;
+  width: 28px;
+  background: var(--color-border);
+}
+
+/* ---- Reporting flow ---- */
+.aba-flow--reporting {
+  gap: 0.5rem;
+}
+
+.aba-flow__inputs,
+.aba-flow__report,
+.aba-flow__delivery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.aba-flow__input-node,
+.aba-flow__report-node,
+.aba-flow__delivery-node {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.7rem;
+  border-radius: var(--radius-sm);
+  background: rgba(139, 92, 246, 0.1);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--color-text);
+}
+
+.aba-flow__input-node svg,
+.aba-flow__report-node svg,
+.aba-flow__delivery-node svg {
+  color: var(--color-violet);
+}
+
+.aba-flow__report-node {
+  background: rgba(34, 211, 238, 0.1);
+  border-color: rgba(34, 211, 238, 0.3);
+}
+
+.aba-flow__report-node svg {
+  color: var(--color-cyan);
+}
+
+.aba-flow__delivery-node {
+  background: rgba(236, 72, 153, 0.1);
+  border-color: rgba(236, 72, 153, 0.3);
+}
+
+.aba-flow__delivery-node svg {
+  color: var(--color-pink);
+}
+
+/* ====================================================
+   WHAT WE AUTOMATE — 6 CARDS
+   ==================================================== */
+
+.aba-automations {
+  position: relative;
+  background:
+    radial-gradient(50% 50% at 12% 8%, rgba(139, 92, 246, 0.08), transparent 60%),
+    var(--color-bg-secondary);
+}
+
+.aba-automations__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+.aba-automation-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: clamp(1.5rem, 2.5vw, 2rem);
+  background: var(--color-surface-glass);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(14px);
+  box-shadow: var(--shadow-card);
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition),
+    border-color var(--transition);
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.aba-automation-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-violet), var(--color-cyan), transparent);
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.aba-automation-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(139, 92, 246, 0.5);
+  box-shadow: var(--shadow-glow);
+}
+
+.aba-automation-card:hover::before {
+  opacity: 1;
+}
+
+.aba-automation-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.aba-automation-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  background: var(--gradient-primary);
+  color: #fff;
+  box-shadow: var(--shadow-glow);
+  transition: transform var(--transition), box-shadow var(--transition);
+  flex-shrink: 0;
+}
+
+.aba-automation-card:nth-child(even) .aba-automation-card__icon {
+  background: linear-gradient(135deg, var(--color-cyan), var(--color-blue));
+}
+
+.aba-automation-card:nth-child(3n) .aba-automation-card__icon {
+  background: linear-gradient(135deg, var(--color-violet), var(--color-cyan));
+}
+
+.aba-automation-card:hover .aba-automation-card__icon {
+  transform: translateY(-3px) scale(1.06);
+  box-shadow: 0 0 30px rgba(139, 92, 246, 0.65);
+}
+
+.aba-automation-card__number {
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: var(--color-text-muted);
+}
+
+.aba-automation-card__title {
+  font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+}
+
+.aba-automation-card__text {
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
+  line-height: 1.7;
+  flex: 1;
+}
+
+.aba-automation-card__flow {
+  padding-top: 0.75rem;
+  border-top: 1px dashed var(--color-border);
+}
+
+/* ====================================================
+   AUTOMATION ECOSYSTEM
+   ==================================================== */
+
+.aba-ecosystem {
+  position: relative;
+  background:
+    radial-gradient(50% 60% at 85% 10%, rgba(34, 211, 238, 0.08), transparent 60%),
+    radial-gradient(40% 40% at 10% 90%, rgba(139, 92, 246, 0.08), transparent 55%),
+    var(--color-bg);
+}
+
+.aba-ecosystem .aba-flow {
+  max-width: 980px;
+  margin-inline: auto;
+}
+
+.aba-ecosystem .aba-flow__node {
+  padding: 0.75rem 1.15rem;
+  font-size: 0.78rem;
+  border-radius: var(--radius-md);
+}
+
+/* ====================================================
+   TOOLS WE USE
+   ==================================================== */
+
+.aba-tools {
+  position: relative;
+  background:
+    radial-gradient(50% 50% at 15% 85%, rgba(139, 92, 246, 0.08), transparent 60%),
+    var(--color-bg-secondary);
+}
+
+.aba-tools__paragraph {
+  max-width: 860px;
+  margin-inline: auto;
+  text-align: center;
+  font-size: clamp(0.95rem, 1.3vw, 1.1rem);
+  line-height: 1.8;
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+.aba-tools__stages {
+  margin-bottom: clamp(1.75rem, 3vw, 2.5rem);
+}
+
+.aba-tools__stages .aba-flow {
+  max-width: 940px;
+  margin-inline: auto;
+}
+
+.aba-tools__stages .aba-flow__node {
+  padding: 0.7rem 1.1rem;
+  border-radius: var(--radius-md);
+}
+
+.aba-tools__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+.aba-tools__chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.15rem;
+  border-radius: 999px;
+  background: var(--color-surface-glass);
+  border: 1px solid var(--color-border);
+  backdrop-filter: blur(12px);
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--color-text);
+  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+  animation: abaChipFloat 5s ease-in-out infinite;
+}
+
+.aba-tools__chip:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-violet);
+  box-shadow: var(--aba-glow-soft);
+}
+
+.aba-tools__chip-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--gradient-neon);
+  box-shadow: 0 0 10px rgba(34, 211, 238, 0.7);
+  flex-shrink: 0;
+}
+
+/* ====================================================
+   DOCUMENTATION + HANDOVER
+   ==================================================== */
+
+.aba-handover {
+  position: relative;
+  background:
+    radial-gradient(50% 50% at 85% 85%, rgba(34, 211, 238, 0.08), transparent 60%),
+    var(--color-bg);
+}
+
+.aba-handover .aba-flow {
+  max-width: 940px;
+  margin-inline: auto;
+}
+
+.aba-handover .aba-flow__node {
+  padding: 0.75rem 1.15rem;
+  font-size: 0.76rem;
+  border-radius: var(--radius-md);
+}
+
+/* ====================================================
+   MALAYSIA SME GRANT
+   ==================================================== */
+
+.aba-grant {
+  position: relative;
+  background:
+    radial-gradient(55% 60% at 20% 20%, rgba(34, 211, 238, 0.07), transparent 60%),
+    radial-gradient(45% 50% at 85% 80%, rgba(139, 92, 246, 0.1), transparent 60%),
+    var(--color-bg-secondary);
+}
+
+.aba-grant__card {
+  padding: clamp(1.5rem, 3vw, 2.75rem);
+  border-radius: var(--radius-xl);
+  background: var(--color-surface-glass);
+  border: 1px solid var(--color-border);
+  backdrop-filter: blur(16px);
+  box-shadow: var(--shadow-card);
+}
+
+.aba-grant__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  gap: clamp(1.5rem, 3vw, 3rem);
+  align-items: center;
+}
+
+.aba-grant__title {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  margin-bottom: 1rem;
+}
+
+.aba-grant__text {
+  font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.aba-grant__visual {
+  padding: 1rem;
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(70% 90% at 50% 0%, rgba(34, 211, 238, 0.1), transparent 70%),
+    rgba(7, 11, 24, 0.55);
+  border: 1px dashed rgba(34, 211, 238, 0.25);
+}
+
+/* ====================================================
+   AI AUTOMATION WORKFLOW
+   ==================================================== */
+
+.aba-workflow {
+  position: relative;
+  background:
+    radial-gradient(50% 50% at 15% 15%, rgba(139, 92, 246, 0.08), transparent 60%),
+    var(--color-bg);
+}
+
+.aba-workflow .aba-flow {
+  max-width: 980px;
+  margin-inline: auto;
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+.aba-workflow .aba-flow__node {
+  padding: 0.7rem 1.05rem;
+  font-size: 0.74rem;
+  border-radius: var(--radius-md);
+}
+
+.aba-workflow__examples {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1rem, 2vw, 1.5rem);
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+.aba-workflow__example {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding: 1.1rem 1rem;
+  border-radius: var(--radius-lg);
+  background: var(--color-surface-glass);
+  border: 1px solid var(--color-border);
+  backdrop-filter: blur(12px);
+  box-shadow: var(--shadow-card);
+  text-align: center;
+  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+}
+
+.aba-workflow__example:hover {
+  transform: translateY(-4px);
+  border-color: rgba(139, 92, 246, 0.5);
+  box-shadow: var(--aba-glow-soft);
+}
+
+.aba-workflow__example-node {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.7rem;
+  border-radius: var(--radius-sm);
+  background: rgba(59, 130, 246, 0.12);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--color-text);
+}
+
+.aba-workflow__example-node--ai {
+  background: rgba(139, 92, 246, 0.14);
+  border-color: rgba(139, 92, 246, 0.4);
+}
+
+.aba-workflow__example-node--ai svg {
+  color: var(--color-violet);
+}
+
+/* ====================================================
+   BUSINESS AUTOMATION BENEFIT
+   ==================================================== */
+
+.aba-benefit {
+  position: relative;
+  background:
+    radial-gradient(50% 60% at 50% 100%, rgba(34, 211, 238, 0.08), transparent 60%),
+    var(--color-bg-secondary);
+}
+
+.aba-benefit__flow {
+  max-width: 640px;
+  margin-inline: auto;
+}
+
+.aba-benefit__flow .aba-flow__node {
+  padding: 0.85rem 1.4rem;
+  font-size: 0.82rem;
+  border-radius: var(--radius-md);
+}
+
+.aba-benefit__flow .aba-flow__node:last-child {
+  border-color: rgba(34, 211, 238, 0.5);
+  box-shadow: 0 0 22px rgba(34, 211, 238, 0.3);
+}
+
+/* ====================================================
+   RELATED SERVICES
+   ==================================================== */
+
+.aba-related {
+  position: relative;
+  background: var(--color-bg);
+}
+
+.aba-related__links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+/* ====================================================
+   KEYFRAMES
+   ==================================================== */
+
+@keyframes abaGlowPulse {
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes abaCorePulse {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 1px rgba(139, 92, 246, 0.25),
+      0 0 28px rgba(139, 92, 246, 0.45);
+  }
+  50% {
+    box-shadow:
+      0 0 0 1px rgba(139, 92, 246, 0.5),
+      0 0 46px rgba(139, 92, 246, 0.75);
+  }
+}
+
+@keyframes abaDashFlow {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(28px);
+  }
+}
+
+@keyframes abaArrowPulse {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+@keyframes abaArrowPulseH {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: rotate(-90deg) scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: rotate(-90deg) scale(1.15);
+  }
+}
+
+@keyframes abaChipFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+/* ====================================================
+   RESPONSIVE
+   ==================================================== */
+
+/* ---- Tablet ---- */
+@media (max-width: 1024px) {
+  .aba-automations__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .aba-command__float--3,
+  .aba-command__float--4 {
+    display: none;
+  }
+}
+
+/* ---- Mobile ---- */
+@media (max-width: 768px) {
+  .aba-page .container {
+    padding-inline: 16px;
+  }
+
+  .aba-automations__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .aba-flow--horizontal {
+    flex-direction: column;
+  }
+
+  .aba-flow--horizontal .aba-flow__arrow svg {
+    transform: rotate(0deg);
+    animation-name: abaArrowPulse;
+  }
+
+  .aba-grant__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .aba-grant__visual {
+    order: -1;
+  }
+
+  .aba-workflow__examples {
+    grid-template-columns: 1fr;
+  }
+
+  .aba-workflow__example {
+    justify-content: flex-start;
+  }
+
+  .aba-command__float--1,
+  .aba-command__float--2,
+  .aba-command__float--5,
+  .aba-command__float--6 {
+    width: 34px;
+    height: 34px;
+  }
+
+  .aba-command__float--5,
+  .aba-command__float--6 {
+    display: none;
+  }
+
+  .aba-command__row--branches {
+    gap: 0.5rem;
+  }
+
+  .aba-node {
+    padding: 0.55rem 0.7rem;
+    font-size: 0.62rem;
+  }
+
+  .aba-node--core {
+    padding: 0.8rem 1.2rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* ---- Small mobile ---- */
+@media (max-width: 480px) {
+  .aba-page .container {
+    padding-inline: 12px;
+  }
+
+  .aba-page .hero__title {
+    font-size: clamp(2rem, 8vw, 3.5rem);
+  }
+
+  .aba-command {
+    padding: 1rem;
+  }
+
+  .aba-command__row--branches {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .aba-command__row--branches .aba-node {
+    justify-content: flex-start;
+  }
+
+  .aba-command__connector--down {
+    width: 100%;
+    height: 1.4rem;
+  }
+
+  .aba-command__float {
+    width: 30px;
+    height: 30px;
+  }
+
+  .aba-command__float--1 {
+    top: 6%;
+    left: 2%;
+  }
+
+  .aba-command__float--2 {
+    top: 8%;
+    right: 2%;
+  }
+
+  .aba-tools__chip {
+    animation: none;
+  }
+
+  .aba-grant__card {
+    padding: 1.25rem;
+  }
+
+  .aba-grant__title {
+    font-size: 1.35rem;
+  }
+
+  .aba-grant__text {
+    font-size: 0.9rem;
+  }
+
+  .aba-workflow__examples {
+    gap: 0.75rem;
+  }
+
+  .aba-workflow__example {
+    padding: 0.9rem 0.85rem;
+  }
+
+  .aba-workflow__example-node {
+    font-size: 0.68rem;
+    padding: 0.35rem 0.6rem;
+  }
+}
+
+/* ---- Reduced motion ---- */
+@media (prefers-reduced-motion: reduce) {
+  .aba-command__glow,
+  .aba-node--core,
+  .aba-command__connector::after,
+  .aba-flow__arrow svg,
+  .aba-tools__chip,
+  .aba-command__float {
+    animation: none !important;
+  }
+}
+
+/* ---- Location Discovery Section ---- */
+.location-discovery__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.location-discovery__card {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.location-discovery__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(34, 211, 238, 0.12);
+  border: 1px solid rgba(34, 211, 238, 0.3);
+  color: var(--color-cyan);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  width: fit-content;
+}
+
+.location-discovery__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--color-text);
+}
+
+.location-discovery__text {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  margin-bottom: 1.25rem;
+  flex: 1;
+}
+
+.location-discovery__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-cyan);
+  text-decoration: none;
+  transition: color var(--transition), transform var(--transition);
+}
+
+.location-discovery__link:hover {
+  color: var(--color-violet);
+  transform: translateX(4px);
+}
+
+.location-discovery__link svg {
+  transition: transform var(--transition);
+}
+
+.location-discovery__link:hover svg {
+  transform: translateX(4px);
+}
+
+@media (max-width: 768px) {
+  .location-discovery__grid {
+    grid-template-columns: 1fr;
+  }
+}

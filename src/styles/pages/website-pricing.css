@@ -1,0 +1,499 @@
+﻿/* ====================================================
+   WEBSITE DESIGN & DEVELOPMENT PRICING PAGE
+   Premium futuristic website pricing UI.
+   ==================================================== */
+
+.web-pricing-page {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.web-pricing-page .hero {
+  position: relative;
+  padding-block: clamp(4rem, 9vw, 7rem) clamp(2.5rem, 5vw, 4rem);
+  background:
+    radial-gradient(55% 45% at 12% 12%, rgba(59, 130, 246, 0.12), transparent 60%),
+    radial-gradient(45% 40% at 88% 20%, rgba(139, 92, 246, 0.12), transparent 60%),
+    radial-gradient(40% 40% at 50% 100%, rgba(34, 211, 238, 0.09), transparent 55%);
+}
+
+.web-pricing-page .hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(148, 163, 184, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.06) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(70% 70% at 50% 30%, #000, transparent);
+}
+
+.web-pricing-page .hero__inner { position: relative; z-index: 2; }
+.web-pricing-page .hero__title { max-width: 20ch; }
+.web-pricing-page .hero__subtitle { max-width: 640px; font-size: clamp(1.05rem, 1.4vw, 1.2rem); line-height: 1.8; }
+
+/* ---- Hero Visual ---- */
+.web-hero-visual {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  width: clamp(220px, 24vw, 340px);
+  pointer-events: none;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+/* ---- Browser Mockup ---- */
+.web-hero-visual__browser {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  background: rgba(17, 26, 51, 0.6);
+  border: 1px solid var(--color-border);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+  animation: web-float 4s ease-in-out infinite;
+}
+
+.web-hero-visual__browser-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.web-hero-visual__browser-dots {
+  display: flex;
+  gap: 5px;
+}
+
+.web-hero-visual__browser-dots span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(148, 163, 184, 0.3);
+}
+
+.web-hero-visual__browser-dots span:first-child { background: rgba(239, 68, 68, 0.5); }
+.web-hero-visual__browser-dots span:nth-child(2) { background: rgba(234, 179, 8, 0.5); }
+.web-hero-visual__browser-dots span:last-child { background: rgba(34, 197, 94, 0.5); }
+
+.web-hero-visual__browser-url {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 1;
+  padding: 5px 10px;
+  border-radius: 6px;
+  background: rgba(148, 163, 184, 0.08);
+  font-size: 0.65rem;
+  color: var(--color-text-muted);
+}
+
+.web-hero-visual__browser-content {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.web-hero-visual__browser-hero {
+  height: 40px;
+  border-radius: 6px;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(139, 92, 246, 0.15));
+}
+
+.web-hero-visual__browser-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.web-hero-visual__browser-card {
+  height: 32px;
+  border-radius: 4px;
+  background: rgba(148, 163, 184, 0.08);
+  border: 1px solid var(--color-border);
+}
+
+/* ---- Devices ---- */
+.web-hero-visual__devices {
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+}
+
+.web-hero-visual__device {
+  border-radius: 6px;
+  background: rgba(17, 26, 51, 0.5);
+  border: 1px solid var(--color-border);
+  padding: 6px;
+}
+
+.web-hero-visual__device--tablet {
+  width: 60px;
+  height: 80px;
+  animation: web-float 4s ease-in-out 0.5s infinite;
+}
+
+.web-hero-visual__device--mobile {
+  width: 36px;
+  height: 60px;
+  animation: web-float 4s ease-in-out 1s infinite;
+}
+
+.web-hero-visual__device-screen {
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+  background: rgba(59, 130, 246, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+}
+
+.web-hero-visual__device-line {
+  height: 3px;
+  width: 70%;
+  border-radius: 999px;
+  background: rgba(59, 130, 246, 0.25);
+}
+
+.web-hero-visual__device-line--short {
+  width: 50%;
+  background: rgba(139, 92, 246, 0.25);
+}
+/* ---- Pricing Cards ---- */
+.web-pricing-cards {
+  position: relative;
+  background:
+    radial-gradient(50% 50% at 50% 20%, rgba(59, 130, 246, 0.06), transparent 60%),
+    var(--color-bg-secondary);
+}
+
+.web-pricing-cards__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1.25rem, 2.5vw, 1.75rem);
+  align-items: start;
+}
+
+.web-pricing-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: clamp(2rem, 3vw, 2.5rem);
+  background: var(--color-surface-glass);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(14px);
+  box-shadow: var(--shadow-card);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  height: 100%;
+}
+
+.web-pricing-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(59, 130, 246, 0.5);
+  box-shadow: 0 0 32px rgba(59, 130, 246, 0.35);
+}
+
+.web-pricing-card:nth-child(2):hover {
+  border-color: rgba(139, 92, 246, 0.5);
+  box-shadow: 0 0 32px rgba(139, 92, 246, 0.35);
+}
+
+.web-pricing-card:nth-child(3):hover {
+  border-color: rgba(34, 211, 238, 0.5);
+  box-shadow: 0 0 32px rgba(34, 211, 238, 0.35);
+}
+
+.web-pricing-card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  color: var(--color-blue);
+  flex-shrink: 0;
+}
+
+.web-pricing-card:nth-child(2) .web-pricing-card__icon {
+  background: rgba(139, 92, 246, 0.1);
+  border-color: rgba(139, 92, 246, 0.2);
+  color: var(--color-violet);
+}
+
+.web-pricing-card:nth-child(3) .web-pricing-card__icon {
+  background: rgba(34, 211, 238, 0.1);
+  border-color: rgba(34, 211, 238, 0.2);
+  color: var(--color-cyan);
+}
+
+.web-pricing-card__name {
+  font-size: clamp(1.15rem, 1.6vw, 1.35rem);
+  font-weight: 700;
+}
+
+.web-pricing-card__price-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.web-pricing-card__price {
+  font-size: clamp(1.3rem, 2vw, 1.65rem);
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--color-blue), var(--color-violet));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.2;
+}
+
+.web-pricing-card:nth-child(2) .web-pricing-card__price {
+  background: linear-gradient(135deg, var(--color-violet), var(--color-cyan));
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.web-pricing-card:nth-child(3) .web-pricing-card__price {
+  background: linear-gradient(135deg, var(--color-cyan), var(--color-blue));
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.web-pricing-card__price-alt {
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.web-pricing-card__unit {
+  font-size: var(--fs-small);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.web-pricing-card__divider {
+  height: 1px;
+  background: var(--color-border);
+  margin: 0.25rem 0;
+}
+
+.web-pricing-card__includes {
+  font-size: var(--fs-small);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.web-pricing-card__features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  flex: 1;
+}
+
+.web-pricing-card__feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: clamp(0.85rem, 1.05vw, 0.92rem);
+  line-height: 1.5;
+  color: var(--color-text);
+}
+
+.web-pricing-card__feature svg {
+  color: var(--color-blue);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.web-pricing-card:nth-child(2) .web-pricing-card__feature svg {
+  color: var(--color-violet);
+}
+
+.web-pricing-card:nth-child(3) .web-pricing-card__feature svg {
+  color: var(--color-cyan);
+}
+/* ---- Progression ---- */
+.web-progression__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1.25rem, 2.5vw, 1.75rem);
+  align-items: stretch;
+}
+
+.web-progression__step {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: clamp(1.5rem, 2.5vw, 2rem);
+}
+
+.web-progression__step-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.web-progression__step-num {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  color: var(--color-blue);
+  flex-shrink: 0;
+}
+
+.web-progression__step:nth-child(2) .web-progression__step-num {
+  background: rgba(139, 92, 246, 0.1);
+  border-color: rgba(139, 92, 246, 0.25);
+  color: var(--color-violet);
+}
+
+.web-progression__step:nth-child(3) .web-progression__step-num {
+  background: rgba(34, 211, 238, 0.1);
+  border-color: rgba(34, 211, 238, 0.25);
+  color: var(--color-cyan);
+}
+
+.web-progression__step-tier {
+  font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+  font-weight: 700;
+}
+
+.web-progression__step-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.web-progression__step-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: clamp(0.85rem, 1.05vw, 0.92rem);
+  line-height: 1.5;
+  color: var(--color-text);
+}
+
+.web-progression__step-item svg {
+  color: var(--color-blue);
+  flex-shrink: 0;
+}
+
+.web-progression__step:nth-child(2) .web-progression__step-item svg {
+  color: var(--color-violet);
+}
+
+.web-progression__step:nth-child(3) .web-progression__step-item svg {
+  color: var(--color-cyan);
+}
+
+/* ---- Related ---- */
+.web-pricing-related__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.web-pricing-related__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.65rem 1.25rem;
+  background: var(--color-surface-glass);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--color-text);
+  backdrop-filter: blur(12px);
+  transition: all var(--transition);
+}
+
+.web-pricing-related__link:hover {
+  border-color: var(--color-blue);
+  color: var(--color-blue);
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-2px);
+}
+
+.web-pricing-related__link svg {
+  transition: transform var(--transition);
+}
+
+.web-pricing-related__link:hover svg {
+  transform: translateX(3px);
+}
+
+/* ---- Keyframes ---- */
+@keyframes web-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* ---- Responsive: Tablet (1024px) ---- */
+@media (max-width: 1024px) {
+  .web-pricing-cards__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .web-pricing-cards__grid > :last-child {
+    grid-column: 1 / -1;
+    max-width: 50%;
+    justify-self: center;
+  }
+  .web-progression__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .web-progression__grid > :last-child {
+    grid-column: 1 / -1;
+    max-width: 50%;
+    justify-self: center;
+  }
+  .web-hero-visual { display: none; }
+}
+
+/* ---- Responsive: Mobile (768px) ---- */
+@media (max-width: 768px) {
+  .web-pricing-page .hero { padding-block: 3.5rem 3rem; }
+  .web-pricing-cards__grid { grid-template-columns: 1fr; }
+  .web-pricing-cards__grid > :last-child { max-width: 100%; }
+  .web-progression__grid { grid-template-columns: 1fr; }
+  .web-progression__grid > :last-child { max-width: 100%; }
+  .web-hero-visual { display: none; }
+}
+
+/* ---- Responsive: Small Mobile (480px) ---- */
+@media (max-width: 480px) {
+  .web-pricing-page .hero { padding-block: 2.5rem 2rem; }
+  .web-pricing-page .hero__title { max-width: 100%; }
+  .web-pricing-page .hero__actions .btn { width: 100%; }
+  .web-pricing-card { padding: 1.5rem; }
+}
+
+/* ---- Reduced Motion ---- */
+@media (prefers-reduced-motion: reduce) {
+  .web-pricing-card:hover { transform: none !important; }
+  .web-hero-visual__browser,
+  .web-hero-visual__device { animation: none !important; }
+}

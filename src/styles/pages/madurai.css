@@ -1,0 +1,514 @@
+/* ====================================================
+   MADURAI LOCATION PAGE — T05
+   Premium futuristic digital marketing agency UI.
+   ==================================================== */
+
+.madurai-page {
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* ---- Hero Overrides ---- */
+.madurai-page .hero {
+  position: relative;
+  padding-block: clamp(4rem, 9vw, 7rem) clamp(2.5rem, 5vw, 4rem);
+  background:
+    radial-gradient(55% 45% at 12% 12%, rgba(139, 92, 246, 0.15), transparent 60%),
+    radial-gradient(45% 40% at 88% 20%, rgba(34, 211, 238, 0.12), transparent 60%),
+    radial-gradient(40% 40% at 50% 100%, rgba(236, 72, 153, 0.09), transparent 55%);
+}
+
+.madurai-page .hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(148, 163, 184, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.06) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(70% 70% at 50% 30%, #000, transparent);
+}
+
+.madurai-page .hero__inner {
+  position: relative;
+  z-index: 2;
+}
+
+.madurai-page .hero__title {
+  max-width: 22ch;
+}
+
+.madurai-page .hero__subtitle {
+  max-width: 720px;
+  font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+  line-height: 1.8;
+}
+
+/* ---- Services Grid ---- */
+.madurai-services {
+  position: relative;
+  background:
+    radial-gradient(50% 50% at 15% 10%, rgba(139, 92, 246, 0.08), transparent 60%),
+    var(--color-bg-secondary);
+}
+
+.madurai-services__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+/* ---- Service Card ---- */
+.madurai-service-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: clamp(1.5rem, 2.5vw, 2rem);
+  background: var(--color-surface-glass);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(14px);
+  box-shadow: var(--shadow-card);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  height: 100%;
+}
+
+.madurai-service-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(139, 92, 246, 0.5);
+  box-shadow: var(--shadow-glow);
+}
+
+.madurai-service-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.madurai-service-card__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: #fff;
+  background: var(--gradient-primary);
+  box-shadow: var(--shadow-glow);
+  transition: transform var(--transition), box-shadow var(--transition);
+  flex-shrink: 0;
+}
+
+.madurai-service-card:nth-child(even) .madurai-service-card__badge {
+  background: linear-gradient(135deg, var(--color-cyan), var(--color-blue));
+}
+
+.madurai-service-card:nth-child(3n) .madurai-service-card__badge {
+  background: linear-gradient(135deg, var(--color-violet), var(--color-cyan));
+}
+
+.madurai-service-card:hover .madurai-service-card__badge {
+  transform: translateY(-3px) scale(1.06);
+  box-shadow: 0 0 30px rgba(139, 92, 246, 0.65);
+}
+
+.madurai-service-card__number {
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: var(--color-text-muted);
+}
+
+.madurai-service-card__title {
+  font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+}
+
+.madurai-service-card__title a {
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.madurai-service-card__title a:hover {
+  color: var(--color-cyan);
+}
+
+.madurai-service-card__text {
+  flex: 1;
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
+  line-height: 1.7;
+}
+
+.madurai-service-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  align-self: flex-start;
+  font-size: var(--fs-small);
+  font-weight: 700;
+  color: var(--color-cyan);
+  transition: color var(--transition), transform var(--transition);
+}
+
+.madurai-service-card__link svg {
+  transition: transform var(--transition);
+}
+
+.madurai-service-card__link:hover {
+  color: var(--color-violet);
+}
+
+.madurai-service-card__link:hover svg {
+  transform: translateX(4px);
+}
+
+/* ---- Industries Grid ---- */
+.madurai-industries {
+  position: relative;
+  background:
+    radial-gradient(50% 50% at 85% 90%, rgba(34, 211, 238, 0.08), transparent 60%),
+    var(--color-bg-secondary);
+}
+
+.madurai-industries__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.25rem, 2.5vw, 1.75rem);
+}
+
+/* ---- Industry Card ---- */
+.madurai-industry-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: clamp(1.5rem, 2.5vw, 2rem);
+  background: var(--color-surface-glass);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(14px);
+  box-shadow: var(--shadow-card);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  height: 100%;
+}
+
+.madurai-industry-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(34, 211, 238, 0.5);
+  box-shadow: 0 0 24px rgba(34, 211, 238, 0.45);
+}
+
+.madurai-industry-card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: rgba(34, 211, 238, 0.12);
+  border: 1px solid rgba(34, 211, 238, 0.25);
+  color: var(--color-cyan);
+  flex-shrink: 0;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.madurai-industry-card:hover .madurai-industry-card__icon {
+  transform: translateY(-3px) scale(1.06);
+  box-shadow: 0 0 20px rgba(34, 211, 238, 0.4);
+}
+
+.madurai-industry-card__title {
+  font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+}
+
+.madurai-industry-card__text {
+  flex: 1;
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
+  line-height: 1.7;
+}
+
+.madurai-industry-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  align-self: flex-start;
+  font-size: var(--fs-small);
+  font-weight: 700;
+  color: var(--color-cyan);
+  transition: color var(--transition), transform var(--transition);
+}
+
+.madurai-industry-card__link svg {
+  transition: transform var(--transition);
+}
+
+.madurai-industry-card__link:hover {
+  color: var(--color-violet);
+}
+
+.madurai-industry-card__link:hover svg {
+  transform: translateX(4px);
+}
+
+/* ---- Office Section ---- */
+.madurai-office {
+  position: relative;
+  background:
+    radial-gradient(50% 50% at 50% 50%, rgba(139, 92, 246, 0.06), transparent 55%),
+    var(--color-bg);
+}
+
+.madurai-office__inner {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: clamp(2rem, 4vw, 3rem);
+  align-items: center;
+  padding: clamp(2rem, 4vw, 3rem);
+  background: var(--color-surface-glass);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  backdrop-filter: blur(14px);
+  box-shadow: var(--shadow-card);
+}
+
+.madurai-office__visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: clamp(2rem, 4vw, 3rem);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.12), rgba(34, 211, 238, 0.06));
+  border: 1px solid var(--color-border);
+  text-align: center;
+}
+
+.madurai-office__pin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(139, 92, 246, 0.15);
+  border: 2px solid rgba(139, 92, 246, 0.3);
+  color: var(--color-violet);
+  animation: madurai-pin-pulse 3s ease-in-out infinite;
+}
+
+.madurai-office__label {
+  font-size: clamp(0.9rem, 1.2vw, 1.05rem);
+  font-weight: 700;
+  color: var(--color-text);
+  letter-spacing: 0.02em;
+}
+
+.madurai-office__details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.madurai-office__title {
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+}
+
+.madurai-office__card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: clamp(1.25rem, 2.5vw, 1.75rem);
+  background: rgba(15, 23, 42, 0.5);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.madurai-office__name {
+  font-size: clamp(1rem, 1.4vw, 1.15rem);
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.madurai-office__address {
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
+  line-height: 1.7;
+  color: var(--color-text-muted);
+}
+
+.madurai-office__meta {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.madurai-office__meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.madurai-office__meta-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-violet);
+}
+
+.madurai-office__meta-value {
+  font-size: clamp(0.85rem, 1.1vw, 0.95rem);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.madurai-office__meta-value[href] {
+  color: var(--color-cyan);
+  transition: color var(--transition);
+}
+
+.madurai-office__meta-value[href]:hover {
+  color: var(--color-violet);
+}
+
+/* ---- Related Content ---- */
+.madurai-related {
+  position: relative;
+}
+
+.madurai-related__group {
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+.madurai-related__group:last-child {
+  margin-bottom: 0;
+}
+
+.madurai-related__group-title {
+  font-size: var(--fs-small);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-violet);
+  margin-bottom: 1rem;
+}
+
+.madurai-related__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.madurai-related__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.65rem 1.25rem;
+  background: var(--color-surface-glass);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--color-text);
+  backdrop-filter: blur(12px);
+  transition: all var(--transition);
+}
+
+.madurai-related__link:hover {
+  border-color: var(--color-violet);
+  color: var(--color-cyan);
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-2px);
+}
+
+.madurai-related__link svg {
+  transition: transform var(--transition);
+}
+
+.madurai-related__link:hover svg {
+  transform: translateX(3px);
+}
+
+/* ---- Keyframes ---- */
+@keyframes madurai-pin-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.3); }
+  50% { box-shadow: 0 0 0 12px rgba(139, 92, 246, 0); }
+}
+
+/* ---- Responsive: Tablet (1024px) ---- */
+@media (max-width: 1024px) {
+  .madurai-services__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .madurai-industries__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---- Responsive: Mobile (768px) ---- */
+@media (max-width: 768px) {
+  .madurai-page .hero {
+    padding-block: 3.5rem 3rem;
+  }
+
+  .madurai-services__grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .madurai-office__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .madurai-office__meta {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---- Responsive: Small Mobile (480px) ---- */
+@media (max-width: 480px) {
+  .madurai-page .hero {
+    padding-block: 2.5rem 2rem;
+  }
+
+  .madurai-page .hero__title {
+    max-width: 100%;
+  }
+
+  .madurai-page .hero__actions .btn {
+    width: 100%;
+  }
+
+  .madurai-office__visual {
+    padding: 1.5rem;
+  }
+
+  .madurai-office__pin {
+    width: 52px;
+    height: 52px;
+  }
+}
+
+/* ---- Reduced Motion ---- */
+@media (prefers-reduced-motion: reduce) {
+  .madurai-service-card:hover,
+  .madurai-industry-card:hover,
+  .madurai-related__link:hover {
+    transform: none !important;
+  }
+
+  .madurai-service-card__link:hover svg,
+  .madurai-industry-card__link:hover svg,
+  .madurai-related__link:hover svg {
+    transform: none !important;
+  }
+
+  .madurai-office__pin {
+    animation: none !important;
+  }
+}

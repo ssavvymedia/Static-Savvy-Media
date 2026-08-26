@@ -1,0 +1,483 @@
+/* GEO & AEO Madurai — Service × Location Page */
+
+/* Hero */
+.geo-aeo-madurai-hero {
+  max-width: 800px;
+}
+
+.geo-aeo-madurai-hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid rgba(34, 211, 238, 0.4);
+  background: rgba(34, 211, 238, 0.12);
+  color: var(--color-cyan);
+  font-size: var(--fs-small);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.geo-aeo-madurai-hero__title {
+  margin-bottom: 1rem;
+}
+
+.geo-aeo-madurai-hero__text {
+  font-size: clamp(1rem, 1.3vw, 1.1rem);
+  line-height: 1.8;
+  color: var(--color-text-muted);
+  margin-bottom: 2rem;
+  max-width: 700px;
+}
+
+.geo-aeo-madurai-hero__ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Why GEO & AEO */
+.geo-aeo-madurai-why__intro {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--color-text-muted);
+  margin-bottom: 1.5rem;
+  max-width: 700px;
+}
+
+.geo-aeo-madurai-questions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.geo-aeo-madurai-question {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+.geo-aeo-madurai-question__icon {
+  flex-shrink: 0;
+  color: var(--color-cyan);
+}
+
+.geo-aeo-madurai-why__conclusion {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--color-text-muted);
+  max-width: 700px;
+}
+
+/* Cards */
+.geo-aeo-madurai-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.geo-aeo-madurai-card {
+  padding: 2rem;
+}
+
+.geo-aeo-madurai-card__title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--color-text);
+}
+
+.geo-aeo-madurai-card__text {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+}
+
+/* Comparison */
+.geo-aeo-madurai-comparison {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.geo-aeo-madurai-comparison__item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.25rem;
+  border-radius: var(--radius-md);
+  background: var(--color-surface-glass);
+  border: 1px solid var(--color-border);
+  text-align: center;
+}
+
+.geo-aeo-madurai-comparison__label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-cyan);
+}
+
+.geo-aeo-madurai-comparison__text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+/* Process */
+.geo-aeo-madurai-process {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 700px;
+}
+
+.geo-aeo-madurai-process__step {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+
+.geo-aeo-madurai-process__number {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(34, 211, 238, 0.15);
+  border: 1px solid rgba(34, 211, 238, 0.4);
+  color: var(--color-cyan);
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.geo-aeo-madurai-process__title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+}
+
+.geo-aeo-madurai-process__text {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+}
+
+/* Optimizations */
+.geo-aeo-madurai-optimizations {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.geo-aeo-madurai-optimization {
+  padding: 1.5rem;
+}
+
+.geo-aeo-madurai-optimization__number {
+  display: inline-block;
+  color: var(--color-cyan);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.75rem;
+}
+
+.geo-aeo-madurai-optimization__title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+}
+
+.geo-aeo-madurai-optimization__text {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+/* Platforms */
+.geo-aeo-madurai-platforms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.geo-aeo-madurai-platform {
+  padding: 0.75rem 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+/* Industries */
+.geo-aeo-madurai-industries {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.geo-aeo-madurai-industry {
+  padding: 1.5rem;
+}
+
+.geo-aeo-madurai-industry__title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+}
+
+.geo-aeo-madurai-industry__text {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+/* Why Choose */
+.geo-aeo-madurai-why-choose {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.geo-aeo-madurai-why-choose__card {
+  padding: 1.5rem;
+}
+
+.geo-aeo-madurai-why-choose__number {
+  display: inline-block;
+  color: var(--color-cyan);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.75rem;
+}
+
+.geo-aeo-madurai-why-choose__title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+}
+
+.geo-aeo-madurai-why-choose__text {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+/* Integration */
+.geo-aeo-madurai-integration {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  margin-bottom: 1.5rem;
+}
+
+.geo-aeo-madurai-integration__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.geo-aeo-madurai-integration__label {
+  width: 100%;
+  text-align: center;
+  padding: 0.85rem 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.geo-aeo-madurai-integration__arrow {
+  color: var(--color-cyan);
+}
+
+.geo-aeo-madurai-integration__result {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.geo-aeo-madurai-integration__note {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--color-text-muted);
+  max-width: 700px;
+}
+
+/* FAQs */
+.geo-aeo-madurai-faqs {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 800px;
+}
+
+.geo-aeo-madurai-faq {
+  padding: 1.25rem 1.5rem;
+}
+
+.geo-aeo-madurai-faq__trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  color: var(--color-text);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  font-family: inherit;
+}
+
+.geo-aeo-madurai-faq__icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(34, 211, 238, 0.15);
+  color: var(--color-cyan);
+  transition: transform var(--transition);
+}
+
+.geo-aeo-madurai-faq--open .geo-aeo-madurai-faq__icon {
+  transform: rotate(45deg);
+}
+
+.geo-aeo-madurai-faq__answer-wrap {
+  overflow: hidden;
+}
+
+.geo-aeo-madurai-faq__answer {
+  padding-top: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--color-text-muted);
+}
+
+/* Related Services */
+.geo-aeo-madurai-related {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.geo-aeo-madurai-related__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color var(--transition), transform var(--transition);
+}
+
+.geo-aeo-madurai-related__link:hover {
+  color: var(--color-cyan);
+  transform: translateX(4px);
+}
+
+/* Locations */
+.geo-aeo-madurai-locations {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.geo-aeo-madurai-location {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color var(--transition), transform var(--transition);
+}
+
+.geo-aeo-madurai-location:hover {
+  color: var(--color-cyan);
+  transform: translateX(4px);
+}
+
+.geo-aeo-madurai-location--active {
+  background: rgba(34, 211, 238, 0.12);
+  border-color: rgba(34, 211, 238, 0.4);
+  color: var(--color-cyan);
+  pointer-events: none;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .geo-aeo-madurai-optimizations {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .geo-aeo-madurai-industries {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .geo-aeo-madurai-why-choose {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .geo-aeo-madurai-hero__ctas {
+    flex-direction: column;
+  }
+
+  .geo-aeo-madurai-questions {
+    grid-template-columns: 1fr;
+  }
+
+  .geo-aeo-madurai-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .geo-aeo-madurai-comparison {
+    grid-template-columns: 1fr;
+  }
+
+  .geo-aeo-madurai-optimizations {
+    grid-template-columns: 1fr;
+  }
+
+  .geo-aeo-madurai-industries {
+    grid-template-columns: 1fr;
+  }
+
+  .geo-aeo-madurai-why-choose {
+    grid-template-columns: 1fr;
+  }
+}

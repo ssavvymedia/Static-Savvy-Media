@@ -1,0 +1,418 @@
+/* ====================================================
+   Contact Page — Premium Conversion-Focused Design
+   WhatsApp-First Contact Experience
+   ==================================================== */
+
+/* ---- Hero ---- */
+.contact-hero {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.contact-hero__badge {
+  display: inline-block;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: rgba(139, 92, 246, 0.12);
+  color: var(--color-violet);
+}
+
+.contact-hero__title {
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  line-height: 1.15;
+}
+
+.contact-hero__text {
+  color: var(--color-text-muted);
+  line-height: 1.75;
+  font-size: 1.05rem;
+  max-width: 600px;
+}
+
+.contact-hero__cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+/* ---- WhatsApp Button ---- */
+.contact-whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #25D366;
+  color: #fff;
+  border: none;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-whatsapp-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(37, 211, 102, 0.35);
+}
+
+/* ---- Section Headers ---- */
+.contact-section-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.contact-section-sub {
+  color: var(--color-text-muted);
+  line-height: 1.75;
+  font-size: 1rem;
+  max-width: 620px;
+  margin: 0.75rem auto 0;
+}
+
+/* ---- Services Grid ---- */
+.contact-services-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+
+.contact-service-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 1.5rem;
+  text-decoration: none;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.contact-service-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(139, 92, 246, 0.35);
+}
+
+.contact-service-card__icon {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: var(--radius-md);
+  background: var(--gradient-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.contact-service-card__name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.contact-service-card__desc {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ---- Trust Grid ---- */
+.contact-trust-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.contact-trust-card {
+  padding: 1.75rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.contact-trust-card__number {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--color-violet);
+  font-family: var(--font-mono);
+}
+
+.contact-trust-card__title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.contact-trust-card__text {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ---- Locations Grid ---- */
+.contact-locations-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.contact-location-card {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.contact-location-card__title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-text);
+}
+
+.contact-location-card__subtitle {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-violet);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.contact-location-card__region {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.contact-location-card__phone {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  color: var(--color-text);
+  margin-top: 0.25rem;
+}
+
+.contact-location-card__phone a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-location-card__phone a:hover {
+  color: var(--color-violet);
+}
+
+.contact-location-card__hours {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.contact-location-card__note {
+  font-size: 0.85rem;
+  color: var(--color-cyan);
+  font-style: italic;
+  margin-top: 0.25rem;
+  line-height: 1.5;
+}
+
+/* ---- Process Steps ---- */
+.contact-process {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.contact-process-step {
+  padding: 2rem 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.contact-process-step__number {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--radius-md);
+  background: var(--gradient-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 0.25rem;
+}
+
+.contact-process-step__title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.contact-process-step__text {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ---- Main CTA ---- */
+.contact-main-cta {
+  padding: 3.5rem 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.06), rgba(236, 72, 153, 0.06));
+}
+
+.contact-main-cta__title {
+  font-size: clamp(1.375rem, 3vw, 1.75rem);
+  font-weight: 800;
+  color: var(--color-text);
+}
+
+.contact-main-cta__text {
+  color: var(--color-text-muted);
+  line-height: 1.75;
+  font-size: 1rem;
+  max-width: 560px;
+}
+
+.contact-main-cta__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.contact-main-cta__phone {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  font-weight: 600;
+}
+
+/* ---- Contact Info Grid ---- */
+.contact-info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.contact-info-block {
+  padding: 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.contact-info-block__label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-violet);
+}
+
+.contact-info-block__value {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+a.contact-info-block__value:hover {
+  color: var(--color-violet);
+}
+
+/* ====================================================
+   Responsive
+   ==================================================== */
+
+@media (max-width: 1024px) {
+  .contact-services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .contact-trust-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-locations-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-process {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-trust-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-hero__cta {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .contact-hero__cta .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .contact-main-cta__actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-service-card,
+  .contact-trust-card,
+  .contact-location-card,
+  .contact-process-step,
+  .contact-whatsapp-btn {
+    transition: none;
+  }
+
+  .contact-service-card:hover,
+  .contact-whatsapp-btn:hover {
+    transform: none;
+  }
+}
