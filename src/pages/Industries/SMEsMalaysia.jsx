@@ -495,6 +495,7 @@ export default function SMEsMalaysia() {
 
       {/* Hero */}
       <HeroSection
+        layout="two-column"
         eyebrow="MALAYSIA SMEs • DIGITAL TRANSFORMATION"
         title={HERO_TITLE}
         subtitle={HERO_PARAGRAPH}

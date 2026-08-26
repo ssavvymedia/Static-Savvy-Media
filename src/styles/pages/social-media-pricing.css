@@ -1,4 +1,4 @@
-﻿/* ====================================================
+/* ====================================================
    SOCIAL MEDIA MARKETING PRICING PAGE
    Premium futuristic social media pricing UI.
    ==================================================== */
@@ -34,12 +34,12 @@
 .sm-pricing-page .hero__subtitle { max-width: 640px; font-size: clamp(1.05rem, 1.4vw, 1.2rem); line-height: 1.8; }
 
 /* ---- Hero Visual ---- */
-.sm-hero-visual {
+.sm-pricing-page .sm-hero-visual {
   position: absolute;
   top: 50%;
-  right: 5%;
+  right: 1.5%;
   transform: translateY(-50%);
-  width: clamp(200px, 22vw, 300px);
+  width: clamp(200px, 20vw, 280px);
   pointer-events: none;
   z-index: 1;
   display: flex;
@@ -47,7 +47,7 @@
   gap: 10px;
 }
 
-.sm-hero-visual__card {
+.sm-pricing-page .sm-hero-visual__card {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -58,11 +58,11 @@
   backdrop-filter: blur(10px);
 }
 
-.sm-hero-visual__card--ig { animation: sm-card-float 3s ease-in-out infinite; }
-.sm-hero-visual__card--fb { animation: sm-card-float 3s ease-in-out 0.5s infinite; }
-.sm-hero-visual__card--li { animation: sm-card-float 3s ease-in-out 1s infinite; }
+.sm-pricing-page .sm-hero-visual__card--ig { animation: sm-card-float 3s ease-in-out infinite; }
+.sm-pricing-page .sm-hero-visual__card--fb { animation: sm-card-float 3s ease-in-out 0.5s infinite; }
+.sm-pricing-page .sm-hero-visual__card--li { animation: sm-card-float 3s ease-in-out 1s infinite; }
 
-.sm-hero-visual__card-icon {
+.sm-pricing-page .sm-hero-visual__card-icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -74,48 +74,48 @@
   flex-shrink: 0;
 }
 
-.sm-hero-visual__card--fb .sm-hero-visual__card-icon {
+.sm-pricing-page .sm-hero-visual__card--fb .sm-hero-visual__card-icon {
   background: rgba(59, 130, 246, 0.12);
   color: var(--color-blue);
 }
 
-.sm-hero-visual__card--li .sm-hero-visual__card-icon {
+.sm-pricing-page .sm-hero-visual__card--li .sm-hero-visual__card-icon {
   background: rgba(34, 211, 238, 0.12);
   color: var(--color-cyan);
 }
 
-.sm-hero-visual__card-lines {
+.sm-pricing-page .sm-hero-visual__card-lines {
   display: flex;
   flex-direction: column;
   gap: 4px;
   flex: 1;
 }
 
-.sm-hero-visual__line {
+.sm-pricing-page .sm-hero-visual__line {
   height: 4px;
   border-radius: 999px;
   background: rgba(148, 163, 184, 0.2);
 }
 
-.sm-hero-visual__line--img {
+.sm-pricing-page .sm-hero-visual__line--img {
   width: 40px;
   height: 28px;
   border-radius: 4px;
   background: rgba(236, 72, 153, 0.15);
 }
 
-.sm-hero-visual__line--long { width: 90%; }
-.sm-hero-visual__line--med { width: 70%; }
-.sm-hero-visual__line--short { width: 50%; }
-.sm-hero-visual__line--xs { width: 30%; }
+.sm-pricing-page .sm-hero-visual__line--long { width: 90%; }
+.sm-pricing-page .sm-hero-visual__line--med { width: 70%; }
+.sm-pricing-page .sm-hero-visual__line--short { width: 50%; }
+.sm-pricing-page .sm-hero-visual__line--xs { width: 30%; }
 
-.sm-hero-visual__engagement {
+.sm-pricing-page .sm-hero-visual__engagement {
   display: flex;
   gap: 8px;
   justify-content: center;
 }
 
-.sm-hero-visual__eng-item {
+.sm-pricing-page .sm-hero-visual__eng-item {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -423,7 +423,7 @@
     max-width: 50%;
     justify-self: center;
   }
-  .sm-hero-visual { display: none; }
+  .sm-pricing-page .sm-hero-visual { display: none; }
 }
 
 /* ---- Responsive: Mobile (768px) ---- */
@@ -433,7 +433,7 @@
   .sm-pricing-cards__grid > :last-child { max-width: 100%; }
   .sm-progression__grid { grid-template-columns: 1fr; }
   .sm-progression__grid > :last-child { max-width: 100%; }
-  .sm-hero-visual { display: none; }
+  .sm-pricing-page .sm-hero-visual { display: none; }
 }
 
 /* ---- Responsive: Small Mobile (480px) ---- */
@@ -447,5 +447,5 @@
 /* ---- Reduced Motion ---- */
 @media (prefers-reduced-motion: reduce) {
   .sm-pricing-card:hover { transform: none !important; }
-  .sm-hero-visual__card { animation: none !important; }
+  .sm-pricing-page .sm-hero-visual__card { animation: none !important; }
 }
