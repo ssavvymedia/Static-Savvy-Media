@@ -9,8 +9,9 @@ export default function ServicesMenu() {
   return (
     <div className="mega-menu">
       <ul className="mega-menu__list">
-        {services.map((service) => {
+        {services.map((service, index) => {
           const active = isActive(service.path)
+          const formattedIndex = String(index + 1).padStart(2, '0')
           return (
             <li key={service.slug}>
               <Link
@@ -18,7 +19,8 @@ export default function ServicesMenu() {
                 className={cx('mega-menu__link', active && 'is-active')}
                 aria-current={active ? 'page' : undefined}
               >
-                {service.name}
+                <span className="mega-menu__number">{formattedIndex}</span>
+                <span className="mega-menu__title">{service.name}</span>
               </Link>
             </li>
           )

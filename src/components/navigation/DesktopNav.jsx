@@ -16,11 +16,16 @@ const MENU_COMPONENTS = {
 }
 
 export default function DesktopNav() {
-  const { isActive } = useActiveRoute()
+  const { isActive, pathname } = useActiveRoute()
   const [openMenu, setOpenMenu] = useState(null)
   const navRef = useRef(null)
 
   const close = useCallback(() => setOpenMenu(null), [])
+
+  // Auto close dropdown on route changes (submenu clicks)
+  useEffect(() => {
+    close()
+  }, [pathname, close])
 
   useEffect(() => {
     if (openMenu === null) return
@@ -83,9 +88,8 @@ export default function DesktopNav() {
                   className={cx('desktop-nav__toggle', isOpen && 'is-open')}
                   aria-label={`${link.label} submenu`}
                   aria-expanded={isOpen}
-                  onMouseDown={(e) => {
+                  onClick={(e) => {
                     e.preventDefault()
-                    e.stopPropagation()
                     setOpenMenu(isOpen ? null : link.path)
                   }}
                 >

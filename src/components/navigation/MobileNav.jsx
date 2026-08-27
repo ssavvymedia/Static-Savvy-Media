@@ -42,8 +42,9 @@ function MobileNavItem({ link, onNavigate }) {
       </button>
       {expanded && (
         <ul className="mobile-nav__sub">
-          {link.menu.map((item) => {
+          {link.menu.map((item, index) => {
             const subActive = isActive(item.path)
+            const formattedIndex = String(index + 1).padStart(2, '0')
             return (
               <li key={item.slug}>
                 <Link
@@ -52,7 +53,8 @@ function MobileNavItem({ link, onNavigate }) {
                   onClick={onNavigate}
                   aria-current={subActive ? 'page' : undefined}
                 >
-                  {item.name || item.label}
+                  <span className="mobile-nav__number">{formattedIndex}</span>
+                  <span className="mobile-nav__title">{item.name || item.label}</span>
                 </Link>
               </li>
             )

@@ -9,8 +9,9 @@ export default function IndustriesMenu() {
   return (
     <div className="mega-menu industries-menu">
       <ul className="mega-menu__list">
-        {industries.map((industry) => {
+        {industries.map((industry, index) => {
           const active = isActive(industry.path)
+          const formattedIndex = String(index + 1).padStart(2, '0')
           return (
             <li key={industry.slug}>
               <Link
@@ -18,7 +19,8 @@ export default function IndustriesMenu() {
                 className={cx('mega-menu__link', active && 'is-active')}
                 aria-current={active ? 'page' : undefined}
               >
-                {industry.name}
+                <span className="mega-menu__number">{formattedIndex}</span>
+                <span className="mega-menu__title">{industry.name}</span>
               </Link>
             </li>
           )

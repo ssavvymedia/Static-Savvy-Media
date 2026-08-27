@@ -9,8 +9,9 @@ export default function PricingMenu() {
   return (
     <div className="mega-menu">
       <ul className="mega-menu__list">
-        {pricingPlans.map((plan) => {
+        {pricingPlans.map((plan, index) => {
           const active = isActive(plan.path)
+          const formattedIndex = String(index + 1).padStart(2, '0')
           return (
             <li key={plan.slug}>
               <Link
@@ -18,7 +19,8 @@ export default function PricingMenu() {
                 className={cx('mega-menu__link', active && 'is-active')}
                 aria-current={active ? 'page' : undefined}
               >
-                {plan.name}
+                <span className="mega-menu__number">{formattedIndex}</span>
+                <span className="mega-menu__title">{plan.name}</span>
               </Link>
             </li>
           )

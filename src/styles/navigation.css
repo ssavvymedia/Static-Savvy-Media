@@ -77,39 +77,57 @@
 .site-header__whatsapp {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  color: var(--color-text-muted);
-  text-decoration: none;
+  gap: 0.65rem;
   white-space: nowrap;
-  transition: color var(--transition);
-}
-
-.site-header__whatsapp:hover {
-  color: #25d366;
+  cursor: pointer;
 }
 
 .site-header__whatsapp-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
-  background: #25d366;
   flex-shrink: 0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.site-header__whatsapp:hover .site-header__whatsapp-icon {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(37, 211, 102, 0.4);
 }
 
 .site-header__whatsapp-icon svg {
   display: block;
-  width: 18px;
-  height: 18px;
-  color: #fff;
+  width: 100%;
+  height: 100%;
 }
 
-.site-header__whatsapp-number {
-  white-space: nowrap;
-  font-size: var(--fs-small);
+.site-header__whatsapp-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.2;
+}
+
+.site-header__whatsapp-label {
+  font-size: 0.7rem;
   font-weight: 600;
+  color: var(--color-text-muted);
+  letter-spacing: 0.02em;
+}
+
+.site-header__whatsapp-phone {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.site-header__whatsapp-phone:hover {
+  color: #25d366;
 }
 
 /* Hamburger (mobile only) */
@@ -141,7 +159,7 @@
 .desktop-nav__list {
   display: flex;
   align-items: center;
-  gap: 0;
+  gap: 0.35rem;
 }
 
 .desktop-nav__item {
@@ -158,7 +176,7 @@
 .desktop-nav__link {
   display: inline-flex;
   align-items: center;
-  padding: 0.55rem 0.6rem;
+  padding: 0.55rem 0.8rem;
   font-size: var(--fs-small);
   font-weight: 600;
   color: var(--color-text-muted);
@@ -214,8 +232,8 @@
   position: absolute;
   top: calc(100% + 4px);
   left: 0;
-  min-width: 260px;
-  padding: 0.5rem;
+  min-width: 280px;
+  padding: 1rem;
   background: rgba(11, 17, 36, 0.98);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
@@ -225,41 +243,61 @@
   visibility: hidden;
   pointer-events: none;
   z-index: 1001;
+  transition: opacity var(--transition), visibility var(--transition), transform var(--transition);
+  transform: translateY(8px);
 }
 
 .desktop-nav__item.is-open > .mega-menu {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
+  transform: translateY(0);
 }
 
 .mega-menu__list {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 0.75rem;
 }
 
 .mega-menu__link {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 0.75rem;
+  gap: 1rem;
+  padding: 0.6rem 0.85rem;
   border-radius: var(--radius-sm);
   font-size: var(--fs-small);
   font-weight: 600;
   color: var(--color-text-muted);
   white-space: nowrap;
-  transition: color var(--transition), background var(--transition);
+  transition: color var(--transition), background var(--transition), transform var(--transition);
 }
 
 .mega-menu__link:hover {
   color: var(--color-text);
   background: var(--color-surface-glass);
+  transform: translateX(4px);
 }
 
 .mega-menu__link.is-active {
   color: var(--color-cyan);
   background: var(--color-surface-glass);
+}
+
+/* Number display on the left */
+.mega-menu__number {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--color-cyan) 0%, var(--color-purple) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: 20px;
+  flex-shrink: 0;
+}
+
+.mega-menu__title {
+  color: inherit;
 }
 
 /* ---- Mobile nav ---- */
@@ -308,15 +346,22 @@
 
 .mobile-nav__sub {
   padding-left: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-top: 0.5rem;
 }
 
 .mobile-nav__sublink {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
   padding: 0.6rem 0.75rem;
   font-size: var(--fs-small);
   font-weight: 600;
   color: var(--color-text-muted);
   border-radius: var(--radius-sm);
+  transition: color var(--transition), background var(--transition);
 }
 
 .mobile-nav__sublink:hover {
@@ -327,6 +372,16 @@
 .mobile-nav__sublink.is-active {
   color: var(--color-cyan);
   background: var(--color-surface-glass);
+}
+
+.mobile-nav__number {
+  font-size: 0.7rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--color-cyan) 0%, var(--color-purple) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: 18px;
+  flex-shrink: 0;
 }
 
 .mobile-nav__cta {

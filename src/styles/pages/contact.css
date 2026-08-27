@@ -4,13 +4,19 @@
    ==================================================== */
 
 /* ---- Hero ---- */
-.contact-hero {
-  max-width: 700px;
+.contact-hero-container {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 3rem;
   margin: 0 auto;
-  text-align: center;
+}
+
+.contact-hero__left {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  text-align: left;
   gap: 1.25rem;
 }
 
@@ -29,21 +35,38 @@
 .contact-hero__title {
   font-size: clamp(2rem, 5vw, 3.25rem);
   line-height: 1.15;
+  margin: 0;
 }
 
 .contact-hero__text {
   color: var(--color-text-muted);
   line-height: 1.75;
   font-size: 1.05rem;
-  max-width: 600px;
+  margin: 0;
 }
 
 .contact-hero__cta {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
-  justify-content: center;
+  justify-content: flex-start;
   margin-top: 0.5rem;
+}
+
+.contact-hero__right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.contact-hero__img {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 40px rgba(139, 92, 246, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 /* ---- WhatsApp Button ---- */
@@ -99,18 +122,71 @@
   border-color: rgba(139, 92, 246, 0.35);
 }
 
+.contact-service-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+.contact-service-card__number {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  opacity: 0.4;
+  font-family: var(--font-mono);
+}
+
 .contact-service-card__icon {
-  width: 2.25rem;
-  height: 2.25rem;
-  border-radius: var(--radius-md);
-  background: var(--gradient-primary);
+  width: 3.25rem;
+  height: 3.25rem;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.8rem;
-  font-weight: 800;
   color: #fff;
   flex-shrink: 0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-service-card__icon svg {
+  width: 1.35rem;
+  height: 1.35rem;
+}
+
+/* Color Classes for Service Icons */
+.contact-service-card__icon--purple {
+  background: linear-gradient(135deg, #a855f7, #7c3aed);
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.35);
+}
+.contact-service-card__icon--blue {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.35);
+}
+.contact-service-card__icon--cyan {
+  background: linear-gradient(135deg, #06b6d4, #0891b2);
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.35);
+}
+.contact-service-card__icon--orange {
+  background: linear-gradient(135deg, #f97316, #ea580c);
+  box-shadow: 0 0 15px rgba(249, 115, 22, 0.35);
+}
+.contact-service-card__icon--pink {
+  background: linear-gradient(135deg, #ec4899, #db2777);
+  box-shadow: 0 0 15px rgba(236, 72, 153, 0.35);
+}
+.contact-service-card__icon--green {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  box-shadow: 0 0 15px rgba(34, 197, 94, 0.35);
+}
+.contact-service-card__icon--red {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  box-shadow: 0 0 15px rgba(239, 68, 68, 0.35);
+}
+.contact-service-card__icon--gold {
+  background: linear-gradient(135deg, #eab308, #ca8a04);
+  box-shadow: 0 0 15px rgba(234, 179, 8, 0.35);
 }
 
 .contact-service-card__name {
@@ -139,14 +215,26 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.8rem;
+  min-height: 250px;
 }
 
-.contact-trust-card__number {
-  font-size: 0.75rem;
-  font-weight: 800;
-  color: var(--color-violet);
-  font-family: var(--font-mono);
+.contact-trust-card__icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: rgba(139, 92, 246, 0.1);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-cyan);
+  margin-bottom: 0.25rem;
+}
+
+.contact-trust-card__icon svg {
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 .contact-trust-card__title {
@@ -162,6 +250,15 @@
   margin: 0;
 }
 
+.contact-trust-card__number {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--color-pink);
+  font-family: var(--font-mono);
+  opacity: 0.5;
+  margin-top: auto;
+}
+
 /* ---- Locations Grid ---- */
 .contact-locations-grid {
   display: grid;
@@ -170,7 +267,33 @@
 }
 
 .contact-location-card {
-  padding: 2rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.contact-location-card__img-wrapper {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  position: relative;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.contact-location-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.contact-location-card:hover .contact-location-card__img {
+  transform: scale(1.05);
+}
+
+.contact-location-card__info {
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
@@ -350,6 +473,15 @@ a.contact-info-block__value:hover {
    ==================================================== */
 
 @media (max-width: 1024px) {
+  .contact-hero-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .contact-hero__img {
+    max-width: 400px;
+  }
+
   .contact-services-grid {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -360,6 +492,25 @@ a.contact-info-block__value:hover {
 }
 
 @media (max-width: 768px) {
+  .contact-hero-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2.5rem;
+  }
+
+  .contact-hero__left {
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-hero__cta {
+    justify-content: center;
+  }
+
+  .contact-hero__img {
+    max-width: 360px;
+  }
+
   .contact-services-grid {
     grid-template-columns: repeat(2, 1fr);
   }

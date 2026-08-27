@@ -42,8 +42,15 @@
     display: none;
   }
 
-  .site-header__whatsapp-number {
-    font-size: 0.8rem;
+  .site-header__whatsapp-phone {
+    font-size: 0.85rem;
+  }
+  .site-header__whatsapp-label {
+    font-size: 0.65rem;
+  }
+  .site-header__whatsapp-icon {
+    width: 32px;
+    height: 32px;
   }
 
   .grid--3,
@@ -72,7 +79,7 @@
     --section-pad: 3rem;
   }
 
-  .site-header__whatsapp-number {
+  .site-header__whatsapp-content {
     display: none;
   }
 
