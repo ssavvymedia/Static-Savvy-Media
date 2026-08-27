@@ -893,8 +893,22 @@ export default function CorporatePhotographyVideo() {
           <div className="cpv-locations__grid">
             <ScrollReveal className="cpv-locations__cell">
               <div className="cpv-location-card glass-card">
-                <span className="cpv-location-card__icon">
-                  <Icon name="map" size={26} />
+                <span
+                  className="cpv-location-card__icon"
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    borderRadius: '50%',
+                    background: 'linear-gradient(135deg, #22c55e, #16a34a)',
+                    boxShadow: '0 0 15px rgba(34, 197, 94, 0.35)',
+                    width: '52px',
+                    height: '52px',
+                    color: '#fff',
+                    marginBottom: '1rem',
+                  }}
+                >
+                  <Icon name="map" size={22} />
                 </span>
                 <h3 className="cpv-location-card__title">Madurai</h3>
                 <p className="cpv-location-card__text">Studio setup for portraits and product work.</p>
@@ -902,8 +916,22 @@ export default function CorporatePhotographyVideo() {
             </ScrollReveal>
             <ScrollReveal className="cpv-locations__cell" delay={100}>
               <div className="cpv-location-card glass-card">
-                <span className="cpv-location-card__icon">
-                  <Icon name="map" size={26} />
+                <span
+                  className="cpv-location-card__icon"
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    borderRadius: '50%',
+                    background: 'linear-gradient(135deg, #22c55e, #16a34a)',
+                    boxShadow: '0 0 15px rgba(34, 197, 94, 0.35)',
+                    width: '52px',
+                    height: '52px',
+                    color: '#fff',
+                    marginBottom: '1rem',
+                  }}
+                >
+                  <Icon name="map" size={22} />
                 </span>
                 <h3 className="cpv-location-card__title">Tamil Nadu</h3>
                 <p className="cpv-location-card__text">On-location shoots across the state.</p>

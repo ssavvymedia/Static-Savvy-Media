@@ -390,7 +390,21 @@ export default function GEOAEO() {
             {GEO_MECHANISMS.map((item, index) => (
               <ScrollReveal key={item.title} delay={index * 80}>
                 <article className="geo-aeo-mechanism-card glass-card">
-                  <div className="geo-aeo-mechanism-card__icon" aria-hidden="true">
+                  <div
+                    className="geo-aeo-mechanism-card__icon"
+                    aria-hidden="true"
+                    style={{
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      borderRadius: '50%',
+                      background: 'linear-gradient(135deg, #3b82f6, #1d4ed8)',
+                      boxShadow: '0 0 15px rgba(59, 130, 246, 0.35)',
+                      width: '52px',
+                      height: '52px',
+                      color: '#fff',
+                    }}
+                  >
                     {item.icon === 'entity' && (
                       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <circle cx="12" cy="12" r="10" />
@@ -438,7 +452,21 @@ export default function GEOAEO() {
             {AEO_SIGNALS.map((item, index) => (
               <ScrollReveal key={item.title} delay={index * 80}>
                 <article className="geo-aeo-signal-card glass-card">
-                  <div className="geo-aeo-signal-card__icon" aria-hidden="true">
+                  <div
+                    className="geo-aeo-signal-card__icon"
+                    aria-hidden="true"
+                    style={{
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      borderRadius: '50%',
+                      background: 'linear-gradient(135deg, #3b82f6, #1d4ed8)',
+                      boxShadow: '0 0 15px rgba(59, 130, 246, 0.35)',
+                      width: '52px',
+                      height: '52px',
+                      color: '#fff',
+                    }}
+                  >
                     {item.icon === 'schema' && (
                       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <polyline points="16 18 22 12 16 6" />

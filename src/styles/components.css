@@ -386,3 +386,329 @@
     min-height: 240px;
   }
 }
+
+/* ==========================================================================
+   Premium Icon System - Standardized across the website (Contact.jsx Reference)
+   ========================================================================= */
+
+.wdd-build-card__icon,
+.smm-platform-card__icon,
+.smm-included-card__icon,
+.ppcd-design-card__icon,
+.local-seo-service-card__icon,
+.gads-campaign-card__icon,
+.geo-aeo-mechanism-card__icon,
+.geo-aeo-signal-card__icon,
+.cpv-location-card__icon,
+.aiv-create-card__icon,
+.aba-automation-card__icon,
+.photo-pricing-card__icon,
+.sm-pricing-card__icon,
+.web-pricing-card__icon,
+.seo-pricing-card__icon,
+.ai-pricing-card__icon,
+.thoothukudi-industry-card__icon,
+.edu-service-card__icon,
+.edu-location-card__icon,
+.ihub-card__icon,
+.ihub-loc-card__icon,
+.pm-service-card__icon,
+.pm-content-card__icon,
+.pm-location-card__icon,
+.re-service-card__icon,
+.re-content-card__icon,
+.re-location-card__icon,
+.sm-service-card__icon,
+.sm-location-card__icon,
+.tm-service-card__icon,
+.hh-service-card__icon,
+.hh-content-card__icon,
+.hh-location-card__icon,
+.hc-service-card__icon,
+.hc-trust-card__icon,
+.hc-location-card__icon,
+.madurai-industry-card__icon,
+.lh-card__icon,
+.ret-service-card__icon,
+.founder-connect-card__icon {
+  width: 3.25rem !important;
+  height: 3.25rem !important;
+  border-radius: 50% !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #ffffff !important;
+  flex-shrink: 0 !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-bottom: 0.5rem !important;
+  border: none !important;
+  box-sizing: border-box !important;
+  background-clip: padding-box !important;
+}
+
+/* Make hover scale-up and enhance shadow */
+.wdd-build-card:hover .wdd-build-card__icon,
+.smm-platform-card:hover .smm-platform-card__icon,
+.smm-included-card:hover .smm-included-card__icon,
+.ppcd-design-card:hover .ppcd-design-card__icon,
+.local-seo-service-card:hover .local-seo-service-card__icon,
+.gads-campaign-card:hover .gads-campaign-card__icon,
+.geo-aeo-mechanism-card:hover .geo-aeo-mechanism-card__icon,
+.geo-aeo-signal-card:hover .geo-aeo-signal-card__icon,
+.cpv-location-card:hover .cpv-location-card__icon,
+.aiv-create-card:hover .aiv-create-card__icon,
+.aba-automation-card:hover .aba-automation-card__icon,
+.photo-pricing-card:hover .photo-pricing-card__icon,
+.sm-pricing-card:hover .sm-pricing-card__icon,
+.web-pricing-card:hover .web-pricing-card__icon,
+.seo-pricing-card:hover .seo-pricing-card__icon,
+.ai-pricing-card:hover .ai-pricing-card__icon,
+.thoothukudi-industry-card:hover .thoothukudi-industry-card__icon,
+.edu-service-card:hover .edu-service-card__icon,
+.edu-location-card:hover .edu-location-card__icon,
+.pm-service-card:hover .pm-service-card__icon,
+.pm-content-card:hover .pm-content-card__icon,
+.pm-location-card:hover .pm-location-card__icon,
+.re-service-card:hover .re-service-card__icon,
+.re-content-card:hover .re-content-card__icon,
+.re-location-card:hover .re-location-card__icon,
+.sm-service-card:hover .sm-service-card__icon,
+.sm-location-card:hover .sm-location-card__icon,
+.tm-service-card:hover .tm-service-card__icon,
+.hh-service-card:hover .hh-service-card__icon,
+.hh-content-card:hover .hh-content-card__icon,
+.hh-location-card:hover .hh-location-card__icon,
+.hc-service-card:hover .hc-service-card__icon,
+.hc-trust-card:hover .hc-trust-card__icon,
+.hc-location-card:hover .hc-location-card__icon,
+.madurai-industry-card:hover .madurai-industry-card__icon,
+.lh-card:hover .lh-card__icon,
+.ret-service-card:hover .ret-service-card__icon {
+  transform: translateY(-3px) scale(1.06) !important;
+}
+
+/* Ensure SVG matches size and is white (inheriting currentColor) */
+.wdd-build-card__icon svg,
+.smm-platform-card__icon svg,
+.smm-included-card__icon svg,
+.ppcd-design-card__icon svg,
+.local-seo-service-card__icon svg,
+.gads-campaign-card__icon svg,
+.geo-aeo-mechanism-card__icon svg,
+.geo-aeo-signal-card__icon svg,
+.cpv-location-card__icon svg,
+.aiv-create-card__icon svg,
+.aba-automation-card__icon svg,
+.photo-pricing-card__icon svg,
+.sm-pricing-card__icon svg,
+.web-pricing-card__icon svg,
+.seo-pricing-card__icon svg,
+.ai-pricing-card__icon svg,
+.thoothukudi-industry-card__icon svg,
+.edu-service-card__icon svg,
+.edu-location-card__icon svg,
+.ihub-card__icon svg,
+.ihub-loc-card__icon svg,
+.pm-service-card__icon svg,
+.pm-content-card__icon svg,
+.pm-location-card__icon svg,
+.re-service-card__icon svg,
+.re-content-card__icon svg,
+.re-location-card__icon svg,
+.sm-service-card__icon svg,
+.sm-location-card__icon svg,
+.tm-service-card__icon svg,
+.hh-service-card__icon svg,
+.hh-content-card__icon svg,
+.hh-location-card__icon svg,
+.hc-service-card__icon svg,
+.hc-trust-card__icon svg,
+.hc-location-card__icon svg,
+.madurai-industry-card__icon svg,
+.lh-card__icon svg,
+.ret-service-card__icon svg,
+.founder-connect-card__icon svg {
+  width: 1.35rem !important;
+  height: 1.35rem !important;
+  color: #ffffff !important;
+}
+
+/* Color assignments: Loop-like mapping to keep gradients varied but cohesive */
+/* Pattern: Purple, Blue, Cyan, Pink, Orange, Green, Gold, Red */
+
+.wdd-build-card:nth-child(1) .wdd-build-card__icon,
+.smm-platform-card:nth-child(1) .smm-platform-card__icon,
+.smm-included-card:nth-child(1) .smm-included-card__icon,
+.ppcd-design-card:nth-child(1) .ppcd-design-card__icon,
+.local-seo-service-card:nth-child(1) .local-seo-service-card__icon,
+.gads-campaign-card:nth-child(1) .gads-campaign-card__icon,
+.geo-aeo-mechanism-card:nth-child(1) .geo-aeo-mechanism-card__icon,
+.geo-aeo-signal-card:nth-child(1) .geo-aeo-signal-card__icon,
+.photo-pricing-card:nth-child(1) .photo-pricing-card__icon,
+.sm-pricing-card:nth-child(1) .sm-pricing-card__icon,
+.web-pricing-card:nth-child(1) .web-pricing-card__icon,
+.seo-pricing-card:nth-child(1) .seo-pricing-card__icon,
+.ai-pricing-card:nth-child(1) .ai-pricing-card__icon,
+.thoothukudi-industry-card:nth-child(1) .thoothukudi-industry-card__icon,
+.edu-service-card:nth-child(1) .edu-service-card__icon,
+.edu-location-card:nth-child(1) .edu-location-card__icon,
+.pm-service-card:nth-child(1) .pm-service-card__icon,
+.pm-content-card:nth-child(1) .pm-content-card__icon,
+.pm-location-card:nth-child(1) .pm-location-card__icon,
+.re-service-card:nth-child(1) .re-service-card__icon,
+.re-content-card:nth-child(1) .re-content-card__icon,
+.re-location-card:nth-child(1) .re-location-card__icon,
+.sm-service-card:nth-child(1) .sm-service-card__icon,
+.sm-location-card:nth-child(1) .sm-location-card__icon,
+.tm-service-card:nth-child(1) .tm-service-card__icon,
+.hh-service-card:nth-child(1) .hh-service-card__icon,
+.hh-content-card:nth-child(1) .hh-content-card__icon,
+.hh-location-card:nth-child(1) .hh-location-card__icon,
+.hc-service-card:nth-child(1) .hc-service-card__icon,
+.hc-trust-card:nth-child(1) .hc-trust-card__icon,
+.hc-location-card:nth-child(1) .hc-location-card__icon,
+.madurai-industry-card:nth-child(1) .madurai-industry-card__icon,
+.lh-card:nth-child(1) .lh-card__icon,
+.ret-service-card:nth-child(1) .ret-service-card__icon,
+.aiv-create-card:nth-child(1) .aiv-create-card__icon,
+.aba-automation-card:nth-child(1) .aba-automation-card__icon,
+.cpv-location-card:nth-child(1) .cpv-location-card__icon,
+.founder-connect-card__icon--whatsapp {
+  background: linear-gradient(135deg, #a855f7, #7c3aed) !important;
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.35) !important;
+}
+
+.wdd-build-card:nth-child(2) .wdd-build-card__icon,
+.smm-platform-card:nth-child(2) .smm-platform-card__icon,
+.smm-included-card:nth-child(2) .smm-included-card__icon,
+.ppcd-design-card:nth-child(2) .ppcd-design-card__icon,
+.local-seo-service-card:nth-child(2) .local-seo-service-card__icon,
+.gads-campaign-card:nth-child(2) .gads-campaign-card__icon,
+.geo-aeo-mechanism-card:nth-child(2) .geo-aeo-mechanism-card__icon,
+.geo-aeo-signal-card:nth-child(2) .geo-aeo-signal-card__icon,
+.photo-pricing-card:nth-child(2) .photo-pricing-card__icon,
+.sm-pricing-card:nth-child(2) .sm-pricing-card__icon,
+.web-pricing-card:nth-child(2) .web-pricing-card__icon,
+.seo-pricing-card:nth-child(2) .seo-pricing-card__icon,
+.ai-pricing-card:nth-child(2) .ai-pricing-card__icon,
+.thoothukudi-industry-card:nth-child(2) .thoothukudi-industry-card__icon,
+.edu-service-card:nth-child(2) .edu-service-card__icon,
+.edu-location-card:nth-child(2) .edu-location-card__icon,
+.pm-service-card:nth-child(2) .pm-service-card__icon,
+.pm-content-card:nth-child(2) .pm-content-card__icon,
+.pm-location-card:nth-child(2) .pm-location-card__icon,
+.re-service-card:nth-child(2) .re-service-card__icon,
+.re-content-card:nth-child(2) .re-content-card__icon,
+.re-location-card:nth-child(2) .re-location-card__icon,
+.sm-service-card:nth-child(2) .sm-service-card__icon,
+.sm-location-card:nth-child(2) .sm-location-card__icon,
+.tm-service-card:nth-child(2) .tm-service-card__icon,
+.hh-service-card:nth-child(2) .hh-service-card__icon,
+.hh-content-card:nth-child(2) .hh-content-card__icon,
+.hh-location-card:nth-child(2) .hh-location-card__icon,
+.hc-service-card:nth-child(2) .hc-service-card__icon,
+.hc-trust-card:nth-child(2) .hc-trust-card__icon,
+.hc-location-card:nth-child(2) .hc-location-card__icon,
+.madurai-industry-card:nth-child(2) .madurai-industry-card__icon,
+.lh-card:nth-child(2) .lh-card__icon,
+.ret-service-card:nth-child(2) .ret-service-card__icon,
+.aiv-create-card:nth-child(2) .aiv-create-card__icon,
+.aba-automation-card:nth-child(2) .aba-automation-card__icon,
+.cpv-location-card:nth-child(2) .cpv-location-card__icon,
+.founder-connect-card__icon--linkedin {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8) !important;
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.35) !important;
+}
+
+.wdd-build-card:nth-child(3) .wdd-build-card__icon,
+.smm-platform-card:nth-child(3) .smm-platform-card__icon,
+.smm-included-card:nth-child(3) .smm-included-card__icon,
+.ppcd-design-card:nth-child(3) .ppcd-design-card__icon,
+.local-seo-service-card:nth-child(3) .local-seo-service-card__icon,
+.gads-campaign-card:nth-child(3) .gads-campaign-card__icon,
+.geo-aeo-mechanism-card:nth-child(3) .geo-aeo-mechanism-card__icon,
+.geo-aeo-signal-card:nth-child(3) .geo-aeo-signal-card__icon,
+.photo-pricing-card:nth-child(3) .photo-pricing-card__icon,
+.sm-pricing-card:nth-child(3) .sm-pricing-card__icon,
+.web-pricing-card:nth-child(3) .web-pricing-card__icon,
+.seo-pricing-card:nth-child(3) .seo-pricing-card__icon,
+.ai-pricing-card:nth-child(3) .ai-pricing-card__icon,
+.thoothukudi-industry-card:nth-child(3) .thoothukudi-industry-card__icon,
+.edu-service-card:nth-child(3) .edu-service-card__icon,
+.edu-location-card:nth-child(3) .edu-location-card__icon,
+.pm-service-card:nth-child(3) .pm-service-card__icon,
+.pm-content-card:nth-child(3) .pm-content-card__icon,
+.pm-location-card:nth-child(3) .pm-location-card__icon,
+.re-service-card:nth-child(3) .re-service-card__icon,
+.re-content-card:nth-child(3) .re-content-card__icon,
+.re-location-card:nth-child(3) .re-location-card__icon,
+.sm-service-card:nth-child(3) .sm-service-card__icon,
+.sm-location-card:nth-child(3) .sm-location-card__icon,
+.tm-service-card:nth-child(3) .tm-service-card__icon,
+.hh-service-card:nth-child(3) .hh-service-card__icon,
+.hh-content-card:nth-child(3) .hh-content-card__icon,
+.hh-location-card:nth-child(3) .hh-location-card__icon,
+.hc-service-card:nth-child(3) .hc-service-card__icon,
+.hc-trust-card:nth-child(3) .hc-trust-card__icon,
+.hc-location-card:nth-child(3) .hc-location-card__icon,
+.madurai-industry-card:nth-child(3) .madurai-industry-card__icon,
+.lh-card:nth-child(3) .lh-card__icon,
+.ret-service-card:nth-child(3) .ret-service-card__icon,
+.aiv-create-card:nth-child(3) .aiv-create-card__icon,
+.aba-automation-card:nth-child(3) .aba-automation-card__icon,
+.founder-connect-card__icon--instagram {
+  background: linear-gradient(135deg, #06b6d4, #0891b2) !important;
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.35) !important;
+}
+
+.wdd-build-card:nth-child(4) .wdd-build-card__icon,
+.smm-platform-card:nth-child(4) .smm-platform-card__icon,
+.smm-included-card:nth-child(4) .smm-included-card__icon,
+.ppcd-design-card:nth-child(4) .ppcd-design-card__icon,
+.local-seo-service-card:nth-child(4) .local-seo-service-card__icon,
+.gads-campaign-card:nth-child(4) .gads-campaign-card__icon,
+.geo-aeo-signal-card:nth-child(4) .geo-aeo-signal-card__icon,
+.edu-service-card:nth-child(4) .edu-service-card__icon,
+.pm-service-card:nth-child(4) .pm-service-card__icon,
+.pm-content-card:nth-child(4) .pm-content-card__icon,
+.re-service-card:nth-child(4) .re-service-card__icon,
+.re-content-card:nth-child(4) .re-content-card__icon,
+.sm-service-card:nth-child(4) .sm-service-card__icon,
+.tm-service-card:nth-child(4) .tm-service-card__icon,
+.hh-service-card:nth-child(4) .hh-service-card__icon,
+.hh-content-card:nth-child(4) .hh-content-card__icon,
+.hc-service-card:nth-child(4) .hc-service-card__icon,
+.hc-trust-card:nth-child(4) .hc-trust-card__icon,
+.aiv-create-card:nth-child(4) .aiv-create-card__icon,
+.aba-automation-card:nth-child(4) .aba-automation-card__icon {
+  background: linear-gradient(135deg, #ec4899, #db2777) !important;
+  box-shadow: 0 0 15px rgba(236, 72, 153, 0.35) !important;
+}
+
+.wdd-build-card:nth-child(5) .wdd-build-card__icon,
+.smm-platform-card:nth-child(5) .smm-platform-card__icon,
+.smm-included-card:nth-child(5) .smm-included-card__icon,
+.local-seo-service-card:nth-child(5) .local-seo-service-card__icon,
+.gads-campaign-card:nth-child(5) .gads-campaign-card__icon,
+.pm-service-card:nth-child(5) .pm-service-card__icon,
+.re-service-card:nth-child(5) .re-service-card__icon,
+.sm-service-card:nth-child(5) .sm-service-card__icon,
+.tm-service-card:nth-child(5) .tm-service-card__icon,
+.hh-service-card:nth-child(5) .hh-service-card__icon,
+.hc-service-card:nth-child(5) .hc-service-card__icon,
+.aiv-create-card:nth-child(5) .aiv-create-card__icon,
+.aba-automation-card:nth-child(5) .aba-automation-card__icon {
+  background: linear-gradient(135deg, #f97316, #ea580c) !important;
+  box-shadow: 0 0 15px rgba(249, 115, 22, 0.35) !important;
+}
+
+.smm-included-card:nth-child(6) .smm-included-card__icon,
+.pm-service-card:nth-child(6) .pm-service-card__icon,
+.re-service-card:nth-child(6) .re-service-card__icon,
+.tm-service-card:nth-child(6) .tm-service-card__icon,
+.hh-service-card:nth-child(6) .hh-service-card__icon,
+.hc-service-card:nth-child(6) .hc-service-card__icon,
+.aba-automation-card:nth-child(6) .aba-automation-card__icon {
+  background: linear-gradient(135deg, #22c55e, #16a34a) !important;
+  box-shadow: 0 0 15px rgba(34, 197, 94, 0.35) !important;
+}

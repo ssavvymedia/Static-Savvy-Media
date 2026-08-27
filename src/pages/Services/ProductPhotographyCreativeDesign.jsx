@@ -416,8 +416,23 @@ export default function ProductPhotographyCreativeDesign() {
             {DESIGN_SERVICES.map((item, index) => (
               <ScrollReveal key={item.number} delay={index * 80}>
                 <article className="ppcd-design-card glass-card">
-                  <span className="ppcd-design-card__icon" aria-hidden="true">
-                    <PPCIcon name={item.icon} size={28} />
+                  <span
+                    className="ppcd-design-card__icon"
+                    aria-hidden="true"
+                    style={{
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      borderRadius: '50%',
+                      background: 'linear-gradient(135deg, #eab308, #ca8a04)',
+                      boxShadow: '0 0 15px rgba(234, 179, 8, 0.35)',
+                      width: '52px',
+                      height: '52px',
+                      color: '#fff',
+                      marginBottom: '1rem',
+                    }}
+                  >
+                    <PPCIcon name={item.icon} size={22} />
                   </span>
                   <div className="ppcd-design-card__body">
                     <div className="ppcd-design-card__top">

@@ -394,10 +394,21 @@ export default function WebsiteDesignDevelopment() {
               <ScrollReveal key={build.number} delay={index * 80}>
                 <article className="wdd-build-card glass-card">
                   <div className="wdd-build-card__top">
-                    <span className="wdd-build-card__badge" aria-hidden="true">
-                      {build.number}
-                    </span>
-                    <div className="wdd-build-card__icon" aria-hidden="true">
+                    <div
+                      className="wdd-build-card__icon"
+                      aria-hidden="true"
+                      style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        borderRadius: '50%',
+                        background: 'linear-gradient(135deg, #06b6d4, #0891b2)',
+                        boxShadow: '0 0 15px rgba(6, 182, 212, 0.35)',
+                        width: '52px',
+                        height: '52px',
+                        color: '#fff',
+                      }}
+                    >
                       {build.icon === 'business' && (
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                           <circle cx="12" cy="12" r="10" />

@@ -294,10 +294,21 @@ export default function GoogleAds() {
               <ScrollReveal key={campaign.number} delay={index * 80}>
                 <article className="gads-campaign-card glass-card">
                   <div className="gads-campaign-card__top">
-                    <span className="gads-campaign-card__badge" aria-hidden="true">
-                      {campaign.number}
-                    </span>
-                    <div className="gads-campaign-card__icon" aria-hidden="true">
+                    <div
+                      className="gads-campaign-card__icon"
+                      aria-hidden="true"
+                      style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        borderRadius: '50%',
+                        background: 'linear-gradient(135deg, #f97316, #ea580c)',
+                        boxShadow: '0 0 15px rgba(249, 115, 22, 0.35)',
+                        width: '52px',
+                        height: '52px',
+                        color: '#fff',
+                      }}
+                    >
                       {campaign.icon === 'search' && (
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                           <circle cx="11" cy="11" r="8" />

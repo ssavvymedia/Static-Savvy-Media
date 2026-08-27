@@ -656,8 +656,22 @@ export default function AIBusinessAutomation() {
               <ScrollReveal key={item.number} delay={index * 80}>
                 <article className="aba-automation-card glass-card">
                   <div className="aba-automation-card__top">
-                    <span className="aba-automation-card__icon" aria-hidden="true">
-                      <AutomationIcon name={item.icon} size={26} />
+                    <span
+                      className="aba-automation-card__icon"
+                      aria-hidden="true"
+                      style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        borderRadius: '50%',
+                        background: 'linear-gradient(135deg, #a855f7, #7c3aed)',
+                        boxShadow: '0 0 15px rgba(168, 85, 247, 0.35)',
+                        width: '52px',
+                        height: '52px',
+                        color: '#fff',
+                      }}
+                    >
+                      <AutomationIcon name={item.icon} size={22} />
                     </span>
                     <span className="aba-automation-card__number" aria-hidden="true">
                       {item.number}

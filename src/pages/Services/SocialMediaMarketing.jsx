@@ -322,10 +322,21 @@ export default function SocialMediaMarketing() {
               <ScrollReveal key={platform.number} delay={index * 80}>
                 <article className={`smm-platform-card glass-card smm-platform-card--${platform.color}`}>
                   <div className="smm-platform-card__top">
-                    <span className="smm-platform-card__badge" aria-hidden="true">
-                      {platform.number}
-                    </span>
-                    <div className="smm-platform-card__icon" aria-hidden="true">
+                    <div
+                      className="smm-platform-card__icon"
+                      aria-hidden="true"
+                      style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        borderRadius: '50%',
+                        background: 'linear-gradient(135deg, #ec4899, #db2777)',
+                        boxShadow: '0 0 15px rgba(236, 72, 153, 0.35)',
+                        width: '52px',
+                        height: '52px',
+                        color: '#fff',
+                      }}
+                    >
                       {platform.icon === 'instagram' && (
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                           <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
@@ -413,10 +424,21 @@ export default function SocialMediaMarketing() {
               <ScrollReveal key={service.number} delay={index * 80}>
                 <article className="smm-included-card glass-card">
                   <div className="smm-included-card__top">
-                    <span className="smm-included-card__badge" aria-hidden="true">
-                      {service.number}
-                    </span>
-                    <div className="smm-included-card__icon" aria-hidden="true">
+                    <div
+                      className="smm-included-card__icon"
+                      aria-hidden="true"
+                      style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        borderRadius: '50%',
+                        background: 'linear-gradient(135deg, #ec4899, #db2777)',
+                        boxShadow: '0 0 15px rgba(236, 72, 153, 0.35)',
+                        width: '52px',
+                        height: '52px',
+                        color: '#fff',
+                      }}
+                    >
                       {service.icon === 'calendar' && (
                         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                           <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />

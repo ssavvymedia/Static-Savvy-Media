@@ -497,8 +497,22 @@ export default function AIVideoCreation() {
               <ScrollReveal key={item.number} delay={index * 80}>
                 <article className="aiv-create-card glass-card">
                   <div className="aiv-create-card__top">
-                    <span className="aiv-create-card__icon" aria-hidden="true">
-                      <AIVIcon name={item.icon} size={26} />
+                    <span
+                      className="aiv-create-card__icon"
+                      aria-hidden="true"
+                      style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        borderRadius: '50%',
+                        background: 'linear-gradient(135deg, #ef4444, #dc2626)',
+                        boxShadow: '0 0 15px rgba(239, 68, 68, 0.35)',
+                        width: '52px',
+                        height: '52px',
+                        color: '#fff',
+                      }}
+                    >
+                      <AIVIcon name={item.icon} size={22} />
                     </span>
                     <span className="aiv-create-card__number" aria-hidden="true">
                       {item.number}

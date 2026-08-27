@@ -299,10 +299,21 @@ export default function LocalSEO() {
               <ScrollReveal key={area.number} delay={index * 80}>
                 <article className="local-seo-service-card glass-card">
                   <div className="local-seo-service-card__top">
-                    <span className="local-seo-service-card__badge" aria-hidden="true">
-                      {area.number}
-                    </span>
-                    <div className="local-seo-service-card__icon" aria-hidden="true">
+                    <div
+                      className="local-seo-service-card__icon"
+                      aria-hidden="true"
+                      style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        borderRadius: '50%',
+                        background: 'linear-gradient(135deg, #06b6d4, #0891b2)',
+                        boxShadow: '0 0 15px rgba(6, 182, 212, 0.35)',
+                        width: '52px',
+                        height: '52px',
+                        color: '#fff',
+                      }}
+                    >
                       {area.icon === 'gbp' && (
                         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                           <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
