@@ -10,6 +10,7 @@ import { breadcrumbListSchema } from '../../utils/schema.js'
 import { buildWhatsAppLink } from '../../utils/helpers.js'
 import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, SITE_URL } from '../../utils/constants.js'
 import '../../styles/pages/client1.css'
+import client1HeroImg from '../../assets/images/CaseStudies/01Client.png'
 
 const META_TITLE = 'Madurai SEO & Local SEO Case Study | Static Savvy Media'
 const META_DESC = 'A Madurai business case study covering SEO and Local SEO, including the challenge, approach, methodology, timeline and verified results.'
@@ -99,27 +100,14 @@ export default function Client1() {
     <div className="cs1-page">
       <Breadcrumbs />
       <HeroSection
+        layout="two-column"
         eyebrow="CASE STUDY · MADURAI"
         title="Madurai SEO and Local SEO Case Study"
         subtitle="A detailed look at the challenge, SEO strategy, Local SEO implementation and measurable outcomes of a Madurai business project."
         actions={<Button href={whatsappHref} variant="primary" size="lg" target="_blank" rel="noopener noreferrer">WhatsApp: +91-99440-40345</Button>}
       >
-        <div className="cs1-hero-visual" aria-hidden="true">
-          <div className="cs1-hero-visual__dashboard">
-            <div className="cs1-hero-visual__search-bar">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
-              <div className="cs1-hero-visual__search-line" />
-            </div>
-            <div className="cs1-hero-visual__map">
-              <div className="cs1-hero-visual__pin" />
-              <div className="cs1-hero-visual__map-grid" />
-            </div>
-          </div>
-          <div className="cs1-hero-visual__keywords">
-            <div className="cs1-hero-visual__kw">SEO</div>
-            <div className="cs1-hero-visual__kw cs1-hero-visual__kw--accent">Local SEO</div>
-            <div className="cs1-hero-visual__kw">Madurai</div>
-          </div>
+        <div className="hero__visual-side">
+          <img src={client1HeroImg} alt="Madurai SEO and Local SEO Case Study" className="hero__image" />
         </div>
       </HeroSection>
 

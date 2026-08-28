@@ -11,6 +11,7 @@ import { breadcrumbListSchema } from '../../utils/schema.js'
 import { buildWhatsAppLink } from '../../utils/helpers.js'
 import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, SITE_URL } from '../../utils/constants.js'
 import '../../styles/pages/client3.css'
+import client3HeroImg from '../../assets/images/CaseStudies/03Client.png'
 
 const META_TITLE = 'How [Malaysian SME] Leveraged MDEC Grant & SEO to Scale, Malaysia Case Study | Static Savvy Media'
 const META_DESC = 'See how a Malaysian SME used SEO, Google Ads and digital transformation support to strengthen its online presence and build a scalable digital marketing foundation.'
@@ -115,31 +116,14 @@ export default function Client3() {
     <div className="cs3-page">
       <Breadcrumbs />
       <HeroSection
+        layout="two-column"
         eyebrow="CASE STUDY · MALAYSIA · SEO + GOOGLE ADS"
         title="How [Malaysian SME] Leveraged MDEC Grant & SEO to Scale"
         subtitle="A practical case study showing how SEO, Google Ads and digital transformation planning can help a Malaysian SME build stronger digital visibility and create a scalable growth foundation."
         actions={<Button href={whatsappHref} variant="primary" size="lg" target="_blank" rel="noopener noreferrer">Talk to Static Savvy Media</Button>}
       >
-        <div className="cs3-hero-visual" aria-hidden="true">
-          <span className="cs3-hero-visual__disclaimer">Conceptual Digital Transformation Workflow</span>
-          <div className="cs3-hero-visual__dashboard">
-            <div className="cs3-hero-visual__map">
-              <div className="cs3-hero-visual__map-dot cs3-hero-visual__map-dot--kl" />
-              <div className="cs3-hero-visual__map-dot cs3-hero-visual__map-dot--sel" />
-              <div className="cs3-hero-visual__map-dot cs3-hero-visual__map-dot--raw" />
-            </div>
-            <div className="cs3-hero-visual__grant-card glass-card">
-              <div className="cs3-hero-visual__grant-icon">MDEC</div>
-              <div className="cs3-hero-visual__grant-lines">
-                <div className="cs3-hero-visual__grant-line" />
-                <div className="cs3-hero-visual__grant-line cs3-hero-visual__grant-line--short" />
-              </div>
-            </div>
-          </div>
-          <div className="cs3-hero-visual__charts">
-            <div className="cs3-hero-visual__seo-bar"><span>SEO</span><div className="cs3-hero-visual__seo-fill" /></div>
-            <div className="cs3-hero-visual__ads-bar"><span>Google Ads</span><div className="cs3-hero-visual__ads-fill" /></div>
-          </div>
+        <div className="hero__visual-side">
+          <img src={client3HeroImg} alt="Malaysia SEO and Google Ads Case Study" className="hero__image" />
         </div>
       </HeroSection>
 

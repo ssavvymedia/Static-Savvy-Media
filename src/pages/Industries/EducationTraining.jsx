@@ -20,6 +20,7 @@ import {
 } from '../../utils/constants.js'
 import '../../styles/templates/service-template.css'
 import '../../styles/pages/education-training.css'
+import educationHeroImg from '../../assets/images/Industries/03education.png'
 
 /* ============================================================
    CONTENT, Approved Static Savvy Media Education & Training
@@ -473,6 +474,7 @@ export default function EducationTraining() {
 
       {/* ---- Hero ---- */}
       <HeroSection
+        layout="two-column"
         eyebrow="EDUCATION & TRAINING"
         title={HERO_TITLE}
         subtitle={HERO_PARAGRAPH}
@@ -506,70 +508,12 @@ export default function EducationTraining() {
           </>
         }
       >
-        {/* Education × digital marketing hero visual */}
-        <div className="edu-hero-visual" aria-hidden="true">
-          <div className="edu-emblem">
-            <span className="edu-emblem__glow" />
-            <div className="edu-emblem__card">
-              <span className="edu-emblem__cap">
-                <EduIcon name="cap" size={34} />
-              </span>
-              <span className="edu-emblem__spark edu-emblem__spark--1" />
-              <span className="edu-emblem__spark edu-emblem__spark--2" />
-              <span className="edu-emblem__ring" />
-            </div>
-          </div>
-
-          <span className="edu-chip edu-chip--search">
-            <EduIcon name="search" size={13} /> SEARCH
-          </span>
-          <span className="edu-chip edu-chip--geo">
-            <EduIcon name="sparkles" size={13} /> GEO + AEO
-          </span>
-          <span className="edu-chip edu-chip--whatsapp">
-            <EduIcon name="whatsapp" size={13} /> WHATSAPP
-          </span>
-          <span className="edu-chip edu-chip--maps">
-            <EduIcon name="mappin" size={13} /> GOOGLE MAPS
-          </span>
-          <span className="edu-chip edu-chip--admission">
-            <EduIcon name="cap" size={13} /> ADMISSION
-          </span>
-          <span className="edu-chip edu-chip--social">
-            <EduIcon name="share" size={13} /> SOCIAL
-          </span>
-
-          <div className="edu-cards">
-            <span className="edu-cards__item edu-cards__item--1">
-              <span className="edu-cards__icon">
-                <EduIcon name="search" size={15} />
-              </span>
-              <span className="edu-cards__meta">
-                <b>SEO</b>
-                <em>ADMISSION INTENT</em>
-              </span>
-            </span>
-            <span className="edu-cards__item edu-cards__item--2">
-              <span className="edu-cards__icon">
-                <EduIcon name="whatsapp" size={15} />
-              </span>
-              <span className="edu-cards__meta">
-                <b>ENQUIRY</b>
-                <em>WHATSAPP</em>
-              </span>
-            </span>
-            <span className="edu-cards__item edu-cards__item--3">
-              <span className="edu-cards__icon">
-                <EduIcon name="cap" size={15} />
-              </span>
-              <span className="edu-cards__meta">
-                <b>ADMISSION</b>
-                <em>ENROLLMENT</em>
-              </span>
-            </span>
-          </div>
-
-          <div className="edu-orb" />
+        <div className="hero__visual-side">
+          <img
+            src={educationHeroImg}
+            alt="Education & Training"
+            className="hero__image"
+          />
         </div>
       </HeroSection>
 

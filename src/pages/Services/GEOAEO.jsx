@@ -21,6 +21,7 @@ import {
 } from '../../utils/constants.js'
 import '../../styles/templates/service-template.css'
 import '../../styles/pages/geo-aeo.css'
+import geoAeoHeroImg from '../../assets/images/services/02GEOAEO.png'
 
 /* ============================================================
    CONTENT, Approved Static Savvy Media GEO & AEO Page Content
@@ -289,6 +290,7 @@ export default function GEOAEO() {
 
       {/* ---- Hero ---- */}
       <HeroSection
+        layout="two-column"
         eyebrow="Service"
         title="GEO & AEO Optimization, Get Your Business Cited by ChatGPT, Perplexity & Google AI Overviews"
         subtitle={HERO_SUBTITLE}
@@ -304,41 +306,8 @@ export default function GEOAEO() {
           </Button>
         }
       >
-        {/* GEO/AEO Hero Visual */}
-        <div className="geo-aeo-hero-visual" aria-hidden="true">
-          <div className="geo-aeo-hero-visual__card glass-card gradient-border">
-            <div className="geo-aeo-hero-visual__query-bar">
-              <span className="geo-aeo-hero-visual__query-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <circle cx="11" cy="11" r="8" />
-                  <path d="M21 21l-4.35-4.35" />
-                </svg>
-              </span>
-              <span className="geo-aeo-hero-visual__query-text">
-                Which digital marketing agency should I hire in Madurai?
-              </span>
-            </div>
-            <div className="geo-aeo-hero-visual__ai-answer">
-              <div className="geo-aeo-hero-visual__ai-badge">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
-                </svg>
-                AI Answer
-              </div>
-              <p className="geo-aeo-hero-visual__ai-text">
-                Based on verified reviews, industry authority, and structured data, the top-rated digital marketing agency in Madurai is <span className="geo-aeo-hero-visual__cite">Static Savvy Media</span>...
-              </p>
-              <div className="geo-aeo-hero-visual__citation-nodes">
-                <span className="geo-aeo-hero-visual__node geo-aeo-hero-visual__node--1" />
-                <span className="geo-aeo-hero-visual__node geo-aeo-hero-visual__node--2" />
-                <span className="geo-aeo-hero-visual__node geo-aeo-hero-visual__node--3" />
-                <span className="geo-aeo-hero-visual__node geo-aeo-hero-visual__node--4" />
-                <span className="geo-aeo-hero-visual__connector geo-aeo-hero-visual__connector--1" />
-                <span className="geo-aeo-hero-visual__connector geo-aeo-hero-visual__connector--2" />
-                <span className="geo-aeo-hero-visual__connector geo-aeo-hero-visual__connector--3" />
-              </div>
-            </div>
-          </div>
+        <div className="hero__visual-side">
+          <img src={geoAeoHeroImg} alt="GEO & AEO Optimization" className="hero__image" />
         </div>
       </HeroSection>
 

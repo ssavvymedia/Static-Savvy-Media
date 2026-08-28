@@ -10,6 +10,7 @@ import { setSeo } from '../../utils/seo.js'
 import { breadcrumbListSchema } from '../../utils/schema.js'
 import { buildWhatsAppLink } from '../../utils/helpers.js'
 import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, SITE_URL } from '../../utils/constants.js'
+import blogHeroImg from '../../assets/images/Blog/Blog.png'
 
 /* ============================================================
    CONTENT, Approved Static Savvy Media Blog Hub Content
@@ -262,6 +263,7 @@ export default function Blog() {
           HERO
           ============================================================ */}
       <HeroSection
+        layout="two-column"
         eyebrow="STATIC SAVVY MEDIA BLOG"
         title={
           <>
@@ -281,48 +283,8 @@ export default function Blog() {
           </>
         }
       >
-        <div className="blog-hero-visual" aria-hidden="true">
-          <div className="blog-hero-dashboard glass-card gradient-border">
-            <div className="blog-hero-dashboard__header">
-              <div className="blog-hero-dashboard__dot" />
-              <div className="blog-hero-dashboard__dot blog-hero-dashboard__dot--pink" />
-              <div className="blog-hero-dashboard__dot blog-hero-dashboard__dot--cyan" />
-            </div>
-            <div className="blog-hero-dashboard__row">
-              <div className="blog-hero-dashboard__panel">
-                <div className="blog-hero-dashboard__panel-label">SEO</div>
-                <div className="blog-hero-dashboard__panel-value">Visibility</div>
-              </div>
-              <div className="blog-hero-dashboard__panel">
-                <div className="blog-hero-dashboard__panel-label">GEO / AEO</div>
-                <div className="blog-hero-dashboard__panel-value">AI Citations</div>
-              </div>
-              <div className="blog-hero-dashboard__panel">
-                <div className="blog-hero-dashboard__panel-label">Content</div>
-                <div className="blog-hero-dashboard__panel-value">Performance</div>
-              </div>
-            </div>
-            <div className="blog-hero-dashboard__bar" />
-            <div className="blog-hero-dashboard__articles">
-              <div className="blog-hero-dashboard__article-chip">
-                <div className="blog-hero-dashboard__article-chip-label">GEO</div>
-                <div className="blog-hero-dashboard__article-chip-title">AI Search Guide</div>
-              </div>
-              <div className="blog-hero-dashboard__article-chip">
-                <div className="blog-hero-dashboard__article-chip-label">AEO</div>
-                <div className="blog-hero-dashboard__article-chip-title">Answer Engine</div>
-              </div>
-              <div className="blog-hero-dashboard__article-chip">
-                <div className="blog-hero-dashboard__article-chip-label">SEO</div>
-                <div className="blog-hero-dashboard__article-chip-title">Madurai Guide</div>
-              </div>
-            </div>
-            <div className="blog-hero-dashboard__footer">
-              <span className="blog-hero-dashboard__tag">Search</span>
-              <span className="blog-hero-dashboard__tag blog-hero-dashboard__tag--pink">AI</span>
-              <span className="blog-hero-dashboard__tag blog-hero-dashboard__tag--cyan">Growth</span>
-            </div>
-          </div>
+        <div className="hero__visual-side">
+          <img src={blogHeroImg} alt="Static Savvy Media Blog" className="hero__image" />
         </div>
       </HeroSection>
 

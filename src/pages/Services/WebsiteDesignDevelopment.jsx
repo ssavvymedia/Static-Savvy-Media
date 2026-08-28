@@ -20,6 +20,7 @@ import {
 } from '../../utils/constants.js'
 import '../../styles/templates/service-template.css'
 import '../../styles/pages/website-design-development.css'
+import websiteHeroImg from '../../assets/images/services/06website.png'
 
 /* ============================================================
    CONTENT, Approved Static Savvy Media Website Design & Dev
@@ -246,6 +247,7 @@ export default function WebsiteDesignDevelopment() {
 
       {/* ---- Hero ---- */}
       <HeroSection
+        layout="two-column"
         eyebrow="Service"
         title="Website Design & Development, Sites That Rank, Load Fast & Convert"
         subtitle={HERO_SUBTITLE}
@@ -279,47 +281,8 @@ export default function WebsiteDesignDevelopment() {
           </>
         }
       >
-        {/* Website Hero Visual */}
-        <div className="wdd-hero-visual" aria-hidden="true">
-          <div className="wdd-hero-visual__card glass-card gradient-border">
-            {/* Browser Window */}
-            <div className="wdd-hero-visual__browser">
-              <div className="wdd-hero-visual__browser-bar">
-                <span className="wdd-hero-visual__browser-dot" />
-                <span className="wdd-hero-visual__browser-dot" />
-                <span className="wdd-hero-visual__browser-dot" />
-                <span className="wdd-hero-visual__browser-url">www.yourbusiness.com</span>
-              </div>
-              <div className="wdd-hero-visual__browser-body">
-                <div className="wdd-hero-visual__nav">
-                  <span className="wdd-hero-visual__logo">LOGO</span>
-                  <div className="wdd-hero-visual__nav-links">
-                    <span /><span /><span /><span />
-                  </div>
-                </div>
-                <div className="wdd-hero-visual__hero">
-                  <div className="wdd-hero-visual__hero-text">
-                    <span className="wdd-hero-visual__hero-title" />
-                    <span className="wdd-hero-visual__hero-line" />
-                    <span className="wdd-hero-visual__hero-line" />
-                  </div>
-                  <div className="wdd-hero-visual__hero-cta">
-                    <span>WhatsApp</span>
-                  </div>
-                </div>
-                <div className="wdd-hero-visual__content">
-                  <span /><span /><span />
-                </div>
-              </div>
-            </div>
-            {/* Side Indicators */}
-            <div className="wdd-hero-visual__indicators">
-              <span className="wdd-hero-visual__indicator">SEO READY</span>
-              <span className="wdd-hero-visual__indicator">MOBILE FIRST</span>
-              <span className="wdd-hero-visual__indicator">FAST</span>
-              <span className="wdd-hero-visual__indicator">TRACKED</span>
-            </div>
-          </div>
+        <div className="hero__visual-side">
+          <img src={websiteHeroImg} alt="Website Design & Development" className="hero__image" />
         </div>
       </HeroSection>
 

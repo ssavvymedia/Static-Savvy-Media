@@ -19,6 +19,7 @@ import {
   SITE_NAME,
 } from '../../utils/constants.js'
 import '../../styles/pages/real-estate-builders.css'
+import realEstateHeroImg from '../../assets/images/Industries/08realestate.png'
 
 /* ============================================================
    CONTENT, Approved Static Savvy Media Real Estate & Builders
@@ -497,6 +498,7 @@ export default function RealEstateBuilders() {
 
       {/* ---- Hero ---- */}
       <HeroSection
+        layout="two-column"
         eyebrow="REAL ESTATE • PROPERTY • DEVELOPERS"
         title={HERO_TITLE}
         subtitle={HERO_PARAGRAPH}
@@ -530,55 +532,12 @@ export default function RealEstateBuilders() {
           </>
         }
       >
-        {/* Real estate / property hero visual */}
-        <div className="re-hero-visual" aria-hidden="true">
-          <div className="re-emblem">
-            <span className="re-emblem__glow" />
-            <div className="re-emblem__card">
-              <span className="re-emblem__icon">
-                <ReIcon name="home" size={34} />
-              </span>
-              <span className="re-emblem__spark re-emblem__spark--1" />
-              <span className="re-emblem__spark re-emblem__spark--2" />
-              <span className="re-emblem__ring" />
-            </div>
-          </div>
-
-          <span className="re-chip re-chip--search">
-            <ReIcon name="search" size={13} /> GOOGLE SEARCH
-          </span>
-          <span className="re-chip re-chip--facebook">
-            <ReIcon name="facebook" size={13} /> FACEBOOK
-          </span>
-          <span className="re-chip re-chip--whatsapp">
-            <ReIcon name="whatsapp" size={13} /> WHATSAPP
-          </span>
-          <span className="re-chip re-chip--ai">
-            <ReIcon name="sparkles" size={13} /> AI SEARCH
-          </span>
-
-          <div className="re-stacked-cards">
-            <div className="re-stacked-cards__card glass-card">
-              <ReIcon name="home" size={16} />
-              <span>3 BHK Apartments</span>
-            </div>
-            <div className="re-stacked-cards__card glass-card">
-              <ReIcon name="building" size={16} />
-              <span>Luxury Villas</span>
-            </div>
-            <div className="re-stacked-cards__card glass-card">
-              <ReIcon name="mappin" size={16} />
-              <span>Plots &amp; Land</span>
-            </div>
-            <div className="re-stacked-cards__card glass-card">
-              <ReIcon name="whatsapp" size={16} />
-              <span>WhatsApp Enquiry</span>
-            </div>
-            <div className="re-stacked-cards__card glass-card">
-              <ReIcon name="calendar" size={16} />
-              <span>Site Visit</span>
-            </div>
-          </div>
+        <div className="hero__visual-side">
+          <img
+            src={realEstateHeroImg}
+            alt="Real Estate & Builders"
+            className="hero__image"
+          />
         </div>
       </HeroSection>
 

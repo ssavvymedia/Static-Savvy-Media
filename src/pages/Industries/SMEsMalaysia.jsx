@@ -19,6 +19,7 @@ import {
   SITE_NAME,
 } from '../../utils/constants.js'
 import '../../styles/pages/smes-malaysia.css'
+import smeHeroImg from '../../assets/images/Industries/07SME.png'
 
 const PAGE_TITLE =
   'Digital Marketing for Malaysian SMEs | Static Savvy Media'
@@ -513,35 +514,12 @@ export default function SMEsMalaysia() {
           </>
         }
       >
-        <div className="sm-hero-visual" aria-hidden="true">
-          <div className="sm-emblem">
-            <span className="sm-emblem__glow" />
-            <div className="sm-emblem__card">
-              <span className="sm-emblem__icon">
-                <SmIcon name="globe" size={34} />
-              </span>
-              <span className="sm-emblem__spark sm-emblem__spark--1" />
-              <span className="sm-emblem__spark sm-emblem__spark--2" />
-              <span className="sm-emblem__ring" />
-            </div>
-          </div>
-
-          <span className="sm-chip sm-chip--seo"><SmIcon name="search" size={13} /> SEO</span>
-          <span className="sm-chip sm-chip--ads"><SmIcon name="megaphone" size={13} /> GOOGLE ADS</span>
-          <span className="sm-chip sm-chip--whatsapp"><SmIcon name="whatsapp" size={13} /> WHATSAPP</span>
-          <span className="sm-chip sm-chip--ai"><SmIcon name="sparkles" size={13} /> AI SEARCH</span>
-          <span className="sm-chip sm-chip--social"><SmIcon name="share" size={13} /> SOCIAL MEDIA</span>
-
-          <div className="sm-stacked-cards">
-            <div className="sm-stacked-cards__card glass-card"><SmIcon name="building" size={16} /><span>Malaysian SME</span></div>
-            <div className="sm-stacked-cards__card glass-card"><SmIcon name="target" size={16} /><span>Digital Transformation</span></div>
-            <div className="sm-stacked-cards__card glass-card"><SmIcon name="code" size={16} /><span>Website / SEO / Google / Social / AI</span></div>
-            <div className="sm-stacked-cards__card glass-card"><SmIcon name="megaphone" size={16} /><span>Leads</span></div>
-            <div className="sm-stacked-cards__card glass-card"><SmIcon name="whatsapp" size={16} /><span>WhatsApp</span></div>
-            <div className="sm-stacked-cards__card glass-card"><SmIcon name="check" size={16} /><span>Customers</span></div>
-          </div>
-
-          <span className="sm-emblem__label">Serving Malaysian Businesses</span>
+        <div className="hero__visual-side">
+          <img
+            src={smeHeroImg}
+            alt="Malaysia SMEs"
+            className="hero__image"
+          />
         </div>
       </HeroSection>
 

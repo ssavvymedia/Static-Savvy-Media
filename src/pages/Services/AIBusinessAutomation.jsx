@@ -20,6 +20,7 @@ import {
 } from '../../utils/constants.js'
 import '../../styles/templates/service-template.css'
 import '../../styles/pages/ai-business-automation.css'
+import aiBusinessHeroImg from '../../assets/images/services/07AIBusiness.png'
 
 /* ============================================================
    CONTENT, Approved Static Savvy Media AI Business Automation
@@ -519,6 +520,7 @@ export default function AIBusinessAutomation() {
 
       {/* ---- Hero ---- */}
       <HeroSection
+        layout="two-column"
         eyebrow="Service"
         title={HERO_TITLE}
         subtitle={HERO_PARAGRAPH}
@@ -552,95 +554,8 @@ export default function AIBusinessAutomation() {
           </>
         }
       >
-        {/* AI Automation Command Center Visual */}
-        <div className="aba-hero-visual" aria-hidden="true">
-          <div className="aba-command">
-            <div className="aba-command__glow" />
-            <div className="aba-command__float aba-command__float--1">
-              <AutomationIcon name="whatsapp" size={18} />
-            </div>
-            <div className="aba-command__float aba-command__float--2">
-              <AutomationIcon name="lead" size={18} />
-            </div>
-            <div className="aba-command__float aba-command__float--3">
-              <AutomationIcon name="email" size={18} />
-            </div>
-            <div className="aba-command__float aba-command__float--4">
-              <AutomationIcon name="reporting" size={18} />
-            </div>
-            <div className="aba-command__float aba-command__float--5">
-              <AutomationIcon name="documents" size={18} />
-            </div>
-            <div className="aba-command__float aba-command__float--6">
-              <AutomationIcon name="database" size={18} />
-            </div>
-
-            <div className="aba-command__row aba-command__row--core">
-              <div className="aba-node aba-node--core">
-                <span className="aba-node__icon" aria-hidden="true">
-                  <AutomationIcon name="ai" size={22} />
-                </span>
-                <span className="aba-node__label">AI CORE</span>
-              </div>
-            </div>
-
-            <div className="aba-command__connector aba-command__connector--down" />
-
-            <div className="aba-command__row aba-command__row--branches">
-              <div className="aba-node aba-node--lead">
-                <span className="aba-node__icon" aria-hidden="true">
-                  <AutomationIcon name="lead" size={16} />
-                </span>
-                <span className="aba-node__label">LEAD</span>
-              </div>
-              <div className="aba-node aba-node--wa">
-                <span className="aba-node__icon" aria-hidden="true">
-                  <AutomationIcon name="whatsapp" size={16} />
-                </span>
-                <span className="aba-node__label">WHATSAPP</span>
-              </div>
-              <div className="aba-node aba-node--data">
-                <span className="aba-node__icon" aria-hidden="true">
-                  <AutomationIcon name="database" size={16} />
-                </span>
-                <span className="aba-node__label">DATA</span>
-              </div>
-            </div>
-
-            <div className="aba-command__connector aba-command__connector--down" />
-
-            <div className="aba-command__row aba-command__row--branches">
-              <div className="aba-node aba-node--qualify">
-                <span className="aba-node__icon" aria-hidden="true">
-                  <AutomationIcon name="qualify" size={16} />
-                </span>
-                <span className="aba-node__label">QUALIFY</span>
-              </div>
-              <div className="aba-node aba-node--follow">
-                <span className="aba-node__icon" aria-hidden="true">
-                  <AutomationIcon name="followup" size={16} />
-                </span>
-                <span className="aba-node__label">FOLLOW-UP</span>
-              </div>
-              <div className="aba-node aba-node--process">
-                <span className="aba-node__icon" aria-hidden="true">
-                  <AutomationIcon name="process" size={16} />
-                </span>
-                <span className="aba-node__label">PROCESS</span>
-              </div>
-            </div>
-
-            <div className="aba-command__connector aba-command__connector--down" />
-
-            <div className="aba-command__row aba-command__row--result">
-              <div className="aba-node aba-node--business">
-                <span className="aba-node__icon" aria-hidden="true">
-                  <AutomationIcon name="business" size={18} />
-                </span>
-                <span className="aba-node__label">BUSINESS</span>
-              </div>
-            </div>
-          </div>
+        <div className="hero__visual-side">
+          <img src={aiBusinessHeroImg} alt="AI Business Automation" className="hero__image" />
         </div>
       </HeroSection>
 

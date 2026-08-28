@@ -11,6 +11,7 @@ import { breadcrumbListSchema } from '../../utils/schema.js'
 import { buildWhatsAppLink } from '../../utils/helpers.js'
 import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, SITE_URL } from '../../utils/constants.js'
 import '../../styles/pages/client2.css'
+import client2HeroImg from '../../assets/images/CaseStudies/02Client.png'
 
 const META_TITLE = 'How [CLIENT/DESCRIPTOR] Got Cited by AI Search, GEO/AEO + SEO Case Study | Static Savvy Media'
 const META_DESC = 'Improved AI search visibility using Static Savvy Media\'s GEO/AEO and SEO strategy. Explore the challenge, methodology, implementation and verified results.'
@@ -133,45 +134,14 @@ export default function Client2() {
     <div className="cs2-page">
       <Breadcrumbs />
       <HeroSection
+        layout="two-column"
         eyebrow="CASE STUDY · GEO/AEO + SEO"
         title="How [Client] Got Cited by AI Search"
         subtitle="Building AI Search Visibility with GEO/AEO + SEO. A detailed case study covering the challenge, SEO foundation, GEO/AEO strategy, entity optimization, answer-focused content and AI search visibility."
         actions={<Button href={whatsappHref} variant="primary" size="lg" target="_blank" rel="noopener noreferrer">Talk to Static Savvy Media</Button>}
       >
-        <div className="cs2-hero-visual" aria-hidden="true">
-          <div className="cs2-hero-visual__ai-panel">
-            <div className="cs2-hero-visual__query-chip">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
-              Best [industry] in [location]
-            </div>
-            <div className="cs2-hero-visual__answer">
-              <span className="cs2-hero-visual__ai-label">AI Overview</span>
-              <div className="cs2-hero-visual__answer-lines">
-                <div className="cs2-hero-visual__line" />
-                <div className="cs2-hero-visual__line cs2-hero-visual__line--short" />
-                <div className="cs2-hero-visual__line" />
-              </div>
-            </div>
-            <div className="cs2-hero-visual__citations">
-              <div className="cs2-hero-visual__cite">
-                <span className="cs2-hero-visual__cite-dot" />
-                Source 01
-              </div>
-              <div className="cs2-hero-visual__cite cs2-hero-visual__cite--active">
-                <span className="cs2-hero-visual__cite-dot cs2-hero-visual__cite-dot--active" />
-                Your Website
-              </div>
-              <div className="cs2-hero-visual__cite">
-                <span className="cs2-hero-visual__cite-dot" />
-                Source 03
-              </div>
-            </div>
-          </div>
-          <div className="cs2-hero-visual__labels">
-            <div className="cs2-hero-visual__label">GEO</div>
-            <div className="cs2-hero-visual__label cs2-hero-visual__label--accent">AEO</div>
-            <div className="cs2-hero-visual__label">SEO</div>
-          </div>
+        <div className="hero__visual-side">
+          <img src={client2HeroImg} alt="GEO/AEO and SEO Case Study" className="hero__image" />
         </div>
       </HeroSection>
 

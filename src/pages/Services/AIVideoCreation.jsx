@@ -20,6 +20,7 @@ import {
 } from '../../utils/constants.js'
 import '../../styles/templates/service-template.css'
 import '../../styles/pages/ai-video-creation.css'
+import aiVideoHeroImg from '../../assets/images/services/08AIVideo.png'
 
 /* ============================================================
    CONTENT, Approved Static Savvy Media AI Video Creation
@@ -394,6 +395,7 @@ export default function AIVideoCreation() {
 
       {/* ---- Hero ---- */}
       <HeroSection
+        layout="two-column"
         eyebrow="Service"
         title={HERO_TITLE}
         subtitle={HERO_PARAGRAPH}
@@ -427,61 +429,8 @@ export default function AIVideoCreation() {
           </>
         }
       >
-        {/* AI video studio hero visual */}
-        <div className="aiv-hero-visual" aria-hidden="true">
-          <div className="aiv-studio">
-            <span className="aiv-studio__glow" />
-
-            <span className="aiv-chip aiv-chip--avatar">AI AVATAR</span>
-            <span className="aiv-chip aiv-chip--tamil">TAMIL</span>
-            <span className="aiv-chip aiv-chip--english">ENGLISH</span>
-            <span className="aiv-chip aiv-chip--malay">BAHASA MALAYSIA</span>
-            <span className="aiv-chip aiv-chip--cost">30–60% COST</span>
-            <span className="aiv-chip aiv-chip--ratio">9:16</span>
-
-            <div className="aiv-frame">
-              <span className="aiv-frame__corner aiv-frame__corner--tl" />
-              <span className="aiv-frame__corner aiv-frame__corner--tr" />
-              <span className="aiv-frame__corner aiv-frame__corner--bl" />
-              <span className="aiv-frame__corner aiv-frame__corner--br" />
-
-              <div className="aiv-screen">
-                <span className="aiv-screen__backdrop" />
-                <span className="aiv-screen__scan" />
-                <span className="aiv-screen__silhouette">
-                  <span className="aiv-screen__head" />
-                  <span className="aiv-screen__body" />
-                </span>
-                <span className="aiv-screen__play" />
-              </div>
-
-              <span className="aiv-frame__rec">REC</span>
-              <span className="aiv-frame__counter">00:00:30:00</span>
-
-              <div className="aiv-frame__timeline">
-                <span className="aiv-frame__clip" />
-                <span className="aiv-frame__clip" />
-                <span className="aiv-frame__clip" />
-                <span className="aiv-frame__playhead" />
-              </div>
-            </div>
-
-            <div className="aiv-studio__filmstrip">
-              <i />
-              <i />
-              <i />
-              <i />
-              <i />
-              <i />
-            </div>
-
-            <div className="aiv-studio__badge">
-              <AIVIcon name="zap" size={15} />
-              <span>
-                <strong>30–60%</strong> COST
-              </span>
-            </div>
-          </div>
+        <div className="hero__visual-side">
+          <img src={aiVideoHeroImg} alt="AI Video Creation" className="hero__image" />
         </div>
       </HeroSection>
 

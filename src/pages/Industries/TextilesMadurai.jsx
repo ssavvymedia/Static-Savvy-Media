@@ -19,6 +19,7 @@ import {
   SITE_NAME,
 } from '../../utils/constants.js'
 import '../../styles/pages/textiles-madurai.css'
+import textileHeroImg from '../../assets/images/Industries/05textile.png'
 
 const PAGE_TITLE =
   'Digital Marketing for Textile & Garment Businesses in Madurai | Static Savvy Media'
@@ -514,6 +515,7 @@ export default function TextilesMadurai() {
 
       {/* Hero */}
       <HeroSection
+        layout="two-column"
         eyebrow="MADURAI TEXTILES • DIGITAL GROWTH"
         title={HERO_TITLE}
         subtitle={HERO_PARAGRAPH}
@@ -531,37 +533,12 @@ export default function TextilesMadurai() {
           </>
         }
       >
-        <div className="tm-hero-visual" aria-hidden="true">
-          <div className="tm-emblem">
-            <span className="tm-emblem__glow" />
-            <div className="tm-emblem__card">
-              <span className="tm-emblem__icon">
-                <TmIcon name="shopping-cart" size={34} />
-              </span>
-              <span className="tm-emblem__spark tm-emblem__spark--1" />
-              <span className="tm-emblem__spark tm-emblem__spark--2" />
-              <span className="tm-emblem__ring" />
-            </div>
-          </div>
-
-          <span className="tm-chip tm-chip--silk"><TmIcon name="layers" size={13} /> SILK SAREES</span>
-          <span className="tm-chip tm-chip--dress"><TmIcon name="tag" size={13} /> DRESS MATERIALS</span>
-          <span className="tm-chip tm-chip--whatsapp"><TmIcon name="whatsapp" size={13} /> WHATSAPP</span>
-          <span className="tm-chip tm-chip--instagram"><TmIcon name="instagram" size={13} /> INSTAGRAM</span>
-          <span className="tm-chip tm-chip--ai"><TmIcon name="sparkles" size={13} /> AI SEARCH</span>
-          <span className="tm-chip tm-chip--ecommerce"><TmIcon name="shopping-cart" size={13} /> E-COMMERCE</span>
-
-          <div className="tm-stacked-cards">
-            <div className="tm-stacked-cards__card glass-card"><TmIcon name="layers" size={16} /><span>Textile Heritage</span></div>
-            <div className="tm-stacked-cards__card glass-card"><TmIcon name="globe" size={16} /><span>Digital Presence</span></div>
-            <div className="tm-stacked-cards__card glass-card"><TmIcon name="search" size={16} /><span>Online Discovery</span></div>
-            <div className="tm-stacked-cards__card glass-card"><TmIcon name="shopping-cart" size={16} /><span>E-Commerce</span></div>
-            <div className="tm-stacked-cards__card glass-card"><TmIcon name="share" size={16} /><span>Social Media</span></div>
-            <div className="tm-stacked-cards__card glass-card"><TmIcon name="whatsapp" size={16} /><span>WhatsApp Enquiries</span></div>
-            <div className="tm-stacked-cards__card glass-card"><TmIcon name="globe" size={16} /><span>India + Global Buyers</span></div>
-          </div>
-
-          <span className="tm-emblem__label">Serving Madurai&rsquo;s Textile Industry</span>
+        <div className="hero__visual-side">
+          <img
+            src={textileHeroImg}
+            alt="Madurai Textiles"
+            className="hero__image"
+          />
         </div>
       </HeroSection>
 

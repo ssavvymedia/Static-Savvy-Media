@@ -19,6 +19,7 @@ import {
   SITE_NAME,
 } from '../../utils/constants.js'
 import '../../styles/pages/retail-ecommerce.css'
+import retailHeroImg from '../../assets/images/Industries/01retail.png'
 
 const PAGE_TITLE =
   'Digital Marketing for Retail & E-Commerce Businesses | Static Savvy Media'
@@ -485,6 +486,7 @@ export default function RetailEcommerce() {
 
       {/* Hero */}
       <HeroSection
+        layout="two-column"
         eyebrow="RETAIL • E-COMMERCE • D2C"
         title={HERO_TITLE}
         subtitle={HERO_PARAGRAPH}
@@ -502,35 +504,12 @@ export default function RetailEcommerce() {
           </>
         }
       >
-        <div className="ret-hero-visual" aria-hidden="true">
-          <div className="ret-emblem">
-            <span className="ret-emblem__glow" />
-            <div className="ret-emblem__card">
-              <span className="ret-emblem__icon">
-                <RetIcon name="shopping-cart" size={34} />
-              </span>
-              <span className="ret-emblem__spark ret-emblem__spark--1" />
-              <span className="ret-emblem__spark ret-emblem__spark--2" />
-              <span className="ret-emblem__ring" />
-            </div>
-          </div>
-
-          <span className="ret-chip ret-chip--search"><RetIcon name="search" size={13} /> PRODUCT SEARCH</span>
-          <span className="ret-chip ret-chip--shopping"><RetIcon name="tag" size={13} /> GOOGLE SHOPPING</span>
-          <span className="ret-chip ret-chip--instagram"><RetIcon name="instagram" size={13} /> INSTAGRAM</span>
-          <span className="ret-chip ret-chip--cart"><RetIcon name="shopping-cart" size={13} /> ADD TO CART</span>
-          <span className="ret-chip ret-chip--checkout"><RetIcon name="credit-card" size={13} /> CHECKOUT</span>
-          <span className="ret-chip ret-chip--whatsapp"><RetIcon name="whatsapp" size={13} /> WHATSAPP</span>
-
-          <div className="ret-stacked-cards">
-            <div className="ret-stacked-cards__card glass-card"><RetIcon name="tag" size={16} /><span>Product</span></div>
-            <div className="ret-stacked-cards__card glass-card"><RetIcon name="search" size={16} /><span>Discovery</span></div>
-            <div className="ret-stacked-cards__card glass-card"><RetIcon name="monitor" size={16} /><span>Product Page</span></div>
-            <div className="ret-stacked-cards__card glass-card"><RetIcon name="target" size={16} /><span>Consideration</span></div>
-            <div className="ret-stacked-cards__card glass-card"><RetIcon name="shopping-cart" size={16} /><span>Cart</span></div>
-            <div className="ret-stacked-cards__card glass-card"><RetIcon name="credit-card" size={16} /><span>Checkout</span></div>
-            <div className="ret-stacked-cards__card glass-card"><RetIcon name="check" size={16} /><span>Purchase</span></div>
-          </div>
+        <div className="hero__visual-side">
+          <img
+            src={retailHeroImg}
+            alt="Retail & E-Commerce"
+            className="hero__image"
+          />
         </div>
       </HeroSection>
 

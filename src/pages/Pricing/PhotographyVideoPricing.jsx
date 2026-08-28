@@ -10,6 +10,7 @@ import { breadcrumbListSchema } from '../../utils/schema.js'
 import { buildWhatsAppLink } from '../../utils/helpers.js'
 import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, SITE_URL } from '../../utils/constants.js'
 import '../../styles/pages/photography-video-pricing.css'
+import photographyHeroImg from '../../assets/images/Pricing/07photograph.png'
 
 const PAGE_TITLE = 'Photography & Video Pricing, Corporate, Product & Brand Visual Packages | Static Savvy Media Madurai'
 const PAGE_DESCRIPTION = 'Corporate photography, product photography, and video production pricing in Madurai. Clear day rates and package prices.'
@@ -93,30 +94,14 @@ export default function PhotographyVideoPricing() {
     <div className="photo-pricing-page">
       <Breadcrumbs />
       <HeroSection
+        layout="two-column"
         eyebrow="PHOTOGRAPHY & VIDEO PRICING"
         title="Photography & Video Production Pricing"
         subtitle={HERO_SUBTITLE}
         actions={<Button href={whatsappHref} variant="primary" size="lg" target="_blank" rel="noopener noreferrer">WhatsApp: +91-99440-40345</Button>}
       >
-        <div className="photo-hero-visual" aria-hidden="true">
-          <div className="photo-hero-visual__lens">
-            <div className="photo-hero-visual__lens-ring photo-hero-visual__lens-ring--outer" />
-            <div className="photo-hero-visual__lens-ring photo-hero-visual__lens-ring--mid" />
-            <div className="photo-hero-visual__lens-ring photo-hero-visual__lens-ring--inner" />
-            <div className="photo-hero-visual__lens-dot" />
-          </div>
-          <div className="photo-hero-visual__frames">
-            <div className="photo-hero-visual__frame photo-hero-visual__frame--1" />
-            <div className="photo-hero-visual__frame photo-hero-visual__frame--2" />
-            <div className="photo-hero-visual__frame photo-hero-visual__frame--3" />
-          </div>
-          <div className="photo-hero-visual__timeline">
-            <div className="photo-hero-visual__timeline-bar" />
-            <div className="photo-hero-visual__timeline-play">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-            </div>
-            <div className="photo-hero-visual__timeline-track" />
-          </div>
+        <div className="hero__visual-side">
+          <img src={photographyHeroImg} alt="Photography & Video Pricing" className="hero__image" />
         </div>
       </HeroSection>
 

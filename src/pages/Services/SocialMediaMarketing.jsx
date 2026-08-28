@@ -20,6 +20,7 @@ import {
 } from '../../utils/constants.js'
 import '../../styles/templates/service-template.css'
 import '../../styles/pages/social-media-marketing.css'
+import smmHeroImg from '../../assets/images/services/05socialmediamarketing.png'
 
 /* ============================================================
    CONTENT, Approved Static Savvy Media Social Media Marketing
@@ -239,6 +240,7 @@ export default function SocialMediaMarketing() {
 
       {/* ---- Hero ---- */}
       <HeroSection
+        layout="two-column"
         eyebrow="Service"
         title="Social Media Marketing, Build Your Brand Where Your Clients Spend Their Time"
         subtitle={HERO_SUBTITLE}
@@ -254,59 +256,8 @@ export default function SocialMediaMarketing() {
           </Button>
         }
       >
-        {/* Social Media Hero Visual */}
-        <div className="smm-hero-visual" aria-hidden="true">
-          <div className="smm-hero-visual__card glass-card gradient-border">
-            {/* Platform Nodes */}
-            <div className="smm-hero-visual__platforms">
-              <div className="smm-hero-visual__platform smm-hero-visual__platform--instagram">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-                </svg>
-                <span>Instagram</span>
-              </div>
-              <div className="smm-hero-visual__platform smm-hero-visual__platform--facebook">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-                </svg>
-                <span>Facebook</span>
-              </div>
-              <div className="smm-hero-visual__platform smm-hero-visual__platform--linkedin">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-                  <rect x="2" y="9" width="4" height="12" />
-                  <circle cx="4" cy="4" r="2" />
-                </svg>
-                <span>LinkedIn</span>
-              </div>
-              <div className="smm-hero-visual__platform smm-hero-visual__platform--youtube">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" />
-                  <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
-                </svg>
-                <span>YouTube</span>
-              </div>
-            </div>
-            {/* Flow Arrow */}
-            <div className="smm-hero-visual__arrow" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <line x1="12" y1="5" x2="12" y2="19" />
-                <polyline points="19 12 12 19 5 12" />
-              </svg>
-            </div>
-            {/* Funnel Steps */}
-            <div className="smm-hero-visual__funnel">
-              <span className="smm-hero-visual__funnel-step smm-hero-visual__funnel-step--active">Content Engine</span>
-              <span className="smm-hero-visual__funnel-arrow">→</span>
-              <span className="smm-hero-visual__funnel-step">Audience</span>
-              <span className="smm-hero-visual__funnel-arrow">→</span>
-              <span className="smm-hero-visual__funnel-step">Engagement</span>
-              <span className="smm-hero-visual__funnel-arrow">→</span>
-              <span className="smm-hero-visual__funnel-step smm-hero-visual__funnel-step--highlight">WhatsApp Enquiry</span>
-            </div>
-          </div>
+        <div className="hero__visual-side">
+          <img src={smmHeroImg} alt="Social Media Marketing" className="hero__image" />
         </div>
       </HeroSection>
 

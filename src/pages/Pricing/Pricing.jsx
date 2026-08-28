@@ -12,6 +12,7 @@ import { breadcrumbListSchema, faqPageSchema } from '../../utils/schema.js'
 import { buildWhatsAppLink } from '../../utils/helpers.js'
 import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, SITE_URL } from '../../utils/constants.js'
 import '../../styles/pages/pricing-hub.css'
+import pricingHeroImg from '../../assets/images/Pricing/PricingMain.png'
 
 const PAGE_TITLE = 'Digital Marketing Pricing, Transparent Packages & Plans | Static Savvy Media'
 const PAGE_DESCRIPTION = 'Transparent pricing for SEO, Local SEO, Google Ads, social media, website design, AI services, and photography. Plans in INR and MYR. No hidden fees.'
@@ -143,39 +144,18 @@ export default function Pricing() {
       <Breadcrumbs />
 
       <HeroSection
+        layout="two-column"
         eyebrow="PRICING"
         title="Transparent Pricing, Plans for Every Stage of Business Growth"
         subtitle={HERO_SUBTITLE}
         actions={<Button href={whatsappHref} variant="primary" size="lg" target="_blank" rel="noopener noreferrer">WhatsApp: +91-99440-40345</Button>}
       >
-        <div className="phub-hero-visual" aria-hidden="true">
-          <div className="phub-hero-visual__currency">
-            <div className="phub-hero-visual__currency-badge phub-hero-visual__currency-badge--inr">
-              <span className="phub-hero-visual__currency-symbol">₹</span>
-              <span className="phub-hero-visual__currency-label">INR</span>
-            </div>
-            <div className="phub-hero-visual__currency-divider" />
-            <div className="phub-hero-visual__currency-badge phub-hero-visual__currency-badge--myr">
-              <span className="phub-hero-visual__currency-symbol">RM</span>
-              <span className="phub-hero-visual__currency-label">MYR</span>
-            </div>
-          </div>
-          <div className="phub-hero-visual__cards">
-            <div className="phub-hero-visual__card phub-hero-visual__card--1" />
-            <div className="phub-hero-visual__card phub-hero-visual__card--2" />
-            <div className="phub-hero-visual__card phub-hero-visual__card--3" />
-          </div>
-          <div className="phub-hero-visual__chart">
-            <svg width="120" height="48" viewBox="0 0 120 48" fill="none" aria-hidden="true">
-              <polyline points="0,40 20,35 40,28 60,30 80,18 100,12 120,6" stroke="url(#phub-chart-gradient)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" opacity="0.7"/>
-              <defs>
-                <linearGradient id="phub-chart-gradient" x1="0" y1="0" x2="120" y2="0">
-                  <stop offset="0%" stopColor="rgba(139,92,246,0.4)"/>
-                  <stop offset="100%" stopColor="rgba(34,211,238,0.7)"/>
-                </linearGradient>
-              </defs>
-            </svg>
-          </div>
+        <div className="hero__visual-side">
+          <img
+            src={pricingHeroImg}
+            alt="Transparent Pricing"
+            className="hero__image"
+          />
         </div>
       </HeroSection>
 

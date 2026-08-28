@@ -10,6 +10,7 @@ import { breadcrumbListSchema } from '../../utils/schema.js'
 import { buildWhatsAppLink } from '../../utils/helpers.js'
 import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, SITE_URL } from '../../utils/constants.js'
 import '../../styles/pages/google-ads-pricing.css'
+import googleAdsHeroImg from '../../assets/images/Pricing/03googleads.png'
 
 const PAGE_TITLE = 'Google Ads Management Pricing, PPC Management Packages | Static Savvy Media'
 const PAGE_DESCRIPTION = 'Transparent Google Ads management pricing. Starter, Growth, and Scale packages, management fee separate from ad spend.'
@@ -74,30 +75,14 @@ export default function GoogleAdsPricing() {
     <div className="gads-pricing-page">
       <Breadcrumbs />
       <HeroSection
+        layout="two-column"
         eyebrow="GOOGLE ADS PRICING"
         title="Google Ads Pricing, Management Fee Packages"
         subtitle={HERO_SUBTITLE}
         actions={<Button href={whatsappHref} variant="primary" size="lg" target="_blank" rel="noopener noreferrer">WhatsApp: +91-99440-40345</Button>}
       >
-        <div className="gads-hero-visual" aria-hidden="true">
-          <div className="gads-hero-visual__search">
-            <div className="gads-hero-visual__bar">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
-              <div className="gads-hero-visual__bar-line" />
-              <div className="gads-hero-visual__bar-cursor" />
-            </div>
-            <div className="gads-hero-visual__ad">
-              <span className="gads-hero-visual__ad-badge">Ad</span>
-              <span className="gads-hero-visual__ad-url">www.example.com</span>
-              <span className="gads-hero-visual__ad-title">Your Business Tagline Here</span>
-              <span className="gads-hero-visual__ad-desc">Compelling ad copy that drives clicks and conversions</span>
-            </div>
-          </div>
-          <div className="gads-hero-visual__bars">
-            <div className="gads-hero-visual__bar-line-sm" />
-            <div className="gads-hero-visual__bar-line-sm gads-hero-visual__bar-line-sm--short" />
-            <div className="gads-hero-visual__bar-line-sm gads-hero-visual__bar-line-sm--mid" />
-          </div>
+        <div className="hero__visual-side">
+          <img src={googleAdsHeroImg} alt="Google Ads Pricing" className="hero__image" />
         </div>
       </HeroSection>
 

@@ -14,6 +14,7 @@ import {
   SITE_URL,
 } from '../../utils/constants.js'
 import '../../styles/pages/ai-pricing.css'
+import aiHeroImg from '../../assets/images/Pricing/06AIsevices.png'
 
 /* ============================================================
    CONTENT, Approved Static Savvy Media AI Pricing Content
@@ -156,6 +157,7 @@ export default function AIPricing() {
       <Breadcrumbs />
 
       <HeroSection
+        layout="two-column"
         eyebrow="AI SERVICES PRICING"
         title="AI Services Pricing, GEO/AEO, Automation & AI Video"
         subtitle={HERO_SUBTITLE}
@@ -171,13 +173,8 @@ export default function AIPricing() {
           </Button>
         }
       >
-        <div className="ai-pricing-hero__visual" aria-hidden="true">
-          <div className="ai-pricing-hero__orb" />
-          <div className="ai-pricing-hero__grid">
-            {Array.from({ length: 16 }).map((_, i) => (
-              <div key={i} className="ai-pricing-hero__node" />
-            ))}
-          </div>
+        <div className="hero__visual-side">
+          <img src={aiHeroImg} alt="AI Services Pricing" className="hero__image" />
         </div>
       </HeroSection>
 

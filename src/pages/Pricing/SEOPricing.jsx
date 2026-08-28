@@ -1,4 +1,4 @@
-﻿import { useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import Breadcrumbs from '../../components/common/Breadcrumbs.jsx'
 import Button from '../../components/common/Button.jsx'
@@ -10,6 +10,7 @@ import { breadcrumbListSchema } from '../../utils/schema.js'
 import { buildWhatsAppLink } from '../../utils/helpers.js'
 import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, SITE_URL } from '../../utils/constants.js'
 import '../../styles/pages/seo-pricing.css'
+import seoHeroImg from '../../assets/images/Pricing/01seo.png'
 
 const PAGE_TITLE = 'SEO Pricing India, Monthly Retainer Plans | Static Savvy Media'
 const PAGE_DESCRIPTION = 'Transparent SEO pricing for Indian and Malaysian businesses. Starter, Growth, and Scale monthly retainers. No hidden fees.'
@@ -98,41 +99,14 @@ export default function SEOPricing() {
     <div className="seo-pricing-page">
       <Breadcrumbs />
       <HeroSection
+        layout="two-column"
         eyebrow="SEO PRICING"
         title="SEO Pricing, Monthly Retainer Plans"
         subtitle={HERO_SUBTITLE}
         actions={<Button href={whatsappHref} variant="primary" size="lg" target="_blank" rel="noopener noreferrer">WhatsApp: +91-99440-40345</Button>}
       >
-        <div className="seo-hero-visual" aria-hidden="true">
-          <div className="seo-hero-visual__search">
-            <div className="seo-hero-visual__bar">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
-              <div className="seo-hero-visual__bar-line" />
-              <div className="seo-hero-visual__bar-cursor" />
-            </div>
-          </div>
-          <div className="seo-hero-visual__results">
-            <div className="seo-hero-visual__result seo-hero-visual__result--1">
-              <div className="seo-hero-visual__result-url" />
-              <div className="seo-hero-visual__result-title" />
-              <div className="seo-hero-visual__result-desc" />
-            </div>
-            <div className="seo-hero-visual__result seo-hero-visual__result--2">
-              <div className="seo-hero-visual__result-url" />
-              <div className="seo-hero-visual__result-title" />
-              <div className="seo-hero-visual__result-desc" />
-            </div>
-            <div className="seo-hero-visual__result seo-hero-visual__result--3">
-              <div className="seo-hero-visual__result-url" />
-              <div className="seo-hero-visual__result-title" />
-              <div className="seo-hero-visual__result-desc" />
-            </div>
-          </div>
-          <div className="seo-hero-visual__keywords">
-            <div className="seo-hero-visual__keyword">SEO</div>
-            <div className="seo-hero-visual__keyword seo-hero-visual__keyword--accent">Keywords</div>
-            <div className="seo-hero-visual__keyword">Schema</div>
-          </div>
+        <div className="hero__visual-side">
+          <img src={seoHeroImg} alt="SEO Pricing" className="hero__image" />
         </div>
       </HeroSection>
 

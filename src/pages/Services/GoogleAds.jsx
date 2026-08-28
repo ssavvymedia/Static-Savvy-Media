@@ -21,6 +21,7 @@ import {
 } from '../../utils/constants.js'
 import '../../styles/templates/service-template.css'
 import '../../styles/pages/google-ads.css'
+import googleAdsHeroImg from '../../assets/images/services/04GoogleAds.png'
 
 /* ============================================================
    CONTENT, Approved Static Savvy Media Google Ads Page Content
@@ -233,52 +234,8 @@ export default function GoogleAds() {
           </Button>
         }
       >
-        {/* Google Ads Hero Visual */}
-        <div className="gads-hero-visual" aria-hidden="true">
-          <div className="gads-hero-visual__card glass-card gradient-border">
-            {/* Search Query Bar */}
-            <div className="gads-hero-visual__query">
-              <span className="gads-hero-visual__query-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <circle cx="11" cy="11" r="8" />
-                  <path d="M21 21l-4.35-4.35" />
-                </svg>
-              </span>
-              <span className="gads-hero-visual__query-text">digital marketing service near me</span>
-            </div>
-            {/* Ad Card */}
-            <div className="gads-hero-visual__ad">
-              <div className="gads-hero-visual__ad-badge">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
-                </svg>
-                Ad
-              </div>
-              <span className="gads-hero-visual__ad-url">www.yourbusiness.com</span>
-              <h4 className="gads-hero-visual__ad-headline">Your Business Headline Here</h4>
-              <p className="gads-hero-visual__ad-desc">Your ad description goes here. Compelling, relevant, high-intent.</p>
-              <div className="gads-hero-visual__ad-cta">
-                <span className="gads-hero-visual__ad-cta-btn">Learn More</span>
-              </div>
-            </div>
-            {/* Conversion Path */}
-            <div className="gads-hero-visual__path">
-              <div className="gads-hero-visual__path-step">
-                <span className="gads-hero-visual__path-dot" />
-                <span>Click</span>
-              </div>
-              <div className="gads-hero-visual__path-line" />
-              <div className="gads-hero-visual__path-step">
-                <span className="gads-hero-visual__path-dot" />
-                <span>Landing Page</span>
-              </div>
-              <div className="gads-hero-visual__path-line" />
-              <div className="gads-hero-visual__path-step gads-hero-visual__path-step--active">
-                <span className="gads-hero-visual__path-dot" />
-                <span>Conversion</span>
-              </div>
-            </div>
-          </div>
+        <div className="hero__visual-side">
+          <img src={googleAdsHeroImg} alt="Google Ads Management" className="hero__image" />
         </div>
       </HeroSection>
 

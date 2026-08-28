@@ -20,6 +20,7 @@ import {
 } from '../../utils/constants.js'
 import '../../styles/templates/service-template.css'
 import '../../styles/pages/product-photography-creative-design.css'
+import productHeroImg from '../../assets/images/services/10product.png'
 
 /* ============================================================
    CONTENT, Approved Static Savvy Media Product Photography &
@@ -281,6 +282,7 @@ export default function ProductPhotographyCreativeDesign() {
 
       {/* ---- Hero ---- */}
       <HeroSection
+        layout="two-column"
         eyebrow="Service"
         title={HERO_TITLE}
         subtitle={HERO_PARAGRAPH}
@@ -314,61 +316,8 @@ export default function ProductPhotographyCreativeDesign() {
           </>
         }
       >
-        {/* Premium product studio hero visual */}
-        <div className="ppcd-hero-visual" aria-hidden="true">
-          <div className="ppcd-studio">
-            <span className="ppcd-studio__glow" />
-
-            <span className="ppcd-chip ppcd-chip--bg">WHITE BACKGROUND</span>
-            <span className="ppcd-chip ppcd-chip--ecom">E-COMMERCE READY</span>
-            <span className="ppcd-chip ppcd-chip--lifestyle">LIFESTYLE</span>
-            <span className="ppcd-chip ppcd-chip--aplus">A+ CONTENT</span>
-
-            <div className="ppcd-stage">
-              <span className="ppcd-stage__backdrop" />
-              <span className="ppcd-stage__light ppcd-stage__light--key" />
-              <span className="ppcd-stage__light ppcd-stage__light--rim" />
-
-              <div className="ppcd-print">
-                <span className="ppcd-print__corner ppcd-print__corner--tl" />
-                <span className="ppcd-print__corner ppcd-print__corner--tr" />
-                <span className="ppcd-print__corner ppcd-print__corner--bl" />
-                <span className="ppcd-print__corner ppcd-print__corner--br" />
-                <span className="ppcd-print__image">
-                  <span className="ppcd-print__shape ppcd-print__shape--a" />
-                  <span className="ppcd-print__shadow" />
-                </span>
-                <span className="ppcd-print__flash" />
-              </div>
-
-              <div className="ppcd-camera">
-                <span className="ppcd-camera__body">
-                  <span className="ppcd-camera__lens" />
-                  <span className="ppcd-camera__flash" />
-                </span>
-                <span className="ppcd-camera__tripod" />
-              </div>
-            </div>
-
-            <div className="ppcd-roll">
-              <i />
-              <i />
-              <i />
-              <i />
-            </div>
-
-            <div className="ppcd-spin" aria-hidden="true">
-              <span>360°</span>
-            </div>
-
-            <div className="ppcd-tag">
-              <PPCIcon name="tag" size={15} />
-              <span>
-                <strong>SALE</strong>
-                <em>CONVERSION READY</em>
-              </span>
-            </div>
-          </div>
+        <div className="hero__visual-side">
+          <img src={productHeroImg} alt="Product Photography & Creative Design" className="hero__image" />
         </div>
       </HeroSection>
 

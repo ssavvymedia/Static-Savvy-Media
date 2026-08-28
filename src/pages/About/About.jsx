@@ -11,6 +11,7 @@ import { setSeo } from '../../utils/seo.js'
 import { organizationSchema, faqPageSchema, breadcrumbListSchema } from '../../utils/schema.js'
 import { buildWhatsAppLink } from '../../utils/helpers.js'
 import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, SITE_URL } from '../../utils/constants.js'
+import aboutHeroImg from '../../assets/images/About/About.png'
 
 /* ============================================================
    CONTENT, Approved Static Savvy Media About Page Content
@@ -224,6 +225,7 @@ export default function About() {
           HERO
           ============================================================ */}
       <HeroSection
+        layout="two-column"
         eyebrow="ABOUT STATIC SAVVY MEDIA"
         title={
           <>
@@ -243,38 +245,8 @@ export default function About() {
           </>
         }
       >
-        {/* Hero Dashboard Visual */}
-        <div className="about-hero-visual" aria-hidden="true">
-          <div className="about-hero-dashboard glass-card gradient-border">
-            <div className="about-hero-dashboard__header">
-              <div className="about-hero-dashboard__dot" />
-              <div className="about-hero-dashboard__dot about-hero-dashboard__dot--pink" />
-              <div className="about-hero-dashboard__dot about-hero-dashboard__dot--cyan" />
-            </div>
-            <div className="about-hero-dashboard__bar" />
-            <div className="about-hero-dashboard__row">
-              <div className="about-hero-dashboard__panel">
-                <div className="about-hero-dashboard__panel-icon about-hero-dashboard__panel-icon--purple">S</div>
-                <div className="about-hero-dashboard__panel-label">SEO</div>
-              </div>
-              <div className="about-hero-dashboard__panel">
-                <div className="about-hero-dashboard__panel-icon about-hero-dashboard__panel-icon--pink">AI</div>
-                <div className="about-hero-dashboard__panel-label">GEO / AEO</div>
-              </div>
-              <div className="about-hero-dashboard__panel">
-                <div className="about-hero-dashboard__panel-icon about-hero-dashboard__panel-icon--cyan">G</div>
-                <div className="about-hero-dashboard__panel-label">Google Ads</div>
-              </div>
-            </div>
-            <div className="about-hero-dashboard__chart" />
-            <div className="about-hero-dashboard__footer">
-              <span className="about-hero-dashboard__tag">Visibility</span>
-              <span className="about-hero-dashboard__tag about-hero-dashboard__tag--pink">AI Citations</span>
-              <span className="about-hero-dashboard__tag about-hero-dashboard__tag--cyan">Lead Gen</span>
-              <span className="about-hero-dashboard__tag">WhatsApp</span>
-              <span className="about-hero-dashboard__tag about-hero-dashboard__tag--pink">Social</span>
-            </div>
-          </div>
+        <div className="hero__visual-side">
+          <img src={aboutHeroImg} alt="About Static Savvy Media" className="hero__image" />
         </div>
       </HeroSection>
 

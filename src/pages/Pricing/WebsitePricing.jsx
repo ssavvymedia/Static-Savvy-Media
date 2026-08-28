@@ -1,4 +1,4 @@
-﻿import { useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import Breadcrumbs from '../../components/common/Breadcrumbs.jsx'
 import Button from '../../components/common/Button.jsx'
@@ -10,6 +10,7 @@ import { breadcrumbListSchema } from '../../utils/schema.js'
 import { buildWhatsAppLink } from '../../utils/helpers.js'
 import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, SITE_URL } from '../../utils/constants.js'
 import '../../styles/pages/website-pricing.css'
+import websiteHeroImg from '../../assets/images/Pricing/05websitedesign.png'
 
 const PAGE_TITLE = 'Website Design Pricing, Business & E-Commerce Websites | Static Savvy Media'
 const PAGE_DESCRIPTION = 'Website design and development pricing in Madurai. Business websites, e-commerce sites, and landing pages, fixed project prices.'
@@ -102,44 +103,14 @@ export default function WebsitePricing() {
     <div className="web-pricing-page">
       <Breadcrumbs />
       <HeroSection
+        layout="two-column"
         eyebrow="WEBSITE DESIGN & DEVELOPMENT PRICING"
         title="Website Design & Development Pricing"
         subtitle={HERO_SUBTITLE}
         actions={<Button href={whatsappHref} variant="primary" size="lg" target="_blank" rel="noopener noreferrer">WhatsApp: +91-99440-40345</Button>}
       >
-        <div className="web-hero-visual" aria-hidden="true">
-          <div className="web-hero-visual__browser">
-            <div className="web-hero-visual__browser-bar">
-              <div className="web-hero-visual__browser-dots">
-                <span /><span /><span />
-              </div>
-              <div className="web-hero-visual__browser-url">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-                www.example.com
-              </div>
-            </div>
-            <div className="web-hero-visual__browser-content">
-              <div className="web-hero-visual__browser-hero" />
-              <div className="web-hero-visual__browser-grid">
-                <div className="web-hero-visual__browser-card" />
-                <div className="web-hero-visual__browser-card" />
-                <div className="web-hero-visual__browser-card" />
-              </div>
-            </div>
-          </div>
-          <div className="web-hero-visual__devices">
-            <div className="web-hero-visual__device web-hero-visual__device--tablet">
-              <div className="web-hero-visual__device-screen">
-                <div className="web-hero-visual__device-line" />
-                <div className="web-hero-visual__device-line web-hero-visual__device-line--short" />
-              </div>
-            </div>
-            <div className="web-hero-visual__device web-hero-visual__device--mobile">
-              <div className="web-hero-visual__device-screen">
-                <div className="web-hero-visual__device-line" />
-              </div>
-            </div>
-          </div>
+        <div className="hero__visual-side">
+          <img src={websiteHeroImg} alt="Website Design Pricing" className="hero__image" />
         </div>
       </HeroSection>
 

@@ -19,6 +19,7 @@ import {
   SITE_URL,
 } from '../../utils/constants.js'
 import '../../styles/pages/madurai.css'
+import maduraiHeroImg from '../../assets/images/locations/01Madurai.png'
 
 /* ============================================================
    CONTENT, Approved Static Savvy Media Madurai Page Content
@@ -237,6 +238,7 @@ export default function Madurai() {
 
       {/* ---- Hero ---- */}
       <HeroSection
+        layout="two-column"
         eyebrow={HERO_EYEBROW}
         title="Digital Marketing Agency in Madurai, Static Savvy Media HQ"
         subtitle={HERO_SUBTITLE}
@@ -251,7 +253,15 @@ export default function Madurai() {
             WhatsApp: +91-99440-40345
           </Button>
         }
-      />
+      >
+        <div className="hero__visual-side">
+          <img
+            src={maduraiHeroImg}
+            alt="Digital Marketing Agency in Madurai"
+            className="hero__image"
+          />
+        </div>
+      </HeroSection>
 
       {/* ---- Digital Marketing Services in Madurai ---- */}
       <section className="section madurai-services">

@@ -10,6 +10,7 @@ import { organizationSchema, breadcrumbListSchema } from '../../utils/schema.js'
 import { buildWhatsAppLink } from '../../utils/helpers.js'
 import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, SITE_URL } from '../../utils/constants.js'
 import '../../styles/pages/service.css'
+import servicesHeroImg from '../../assets/images/services/Services.png'
 
 const PAGE_TITLE =
   'Digital Marketing Services, SEO, GEO/AEO, Ads & More | Static Savvy Media'
@@ -280,6 +281,11 @@ export default function Services() {
       eyebrow="Services"
       title="Digital Marketing Services, SEO, GEO/AEO, Ads & More"
       subtitle={INTRO}
+      heroVisual={
+        <div className="hero__visual-side">
+          <img src={servicesHeroImg} alt="Services" className="hero__image" />
+        </div>
+      }
       grid={<CustomServicesGrid title="Our Digital Marketing Services" />}
       ctaTitle={CTA.title}
       ctaSubtitle={CTA.subtitle}

@@ -19,6 +19,7 @@ import {
   SITE_URL,
 } from '../../utils/constants.js'
 import '../../styles/pages/malaysia.css'
+import malaysiaHeroImg from '../../assets/images/locations/02malaysia.png'
 
 /* ============================================================
    CONTENT, Approved Static Savvy Media Malaysia Page Content
@@ -215,6 +216,7 @@ export default function Malaysia() {
 
       {/* ---- Hero ---- */}
       <HeroSection
+        layout="two-column"
         eyebrow={HERO_EYEBROW}
         title="Digital Marketing Agency Malaysia, Rawang, Selangor | Grant-Eligible Services for Malaysian SMEs"
         subtitle={HERO_SUBTITLE}
@@ -229,7 +231,15 @@ export default function Malaysia() {
             WhatsApp: +91-99440-40345
           </Button>
         }
-      />
+      >
+        <div className="hero__visual-side">
+          <img
+            src={malaysiaHeroImg}
+            alt="Digital Marketing Agency Malaysia"
+            className="hero__image"
+          />
+        </div>
+      </HeroSection>
 
       {/* ---- Government Grants ---- */}
       <section className="section malaysia-grants">

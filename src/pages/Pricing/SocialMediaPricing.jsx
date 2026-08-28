@@ -1,4 +1,4 @@
-﻿import { useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import Breadcrumbs from '../../components/common/Breadcrumbs.jsx'
 import Button from '../../components/common/Button.jsx'
@@ -10,6 +10,7 @@ import { breadcrumbListSchema } from '../../utils/schema.js'
 import { buildWhatsAppLink } from '../../utils/helpers.js'
 import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, SITE_URL } from '../../utils/constants.js'
 import '../../styles/pages/social-media-pricing.css'
+import socialMediaHeroImg from '../../assets/images/Pricing/04socialmedia.png'
 
 const PAGE_TITLE = 'Social Media Marketing Pricing, Monthly Management Packages | Static Savvy Media'
 const PAGE_DESCRIPTION = 'Social media management pricing for businesses in India and Malaysia. Platform-based packages covering content creation, paid social, and community management.'
@@ -95,52 +96,14 @@ export default function SocialMediaPricing() {
     <div className="sm-pricing-page">
       <Breadcrumbs />
       <HeroSection
+        layout="two-column"
         eyebrow="SOCIAL MEDIA MARKETING PRICING"
         title="Social Media Marketing Pricing"
         subtitle={HERO_SUBTITLE}
         actions={<Button href={whatsappHref} variant="primary" size="lg" target="_blank" rel="noopener noreferrer">WhatsApp: +91-99440-40345</Button>}
       >
-        <div className="sm-hero-visual" aria-hidden="true">
-          <div className="sm-hero-visual__card sm-hero-visual__card--ig">
-            <div className="sm-hero-visual__card-icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-            </div>
-            <div className="sm-hero-visual__card-lines">
-              <div className="sm-hero-visual__line sm-hero-visual__line--img" />
-              <div className="sm-hero-visual__line sm-hero-visual__line--short" />
-              <div className="sm-hero-visual__line sm-hero-visual__line--xs" />
-            </div>
-          </div>
-          <div className="sm-hero-visual__card sm-hero-visual__card--fb">
-            <div className="sm-hero-visual__card-icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-            </div>
-            <div className="sm-hero-visual__card-lines">
-              <div className="sm-hero-visual__line sm-hero-visual__line--med" />
-              <div className="sm-hero-visual__line sm-hero-visual__line--long" />
-              <div className="sm-hero-visual__line sm-hero-visual__line--short" />
-            </div>
-          </div>
-          <div className="sm-hero-visual__card sm-hero-visual__card--li">
-            <div className="sm-hero-visual__card-icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-            </div>
-            <div className="sm-hero-visual__card-lines">
-              <div className="sm-hero-visual__line sm-hero-visual__line--med" />
-              <div className="sm-hero-visual__line sm-hero-visual__line--xs" />
-            </div>
-          </div>
-          <div className="sm-hero-visual__engagement">
-            <div className="sm-hero-visual__eng-item">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
-            </div>
-            <div className="sm-hero-visual__eng-item">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-            </div>
-            <div className="sm-hero-visual__eng-item">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-            </div>
-          </div>
+        <div className="hero__visual-side">
+          <img src={socialMediaHeroImg} alt="Social Media Pricing" className="hero__image" />
         </div>
       </HeroSection>
 

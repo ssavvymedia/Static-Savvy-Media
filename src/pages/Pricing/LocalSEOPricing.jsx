@@ -10,6 +10,7 @@ import { breadcrumbListSchema } from '../../utils/schema.js'
 import { buildWhatsAppLink } from '../../utils/helpers.js'
 import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, SITE_URL } from '../../utils/constants.js'
 import '../../styles/pages/local-seo-pricing.css'
+import localSeoHeroImg from '../../assets/images/Pricing/02localseo.png'
 
 const PAGE_TITLE = 'Local SEO Pricing, Google Maps & GBP Optimization Plans | Static Savvy Media'
 const PAGE_DESCRIPTION = 'Transparent local SEO pricing for Tamil Nadu and Malaysia businesses. GBP optimization, citation building, and review management packages.'
@@ -89,39 +90,14 @@ export default function LocalSEOPricing() {
     <div className="local-seo-pricing-page">
       <Breadcrumbs />
       <HeroSection
+        layout="two-column"
         eyebrow="LOCAL SEO PRICING"
         title="Local SEO Pricing, Google Maps Domination Plans"
         subtitle={HERO_SUBTITLE}
         actions={<Button href={whatsappHref} variant="primary" size="lg" target="_blank" rel="noopener noreferrer">WhatsApp: +91-99440-40345</Button>}
       >
-        <div className="lseo-hero-visual" aria-hidden="true">
-          <div className="lseo-hero-visual__map">
-            <div className="lseo-hero-visual__pin lseo-hero-visual__pin--1">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            </div>
-            <div className="lseo-hero-visual__pin lseo-hero-visual__pin--2">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            </div>
-            <div className="lseo-hero-visual__pin lseo-hero-visual__pin--3">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            </div>
-            <div className="lseo-hero-visual__grid-lines" />
-          </div>
-          <div className="lseo-hero-visual__card">
-            <div className="lseo-hero-visual__card-header">
-              <div className="lseo-hero-visual__card-avatar" />
-              <div className="lseo-hero-visual__card-info">
-                <span className="lseo-hero-visual__card-name">Your Business</span>
-                <span className="lseo-hero-visual__card-stars">★★★★★</span>
-                <span className="lseo-hero-visual__card-reviews">120+ reviews</span>
-              </div>
-            </div>
-            <div className="lseo-hero-visual__card-signals">
-              <span className="lseo-hero-visual__signal">GBP</span>
-              <span className="lseo-hero-visual__signal">Citations</span>
-              <span className="lseo-hero-visual__signal">Reviews</span>
-            </div>
-          </div>
+        <div className="hero__visual-side">
+          <img src={localSeoHeroImg} alt="Local SEO Pricing" className="hero__image" />
         </div>
       </HeroSection>
 

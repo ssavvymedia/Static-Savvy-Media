@@ -20,6 +20,7 @@ import {
 } from '../../utils/constants.js'
 import '../../styles/templates/service-template.css'
 import '../../styles/pages/corporate-photography-video.css'
+import corporateHeroImg from '../../assets/images/services/09corporate.png'
 
 /* ============================================================
    CONTENT, Approved Static Savvy Media Corporate Photo & Video
@@ -530,6 +531,7 @@ export default function CorporatePhotographyVideo() {
 
       {/* ---- Hero ---- */}
       <HeroSection
+        layout="two-column"
         eyebrow="Service"
         title={HERO_TITLE}
         subtitle={HERO_PARAGRAPH}
@@ -564,50 +566,8 @@ export default function CorporatePhotographyVideo() {
           </>
         }
       >
-        {/* Cinematic production hero visual */}
-        <div className="cpv-hero-visual" aria-hidden="true">
-          <div className="cpv-frame">
-            <span className="cpv-frame__corner cpv-frame__corner--tl" />
-            <span className="cpv-frame__corner cpv-frame__corner--tr" />
-            <span className="cpv-frame__corner cpv-frame__corner--bl" />
-            <span className="cpv-frame__corner cpv-frame__corner--br" />
-
-            <div className="cpv-stage">
-              <span className="cpv-stage__backdrop" />
-              <span className="cpv-stage__light cpv-stage__light--key" />
-              <span className="cpv-stage__light cpv-stage__light--rim" />
-              <span className="cpv-stage__silhouette">
-                <span className="cpv-stage__head" />
-                <span className="cpv-stage__body" />
-              </span>
-              <span className="cpv-stage__tripod" />
-            </div>
-
-            <span className="cpv-frame__rec">REC</span>
-            <span className="cpv-frame__counter">00:00:12:04</span>
-
-            <div className="cpv-frame__timeline">
-              <span className="cpv-frame__clip" />
-              <span className="cpv-frame__clip" />
-              <span className="cpv-frame__clip" />
-              <span className="cpv-frame__playhead" />
-            </div>
-
-            <span className="cpv-frame__play" />
-
-            <span className="cpv-frame__aperture">
-              <span className="cpv-frame__blade" />
-            </span>
-
-            <span className="cpv-frame__filmstrip">
-              <i /><i /><i /><i /><i /><i /><i /><i />
-            </span>
-
-            <span className="cpv-label cpv-label--portraits">CORPORATE PORTRAITS</span>
-            <span className="cpv-label cpv-label--office">OFFICE PHOTOGRAPHY</span>
-            <span className="cpv-label cpv-label--films">BRAND FILMS</span>
-            <span className="cpv-label cpv-label--events">EVENT COVERAGE</span>
-          </div>
+        <div className="hero__visual-side">
+          <img src={corporateHeroImg} alt="Corporate Photography & Video" className="hero__image" />
         </div>
       </HeroSection>
 

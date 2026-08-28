@@ -20,7 +20,12 @@ export default function HubTemplate({
   return (
     <div className="hub-template">
       <Breadcrumbs />
-      <HeroSection eyebrow={eyebrow} title={title} subtitle={subtitle}>
+      <HeroSection
+        eyebrow={eyebrow}
+        title={title}
+        subtitle={subtitle}
+        layout={heroVisual ? 'two-column' : 'default'}
+      >
         {heroVisual}
       </HeroSection>
       {grid && <div className="hub-grid">{grid}</div>}

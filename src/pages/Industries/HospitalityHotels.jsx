@@ -19,6 +19,7 @@ import {
   SITE_NAME,
 } from '../../utils/constants.js'
 import '../../styles/pages/hospitality-hotels.css'
+import hospitalityHeroImg from '../../assets/images/Industries/04hospital.png'
 
 const PAGE_TITLE =
   'Digital Marketing for Hotels & Hospitality Businesses | Madurai & Tamil Nadu | Static Savvy Media'
@@ -259,6 +260,7 @@ export default function HospitalityHotels() {
 
       {/* HERO */}
       <HeroSection
+        layout="two-column"
         eyebrow="HOSPITALITY & HOTELS"
         title={HERO_TITLE}
         subtitle={HERO_PARAGRAPH}
@@ -274,37 +276,12 @@ export default function HospitalityHotels() {
           </>
         }
       >
-        <div className="hh-hero-visual" aria-hidden="true">
-          <div className="hh-emblem">
-            <span className="hh-emblem__glow" />
-            <div className="hh-emblem__card">
-              <span className="hh-emblem__cross"><HospitalityIcon name="bed" size={34} /></span>
-              <span className="hh-emblem__spark hh-emblem__spark--1" />
-              <span className="hh-emblem__spark hh-emblem__spark--2" />
-              <span className="hh-emblem__ring" />
-            </div>
-          </div>
-          <span className="hh-chip hh-chip--search"><HospitalityIcon name="search" size={13} /> SEARCH</span>
-          <span className="hh-chip hh-chip--maps"><HospitalityIcon name="mappin" size={13} /> MAPS</span>
-          <span className="hh-chip hh-chip--tripadvisor"><HospitalityIcon name="globe" size={13} /> TRIPADVISOR</span>
-          <span className="hh-chip hh-chip--reviews"><HospitalityIcon name="star" size={13} /> REVIEWS</span>
-          <span className="hh-chip hh-chip--whatsapp"><HospitalityIcon name="whatsapp" size={13} /> WHATSAPP</span>
-          <span className="hh-chip hh-chip--booking"><HospitalityIcon name="calendar" size={13} /> BOOKING</span>
-          <div className="hh-cards">
-            <span className="hh-cards__item hh-cards__item--1">
-              <span className="hh-cards__icon"><HospitalityIcon name="search" size={15} /></span>
-              <span className="hh-cards__meta"><b>SEO</b><em>TRAVELLER INTENT</em></span>
-            </span>
-            <span className="hh-cards__item hh-cards__item--2">
-              <span className="hh-cards__icon"><HospitalityIcon name="whatsapp" size={15} /></span>
-              <span className="hh-cards__meta"><b>ENQUIRY</b><em>WHATSAPP</em></span>
-            </span>
-            <span className="hh-cards__item hh-cards__item--3">
-              <span className="hh-cards__icon"><HospitalityIcon name="calendar" size={15} /></span>
-              <span className="hh-cards__meta"><b>BOOKING</b><em>CONFIRMED</em></span>
-            </span>
-          </div>
-          <div className="hh-orb" />
+        <div className="hero__visual-side">
+          <img
+            src={hospitalityHeroImg}
+            alt="Hospitality & Hotels"
+            className="hero__image"
+          />
         </div>
       </HeroSection>
 

@@ -20,6 +20,7 @@ import {
   SITE_URL,
 } from '../../utils/constants.js'
 import '../../styles/templates/service-template.css'
+import seoHeroImg from '../../assets/images/services/01SEO.png'
 
 /* ============================================================
    CONTENT, Approved Static Savvy Media SEO Page Content
@@ -281,6 +282,7 @@ export default function SEO() {
 
       {/* ---- Hero ---- */}
       <HeroSection
+        layout="two-column"
         title="SEO Services That Move the Needle, Madurai, Tamil Nadu & Malaysia"
         subtitle={HERO_SUBTITLE}
         actions={
@@ -294,7 +296,11 @@ export default function SEO() {
             WhatsApp: +91-99440-40345
           </Button>
         }
-      />
+      >
+        <div className="hero__visual-side">
+          <img src={seoHeroImg} alt="SEO Services" className="hero__image" />
+        </div>
+      </HeroSection>
 
       {/* ---- What Our SEO Service Includes ---- */}
       <section className="section service-features">

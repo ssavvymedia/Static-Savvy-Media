@@ -19,6 +19,7 @@ import {
   SITE_NAME,
 } from '../../utils/constants.js'
 import '../../styles/pages/port-marine-industrial.css'
+import portHeroImg from '../../assets/images/Industries/06port.png'
 
 /* ============================================================
    CONTENT, Approved Static Savvy Media Port, Marine & Industrial
@@ -497,6 +498,7 @@ export default function PortMarineIndustrialThoothukudi() {
 
       {/* ---- Hero ---- */}
       <HeroSection
+        layout="two-column"
         eyebrow="PORT • MARINE • INDUSTRIAL"
         title={HERO_TITLE}
         subtitle={HERO_PARAGRAPH}
@@ -530,55 +532,12 @@ export default function PortMarineIndustrialThoothukudi() {
           </>
         }
       >
-        {/* Industrial / marine B2B hero visual */}
-        <div className="pm-hero-visual" aria-hidden="true">
-          <div className="pm-emblem">
-            <span className="pm-emblem__glow" />
-            <div className="pm-emblem__card">
-              <span className="pm-emblem__icon">
-                <PmIcon name="factory" size={34} />
-              </span>
-              <span className="pm-emblem__spark pm-emblem__spark--1" />
-              <span className="pm-emblem__spark pm-emblem__spark--2" />
-              <span className="pm-emblem__ring" />
-            </div>
-          </div>
-
-          <span className="pm-chip pm-chip--search">
-            <PmIcon name="search" size={13} /> INDUSTRIAL SEARCH
-          </span>
-          <span className="pm-chip pm-chip--linkedin">
-            <PmIcon name="share" size={13} /> LINKEDIN
-          </span>
-          <span className="pm-chip pm-chip--whatsapp">
-            <PmIcon name="whatsapp" size={13} /> ENQUIRY
-          </span>
-          <span className="pm-chip pm-chip--ai">
-            <PmIcon name="sparkles" size={13} /> AI SEARCH
-          </span>
-
-          <div className="pm-stacked-cards">
-            <div className="pm-stacked-cards__card glass-card">
-              <PmIcon name="factory" size={16} />
-              <span>Industrial Business</span>
-            </div>
-            <div className="pm-stacked-cards__card glass-card">
-              <PmIcon name="search" size={16} />
-              <span>Google Search</span>
-            </div>
-            <div className="pm-stacked-cards__card glass-card">
-              <PmIcon name="sparkles" size={16} />
-              <span>AI Search</span>
-            </div>
-            <div className="pm-stacked-cards__card glass-card">
-              <PmIcon name="share" size={16} />
-              <span>LinkedIn</span>
-            </div>
-            <div className="pm-stacked-cards__card glass-card">
-              <PmIcon name="message" size={16} />
-              <span>Procurement Enquiry</span>
-            </div>
-          </div>
+        <div className="hero__visual-side">
+          <img
+            src={portHeroImg}
+            alt="Port, Marine & Industrial"
+            className="hero__image"
+          />
         </div>
       </HeroSection>
 

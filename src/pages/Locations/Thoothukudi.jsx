@@ -18,6 +18,7 @@ import {
   SITE_URL,
 } from '../../utils/constants.js'
 import '../../styles/pages/thoothukudi.css'
+import thoothukudiHeroImg from '../../assets/images/locations/03thoothukudi.png'
 
 /* ============================================================
    CONTENT, Approved Static Savvy Media Thoothukudi Page Content
@@ -190,6 +191,7 @@ export default function Thoothukudi() {
 
       {/* ---- Hero ---- */}
       <HeroSection
+        layout="two-column"
         eyebrow={HERO_EYEBROW}
         title="Digital Marketing in Thoothukudi (Tuticorin), Growing the Port City’s Businesses Online"
         subtitle={HERO_SUBTITLE}
@@ -204,7 +206,15 @@ export default function Thoothukudi() {
             WhatsApp: +91-99440-40345
           </Button>
         }
-      />
+      >
+        <div className="hero__visual-side">
+          <img
+            src={thoothukudiHeroImg}
+            alt="Digital Marketing in Thoothukudi (Tuticorin)"
+            className="hero__image"
+          />
+        </div>
+      </HeroSection>
 
       {/* ---- Digital Marketing Services in Thoothukudi ---- */}
       <section className="section thoothukudi-services">

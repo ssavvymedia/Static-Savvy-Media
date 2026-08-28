@@ -20,6 +20,7 @@ import {
 } from '../../utils/constants.js'
 import '../../styles/templates/service-template.css'
 import '../../styles/pages/healthcare-clinics.css'
+import healthcareHeroImg from '../../assets/images/Industries/02healthcare.png'
 
 /* ============================================================
    CONTENT, Approved Static Savvy Media Healthcare & Clinics
@@ -493,6 +494,7 @@ export default function HealthcareClinics() {
 
       {/* ---- Hero ---- */}
       <HeroSection
+        layout="two-column"
         eyebrow="HEALTHCARE & CLINICS"
         title={HERO_TITLE}
         subtitle={HERO_PARAGRAPH}
@@ -526,70 +528,12 @@ export default function HealthcareClinics() {
           </>
         }
       >
-        {/* Healthcare × digital marketing hero visual */}
-        <div className="hc-hero-visual" aria-hidden="true">
-          <div className="hc-emblem">
-            <span className="hc-emblem__glow" />
-            <div className="hc-emblem__card">
-              <span className="hc-emblem__cross">
-                <HealthcareIcon name="heart" size={34} />
-              </span>
-              <span className="hc-emblem__spark hc-emblem__spark--1" />
-              <span className="hc-emblem__spark hc-emblem__spark--2" />
-              <span className="hc-emblem__ring" />
-            </div>
-          </div>
-
-          <span className="hc-chip hc-chip--search">
-            <HealthcareIcon name="search" size={13} /> SEARCH
-          </span>
-          <span className="hc-chip hc-chip--geo">
-            <HealthcareIcon name="sparkles" size={13} /> GEO + AEO
-          </span>
-          <span className="hc-chip hc-chip--whatsapp">
-            <HealthcareIcon name="whatsapp" size={13} /> WHATSAPP
-          </span>
-          <span className="hc-chip hc-chip--maps">
-            <HealthcareIcon name="mappin" size={13} /> GOOGLE MAPS
-          </span>
-          <span className="hc-chip hc-chip--appointment">
-            <HealthcareIcon name="calendar" size={13} /> APPOINTMENT
-          </span>
-          <span className="hc-chip hc-chip--reviews">
-            <HealthcareIcon name="star" size={13} /> REVIEWS
-          </span>
-
-          <div className="hc-cards">
-            <span className="hc-cards__item hc-cards__item--1">
-              <span className="hc-cards__icon">
-                <HealthcareIcon name="search" size={15} />
-              </span>
-              <span className="hc-cards__meta">
-                <b>SEO</b>
-                <em>PATIENT INTENT</em>
-              </span>
-            </span>
-            <span className="hc-cards__item hc-cards__item--2">
-              <span className="hc-cards__icon">
-                <HealthcareIcon name="whatsapp" size={15} />
-              </span>
-              <span className="hc-cards__meta">
-                <b>ENQUIRY</b>
-                <em>WHATSAPP</em>
-              </span>
-            </span>
-            <span className="hc-cards__item hc-cards__item--3">
-              <span className="hc-cards__icon">
-                <HealthcareIcon name="calendar" size={15} />
-              </span>
-              <span className="hc-cards__meta">
-                <b>APPOINTMENT</b>
-                <em>PATIENT VISIT</em>
-              </span>
-            </span>
-          </div>
-
-          <div className="hc-orb" />
+        <div className="hero__visual-side">
+          <img
+            src={healthcareHeroImg}
+            alt="Healthcare & Clinics"
+            className="hero__image"
+          />
         </div>
       </HeroSection>
 

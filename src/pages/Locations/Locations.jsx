@@ -16,6 +16,7 @@ import {
   SITE_URL,
 } from '../../utils/constants.js'
 import '../../styles/pages/locations-hub.css'
+import locationHeroImg from '../../assets/images/locations/Locationmain.png'
 
 const PAGE_TITLE =
   'Our Locations, Madurai, Thoothukudi & Malaysia | Static Savvy Media'
@@ -190,6 +191,7 @@ export default function Locations() {
       <Breadcrumbs />
 
       <HeroSection
+        layout="two-column"
         eyebrow="LOCATIONS"
         title={
           <>
@@ -214,7 +216,15 @@ export default function Locations() {
             </Button>
           </>
         }
-      />
+      >
+        <div className="hero__visual-side">
+          <img
+            src={locationHeroImg}
+            alt="Our Locations - Madurai, Thoothukudi & Malaysia"
+            className="hero__image"
+          />
+        </div>
+      </HeroSection>
 
       <section className="section lh-intro">
         <div className="container">

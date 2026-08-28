@@ -1,10 +1,12 @@
 import { useEffect, useRef, useState } from 'react'
 import Breadcrumbs from '../../components/common/Breadcrumbs.jsx'
+import HeroSection from '../../components/hero/HeroSection.jsx'
 import { ScrollReveal } from '../../components/animations/ScrollReveal.jsx'
 import { setSeo } from '../../utils/seo.js'
 import { faqPageSchema, breadcrumbListSchema } from '../../utils/schema.js'
 import { buildWhatsAppLink } from '../../utils/helpers.js'
 import { WHATSAPP_NUMBER, SITE_URL } from '../../utils/constants.js'
+import faqHeroImg from '../../assets/images/Faq/FAQ.png'
 
 const WHATSAPP_MSG = 'Hi Static Savvy Media, I have a question about your digital marketing services.'
 
@@ -155,22 +157,25 @@ export default function FAQ() {
       <Breadcrumbs />
 
       {/* HERO */}
-      <section className="section">
-        <div className="container">
-          <div className="faq-hub-hero">
-            <span className="faq-hub-hero__badge">FAQ</span>
-            <h1 className="hero__title faq-hub-hero__title">
-              Frequently Asked Questions{' '}
-              <span className="text-gradient">&mdash; Digital Marketing, SEO, GEO & AEO</span>
-            </h1>
-            <p className="faq-hub-hero__text">
-              Your questions about digital marketing in the AI era &mdash; answered directly.
-              If your question is not covered here, message us on WhatsApp and we will
-              answer it within the hour.
-            </p>
-          </div>
+      <HeroSection
+        layout="two-column"
+        eyebrow="FAQ"
+        title={
+          <>
+            Frequently Asked Questions{' '}
+            <span className="text-gradient">&mdash; Digital Marketing, SEO, GEO & AEO</span>
+          </>
+        }
+        subtitle="Your questions about digital marketing in the AI era &mdash; answered directly. If your question is not covered here, message us on WhatsApp and we will answer it within the hour."
+      >
+        <div className="hero__visual-side">
+          <img
+            src={faqHeroImg}
+            alt="Frequently Asked Questions - Digital Marketing, SEO, GEO & AEO"
+            className="hero__image"
+          />
         </div>
-      </section>
+      </HeroSection>
 
       {/* FAQ SECTIONS */}
       <section className="section section--alt">

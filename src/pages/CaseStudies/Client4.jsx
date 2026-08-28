@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Breadcrumbs from '../../components/common/Breadcrumbs.jsx'
 import Button from '../../components/common/Button.jsx'
@@ -11,6 +11,7 @@ import { breadcrumbListSchema } from '../../utils/schema.js'
 import { buildWhatsAppLink } from '../../utils/helpers.js'
 import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, SITE_URL } from '../../utils/constants.js'
 import '../../styles/pages/client4.css'
+import client4HeroImg from '../../assets/images/CaseStudies/04Client.png'
 
 const META_TITLE = 'How [Thoothukudi Industrial Client] Doubled Leads with Google Ads | Static Savvy Media'
 const META_DESC = 'See how a Thoothukudi industrial business used Google Ads and social media marketing to strengthen digital visibility, generate relevant enquiries and improve its lead-generation system.'
@@ -146,68 +147,21 @@ export default function Client4() {
       <Breadcrumbs items={breadcrumbs} />
 
       <HeroSection
+        layout="two-column"
         eyebrow="CASE STUDY · THOOTHUKUDI · GOOGLE ADS + SOCIAL MEDIA"
         title="How [Thoothukudi Industrial Client] Doubled Leads with Google Ads"
-        description="A Thoothukudi-focused industrial case study demonstrating how targeted Google Ads, social media marketing and conversion-focused digital strategy can help B2B businesses generate stronger inbound enquiry opportunities."
-        primaryCta={{ label: 'Discuss Your Growth Strategy', to: '/contact/' }}
-        secondaryCta={{ label: 'Explore Google Ads', to: '/services/google-ads/' }}
-      />
-
-      {/* Hero Visual */}
-      <ScrollReveal>
-        <section className="c4-hero-visual">
-          <div className="c4-hero-dashboard">
-            <div className="c4-map-indicator">
-              <div className="c4-map-dot c4-map-dot--kl"><span>KL</span></div>
-              <div className="c4-map-dot c4-map-dot--selangor"><span>Selangor</span></div>
-              <div className="c4-map-dot c4-map-dot--rawang active"><span>Thoothukudi</span></div>
-              <div className="c4-map-pulse" />
-            </div>
-            <div className="c4-search-interface">
-              <div className="c4-search-bar">
-                <span className="c4-search-icon">🔍</span>
-                <span className="c4-search-text">industrial supplier Thoothukudi</span>
-              </div>
-            </div>
-            <div className="c4-campaign-cards">
-              <div className="c4-campaign-card">
-                <div className="c4-campaign-label">Google Ads</div>
-                <div className="c4-campaign-metrics">
-                  <div className="c4-metric"><span className="c4-metric-val">—</span><span className="c4-metric-lbl">Clicks</span></div>
-                  <div className="c4-metric"><span className="c4-metric-val">—</span><span className="c4-metric-lbl">Impressions</span></div>
-                </div>
-              </div>
-              <div className="c4-campaign-card">
-                <div className="c4-campaign-label">Social Media</div>
-                <div className="c4-campaign-metrics">
-                  <div className="c4-metric"><span className="c4-metric-val">—</span><span className="c4-metric-lbl">Reach</span></div>
-                  <div className="c4-metric"><span className="c4-metric-val">—</span><span className="c4-metric-lbl">Engagement</span></div>
-                </div>
-              </div>
-            </div>
-            <div className="c4-lead-cards">
-              <div className="c4-lead-card"><span className="c4-lead-icon">💬</span><span>WhatsApp Enquiry</span></div>
-              <div className="c4-lead-card"><span className="c4-lead-icon">📞</span><span>Phone Call</span></div>
-              <div className="c4-lead-card"><span className="c4-lead-icon">📝</span><span>Form Submission</span></div>
-            </div>
-            <div className="c4-funnel-visual">
-              <div className="c4-funnel-step">Search</div>
-              <div className="c4-funnel-arrow">→</div>
-              <div className="c4-funnel-step">Ad</div>
-              <div className="c4-funnel-arrow">→</div>
-              <div className="c4-funnel-step">Landing Page</div>
-              <div className="c4-funnel-arrow">→</div>
-              <div className="c4-funnel-step">Enquiry</div>
-            </div>
-            <div className="c4-chart-placeholder">
-              <div className="c4-chart-bar" style={{ height: '30%' }}><span>Q1</span></div>
-              <div className="c4-chart-bar" style={{ height: '45%' }}><span>Q2</span></div>
-              <div className="c4-chart-bar" style={{ height: '60%' }}><span>Q3</span></div>
-              <div className="c4-chart-bar" style={{ height: '80%' }}><span>Q4</span></div>
-            </div>
-          </div>
-        </section>
-      </ScrollReveal>
+        subtitle="A Thoothukudi-focused industrial case study demonstrating how targeted Google Ads, social media marketing and conversion-focused digital strategy can help B2B businesses generate stronger inbound enquiry opportunities."
+        actions={
+          <>
+            <Button to="/contact/" variant="primary" size="lg">Discuss Your Growth Strategy</Button>
+            <Button to="/services/google-ads/" variant="secondary" size="lg">Explore Google Ads</Button>
+          </>
+        }
+      >
+        <div className="hero__visual-side">
+          <img src={client4HeroImg} alt="How [Thoothukudi Industrial Client] Doubled Leads with Google Ads" className="hero__image" />
+        </div>
+      </HeroSection>
 
       {/* Client Summary */}
       <ScrollReveal>

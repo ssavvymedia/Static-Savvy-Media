@@ -15,6 +15,7 @@ import {
   SITE_NAME,
 } from '../../utils/constants.js'
 import '../../styles/pages/industries-hub.css'
+import industriesHeroImg from '../../assets/images/Industries/IndustriesMain.png'
 
 /* ============================================================
    CONTENT
@@ -380,6 +381,7 @@ export default function Industries() {
 
       {/* ---- Hero ---- */}
       <HeroSection
+        layout="two-column"
         eyebrow="INDUSTRIES WE SERVE"
         title={HERO_TITLE}
         subtitle={HERO_SUBTITLE}
@@ -404,37 +406,12 @@ export default function Industries() {
           </>
         }
       >
-        {/* Hero visual, connected industry ecosystem */}
-        <div className="ihub-hero-visual" aria-hidden="true">
-          <div className="ihub-ecosystem">
-            <span className="ihub-ecosystem__glow" />
-            <div className="ihub-ecosystem__center">
-              <span className="ihub-ecosystem__pulse" />
-              <HubIcon name="compass" size={36} />
-            </div>
-            {INDUSTRIES.map((ind, i) => (
-              <span
-                key={ind.icon}
-                className={cx('ihub-ecosystem__node', `ihub-ecosystem__node--${i}`)}
-                style={{ animationDelay: `${i * 0.3}s` }}
-              >
-                <HubIcon name={ind.icon} size={16} />
-              </span>
-            ))}
-          </div>
-
-          <span className="ihub-chip ihub-chip--seo">
-            <HubIcon name="search" size={13} /> SEO
-          </span>
-          <span className="ihub-chip ihub-chip--geo">
-            <HubIcon name="sparkles" size={13} /> GEO + AEO
-          </span>
-          <span className="ihub-chip ihub-chip--ads">
-            <HubIcon name="zap" size={13} /> ADS
-          </span>
-          <span className="ihub-chip ihub-chip--social">
-            <HubIcon name="globe" size={13} /> SOCIAL
-          </span>
+        <div className="hero__visual-side">
+          <img
+            src={industriesHeroImg}
+            alt="Industries We Serve"
+            className="hero__image"
+          />
         </div>
       </HeroSection>
 

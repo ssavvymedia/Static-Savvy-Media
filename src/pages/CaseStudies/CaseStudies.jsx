@@ -1,4 +1,4 @@
-﻿import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Breadcrumbs from '../../components/common/Breadcrumbs.jsx'
 import Button from '../../components/common/Button.jsx'
@@ -11,6 +11,7 @@ import { breadcrumbListSchema } from '../../utils/schema.js'
 import { buildWhatsAppLink } from '../../utils/helpers.js'
 import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, SITE_URL } from '../../utils/constants.js'
 import '../../styles/pages/case-studies.css'
+import casestudiesMain from '../../assets/images/CaseStudies/casestudiesMain.png'
 
 const PAGE_TITLE = 'Client Results & Case Studies | Static Savvy Media'
 const PAGE_DESCRIPTION = 'See how Static Savvy Media approaches real digital growth challenges across SEO, Local SEO, GEO/AEO, Google Ads, Social Media and other digital services.'
@@ -95,34 +96,14 @@ export default function CaseStudies() {
     <div className="cs-page">
       <Breadcrumbs />
       <HeroSection
+        layout="two-column"
         eyebrow="CASE STUDIES"
         title="Client Results & Case Studies"
         subtitle={HERO_SUBTITLE}
         actions={<Button href={whatsappHref} variant="primary" size="lg" target="_blank" rel="noopener noreferrer">Let's Talk</Button>}
       >
-        <div className="cs-hero-visual" aria-hidden="true">
-          <div className="cs-hero-visual__dashboard">
-            <div className="cs-hero-visual__dash-bar" />
-            <div className="cs-hero-visual__dash-row">
-              <div className="cs-hero-visual__dash-chart">
-                <svg width="100%" height="60" viewBox="0 0 200 60" fill="none">
-                  <polyline points="0,50 30,40 60,45 90,30 120,25 150,15 180,10 200,8" stroke="url(#cs-grad1)" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.7"/>
-                  <defs><linearGradient id="cs-grad1" x1="0" y1="0" x2="200" y2="0"><stop offset="0%" stopColor="rgba(139,92,246,0.4)"/><stop offset="100%" stopColor="rgba(34,211,238,0.7)"/></linearGradient></defs>
-                </svg>
-              </div>
-              <div className="cs-hero-visual__dash-metrics">
-                <div className="cs-hero-visual__dash-metric" />
-                <div className="cs-hero-visual__dash-metric" />
-                <div className="cs-hero-visual__dash-metric" />
-              </div>
-            </div>
-          </div>
-          <div className="cs-hero-visual__badges">
-            <div className="cs-hero-visual__badge">SEO</div>
-            <div className="cs-hero-visual__badge cs-hero-visual__badge--accent">GEO/AEO</div>
-            <div className="cs-hero-visual__badge">Google Ads</div>
-            <div className="cs-hero-visual__badge cs-hero-visual__badge--accent">Social</div>
-          </div>
+        <div className="hero__visual-side">
+          <img src={casestudiesMain} alt="Client Results & Case Studies" className="hero__image" />
         </div>
       </HeroSection>
 
