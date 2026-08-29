@@ -5,6 +5,7 @@ import Button from '../../components/common/Button.jsx'
 import HeroSection from '../../components/hero/HeroSection.jsx'
 import FAQSection from '../../components/sections/FAQSection.jsx'
 import CTASection from '../../components/sections/CTASection.jsx'
+import ContactFormSection from '../../components/sections/ContactFormSection.jsx'
 import { ScrollReveal } from '../../components/animations/ScrollReveal.jsx'
 import { setSeo } from '../../utils/seo.js'
 import {
@@ -277,6 +278,44 @@ export default function ProductPhotographyCreativeDesign() {
 
   return (
     <div className="service-template ppcd-page">
+      <style>{`
+        /* --- Product Photography Services Icons --- */
+        .ppcd-photo__grid > *:nth-child(1) .ppcd-photo-card__thumb-icon {
+          background: linear-gradient(135deg, #3b82f6, #1d4ed8) !important;
+          box-shadow: 0 0 18px rgba(59, 130, 246, 0.45) !important;
+        }
+        .ppcd-photo__grid > *:nth-child(2) .ppcd-photo-card__thumb-icon {
+          background: linear-gradient(135deg, #f97316, #ea580c) !important;
+          box-shadow: 0 0 18px rgba(249, 115, 22, 0.45) !important;
+        }
+        .ppcd-photo__grid > *:nth-child(3) .ppcd-photo-card__thumb-icon {
+          background: linear-gradient(135deg, #a855f7, #7c3aed) !important;
+          box-shadow: 0 0 18px rgba(168, 85, 247, 0.45) !important;
+        }
+        .ppcd-photo__grid > *:nth-child(4) .ppcd-photo-card__thumb-icon {
+          background: linear-gradient(135deg, #22c55e, #16a34a) !important;
+          box-shadow: 0 0 18px rgba(34, 197, 94, 0.45) !important;
+        }
+
+        /* --- Creative Design Services Icons --- */
+        .ppcd-design__grid > *:nth-child(1) .ppcd-design-card__icon {
+          background: linear-gradient(135deg, #a855f7, #7c3aed) !important;
+          box-shadow: 0 0 18px rgba(168, 85, 247, 0.45) !important;
+        }
+        .ppcd-design__grid > *:nth-child(2) .ppcd-design-card__icon {
+          background: linear-gradient(135deg, #ec4899, #db2777) !important;
+          box-shadow: 0 0 18px rgba(236, 72, 153, 0.45) !important;
+        }
+        .ppcd-design__grid > *:nth-child(3) .ppcd-design-card__icon {
+          background: linear-gradient(135deg, #06b6d4, #0891b2) !important;
+          box-shadow: 0 0 18px rgba(6, 182, 212, 0.45) !important;
+        }
+        .ppcd-design__grid > *:nth-child(4) .ppcd-design-card__icon {
+          background: linear-gradient(135deg, #22c55e, #16a34a) !important;
+          box-shadow: 0 0 18px rgba(34, 197, 94, 0.45) !important;
+        }
+      `}</style>
+
       {/* ---- Breadcrumbs ---- */}
       <Breadcrumbs />
 
@@ -373,8 +412,6 @@ export default function ProductPhotographyCreativeDesign() {
                       alignItems: 'center',
                       justifyContent: 'center',
                       borderRadius: '50%',
-                      background: 'linear-gradient(135deg, #eab308, #ca8a04)',
-                      boxShadow: '0 0 15px rgba(234, 179, 8, 0.35)',
                       width: '52px',
                       height: '52px',
                       color: '#fff',
@@ -492,6 +529,7 @@ export default function ProductPhotographyCreativeDesign() {
         secondaryLabel="View Photography & Video Pricing"
         secondaryTo="/pricing/photography-video/"
       />
+      <ContactFormSection />
     </div>
   )
 }

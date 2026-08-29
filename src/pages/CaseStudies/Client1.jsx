@@ -4,6 +4,8 @@ import Breadcrumbs from '../../components/common/Breadcrumbs.jsx'
 import Button from '../../components/common/Button.jsx'
 import HeroSection from '../../components/hero/HeroSection.jsx'
 import CTASection from '../../components/sections/CTASection.jsx'
+import ContactFormSection from '../../components/sections/ContactFormSection.jsx'
+import WhatsAppIcon from '../../components/common/WhatsAppIcon.jsx'
 import { ScrollReveal } from '../../components/animations/ScrollReveal.jsx'
 import { setSeo } from '../../utils/seo.js'
 import { breadcrumbListSchema } from '../../utils/schema.js'
@@ -315,11 +317,17 @@ export default function Client1() {
         eyebrow="Want results like these?"
         title="Let us build your SEO and Local SEO strategy"
         subtitle="Every project starts with understanding your business and your market."
-        primaryLabel="WhatsApp: +91-99440-40345"
+        primaryLabel={
+          <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.55rem', verticalAlign: 'middle' }}>
+            <WhatsAppIcon size={22} />
+            <span>WhatsApp: +91-99440-40345</span>
+          </span>
+        }
         primaryHref={whatsappHref}
         secondaryLabel="View All Case Studies"
         secondaryTo="/case-studies/"
       />
+      <ContactFormSection />
     </div>
   )
 }

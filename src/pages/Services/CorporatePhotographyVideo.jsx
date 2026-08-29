@@ -5,6 +5,8 @@ import Button from '../../components/common/Button.jsx'
 import HeroSection from '../../components/hero/HeroSection.jsx'
 import FAQSection from '../../components/sections/FAQSection.jsx'
 import CTASection from '../../components/sections/CTASection.jsx'
+import ContactFormSection from '../../components/sections/ContactFormSection.jsx'
+import WhatsAppIcon from '../../components/common/WhatsAppIcon.jsx'
 import { ScrollReveal } from '../../components/animations/ScrollReveal.jsx'
 import { setSeo } from '../../utils/seo.js'
 import {
@@ -182,7 +184,12 @@ const PRICING_REFERENCE = [
 
 const CTA = {
   title: 'Show clients who you really are, with photography that builds trust.',
-  label: 'Book a Photography Session',
+  label: (
+    <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.55rem', verticalAlign: 'middle' }}>
+      <WhatsAppIcon size={22} />
+      <span>WhatsApp: +91-99440-40345</span>
+    </span>
+  ),
 }
 
 /* ============================================================
@@ -1010,6 +1017,7 @@ export default function CorporatePhotographyVideo() {
         secondaryLabel="View Photography & Video Pricing"
         secondaryTo="/pricing/photography-video/"
       />
+      <ContactFormSection />
     </div>
   )
 }

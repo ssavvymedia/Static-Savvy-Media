@@ -5,6 +5,8 @@ import Button from '../../components/common/Button.jsx'
 import HeroSection from '../../components/hero/HeroSection.jsx'
 import FAQSection from '../../components/sections/FAQSection.jsx'
 import CTASection from '../../components/sections/CTASection.jsx'
+import ContactFormSection from '../../components/sections/ContactFormSection.jsx'
+import WhatsAppIcon from '../../components/common/WhatsAppIcon.jsx'
 import { ScrollReveal } from '../../components/animations/ScrollReveal.jsx'
 import { setSeo } from '../../utils/seo.js'
 import {
@@ -158,7 +160,12 @@ const CTA = {
   title: 'Build a website that works as hard as you do.',
   subtitle:
     'Message us on WhatsApp to discuss your project. We will advise on the right platform, realistic timeline, and whether a rebuild or enhancement is the right starting point.',
-  label: 'Discuss Your Website Project',
+  label: (
+    <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.55rem', verticalAlign: 'middle' }}>
+      <WhatsAppIcon size={22} />
+      <span>WhatsApp: +91-99440-40345</span>
+    </span>
+  ),
 }
 
 const PIPELINE_STEPS = [
@@ -242,6 +249,25 @@ export default function WebsiteDesignDevelopment() {
 
   return (
     <div className="service-template website-design">
+      <style>{`
+        .website-design .wdd-build__grid > *:nth-child(1) .wdd-build-card__icon {
+          background: linear-gradient(135deg, #3b82f6, #1d4ed8) !important;
+          box-shadow: 0 0 18px rgba(59, 130, 246, 0.45) !important;
+        }
+        .website-design .wdd-build__grid > *:nth-child(2) .wdd-build-card__icon {
+          background: linear-gradient(135deg, #f97316, #ea580c) !important;
+          box-shadow: 0 0 18px rgba(249, 115, 22, 0.45) !important;
+        }
+        .website-design .wdd-build__grid > *:nth-child(3) .wdd-build-card__icon {
+          background: linear-gradient(135deg, #06b6d4, #0891b2) !important;
+          box-shadow: 0 0 18px rgba(6, 182, 212, 0.45) !important;
+        }
+        .website-design .wdd-build__grid > *:nth-child(4) .wdd-build-card__icon {
+          background: linear-gradient(135deg, #a855f7, #7c3aed) !important;
+          box-shadow: 0 0 18px rgba(168, 85, 247, 0.45) !important;
+        }
+      `}</style>
+
       {/* ---- Breadcrumbs ---- */}
       <Breadcrumbs />
 
@@ -365,35 +391,33 @@ export default function WebsiteDesignDevelopment() {
                         alignItems: 'center',
                         justifyContent: 'center',
                         borderRadius: '50%',
-                        background: 'linear-gradient(135deg, #06b6d4, #0891b2)',
-                        boxShadow: '0 0 15px rgba(6, 182, 212, 0.35)',
                         width: '52px',
                         height: '52px',
                         color: '#fff',
                       }}
                     >
                       {build.icon === 'business' && (
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                           <circle cx="12" cy="12" r="10" />
                           <line x1="2" y1="12" x2="22" y2="12" />
                           <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
                         </svg>
                       )}
                       {build.icon === 'ecommerce' && (
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                           <circle cx="9" cy="21" r="1" />
                           <circle cx="20" cy="21" r="1" />
                           <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
                         </svg>
                       )}
                       {build.icon === 'locations' && (
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                           <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
                           <circle cx="12" cy="10" r="3" />
                         </svg>
                       )}
                       {build.icon === 'landing' && (
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                           <path d="M3 3h18v18H3z" />
                           <path d="M3 9h18" />
                           <path d="M9 21V9" />
@@ -748,6 +772,7 @@ export default function WebsiteDesignDevelopment() {
         primaryLabel={CTA.label}
         primaryHref={whatsappHref}
       />
+      <ContactFormSection />
     </div>
   )
 }

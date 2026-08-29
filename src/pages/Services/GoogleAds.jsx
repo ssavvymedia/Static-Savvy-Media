@@ -6,6 +6,7 @@ import HeroSection from '../../components/hero/HeroSection.jsx'
 import ProcessSection from '../../components/sections/ProcessSection.jsx'
 import FAQSection from '../../components/sections/FAQSection.jsx'
 import CTASection from '../../components/sections/CTASection.jsx'
+import ContactFormSection from '../../components/sections/ContactFormSection.jsx'
 import { ScrollReveal } from '../../components/animations/ScrollReveal.jsx'
 import { setSeo } from '../../utils/seo.js'
 import {
@@ -213,6 +214,33 @@ export default function GoogleAds() {
 
   return (
     <div className="service-template google-ads">
+      <style>{`
+        .google-ads .gads-campaigns__grid > *:nth-child(1) .gads-campaign-card__icon {
+          background: linear-gradient(135deg, #f97316, #ea580c) !important;
+          box-shadow: 0 0 18px rgba(249, 115, 22, 0.45) !important;
+        }
+
+        .google-ads .gads-campaigns__grid > *:nth-child(2) .gads-campaign-card__icon {
+          background: linear-gradient(135deg, #3b82f6, #1d4ed8) !important;
+          box-shadow: 0 0 18px rgba(59, 130, 246, 0.45) !important;
+        }
+
+        .google-ads .gads-campaigns__grid > *:nth-child(3) .gads-campaign-card__icon {
+          background: linear-gradient(135deg, #eab308, #ca8a04) !important;
+          box-shadow: 0 0 18px rgba(234, 179, 8, 0.45) !important;
+        }
+
+        .google-ads .gads-campaigns__grid > *:nth-child(4) .gads-campaign-card__icon {
+          background: linear-gradient(135deg, #06b6d4, #0891b2) !important;
+          box-shadow: 0 0 18px rgba(6, 182, 212, 0.45) !important;
+        }
+
+        .google-ads .gads-campaigns__grid > *:nth-child(5) .gads-campaign-card__icon {
+          background: linear-gradient(135deg, #a855f7, #7c3aed) !important;
+          box-shadow: 0 0 18px rgba(168, 85, 247, 0.45) !important;
+        }
+      `}</style>
+
       {/* ---- Breadcrumbs ---- */}
       <Breadcrumbs />
 
@@ -259,42 +287,40 @@ export default function GoogleAds() {
                         alignItems: 'center',
                         justifyContent: 'center',
                         borderRadius: '50%',
-                        background: 'linear-gradient(135deg, #f97316, #ea580c)',
-                        boxShadow: '0 0 15px rgba(249, 115, 22, 0.35)',
                         width: '52px',
                         height: '52px',
                         color: '#fff',
                       }}
                     >
                       {campaign.icon === 'search' && (
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                           <circle cx="11" cy="11" r="8" />
                           <path d="M21 21l-4.35-4.35" />
                         </svg>
                       )}
                       {campaign.icon === 'display' && (
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                           <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
                           <line x1="8" y1="21" x2="16" y2="21" />
                           <line x1="12" y1="17" x2="12" y2="21" />
                         </svg>
                       )}
                       {campaign.icon === 'shopping' && (
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                           <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
                           <line x1="3" y1="6" x2="21" y2="6" />
                           <path d="M16 10a4 4 0 0 1-8 0" />
                         </svg>
                       )}
                       {campaign.icon === 'remarketing' && (
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                           <polyline points="23 4 23 10 17 10" />
                           <polyline points="1 20 1 14 7 14" />
                           <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15" />
                         </svg>
                       )}
                       {campaign.icon === 'pmax' && (
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                           <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
                         </svg>
                       )}
@@ -644,6 +670,7 @@ export default function GoogleAds() {
         primaryLabel={CTA.label}
         primaryHref={whatsappHref}
       />
+      <ContactFormSection />
     </div>
   )
 }

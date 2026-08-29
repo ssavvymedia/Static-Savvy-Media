@@ -1,6 +1,7 @@
 import Breadcrumbs from '../components/common/Breadcrumbs.jsx'
 import HeroSection from '../components/hero/HeroSection.jsx'
 import CTASection from '../components/sections/CTASection.jsx'
+import ContactFormSection from '../components/sections/ContactFormSection.jsx'
 
 /**
  * T02 — HubTemplate.
@@ -35,6 +36,7 @@ export default function HubTemplate({
         primaryLabel={ctaLabel || undefined}
         primaryHref={ctaHref}
       />
+      <ContactFormSection />
     </div>
   )
 }

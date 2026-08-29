@@ -4,6 +4,8 @@ import Breadcrumbs from '../../components/common/Breadcrumbs.jsx'
 import Button from '../../components/common/Button.jsx'
 import HeroSection from '../../components/hero/HeroSection.jsx'
 import CTASection from '../../components/sections/CTASection.jsx'
+import ContactFormSection from '../../components/sections/ContactFormSection.jsx'
+import WhatsAppIcon from '../../components/common/WhatsAppIcon.jsx'
 import SectionHeading from '../../components/common/SectionHeading.jsx'
 import { ScrollReveal } from '../../components/animations/ScrollReveal.jsx'
 import { setSeo } from '../../utils/seo.js'
@@ -543,11 +545,17 @@ export default function Client2() {
         eyebrow="Ready for the AI Search Era?"
         title="Ready for the AI Search Era?"
         subtitle="Your customers are changing how they search. Build a digital presence that works across traditional search and emerging AI-powered answer experiences."
-        primaryLabel="Let's Talk"
+        primaryLabel={
+          <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.55rem', verticalAlign: 'middle' }}>
+            <WhatsAppIcon size={22} />
+            <span>WhatsApp: +91-99440-40345</span>
+          </span>
+        }
         primaryHref={whatsappHref}
         secondaryLabel="Explore GEO/AEO"
         secondaryTo="/services/geo-aeo-ai-search/"
       />
+      <ContactFormSection />
     </div>
   )
 }

@@ -5,6 +5,7 @@ import Button from '../../components/common/Button.jsx'
 import HeroSection from '../../components/hero/HeroSection.jsx'
 import FAQSection from '../../components/sections/FAQSection.jsx'
 import CTASection from '../../components/sections/CTASection.jsx'
+import ContactFormSection from '../../components/sections/ContactFormSection.jsx'
 import { ScrollReveal } from '../../components/animations/ScrollReveal.jsx'
 import { setSeo } from '../../utils/seo.js'
 import {
@@ -235,6 +236,56 @@ export default function SocialMediaMarketing() {
 
   return (
     <div className="service-template social-media-marketing">
+      <style>{`
+        /* --- Platforms We Manage Icons --- */
+        .social-media-marketing .smm-platforms__grid > *:nth-child(1) .smm-platform-card__icon {
+          background: linear-gradient(135deg, #ec4899, #db2777) !important;
+          box-shadow: 0 0 18px rgba(236, 72, 153, 0.45) !important;
+        }
+        .social-media-marketing .smm-platforms__grid > *:nth-child(2) .smm-platform-card__icon {
+          background: linear-gradient(135deg, #3b82f6, #1d4ed8) !important;
+          box-shadow: 0 0 18px rgba(59, 130, 246, 0.45) !important;
+        }
+        .social-media-marketing .smm-platforms__grid > *:nth-child(3) .smm-platform-card__icon {
+          background: linear-gradient(135deg, #06b6d4, #0891b2) !important;
+          box-shadow: 0 0 18px rgba(6, 182, 212, 0.45) !important;
+        }
+        .social-media-marketing .smm-platforms__grid > *:nth-child(4) .smm-platform-card__icon {
+          background: linear-gradient(135deg, #ef4444, #dc2626) !important;
+          box-shadow: 0 0 18px rgba(239, 68, 68, 0.45) !important;
+        }
+
+        /* --- What Is Included Icons --- */
+        .social-media-marketing .smm-included__grid > *:nth-child(1) .smm-included-card__icon {
+          background: linear-gradient(135deg, #a855f7, #7c3aed) !important;
+          box-shadow: 0 0 18px rgba(168, 85, 247, 0.45) !important;
+        }
+        .social-media-marketing .smm-included__grid > *:nth-child(2) .smm-included-card__icon {
+          background: linear-gradient(135deg, #ec4899, #db2777) !important;
+          box-shadow: 0 0 18px rgba(236, 72, 153, 0.45) !important;
+        }
+        .social-media-marketing .smm-included__grid > *:nth-child(3) .smm-included-card__icon {
+          background: linear-gradient(135deg, #3b82f6, #1d4ed8) !important;
+          box-shadow: 0 0 18px rgba(59, 130, 246, 0.45) !important;
+        }
+        .social-media-marketing .smm-included__grid > *:nth-child(4) .smm-included-card__icon {
+          background: linear-gradient(135deg, #06b6d4, #0891b2) !important;
+          box-shadow: 0 0 18px rgba(6, 182, 212, 0.45) !important;
+        }
+        .social-media-marketing .smm-included__grid > *:nth-child(5) .smm-included-card__icon {
+          background: linear-gradient(135deg, #22c55e, #16a34a) !important;
+          box-shadow: 0 0 18px rgba(34, 197, 94, 0.45) !important;
+        }
+        .social-media-marketing .smm-included__grid > *:nth-child(6) .smm-included-card__icon {
+          background: linear-gradient(135deg, #f97316, #ea580c) !important;
+          box-shadow: 0 0 18px rgba(249, 115, 22, 0.45) !important;
+        }
+        .social-media-marketing .smm-included__grid > *:nth-child(7) .smm-included-card__icon {
+          background: linear-gradient(135deg, #eab308, #ca8a04) !important;
+          box-shadow: 0 0 18px rgba(234, 179, 8, 0.45) !important;
+        }
+      `}</style>
+
       {/* ---- Breadcrumbs ---- */}
       <Breadcrumbs />
 
@@ -281,34 +332,32 @@ export default function SocialMediaMarketing() {
                         alignItems: 'center',
                         justifyContent: 'center',
                         borderRadius: '50%',
-                        background: 'linear-gradient(135deg, #ec4899, #db2777)',
-                        boxShadow: '0 0 15px rgba(236, 72, 153, 0.35)',
                         width: '52px',
                         height: '52px',
                         color: '#fff',
                       }}
                     >
                       {platform.icon === 'instagram' && (
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                           <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
                           <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
                           <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
                         </svg>
                       )}
                       {platform.icon === 'facebook' && (
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                           <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
                         </svg>
                       )}
                       {platform.icon === 'linkedin' && (
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                           <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
                           <rect x="2" y="9" width="4" height="12" />
                           <circle cx="4" cy="4" r="2" />
                         </svg>
                       )}
                       {platform.icon === 'youtube' && (
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                           <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" />
                           <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
                         </svg>
@@ -383,15 +432,13 @@ export default function SocialMediaMarketing() {
                         alignItems: 'center',
                         justifyContent: 'center',
                         borderRadius: '50%',
-                        background: 'linear-gradient(135deg, #ec4899, #db2777)',
-                        boxShadow: '0 0 15px rgba(236, 72, 153, 0.35)',
                         width: '52px',
                         height: '52px',
                         color: '#fff',
                       }}
                     >
                       {service.icon === 'calendar' && (
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                           <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
                           <line x1="16" y1="2" x2="16" y2="6" />
                           <line x1="8" y1="2" x2="8" y2="6" />
@@ -399,14 +446,14 @@ export default function SocialMediaMarketing() {
                         </svg>
                       )}
                       {service.icon === 'create' && (
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                           <polygon points="12 2 2 7 12 12 22 7 12 2" />
                           <polyline points="2 17 12 22 22 17" />
                           <polyline points="2 12 12 17 22 12" />
                         </svg>
                       )}
                       {service.icon === 'copy' && (
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                           <line x1="17" y1="10" x2="3" y2="10" />
                           <line x1="21" y1="6" x2="3" y2="6" />
                           <line x1="21" y1="14" x2="3" y2="14" />
@@ -414,7 +461,7 @@ export default function SocialMediaMarketing() {
                         </svg>
                       )}
                       {service.icon === 'hashtag' && (
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                           <line x1="4" y1="9" x2="20" y2="9" />
                           <line x1="4" y1="15" x2="20" y2="15" />
                           <line x1="10" y1="3" x2="8" y2="21" />
@@ -422,18 +469,18 @@ export default function SocialMediaMarketing() {
                         </svg>
                       )}
                       {service.icon === 'community' && (
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                           <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
                         </svg>
                       )}
                       {service.icon === 'paid' && (
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                           <circle cx="12" cy="12" r="10" />
                           <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
                         </svg>
                       )}
                       {service.icon === 'analytics' && (
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                           <line x1="18" y1="20" x2="18" y2="10" />
                           <line x1="12" y1="20" x2="12" y2="4" />
                           <line x1="6" y1="20" x2="6" y2="14" />
@@ -573,6 +620,7 @@ export default function SocialMediaMarketing() {
         primaryLabel={CTA.label}
         primaryHref={whatsappHref}
       />
+      <ContactFormSection />
     </div>
   )
 }

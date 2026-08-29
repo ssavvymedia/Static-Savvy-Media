@@ -5,6 +5,8 @@ import Button from '../../components/common/Button.jsx'
 import SectionHeading from '../../components/common/SectionHeading.jsx'
 import HeroSection from '../../components/hero/HeroSection.jsx'
 import CTASection from '../../components/sections/CTASection.jsx'
+import ContactFormSection from '../../components/sections/ContactFormSection.jsx'
+import WhatsAppIcon from '../../components/common/WhatsAppIcon.jsx'
 import { ScrollReveal } from '../../components/animations/ScrollReveal.jsx'
 import { setSeo } from '../../utils/seo.js'
 import { breadcrumbListSchema } from '../../utils/schema.js'
@@ -211,11 +213,17 @@ export default function CaseStudies() {
         eyebrow=""
         title="Have a Digital Growth Challenge?"
         subtitle="Tell us what you are trying to achieve. We will help you identify the right digital strategy, services and next steps."
-        primaryLabel="Let's Talk"
+        primaryLabel={
+          <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.55rem', verticalAlign: 'middle' }}>
+            <WhatsAppIcon size={22} />
+            <span>WhatsApp: +91-99440-40345</span>
+          </span>
+        }
         primaryHref={whatsappHref}
         secondaryLabel="Explore Our Services"
         secondaryTo="/services/"
       />
+      <ContactFormSection />
     </div>
   )
 }

@@ -5,6 +5,7 @@ import Button from '../../components/common/Button.jsx'
 import HeroSection from '../../components/hero/HeroSection.jsx'
 import SectionHeading from '../../components/common/SectionHeading.jsx'
 import CTASection from '../../components/sections/CTASection.jsx'
+import ContactFormSection from '../../components/sections/ContactFormSection.jsx'
 import { ScrollReveal } from '../../components/animations/ScrollReveal.jsx'
 import { setSeo } from '../../utils/seo.js'
 import { personSchema, faqPageSchema, breadcrumbListSchema } from '../../utils/schema.js'
@@ -700,6 +701,7 @@ export default function Founder() {
         secondaryLabel="View All Services"
         secondaryTo="/services/"
       />
+      <ContactFormSection />
     </div>
   )
 }

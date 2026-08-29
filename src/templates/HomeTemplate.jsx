@@ -6,6 +6,7 @@ import ServicesGrid from '../components/sections/ServicesGrid.jsx'
 import LocationsGrid from '../components/sections/LocationsGrid.jsx'
 import FAQSection from '../components/sections/FAQSection.jsx'
 import CTASection from '../components/sections/CTASection.jsx'
+import ContactFormSection from '../components/sections/ContactFormSection.jsx'
 import { ScrollReveal } from '../components/animations/ScrollReveal.jsx'
 import HeroImage from '../assets/images/Heroimage.png'
 import '../styles/pages/home.css'
@@ -82,7 +83,7 @@ export default function HomeTemplate({
             {whyChoose.map((item, index) => (
               <ScrollReveal key={item.title} delay={index * 80}>
                 <div className="why-choose__card glass-card">
-                  <span className="why-choose__mark" aria-hidden="true" />
+                  {item.icon || <span className="why-choose__mark" aria-hidden="true" />}
                   <h3 className="why-choose__title">{item.title}</h3>
                   <p className="why-choose__text">{item.description}</p>
                 </div>
@@ -100,6 +101,7 @@ export default function HomeTemplate({
         primaryLabel={cta?.label}
         primaryHref={whatsappHref}
       />
+      <ContactFormSection />
     </div>
   )
 }

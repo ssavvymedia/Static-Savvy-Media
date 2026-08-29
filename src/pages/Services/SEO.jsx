@@ -6,6 +6,7 @@ import HeroSection from '../../components/hero/HeroSection.jsx'
 import ProcessSection from '../../components/sections/ProcessSection.jsx'
 import FAQSection from '../../components/sections/FAQSection.jsx'
 import CTASection from '../../components/sections/CTASection.jsx'
+import ContactFormSection from '../../components/sections/ContactFormSection.jsx'
 import { ScrollReveal } from '../../components/animations/ScrollReveal.jsx'
 import { setSeo } from '../../utils/seo.js'
 import {
@@ -160,6 +161,33 @@ const CTA = {
    COMPONENT
    ============================================================ */
 
+const seoFeatureStyles = {
+  '01': {
+    background: 'linear-gradient(135deg, #a855f7, #7c3aed)',
+    boxShadow: '0 0 15px rgba(168, 85, 247, 0.35)',
+  },
+  '02': {
+    background: 'linear-gradient(135deg, #3b82f6, #1d4ed8)',
+    boxShadow: '0 0 15px rgba(59, 130, 246, 0.35)',
+  },
+  '03': {
+    background: 'linear-gradient(135deg, #06b6d4, #0891b2)',
+    boxShadow: '0 0 15px rgba(6, 182, 212, 0.35)',
+  },
+  '04': {
+    background: 'linear-gradient(135deg, #f97316, #ea580c)',
+    boxShadow: '0 0 15px rgba(249, 115, 22, 0.35)',
+  },
+  '05': {
+    background: 'linear-gradient(135deg, #ec4899, #db2777)',
+    boxShadow: '0 0 15px rgba(236, 72, 153, 0.35)',
+  },
+  '06': {
+    background: 'linear-gradient(135deg, #22c55e, #16a34a)',
+    boxShadow: '0 0 15px rgba(34, 197, 94, 0.35)',
+  },
+}
+
 function getSeoFeatureIcon(number) {
   switch (number) {
     case '01': // Technical SEO Audit
@@ -174,15 +202,15 @@ function getSeoFeatureIcon(number) {
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" style={{ width: '42%', height: '42%' }}>
           <circle cx="11" cy="11" r="8" />
           <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          <line x1="8" y1="11" x2="14" y2="11" />
         </svg>
       )
     case '03': // On-Page
       return (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" style={{ width: '42%', height: '42%' }}>
           <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
-          <line x1="9" y1="9" x2="15" y2="9" />
-          <line x1="9" y1="13" x2="15" y2="13" />
-          <line x1="9" y1="17" x2="13" y2="17" />
+          <line x1="3" y1="9" x2="21" y2="9" />
+          <path d="M9 14l2 2 4-4" />
         </svg>
       )
     case '04': // Content
@@ -205,6 +233,7 @@ function getSeoFeatureIcon(number) {
           <line x1="18" y1="20" x2="18" y2="10" />
           <line x1="12" y1="20" x2="12" y2="4" />
           <line x1="6" y1="20" x2="6" y2="14" />
+          <path d="M3 20h18" />
         </svg>
       )
     default:
@@ -310,33 +339,36 @@ export default function SEO() {
             <h2 className="section-heading__title">What Our SEO Service Includes</h2>
           </div>
           <div className="service-features__grid">
-            {SERVICE_FEATURES.map((feature, index) => (
-              <ScrollReveal key={feature.number} delay={index * 80}>
-                <article className="service-feature-card">
-                  <div className="service-feature-card__top">
-                    <span
-                      className="service-feature-card__badge"
-                      aria-hidden="true"
-                      style={{
-                        display: 'inline-flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        borderRadius: '50%',
-                        background: 'linear-gradient(135deg, #a855f7, #7c3aed)',
-                        boxShadow: '0 0 15px rgba(168, 85, 247, 0.35)',
-                      }}
-                    >
-                      {getSeoFeatureIcon(feature.number)}
-                    </span>
-                    <span className="service-feature-card__number" aria-hidden="true">
-                      {feature.number}
-                    </span>
-                  </div>
-                  <h3 className="service-feature-card__title">{feature.title}</h3>
-                  <p className="service-feature-card__text">{feature.text}</p>
-                </article>
-              </ScrollReveal>
-            ))}
+            {SERVICE_FEATURES.map((feature, index) => {
+              const colorStyle = seoFeatureStyles[feature.number] || seoFeatureStyles['01']
+              return (
+                <ScrollReveal key={feature.number} delay={index * 80}>
+                  <article className="service-feature-card">
+                    <div className="service-feature-card__top">
+                      <span
+                        className="service-feature-card__badge"
+                        aria-hidden="true"
+                        style={{
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          borderRadius: '50%',
+                          background: colorStyle.background,
+                          boxShadow: colorStyle.boxShadow,
+                        }}
+                      >
+                        {getSeoFeatureIcon(feature.number)}
+                      </span>
+                      <span className="service-feature-card__number" aria-hidden="true">
+                        {feature.number}
+                      </span>
+                    </div>
+                    <h3 className="service-feature-card__title">{feature.title}</h3>
+                    <p className="service-feature-card__text">{feature.text}</p>
+                  </article>
+                </ScrollReveal>
+              )
+            })}
           </div>
         </div>
       </section>
@@ -475,6 +507,7 @@ export default function SEO() {
         primaryLabel={CTA.label}
         primaryHref={whatsappHref}
       />
+      <ContactFormSection />
     </div>
   )
 }

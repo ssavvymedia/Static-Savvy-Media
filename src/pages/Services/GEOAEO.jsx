@@ -6,6 +6,8 @@ import HeroSection from '../../components/hero/HeroSection.jsx'
 import ProcessSection from '../../components/sections/ProcessSection.jsx'
 import FAQSection from '../../components/sections/FAQSection.jsx'
 import CTASection from '../../components/sections/CTASection.jsx'
+import ContactFormSection from '../../components/sections/ContactFormSection.jsx'
+import WhatsAppIcon from '../../components/common/WhatsAppIcon.jsx'
 import { ScrollReveal } from '../../components/animations/ScrollReveal.jsx'
 import { setSeo } from '../../utils/seo.js'
 import {
@@ -213,7 +215,46 @@ const CTA = {
   title: 'Be the first business in your category to be cited by AI search.',
   subtitle:
     'The window for first-mover advantage in GEO and AEO is open right now. Message us on WhatsApp.',
-  label: 'Start Your GEO/AEO Strategy',
+  label: (
+    <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.55rem', verticalAlign: 'middle' }}>
+      <WhatsAppIcon size={22} />
+      <span>WhatsApp: +91-99440-40345</span>
+    </span>
+  ),
+}
+
+const geoCardStyles = {
+  entity: {
+    background: 'linear-gradient(135deg, #a855f7, #7c3aed)',
+    boxShadow: '0 0 15px rgba(168, 85, 247, 0.35)',
+  },
+  citation: {
+    background: 'linear-gradient(135deg, #3b82f6, #1d4ed8)',
+    boxShadow: '0 0 15px rgba(59, 130, 246, 0.35)',
+  },
+  answer: {
+    background: 'linear-gradient(135deg, #06b6d4, #0891b2)',
+    boxShadow: '0 0 15px rgba(6, 182, 212, 0.35)',
+  },
+}
+
+const aeoCardStyles = {
+  schema: {
+    background: 'linear-gradient(135deg, #a855f7, #7c3aed)',
+    boxShadow: '0 0 15px rgba(168, 85, 247, 0.35)',
+  },
+  paragraph: {
+    background: 'linear-gradient(135deg, #3b82f6, #1d4ed8)',
+    boxShadow: '0 0 15px rgba(59, 130, 246, 0.35)',
+  },
+  heading: {
+    background: 'linear-gradient(135deg, #06b6d4, #0891b2)',
+    boxShadow: '0 0 15px rgba(6, 182, 212, 0.35)',
+  },
+  link: {
+    background: 'linear-gradient(135deg, #ec4899, #db2777)',
+    boxShadow: '0 0 15px rgba(236, 72, 153, 0.35)',
+  },
 }
 
 /* ============================================================
@@ -285,6 +326,45 @@ export default function GEOAEO() {
 
   return (
     <div className="service-template geo-aeo">
+      <style>{`
+        /* --- GEO Mechanism Card Icons --- */
+        .geo-aeo .geo-aeo-mechanisms__grid > *:nth-child(1) .geo-aeo-mechanism-card__icon {
+          background: linear-gradient(135deg, #a855f7, #7c3aed) !important;
+          box-shadow: 0 0 18px rgba(168, 85, 247, 0.45) !important;
+        }
+
+        .geo-aeo .geo-aeo-mechanisms__grid > *:nth-child(2) .geo-aeo-mechanism-card__icon {
+          background: linear-gradient(135deg, #3b82f6, #1d4ed8) !important;
+          box-shadow: 0 0 18px rgba(59, 130, 246, 0.45) !important;
+        }
+
+        .geo-aeo .geo-aeo-mechanisms__grid > *:nth-child(3) .geo-aeo-mechanism-card__icon {
+          background: linear-gradient(135deg, #06b6d4, #0891b2) !important;
+          box-shadow: 0 0 18px rgba(6, 182, 212, 0.45) !important;
+        }
+
+        /* --- AEO Signal Card Icons --- */
+        .geo-aeo .geo-aeo-signals__grid > *:nth-child(1) .geo-aeo-signal-card__icon {
+          background: linear-gradient(135deg, #ec4899, #db2777) !important;
+          box-shadow: 0 0 18px rgba(236, 72, 153, 0.45) !important;
+        }
+
+        .geo-aeo .geo-aeo-signals__grid > *:nth-child(2) .geo-aeo-signal-card__icon {
+          background: linear-gradient(135deg, #f97316, #ea580c) !important;
+          box-shadow: 0 0 18px rgba(249, 115, 22, 0.45) !important;
+        }
+
+        .geo-aeo .geo-aeo-signals__grid > *:nth-child(3) .geo-aeo-signal-card__icon {
+          background: linear-gradient(135deg, #22c55e, #16a34a) !important;
+          box-shadow: 0 0 18px rgba(34, 197, 94, 0.45) !important;
+        }
+
+        .geo-aeo .geo-aeo-signals__grid > *:nth-child(4) .geo-aeo-signal-card__icon {
+          background: linear-gradient(135deg, #ef4444, #dc2626) !important;
+          box-shadow: 0 0 18px rgba(239, 68, 68, 0.45) !important;
+        }
+      `}</style>
+
       {/* ---- Breadcrumbs ---- */}
       <Breadcrumbs />
 
@@ -356,49 +436,56 @@ export default function GEOAEO() {
             </p>
           </ScrollReveal>
           <div className="geo-aeo-mechanisms__grid">
-            {GEO_MECHANISMS.map((item, index) => (
-              <ScrollReveal key={item.title} delay={index * 80}>
-                <article className="geo-aeo-mechanism-card glass-card">
-                  <div
-                    className="geo-aeo-mechanism-card__icon"
-                    aria-hidden="true"
-                    style={{
-                      display: 'inline-flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      borderRadius: '50%',
-                      background: 'linear-gradient(135deg, #3b82f6, #1d4ed8)',
-                      boxShadow: '0 0 15px rgba(59, 130, 246, 0.35)',
-                      width: '52px',
-                      height: '52px',
-                      color: '#fff',
-                    }}
-                  >
-                    {item.icon === 'entity' && (
-                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <circle cx="12" cy="12" r="10" />
-                        <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
-                        <path d="M2 12h20" />
-                      </svg>
-                    )}
-                    {item.icon === 'citation' && (
-                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M12 2L2 7l10 5 10-5-10-5z" />
-                        <path d="M2 17l10 5 10-5" />
-                        <path d="M2 12l10 5 10-5" />
-                      </svg>
-                    )}
-                    {item.icon === 'answer' && (
-                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-                      </svg>
-                    )}
-                  </div>
-                  <h3 className="geo-aeo-mechanism-card__title">{item.title}</h3>
-                  <p className="geo-aeo-mechanism-card__text">{item.content}</p>
-                </article>
-              </ScrollReveal>
-            ))}
+            {GEO_MECHANISMS.map((item, index) => {
+              const cardStyle = geoCardStyles[item.icon] || geoCardStyles.entity
+              return (
+                <ScrollReveal key={item.title} delay={index * 80}>
+                  <article className="geo-aeo-mechanism-card glass-card">
+                    <div
+                      className="geo-aeo-mechanism-card__icon"
+                      aria-hidden="true"
+                      style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        borderRadius: '50%',
+                        background: cardStyle.background,
+                        boxShadow: cardStyle.boxShadow,
+                        width: '52px',
+                        height: '52px',
+                        color: '#fff',
+                      }}
+                    >
+                      {item.icon === 'entity' && (
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                          <circle cx="12" cy="12" r="10" />
+                          <circle cx="12" cy="12" r="4" />
+                          <line x1="12" y1="2" x2="12" y2="6" />
+                          <line x1="12" y1="18" x2="12" y2="22" />
+                          <line x1="2" y1="12" x2="6" y2="12" />
+                          <line x1="18" y1="12" x2="22" y2="12" />
+                        </svg>
+                      )}
+                      {item.icon === 'citation' && (
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                          <path d="M9 12l2 2 4-4" />
+                        </svg>
+                      )}
+                      {item.icon === 'answer' && (
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                          <line x1="8" y1="8" x2="16" y2="8" />
+                          <line x1="8" y1="12" x2="14" y2="12" />
+                        </svg>
+                      )}
+                    </div>
+                    <h3 className="geo-aeo-mechanism-card__title">{item.title}</h3>
+                    <p className="geo-aeo-mechanism-card__text">{item.content}</p>
+                  </article>
+                </ScrollReveal>
+              )
+            })}
           </div>
         </div>
       </section>
@@ -418,57 +505,62 @@ export default function GEOAEO() {
             </p>
           </ScrollReveal>
           <div className="geo-aeo-signals__grid">
-            {AEO_SIGNALS.map((item, index) => (
-              <ScrollReveal key={item.title} delay={index * 80}>
-                <article className="geo-aeo-signal-card glass-card">
-                  <div
-                    className="geo-aeo-signal-card__icon"
-                    aria-hidden="true"
-                    style={{
-                      display: 'inline-flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      borderRadius: '50%',
-                      background: 'linear-gradient(135deg, #3b82f6, #1d4ed8)',
-                      boxShadow: '0 0 15px rgba(59, 130, 246, 0.35)',
-                      width: '52px',
-                      height: '52px',
-                      color: '#fff',
-                    }}
-                  >
-                    {item.icon === 'schema' && (
-                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <polyline points="16 18 22 12 16 6" />
-                        <polyline points="8 6 2 12 8 18" />
-                      </svg>
-                    )}
-                    {item.icon === 'paragraph' && (
-                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <line x1="17" y1="10" x2="3" y2="10" />
-                        <line x1="21" y1="6" x2="3" y2="6" />
-                        <line x1="21" y1="14" x2="3" y2="14" />
-                        <line x1="17" y1="18" x2="3" y2="18" />
-                      </svg>
-                    )}
-                    {item.icon === 'heading' && (
-                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M6 4v16" />
-                        <path d="M18 4v16" />
-                        <path d="M6 12h12" />
-                      </svg>
-                    )}
-                    {item.icon === 'link' && (
-                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-                        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-                      </svg>
-                    )}
-                  </div>
-                  <h3 className="geo-aeo-signal-card__title">{item.title}</h3>
-                  <p className="geo-aeo-signal-card__text">{item.content}</p>
-                </article>
-              </ScrollReveal>
-            ))}
+            {AEO_SIGNALS.map((item, index) => {
+              const cardStyle = aeoCardStyles[item.icon] || aeoCardStyles.schema
+              return (
+                <ScrollReveal key={item.title} delay={index * 80}>
+                  <article className="geo-aeo-signal-card glass-card">
+                    <div
+                      className="geo-aeo-signal-card__icon"
+                      aria-hidden="true"
+                      style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        borderRadius: '50%',
+                        background: cardStyle.background,
+                        boxShadow: cardStyle.boxShadow,
+                        width: '52px',
+                        height: '52px',
+                        color: '#fff',
+                      }}
+                    >
+                      {item.icon === 'schema' && (
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                          <polyline points="16 18 22 12 16 6" />
+                          <polyline points="8 6 2 12 8 18" />
+                        </svg>
+                      )}
+                      {item.icon === 'paragraph' && (
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                          <line x1="21" y1="6" x2="3" y2="6" />
+                          <line x1="17" y1="10" x2="3" y2="10" />
+                          <line x1="21" y1="14" x2="3" y2="14" />
+                          <line x1="15" y1="18" x2="3" y2="18" />
+                        </svg>
+                      )}
+                      {item.icon === 'heading' && (
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M4 12h8" />
+                          <path d="M4 18V6" />
+                          <path d="M12 18V6" />
+                          <path d="M17 12a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" />
+                          <path d="M17 16v.01" />
+                        </svg>
+                      )}
+                      {item.icon === 'link' && (
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                          <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+                        </svg>
+                      )}
+                    </div>
+                    <h3 className="geo-aeo-signal-card__title">{item.title}</h3>
+                    <p className="geo-aeo-signal-card__text">{item.content}</p>
+                  </article>
+                </ScrollReveal>
+              )
+            })}
           </div>
         </div>
       </section>
@@ -722,6 +814,7 @@ export default function GEOAEO() {
         primaryLabel={CTA.label}
         primaryHref={whatsappHref}
       />
+      <ContactFormSection />
     </div>
   )
 }
