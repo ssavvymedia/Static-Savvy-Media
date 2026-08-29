@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import { Link } from 'react-router-dom'
+import { useParams, useLocation } from 'react-router-dom'
 import Breadcrumbs from '../../components/common/Breadcrumbs.jsx'
 import Button from '../../components/common/Button.jsx'
 import HeroSection from '../../components/hero/HeroSection.jsx'
@@ -12,51 +12,58 @@ import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, SITE_URL } from '../../utils/constan
 import '../../styles/pages/google-ads-pricing.css'
 import googleAdsHeroImg from '../../assets/images/Pricing/03googleads.png'
 
-const PAGE_TITLE = 'Google Ads Management Pricing, PPC Management Packages | Static Savvy Media'
-const PAGE_DESCRIPTION = 'Transparent Google Ads management pricing. Starter, Growth, and Scale packages, management fee separate from ad spend.'
 const HERO_SUBTITLE = 'Prices shown are for guidance. Final pricing depends on project scope. All retainer prices are per month with no minimum contract term. Message us on WhatsApp for a custom quote.'
 
 const PLANS = [
   {
     name: 'Starter',
-    fee: '₹10,000 / MYR 550',
+    feeINR: '₹10,000',
+    feeMYR: 'MYR 550',
     unit: 'per month (management fee)',
-    adSpend: '₹15,000–25,000 / MYR 800–1,500',
+    adSpendINR: '₹15,000–25,000',
+    adSpendMYR: 'MYR 800–1,500',
     features: ['1 campaign', 'Keyword research', 'Ad copy (3 variants)', 'Conversion tracking setup', 'Monthly report'],
   },
   {
     name: 'Growth',
-    fee: '₹18,000 / MYR 950',
+    feeINR: '₹18,000',
+    feeMYR: 'MYR 950',
     unit: 'per month (management fee)',
-    adSpend: '₹30,000–60,000 / MYR 1,500–3,000',
+    adSpendINR: '₹30,000–60,000',
+    adSpendMYR: 'MYR 1,500–3,000',
     features: ['Up to 3 campaigns', 'Remarketing', 'Weekly bid optimisation', 'A/B ad testing', 'Bi-weekly report'],
   },
   {
     name: 'Scale',
-    fee: '₹32,000 / MYR 1,700',
+    feeINR: '₹32,000',
+    feeMYR: 'MYR 1,700',
     unit: 'per month (management fee)',
-    adSpend: '₹80,000+ / MYR 4,000+',
+    adSpendINR: '₹80,000+',
+    adSpendMYR: 'MYR 4,000+',
     features: ['Unlimited campaigns', 'Performance Max', 'Shopping campaigns', 'Competitor ad intelligence', 'Weekly reporting'],
   },
 ]
 
-const RELATED_PRICING = [
-  { name: 'SEO Pricing', path: '/pricing/seo/' },
-  { name: 'Local SEO Pricing', path: '/pricing/local-seo/' },
-  { name: 'Social Media Pricing', path: '/pricing/social-media-marketing/' },
-  { name: 'Website Pricing', path: '/pricing/website-design-development/' },
-  { name: 'AI Services Pricing', path: '/pricing/ai-services/' },
-]
+export default function GoogleAdsPricing({ country: propCountry }) {
+  const { country: paramCountry } = useParams()
+  const location = useLocation()
+  const activeCountry = propCountry || paramCountry || (location.pathname.includes('/malaysia') ? 'malaysia' : 'india')
+  const isMalaysia = activeCountry === 'malaysia'
 
-export default function GoogleAdsPricing() {
+  const countryName = isMalaysia ? 'Malaysia' : 'India'
+  const currencyCode = isMalaysia ? 'MYR' : 'INR'
+
+  const pageTitle = `Google Ads Management Pricing ${countryName}, PPC Management Packages (${currencyCode}) | Static Savvy Media`
+  const pageDescription = `Transparent Google Ads management pricing for ${countryName} in ${currencyCode}. Starter, Growth, and Scale packages, management fee separate from ad spend.`
+
   const jsonLdRef = useRef([])
 
   useEffect(() => {
-    setSeo({ title: PAGE_TITLE, description: PAGE_DESCRIPTION, canonical: `${SITE_URL}/pricing/google-ads/`, ogType: 'website' })
+    setSeo({ title: pageTitle, description: pageDescription, canonical: `${SITE_URL}/pricing/${activeCountry}/google-ads/`, ogType: 'website' })
     const breadcrumbs = breadcrumbListSchema({ items: [
       { name: 'Home', item: `${SITE_URL}/` },
-      { name: 'Pricing', item: `${SITE_URL}/pricing/` },
-      { name: 'Google Ads', item: `${SITE_URL}/pricing/google-ads/` },
+      { name: `${countryName} Pricing`, item: `${SITE_URL}/pricing/${activeCountry}/` },
+      { name: 'Google Ads', item: `${SITE_URL}/pricing/${activeCountry}/google-ads/` },
     ]})
     const scripts = [breadcrumbs].map((data) => {
       const script = document.createElement('script')
@@ -67,7 +74,7 @@ export default function GoogleAdsPricing() {
     })
     jsonLdRef.current = scripts
     return () => { jsonLdRef.current.forEach((s) => s.remove()); jsonLdRef.current = [] }
-  }, [])
+  }, [activeCountry, countryName, pageTitle, pageDescription])
 
   const whatsappHref = buildWhatsAppLink(WHATSAPP_NUMBER, WHATSAPP_MESSAGE)
 
@@ -76,44 +83,48 @@ export default function GoogleAdsPricing() {
       <Breadcrumbs />
       <HeroSection
         layout="two-column"
-        eyebrow="GOOGLE ADS PRICING"
-        title="Google Ads Pricing, Management Fee Packages"
+        eyebrow={`GOOGLE ADS PRICING (${currencyCode})`}
+        title={`Google Ads Pricing (${countryName}), Management Fee Packages`}
         subtitle={HERO_SUBTITLE}
         actions={<Button href={whatsappHref} variant="primary" size="lg" target="_blank" rel="noopener noreferrer">WhatsApp: +91-99440-40345</Button>}
       >
         <div className="hero__visual-side">
-          <img src={googleAdsHeroImg} alt="Google Ads Pricing" className="hero__image" />
+          <img src={googleAdsHeroImg} alt={`Google Ads Pricing ${countryName}`} className="hero__image" />
         </div>
       </HeroSection>
 
       <section className="section gads-pricing-cards">
         <div className="container">
           <div className="gads-pricing-cards__grid">
-            {PLANS.map((plan, index) => (
-              <ScrollReveal key={plan.name} delay={index * 100}>
-                <article className="gads-pricing-card glass-card">
-                  <h3 className="gads-pricing-card__name">{plan.name}</h3>
-                  <div className="gads-pricing-card__fee-block">
-                    <span className="gads-pricing-card__fee-label">Management Fee</span>
-                    <p className="gads-pricing-card__fee">{plan.fee}</p>
-                    <span className="gads-pricing-card__unit">{plan.unit}</span>
-                  </div>
-                  <div className="gads-pricing-card__ad-spend-block">
-                    <span className="gads-pricing-card__ad-spend-label">Recommended Ad Spend</span>
-                    <p className="gads-pricing-card__ad-spend">{plan.adSpend}</p>
-                  </div>
-                  <div className="gads-pricing-card__divider" aria-hidden="true" />
-                  <ul className="gads-pricing-card__features">
-                    {plan.features.map((f) => (
-                      <li key={f} className="gads-pricing-card__feature">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                        {f}
-                      </li>
-                    ))}
-                  </ul>
-                </article>
-              </ScrollReveal>
-            ))}
+            {PLANS.map((plan, index) => {
+              const displayFee = isMalaysia ? plan.feeMYR : plan.feeINR
+              const displayAdSpend = isMalaysia ? plan.adSpendMYR : plan.adSpendINR
+              return (
+                <ScrollReveal key={plan.name} delay={index * 100}>
+                  <article className="gads-pricing-card glass-card">
+                    <h3 className="gads-pricing-card__name">{plan.name}</h3>
+                    <div className="gads-pricing-card__fee-block">
+                      <span className="gads-pricing-card__fee-label">Management Fee</span>
+                      <p className="gads-pricing-card__fee">{displayFee}</p>
+                      <span className="gads-pricing-card__unit">{plan.unit}</span>
+                    </div>
+                    <div className="gads-pricing-card__ad-spend-block">
+                      <span className="gads-pricing-card__ad-spend-label">Recommended Ad Spend</span>
+                      <p className="gads-pricing-card__ad-spend">{displayAdSpend}</p>
+                    </div>
+                    <div className="gads-pricing-card__divider" aria-hidden="true" />
+                    <ul className="gads-pricing-card__features">
+                      {plan.features.map((f) => (
+                        <li key={f} className="gads-pricing-card__feature">
+                          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                          {f}
+                        </li>
+                      ))}
+                    </ul>
+                  </article>
+                </ScrollReveal>
+              )
+            })}
           </div>
         </div>
       </section>
@@ -132,23 +143,6 @@ export default function GoogleAdsPricing() {
                 These are two separate costs &mdash; your management fee does not include ad spend.
               </p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="section gads-pricing-related">
-        <div className="container">
-          <div className="section-heading">
-            <span className="section-heading__eyebrow">Explore More</span>
-            <h2 className="section-heading__title">Other Pricing Pages</h2>
-          </div>
-          <div className="gads-pricing-related__links">
-            {RELATED_PRICING.map((item) => (
-              <Link key={item.path} to={item.path} className="gads-pricing-related__link">
-                {item.name}
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-              </Link>
-            ))}
           </div>
         </div>
       </section>

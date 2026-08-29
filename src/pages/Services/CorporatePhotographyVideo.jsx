@@ -554,22 +554,6 @@ export default function CorporatePhotographyVideo() {
             >
               Book a Photography Session
             </Button>
-            <Button to="/pricing/photography-video/" variant="ghost" size="lg">
-              View Photography &amp; Video Pricing
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                aria-hidden="true"
-              >
-                <path d="M5 12h14M13 6l6 6-6 6" />
-              </svg>
-            </Button>
           </>
         }
       >
@@ -973,49 +957,12 @@ export default function CorporatePhotographyVideo() {
         </div>
       </section>
 
-      {/* ---- Photography & Video Pricing Link ---- */}
-      <section className="section pricing-link-section">
-        <div className="container">
-          <div className="pricing-link-section__inner glass-card gradient-border">
-            <div className="pricing-link-section__text">
-              <h3>Photography &amp; Video Pricing</h3>
-              <p>Source pricing is guidance and final pricing depends on project scope.</p>
-              <ul className="cpv-pricing__list">
-                {PRICING_REFERENCE.map((item) => (
-                  <li key={item.name} className="cpv-pricing__item">
-                    <span>{item.name}</span>
-                    <span className="cpv-pricing__amount">{item.amount}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <Button to="/pricing/photography-video/" variant="primary" size="lg">
-              View Photography &amp; Video Pricing
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                aria-hidden="true"
-              >
-                <path d="M5 12h14M13 6l6 6-6 6" />
-              </svg>
-            </Button>
-          </div>
-        </div>
-      </section>
 
       {/* ---- Final CTA ---- */}
       <CTASection
         title={CTA.title}
         primaryLabel={CTA.label}
         primaryHref={whatsappHref}
-        secondaryLabel="View Photography & Video Pricing"
-        secondaryTo="/pricing/photography-video/"
       />
       <ContactFormSection />
     </div>

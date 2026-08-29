@@ -12,6 +12,8 @@ const MENU_COMPONENTS = {
   '/services/': ServicesMenu,
   '/locations/': LocationsMenu,
   '/industries/': IndustriesMenu,
+  '/pricing/india/': PricingMenu,
+  '/pricing/malaysia/': PricingMenu,
   '/pricing/': PricingMenu,
 }
 

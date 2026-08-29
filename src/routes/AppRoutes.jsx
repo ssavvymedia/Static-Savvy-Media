@@ -126,14 +126,32 @@ export default function AppRoutes() {
         <Route path="/industries/smes-malaysia-grant-eligible" element={<SMEsMalaysia />} />
         <Route path="/industries/real-estate-builders" element={<RealEstateBuilders />} />
 
-        <Route path="/pricing" element={<Pricing />} />
-        <Route path="/pricing/seo" element={<SEOPricing />} />
-        <Route path="/pricing/local-seo" element={<LocalSEOPricing />} />
-        <Route path="/pricing/google-ads" element={<GoogleAdsPricing />} />
-        <Route path="/pricing/social-media-marketing" element={<SocialMediaPricing />} />
-        <Route path="/pricing/website-design-development" element={<WebsitePricing />} />
-        <Route path="/pricing/ai-services" element={<AIPricing />} />
-        <Route path="/pricing/photography-video" element={<PhotographyVideoPricing />} />
+        {/* ---- Pricing Routes ---- */}
+        <Route path="/pricing" element={<Navigate to="/pricing/india" replace />} />
+
+        {/* India Pricing */}
+        <Route path="/pricing/india" element={<Pricing country="india" />} />
+        <Route path="/pricing/india/seo" element={<SEOPricing country="india" />} />
+        <Route path="/pricing/india/local-seo" element={<LocalSEOPricing country="india" />} />
+        <Route path="/pricing/india/google-ads" element={<GoogleAdsPricing country="india" />} />
+        <Route path="/pricing/india/social-media" element={<SocialMediaPricing country="india" />} />
+        <Route path="/pricing/india/social-media-marketing" element={<SocialMediaPricing country="india" />} />
+        <Route path="/pricing/india/website" element={<WebsitePricing country="india" />} />
+        <Route path="/pricing/india/website-design-development" element={<WebsitePricing country="india" />} />
+        <Route path="/pricing/india/ai-services" element={<AIPricing country="india" />} />
+        <Route path="/pricing/india/photography-video" element={<PhotographyVideoPricing country="india" />} />
+
+        {/* Malaysia Pricing */}
+        <Route path="/pricing/malaysia" element={<Pricing country="malaysia" />} />
+        <Route path="/pricing/malaysia/seo" element={<SEOPricing country="malaysia" />} />
+        <Route path="/pricing/malaysia/local-seo" element={<LocalSEOPricing country="malaysia" />} />
+        <Route path="/pricing/malaysia/google-ads" element={<GoogleAdsPricing country="malaysia" />} />
+        <Route path="/pricing/malaysia/social-media" element={<SocialMediaPricing country="malaysia" />} />
+        <Route path="/pricing/malaysia/social-media-marketing" element={<SocialMediaPricing country="malaysia" />} />
+        <Route path="/pricing/malaysia/website" element={<WebsitePricing country="malaysia" />} />
+        <Route path="/pricing/malaysia/website-design-development" element={<WebsitePricing country="malaysia" />} />
+        <Route path="/pricing/malaysia/ai-services" element={<AIPricing country="malaysia" />} />
+        <Route path="/pricing/malaysia/photography-video" element={<PhotographyVideoPricing country="malaysia" />} />
 
         <Route path="/case-studies" element={<CaseStudies />} />
         <Route path="/case-studies/client-1" element={<Client1 />} />

@@ -288,22 +288,6 @@ export default function WebsiteDesignDevelopment() {
             >
               Discuss Your Website Project
             </Button>
-            <Button to="/pricing/website-design-development/" variant="ghost" size="lg">
-              View Website Pricing
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                aria-hidden="true"
-              >
-                <path d="M5 12h14M13 6l6 6-6 6" />
-              </svg>
-            </Button>
           </>
         }
       >
@@ -734,36 +718,6 @@ export default function WebsiteDesignDevelopment() {
         </div>
       </section>
 
-      {/* ---- Website Pricing Link ---- */}
-      <section className="section pricing-link-section">
-        <div className="container">
-          <div className="pricing-link-section__inner glass-card gradient-border">
-            <div className="pricing-link-section__text">
-              <h3>Website Pricing</h3>
-              <p>
-                Business websites, e-commerce builds, and landing pages for Madurai,
-                Thoothukudi, and Malaysia businesses. Transparent per-project pricing.
-              </p>
-            </div>
-            <Button to="/pricing/website-design-development/" variant="primary" size="lg">
-              View Website Pricing
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                aria-hidden="true"
-              >
-                <path d="M5 12h14M13 6l6 6-6 6" />
-              </svg>
-            </Button>
-          </div>
-        </div>
-      </section>
 
       {/* ---- Final CTA ---- */}
       <CTASection

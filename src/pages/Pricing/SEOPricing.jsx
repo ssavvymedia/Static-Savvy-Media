@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import { Link } from 'react-router-dom'
+import { useParams, useLocation } from 'react-router-dom'
 import Breadcrumbs from '../../components/common/Breadcrumbs.jsx'
 import Button from '../../components/common/Button.jsx'
 import HeroSection from '../../components/hero/HeroSection.jsx'
@@ -12,15 +12,13 @@ import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, SITE_URL } from '../../utils/constan
 import '../../styles/pages/seo-pricing.css'
 import seoHeroImg from '../../assets/images/Pricing/01seo.png'
 
-const PAGE_TITLE = 'SEO Pricing India, Monthly Retainer Plans | Static Savvy Media'
-const PAGE_DESCRIPTION = 'Transparent SEO pricing for Indian and Malaysian businesses. Starter, Growth, and Scale monthly retainers. No hidden fees.'
 const HERO_SUBTITLE = 'Prices shown are for guidance. Final pricing depends on project scope. All retainer prices are per month with no minimum contract term. Message us on WhatsApp for a custom quote.'
 
 const PLANS = [
   {
     name: 'Starter',
-    price: '₹12,000',
-    priceAlt: 'MYR 650',
+    priceINR: '₹12,000',
+    priceMYR: 'MYR 650',
     features: [
       'Technical audit & fixes',
       '10 keywords targeted',
@@ -31,8 +29,8 @@ const PLANS = [
   },
   {
     name: 'Growth',
-    price: '₹22,000',
-    priceAlt: 'MYR 1,200',
+    priceINR: '₹22,000',
+    priceMYR: 'MYR 1,200',
     features: [
       'Everything in Starter +',
       '25 keywords',
@@ -44,8 +42,8 @@ const PLANS = [
   },
   {
     name: 'Scale',
-    price: '₹40,000',
-    priceAlt: 'MYR 2,200',
+    priceINR: '₹40,000',
+    priceMYR: 'MYR 2,200',
     features: [
       'Everything in Growth +',
       '60+ keywords',
@@ -64,23 +62,26 @@ const PROGRESSION = [
   { tier: 'Scale', label: 'Full SEO + GEO/AEO + Advanced', items: ['60+ keywords', 'Full site schema', 'GEO/AEO', '8 blogs', '15+ links/month', 'Bi-weekly reporting'] },
 ]
 
-const RELATED_PRICING = [
-  { name: 'Local SEO Pricing', path: '/pricing/local-seo/' },
-  { name: 'Google Ads Pricing', path: '/pricing/google-ads/' },
-  { name: 'Social Media Pricing', path: '/pricing/social-media-marketing/' },
-  { name: 'Website Pricing', path: '/pricing/website-design-development/' },
-  { name: 'AI Services Pricing', path: '/pricing/ai-services/' },
-]
+export default function SEOPricing({ country: propCountry }) {
+  const { country: paramCountry } = useParams()
+  const location = useLocation()
+  const activeCountry = propCountry || paramCountry || (location.pathname.includes('/malaysia') ? 'malaysia' : 'india')
+  const isMalaysia = activeCountry === 'malaysia'
 
-export default function SEOPricing() {
+  const countryName = isMalaysia ? 'Malaysia' : 'India'
+  const currencyCode = isMalaysia ? 'MYR' : 'INR'
+
+  const pageTitle = `SEO Pricing ${countryName}, Monthly Retainer Plans (${currencyCode}) | Static Savvy Media`
+  const pageDescription = `Transparent SEO pricing for ${countryName} businesses in ${currencyCode}. Starter, Growth, and Scale monthly retainers. No hidden fees.`
+
   const jsonLdRef = useRef([])
 
   useEffect(() => {
-    setSeo({ title: PAGE_TITLE, description: PAGE_DESCRIPTION, canonical: `${SITE_URL}/pricing/seo/`, ogType: 'website' })
+    setSeo({ title: pageTitle, description: pageDescription, canonical: `${SITE_URL}/pricing/${activeCountry}/seo/`, ogType: 'website' })
     const breadcrumbs = breadcrumbListSchema({ items: [
       { name: 'Home', item: `${SITE_URL}/` },
-      { name: 'Pricing', item: `${SITE_URL}/pricing/` },
-      { name: 'SEO', item: `${SITE_URL}/pricing/seo/` },
+      { name: `${countryName} Pricing`, item: `${SITE_URL}/pricing/${activeCountry}/` },
+      { name: 'SEO', item: `${SITE_URL}/pricing/${activeCountry}/seo/` },
     ]})
     const scripts = [breadcrumbs].map((data) => {
       const script = document.createElement('script')
@@ -91,7 +92,7 @@ export default function SEOPricing() {
     })
     jsonLdRef.current = scripts
     return () => { jsonLdRef.current.forEach((s) => s.remove()); jsonLdRef.current = [] }
-  }, [])
+  }, [activeCountry, countryName, pageTitle, pageDescription])
 
   const whatsappHref = buildWhatsAppLink(WHATSAPP_NUMBER, WHATSAPP_MESSAGE)
 
@@ -100,52 +101,54 @@ export default function SEOPricing() {
       <Breadcrumbs />
       <HeroSection
         layout="two-column"
-        eyebrow="SEO PRICING"
-        title="SEO Pricing, Monthly Retainer Plans"
+        eyebrow={`SEO PRICING (${currencyCode})`}
+        title={`SEO Pricing (${countryName}), Monthly Retainer Plans`}
         subtitle={HERO_SUBTITLE}
         actions={<Button href={whatsappHref} variant="primary" size="lg" target="_blank" rel="noopener noreferrer">WhatsApp: +91-99440-40345</Button>}
       >
         <div className="hero__visual-side">
-          <img src={seoHeroImg} alt="SEO Pricing" className="hero__image" />
+          <img src={seoHeroImg} alt={`SEO Pricing ${countryName}`} className="hero__image" />
         </div>
       </HeroSection>
 
       <section className="section seo-pricing-cards">
         <div className="container">
           <div className="seo-pricing-cards__grid">
-            {PLANS.map((plan, index) => (
-              <ScrollReveal key={plan.name} delay={index * 100}>
-                <article className="seo-pricing-card glass-card">
-                  <div className="seo-pricing-card__icon" aria-hidden="true">
-                    {index === 0 && (
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M8 11h6"/></svg>
-                    )}
-                    {index === 1 && (
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
-                    )}
-                    {index === 2 && (
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-                    )}
-                  </div>
-                  <h3 className="seo-pricing-card__name">{plan.name}</h3>
-                  <div className="seo-pricing-card__price-block">
-                    <p className="seo-pricing-card__price">{plan.price}</p>
-                    <span className="seo-pricing-card__price-alt">{plan.priceAlt}</span>
-                    <span className="seo-pricing-card__unit">per month</span>
-                  </div>
-                  <div className="seo-pricing-card__divider" aria-hidden="true" />
-                  <span className="seo-pricing-card__includes">Includes:</span>
-                  <ul className="seo-pricing-card__features">
-                    {plan.features.map((f) => (
-                      <li key={f} className="seo-pricing-card__feature">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                        {f}
-                      </li>
-                    ))}
-                  </ul>
-                </article>
-              </ScrollReveal>
-            ))}
+            {PLANS.map((plan, index) => {
+              const displayPrice = isMalaysia ? plan.priceMYR : plan.priceINR
+              return (
+                <ScrollReveal key={plan.name} delay={index * 100}>
+                  <article className="seo-pricing-card glass-card">
+                    <div className="seo-pricing-card__icon" aria-hidden="true">
+                      {index === 0 && (
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M8 11h6"/></svg>
+                      )}
+                      {index === 1 && (
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+                      )}
+                      {index === 2 && (
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                      )}
+                    </div>
+                    <h3 className="seo-pricing-card__name">{plan.name}</h3>
+                    <div className="seo-pricing-card__price-block">
+                      <p className="seo-pricing-card__price">{displayPrice}</p>
+                      <span className="seo-pricing-card__unit">per month</span>
+                    </div>
+                    <div className="seo-pricing-card__divider" aria-hidden="true" />
+                    <span className="seo-pricing-card__includes">Includes:</span>
+                    <ul className="seo-pricing-card__features">
+                      {plan.features.map((f) => (
+                        <li key={f} className="seo-pricing-card__feature">
+                          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                          {f}
+                        </li>
+                      ))}
+                    </ul>
+                  </article>
+                </ScrollReveal>
+              )
+            })}
           </div>
         </div>
       </section>
@@ -177,23 +180,6 @@ export default function SEOPricing() {
                   </ul>
                 </div>
               </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section seo-pricing-related">
-        <div className="container">
-          <div className="section-heading">
-            <span className="section-heading__eyebrow">EXPLORE MORE</span>
-            <h2 className="section-heading__title">Other Pricing Pages</h2>
-          </div>
-          <div className="seo-pricing-related__links">
-            {RELATED_PRICING.map((item) => (
-              <Link key={item.path} to={item.path} className="seo-pricing-related__link">
-                {item.name}
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-              </Link>
             ))}
           </div>
         </div>

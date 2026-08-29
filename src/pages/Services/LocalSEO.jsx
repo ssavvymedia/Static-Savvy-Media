@@ -539,36 +539,6 @@ export default function LocalSEO() {
         </div>
       </section>
 
-      {/* ---- Local SEO Pricing Link ---- */}
-      <section className="section pricing-link-section">
-        <div className="container">
-          <div className="pricing-link-section__inner glass-card gradient-border">
-            <div className="pricing-link-section__text">
-              <h3>Local SEO Pricing</h3>
-              <p>
-                Transparent plans for Madurai, Thoothukudi, and Malaysia businesses. Starter,
-                Growth, and Scale options available.
-              </p>
-            </div>
-            <Button to="/pricing/local-seo/" variant="primary" size="lg">
-              View Local SEO Pricing
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                aria-hidden="true"
-              >
-                <path d="M5 12h14M13 6l6 6-6 6" />
-              </svg>
-            </Button>
-          </div>
-        </div>
-      </section>
 
       {/* ---- Final CTA ---- */}
       <CTASection

@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import { Link } from 'react-router-dom'
+import { useParams, useLocation } from 'react-router-dom'
 import Breadcrumbs from '../../components/common/Breadcrumbs.jsx'
 import Button from '../../components/common/Button.jsx'
 import HeroSection from '../../components/hero/HeroSection.jsx'
@@ -12,15 +12,12 @@ import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, SITE_URL } from '../../utils/constan
 import '../../styles/pages/social-media-pricing.css'
 import socialMediaHeroImg from '../../assets/images/Pricing/04socialmedia.png'
 
-const PAGE_TITLE = 'Social Media Marketing Pricing, Monthly Management Packages | Static Savvy Media'
-const PAGE_DESCRIPTION = 'Social media management pricing for businesses in India and Malaysia. Platform-based packages covering content creation, paid social, and community management.'
 const HERO_SUBTITLE = 'Prices shown are for guidance. Final pricing depends on project scope. All retainer prices are per month with no minimum contract term. Message us on WhatsApp for a custom quote.'
 
-const PLANS = [
+const PLANS_INDIA = [
   {
     name: 'Starter',
     price: '₹10,000',
-    priceAlt: 'MYR 550',
     features: [
       '2 platforms',
       '3 posts/week',
@@ -32,19 +29,17 @@ const PLANS = [
   {
     name: 'Growth',
     price: '₹18,000',
-    priceAlt: 'MYR 1,000',
     features: [
       '3 platforms',
       '5 posts/week',
       'Static + carousel graphics',
       'Community management (Mon–Fri)',
-      '₹5,000 / MYR 300 Meta ad spend managed',
+      '₹5,000 Meta ad spend managed',
     ],
   },
   {
     name: 'Scale',
     price: '₹32,000',
-    priceAlt: 'MYR 1,750',
     features: [
       '4 platforms including LinkedIn',
       'Daily posting',
@@ -55,29 +50,77 @@ const PLANS = [
   },
 ]
 
-const PROGRESSION = [
+const PLANS_MALAYSIA = [
+  {
+    name: 'Starter',
+    price: 'MYR 550',
+    features: [
+      '2 platforms',
+      '3 posts/week',
+      'Static graphic design',
+      'Caption writing',
+      'Monthly analytics report',
+    ],
+  },
+  {
+    name: 'Growth',
+    price: 'MYR 1,000',
+    features: [
+      '3 platforms',
+      '5 posts/week',
+      'Static + carousel graphics',
+      'Community management (Mon–Fri)',
+      'MYR 300 Meta ad spend managed',
+    ],
+  },
+  {
+    name: 'Scale',
+    price: 'MYR 1,750',
+    features: [
+      '4 platforms including LinkedIn',
+      'Daily posting',
+      'Custom graphics + reel scripts',
+      'Full community management',
+      'MYR 900+ Meta ads managed',
+    ],
+  },
+]
+
+const PROGRESSION_INDIA = [
   { tier: 'Starter', items: ['2 platforms', '3 posts/week'] },
-  { tier: 'Growth', items: ['3 platforms', '5 posts/week', 'Community management (Mon–Fri)', '₹5,000 / MYR 300 Meta ad spend managed'] },
+  { tier: 'Growth', items: ['3 platforms', '5 posts/week', 'Community management (Mon–Fri)', '₹5,000 Meta ad spend managed'] },
   { tier: 'Scale', items: ['4 platforms including LinkedIn', 'Daily posting', 'Full community management', '₹15,000+ Meta ads managed'] },
 ]
 
-const RELATED_PRICING = [
-  { name: 'SEO Pricing', path: '/pricing/seo/' },
-  { name: 'Local SEO Pricing', path: '/pricing/local-seo/' },
-  { name: 'Google Ads Pricing', path: '/pricing/google-ads/' },
-  { name: 'Website Pricing', path: '/pricing/website-design-development/' },
-  { name: 'AI Services Pricing', path: '/pricing/ai-services/' },
+const PROGRESSION_MALAYSIA = [
+  { tier: 'Starter', items: ['2 platforms', '3 posts/week'] },
+  { tier: 'Growth', items: ['3 platforms', '5 posts/week', 'Community management (Mon–Fri)', 'MYR 300 Meta ad spend managed'] },
+  { tier: 'Scale', items: ['4 platforms including LinkedIn', 'Daily posting', 'Full community management', 'MYR 900+ Meta ads managed'] },
 ]
 
-export default function SocialMediaPricing() {
+export default function SocialMediaPricing({ country: propCountry }) {
+  const { country: paramCountry } = useParams()
+  const location = useLocation()
+  const activeCountry = propCountry || paramCountry || (location.pathname.includes('/malaysia') ? 'malaysia' : 'india')
+  const isMalaysia = activeCountry === 'malaysia'
+
+  const countryName = isMalaysia ? 'Malaysia' : 'India'
+  const currencyCode = isMalaysia ? 'MYR' : 'INR'
+
+  const plans = isMalaysia ? PLANS_MALAYSIA : PLANS_INDIA
+  const progression = isMalaysia ? PROGRESSION_MALAYSIA : PROGRESSION_INDIA
+
+  const pageTitle = `Social Media Marketing Pricing ${countryName}, Monthly Packages (${currencyCode}) | Static Savvy Media`
+  const pageDescription = `Social media management pricing for businesses in ${countryName} (${currencyCode}). Platform-based packages covering content creation, paid social, and community management.`
+
   const jsonLdRef = useRef([])
 
   useEffect(() => {
-    setSeo({ title: PAGE_TITLE, description: PAGE_DESCRIPTION, canonical: `${SITE_URL}/pricing/social-media-marketing/`, ogType: 'website' })
+    setSeo({ title: pageTitle, description: pageDescription, canonical: `${SITE_URL}/pricing/${activeCountry}/social-media/`, ogType: 'website' })
     const breadcrumbs = breadcrumbListSchema({ items: [
       { name: 'Home', item: `${SITE_URL}/` },
-      { name: 'Pricing', item: `${SITE_URL}/pricing/` },
-      { name: 'Social Media Marketing', item: `${SITE_URL}/pricing/social-media-marketing/` },
+      { name: `${countryName} Pricing`, item: `${SITE_URL}/pricing/${activeCountry}/` },
+      { name: 'Social Media', item: `${SITE_URL}/pricing/${activeCountry}/social-media/` },
     ]})
     const scripts = [breadcrumbs].map((data) => {
       const script = document.createElement('script')
@@ -88,7 +131,7 @@ export default function SocialMediaPricing() {
     })
     jsonLdRef.current = scripts
     return () => { jsonLdRef.current.forEach((s) => s.remove()); jsonLdRef.current = [] }
-  }, [])
+  }, [activeCountry, countryName, pageTitle, pageDescription])
 
   const whatsappHref = buildWhatsAppLink(WHATSAPP_NUMBER, WHATSAPP_MESSAGE)
 
@@ -97,20 +140,20 @@ export default function SocialMediaPricing() {
       <Breadcrumbs />
       <HeroSection
         layout="two-column"
-        eyebrow="SOCIAL MEDIA MARKETING PRICING"
-        title="Social Media Marketing Pricing"
+        eyebrow={`SOCIAL MEDIA MARKETING PRICING (${currencyCode})`}
+        title={`Social Media Marketing Pricing (${countryName})`}
         subtitle={HERO_SUBTITLE}
         actions={<Button href={whatsappHref} variant="primary" size="lg" target="_blank" rel="noopener noreferrer">WhatsApp: +91-99440-40345</Button>}
       >
         <div className="hero__visual-side">
-          <img src={socialMediaHeroImg} alt="Social Media Pricing" className="hero__image" />
+          <img src={socialMediaHeroImg} alt={`Social Media Pricing ${countryName}`} className="hero__image" />
         </div>
       </HeroSection>
 
       <section className="section sm-pricing-cards">
         <div className="container">
           <div className="sm-pricing-cards__grid">
-            {PLANS.map((plan, index) => (
+            {plans.map((plan, index) => (
               <ScrollReveal key={plan.name} delay={index * 100}>
                 <article className="sm-pricing-card glass-card">
                   <div className="sm-pricing-card__icon" aria-hidden="true">
@@ -127,7 +170,6 @@ export default function SocialMediaPricing() {
                   <h3 className="sm-pricing-card__name">{plan.name}</h3>
                   <div className="sm-pricing-card__price-block">
                     <p className="sm-pricing-card__price">{plan.price}</p>
-                    <span className="sm-pricing-card__price-alt">{plan.priceAlt}</span>
                     <span className="sm-pricing-card__unit">per month</span>
                   </div>
                   <div className="sm-pricing-card__divider" aria-hidden="true" />
@@ -154,7 +196,7 @@ export default function SocialMediaPricing() {
             <h2 className="section-heading__title">Your Social Media Journey</h2>
           </div>
           <div className="sm-progression__grid">
-            {PROGRESSION.map((step, index) => (
+            {progression.map((step, index) => (
               <ScrollReveal key={step.tier} delay={index * 120}>
                 <div className="sm-progression__step glass-card">
                   <div className="sm-progression__step-header">
@@ -171,23 +213,6 @@ export default function SocialMediaPricing() {
                   </ul>
                 </div>
               </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section sm-pricing-related">
-        <div className="container">
-          <div className="section-heading">
-            <span className="section-heading__eyebrow">EXPLORE MORE</span>
-            <h2 className="section-heading__title">Other Pricing Pages</h2>
-          </div>
-          <div className="sm-pricing-related__links">
-            {RELATED_PRICING.map((item) => (
-              <Link key={item.path} to={item.path} className="sm-pricing-related__link">
-                {item.name}
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-              </Link>
             ))}
           </div>
         </div>

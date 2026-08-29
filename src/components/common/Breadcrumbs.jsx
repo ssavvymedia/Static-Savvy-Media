@@ -22,15 +22,20 @@ export default function Breadcrumbs() {
         <li className="breadcrumbs__item">
           <Link to="/">Home</Link>
         </li>
-        {crumbs.map((crumb) => (
-          <li key={crumb.path} className="breadcrumbs__item">
-            {crumb.isLast ? (
-              <span aria-current="page">{crumb.label}</span>
-            ) : (
-              <Link to={crumb.path}>{crumb.label}</Link>
-            )}
-          </li>
-        ))}
+        {crumbs.map((crumb) => {
+          const isBasePricing = crumb.path === '/pricing'
+          return (
+            <li key={crumb.path} className="breadcrumbs__item">
+              {crumb.isLast ? (
+                <span aria-current="page">{crumb.label}</span>
+              ) : isBasePricing ? (
+                <span>{crumb.label}</span>
+              ) : (
+                <Link to={`${crumb.path}/`}>{crumb.label}</Link>
+              )}
+            </li>
+          )
+        })}
       </ol>
     </nav>
   )

@@ -434,22 +434,6 @@ export default function AIVideoCreation() {
             >
               WhatsApp for AI Video Enquiry
             </Button>
-            <Button to="/pricing/ai-services/" variant="ghost" size="lg">
-              View AI Services Pricing
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                aria-hidden="true"
-              >
-                <path d="M5 12h14M13 6l6 6-6 6" />
-              </svg>
-            </Button>
           </>
         }
       >
@@ -596,44 +580,11 @@ export default function AIVideoCreation() {
         </div>
       </section>
 
-      {/* ---- AI Services Pricing Link ---- */}
-      <section className="section pricing-link-section">
-        <div className="container">
-          <div className="pricing-link-section__inner glass-card gradient-border">
-            <div className="pricing-link-section__text">
-              <h3>AI Services Pricing</h3>
-              <p>
-                AI video creation projects are scoped and quoted per project. View the
-                current AI Services pricing page for AI video creation project pricing.
-              </p>
-            </div>
-            <Button to="/pricing/ai-services/" variant="primary" size="lg">
-              View AI Services Pricing
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                aria-hidden="true"
-              >
-                <path d="M5 12h14M13 6l6 6-6 6" />
-              </svg>
-            </Button>
-          </div>
-        </div>
-      </section>
-
       {/* ---- Final CTA ---- */}
       <CTASection
         title={CTA.title}
         primaryLabel={CTA.label}
         primaryHref={whatsappHref}
-        secondaryLabel="View AI Services Pricing"
-        secondaryTo="/pricing/ai-services/"
       />
       <ContactFormSection />
     </div>

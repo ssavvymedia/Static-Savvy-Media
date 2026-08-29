@@ -53,19 +53,6 @@ const SITEMAP_SECTIONS = [
     ],
   },
   {
-    title: 'Pricing',
-    links: [
-      { label: 'Pricing', path: '/pricing' },
-      { label: 'SEO Pricing', path: '/pricing/seo' },
-      { label: 'Local SEO Pricing', path: '/pricing/local-seo' },
-      { label: 'Google Ads Pricing', path: '/pricing/google-ads' },
-      { label: 'Social Media Pricing', path: '/pricing/social-media-marketing' },
-      { label: 'Website Pricing', path: '/pricing/website-design-development' },
-      { label: 'AI Services Pricing', path: '/pricing/ai-services' },
-      { label: 'Photography & Video Pricing', path: '/pricing/photography-video' },
-    ],
-  },
-  {
     title: 'Case Studies',
     links: [
       { label: 'Case Studies', path: '/case-studies' },

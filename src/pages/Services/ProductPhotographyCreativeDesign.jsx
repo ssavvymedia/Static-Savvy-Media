@@ -336,22 +336,6 @@ export default function ProductPhotographyCreativeDesign() {
             >
               WhatsApp for Photography Quote
             </Button>
-            <Button to="/pricing/photography-video/" variant="ghost" size="lg">
-              View Photography &amp; Video Pricing
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                aria-hidden="true"
-              >
-                <path d="M5 12h14M13 6l6 6-6 6" />
-              </svg>
-            </Button>
           </>
         }
       >
@@ -489,45 +473,12 @@ export default function ProductPhotographyCreativeDesign() {
         </div>
       </section>
 
-      {/* ---- Photography & Video Pricing Link ---- */}
-      <section className="section pricing-link-section">
-        <div className="container">
-          <div className="pricing-link-section__inner glass-card gradient-border">
-            <div className="pricing-link-section__text">
-              <h3>Photography &amp; Video Pricing</h3>
-              <p>
-                Product photography and creative design projects are scoped and quoted per
-                project. View the current Photography &amp; Video pricing page for project
-                pricing.
-              </p>
-            </div>
-            <Button to="/pricing/photography-video/" variant="primary" size="lg">
-              View Photography &amp; Video Pricing
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                aria-hidden="true"
-              >
-                <path d="M5 12h14M13 6l6 6-6 6" />
-              </svg>
-            </Button>
-          </div>
-        </div>
-      </section>
 
       {/* ---- Final CTA ---- */}
       <CTASection
         title={CTA.title}
         primaryLabel={CTA.label}
         primaryHref={whatsappHref}
-        secondaryLabel="View Photography & Video Pricing"
-        secondaryTo="/pricing/photography-video/"
       />
       <ContactFormSection />
     </div>

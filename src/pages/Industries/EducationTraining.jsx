@@ -804,9 +804,6 @@ export default function EducationTraining() {
             <Link to="/services/" className="related-content__link">
               All Services
             </Link>
-            <Link to="/pricing/" className="related-content__link">
-              Pricing
-            </Link>
             <Link to="/contact/" className="related-content__link">
               Contact
             </Link>

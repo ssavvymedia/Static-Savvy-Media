@@ -585,36 +585,6 @@ export default function GoogleAds() {
         </div>
       </section>
 
-      {/* ---- Google Ads Pricing Link ---- */}
-      <section className="section pricing-link-section">
-        <div className="container">
-          <div className="pricing-link-section__inner glass-card gradient-border">
-            <div className="pricing-link-section__text">
-              <h3>Google Ads Pricing</h3>
-              <p>
-                Transparent management fees for Madurai, Thoothukudi, and Malaysia businesses.
-                Management fee and ad spend are separate.
-              </p>
-            </div>
-            <Button to="/pricing/google-ads/" variant="primary" size="lg">
-              View Google Ads Pricing
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                aria-hidden="true"
-              >
-                <path d="M5 12h14M13 6l6 6-6 6" />
-              </svg>
-            </Button>
-          </div>
-        </div>
-      </section>
 
       {/* ---- Google Ads by Location ---- */}
       <section className="section ga-location-cta">
