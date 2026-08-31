@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { createPortal } from 'react-dom'
 import { Link } from 'react-router-dom'
 import Button from './Button.jsx'
 import WhatsAppIcon from './WhatsAppIcon.jsx'
@@ -81,7 +82,10 @@ export default function Header() {
         </div>
       </div>
 
-      <MobileNav open={mobileOpen} onClose={() => setMobileOpen(false)} className={cx(mobileOpen && 'is-open')} />
+      {createPortal(
+        <MobileNav open={mobileOpen} onClose={() => setMobileOpen(false)} className={cx(mobileOpen && 'is-open')} />,
+        document.body
+      )}
     </header>
   )
 }

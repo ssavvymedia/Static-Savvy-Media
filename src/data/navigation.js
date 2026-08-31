@@ -1,7 +1,7 @@
 import { services } from './services.js'
 import { locations } from './locations.js'
 import { industries } from './industries.js'
-import { pricingPlans } from './pricing.js'
+import { indiaPricingPlans, malaysiaPricingPlans, pricingPlans } from './pricing.js'
 import { caseStudies } from './caseStudies.js'
 import { blogCategories, blogPosts } from './blog.js'
 
@@ -10,11 +10,25 @@ import { blogCategories, blogPosts } from './blog.js'
  * Shared by Header / DesktopNav / MobileNav / Footer and Breadcrumbs.
  */
 
+export const pricingMenuSections = [
+  {
+    title: '🇮🇳 India Pricing (INR)',
+    path: '/pricing/india/',
+    items: indiaPricingPlans,
+  },
+  {
+    title: '🇲🇾 Malaysia Pricing (MYR)',
+    path: '/pricing/malaysia/',
+    items: malaysiaPricingPlans,
+  },
+]
+
 export const NAV_LINKS = [
   { label: 'Home', path: '/' },
   { label: 'Services', path: '/services/', menu: services },
   { label: 'Locations', path: '/locations/', menu: locations },
   { label: 'Industries', path: '/industries/', menu: industries },
+  { label: 'Pricing', path: '/pricing/india/', menu: pricingMenuSections },
   { label: 'Case Studies', path: '/case-studies/' },
   { label: 'About', path: '/about/' },
   { label: 'Blog', path: '/blog/' },
