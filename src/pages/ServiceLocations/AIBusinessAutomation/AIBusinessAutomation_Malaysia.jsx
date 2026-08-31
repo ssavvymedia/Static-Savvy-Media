@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Breadcrumbs from '../../../components/common/Breadcrumbs.jsx'
 import Button from '../../../components/common/Button.jsx'
+import HeroSection from '../../../components/hero/HeroSection.jsx'
 import FAQSection from '../../../components/sections/FAQSection.jsx'
 import CTASection from '../../../components/sections/CTASection.jsx'
 import { ScrollReveal } from '../../../components/animations/ScrollReveal.jsx'
@@ -18,6 +19,7 @@ import {
   SITE_URL,
 } from '../../../utils/constants.js'
 import '../../../styles/pages/ai-business-automation-malaysia.css'
+import heroImage from '../../../assets/images/AIBusinessAutomation/AIBusinessAutomation.png'
 
 /* ============================================================
    CONTENT, AI Business Automation Malaysia
@@ -249,29 +251,36 @@ export default function AIBusinessAutomation_Malaysia() {
       <Breadcrumbs />
 
       {/* HERO */}
-      <section className="section">
-        <div className="container">
-          <div className="aba-malaysia-hero">
-            <span className="aba-malaysia-hero__badge">{HERO_EYEBROW}</span>
-            <h1 className="hero__title aba-malaysia-hero__title">{HERO_TITLE}</h1>
-            <p className="aba-malaysia-hero__text">{HERO_PARAGRAPH}</p>
-            <div className="aba-malaysia-hero__ctas">
-              <Button
-                href={whatsappHref}
-                variant="primary"
-                size="lg"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {CTA.label}
-              </Button>
-              <Button href="/services/ai-business-automation/" variant="ghost" size="lg">
-                Explore AI Business Automation
-              </Button>
-            </div>
-          </div>
+      <HeroSection
+        layout="two-column"
+        eyebrow={HERO_EYEBROW}
+        title={HERO_TITLE}
+        subtitle={HERO_PARAGRAPH}
+        actions={
+          <>
+            <Button
+              href={whatsappHref}
+              variant="primary"
+              size="lg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {CTA.label}
+            </Button>
+            <Button href="/services/ai-business-automation/" variant="ghost" size="lg">
+              Explore AI Business Automation
+            </Button>
+          </>
+        }
+      >
+        <div className="hero__visual-side">
+          <img
+            src={heroImage}
+            alt="AI Business Automation"
+            className="hero__image"
+          />
         </div>
-      </section>
+      </HeroSection>
 
       {/* WHAT WE AUTOMATE */}
       <section className="section section--alt">

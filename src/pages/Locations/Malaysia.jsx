@@ -192,8 +192,10 @@ export default function Malaysia() {
       telephone: '+919944040345',
       address: {
         '@type': 'PostalAddress',
+        streetAddress: '2, 9, Jalan Anggun 2J, Taman Anggun',
         addressLocality: 'Rawang',
         addressRegion: 'Selangor',
+        postalCode: '48000',
         addressCountry: 'MY',
       },
       areaServed: [
@@ -460,8 +462,15 @@ export default function Malaysia() {
               <h2 className="malaysia-office__title">Malaysia Office Details</h2>
               <div className="malaysia-office__card glass-card">
                 <h3 className="malaysia-office__name">Static Savvy Media, Malaysia</h3>
-                <p className="malaysia-office__address">
-                  [Street Address], Rawang, Selangor [Postcode]
+                <p className="malaysia-office__address" style={{ display: 'flex', alignItems: 'flex-start', gap: '0.6rem' }}>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: '#22d3ee', flexShrink: 0, marginTop: '2px' }} aria-hidden="true">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                  <span>
+                    2, 9, Jalan Anggun 2J, Taman Anggun,<br />
+                    48000 Rawang, Selangor, Malaysia
+                  </span>
                 </p>
                 <div className="malaysia-office__meta">
                   <div className="malaysia-office__meta-item">

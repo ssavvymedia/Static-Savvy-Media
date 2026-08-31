@@ -330,7 +330,7 @@ export default function PrivacyPolicy() {
         <div className="container">
           <div className="privacy-hero">
             <span className="privacy-hero__badge">Legal / Privacy</span>
-            <h1 className="hero__title privacy-hero__title">Privacy Policy</h1>
+            <h1 className="hero__title privacy-hero__title"><span className="hero__title-white">Privacy </span><span className="hero__title-gradient">Policy</span></h1>
             <p className="privacy-hero__text">
               This page explains how Static Savvy Media collects, uses, stores, protects and
               handles personal information across our digital marketing, SEO, GEO, AEO and

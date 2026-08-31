@@ -878,6 +878,24 @@
 }
 
 /* ====================================================
+   HERO TITLE TWO-COLOR GRADIENT TYPOGRAPHY
+   ==================================================== */
+.hero__title-white {
+  color: #ffffff !important;
+}
+
+.hero__title-gradient,
+.hero__title .text-gradient,
+.text-gradient {
+  background: linear-gradient(90deg, #00BFFF 0%, #3B82F6 50%, #8B5CF6 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  color: transparent !important;
+  display: inline;
+}
+
+/* ====================================================
    TWO-COLUMN HERO SYSTEM (Unified for Service Pages)
    ==================================================== */
 .hero__inner--two-column {
@@ -1185,10 +1203,110 @@
   transform: translateY(1px);
 }
 
+/* Dedicated Security Verification Card */
+.contact-form-recaptcha-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 440px;
+  margin: 1.25rem auto 1.25rem auto;
+  padding: 1.25rem 1.75rem;
+  background: rgba(11, 17, 36, 0.7);
+  border: 1px solid rgba(139, 92, 246, 0.35);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+.contact-form-recaptcha-card:hover {
+  border-color: rgba(139, 92, 246, 0.5);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6), 0 0 20px rgba(139, 92, 246, 0.15);
+}
+
+.recaptcha-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.recaptcha-card-header svg {
+  color: #22d3ee;
+  filter: drop-shadow(0 0 4px rgba(34, 211, 238, 0.5));
+}
+
+.contact-form-recaptcha-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 304px;
+  height: 78px;
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 4px;
+  margin: 0 auto;
+}
+
+.recaptcha-notice-block {
+  text-align: center;
+  padding: 0.5rem 1rem;
+}
+
+.recaptcha-notice-text {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.recaptcha-notice-hint {
+  font-size: 0.75rem;
+  color: rgba(148, 163, 184, 0.8);
+  font-weight: 400;
+  display: block;
+  margin-top: 0.35rem;
+}
+
+.recaptcha-notice-hint code {
+  color: #22d3ee;
+  background: rgba(34, 211, 238, 0.1);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+.contact-form-recaptcha {
+  width: 304px;
+  height: 78px;
+  display: block;
+}
+
+@media (max-width: 380px) {
+  .contact-form-recaptcha-card {
+    padding: 1rem 0.75rem;
+  }
+  .contact-form-recaptcha-wrapper {
+    transform: scale(0.85);
+    transform-origin: center;
+  }
+}
+
 .contact-form-submit-btn:disabled {
-  opacity: 0.6;
+  opacity: 0.5;
   cursor: not-allowed;
-  transform: none;
+  transform: none !important;
+  box-shadow: none !important;
+  background: linear-gradient(135deg, #475569 0%, #334155 100%) !important;
 }
 
 .contact-form-submit-btn svg {

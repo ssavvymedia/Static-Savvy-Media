@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import Breadcrumbs from '../../../components/common/Breadcrumbs.jsx'
 import Button from '../../../components/common/Button.jsx'
+import HeroSection from '../../../components/hero/HeroSection.jsx'
 import FAQSection from '../../../components/sections/FAQSection.jsx'
 import CTASection from '../../../components/sections/CTASection.jsx'
 import { ScrollReveal } from '../../../components/animations/ScrollReveal.jsx'
@@ -18,6 +19,7 @@ import {
   SITE_URL,
 } from '../../../utils/constants.js'
 import '../../../styles/pages/google-ads-thoothukudi.css'
+import heroImage from '../../../assets/images/GoogleAds/GoogleAds.png'
 
 /* ============================================================
    CONTENT, Google Ads Thoothukudi
@@ -292,33 +294,30 @@ export default function GoogleAds_Thoothukudi() {
       </section>
 
       {/* ---- Hero ---- */}
-      <section className="section ga-hero-section">
-        <div className="container">
-          <div className="ga-hero">
-            <div className="ga-hero__content">
-              <ScrollReveal>
-                <span className="ga-hero__badge">{HERO_EYEBROW}</span>
-              </ScrollReveal>
-              <ScrollReveal delay={80}>
-                <h1 className="ga-hero__title">{HERO_TITLE}</h1>
-              </ScrollReveal>
-              <ScrollReveal delay={160}>
-                <p className="ga-hero__paragraph">{HERO_PARAGRAPH}</p>
-              </ScrollReveal>
-              <ScrollReveal delay={240}>
-                <div className="ga-hero__actions">
-                  <Button href={whatsappHref} variant="primary" size="lg">
-                    Get a Google Ads Consultation
-                  </Button>
-                  <Button to="/services/google-ads/" variant="outline" size="lg">
-                    Explore Google Ads Services
-                  </Button>
-                </div>
-              </ScrollReveal>
-            </div>
-          </div>
+      <HeroSection
+        layout="two-column"
+        eyebrow={HERO_EYEBROW}
+        title={HERO_TITLE}
+        subtitle={HERO_PARAGRAPH}
+        actions={
+          <>
+            <Button href={whatsappHref} variant="primary" size="lg" target="_blank" rel="noopener noreferrer">
+              Get a Google Ads Consultation
+            </Button>
+            <Button to="/services/google-ads/" variant="outline" size="lg">
+              Explore Google Ads Services
+            </Button>
+          </>
+        }
+      >
+        <div className="hero__visual-side">
+          <img
+            src={heroImage}
+            alt="Google Ads Services"
+            className="hero__image"
+          />
         </div>
-      </section>
+      </HeroSection>
 
       {/* ---- Why Google Ads for Thoothukudi ---- */}
       <section className="section">

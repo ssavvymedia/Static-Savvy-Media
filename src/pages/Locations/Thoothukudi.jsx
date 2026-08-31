@@ -9,6 +9,7 @@ import ContactFormSection from '../../components/sections/ContactFormSection.jsx
 import { ScrollReveal } from '../../components/animations/ScrollReveal.jsx'
 import { setSeo } from '../../utils/seo.js'
 import {
+  localBusinessSchema,
   faqPageSchema,
   breadcrumbListSchema,
 } from '../../utils/schema.js'
@@ -174,6 +175,25 @@ export default function Thoothukudi() {
       acceptedAnswer: { '@type': 'Answer', text: faq.answer },
     }))
 
+    const localBiz = localBusinessSchema({
+      name: 'Static Savvy Media, Thoothukudi',
+      description: PAGE_DESCRIPTION,
+      url: `${SITE_URL}/locations/thoothukudi/`,
+      telephone: '+919944040345',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '90, Peria Kadai St, Matha Koil',
+        addressLocality: 'Thoothukudi',
+        addressRegion: 'Tamil Nadu',
+        postalCode: '628001',
+        addressCountry: 'IN',
+      },
+      areaServed: [
+        { '@type': 'City', name: 'Thoothukudi' },
+        { '@type': 'State', name: 'Tamil Nadu' },
+      ],
+    })
+
     const breadcrumbs = breadcrumbListSchema({
       items: [
         { name: 'Home', item: `${SITE_URL}/` },
@@ -183,6 +203,7 @@ export default function Thoothukudi() {
     })
 
     const scripts = [
+      localBiz,
       faqPageSchema({ faqs: faqEntities }),
       breadcrumbs,
     ].map((data) => {
@@ -383,7 +404,7 @@ export default function Thoothukudi() {
         </div>
       </section>
 
-      {/* ---- Serving Thoothukudi from Our Madurai Office ---- */}
+      {/* ---- Serving Thoothukudi Office ---- */}
       <section className="section thoothukudi-office">
         <div className="container">
           <div className="thoothukudi-office__inner glass-card gradient-border">
@@ -424,13 +445,26 @@ export default function Thoothukudi() {
                     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
                     <circle cx="12" cy="10" r="3" />
                   </svg>
-                  <span>Thoothukudi Clients</span>
+                  <span>Thoothukudi Office</span>
                 </div>
               </div>
             </div>
             <div className="thoothukudi-office__details">
-              <h2 className="thoothukudi-office__title">Serving Thoothukudi from Our Madurai Office</h2>
-              <p className="thoothukudi-office__text">{OFFICE_NOTE}</p>
+              <h2 className="thoothukudi-office__title">Thoothukudi Office &amp; Presence</h2>
+              <div className="thoothukudi-office__card glass-card" style={{ marginTop: '1.25rem', padding: '1.5rem' }}>
+                <h3 className="thoothukudi-office__name" style={{ fontSize: '1.15rem', fontWeight: '700', color: '#ffffff', marginBottom: '0.75rem' }}>Static Savvy Media, Thoothukudi</h3>
+                <p className="thoothukudi-office__address" style={{ display: 'flex', alignItems: 'flex-start', gap: '0.6rem', color: 'rgba(255, 255, 255, 0.85)', fontSize: '0.95rem', lineHeight: '1.5' }}>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: '#22d3ee', flexShrink: 0, marginTop: '2px' }} aria-hidden="true">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                  <span>
+                    90, Peria Kadai St, Matha Koil,<br />
+                    Thoothukudi - 628001
+                  </span>
+                </p>
+                <p className="thoothukudi-office__text" style={{ marginTop: '0.85rem' }}>{OFFICE_NOTE}</p>
+              </div>
             </div>
           </div>
         </div>

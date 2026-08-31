@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { ScrollReveal } from '../animations/ScrollReveal.jsx'
 
 const SERVICES = [
@@ -14,6 +14,9 @@ const SERVICES = [
   'Product Photography & Creative Design',
 ]
 
+// Environment-driven Google reCAPTCHA v2 Checkbox Key
+const RECAPTCHA_SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY || ''
+
 export default function ContactFormSection() {
   const [formData, setFormData] = useState({
     name: '',
@@ -24,14 +27,96 @@ export default function ContactFormSection() {
   })
   const [formSubmitted, setFormSubmitted] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [captchaVerified, setCaptchaVerified] = useState(!RECAPTCHA_SITE_KEY)
+  const [captchaToken, setCaptchaToken] = useState(null)
+
+  const recaptchaRef = useRef(null)
+  const widgetIdRef = useRef(null)
 
   const handleInputChange = (e) => {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
 
+  // Load and render Google reCAPTCHA v2 Checkbox when SITE_KEY is configured
+  useEffect(() => {
+    if (formSubmitted || !RECAPTCHA_SITE_KEY) return
+
+    let isMounted = true
+
+    const renderWidget = () => {
+      if (
+        window.grecaptcha &&
+        window.grecaptcha.render &&
+        recaptchaRef.current &&
+        widgetIdRef.current === null &&
+        isMounted
+      ) {
+        try {
+          widgetIdRef.current = window.grecaptcha.render(recaptchaRef.current, {
+            sitekey: RECAPTCHA_SITE_KEY,
+            theme: 'light',
+            callback: (token) => {
+              if (isMounted) {
+                setCaptchaVerified(true)
+                setCaptchaToken(token)
+              }
+            },
+            'expired-callback': () => {
+              if (isMounted) {
+                setCaptchaVerified(false)
+                setCaptchaToken(null)
+              }
+            },
+            'error-callback': () => {
+              if (isMounted) {
+                setCaptchaVerified(false)
+                setCaptchaToken(null)
+              }
+            },
+          })
+        } catch (err) {
+          // Widget already rendered or DOM container unavailable
+        }
+      }
+    }
+
+    if (window.grecaptcha && window.grecaptcha.render) {
+      renderWidget()
+    } else {
+      const scriptId = 'google-recaptcha-v2-script'
+      let script = document.getElementById(scriptId)
+      if (!script) {
+        script = document.createElement('script')
+        script.id = scriptId
+        script.src = 'https://www.google.com/recaptcha/api.js?render=explicit'
+        script.async = true
+        script.defer = true
+        document.head.appendChild(script)
+      }
+
+      const checkInterval = setInterval(() => {
+        if (window.grecaptcha && window.grecaptcha.render) {
+          clearInterval(checkInterval)
+          renderWidget()
+        }
+      }, 150)
+
+      return () => {
+        isMounted = false
+        clearInterval(checkInterval)
+      }
+    }
+
+    return () => {
+      isMounted = false
+    }
+  }, [formSubmitted])
+
   const handleSubmit = (e) => {
     e.preventDefault()
+    if (RECAPTCHA_SITE_KEY && !captchaVerified) return
+
     setIsSubmitting(true)
     setTimeout(() => {
       setIsSubmitting(false)
@@ -43,7 +128,26 @@ export default function ContactFormSection() {
         service: '',
         message: '',
       })
+
+      // Reset Google reCAPTCHA
+      if (widgetIdRef.current !== null && window.grecaptcha) {
+        try {
+          window.grecaptcha.reset(widgetIdRef.current)
+        } catch (err) {
+          // Ignore reset error
+        }
+      }
+      widgetIdRef.current = null
+      setCaptchaVerified(!RECAPTCHA_SITE_KEY)
+      setCaptchaToken(null)
     }, 1200)
+  }
+
+  const handleResetForm = () => {
+    setFormSubmitted(false)
+    setCaptchaVerified(!RECAPTCHA_SITE_KEY)
+    setCaptchaToken(null)
+    widgetIdRef.current = null
   }
 
   return (
@@ -81,7 +185,7 @@ export default function ContactFormSection() {
                 </p>
                 <button
                   className="success-reset-btn"
-                  onClick={() => setFormSubmitted(false)}
+                  onClick={handleResetForm}
                 >
                   Send Another Message
                 </button>
@@ -157,10 +261,36 @@ export default function ContactFormSection() {
                     required
                   ></textarea>
                 </div>
+
+                {/* Dedicated Security Verification Container */}
+                <div className="contact-form-recaptcha-card">
+                  <div className="recaptcha-card-header">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                    </svg>
+                    <span>SECURITY VERIFICATION</span>
+                  </div>
+
+                  {RECAPTCHA_SITE_KEY ? (
+                    <div className="contact-form-recaptcha-wrapper">
+                      <div ref={recaptchaRef} className="contact-form-recaptcha" />
+                    </div>
+                  ) : (
+                    <div className="recaptcha-notice-block">
+                      <p className="recaptcha-notice-text">
+                        Protected by Google reCAPTCHA Verification.<br />
+                        <span className="recaptcha-notice-hint">
+                          Add <code>VITE_RECAPTCHA_SITE_KEY</code> in <code>.env</code> with your domain key to activate live verification widget.
+                        </span>
+                      </p>
+                    </div>
+                  )}
+                </div>
+
                 <button
                   type="submit"
                   className="contact-form-submit-btn"
-                  disabled={isSubmitting}
+                  disabled={(RECAPTCHA_SITE_KEY && !captchaVerified) || isSubmitting}
                 >
                   {isSubmitting ? 'Sending...' : 'Send Message'}
                   <svg

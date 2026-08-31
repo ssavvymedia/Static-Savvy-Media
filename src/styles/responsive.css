@@ -30,6 +30,14 @@
 
 /* ---- Tablet ---- */
 @media (max-width: 768px) {
+  .site-header__inner {
+    justify-content: space-between;
+  }
+
+  .site-header__actions {
+    margin-left: auto;
+  }
+
   .desktop-nav {
     display: none;
   }
@@ -51,6 +59,14 @@
   .site-header__whatsapp-icon {
     width: 32px;
     height: 32px;
+  }
+
+  .site-header__logo-img {
+    width: 95px;
+  }
+
+  .site-footer__logo-img {
+    width: 150px;
   }
 
   .grid--3,
@@ -77,6 +93,14 @@
 @media (max-width: 480px) {
   :root {
     --section-pad: 3rem;
+  }
+
+  .site-header__logo-img {
+    width: 80px;
+  }
+
+  .site-footer__logo-img {
+    width: 130px;
   }
 
   .site-header__whatsapp-content {

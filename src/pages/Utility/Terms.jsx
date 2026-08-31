@@ -252,7 +252,7 @@ export default function Terms() {
         <div className="container">
           <div className="terms-hero">
             <span className="terms-hero__badge">Legal / Terms</span>
-            <h1 className="hero__title terms-hero__title">Terms of Service</h1>
+            <h1 className="hero__title terms-hero__title"><span className="hero__title-white">Terms of </span><span className="hero__title-gradient">Service</span></h1>
             <p className="terms-hero__text">
               These Terms govern the relationship between Static Savvy Media and clients
               across India and Malaysia. They apply to our digital marketing, SEO, GEO,

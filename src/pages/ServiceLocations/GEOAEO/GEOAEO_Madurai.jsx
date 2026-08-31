@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Breadcrumbs from '../../../components/common/Breadcrumbs.jsx'
 import Button from '../../../components/common/Button.jsx'
+import HeroSection from '../../../components/hero/HeroSection.jsx'
 import CTASection from '../../../components/sections/CTASection.jsx'
 import { ScrollReveal } from '../../../components/animations/ScrollReveal.jsx'
 import { setSeo } from '../../../utils/seo.js'
@@ -17,6 +18,7 @@ import {
   SITE_URL,
 } from '../../../utils/constants.js'
 import '../../../styles/pages/geo-aeo-madurai.css'
+import heroImage from '../../../assets/images/GEOAEO/GEOAEO.png'
 
 /* ============================================================
    CONTENT, GEO & AEO Madurai
@@ -352,29 +354,36 @@ export default function GEOAEO_Madurai() {
       <Breadcrumbs />
 
       {/* HERO */}
-      <section className="section">
-        <div className="container">
-          <div className="geo-aeo-madurai-hero">
-            <span className="geo-aeo-madurai-hero__badge">{HERO_EYEBROW}</span>
-            <h1 className="hero__title geo-aeo-madurai-hero__title">{HERO_TITLE}</h1>
-            <p className="geo-aeo-madurai-hero__text">{HERO_PARAGRAPH}</p>
-            <div className="geo-aeo-madurai-hero__ctas">
-              <Button
-                href={whatsappHref}
-                variant="primary"
-                size="lg"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {CTA.label}
-              </Button>
-              <Button href="/services/geo-aeo-ai-search/" variant="ghost" size="lg">
-                View GEO & AEO Services
-              </Button>
-            </div>
-          </div>
+      <HeroSection
+        layout="two-column"
+        eyebrow={HERO_EYEBROW}
+        title={HERO_TITLE}
+        subtitle={HERO_PARAGRAPH}
+        actions={
+          <>
+            <Button
+              href={whatsappHref}
+              variant="primary"
+              size="lg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {CTA.label}
+            </Button>
+            <Button href="/services/geo-aeo-ai-search/" variant="ghost" size="lg">
+              View GEO & AEO Services
+            </Button>
+          </>
+        }
+      >
+        <div className="hero__visual-side">
+          <img
+            src={heroImage}
+            alt="GEO and AEO Services"
+            className="hero__image"
+          />
         </div>
-      </section>
+      </HeroSection>
 
       {/* WHY GEO & AEO MATTER */}
       <section className="section section--alt">

@@ -43,7 +43,7 @@
   --gutter: clamp(1.25rem, 4vw, 2.5rem);
 
   /* ---- Layout ---- */
-  --header-height: 72px;
+  --header-height: 80px;
 
   /* ---- Motion ---- */
   --transition: 0.3s ease;

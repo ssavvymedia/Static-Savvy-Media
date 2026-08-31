@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import Breadcrumbs from '../../../components/common/Breadcrumbs.jsx'
 import Button from '../../../components/common/Button.jsx'
+import { formatTwoColorTitle } from '../../../components/hero/HeroSection.jsx'
 import FAQSection from '../../../components/sections/FAQSection.jsx'
 import CTASection from '../../../components/sections/CTASection.jsx'
 import { ScrollReveal } from '../../../components/animations/ScrollReveal.jsx'
@@ -347,7 +348,7 @@ export default function SEO_Malaysia() {
                 <span className="seo-mys-hero__badge">{HERO_EYEBROW}</span>
               </ScrollReveal>
               <ScrollReveal delay={80}>
-                <h1 className="seo-mys-hero__title">{HERO_TITLE}</h1>
+                <h1 className="seo-mys-hero__title">{formatTwoColorTitle(HERO_TITLE)}</h1>
               </ScrollReveal>
               <ScrollReveal delay={160}>
                 <p className="seo-mys-hero__paragraph">{HERO_PARAGRAPH}</p>

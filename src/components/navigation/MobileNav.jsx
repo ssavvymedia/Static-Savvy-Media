@@ -4,6 +4,7 @@ import { NAV_LINKS } from '../../data/navigation.js'
 import { useActiveRoute } from '../../hooks/useActiveRoute.js'
 import Button from '../common/Button.jsx'
 import { cx } from '../../utils/helpers.js'
+import logoImg from '../../assets/images/logo/SSMLOGO.png'
 
 function MobileNavItem({ link, onNavigate }) {
   const { isActive } = useActiveRoute()
@@ -69,9 +70,8 @@ export default function MobileNav({ open = false, onClose, className = '' }) {
   return (
     <div className={cx('mobile-nav', className)} aria-hidden={!open}>
       <div className="mobile-nav__header">
-        <Link to="/" className="site-header__logo" onClick={onClose}>
-          <span className="site-header__logo-mark">SS</span>
-          <span className="site-header__logo-text">Static Savvy Media</span>
+        <Link to="/" className="site-header__logo" onClick={onClose} aria-label="Static Savvy Media, home">
+          <img src={logoImg} alt="Static Savvy Media" className="site-header__logo-img" />
         </Link>
         <button type="button" className="mobile-nav__close" onClick={onClose} aria-label="Close menu">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">

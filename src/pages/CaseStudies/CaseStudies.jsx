@@ -102,7 +102,11 @@ export default function CaseStudies() {
         eyebrow="CASE STUDIES"
         title="Client Results & Case Studies"
         subtitle={HERO_SUBTITLE}
-        actions={<Button href={whatsappHref} variant="primary" size="lg" target="_blank" rel="noopener noreferrer">Let's Talk</Button>}
+        actions={
+          <Button href={whatsappHref} variant="primary" size="lg" target="_blank" rel="noopener noreferrer">
+            Let's Talk
+          </Button>
+        }
       >
         <div className="hero__visual-side">
           <img src={casestudiesMain} alt="Client Results & Case Studies" className="hero__image" />
@@ -124,7 +128,13 @@ export default function CaseStudies() {
         <div className="container">
           <div className="cs-filters">
             {FILTERS.map((f) => (
-              <button key={f} className={`cs-filter ${activeFilter === f ? 'cs-filter--active' : ''}`} onClick={() => setActiveFilter(f)}>{f}</button>
+              <button
+                key={f}
+                className={`cs-filter ${activeFilter === f ? 'cs-filter--active' : ''}`}
+                onClick={() => setActiveFilter(f)}
+              >
+                {f}
+              </button>
             ))}
           </div>
           <div className="cs-grid">
@@ -133,16 +143,16 @@ export default function CaseStudies() {
                 <article className="cs-card glass-card">
                   <div className="cs-card__visual" aria-hidden="true">
                     {index === 0 && (
-                      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+                      <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
                     )}
                     {index === 1 && (
-                      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                      <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
                     )}
                     {index === 2 && (
-                      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                      <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
                     )}
                     {index === 3 && (
-                      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                      <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
                     )}
                   </div>
                   <div className="cs-card__badges">

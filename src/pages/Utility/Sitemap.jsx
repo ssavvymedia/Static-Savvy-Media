@@ -134,7 +134,7 @@ export default function Sitemap() {
       <section className="section">
         <div className="container">
           <div className="sitemap-hero">
-            <h1 className="hero__title sitemap-hero__title">Sitemap</h1>
+            <h1 className="hero__title sitemap-hero__title"><span className="hero__title-white">Site</span><span className="hero__title-gradient">map</span></h1>
             <p className="sitemap-hero__text">
               An organized overview of the main Static Savvy Media website pages.
               Find services, locations, industries, pricing, case studies, blog

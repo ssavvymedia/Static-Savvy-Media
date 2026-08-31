@@ -221,8 +221,10 @@ export default function Madurai() {
       telephone: '+919944040345',
       address: {
         '@type': 'PostalAddress',
+        streetAddress: '2nd Floor, 4/3, Srinivasa Perumal Koil St, Kamarajar Salai',
         addressLocality: 'Madurai',
         addressRegion: 'Tamil Nadu',
+        postalCode: '625009',
         addressCountry: 'IN',
       },
       areaServed: [
@@ -508,8 +510,15 @@ export default function Madurai() {
               <h2 className="madurai-office__title">Our Madurai Office</h2>
               <div className="madurai-office__card glass-card">
                 <h3 className="madurai-office__name">Static Savvy Media, Madurai</h3>
-                <p className="madurai-office__address">
-                  [Street Address], Madurai, Tamil Nadu [PIN]
+                <p className="madurai-office__address" style={{ display: 'flex', alignItems: 'flex-start', gap: '0.6rem' }}>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: '#22d3ee', flexShrink: 0, marginTop: '2px' }} aria-hidden="true">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                  <span>
+                    2nd Floor, 4/3, Srinivasa Perumal Koil St,<br />
+                    Kamarajar Salai, Madurai - 625009
+                  </span>
                 </p>
                 <div className="madurai-office__meta">
                   <div className="madurai-office__meta-item">
