@@ -266,6 +266,25 @@
   justify-content: center;
   background: rgba(139, 92, 246, 0.12);
   color: var(--color-purple);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.lh-presence__card:nth-child(1) .lh-presence__icon {
+  background: rgba(168, 85, 247, 0.15);
+  color: var(--color-purple);
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.25);
+}
+
+.lh-presence__card:nth-child(2) .lh-presence__icon {
+  background: rgba(59, 130, 246, 0.15);
+  color: var(--color-blue);
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.25);
+}
+
+.lh-presence__card:nth-child(3) .lh-presence__icon {
+  background: rgba(34, 211, 238, 0.15);
+  color: var(--color-cyan);
+  box-shadow: 0 0 15px rgba(34, 211, 238, 0.25);
 }
 
 .lh-presence__title {

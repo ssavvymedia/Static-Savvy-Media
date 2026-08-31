@@ -42,66 +42,72 @@ const SERVICES = [
   {
     title: 'Real Estate SEO',
     icon: 'search',
+    color: 'icon-badge--blue',
     path: '/services/seo/',
     text: 'Optimize your property project pages for searches like "3BHK flats in Madurai" and "luxury villas in Tamil Nadu" to capture buyers actively searching online.',
   },
   {
     title: 'GEO & AEO for Property Search',
     icon: 'sparkles',
+    color: 'icon-badge--amber',
     path: '/services/geo-aeo-ai-search/',
     text: 'Improve AI search visibility when buyers ask ChatGPT, Perplexity and Google AI Overviews about properties, locations and real estate in Tamil Nadu.',
   },
   {
     title: 'Local SEO & Google Business Profile',
     icon: 'mappin',
+    color: 'icon-badge--purple',
     path: '/services/local-seo/',
     text: 'Optimize Google Maps and Google Business Profile visibility so local property buyers find your projects and office locations easily.',
   },
   {
     title: 'Google Ads for Property Enquiries',
     icon: 'megaphone',
+    color: 'icon-badge--cyan',
     path: '/services/google-ads/',
     text: 'Paid search campaigns targeting high-intent buyers searching for apartments, villas, plots and commercial projects in specific locations.',
   },
   {
     title: 'Real Estate Social Media Marketing',
     icon: 'share',
+    color: 'icon-badge--pink',
     path: '/services/social-media-marketing/',
     text: 'Facebook and Instagram campaigns showcasing property visuals, project updates and virtual tours to attract buyer interest and enquiries.',
   },
   {
     title: 'Real Estate Website Development',
     icon: 'code',
+    color: 'icon-badge--green',
     path: '/services/website-design-development/',
     text: 'Property-focused websites with project landing pages, gallery experiences, floor plans, RERA details and WhatsApp-first conversion design.',
   },
 ]
 
 const JOURNEY_STEPS = [
-  { label: 'SEARCH', sub: 'Google / Social / AI', icon: 'search' },
-  { label: 'DISCOVER', sub: 'Project Listings / Ads', icon: 'compass' },
-  { label: 'COMPARE', sub: 'Projects / Locations', icon: 'target' },
-  { label: 'RESEARCH', sub: 'Details / Floor Plans / Gallery', icon: 'monitor' },
-  { label: 'ENQUIRE', sub: 'WhatsApp / Form / Call', icon: 'message' },
-  { label: 'SITE VISIT', sub: 'Property Visit', icon: 'calendar' },
-  { label: 'DECISION', sub: 'Purchase', icon: 'check' },
+  { label: 'SEARCH', sub: 'Google / Social / AI', icon: 'search', color: 'icon-badge--blue' },
+  { label: 'DISCOVER', sub: 'Project Listings / Ads', icon: 'compass', color: 'icon-badge--cyan' },
+  { label: 'COMPARE', sub: 'Projects / Locations', icon: 'target', color: 'icon-badge--purple' },
+  { label: 'RESEARCH', sub: 'Details / Floor Plans / Gallery', icon: 'monitor', color: 'icon-badge--amber' },
+  { label: 'ENQUIRE', sub: 'WhatsApp / Form / Call', icon: 'message', color: 'icon-badge--pink' },
+  { label: 'SITE VISIT', sub: 'Property Visit', icon: 'calendar', color: 'icon-badge--green' },
+  { label: 'DECISION', sub: 'Purchase', icon: 'check', color: 'icon-badge--gold' },
 ]
 
 const LEAD_QUALITY = [
-  { label: '1,000 Visitors', icon: 'eye' },
-  { label: 'Enquiries', icon: 'message' },
-  { label: 'Qualified Prospects', icon: 'shield' },
-  { label: 'Site Visits', icon: 'calendar' },
-  { label: 'Sales Conversations', icon: 'users' },
+  { label: '1,000 Visitors', icon: 'eye', color: 'icon-badge--blue' },
+  { label: 'Enquiries', icon: 'message', color: 'icon-badge--cyan' },
+  { label: 'Qualified Prospects', icon: 'shield', color: 'icon-badge--purple' },
+  { label: 'Site Visits', icon: 'calendar', color: 'icon-badge--green' },
+  { label: 'Sales Conversations', icon: 'users', color: 'icon-badge--amber' },
 ]
 
 const CONTENT_CARDS = [
-  { icon: 'mappin', title: 'Location', text: 'Highlight project location advantages and connectivity.' },
-  { icon: 'building', title: 'Property Type', text: 'Showcase apartments, villas, plots and commercial projects.' },
-  { icon: 'layers', title: 'Configuration', text: 'Present 1 BHK, 2 BHK, 3 BHK and custom configurations.' },
-  { icon: 'zap', title: 'Price Range', text: 'Communicate pricing positioning and payment plans.' },
-  { icon: 'book', title: 'Buyer Questions', text: 'Answer common property buyer queries.' },
-  { icon: 'briefcase', title: 'Project Information', text: 'Share verified project details and amenities.' },
+  { icon: 'mappin', color: 'icon-badge--red', title: 'Location', text: 'Highlight project location advantages and connectivity.' },
+  { icon: 'building', color: 'icon-badge--blue', title: 'Property Type', text: 'Showcase apartments, villas, plots and commercial projects.' },
+  { icon: 'layers', color: 'icon-badge--cyan', title: 'Configuration', text: 'Present 1 BHK, 2 BHK, 3 BHK and custom configurations.' },
+  { icon: 'zap', color: 'icon-badge--gold', title: 'Price Range', text: 'Communicate pricing positioning and payment plans.' },
+  { icon: 'book', color: 'icon-badge--purple', title: 'Buyer Questions', text: 'Answer common property buyer queries.' },
+  { icon: 'briefcase', color: 'icon-badge--amber', title: 'Project Information', text: 'Share verified project details and amenities.' },
 ]
 
 const FAQS = [
@@ -127,10 +133,6 @@ const CTA = {
     'Build visibility around your projects, attract high-intent property enquiries and create a digital buyer journey designed around discovery, trust and action.',
   label: '👋 WhatsApp for a Free Consultation',
 }
-
-/* ============================================================
-   ICONS, inline SVG set (stroke style, matches codebase)
-   ============================================================ */
 
 const ICONS = {
   search: (
@@ -274,15 +276,19 @@ const ICONS = {
     </>
   ),
   facebook: (
-    <>
-      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-    </>
+    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
   ),
   instagram: (
     <>
       <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
       <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
       <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+    </>
+  ),
+  camera: (
+    <>
+      <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
+      <circle cx="12" cy="13" r="4" />
     </>
   ),
 }
@@ -305,62 +311,6 @@ function ReIcon({ name, size = 20 }) {
   )
 }
 
-/* ============================================================
-   WORKFLOW PRIMITIVES
-   ============================================================ */
-
-function Node({ label, sub = '', icon }) {
-  return (
-    <span className="re-node">
-      {icon && (
-        <span className="re-node__icon" aria-hidden="true">
-          <ReIcon name={icon} size={15} />
-        </span>
-      )}
-      <span className="re-node__labels">
-        <span className="re-node__label">{label}</span>
-        {sub && <span className="re-node__sub">{sub}</span>}
-      </span>
-    </span>
-  )
-}
-
-function Arrow() {
-  return (
-    <span className="re-arrow" aria-hidden="true">
-      <svg
-        width="14"
-        height="14"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="M6 9l6 6 6-6" />
-      </svg>
-    </span>
-  )
-}
-
-function Flow({ items = [], className = '', direction = 'vertical' }) {
-  return (
-    <div className={cx('re-flow', `re-flow--${direction}`, className)}>
-      {items.map((item, index) => (
-        <Fragment key={index}>
-          {index > 0 && <Arrow />}
-          <Node {...item} />
-        </Fragment>
-      ))}
-    </div>
-  )
-}
-
-/* ============================================================
-   FAQ ACCORDION, accessible, single-open, smooth animation
-   ============================================================ */
-
 function FaqAccordion({ faqs }) {
   const [open, setOpen] = useState(null)
 
@@ -369,7 +319,7 @@ function FaqAccordion({ faqs }) {
       {faqs.map((faq, index) => {
         const isOpen = open === index
         return (
-          <div className="re-faq__item glass-card" key={index}>
+          <div className={cx('re-faq__item', 'glass-card', isOpen && 're-faq__item--open')} key={index}>
             <h3 className="re-faq__heading">
               <button
                 type="button"
@@ -400,11 +350,11 @@ function FaqAccordion({ faqs }) {
               id={`re-faq-panel-${index}`}
               role="region"
               aria-labelledby={`re-faq-button-${index}`}
-              className="re-faq__panel"
+              className={cx('re-faq__panel', isOpen && 're-faq__panel--open')}
               style={{ gridTemplateRows: isOpen ? '1fr' : '0fr' }}
             >
               <div className="re-faq__panel-inner">
-                <p>{faq.answer}</p>
+                <p className="re-faq__answer">{faq.answer}</p>
               </div>
             </div>
           </div>
@@ -413,10 +363,6 @@ function FaqAccordion({ faqs }) {
     </div>
   )
 }
-
-/* ============================================================
-   COMPONENT
-   ============================================================ */
 
 export default function RealEstateBuilders() {
   const jsonLdRef = useRef([])
@@ -494,10 +440,10 @@ export default function RealEstateBuilders() {
 
   return (
     <div className="service-template re-page">
-      {/* ---- Breadcrumbs ---- */}
+      {/* 1. BREADCRUMBS */}
       <Breadcrumbs />
 
-      {/* ---- Hero ---- */}
+      {/* 2. HERO */}
       <HeroSection
         layout="two-column"
         eyebrow="REAL ESTATE • PROPERTY • DEVELOPERS"
@@ -542,45 +488,34 @@ export default function RealEstateBuilders() {
         </div>
       </HeroSection>
 
-      {/* ---- Value Strip ---- */}
+      {/* 3. VALUE STRIP */}
       <section className="section re-value-strip">
         <div className="container">
           <ScrollReveal>
             <div className="re-value-strip__grid">
-              <div className="re-value-strip__item glass-card">
-                <span className="re-value-strip__num">01</span>
-                <span className="re-value-strip__label">GET DISCOVERED</span>
-                <span className="re-value-strip__text">
-                  Appear when property buyers search for apartments, villas and plots in your target locations.
-                </span>
-              </div>
-              <div className="re-value-strip__item glass-card">
-                <span className="re-value-strip__num">02</span>
-                <span className="re-value-strip__label">SHOWCASE PROJECTS</span>
-                <span className="re-value-strip__text">
-                  Present your developments with visuals, floor plans, amenities and location advantages.
-                </span>
-              </div>
-              <div className="re-value-strip__item glass-card">
-                <span className="re-value-strip__num">03</span>
-                <span className="re-value-strip__label">GENERATE ENQUIRIES</span>
-                <span className="re-value-strip__text">
-                  Convert property interest into WhatsApp enquiries, form submissions and site visit bookings.
-                </span>
-              </div>
-              <div className="re-value-strip__item glass-card">
-                <span className="re-value-strip__num">04</span>
-                <span className="re-value-strip__label">NURTURE BUYERS</span>
-                <span className="re-value-strip__text">
-                  Guide property buyers from initial interest through research, comparison and site visits.
-                </span>
-              </div>
+              {[
+                { num: '01', label: 'GET DISCOVERED', icon: 'search', color: 'icon-badge--blue', text: 'Appear when property buyers search for apartments, villas and plots in your target locations.' },
+                { num: '02', label: 'SHOWCASE PROJECTS', icon: 'home', color: 'icon-badge--amber', text: 'Present your developments with visuals, floor plans, amenities and location advantages.' },
+                { num: '03', label: 'GENERATE ENQUIRIES', icon: 'message', color: 'icon-badge--green', text: 'Convert property interest into WhatsApp enquiries, form submissions and site visit bookings.' },
+                { num: '04', label: 'NURTURE BUYERS', icon: 'users', color: 'icon-badge--purple', text: 'Guide property buyers from initial interest through research, comparison and site visits.' },
+              ].map((item) => (
+                <div key={item.num} className="re-value-strip__item glass-card">
+                  <div className="re-value-strip__header">
+                    <span className="re-value-strip__num">{item.num}</span>
+                    <span className={cx('re-value-strip__icon', 'icon-badge', item.color)} aria-hidden="true">
+                      <ReIcon name={item.icon} size={18} />
+                    </span>
+                  </div>
+                  <span className="re-value-strip__label">{item.label}</span>
+                  <p className="re-value-strip__text">{item.text}</p>
+                </div>
+              ))}
             </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* ---- Introduction ---- */}
+      {/* 4. INTRODUCTION */}
       <section className="section re-intro">
         <div className="container">
           <div className="section-heading">
@@ -588,18 +523,20 @@ export default function RealEstateBuilders() {
             <h2 className="section-heading__title">Property Buyers Research Before They Enquire</h2>
           </div>
           <ScrollReveal>
-            <p className="re-intro__text">
-              Real estate is a high-consideration purchase. Buyers research extensively before they
-              send an enquiry or book a site visit. They compare projects, check locations, study
-              floor plans, review pricing, and look for credibility signals. The objective of digital
-              marketing for property developers is to make your projects visible during each stage
-              of this research journey and to convert interest into qualified enquiries.
-            </p>
+            <div className="re-intro__card glass-card">
+              <p className="re-intro__text">
+                Real estate is a high-consideration purchase. Buyers research extensively before they
+                send an enquiry or book a site visit. They compare projects, check locations, study
+                floor plans, review pricing, and look for credibility signals. The objective of digital
+                marketing for property developers is to make your projects visible during each stage
+                of this research journey and to convert interest into qualified enquiries.
+              </p>
+            </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* ---- Journey ---- */}
+      {/* 5. BUYER JOURNEY */}
       <section className="section re-journey">
         <div className="container">
           <div className="section-heading">
@@ -607,12 +544,25 @@ export default function RealEstateBuilders() {
             <h2 className="section-heading__title">From Property Search to Purchase Decision</h2>
           </div>
           <ScrollReveal>
-            <Flow items={JOURNEY_STEPS} direction="horizontal" className="re-journey__flow" />
+            <div className="re-journey__grid">
+              {JOURNEY_STEPS.map((step, index) => (
+                <div className="re-journey__card glass-card" key={step.label}>
+                  <div className="re-journey__card-top">
+                    <span className="re-journey__step-num">Step 0{index + 1}</span>
+                    <span className={cx('re-journey__icon', 'icon-badge', step.color)} aria-hidden="true">
+                      <ReIcon name={step.icon} size={18} />
+                    </span>
+                  </div>
+                  <h3 className="re-journey__card-title">{step.label}</h3>
+                  <p className="re-journey__card-sub">{step.sub}</p>
+                </div>
+              ))}
+            </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* ---- Services ---- */}
+      {/* 6. SERVICES */}
       <section className="section re-services">
         <div className="container">
           <div className="section-heading">
@@ -625,10 +575,12 @@ export default function RealEstateBuilders() {
             {SERVICES.map((svc, i) => (
               <ScrollReveal key={svc.title} delay={i * 60}>
                 <Link to={svc.path} className="re-service-card glass-card">
-                  <span className="re-service-card__number">{String(i + 1).padStart(2, '0')}</span>
-                  <span className="re-service-card__icon" aria-hidden="true">
-                    <ReIcon name={svc.icon} size={22} />
-                  </span>
+                  <div className="re-service-card__top">
+                    <span className="re-service-card__number">{String(i + 1).padStart(2, '0')}</span>
+                    <span className={cx('re-service-card__icon', 'icon-badge', svc.color)} aria-hidden="true">
+                      <ReIcon name={svc.icon} size={20} />
+                    </span>
+                  </div>
                   <h3 className="re-service-card__title">{svc.title}</h3>
                   <p className="re-service-card__text">{svc.text}</p>
                   <span className="re-service-card__cta">
@@ -644,7 +596,7 @@ export default function RealEstateBuilders() {
         </div>
       </section>
 
-      {/* ---- Google Ads ---- */}
+      {/* 7. GOOGLE ADS */}
       <section className="section re-google-ads">
         <div className="container">
           <div className="section-heading">
@@ -656,7 +608,7 @@ export default function RealEstateBuilders() {
           <ScrollReveal>
             <div className="re-google-ads__mockup glass-card">
               <div className="re-google-ads__bar">
-                <ReIcon name="search" size={16} />
+                <span className="icon-badge icon-badge--blue" aria-hidden="true"><ReIcon name="search" size={16} /></span>
                 <span className="re-google-ads__query">3BHK flats in Madurai</span>
               </div>
               <div className="re-google-ads__results">
@@ -670,22 +622,31 @@ export default function RealEstateBuilders() {
             </div>
           </ScrollReveal>
           <ScrollReveal>
-            <Flow
-              items={[
-                { label: 'GOOGLE SEARCH', icon: 'search' },
-                { label: 'PROJECT AD', icon: 'megaphone' },
-                { label: 'LANDING PAGE', icon: 'monitor' },
-                { label: 'PROJECT DETAILS', icon: 'home' },
-                { label: 'WHATSAPP ENQUIRY', icon: 'whatsapp' },
-              ]}
-              direction="horizontal"
-              className="re-google-ads__flow"
-            />
+            <div className="re-google-ads__grid">
+              {[
+                { label: 'GOOGLE SEARCH', sub: 'High-intent buyer searches', icon: 'search', color: 'icon-badge--blue' },
+                { label: 'PROJECT AD', sub: 'Targeted Google Ad appears', icon: 'megaphone', color: 'icon-badge--cyan' },
+                { label: 'LANDING PAGE', sub: 'Dedicated project page', icon: 'monitor', color: 'icon-badge--purple' },
+                { label: 'PROJECT DETAILS', sub: 'Floor plans, pricing, gallery', icon: 'home', color: 'icon-badge--amber' },
+                { label: 'WHATSAPP ENQUIRY', sub: 'Direct enquiry action', icon: 'whatsapp', color: 'icon-badge--green' },
+              ].map((step, index) => (
+                <div className="re-google-ads__card glass-card" key={step.label}>
+                  <div className="re-google-ads__card-top">
+                    <span className="re-google-ads__step-num">Step 0{index + 1}</span>
+                    <span className={cx('re-google-ads__icon', 'icon-badge', step.color)} aria-hidden="true">
+                      <ReIcon name={step.icon} size={18} />
+                    </span>
+                  </div>
+                  <h3 className="re-google-ads__card-title">{step.label}</h3>
+                  <p className="re-google-ads__card-sub">{step.sub}</p>
+                </div>
+              ))}
+            </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* ---- Social Media ---- */}
+      {/* 8. SOCIAL MEDIA */}
       <section className="section re-social">
         <div className="container">
           <div className="section-heading">
@@ -701,74 +662,66 @@ export default function RealEstateBuilders() {
           </ScrollReveal>
 
           <ScrollReveal>
-            <div className="re-social__flow">
-              <span className="re-social__step glass-card">
-                <ReIcon name="home" size={20} />
-                <span className="re-social__step-label">PROPERTY PROJECT</span>
-              </span>
-              <span className="re-social__arrow" aria-hidden="true">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9l6 6 6-6" /></svg>
-              </span>
-              <span className="re-social__step glass-card">
-                <ReIcon name="facebook" size={20} />
-                <span className="re-social__step-label">FACEBOOK / INSTAGRAM</span>
-              </span>
-              <span className="re-social__arrow" aria-hidden="true">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9l6 6 6-6" /></svg>
-              </span>
-              <span className="re-social__step glass-card">
-                <ReIcon name="eye" size={20} />
-                <span className="re-social__step-label">BUYER INTEREST</span>
-              </span>
-              <span className="re-social__arrow" aria-hidden="true">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9l6 6 6-6" /></svg>
-              </span>
-              <span className="re-social__step glass-card">
-                <ReIcon name="message" size={20} />
-                <span className="re-social__step-label">ENQUIRY</span>
-              </span>
+            <div className="re-social__process-grid">
+              {[
+                { label: 'PROPERTY PROJECT', sub: 'Visual & location assets', icon: 'home', color: 'icon-badge--blue' },
+                { label: 'FACEBOOK / INSTAGRAM', sub: 'Targeted visual campaigns', icon: 'facebook', color: 'icon-badge--pink' },
+                { label: 'BUYER INTEREST', sub: 'Engagement & enquiries', icon: 'eye', color: 'icon-badge--amber' },
+                { label: 'ENQUIRY', sub: 'Direct message / Lead form', icon: 'message', color: 'icon-badge--green' },
+              ].map((step, index) => (
+                <div className="re-social__process-card glass-card" key={step.label}>
+                  <div className="re-social__process-top">
+                    <span className="re-social__process-num">0{index + 1}</span>
+                    <span className={cx('re-social__process-icon', 'icon-badge', step.color)} aria-hidden="true">
+                      <ReIcon name={step.icon} size={18} />
+                    </span>
+                  </div>
+                  <h3 className="re-social__process-title">{step.label}</h3>
+                  <p className="re-social__process-sub">{step.sub}</p>
+                </div>
+              ))}
             </div>
           </ScrollReveal>
 
           <div className="re-social__grid">
             <ScrollReveal delay={0}>
               <div className="re-social-card glass-card">
-                <ReIcon name="instagram" size={20} />
+                <span className="icon-badge icon-badge--pink" aria-hidden="true"><ReIcon name="instagram" size={20} /></span>
                 <h4 className="re-social-card__title">Reels</h4>
                 <p className="re-social-card__text">Short property walkthroughs and project highlights.</p>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={60}>
               <div className="re-social-card glass-card">
-                <ReIcon name="facebook" size={20} />
+                <span className="icon-badge icon-badge--blue" aria-hidden="true"><ReIcon name="facebook" size={20} /></span>
                 <h4 className="re-social-card__title">Carousels</h4>
                 <p className="re-social-card__text">Multi-image project showcases with floor plans.</p>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={120}>
               <div className="re-social-card glass-card">
-                <ReIcon name="camera" size={20} />
+                <span className="icon-badge icon-badge--amber" aria-hidden="true"><ReIcon name="camera" size={20} /></span>
                 <h4 className="re-social-card__title">Property Photography</h4>
                 <p className="re-social-card__text">High-quality images of project exteriors and interiors.</p>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={180}>
               <div className="re-social-card glass-card">
-                <ReIcon name="monitor" size={20} />
+                <span className="icon-badge icon-badge--purple" aria-hidden="true"><ReIcon name="monitor" size={20} /></span>
                 <h4 className="re-social-card__title">Virtual Tours</h4>
                 <p className="re-social-card__text">360-degree property exploration for remote buyers.</p>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={240}>
               <div className="re-social-card glass-card">
-                <ReIcon name="mappin" size={20} />
+                <span className="icon-badge icon-badge--red" aria-hidden="true"><ReIcon name="mappin" size={20} /></span>
                 <h4 className="re-social-card__title">Location Videos</h4>
                 <p className="re-social-card__text">Neighbourhood and connectivity showcase content.</p>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={300}>
               <div className="re-social-card glass-card">
-                <ReIcon name="home" size={20} />
+                <span className="icon-badge icon-badge--green" aria-hidden="true"><ReIcon name="home" size={20} /></span>
                 <h4 className="re-social-card__title">Project Walkthroughs</h4>
                 <p className="re-social-card__text">Detailed guided tours of project features and amenities.</p>
               </div>
@@ -777,7 +730,7 @@ export default function RealEstateBuilders() {
         </div>
       </section>
 
-      {/* ---- Virtual Tour ---- */}
+      {/* 9. VIRTUAL TOUR */}
       <section className="section re-virtual-tour">
         <div className="container">
           <div className="section-heading">
@@ -785,45 +738,44 @@ export default function RealEstateBuilders() {
             <h2 className="section-heading__title">Let Buyers Explore Before They Visit</h2>
           </div>
           <ScrollReveal>
-            <p className="re-virtual-tour__text">
-              Virtual tours allow property buyers to explore projects remotely, which can be
-              particularly valuable for out-of-town buyers or those comparing multiple projects.
-              Interactive experiences help build familiarity and interest before a site visit.
-            </p>
-          </ScrollReveal>
-
-          <ScrollReveal>
-            <div className="re-virtual-tour__mockup glass-card">
-              <div className="re-virtual-tour__header">
-                <ReIcon name="home" size={20} />
-                <span className="re-virtual-tour__title">Virtual Tour Experience</span>
-              </div>
-              <div className="re-virtual-tour__body">
-                <div className="re-virtual-tour__viewport">
-                  <span className="re-virtual-tour__360-badge">
-                    <ReIcon name="globe" size={14} /> 360&deg;
-                  </span>
-                  <span className="re-virtual-tour__placeholder">Interactive Property View</span>
+            <div className="re-virtual-tour__card glass-card">
+              <p className="re-virtual-tour__text">
+                Virtual tours allow property buyers to explore projects remotely, which can be
+                particularly valuable for out-of-town buyers or those comparing multiple projects.
+                Interactive experiences help build familiarity and interest before a site visit.
+              </p>
+              <div className="re-virtual-tour__mockup glass-card">
+                <div className="re-virtual-tour__header">
+                  <span className="icon-badge icon-badge--blue" aria-hidden="true"><ReIcon name="home" size={18} /></span>
+                  <span className="re-virtual-tour__title">Virtual Tour Experience</span>
                 </div>
-                <div className="re-virtual-tour__controls">
-                  <span className="re-virtual-tour__control re-virtual-tour__control--active">
-                    <ReIcon name="globe" size={14} /> 360&deg;
-                  </span>
-                  <span className="re-virtual-tour__control">
-                    <ReIcon name="layers" size={14} /> Floor Plan
-                  </span>
-                  <span className="re-virtual-tour__control">
-                    <ReIcon name="camera" size={14} /> Gallery
-                  </span>
-                  <span className="re-virtual-tour__control">
-                    <ReIcon name="zap" size={14} /> Amenities
-                  </span>
-                  <span className="re-virtual-tour__control">
-                    <ReIcon name="mappin" size={14} /> Location
-                  </span>
-                  <span className="re-virtual-tour__control">
-                    <ReIcon name="calendar" size={14} /> Schedule Visit
-                  </span>
+                <div className="re-virtual-tour__body">
+                  <div className="re-virtual-tour__viewport">
+                    <span className="re-virtual-tour__360-badge glass-card">
+                      <ReIcon name="globe" size={14} /> 360&deg;
+                    </span>
+                    <span className="re-virtual-tour__placeholder">Interactive Property View</span>
+                  </div>
+                  <div className="re-virtual-tour__controls">
+                    <span className="re-virtual-tour__control re-virtual-tour__control--active glass-card">
+                      <ReIcon name="globe" size={14} /> 360&deg;
+                    </span>
+                    <span className="re-virtual-tour__control glass-card">
+                      <ReIcon name="layers" size={14} /> Floor Plan
+                    </span>
+                    <span className="re-virtual-tour__control glass-card">
+                      <ReIcon name="camera" size={14} /> Gallery
+                    </span>
+                    <span className="re-virtual-tour__control glass-card">
+                      <ReIcon name="zap" size={14} /> Amenities
+                    </span>
+                    <span className="re-virtual-tour__control glass-card">
+                      <ReIcon name="mappin" size={14} /> Location
+                    </span>
+                    <span className="re-virtual-tour__control glass-card">
+                      <ReIcon name="calendar" size={14} /> Schedule Visit
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -831,7 +783,7 @@ export default function RealEstateBuilders() {
         </div>
       </section>
 
-      {/* ---- WhatsApp Lead Nurturing ---- */}
+      {/* 10. WHATSAPP LEAD NURTURING */}
       <section className="section re-whatsapp-nurture">
         <div className="container">
           <div className="section-heading">
@@ -849,24 +801,33 @@ export default function RealEstateBuilders() {
           </ScrollReveal>
 
           <ScrollReveal>
-            <Flow
-              items={[
-                { label: 'NEW ENQUIRY', sub: 'WhatsApp / Form / Call', icon: 'whatsapp' },
-                { label: 'ACKNOWLEDGEMENT', sub: 'Thank You Message', icon: 'check' },
-                { label: 'PROJECT BROCHURE', sub: 'PDF / Digital Brochure', icon: 'book' },
-                { label: 'FLOOR PLAN', sub: 'Unit Layouts', icon: 'layers' },
-                { label: 'PRICE / CONFIG', sub: 'Pricing Details', icon: 'zap' },
-                { label: 'SITE VISIT', sub: 'Schedule Visit', icon: 'calendar' },
-                { label: 'FOLLOW-UP', sub: 'Ongoing Communication', icon: 'message' },
-              ]}
-              direction="horizontal"
-              className="re-whatsapp-nurture__flow"
-            />
+            <div className="re-whatsapp-nurture__grid">
+              {[
+                { label: 'NEW ENQUIRY', sub: 'WhatsApp / Form / Call', icon: 'whatsapp', color: 'icon-badge--green' },
+                { label: 'ACKNOWLEDGEMENT', sub: 'Thank You Message', icon: 'check', color: 'icon-badge--blue' },
+                { label: 'PROJECT BROCHURE', sub: 'PDF / Digital Brochure', icon: 'book', color: 'icon-badge--purple' },
+                { label: 'FLOOR PLAN', sub: 'Unit Layouts', icon: 'layers', color: 'icon-badge--cyan' },
+                { label: 'PRICE / CONFIG', sub: 'Pricing Details', icon: 'zap', color: 'icon-badge--gold' },
+                { label: 'SITE VISIT', sub: 'Schedule Visit', icon: 'calendar', color: 'icon-badge--pink' },
+                { label: 'FOLLOW-UP', sub: 'Ongoing Communication', icon: 'message', color: 'icon-badge--amber' },
+              ].map((step, index) => (
+                <div className="re-whatsapp-nurture__card glass-card" key={step.label}>
+                  <div className="re-whatsapp-nurture__card-top">
+                    <span className="re-whatsapp-nurture__step-num">Step 0{index + 1}</span>
+                    <span className={cx('re-whatsapp-nurture__icon', 'icon-badge', step.color)} aria-hidden="true">
+                      <ReIcon name={step.icon} size={18} />
+                    </span>
+                  </div>
+                  <h3 className="re-whatsapp-nurture__card-title">{step.label}</h3>
+                  <p className="re-whatsapp-nurture__card-sub">{step.sub}</p>
+                </div>
+              ))}
+            </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* ---- Lead Quality ---- */}
+      {/* 11. LEAD QUALITY */}
       <section className="section re-lead-quality">
         <div className="container">
           <div className="section-heading">
@@ -882,12 +843,24 @@ export default function RealEstateBuilders() {
           </ScrollReveal>
 
           <ScrollReveal>
-            <Flow items={LEAD_QUALITY} direction="horizontal" className="re-lead-quality__flow" />
+            <div className="re-lead-quality__grid">
+              {LEAD_QUALITY.map((item, index) => (
+                <div className="re-lead-quality__card glass-card" key={item.label}>
+                  <div className="re-lead-quality__card-top">
+                    <span className="re-lead-quality__step-num">0{index + 1}</span>
+                    <span className={cx('re-lead-quality__icon', 'icon-badge', item.color)} aria-hidden="true">
+                      <ReIcon name={item.icon} size={18} />
+                    </span>
+                  </div>
+                  <h3 className="re-lead-quality__card-title">{item.label}</h3>
+                </div>
+              ))}
+            </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* ---- Project Landing Page ---- */}
+      {/* 12. PROJECT LANDING PAGE */}
       <section className="section re-landing-page">
         <div className="container">
           <div className="section-heading">
@@ -897,50 +870,49 @@ export default function RealEstateBuilders() {
             </h2>
           </div>
           <ScrollReveal>
-            <p className="re-landing-page__text">
-              A project-specific landing page can consolidate all relevant property information
-              in one place and guide visitors toward a clear enquiry action. This supports both
-              organic search and paid campaign conversion.
-            </p>
-          </ScrollReveal>
-
-          <ScrollReveal>
-            <div className="re-landing-page__mockup glass-card">
-              <div className="re-landing-page__nav">
-                <span>Home</span>
-                <span>Projects</span>
-                <span>About</span>
-                <span>Contact</span>
-              </div>
-              <div className="re-landing-page__body">
-                <div className="re-landing-page__hero">
-                  <span className="re-landing-page__hero-label">PROJECT NAME</span>
-                  <span className="re-landing-page__hero-sub">Location | Property Type</span>
+            <div className="re-landing-page__card glass-card">
+              <p className="re-landing-page__text">
+                A project-specific landing page can consolidate all relevant property information
+                in one place and guide visitors toward a clear enquiry action. This supports both
+                organic search and paid campaign conversion.
+              </p>
+              <div className="re-landing-page__mockup glass-card">
+                <div className="re-landing-page__nav">
+                  <span>Home</span>
+                  <span>Projects</span>
+                  <span>About</span>
+                  <span>Contact</span>
                 </div>
-                <div className="re-landing-page__grid">
-                  <div className="re-landing-page__grid-item glass-card">
-                    <ReIcon name="home" size={16} />
-                    <span>Property Type</span>
+                <div className="re-landing-page__body">
+                  <div className="re-landing-page__hero">
+                    <span className="re-landing-page__hero-label">PROJECT NAME</span>
+                    <span className="re-landing-page__hero-sub">Location | Property Type</span>
                   </div>
-                  <div className="re-landing-page__grid-item glass-card">
-                    <ReIcon name="zap" size={16} />
-                    <span>Key Features</span>
-                  </div>
-                  <div className="re-landing-page__grid-item glass-card">
-                    <ReIcon name="layers" size={16} />
-                    <span>Floor Plan</span>
-                  </div>
-                  <div className="re-landing-page__grid-item glass-card">
-                    <ReIcon name="camera" size={16} />
-                    <span>Gallery</span>
-                  </div>
-                  <div className="re-landing-page__grid-item glass-card">
-                    <ReIcon name="shield" size={16} />
-                    <span>RERA Details</span>
-                  </div>
-                  <div className="re-landing-page__grid-item glass-card">
-                    <ReIcon name="whatsapp" size={16} />
-                    <span>WhatsApp CTA</span>
+                  <div className="re-landing-page__grid">
+                    <div className="re-landing-page__grid-item glass-card">
+                      <span className="icon-badge icon-badge--blue" aria-hidden="true"><ReIcon name="home" size={16} /></span>
+                      <span>Property Type</span>
+                    </div>
+                    <div className="re-landing-page__grid-item glass-card">
+                      <span className="icon-badge icon-badge--gold" aria-hidden="true"><ReIcon name="zap" size={16} /></span>
+                      <span>Key Features</span>
+                    </div>
+                    <div className="re-landing-page__grid-item glass-card">
+                      <span className="icon-badge icon-badge--cyan" aria-hidden="true"><ReIcon name="layers" size={16} /></span>
+                      <span>Floor Plan</span>
+                    </div>
+                    <div className="re-landing-page__grid-item glass-card">
+                      <span className="icon-badge icon-badge--pink" aria-hidden="true"><ReIcon name="camera" size={16} /></span>
+                      <span>Gallery</span>
+                    </div>
+                    <div className="re-landing-page__grid-item glass-card">
+                      <span className="icon-badge icon-badge--purple" aria-hidden="true"><ReIcon name="shield" size={16} /></span>
+                      <span>RERA Details</span>
+                    </div>
+                    <div className="re-landing-page__grid-item glass-card">
+                      <span className="icon-badge icon-badge--green" aria-hidden="true"><ReIcon name="whatsapp" size={16} /></span>
+                      <span>WhatsApp CTA</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -949,7 +921,7 @@ export default function RealEstateBuilders() {
         </div>
       </section>
 
-      {/* ---- Content / SEO ---- */}
+      {/* 13. CONTENT / SEO */}
       <section className="section re-content">
         <div className="container">
           <div className="section-heading">
@@ -960,7 +932,7 @@ export default function RealEstateBuilders() {
             {CONTENT_CARDS.map((card, i) => (
               <ScrollReveal key={card.title} delay={i * 60}>
                 <div className="re-content-card glass-card">
-                  <span className="re-content-card__icon" aria-hidden="true">
+                  <span className={cx('re-content-card__icon', 'icon-badge', card.color)} aria-hidden="true">
                     <ReIcon name={card.icon} size={20} />
                   </span>
                   <h3 className="re-content-card__title">{card.title}</h3>
@@ -972,7 +944,7 @@ export default function RealEstateBuilders() {
         </div>
       </section>
 
-      {/* ---- Local SEO ---- */}
+      {/* 14. LOCAL SEO */}
       <section className="section re-local-seo">
         <div className="container">
           <div className="section-heading">
@@ -980,30 +952,29 @@ export default function RealEstateBuilders() {
             <h2 className="section-heading__title">Be Visible When Buyers Search Nearby</h2>
           </div>
           <ScrollReveal>
-            <p className="re-local-seo__text">
-              When property buyers search for projects in a specific area, Google Business Profile
-              visibility can help your office location and project listings appear in local search
-              results and Google Maps.
-            </p>
-          </ScrollReveal>
-
-          <ScrollReveal>
-            <div className="re-local-seo__mockup glass-card">
-              <div className="re-local-seo__header">
-                <ReIcon name="mappin" size={18} />
-                <span className="re-local-seo__business-name">Your Developer Name</span>
-              </div>
-              <div className="re-local-seo__body">
-                <div className="re-local-seo__info">
-                  <span>Category: Real Estate Developer</span>
-                  <span>Location: Madurai, Tamil Nadu</span>
-                  <span>Rating: Verified Profile</span>
-                  <span>Hours: Mon - Sat, 9:00 AM - 7:00 PM</span>
+            <div className="re-local-seo__card glass-card">
+              <p className="re-local-seo__text">
+                When property buyers search for projects in a specific area, Google Business Profile
+                visibility can help your office location and project listings appear in local search
+                results and Google Maps.
+              </p>
+              <div className="re-local-seo__mockup glass-card">
+                <div className="re-local-seo__header">
+                  <span className="icon-badge icon-badge--blue" aria-hidden="true"><ReIcon name="mappin" size={18} /></span>
+                  <span className="re-local-seo__business-name">Your Developer Name</span>
                 </div>
-                <div className="re-local-seo__actions">
-                  <span className="re-local-seo__action">Call</span>
-                  <span className="re-local-seo__action">Directions</span>
-                  <span className="re-local-seo__action">WhatsApp</span>
+                <div className="re-local-seo__body">
+                  <div className="re-local-seo__info">
+                    <span>Category: Real Estate Developer</span>
+                    <span>Location: Madurai, Tamil Nadu</span>
+                    <span>Rating: Verified Profile</span>
+                    <span>Hours: Mon - Sat, 9:00 AM - 7:00 PM</span>
+                  </div>
+                  <div className="re-local-seo__actions">
+                    <span className="re-local-seo__action glass-card"><ReIcon name="phone" size={13} /> Call</span>
+                    <span className="re-local-seo__action glass-card"><ReIcon name="compass" size={13} /> Directions</span>
+                    <span className="re-local-seo__action glass-card"><ReIcon name="whatsapp" size={13} /> WhatsApp</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1011,7 +982,7 @@ export default function RealEstateBuilders() {
         </div>
       </section>
 
-      {/* ---- GEO / AEO ---- */}
+      {/* 15. GEO / AEO */}
       <section className="section re-geo">
         <div className="container">
           <div className="section-heading">
@@ -1028,36 +999,27 @@ export default function RealEstateBuilders() {
 
           <ScrollReveal>
             <div className="re-geo__signals">
-              <div className="re-geo__signal glass-card">
-                <ReIcon name="building" size={18} />
-                <span>Company</span>
-              </div>
-              <div className="re-geo__signal glass-card">
-                <ReIcon name="home" size={18} />
-                <span>Projects</span>
-              </div>
-              <div className="re-geo__signal glass-card">
-                <ReIcon name="mappin" size={18} />
-                <span>Locations</span>
-              </div>
-              <div className="re-geo__signal glass-card">
-                <ReIcon name="layers" size={18} />
-                <span>Property Types</span>
-              </div>
-              <div className="re-geo__signal glass-card">
-                <ReIcon name="briefcase" size={18} />
-                <span>Services</span>
-              </div>
-              <div className="re-geo__signal glass-card">
-                <ReIcon name="phone" size={18} />
-                <span>Contact</span>
-              </div>
+              {[
+                { icon: 'building', label: 'Company', color: 'icon-badge--blue' },
+                { icon: 'home', label: 'Projects', color: 'icon-badge--amber' },
+                { icon: 'mappin', label: 'Locations', color: 'icon-badge--red' },
+                { icon: 'layers', label: 'Property Types', color: 'icon-badge--cyan' },
+                { icon: 'briefcase', label: 'Services', color: 'icon-badge--purple' },
+                { icon: 'phone', label: 'Contact', color: 'icon-badge--green' },
+              ].map((sig) => (
+                <div className="re-geo__signal glass-card" key={sig.label}>
+                  <span className={cx('re-geo__signal-icon', 'icon-badge', sig.color)} aria-hidden="true">
+                    <ReIcon name={sig.icon} size={18} />
+                  </span>
+                  <span className="re-geo__signal-label">{sig.label}</span>
+                </div>
+              ))}
             </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* ---- Trust ---- */}
+      {/* 16. TRUST */}
       <section className="section re-trust">
         <div className="container">
           <div className="section-heading">
@@ -1074,32 +1036,26 @@ export default function RealEstateBuilders() {
 
           <ScrollReveal>
             <div className="re-trust__grid">
-              <div className="re-trust__item glass-card">
-                <ReIcon name="users" size={20} />
-                <span className="re-trust__item-title">Builder Profile</span>
-                <span className="re-trust__item-text">Establish developer identity and track record.</span>
-              </div>
-              <div className="re-trust__item glass-card">
-                <ReIcon name="home" size={20} />
-                <span className="re-trust__item-title">Verified Projects</span>
-                <span className="re-trust__item-text">Showcase completed and ongoing developments.</span>
-              </div>
-              <div className="re-trust__item glass-card">
-                <ReIcon name="shield" size={20} />
-                <span className="re-trust__item-title">RERA Registration</span>
-                <span className="re-trust__item-text">Display regulatory compliance and approvals.</span>
-              </div>
-              <div className="re-trust__item glass-card">
-                <ReIcon name="phone" size={20} />
-                <span className="re-trust__item-title">Contact Information</span>
-                <span className="re-trust__item-text">Provide clear, accessible contact channels.</span>
-              </div>
+              {[
+                { icon: 'users', color: 'icon-badge--blue', title: 'Builder Profile', text: 'Establish developer identity and track record.' },
+                { icon: 'home', color: 'icon-badge--amber', title: 'Verified Projects', text: 'Showcase completed and ongoing developments.' },
+                { icon: 'shield', color: 'icon-badge--purple', title: 'RERA Registration', text: 'Display regulatory compliance and approvals.' },
+                { icon: 'phone', color: 'icon-badge--green', title: 'Contact Information', text: 'Provide clear, accessible contact channels.' },
+              ].map((item) => (
+                <div className="re-trust__item glass-card" key={item.title}>
+                  <span className={cx('re-trust__item-icon', 'icon-badge', item.color)} aria-hidden="true">
+                    <ReIcon name={item.icon} size={20} />
+                  </span>
+                  <h3 className="re-trust__item-title">{item.title}</h3>
+                  <p className="re-trust__item-text">{item.text}</p>
+                </div>
+              ))}
             </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* ---- Ecosystem / Funnel ---- */}
+      {/* 17. ECOSYSTEM / FUNNEL */}
       <section className="section re-ecosystem">
         <div className="container">
           <div className="section-heading">
@@ -1107,7 +1063,7 @@ export default function RealEstateBuilders() {
             <h2 className="section-heading__title">The Real Estate Marketing System</h2>
           </div>
           <ScrollReveal>
-            <div className="re-ecosystem__flow">
+            <div className="re-ecosystem__card glass-card">
               <div className="re-ecosystem__channels glass-card">
                 <span className="re-ecosystem__channel-label">MARKETING CHANNELS</span>
                 <div className="re-ecosystem__channel-list">
@@ -1119,47 +1075,34 @@ export default function RealEstateBuilders() {
                   <span className="re-ecosystem__channel"><ReIcon name="sparkles" size={14} /> AI Search</span>
                 </div>
               </div>
-              <span className="re-ecosystem__arrow" aria-hidden="true">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9l6 6 6-6" /></svg>
-              </span>
-              <span className="re-ecosystem__node glass-card">
-                <ReIcon name="monitor" size={16} />
-                <span>Project Landing Page</span>
-              </span>
-              <span className="re-ecosystem__arrow" aria-hidden="true">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9l6 6 6-6" /></svg>
-              </span>
-              <span className="re-ecosystem__node glass-card">
-                <ReIcon name="whatsapp" size={16} />
-                <span>WhatsApp / Enquiry</span>
-              </span>
-              <span className="re-ecosystem__arrow" aria-hidden="true">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9l6 6 6-6" /></svg>
-              </span>
-              <span className="re-ecosystem__node glass-card">
-                <ReIcon name="message" size={16} />
-                <span>Lead Nurturing</span>
-              </span>
-              <span className="re-ecosystem__arrow" aria-hidden="true">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9l6 6 6-6" /></svg>
-              </span>
-              <span className="re-ecosystem__node glass-card">
-                <ReIcon name="calendar" size={16} />
-                <span>Site Visit</span>
-              </span>
-              <span className="re-ecosystem__arrow" aria-hidden="true">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9l6 6 6-6" /></svg>
-              </span>
-              <span className="re-ecosystem__node glass-card">
-                <ReIcon name="users" size={16} />
-                <span>Sales Conversation</span>
-              </span>
+              <div className="re-ecosystem__nodes">
+                <div className="re-ecosystem__node glass-card">
+                  <span className="icon-badge icon-badge--blue" aria-hidden="true"><ReIcon name="monitor" size={18} /></span>
+                  <span>Project Landing Page</span>
+                </div>
+                <div className="re-ecosystem__node glass-card">
+                  <span className="icon-badge icon-badge--green" aria-hidden="true"><ReIcon name="whatsapp" size={18} /></span>
+                  <span>WhatsApp / Enquiry</span>
+                </div>
+                <div className="re-ecosystem__node glass-card">
+                  <span className="icon-badge icon-badge--purple" aria-hidden="true"><ReIcon name="message" size={18} /></span>
+                  <span>Lead Nurturing</span>
+                </div>
+                <div className="re-ecosystem__node glass-card">
+                  <span className="icon-badge icon-badge--pink" aria-hidden="true"><ReIcon name="calendar" size={18} /></span>
+                  <span>Site Visit</span>
+                </div>
+                <div className="re-ecosystem__node glass-card">
+                  <span className="icon-badge icon-badge--amber" aria-hidden="true"><ReIcon name="users" size={18} /></span>
+                  <span>Sales Conversation</span>
+                </div>
+              </div>
             </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* ---- FAQ ---- */}
+      {/* 18. FAQ */}
       <section className="section re-faq">
         <div className="container">
           <div className="section-heading">
@@ -1172,7 +1115,7 @@ export default function RealEstateBuilders() {
         </div>
       </section>
 
-      {/* ---- Locations ---- */}
+      {/* 19. LOCATIONS */}
       <section className="section re-locations">
         <div className="container">
           <div className="section-heading">
@@ -1185,8 +1128,8 @@ export default function RealEstateBuilders() {
           <div className="re-locations__grid">
             <ScrollReveal className="re-locations__cell">
               <div className="re-location-card glass-card">
-                <span className="re-location-card__icon" aria-hidden="true">
-                  <ReIcon name="mappin" size={26} />
+                <span className="icon-badge icon-badge--blue" aria-hidden="true">
+                  <ReIcon name="mappin" size={22} />
                 </span>
                 <h3 className="re-location-card__title">Tamil Nadu</h3>
                 <p className="re-location-card__text">
@@ -1200,7 +1143,7 @@ export default function RealEstateBuilders() {
         </div>
       </section>
 
-      {/* ---- Related Industries & Explore ---- */}
+      {/* 20. RELATED INDUSTRIES & EXPLORE */}
       <section className="section re-related">
         <div className="container">
           <div className="section-heading">
@@ -1233,7 +1176,7 @@ export default function RealEstateBuilders() {
         </div>
       </section>
 
-      {/* ---- Final CTA ---- */}
+      {/* 21. FINAL CTA & CONTACT */}
       <CTASection
         title={CTA.title}
         primaryLabel={CTA.label}

@@ -23,7 +23,7 @@ import '../../styles/pages/port-marine-industrial.css'
 import portHeroImg from '../../assets/images/Industries/06port.png'
 
 /* ============================================================
-   CONTENT, Approved Static Savvy Media Port, Marine & Industrial
+   CONTENT — Approved Static Savvy Media Port, Marine & Industrial
    ============================================================ */
 
 const PAGE_TITLE =
@@ -42,66 +42,72 @@ const SERVICES = [
   {
     title: 'B2B Industrial SEO',
     icon: 'search',
+    color: 'icon-badge--cyan',
     path: '/services/seo/',
     text: 'Local and regional keyword targeting specific to your industry category and buyer search patterns in Tamil Nadu and Malaysia.',
   },
   {
     title: 'GEO & AEO for Industrial Businesses',
     icon: 'sparkles',
+    color: 'icon-badge--amber',
     path: '/services/geo-aeo-ai-search/',
     text: 'Improve AI search visibility for industry-specific questions being asked through ChatGPT, Perplexity and Google AI Overviews.',
   },
   {
     title: 'Local SEO & Google Business Profile',
     icon: 'mappin',
+    color: 'icon-badge--purple',
     path: '/services/local-seo/',
     text: 'Optimize Google Maps and Google Business Profile visibility for businesses where industrial buyers search for providers near their location.',
   },
   {
     title: 'Google Ads for Industrial Buyers',
     icon: 'megaphone',
+    color: 'icon-badge--blue',
     path: '/services/google-ads/',
     text: 'Paid search campaigns targeting high-intent buyers searching for industrial, marine, logistics and manufacturing services.',
   },
   {
     title: 'B2B Social Media Marketing',
     icon: 'share',
+    color: 'icon-badge--pink',
     path: '/services/social-media-marketing/',
     text: 'Platform-specific content and advertising for the industry’s professional audience, with LinkedIn as the primary B2B channel.',
   },
   {
     title: 'Industrial Website Development',
     icon: 'code',
+    color: 'icon-badge--green',
     path: '/services/website-design-development/',
     text: 'SEO-ready websites with industry-appropriate content architecture and WhatsApp-first conversion design.',
   },
 ]
 
 const JOURNEY_STEPS = [
-  { label: 'PROCUREMENT NEED', sub: 'Corporate / Government / Industrial', icon: 'briefcase' },
-  { label: 'GOOGLE / AI SEARCH', sub: 'Vendor Research Queries', icon: 'search' },
-  { label: 'VENDOR DISCOVERY', sub: 'Search Results / LinkedIn', icon: 'compass' },
-  { label: 'WEBSITE / LINKEDIN', sub: 'Capabilities & Credentials', icon: 'monitor' },
-  { label: 'CREDIBILITY CHECK', sub: 'Projects / Certifications / Info', icon: 'shield' },
-  { label: 'ENQUIRY', sub: 'WhatsApp / Phone / Website', icon: 'message' },
+  { label: 'PROCUREMENT NEED', sub: 'Corporate / Government / Industrial', icon: 'briefcase', color: 'icon-badge--blue' },
+  { label: 'GOOGLE / AI SEARCH', sub: 'Vendor Research Queries', icon: 'search', color: 'icon-badge--cyan' },
+  { label: 'VENDOR DISCOVERY', sub: 'Search Results / LinkedIn', icon: 'compass', color: 'icon-badge--purple' },
+  { label: 'WEBSITE / LINKEDIN', sub: 'Capabilities & Credentials', icon: 'monitor', color: 'icon-badge--indigo' },
+  { label: 'CREDIBILITY CHECK', sub: 'Projects / Certifications / Info', icon: 'shield', color: 'icon-badge--green' },
+  { label: 'ENQUIRY', sub: 'WhatsApp / Phone / Website', icon: 'message', color: 'icon-badge--pink' },
 ]
 
 const CONTENT_CARDS = [
-  { icon: 'briefcase', title: 'Capabilities', text: 'Explain what the business can deliver.' },
-  { icon: 'book', title: 'Industry Insights', text: 'Share relevant expertise.' },
-  { icon: 'layers', title: 'Product / Service Knowledge', text: 'Explain technical offerings clearly.' },
-  { icon: 'building', title: 'Projects', text: 'Show verified projects only.' },
-  { icon: 'users', title: 'Leadership', text: 'Build professional authority.' },
-  { icon: 'help', title: 'FAQ / Buyer Guides', text: 'Answer procurement questions.' },
+  { icon: 'briefcase', color: 'icon-badge--blue', title: 'Capabilities', text: 'Explain what the business can deliver.' },
+  { icon: 'book', color: 'icon-badge--amber', title: 'Industry Insights', text: 'Share relevant expertise.' },
+  { icon: 'layers', color: 'icon-badge--cyan', title: 'Product / Service Knowledge', text: 'Explain technical offerings clearly.' },
+  { icon: 'building', color: 'icon-badge--purple', title: 'Projects', text: 'Show verified projects only.' },
+  { icon: 'users', color: 'icon-badge--pink', title: 'Leadership', text: 'Build professional authority.' },
+  { icon: 'help', color: 'icon-badge--green', title: 'FAQ / Buyer Guides', text: 'Answer procurement questions.' },
 ]
 
 const FUNNEL = [
-  { label: 'AWARENESS', sub: 'LinkedIn / Content', icon: 'eye' },
-  { label: 'SEARCH', sub: 'Google / AI Search', icon: 'search' },
-  { label: 'DISCOVERY', sub: 'Search Results / GBP', icon: 'compass' },
-  { label: 'CREDIBILITY', sub: 'Website / Capabilities', icon: 'shield' },
-  { label: 'CONSIDERATION', sub: 'Services / Projects', icon: 'target' },
-  { label: 'ENQUIRY', sub: 'WhatsApp / Phone / Website', icon: 'message' },
+  { label: 'AWARENESS', sub: 'LinkedIn / Content', icon: 'eye', color: 'icon-badge--purple' },
+  { label: 'SEARCH', sub: 'Google / AI Search', icon: 'search', color: 'icon-badge--cyan' },
+  { label: 'DISCOVERY', sub: 'Search Results / GBP', icon: 'compass', color: 'icon-badge--blue' },
+  { label: 'CREDIBILITY', sub: 'Website / Capabilities', icon: 'shield', color: 'icon-badge--teal' },
+  { label: 'CONSIDERATION', sub: 'Services / Projects', icon: 'target', color: 'icon-badge--amber' },
+  { label: 'ENQUIRY', sub: 'WhatsApp / Phone / Website', icon: 'message', color: 'icon-badge--green' },
 ]
 
 const FAQS = [
@@ -124,7 +130,7 @@ const CTA = {
 }
 
 /* ============================================================
-   ICONS, inline SVG set (stroke style, matches codebase)
+   ICONS
    ============================================================ */
 
 const ICONS = {
@@ -307,59 +313,7 @@ function PmIcon({ name, size = 20 }) {
 }
 
 /* ============================================================
-   WORKFLOW PRIMITIVES
-   ============================================================ */
-
-function Node({ label, sub = '', icon }) {
-  return (
-    <span className="pm-node">
-      {icon && (
-        <span className="pm-node__icon" aria-hidden="true">
-          <PmIcon name={icon} size={15} />
-        </span>
-      )}
-      <span className="pm-node__labels">
-        <span className="pm-node__label">{label}</span>
-        {sub && <span className="pm-node__sub">{sub}</span>}
-      </span>
-    </span>
-  )
-}
-
-function Arrow() {
-  return (
-    <span className="pm-arrow" aria-hidden="true">
-      <svg
-        width="14"
-        height="14"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="M6 9l6 6 6-6" />
-      </svg>
-    </span>
-  )
-}
-
-function Flow({ items = [], className = '', direction = 'vertical' }) {
-  return (
-    <div className={cx('pm-flow', `pm-flow--${direction}`, className)}>
-      {items.map((item, index) => (
-        <Fragment key={index}>
-          {index > 0 && <Arrow />}
-          <Node {...item} />
-        </Fragment>
-      ))}
-    </div>
-  )
-}
-
-/* ============================================================
-   FAQ ACCORDION, accessible, single-open, smooth animation
+   FAQ ACCORDION
    ============================================================ */
 
 function FaqAccordion({ faqs }) {
@@ -370,7 +324,7 @@ function FaqAccordion({ faqs }) {
       {faqs.map((faq, index) => {
         const isOpen = open === index
         return (
-          <div className="pm-faq__item glass-card" key={index}>
+          <div className={cx('pm-faq__item', 'glass-card', isOpen && 'pm-faq__item--open')} key={index}>
             <h3 className="pm-faq__heading">
               <button
                 type="button"
@@ -401,11 +355,11 @@ function FaqAccordion({ faqs }) {
               id={`pm-faq-panel-${index}`}
               role="region"
               aria-labelledby={`pm-faq-button-${index}`}
-              className="pm-faq__panel"
+              className={cx('pm-faq__panel', isOpen && 'pm-faq__panel--open')}
               style={{ gridTemplateRows: isOpen ? '1fr' : '0fr' }}
             >
               <div className="pm-faq__panel-inner">
-                <p>{faq.answer}</p>
+                <p className="pm-faq__answer">{faq.answer}</p>
               </div>
             </div>
           </div>
@@ -416,7 +370,7 @@ function FaqAccordion({ faqs }) {
 }
 
 /* ============================================================
-   COMPONENT
+   MAIN COMPONENT
    ============================================================ */
 
 export default function PortMarineIndustrialThoothukudi() {
@@ -494,10 +448,9 @@ export default function PortMarineIndustrialThoothukudi() {
 
   return (
     <div className="service-template pm-page">
-      {/* ---- Breadcrumbs ---- */}
       <Breadcrumbs />
 
-      {/* ---- Hero ---- */}
+      {/* 1. HERO SECTION */}
       <HeroSection
         layout="two-column"
         eyebrow="PORT • MARINE • INDUSTRIAL"
@@ -542,45 +495,34 @@ export default function PortMarineIndustrialThoothukudi() {
         </div>
       </HeroSection>
 
-      {/* ---- Value Strip ---- */}
+      {/* 2. VALUE STRIP */}
       <section className="section pm-value-strip">
         <div className="container">
           <ScrollReveal>
             <div className="pm-value-strip__grid">
-              <div className="pm-value-strip__item glass-card">
-                <span className="pm-value-strip__num">01</span>
-                <span className="pm-value-strip__label">BE FOUND</span>
-                <span className="pm-value-strip__text">
-                  Appear when procurement teams search for industrial suppliers and service providers.
-                </span>
-              </div>
-              <div className="pm-value-strip__item glass-card">
-                <span className="pm-value-strip__num">02</span>
-                <span className="pm-value-strip__label">BUILD CREDIBILITY</span>
-                <span className="pm-value-strip__text">
-                  Present your company professionally across search, website and business platforms.
-                </span>
-              </div>
-              <div className="pm-value-strip__item glass-card">
-                <span className="pm-value-strip__num">03</span>
-                <span className="pm-value-strip__label">GENERATE ENQUIRIES</span>
-                <span className="pm-value-strip__text">
-                  Convert high-intent searches into qualified contact opportunities.
-                </span>
-              </div>
-              <div className="pm-value-strip__item glass-card">
-                <span className="pm-value-strip__num">04</span>
-                <span className="pm-value-strip__label">REACH B2B BUYERS</span>
-                <span className="pm-value-strip__text">
-                  Build visibility across search, LinkedIn, Google Ads and AI discovery.
-                </span>
-              </div>
+              {[
+                { num: '01', label: 'BE FOUND', icon: 'search', color: 'icon-badge--cyan', text: 'Appear when procurement teams search for industrial suppliers and service providers.' },
+                { num: '02', label: 'BUILD CREDIBILITY', icon: 'shield', color: 'icon-badge--blue', text: 'Present your company professionally across search, website and business platforms.' },
+                { num: '03', label: 'GENERATE ENQUIRIES', icon: 'message', color: 'icon-badge--green', text: 'Convert high-intent searches into qualified contact opportunities.' },
+                { num: '04', label: 'REACH B2B BUYERS', icon: 'globe', color: 'icon-badge--purple', text: 'Build visibility across search, LinkedIn, Google Ads and AI discovery.' },
+              ].map((item) => (
+                <div key={item.num} className="pm-value-strip__item glass-card">
+                  <div className="pm-value-strip__header">
+                    <span className="pm-value-strip__num">{item.num}</span>
+                    <span className={cx('pm-value-strip__icon', 'icon-badge', item.color)} aria-hidden="true">
+                      <PmIcon name={item.icon} size={18} />
+                    </span>
+                  </div>
+                  <span className="pm-value-strip__label">{item.label}</span>
+                  <p className="pm-value-strip__text">{item.text}</p>
+                </div>
+              ))}
             </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* ---- Introduction ---- */}
+      {/* 3. INTRODUCTION */}
       <section className="section pm-intro">
         <div className="container">
           <div className="section-heading">
@@ -588,19 +530,21 @@ export default function PortMarineIndustrialThoothukudi() {
             <h2 className="section-heading__title">Industrial Buyers Search Before They Enquire</h2>
           </div>
           <ScrollReveal>
-            <p className="pm-intro__text">
-              B2B industrial purchasing decisions are different from consumer purchases. Potential
-              buyers research suppliers, manufacturers, shipping companies, logistics providers, marine
-              service providers, industrial contractors, chemical manufacturers, and industrial service
-              companies long before they send an enquiry. The objective of digital marketing is to make
-              the business easier to discover and evaluate. Professional credibility is part of digital
-              marketing.
-            </p>
+            <div className="pm-intro__card glass-card">
+              <p className="pm-intro__text">
+                B2B industrial purchasing decisions are different from consumer purchases. Potential
+                buyers research suppliers, manufacturers, shipping companies, logistics providers, marine
+                service providers, industrial contractors, chemical manufacturers, and industrial service
+                companies long before they send an enquiry. The objective of digital marketing is to make
+                the business easier to discover and evaluate. Professional credibility is part of digital
+                marketing.
+              </p>
+            </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* ---- Journey ---- */}
+      {/* 4. B2B JOURNEY */}
       <section className="section pm-journey">
         <div className="container">
           <div className="section-heading">
@@ -608,12 +552,25 @@ export default function PortMarineIndustrialThoothukudi() {
             <h2 className="section-heading__title">From Procurement Need to Enquiry</h2>
           </div>
           <ScrollReveal>
-            <Flow items={JOURNEY_STEPS} direction="horizontal" className="pm-journey__flow" />
+            <div className="pm-journey__grid">
+              {JOURNEY_STEPS.map((step, index) => (
+                <div className="pm-journey__card glass-card" key={step.label}>
+                  <div className="pm-journey__card-top">
+                    <span className="pm-journey__step-num">Step 0{index + 1}</span>
+                    <span className={cx('pm-journey__icon', 'icon-badge', step.color)} aria-hidden="true">
+                      <PmIcon name={step.icon} size={18} />
+                    </span>
+                  </div>
+                  <h3 className="pm-journey__card-title">{step.label}</h3>
+                  <p className="pm-journey__card-sub">{step.sub}</p>
+                </div>
+              ))}
+            </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* ---- Services ---- */}
+      {/* 5. SERVICES */}
       <section className="section pm-services">
         <div className="container">
           <div className="section-heading">
@@ -626,10 +583,12 @@ export default function PortMarineIndustrialThoothukudi() {
             {SERVICES.map((svc, i) => (
               <ScrollReveal key={svc.title} delay={i * 60}>
                 <Link to={svc.path} className="pm-service-card glass-card">
-                  <span className="pm-service-card__number">{String(i + 1).padStart(2, '0')}</span>
-                  <span className="pm-service-card__icon" aria-hidden="true">
-                    <PmIcon name={svc.icon} size={22} />
-                  </span>
+                  <div className="pm-service-card__top">
+                    <span className="pm-service-card__number">{String(i + 1).padStart(2, '0')}</span>
+                    <span className={cx('pm-service-card__icon', 'icon-badge', svc.color)} aria-hidden="true">
+                      <PmIcon name={svc.icon} size={20} />
+                    </span>
+                  </div>
                   <h3 className="pm-service-card__title">{svc.title}</h3>
                   <p className="pm-service-card__text">{svc.text}</p>
                   <span className="pm-service-card__cta">
@@ -645,7 +604,7 @@ export default function PortMarineIndustrialThoothukudi() {
         </div>
       </section>
 
-      {/* ---- Thoothukudi Port Corridor ---- */}
+      {/* 6. THOOTHUKUDI PORT CORRIDOR */}
       <section className="section pm-corridor">
         <div className="container">
           <div className="section-heading">
@@ -655,47 +614,36 @@ export default function PortMarineIndustrialThoothukudi() {
             </h2>
           </div>
           <ScrollReveal>
-            <p className="pm-corridor__text">
-              Thoothukudi&apos;s business ecosystem includes port operations, marine services,
-              industrial manufacturing, logistics, and export-oriented businesses. Generic
-              consumer-focused marketing strategies are insufficient for this environment. This page
-              is designed around the port ecosystem, industrial buyers, B2B procurement, regional
-              search, and international buyer visibility.
-            </p>
-          </ScrollReveal>
-
-          <ScrollReveal>
-            <div className="pm-corridor__network glass-card">
-              <span className="pm-corridor__node pm-corridor__node--port">
-                <PmIcon name="anchor" size={22} />
-                <span>PORT</span>
-              </span>
-              <span className="pm-corridor__link" aria-hidden="true" />
-              <span className="pm-corridor__node">
-                <PmIcon name="layers" size={22} />
-                <span>LOGISTICS</span>
-              </span>
-              <span className="pm-corridor__link" aria-hidden="true" />
-              <span className="pm-corridor__node">
-                <PmIcon name="ship" size={22} />
-                <span>MARINE</span>
-              </span>
-              <span className="pm-corridor__link" aria-hidden="true" />
-              <span className="pm-corridor__node">
-                <PmIcon name="factory" size={22} />
-                <span>MANUFACTURING</span>
-              </span>
-              <span className="pm-corridor__link" aria-hidden="true" />
-              <span className="pm-corridor__node">
-                <PmIcon name="users" size={22} />
-                <span>B2B BUYERS</span>
-              </span>
+            <div className="pm-corridor__card glass-card">
+              <p className="pm-corridor__text">
+                Thoothukudi&apos;s business ecosystem includes port operations, marine services,
+                industrial manufacturing, logistics, and export-oriented businesses. Generic
+                consumer-focused marketing strategies are insufficient for this environment. This page
+                is designed around the port ecosystem, industrial buyers, B2B procurement, regional
+                search, and international buyer visibility.
+              </p>
+              <div className="pm-corridor__network glass-card">
+                {[
+                  { title: 'PORT', icon: 'anchor', color: 'icon-badge--cyan' },
+                  { title: 'LOGISTICS', icon: 'layers', color: 'icon-badge--blue' },
+                  { title: 'MARINE', icon: 'ship', color: 'icon-badge--teal' },
+                  { title: 'MANUFACTURING', icon: 'factory', color: 'icon-badge--orange' },
+                  { title: 'B2B BUYERS', icon: 'users', color: 'icon-badge--purple' },
+                ].map((node) => (
+                  <div className="pm-corridor__node glass-card" key={node.title}>
+                    <span className={cx('pm-corridor__node-icon', 'icon-badge', node.color)} aria-hidden="true">
+                      <PmIcon name={node.icon} size={20} />
+                    </span>
+                    <span className="pm-corridor__node-title">{node.title}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* ---- LinkedIn ---- */}
+      {/* 7. LINKEDIN */}
       <section className="section pm-linkedin">
         <div className="container">
           <div className="section-heading">
@@ -703,54 +651,38 @@ export default function PortMarineIndustrialThoothukudi() {
             <h2 className="section-heading__title">Where Industrial Decision-Makers Are Looking</h2>
           </div>
           <ScrollReveal>
-            <p className="pm-linkedin__text">
-              LinkedIn is particularly relevant for B2B industrial marketing because it reaches
-              procurement managers, logistics heads, and company directors in a professional context.
-              Content themes include industry insights, company capabilities, product and service
-              updates, operational expertise, leadership content, and business milestones.
-            </p>
-          </ScrollReveal>
-
-          <ScrollReveal>
-            <div className="pm-linkedin__flow">
-              <span className="pm-linkedin__step glass-card">
-                <PmIcon name="factory" size={20} />
-                <span className="pm-linkedin__step-label">INDUSTRIAL COMPANY</span>
-              </span>
-              <span className="pm-linkedin__arrow" aria-hidden="true">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9l6 6 6-6" /></svg>
-              </span>
-              <span className="pm-linkedin__step glass-card">
-                <PmIcon name="share" size={20} />
-                <span className="pm-linkedin__step-label">LINKEDIN CONTENT</span>
-              </span>
-              <span className="pm-linkedin__arrow" aria-hidden="true">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9l6 6 6-6" /></svg>
-              </span>
-              <span className="pm-linkedin__step glass-card">
-                <PmIcon name="users" size={20} />
-                <span className="pm-linkedin__step-label">DECISION MAKER</span>
-              </span>
-              <span className="pm-linkedin__arrow" aria-hidden="true">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9l6 6 6-6" /></svg>
-              </span>
-              <span className="pm-linkedin__step glass-card">
-                <PmIcon name="globe" size={20} />
-                <span className="pm-linkedin__step-label">WEBSITE</span>
-              </span>
-              <span className="pm-linkedin__arrow" aria-hidden="true">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9l6 6 6-6" /></svg>
-              </span>
-              <span className="pm-linkedin__step glass-card">
-                <PmIcon name="message" size={20} />
-                <span className="pm-linkedin__step-label">ENQUIRY</span>
-              </span>
+            <div className="pm-linkedin__card glass-card">
+              <p className="pm-linkedin__text">
+                LinkedIn is particularly relevant for B2B industrial marketing because it reaches
+                procurement managers, logistics heads, and company directors in a professional context.
+                Content themes include industry insights, company capabilities, product and service
+                updates, operational expertise, leadership content, and business milestones.
+              </p>
+              <div className="pm-linkedin__grid">
+                {[
+                  { label: 'INDUSTRIAL COMPANY', icon: 'factory', color: 'icon-badge--orange' },
+                  { label: 'LINKEDIN CONTENT', icon: 'share', color: 'icon-badge--blue' },
+                  { label: 'DECISION MAKER', icon: 'users', color: 'icon-badge--purple' },
+                  { label: 'WEBSITE', icon: 'globe', color: 'icon-badge--cyan' },
+                  { label: 'ENQUIRY', icon: 'message', color: 'icon-badge--green' },
+                ].map((step, idx) => (
+                  <div className="pm-linkedin__step-card glass-card" key={step.label}>
+                    <div className="pm-linkedin__step-header">
+                      <span className="pm-linkedin__step-num">0{idx + 1}</span>
+                      <span className={cx('pm-linkedin__icon', 'icon-badge', step.color)} aria-hidden="true">
+                        <PmIcon name={step.icon} size={18} />
+                      </span>
+                    </div>
+                    <span className="pm-linkedin__step-label">{step.label}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* ---- Search Interface ---- */}
+      {/* 8. SEARCH INTERFACE */}
       <section className="section pm-search-ui">
         <div className="container">
           <div className="section-heading">
@@ -758,38 +690,52 @@ export default function PortMarineIndustrialThoothukudi() {
             <h2 className="section-heading__title">Be Findable When Procurement Teams Search</h2>
           </div>
           <ScrollReveal>
-            <div className="pm-search-ui__queries glass-card">
-              <div className="pm-search-ui__bar">
-                <PmIcon name="search" size={16} />
+            <div className="pm-search-ui__card glass-card">
+              <div className="pm-search-ui__bar glass-card">
+                <PmIcon name="search" size={18} />
                 <span className="pm-search-ui__placeholder">
                   &quot;industrial suppliers in Thoothukudi&quot;
                 </span>
               </div>
-              <div className="pm-search-ui__list">
-                <span>&quot;marine services Thoothukudi&quot;</span>
-                <span>&quot;shipping companies near Thoothukudi Port&quot;</span>
-                <span>&quot;logistics companies Thoothukudi&quot;</span>
-                <span>&quot;industrial service providers Thoothukudi&quot;</span>
+              <div className="pm-search-ui__pills">
+                {[
+                  'marine services Thoothukudi',
+                  'shipping companies near Thoothukudi Port',
+                  'logistics companies Thoothukudi',
+                  'industrial service providers Thoothukudi',
+                ].map((q) => (
+                  <span key={q} className="pm-search-ui__pill glass-card">
+                    <PmIcon name="search" size={14} />
+                    <span>&quot;{q}&quot;</span>
+                  </span>
+                ))}
+              </div>
+
+              <div className="pm-search-ui__grid">
+                {[
+                  { label: 'SEARCH', icon: 'search', color: 'icon-badge--cyan' },
+                  { label: 'DISCOVERY', icon: 'compass', color: 'icon-badge--purple' },
+                  { label: 'VENDOR WEBSITE', icon: 'monitor', color: 'icon-badge--blue' },
+                  { label: 'CAPABILITY CHECK', icon: 'shield', color: 'icon-badge--teal' },
+                  { label: 'CONTACT', icon: 'message', color: 'icon-badge--green' },
+                ].map((step, idx) => (
+                  <div className="pm-search-ui__step-card glass-card" key={step.label}>
+                    <div className="pm-search-ui__step-header">
+                      <span className="pm-search-ui__step-num">0{idx + 1}</span>
+                      <span className={cx('pm-search-ui__icon', 'icon-badge', step.color)} aria-hidden="true">
+                        <PmIcon name={step.icon} size={18} />
+                      </span>
+                    </div>
+                    <span className="pm-search-ui__step-label">{step.label}</span>
+                  </div>
+                ))}
               </div>
             </div>
-          </ScrollReveal>
-          <ScrollReveal>
-            <Flow
-              items={[
-                { label: 'SEARCH', icon: 'search' },
-                { label: 'DISCOVERY', icon: 'compass' },
-                { label: 'VENDOR WEBSITE', icon: 'monitor' },
-                { label: 'CAPABILITY CHECK', icon: 'shield' },
-                { label: 'CONTACT', icon: 'message' },
-              ]}
-              direction="horizontal"
-              className="pm-search-ui__flow"
-            />
           </ScrollReveal>
         </div>
       </section>
 
-      {/* ---- Google Search + Maps ---- */}
+      {/* 9. GOOGLE SEARCH + MAPS */}
       <section className="section pm-google">
         <div className="container">
           <div className="section-heading">
@@ -798,22 +744,41 @@ export default function PortMarineIndustrialThoothukudi() {
           </div>
           <ScrollReveal>
             <div className="pm-google__mockup glass-card">
-              <div className="pm-google__bar">
-                <PmIcon name="search" size={16} />
+              <div className="pm-google__bar glass-card">
+                <PmIcon name="search" size={18} />
                 <span className="pm-google__query">industrial suppliers near Thoothukudi Port</span>
               </div>
               <div className="pm-google__results">
                 <div className="pm-google__result glass-card">
-                  <div className="pm-google__result-title">Industrial Supplier Co.</div>
-                  <div className="pm-google__result-meta">Category: Industrial Supplier | Location: SIPCOT, Thoothukudi</div>
-                  <div className="pm-google__result-services">Services: Manufacturing, Logistics, Export</div>
-                  <div className="pm-google__result-info">Website | Phone | Directions</div>
+                  <div className="pm-google__result-header">
+                    <span className="icon-badge icon-badge--cyan" aria-hidden="true"><PmIcon name="factory" size={18} /></span>
+                    <div>
+                      <h3 className="pm-google__result-title">Industrial Supplier Co.</h3>
+                      <span className="pm-google__result-meta">Category: Industrial Supplier | Location: SIPCOT, Thoothukudi</span>
+                    </div>
+                  </div>
+                  <p className="pm-google__result-services">Services: Manufacturing, Logistics, Export</p>
+                  <div className="pm-google__result-actions">
+                    <span className="pm-google__action glass-card"><PmIcon name="globe" size={13} /> Website</span>
+                    <span className="pm-google__action glass-card"><PmIcon name="phone" size={13} /> Phone</span>
+                    <span className="pm-google__action glass-card"><PmIcon name="mappin" size={13} /> Directions</span>
+                  </div>
                 </div>
+
                 <div className="pm-google__result glass-card">
-                  <div className="pm-google__result-title">Marine Services Ltd.</div>
-                  <div className="pm-google__result-meta">Category: Marine Services | Location: Thoothukudi Port</div>
-                  <div className="pm-google__result-services">Services: Shipping, Marine Maintenance, Logistics</div>
-                  <div className="pm-google__result-info">Website | Phone | Directions</div>
+                  <div className="pm-google__result-header">
+                    <span className="icon-badge icon-badge--teal" aria-hidden="true"><PmIcon name="ship" size={18} /></span>
+                    <div>
+                      <h3 className="pm-google__result-title">Marine Services Ltd.</h3>
+                      <span className="pm-google__result-meta">Category: Marine Services | Location: Thoothukudi Port</span>
+                    </div>
+                  </div>
+                  <p className="pm-google__result-services">Services: Shipping, Marine Maintenance, Logistics</p>
+                  <div className="pm-google__result-actions">
+                    <span className="pm-google__action glass-card"><PmIcon name="globe" size={13} /> Website</span>
+                    <span className="pm-google__action glass-card"><PmIcon name="phone" size={13} /> Phone</span>
+                    <span className="pm-google__action glass-card"><PmIcon name="mappin" size={13} /> Directions</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -821,7 +786,7 @@ export default function PortMarineIndustrialThoothukudi() {
         </div>
       </section>
 
-      {/* ---- GEO / AEO ---- */}
+      {/* 10. GEO / AEO */}
       <section className="section pm-geo">
         <div className="container">
           <div className="section-heading">
@@ -836,39 +801,29 @@ export default function PortMarineIndustrialThoothukudi() {
               systems can better understand company, industry, location, services, and capabilities.
             </p>
           </ScrollReveal>
-
           <ScrollReveal>
             <div className="pm-geo__signals">
-              <div className="pm-geo__signal glass-card">
-                <PmIcon name="building" size={18} />
-                <span>Company Entity</span>
-              </div>
-              <div className="pm-geo__signal glass-card">
-                <PmIcon name="mappin" size={18} />
-                <span>Location</span>
-              </div>
-              <div className="pm-geo__signal glass-card">
-                <PmIcon name="briefcase" size={18} />
-                <span>Services</span>
-              </div>
-              <div className="pm-geo__signal glass-card">
-                <PmIcon name="layers" size={18} />
-                <span>Capabilities</span>
-              </div>
-              <div className="pm-geo__signal glass-card">
-                <PmIcon name="globe" size={18} />
-                <span>Website Content</span>
-              </div>
-              <div className="pm-geo__signal glass-card">
-                <PmIcon name="check" size={18} />
-                <span>Structured Data</span>
-              </div>
+              {[
+                { icon: 'building', label: 'Company Entity', color: 'icon-badge--purple' },
+                { icon: 'mappin', label: 'Location', color: 'icon-badge--red' },
+                { icon: 'briefcase', label: 'Services', color: 'icon-badge--blue' },
+                { icon: 'layers', label: 'Capabilities', color: 'icon-badge--cyan' },
+                { icon: 'globe', label: 'Website Content', color: 'icon-badge--amber' },
+                { icon: 'check', label: 'Structured Data', color: 'icon-badge--green' },
+              ].map((sig) => (
+                <div className="pm-geo__signal glass-card" key={sig.label}>
+                  <span className={cx('pm-geo__signal-icon', 'icon-badge', sig.color)} aria-hidden="true">
+                    <PmIcon name={sig.icon} size={18} />
+                  </span>
+                  <span className="pm-geo__signal-label">{sig.label}</span>
+                </div>
+              ))}
             </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* ---- B2B Credibility ---- */}
+      {/* 11. B2B CREDIBILITY */}
       <section className="section pm-credibility">
         <div className="container">
           <div className="section-heading">
@@ -882,39 +837,35 @@ export default function PortMarineIndustrialThoothukudi() {
               what capabilities you have, and how to contact you.
             </p>
           </ScrollReveal>
-
           <ScrollReveal>
             <div className="pm-credibility__mockup glass-card">
               <div className="pm-credibility__nav">
-                <span>About</span>
-                <span>Services</span>
-                <span>Industries</span>
-                <span>Capabilities</span>
-                <span>Projects</span>
-                <span>Contact</span>
+                <span className="pm-credibility__nav-item glass-card">About</span>
+                <span className="pm-credibility__nav-item glass-card">Services</span>
+                <span className="pm-credibility__nav-item glass-card">Industries</span>
+                <span className="pm-credibility__nav-item glass-card">Capabilities</span>
+                <span className="pm-credibility__nav-item glass-card">Projects</span>
+                <span className="pm-credibility__nav-item glass-card">Contact</span>
               </div>
               <div className="pm-credibility__body">
-                <div className="pm-credibility__hero">
+                <div className="pm-credibility__hero glass-card">
                   <span className="pm-credibility__hero-label">YOUR COMPANY NAME</span>
                   <span className="pm-credibility__hero-sub">Industrial Solutions | Thoothukudi</span>
                 </div>
                 <div className="pm-credibility__grid">
-                  <div className="pm-credibility__grid-item glass-card">
-                    <PmIcon name="briefcase" size={16} />
-                    <span>Capabilities</span>
-                  </div>
-                  <div className="pm-credibility__grid-item glass-card">
-                    <PmIcon name="factory" size={16} />
-                    <span>Infrastructure</span>
-                  </div>
-                  <div className="pm-credibility__grid-item glass-card">
-                    <PmIcon name="layers" size={16} />
-                    <span>Products</span>
-                  </div>
-                  <div className="pm-credibility__grid-item glass-card">
-                    <PmIcon name="building" size={16} />
-                    <span>Projects</span>
-                  </div>
+                  {[
+                    { icon: 'briefcase', label: 'Capabilities', color: 'icon-badge--blue' },
+                    { icon: 'factory', label: 'Infrastructure', color: 'icon-badge--orange' },
+                    { icon: 'layers', label: 'Products', color: 'icon-badge--cyan' },
+                    { icon: 'building', label: 'Projects', color: 'icon-badge--purple' },
+                  ].map((item) => (
+                    <div key={item.label} className="pm-credibility__grid-item glass-card">
+                      <span className={cx('pm-credibility__icon', 'icon-badge', item.color)} aria-hidden="true">
+                        <PmIcon name={item.icon} size={18} />
+                      </span>
+                      <span className="pm-credibility__label">{item.label}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -922,7 +873,7 @@ export default function PortMarineIndustrialThoothukudi() {
         </div>
       </section>
 
-      {/* ---- Content Strategy ---- */}
+      {/* 12. CONTENT STRATEGY */}
       <section className="section pm-content">
         <div className="container">
           <div className="section-heading">
@@ -933,7 +884,7 @@ export default function PortMarineIndustrialThoothukudi() {
             {CONTENT_CARDS.map((card, i) => (
               <ScrollReveal key={card.title} delay={i * 60}>
                 <div className="pm-content-card glass-card">
-                  <span className="pm-content-card__icon" aria-hidden="true">
+                  <span className={cx('pm-content-card__icon', 'icon-badge', card.color)} aria-hidden="true">
                     <PmIcon name={card.icon} size={20} />
                   </span>
                   <h3 className="pm-content-card__title">{card.title}</h3>
@@ -945,7 +896,7 @@ export default function PortMarineIndustrialThoothukudi() {
         </div>
       </section>
 
-      {/* ---- B2B Funnel ---- */}
+      {/* 13. B2B FUNNEL */}
       <section className="section pm-funnel">
         <div className="container">
           <div className="section-heading">
@@ -953,12 +904,25 @@ export default function PortMarineIndustrialThoothukudi() {
             <h2 className="section-heading__title">The Industrial Marketing Funnel</h2>
           </div>
           <ScrollReveal>
-            <Flow items={FUNNEL} direction="horizontal" className="pm-funnel__flow" />
+            <div className="pm-funnel__grid">
+              {FUNNEL.map((step, index) => (
+                <div key={step.label} className="pm-funnel__card glass-card">
+                  <div className="pm-funnel__card-top">
+                    <span className="pm-funnel__step-num">Step 0{index + 1}</span>
+                    <span className={cx('pm-funnel__icon', 'icon-badge', step.color)} aria-hidden="true">
+                      <PmIcon name={step.icon} size={18} />
+                    </span>
+                  </div>
+                  <h3 className="pm-funnel__card-title">{step.label}</h3>
+                  <p className="pm-funnel__card-sub">{step.sub}</p>
+                </div>
+              ))}
+            </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* ---- FAQ ---- */}
+      {/* 14. FAQ */}
       <section className="section pm-faq">
         <div className="container">
           <div className="section-heading">
@@ -971,7 +935,7 @@ export default function PortMarineIndustrialThoothukudi() {
         </div>
       </section>
 
-      {/* ---- Locations ---- */}
+      {/* 15. LOCATIONS */}
       <section className="section pm-locations">
         <div className="container">
           <div className="section-heading">
@@ -980,12 +944,11 @@ export default function PortMarineIndustrialThoothukudi() {
               Industrial Digital Marketing Across Tamil Nadu &amp; Malaysia
             </h2>
           </div>
-
           <div className="pm-locations__grid">
             <ScrollReveal className="pm-locations__cell">
               <div className="pm-location-card glass-card">
-                <span className="pm-location-card__icon" aria-hidden="true">
-                  <PmIcon name="mappin" size={26} />
+                <span className="icon-badge icon-badge--cyan" aria-hidden="true">
+                  <PmIcon name="mappin" size={22} />
                 </span>
                 <h3 className="pm-location-card__title">Tamil Nadu</h3>
                 <p className="pm-location-card__text">
@@ -997,8 +960,8 @@ export default function PortMarineIndustrialThoothukudi() {
             </ScrollReveal>
             <ScrollReveal className="pm-locations__cell" delay={100}>
               <div className="pm-location-card glass-card">
-                <span className="pm-location-card__icon" aria-hidden="true">
-                  <PmIcon name="globe" size={26} />
+                <span className="icon-badge icon-badge--blue" aria-hidden="true">
+                  <PmIcon name="globe" size={22} />
                 </span>
                 <h3 className="pm-location-card__title">Malaysia</h3>
                 <p className="pm-location-card__text">
@@ -1012,7 +975,7 @@ export default function PortMarineIndustrialThoothukudi() {
         </div>
       </section>
 
-      {/* ---- Related Industries & Explore ---- */}
+      {/* 16. RELATED INDUSTRIES */}
       <section className="section pm-related">
         <div className="container">
           <div className="section-heading">
@@ -1045,7 +1008,7 @@ export default function PortMarineIndustrialThoothukudi() {
         </div>
       </section>
 
-      {/* ---- Final CTA ---- */}
+      {/* 17. FINAL CTA & CONTACT */}
       <CTASection
         title={CTA.title}
         primaryLabel={CTA.label}

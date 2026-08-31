@@ -12,7 +12,7 @@ import {
   faqPageSchema,
   breadcrumbListSchema,
 } from '../../utils/schema.js'
-import { buildWhatsAppLink } from '../../utils/helpers.js'
+import { buildWhatsAppLink, cx } from '../../utils/helpers.js'
 import {
   WHATSAPP_NUMBER,
   WHATSAPP_MESSAGE,
@@ -42,42 +42,56 @@ const SERVICES = [
     title: 'SEO for Thoothukudi Businesses',
     text: 'Local and regional keyword targeting for Tamil Nadu’s port city market.',
     path: '/services/seo/thoothukudi/',
+    icon: 'seo',
+    color: 'icon-badge--purple',
   },
   {
     number: '02',
     title: 'Local SEO & GBP Optimization',
     text: 'Rank in the Thoothukudi Google Maps pack for your service category.',
     path: '/services/local-seo/thoothukudi/',
+    icon: 'local',
+    color: 'icon-badge--blue',
   },
   {
     number: '03',
     title: 'GEO & AEO',
     text: 'Particularly valuable for B2B businesses where procurement teams now use AI tools for vendor research.',
     path: '/services/geo-aeo-ai-search/',
+    icon: 'geo',
+    color: 'icon-badge--cyan',
   },
   {
     number: '04',
     title: 'Google Ads',
     text: 'Industrial, marine, and manufacturing categories with B2B targeting.',
     path: '/services/google-ads/thoothukudi/',
+    icon: 'ads',
+    color: 'icon-badge--pink',
   },
   {
     number: '05',
     title: 'Social Media',
     text: 'LinkedIn and Facebook for B2B; Instagram for retail and hospitality.',
     path: '/services/social-media-marketing/',
+    icon: 'social',
+    color: 'icon-badge--orange',
   },
   {
     number: '06',
     title: 'Website Design & Development',
     text: 'SEO-ready websites for Thoothukudi businesses.',
     path: '/services/website-design-development/',
+    icon: 'web',
+    color: 'icon-badge--green',
   },
   {
     number: '07',
     title: 'AI Business Automation',
     text: 'Workflow tools for port logistics, manufacturing, and service businesses.',
     path: '/services/ai-business-automation/',
+    icon: 'automation',
+    color: 'icon-badge--gold',
   },
 ]
 
@@ -86,16 +100,19 @@ const INDUSTRIES = [
     title: 'Port, Shipping & Logistics',
     text: "Thoothukudi Port is one of India’s busiest. We help shipping agencies, freight forwarders, customs brokers, and logistics businesses build professional digital presence and generate inbound enquiries from exporters and importers.",
     icon: 'port',
+    color: 'icon-badge--purple',
   },
   {
     title: 'Chemical & Industrial Manufacturing',
     text: "The SIPCOT industrial estate and surrounding areas host a significant chemical and industrial manufacturing cluster. We build B2B digital marketing for manufacturers targeting national and international buyers, including LinkedIn campaigns, website content that converts procurement teams, and AI search visibility.",
     icon: 'industrial',
+    color: 'icon-badge--blue',
   },
   {
     title: 'Fishing & Marine',
     text: "From mechanized fishing boats to seafood export businesses, Thoothukudi’s marine sector is increasingly reaching buyers and suppliers online. We help marine businesses build the digital presence needed to access modern B2B and B2C channels.",
     icon: 'marine',
+    color: 'icon-badge--cyan',
   },
 ]
 
@@ -229,8 +246,61 @@ export default function Thoothukudi() {
               <ScrollReveal key={service.number} delay={index * 60}>
                 <article className="thoothukudi-service-card glass-card">
                   <div className="thoothukudi-service-card__top">
-                    <span className="thoothukudi-service-card__badge" aria-hidden="true">
-                      {service.number}
+                    <span className={cx('thoothukudi-service-card__badge', 'icon-badge', service.color)} aria-hidden="true">
+                      {service.icon === 'seo' && (
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <circle cx="11" cy="11" r="8" />
+                          <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                        </svg>
+                      )}
+                      {service.icon === 'local' && (
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                          <circle cx="12" cy="10" r="3" />
+                        </svg>
+                      )}
+                      {service.icon === 'geo' && (
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" />
+                        </svg>
+                      )}
+                      {service.icon === 'ads' && (
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <circle cx="12" cy="12" r="10" />
+                          <circle cx="12" cy="12" r="6" />
+                          <circle cx="12" cy="12" r="2" />
+                        </svg>
+                      )}
+                      {service.icon === 'social' && (
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <circle cx="18" cy="5" r="3" />
+                          <circle cx="6" cy="12" r="3" />
+                          <circle cx="18" cy="19" r="3" />
+                          <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" />
+                          <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
+                        </svg>
+                      )}
+                      {service.icon === 'web' && (
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                          <line x1="8" y1="21" x2="16" y2="21" />
+                          <line x1="12" y1="17" x2="12" y2="21" />
+                        </svg>
+                      )}
+                      {service.icon === 'automation' && (
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <rect x="4" y="4" width="16" height="16" rx="2" />
+                          <rect x="9" y="9" width="6" height="6" />
+                          <line x1="9" y1="1" x2="9" y2="4" />
+                          <line x1="15" y1="1" x2="15" y2="4" />
+                          <line x1="9" y1="20" x2="9" y2="23" />
+                          <line x1="15" y1="20" x2="15" y2="23" />
+                          <line x1="20" y1="9" x2="23" y2="9" />
+                          <line x1="20" y1="15" x2="23" y2="15" />
+                          <line x1="1" y1="9" x2="4" y2="9" />
+                          <line x1="1" y1="15" x2="4" y2="15" />
+                        </svg>
+                      )}
                     </span>
                     <span className="thoothukudi-service-card__number" aria-hidden="true">
                       {service.number}
@@ -274,7 +344,7 @@ export default function Thoothukudi() {
             {INDUSTRIES.map((industry, index) => (
               <ScrollReveal key={industry.title} delay={index * 80}>
                 <article className="thoothukudi-industry-card glass-card">
-                  <div className="thoothukudi-industry-card__icon" aria-hidden="true">
+                  <div className={cx('thoothukudi-industry-card__icon', 'icon-badge', industry.color)} aria-hidden="true">
                     {industry.icon === 'port' && (
                       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M2 20h20" />

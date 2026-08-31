@@ -31,6 +31,16 @@
   box-shadow: 0 0 40px rgba(139, 92, 246, 0.15);
 }
 
+.founder-hero__portrait-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
 .founder-hero__portrait::before {
   content: '';
   position: absolute;
@@ -773,9 +783,9 @@
 /* ---- Connect Section ---- */
 .founder-connect-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
-  max-width: 900px;
+  max-width: 1100px;
   margin-inline: auto;
 }
 
@@ -804,19 +814,48 @@
   font-size: 1.25rem;
 }
 
-.founder-connect-card__icon--whatsapp {
-  background: rgba(34, 211, 238, 0.12);
-  color: var(--color-cyan);
+.founder-connect-card__icon--instagram {
+  background: linear-gradient(135deg, #ec4899, #db2777) !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 15px rgba(236, 72, 153, 0.35) !important;
+}
+
+.founder-connect-card__icon--facebook {
+  background: linear-gradient(135deg, #1877f2, #0d52b5) !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 15px rgba(24, 119, 242, 0.35) !important;
 }
 
 .founder-connect-card__icon--linkedin {
-  background: rgba(59, 130, 246, 0.12);
-  color: var(--color-blue);
+  background: linear-gradient(135deg, #0077b5, #004182) !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 15px rgba(0, 119, 181, 0.35) !important;
 }
 
-.founder-connect-card__icon--instagram {
-  background: rgba(236, 72, 153, 0.12);
-  color: var(--color-pink);
+.founder-connect-card__icon--x {
+  background: linear-gradient(135deg, #334155, #0f172a) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.15) !important;
+}
+
+.founder-connect-card__icon--youtube {
+  background: linear-gradient(135deg, #ff0000, #c40000) !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.35) !important;
+}
+
+.founder-connect-card__icon--pinterest {
+  background: linear-gradient(135deg, #e60023, #ad001a) !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 15px rgba(230, 0, 35, 0.35) !important;
+}
+
+.founder-connect-card__icon--medium {
+  background: linear-gradient(135deg, #1e293b, #090d16) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.15) !important;
 }
 
 .founder-connect-card__label {

@@ -38,65 +38,71 @@ const SERVICES = [
   {
     title: 'SEO for Madurai Textile Businesses',
     icon: 'search',
+    color: 'icon-badge--magenta',
     path: '/services/seo/',
     text: 'Local and regional keyword targeting specific to your industry category and buyer search patterns in Tamil Nadu and Malaysia.',
   },
   {
     title: 'GEO & AEO, AI Search Visibility',
     icon: 'sparkles',
+    color: 'icon-badge--amber',
     path: '/services/geo-aeo-ai-search/',
     text: 'AI search visibility for industry-specific queries your clients are asking ChatGPT, Perplexity and Google AI Overviews.',
   },
   {
     title: 'Local SEO & Google Business Profile',
     icon: 'mappin',
+    color: 'icon-badge--purple',
     path: '/services/local-seo/',
     text: 'Google Maps and GBP optimization, particularly important for businesses where clients search for a provider near their location.',
   },
   {
     title: 'Google Ads for High-Intent Textile Buyers',
     icon: 'megaphone',
+    color: 'icon-badge--blue',
     path: '/services/google-ads/',
     text: 'Paid search campaigns targeting high-intent buyers in your category, structured for WhatsApp enquiry conversion.',
   },
   {
     title: 'Social Media Marketing for Textile Brands',
     icon: 'share',
+    color: 'icon-badge--pink',
     path: '/services/social-media-marketing/',
     text: "Platform-specific content and advertising for your industry’s audience demographics.",
   },
   {
     title: 'SEO-Ready Website Development',
     icon: 'code',
+    color: 'icon-badge--cyan',
     path: '/services/website-design-development/',
     text: 'SEO-ready sites with industry-appropriate content architecture and WhatsApp-first conversion design.',
   },
 ]
 
 const HERITAGE_CATEGORIES = [
-  { icon: 'layers', title: 'Silk Sarees', text: "Madurai’s signature textile craft serving buyers across Tamil Nadu and the diaspora." },
-  { icon: 'tag', title: 'Dress Materials', text: 'Wholesale and retail dress material businesses reaching buyers through digital channels.' },
-  { icon: 'package', title: 'Readymade Garments', text: 'Manufacturers and retailers building online visibility for their garment collections.' },
-  { icon: 'layers', title: 'Fabric Businesses', text: 'Fabric suppliers and traders extending their reach beyond the traditional market.' },
-  { icon: 'briefcase', title: 'Textile Wholesalers', text: 'Wholesale businesses discovering new retail and B2B buyers through online search.' },
-  { icon: 'globe', title: 'Export-Oriented', text: 'Textile exporters reaching international buyers through digital presence and e-commerce.' },
+  { icon: 'layers', color: 'icon-badge--magenta', title: 'Silk Sarees', text: "Madurai’s signature textile craft serving buyers across Tamil Nadu and the diaspora." },
+  { icon: 'tag', color: 'icon-badge--amber', title: 'Dress Materials', text: 'Wholesale and retail dress material businesses reaching buyers through digital channels.' },
+  { icon: 'package', color: 'icon-badge--purple', title: 'Readymade Garments', text: 'Manufacturers and retailers building online visibility for their garment collections.' },
+  { icon: 'layers', color: 'icon-badge--blue', title: 'Fabric Businesses', text: 'Fabric suppliers and traders extending their reach beyond the traditional market.' },
+  { icon: 'briefcase', color: 'icon-badge--green', title: 'Textile Wholesalers', text: 'Wholesale businesses discovering new retail and B2B buyers through online search.' },
+  { icon: 'globe', color: 'icon-badge--cyan', title: 'Export-Oriented', text: 'Textile exporters reaching international buyers through digital presence and e-commerce.' },
 ]
 
 const JOURNEY_STEPS = [
-  { label: 'DISCOVER', sub: 'Google / Instagram / Facebook', icon: 'search' },
-  { label: 'EXPLORE', sub: 'Website / Catalogue', icon: 'monitor' },
-  { label: 'TRUST', sub: 'Photography / Details / Brand', icon: 'shield' },
-  { label: 'ENQUIRE', sub: 'WhatsApp / Contact', icon: 'message' },
-  { label: 'BUY', sub: 'Website / Marketplace / Direct', icon: 'check' },
+  { label: 'DISCOVER', sub: 'Google / Instagram / Facebook', icon: 'search', color: 'icon-badge--magenta' },
+  { label: 'EXPLORE', sub: 'Website / Catalogue', icon: 'monitor', color: 'icon-badge--amber' },
+  { label: 'TRUST', sub: 'Photography / Details / Brand', icon: 'shield', color: 'icon-badge--purple' },
+  { label: 'ENQUIRE', sub: 'WhatsApp / Contact', icon: 'message', color: 'icon-badge--blue' },
+  { label: 'BUY', sub: 'Website / Marketplace / Direct', icon: 'check', color: 'icon-badge--green' },
 ]
 
 const PHOTOGRAPHY_STEPS = [
-  { icon: 'tag', label: 'White Background', desc: 'Product shots on clean backgrounds for e-commerce listings.' },
-  { icon: 'star', label: 'Lifestyle', desc: 'Saree worn and styled in aspirational settings for social media.' },
-  { icon: 'layers', label: 'Texture', desc: 'Close-up shots showing fabric weave and texture detail.' },
-  { icon: 'eye', label: 'Border Detail', desc: 'Border and pallu detail shots highlighting craftsmanship.' },
-  { icon: 'monitor', label: 'Drape', desc: 'How the saree drapes and falls when worn.' },
-  { icon: 'share', label: 'Social Media Hero', desc: 'Hero imagery optimized for Instagram and Facebook.' },
+  { icon: 'tag', color: 'icon-badge--magenta', label: 'White Background', desc: 'Product shots on clean backgrounds for e-commerce listings.' },
+  { icon: 'star', color: 'icon-badge--amber', label: 'Lifestyle', desc: 'Saree worn and styled in aspirational settings for social media.' },
+  { icon: 'layers', color: 'icon-badge--purple', label: 'Texture', desc: 'Close-up shots showing fabric weave and texture detail.' },
+  { icon: 'eye', color: 'icon-badge--cyan', label: 'Border Detail', desc: 'Border and pallu detail shots highlighting craftsmanship.' },
+  { icon: 'monitor', color: 'icon-badge--blue', label: 'Drape', desc: 'How the saree drapes and falls when worn.' },
+  { icon: 'share', color: 'icon-badge--pink', label: 'Social Media Hero', desc: 'Hero imagery optimized for Instagram and Facebook.' },
 ]
 
 const SEARCH_QUERIES = {
@@ -107,13 +113,13 @@ const SEARCH_QUERIES = {
 }
 
 const BUSINESS_TYPES = [
-  { icon: 'layers', title: 'Silk Saree Retailers' },
-  { icon: 'tag', title: 'Dress Material Wholesalers' },
-  { icon: 'package', title: 'Readymade Garment Manufacturers' },
-  { icon: 'layers', title: 'Fabric Suppliers' },
-  { icon: 'briefcase', title: 'Textile Traders' },
-  { icon: 'globe', title: 'Export-Oriented Businesses' },
-  { icon: 'shopping-cart', title: 'Online Textile Stores' },
+  { icon: 'layers', color: 'icon-badge--magenta', title: 'Silk Saree Retailers' },
+  { icon: 'tag', color: 'icon-badge--amber', title: 'Dress Material Wholesalers' },
+  { icon: 'package', color: 'icon-badge--purple', title: 'Readymade Garment Manufacturers' },
+  { icon: 'layers', color: 'icon-badge--blue', title: 'Fabric Suppliers' },
+  { icon: 'briefcase', color: 'icon-badge--green', title: 'Textile Traders' },
+  { icon: 'globe', color: 'icon-badge--cyan', title: 'Export-Oriented Businesses' },
+  { icon: 'shopping-cart', color: 'icon-badge--pink', title: 'Online Textile Stores' },
 ]
 
 const BUYER_TYPES = {
@@ -351,45 +357,6 @@ function TmIcon({ name, size = 20 }) {
   )
 }
 
-function Node({ label, sub = '', icon }) {
-  return (
-    <span className="tm-node">
-      {icon && (
-        <span className="tm-node__icon" aria-hidden="true">
-          <TmIcon name={icon} size={15} />
-        </span>
-      )}
-      <span className="tm-node__labels">
-        <span className="tm-node__label">{label}</span>
-        {sub && <span className="tm-node__sub">{sub}</span>}
-      </span>
-    </span>
-  )
-}
-
-function Arrow() {
-  return (
-    <span className="tm-arrow" aria-hidden="true">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M6 9l6 6 6-6" />
-      </svg>
-    </span>
-  )
-}
-
-function Flow({ items = [], className = '', direction = 'vertical' }) {
-  return (
-    <div className={cx('tm-flow', `tm-flow--${direction}`, className)}>
-      {items.map((item, index) => (
-        <Fragment key={index}>
-          {index > 0 && <Arrow />}
-          <Node {...item} />
-        </Fragment>
-      ))}
-    </div>
-  )
-}
-
 function FaqAccordion({ faqs }) {
   const [open, setOpen] = useState(null)
 
@@ -398,7 +365,7 @@ function FaqAccordion({ faqs }) {
       {faqs.map((faq, index) => {
         const isOpen = open === index
         return (
-          <div className="tm-faq__item glass-card" key={index}>
+          <div className={cx('tm-faq__item', 'glass-card', isOpen && 'tm-faq__item--open')} key={index}>
             <h3 className="tm-faq__heading">
               <button
                 type="button"
@@ -420,11 +387,11 @@ function FaqAccordion({ faqs }) {
               id={`tm-faq-panel-${index}`}
               role="region"
               aria-labelledby={`tm-faq-button-${index}`}
-              className="tm-faq__panel"
+              className={cx('tm-faq__panel', isOpen && 'tm-faq__panel--open')}
               style={{ gridTemplateRows: isOpen ? '1fr' : '0fr' }}
             >
               <div className="tm-faq__panel-inner">
-                <p>{faq.answer}</p>
+                <p className="tm-faq__answer">{faq.answer}</p>
               </div>
             </div>
           </div>
@@ -514,7 +481,7 @@ export default function TextilesMadurai() {
     <div className="service-template tm-page">
       <Breadcrumbs />
 
-      {/* Hero */}
+      {/* 2. HERO SECTION */}
       <HeroSection
         layout="two-column"
         eyebrow="MADURAI TEXTILES • DIGITAL GROWTH"
@@ -543,37 +510,34 @@ export default function TextilesMadurai() {
         </div>
       </HeroSection>
 
-      {/* Value Strip */}
+      {/* 3. SMALL HIGHLIGHT / FEATURE CARDS */}
       <section className="section tm-value-strip">
         <div className="container">
           <ScrollReveal>
             <div className="tm-value-strip__grid">
-              <div className="tm-value-strip__item glass-card">
-                <span className="tm-value-strip__num">01</span>
-                <span className="tm-value-strip__label">GET DISCOVERED</span>
-                <span className="tm-value-strip__text">Appear when buyers search for textiles, sarees and fabric businesses across Google, social media and AI search.</span>
-              </div>
-              <div className="tm-value-strip__item glass-card">
-                <span className="tm-value-strip__num">02</span>
-                <span className="tm-value-strip__label">BUILD ONLINE PRESENCE</span>
-                <span className="tm-value-strip__text">Create a professional website, social media presence and Google Business Profile that builds trust with buyers.</span>
-              </div>
-              <div className="tm-value-strip__item glass-card">
-                <span className="tm-value-strip__num">03</span>
-                <span className="tm-value-strip__label">REACH GLOBAL BUYERS</span>
-                <span className="tm-value-strip__text">Extend your reach beyond Madurai to buyers across Tamil Nadu, India, Malaysia, Singapore and the diaspora.</span>
-              </div>
-              <div className="tm-value-strip__item glass-card">
-                <span className="tm-value-strip__num">04</span>
-                <span className="tm-value-strip__label">SELL ONLINE</span>
-                <span className="tm-value-strip__text">Convert digital attention into WhatsApp messages, enquiries and orders from retail and wholesale buyers.</span>
-              </div>
+              {[
+                { num: '01', label: 'GET DISCOVERED', icon: 'search', color: 'icon-badge--magenta', text: 'Appear when buyers search for textiles, sarees and fabric businesses across Google, social media and AI search.' },
+                { num: '02', label: 'BUILD ONLINE PRESENCE', icon: 'monitor', color: 'icon-badge--amber', text: 'Create a professional website, social media presence and Google Business Profile that builds trust with buyers.' },
+                { num: '03', label: 'REACH GLOBAL BUYERS', icon: 'globe', color: 'icon-badge--purple', text: 'Extend your reach beyond Madurai to buyers across Tamil Nadu, India, Malaysia, Singapore and the diaspora.' },
+                { num: '04', label: 'SELL ONLINE', icon: 'whatsapp', color: 'icon-badge--green', text: 'Convert digital attention into WhatsApp messages, enquiries and orders from retail and wholesale buyers.' },
+              ].map((item) => (
+                <div key={item.num} className="tm-value-strip__item glass-card">
+                  <div className="tm-value-strip__header">
+                    <span className="tm-value-strip__num">{item.num}</span>
+                    <span className={cx('tm-value-strip__icon', 'icon-badge', item.color)} aria-hidden="true">
+                      <TmIcon name={item.icon} size={18} />
+                    </span>
+                  </div>
+                  <span className="tm-value-strip__label">{item.label}</span>
+                  <p className="tm-value-strip__text">{item.text}</p>
+                </div>
+              ))}
             </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* Textile Heritage */}
+      {/* 4. TEXTILE HERITAGE */}
       <section className="section tm-heritage" style={{ scrollMarginTop: '6rem' }}>
         <div className="container">
           <div className="section-heading">
@@ -584,8 +548,10 @@ export default function TextilesMadurai() {
             <div className="tm-heritage__grid">
               {HERITAGE_CATEGORIES.map((cat) => (
                 <div className="tm-heritage__card glass-card" key={cat.title}>
-                  <TmIcon name={cat.icon} size={22} />
-                  <h4 className="tm-heritage__title">{cat.title}</h4>
+                  <span className={cx('tm-heritage__icon', 'icon-badge', cat.color)} aria-hidden="true">
+                    <TmIcon name={cat.icon} size={20} />
+                  </span>
+                  <h3 className="tm-heritage__title">{cat.title}</h3>
                   <p className="tm-heritage__text">{cat.text}</p>
                 </div>
               ))}
@@ -594,7 +560,7 @@ export default function TextilesMadurai() {
         </div>
       </section>
 
-      {/* Digital Transformation */}
+      {/* 5. DIGITAL TRANSFORMATION */}
       <section className="section tm-digital-transform" style={{ scrollMarginTop: '6rem' }}>
         <div className="container">
           <div className="section-heading">
@@ -602,24 +568,33 @@ export default function TextilesMadurai() {
             <h2 className="section-heading__title">Take Madurai&rsquo;s Textile Trade Beyond the Traditional Market</h2>
           </div>
           <ScrollReveal>
-            <Flow
-              items={[
-                { label: 'TRADITIONAL TEXTILE BUSINESS', sub: 'Madurai market', icon: 'building' },
-                { label: 'WEBSITE', sub: 'Digital storefront', icon: 'code' },
-                { label: 'SEO', sub: 'Search visibility', icon: 'search' },
-                { label: 'SOCIAL MEDIA', sub: 'Instagram / Facebook', icon: 'share' },
-                { label: 'E-COMMERCE', sub: 'Online sales', icon: 'shopping-cart' },
-                { label: 'WHATSAPP', sub: 'Buyer enquiries', icon: 'whatsapp' },
-                { label: 'GLOBAL BUYERS', sub: 'India + Diaspora', icon: 'globe' },
-              ]}
-              direction="horizontal"
-              className="tm-digital-transform__flow"
-            />
+            <div className="tm-digital-transform__grid">
+              {[
+                { label: 'TRADITIONAL TEXTILE BUSINESS', sub: 'Madurai market', icon: 'building', color: 'icon-badge--purple' },
+                { label: 'WEBSITE', sub: 'Digital storefront', icon: 'code', color: 'icon-badge--blue' },
+                { label: 'SEO', sub: 'Search visibility', icon: 'search', color: 'icon-badge--cyan' },
+                { label: 'SOCIAL MEDIA', sub: 'Instagram / Facebook', icon: 'share', color: 'icon-badge--pink' },
+                { label: 'E-COMMERCE', sub: 'Online sales', icon: 'shopping-cart', color: 'icon-badge--orange' },
+                { label: 'WHATSAPP', sub: 'Buyer enquiries', icon: 'whatsapp', color: 'icon-badge--green' },
+                { label: 'GLOBAL BUYERS', sub: 'India + Diaspora', icon: 'globe', color: 'icon-badge--gold' },
+              ].map((step, index) => (
+                <div className="tm-digital-transform__card glass-card" key={step.label}>
+                  <div className="tm-digital-transform__card-top">
+                    <span className="tm-digital-transform__step-num">Step 0{index + 1}</span>
+                    <span className={cx('tm-digital-transform__icon', 'icon-badge', step.color)} aria-hidden="true">
+                      <TmIcon name={step.icon} size={18} />
+                    </span>
+                  </div>
+                  <h3 className="tm-digital-transform__card-title">{step.label}</h3>
+                  <p className="tm-digital-transform__card-sub">{step.sub}</p>
+                </div>
+              ))}
+            </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* Services */}
+      {/* 6. SERVICES */}
       <section className="section tm-services" style={{ scrollMarginTop: '6rem' }}>
         <div className="container">
           <div className="section-heading">
@@ -630,8 +605,12 @@ export default function TextilesMadurai() {
             {SERVICES.map((svc, i) => (
               <ScrollReveal key={svc.title} delay={i * 60}>
                 <Link to={svc.path} className="tm-service-card glass-card">
-                  <span className="tm-service-card__number">{String(i + 1).padStart(2, '0')}</span>
-                  <span className="tm-service-card__icon" aria-hidden="true"><TmIcon name={svc.icon} size={22} /></span>
+                  <div className="tm-service-card__top">
+                    <span className="tm-service-card__number">{String(i + 1).padStart(2, '0')}</span>
+                    <span className={cx('tm-service-card__icon', 'icon-badge', svc.color)} aria-hidden="true">
+                      <TmIcon name={svc.icon} size={20} />
+                    </span>
+                  </div>
                   <h3 className="tm-service-card__title">{svc.title}</h3>
                   <p className="tm-service-card__text">{svc.text}</p>
                   <span className="tm-service-card__cta">
@@ -647,7 +626,7 @@ export default function TextilesMadurai() {
         </div>
       </section>
 
-      {/* Online Textile Sales */}
+      {/* 7. ONLINE TEXTILE SALES */}
       <section className="section tm-online-sales" style={{ scrollMarginTop: '6rem' }}>
         <div className="container">
           <div className="section-heading">
@@ -655,31 +634,40 @@ export default function TextilesMadurai() {
             <h2 className="section-heading__title">Can Madurai Textile Businesses Sell Effectively Online?</h2>
           </div>
           <ScrollReveal>
-            <p className="tm-online-sales__text">
-              Yes. The Indian silk saree and ethnic wear market online is substantial and growing &mdash;
-              driven by diaspora buyers in the US, UK, Singapore, and Malaysia who cannot easily
-              access Tamil Nadu textiles locally. E-commerce on your own website or marketplace
-              platforms, combined with Instagram marketing and WhatsApp catalogue selling, is an
-              effective combination for Madurai textile businesses.
-            </p>
-          </ScrollReveal>
-          <ScrollReveal>
-            <Flow
-              items={[
-                { label: 'PRODUCT', sub: 'Saree / Fabric', icon: 'layers' },
-                { label: 'INSTAGRAM', sub: 'Discovery / Reels', icon: 'instagram' },
-                { label: 'WEBSITE / MARKETPLACE', sub: 'Product page', icon: 'globe' },
-                { label: 'WHATSAPP CATALOGUE', sub: 'Buyer conversation', icon: 'whatsapp' },
-                { label: 'ORDER', sub: 'Purchase', icon: 'check' },
-              ]}
-              direction="horizontal"
-              className="tm-online-sales__flow"
-            />
+            <div className="tm-online-sales__card glass-card">
+              <p className="tm-online-sales__text">
+                Yes. The Indian silk saree and ethnic wear market online is substantial and growing &mdash;
+                driven by diaspora buyers in the US, UK, Singapore, and Malaysia who cannot easily
+                access Tamil Nadu textiles locally. E-commerce on your own website or marketplace
+                platforms, combined with Instagram marketing and WhatsApp catalogue selling, is an
+                effective combination for Madurai textile businesses.
+              </p>
+              <div className="tm-online-sales__grid">
+                {[
+                  { label: 'PRODUCT', sub: 'Saree / Fabric', icon: 'layers', color: 'icon-badge--magenta' },
+                  { label: 'INSTAGRAM', sub: 'Discovery / Reels', icon: 'instagram', color: 'icon-badge--pink' },
+                  { label: 'WEBSITE / MARKETPLACE', sub: 'Product page', icon: 'globe', color: 'icon-badge--cyan' },
+                  { label: 'WHATSAPP CATALOGUE', sub: 'Buyer conversation', icon: 'whatsapp', color: 'icon-badge--green' },
+                  { label: 'ORDER', sub: 'Purchase', icon: 'check', color: 'icon-badge--gold' },
+                ].map((item, index) => (
+                  <div key={item.label} className="tm-online-sales__step-card glass-card">
+                    <div className="tm-online-sales__step-header">
+                      <span className="tm-online-sales__step-num">0{index + 1}</span>
+                      <span className={cx('tm-online-sales__icon', 'icon-badge', item.color)} aria-hidden="true">
+                        <TmIcon name={item.icon} size={18} />
+                      </span>
+                    </div>
+                    <span className="tm-online-sales__step-label">{item.label}</span>
+                    <span className="tm-online-sales__step-sub">{item.sub}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* Global Buyers */}
+      {/* 8. GLOBAL BUYERS */}
       <section className="section tm-global-buyers" style={{ scrollMarginTop: '6rem' }}>
         <div className="container">
           <div className="section-heading">
@@ -687,38 +675,34 @@ export default function TextilesMadurai() {
             <h2 className="section-heading__title">From Madurai to Buyers Around the World</h2>
           </div>
           <ScrollReveal>
-            <div className="tm-global-buyers__visual">
+            <div className="tm-global-buyers__card glass-card">
               <div className="tm-global-buyers__center">
-                <TmIcon name="building" size={24} />
-                <span className="tm-global-buyers__city">MADURAI</span>
+                <span className="icon-badge icon-badge--magenta" aria-hidden="true">
+                  <TmIcon name="building" size={22} />
+                </span>
+                <span className="tm-global-buyers__city">MADURAI HUB</span>
               </div>
-              <span className="tm-global-buyers__arrow" aria-hidden="true">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9l6 6 6-6" /></svg>
-              </span>
               <div className="tm-global-buyers__markets">
-                <div className="tm-global-buyers__market glass-card">
-                  <TmIcon name="globe" size={18} />
-                  <span>USA</span>
-                </div>
-                <div className="tm-global-buyers__market glass-card">
-                  <TmIcon name="globe" size={18} />
-                  <span>UK</span>
-                </div>
-                <div className="tm-global-buyers__market glass-card">
-                  <TmIcon name="globe" size={18} />
-                  <span>SINGAPORE</span>
-                </div>
-                <div className="tm-global-buyers__market glass-card">
-                  <TmIcon name="globe" size={18} />
-                  <span>MALAYSIA</span>
-                </div>
+                {[
+                  { country: 'USA', color: 'icon-badge--blue' },
+                  { country: 'UK', color: 'icon-badge--purple' },
+                  { country: 'SINGAPORE', color: 'icon-badge--cyan' },
+                  { country: 'MALAYSIA', color: 'icon-badge--amber' },
+                ].map((m) => (
+                  <div key={m.country} className="tm-global-buyers__market glass-card">
+                    <span className={cx('tm-global-buyers__market-icon', 'icon-badge', m.color)} aria-hidden="true">
+                      <TmIcon name="globe" size={18} />
+                    </span>
+                    <span className="tm-global-buyers__country">{m.country}</span>
+                  </div>
+                ))}
               </div>
             </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* Diaspora Marketing */}
+      {/* 9. DIASPORA MARKETING */}
       <section className="section tm-diaspora" style={{ scrollMarginTop: '6rem' }}>
         <div className="container">
           <div className="section-heading">
@@ -734,23 +718,38 @@ export default function TextilesMadurai() {
             </p>
           </ScrollReveal>
           <ScrollReveal>
-            <div className="tm-diaspora__strategy">
-              <div className="tm-diaspora__item glass-card"><TmIcon name="facebook" size={18} /><span>Facebook + Location Targeting</span></div>
-              <div className="tm-diaspora__item glass-card"><TmIcon name="instagram" size={18} /><span>Instagram + Diaspora Interest Targeting</span></div>
-              <div className="tm-diaspora__item glass-card"><TmIcon name="whatsapp" size={18} /><span>WhatsApp Order Channel</span></div>
+            <div className="tm-diaspora__grid">
+              <div className="tm-diaspora__item glass-card">
+                <span className="icon-badge icon-badge--blue" aria-hidden="true"><TmIcon name="facebook" size={20} /></span>
+                <span className="tm-diaspora__item-title">Facebook + Location Targeting</span>
+              </div>
+              <div className="tm-diaspora__item glass-card">
+                <span className="icon-badge icon-badge--pink" aria-hidden="true"><TmIcon name="instagram" size={20} /></span>
+                <span className="tm-diaspora__item-title">Instagram + Diaspora Interest Targeting</span>
+              </div>
+              <div className="tm-diaspora__item glass-card">
+                <span className="icon-badge icon-badge--green" aria-hidden="true"><TmIcon name="whatsapp" size={20} /></span>
+                <span className="tm-diaspora__item-title">WhatsApp Order Channel</span>
+              </div>
             </div>
           </ScrollReveal>
           <ScrollReveal>
             <div className="tm-diaspora__interests">
-              <span className="tm-diaspora__interest glass-card">Tamil culture</span>
-              <span className="tm-diaspora__interest glass-card">Indian festivals</span>
-              <span className="tm-diaspora__interest glass-card">Silk sarees</span>
+              <span className="tm-diaspora__interest glass-card">
+                <TmIcon name="tag" size={14} /> Tamil culture
+              </span>
+              <span className="tm-diaspora__interest glass-card">
+                <TmIcon name="sparkles" size={14} /> Indian festivals
+              </span>
+              <span className="tm-diaspora__interest glass-card">
+                <TmIcon name="layers" size={14} /> Silk sarees
+              </span>
             </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* Textile E-Commerce */}
+      {/* 10. TEXTILE E-COMMERCE */}
       <section className="section tm-ecommerce" style={{ scrollMarginTop: '6rem' }}>
         <div className="container">
           <div className="section-heading">
@@ -800,7 +799,7 @@ export default function TextilesMadurai() {
         </div>
       </section>
 
-      {/* Product Photography */}
+      {/* 11. PRODUCT PHOTOGRAPHY */}
       <section className="section tm-photography" style={{ scrollMarginTop: '6rem' }}>
         <div className="container">
           <div className="section-heading">
@@ -809,10 +808,15 @@ export default function TextilesMadurai() {
           </div>
           <ScrollReveal>
             <div className="tm-photography__grid">
-              {PHOTOGRAPHY_STEPS.map((step) => (
+              {PHOTOGRAPHY_STEPS.map((step, index) => (
                 <div className="tm-photography__card glass-card" key={step.label}>
-                  <TmIcon name={step.icon} size={24} />
-                  <h4 className="tm-photography__label">{step.label}</h4>
+                  <div className="tm-photography__card-top">
+                    <span className="tm-photography__num">0{index + 1}</span>
+                    <span className={cx('tm-photography__icon', 'icon-badge', step.color)} aria-hidden="true">
+                      <TmIcon name={step.icon} size={18} />
+                    </span>
+                  </div>
+                  <h3 className="tm-photography__label">{step.label}</h3>
                   <p className="tm-photography__desc">{step.desc}</p>
                 </div>
               ))}
@@ -821,7 +825,7 @@ export default function TextilesMadurai() {
         </div>
       </section>
 
-      {/* Product Photography Connection */}
+      {/* 12. PHOTOGRAPHY IMPACT */}
       <section className="section tm-photo-connection" style={{ scrollMarginTop: '6rem' }}>
         <div className="container">
           <div className="section-heading">
@@ -829,22 +833,31 @@ export default function TextilesMadurai() {
             <h2 className="section-heading__title">From Product to Purchase &mdash; Photography Drives Every Step</h2>
           </div>
           <ScrollReveal>
-            <Flow
-              items={[
-                { label: 'GOOD PRODUCT', sub: 'Quality textile', icon: 'layers' },
-                { label: 'GOOD PHOTOGRAPHY', sub: 'Studio images', icon: 'star' },
-                { label: 'BETTER ONLINE PRESENTATION', sub: 'Website / Social', icon: 'monitor' },
-                { label: 'CUSTOMER UNDERSTANDING', sub: 'Details / Drape / Texture', icon: 'eye' },
-                { label: 'ENQUIRY', sub: 'WhatsApp / Order', icon: 'message' },
-              ]}
-              direction="horizontal"
-              className="tm-photo-connection__flow"
-            />
+            <div className="tm-photo-connection__grid">
+              {[
+                { label: 'GOOD PRODUCT', sub: 'Quality textile', icon: 'layers', color: 'icon-badge--magenta' },
+                { label: 'GOOD PHOTOGRAPHY', sub: 'Studio images', icon: 'star', color: 'icon-badge--amber' },
+                { label: 'BETTER ONLINE PRESENTATION', sub: 'Website / Social', icon: 'monitor', color: 'icon-badge--cyan' },
+                { label: 'CUSTOMER UNDERSTANDING', sub: 'Details / Drape / Texture', icon: 'eye', color: 'icon-badge--purple' },
+                { label: 'ENQUIRY', sub: 'WhatsApp / Order', icon: 'message', color: 'icon-badge--green' },
+              ].map((step, index) => (
+                <div className="tm-photo-connection__card glass-card" key={step.label}>
+                  <div className="tm-photo-connection__card-top">
+                    <span className="tm-photo-connection__step-num">Step 0{index + 1}</span>
+                    <span className={cx('tm-photo-connection__icon', 'icon-badge', step.color)} aria-hidden="true">
+                      <TmIcon name={step.icon} size={18} />
+                    </span>
+                  </div>
+                  <h3 className="tm-photo-connection__title">{step.label}</h3>
+                  <p className="tm-photo-connection__sub">{step.sub}</p>
+                </div>
+              ))}
+            </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* Social Commerce */}
+      {/* 13. SOCIAL COMMERCE */}
       <section className="section tm-social-commerce" style={{ scrollMarginTop: '6rem' }}>
         <div className="container">
           <div className="section-heading">
@@ -852,31 +865,52 @@ export default function TextilesMadurai() {
             <h2 className="section-heading__title">Turn Instagram Browsing Into WhatsApp Conversations</h2>
           </div>
           <ScrollReveal>
-            <Flow
-              items={[
-                { label: 'INSTAGRAM POST', sub: 'Saree showcase', icon: 'instagram' },
-                { label: 'PRODUCT INTEREST', sub: 'Buyer engages', icon: 'eye' },
-                { label: 'PROFILE', sub: 'Brand page', icon: 'building' },
-                { label: 'CATALOGUE', sub: 'Product details', icon: 'layers' },
-                { label: 'WHATSAPP', sub: 'Enquiry message', icon: 'whatsapp' },
-                { label: 'ENQUIRY', sub: 'Conversation', icon: 'message' },
-              ]}
-              direction="horizontal"
-              className="tm-social-commerce__flow"
-            />
+            <div className="tm-social-commerce__grid">
+              {[
+                { label: 'INSTAGRAM POST', sub: 'Saree showcase', icon: 'instagram', color: 'icon-badge--pink' },
+                { label: 'PRODUCT INTEREST', sub: 'Buyer engages', icon: 'eye', color: 'icon-badge--amber' },
+                { label: 'PROFILE', sub: 'Brand page', icon: 'building', color: 'icon-badge--purple' },
+                { label: 'CATALOGUE', sub: 'Product details', icon: 'layers', color: 'icon-badge--magenta' },
+                { label: 'WHATSAPP', sub: 'Enquiry message', icon: 'whatsapp', color: 'icon-badge--green' },
+                { label: 'ENQUIRY', sub: 'Conversation', icon: 'message', color: 'icon-badge--cyan' },
+              ].map((step, index) => (
+                <div className="tm-social-commerce__card glass-card" key={step.label}>
+                  <div className="tm-social-commerce__card-top">
+                    <span className="tm-social-commerce__step-num">0{index + 1}</span>
+                    <span className={cx('tm-social-commerce__icon', 'icon-badge', step.color)} aria-hidden="true">
+                      <TmIcon name={step.icon} size={18} />
+                    </span>
+                  </div>
+                  <h3 className="tm-social-commerce__card-title">{step.label}</h3>
+                  <p className="tm-social-commerce__card-sub">{step.sub}</p>
+                </div>
+              ))}
+            </div>
           </ScrollReveal>
           <ScrollReveal>
             <div className="tm-social-commerce__examples">
-              <div className="tm-social-commerce__example glass-card"><TmIcon name="layers" size={16} /><span>New Saree Collection</span></div>
-              <div className="tm-social-commerce__example glass-card"><TmIcon name="star" size={16} /><span>Festival Collection</span></div>
-              <div className="tm-social-commerce__example glass-card"><TmIcon name="layers" size={16} /><span>Silk Saree Showcase</span></div>
-              <div className="tm-social-commerce__example glass-card"><TmIcon name="tag" size={16} /><span>Dress Material Collection</span></div>
+              <div className="tm-social-commerce__example glass-card">
+                <span className="icon-badge icon-badge--magenta" aria-hidden="true"><TmIcon name="layers" size={16} /></span>
+                <span>New Saree Collection</span>
+              </div>
+              <div className="tm-social-commerce__example glass-card">
+                <span className="icon-badge icon-badge--amber" aria-hidden="true"><TmIcon name="star" size={16} /></span>
+                <span>Festival Collection</span>
+              </div>
+              <div className="tm-social-commerce__example glass-card">
+                <span className="icon-badge icon-badge--purple" aria-hidden="true"><TmIcon name="layers" size={16} /></span>
+                <span>Silk Saree Showcase</span>
+              </div>
+              <div className="tm-social-commerce__example glass-card">
+                <span className="icon-badge icon-badge--cyan" aria-hidden="true"><TmIcon name="tag" size={16} /></span>
+                <span>Dress Material Collection</span>
+              </div>
             </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* Textile Buyer Journey */}
+      {/* 14. BUYER JOURNEY */}
       <section className="section tm-journey" style={{ scrollMarginTop: '6rem' }}>
         <div className="container">
           <div className="section-heading">
@@ -884,12 +918,25 @@ export default function TextilesMadurai() {
             <h2 className="section-heading__title">A Digital Journey Built Around How Textile Buyers Shop</h2>
           </div>
           <ScrollReveal>
-            <Flow items={JOURNEY_STEPS} direction="horizontal" className="tm-journey__flow" />
+            <div className="tm-journey__grid">
+              {JOURNEY_STEPS.map((step, index) => (
+                <div key={step.label} className="tm-journey__card glass-card">
+                  <div className="tm-journey__card-top">
+                    <span className="tm-journey__step-num">Step 0{index + 1}</span>
+                    <span className={cx('tm-journey__icon', 'icon-badge', step.color)} aria-hidden="true">
+                      <TmIcon name={step.icon} size={18} />
+                    </span>
+                  </div>
+                  <h3 className="tm-journey__card-title">{step.label}</h3>
+                  <p className="tm-journey__card-sub">{step.sub}</p>
+                </div>
+              ))}
+            </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* B2C + Wholesale */}
+      {/* 15. BUYER TYPES */}
       <section className="section tm-buyer-types" style={{ scrollMarginTop: '6rem' }}>
         <div className="container">
           <div className="section-heading">
@@ -899,18 +946,30 @@ export default function TextilesMadurai() {
           <ScrollReveal>
             <div className="tm-buyer-types__grid">
               <div className="tm-buyer-types__card glass-card">
-                <h4 className="tm-buyer-types__title"><TmIcon name="users" size={20} /> B2C &mdash; Retail Buyers</h4>
+                <div className="tm-buyer-types__header">
+                  <span className="icon-badge icon-badge--magenta" aria-hidden="true"><TmIcon name="users" size={20} /></span>
+                  <h3 className="tm-buyer-types__title">B2C &mdash; Retail Buyers</h3>
+                </div>
                 <ul className="tm-buyer-types__list">
                   {BUYER_TYPES.b2c.map((item) => (
-                    <li key={item}>{item}</li>
+                    <li key={item}>
+                      <TmIcon name="check" size={14} />
+                      <span>{item}</span>
+                    </li>
                   ))}
                 </ul>
               </div>
               <div className="tm-buyer-types__card glass-card">
-                <h4 className="tm-buyer-types__title"><TmIcon name="briefcase" size={20} /> B2B &mdash; Wholesale &amp; Trade</h4>
+                <div className="tm-buyer-types__header">
+                  <span className="icon-badge icon-badge--amber" aria-hidden="true"><TmIcon name="briefcase" size={20} /></span>
+                  <h3 className="tm-buyer-types__title">B2B &mdash; Wholesale &amp; Trade</h3>
+                </div>
                 <ul className="tm-buyer-types__list">
                   {BUYER_TYPES.b2b.map((item) => (
-                    <li key={item}>{item}</li>
+                    <li key={item}>
+                      <TmIcon name="check" size={14} />
+                      <span>{item}</span>
+                    </li>
                   ))}
                 </ul>
               </div>
@@ -919,7 +978,7 @@ export default function TextilesMadurai() {
         </div>
       </section>
 
-      {/* Madurai-Specific SEO */}
+      {/* 16. MADURAI-SPECIFIC SEO */}
       <section className="section tm-seo-queries" style={{ scrollMarginTop: '6rem' }}>
         <div className="container">
           <div className="section-heading">
@@ -927,23 +986,34 @@ export default function TextilesMadurai() {
             <h2 className="section-heading__title">Get Found When Buyers Search for Madurai Textiles</h2>
           </div>
           <ScrollReveal>
-            <div className="tm-seo-queries__matrix">
-              {Object.entries(SEARCH_QUERIES).map(([category, queries]) => (
-                <div className="tm-seo-queries__category glass-card" key={category}>
-                  <h4 className="tm-seo-queries__category-title">{category.toUpperCase()}</h4>
-                  <ul className="tm-seo-queries__list">
-                    {queries.map((q) => (
-                      <li key={q}>{q}</li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
+            <div className="tm-seo-queries__grid">
+              {Object.entries(SEARCH_QUERIES).map(([category, queries], idx) => {
+                const colors = ['icon-badge--magenta', 'icon-badge--amber', 'icon-badge--purple', 'icon-badge--cyan']
+                return (
+                  <div className="tm-seo-queries__category glass-card" key={category}>
+                    <div className="tm-seo-queries__header">
+                      <span className={cx('tm-seo-queries__icon', 'icon-badge', colors[idx % colors.length])} aria-hidden="true">
+                        <TmIcon name="search" size={18} />
+                      </span>
+                      <h3 className="tm-seo-queries__category-title">{category.toUpperCase()}</h3>
+                    </div>
+                    <div className="tm-seo-queries__pills">
+                      {queries.map((q) => (
+                        <span key={q} className="tm-seo-queries__pill glass-card">
+                          <TmIcon name="search" size={13} />
+                          <span>{q}</span>
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )
+              })}
             </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* AI Search */}
+      {/* 17. AI SEARCH */}
       <section className="section tm-ai-search" style={{ scrollMarginTop: '6rem' }}>
         <div className="container">
           <div className="section-heading">
@@ -958,32 +1028,50 @@ export default function TextilesMadurai() {
             </p>
           </ScrollReveal>
           <ScrollReveal>
-            <Flow
-              items={[
-                { label: 'CUSTOMER QUESTION', sub: '"Best silk sarees in Madurai"', icon: 'search' },
-                { label: 'AI SEARCH', sub: 'ChatGPT / Perplexity', icon: 'sparkles' },
-                { label: 'BUSINESS INFORMATION', sub: 'Structured data', icon: 'building' },
-                { label: 'WEBSITE / GBP / CONTENT', sub: 'Digital presence', icon: 'globe' },
-                { label: 'DISCOVERY', sub: 'Business found', icon: 'check' },
-              ]}
-              direction="horizontal"
-              className="tm-ai-search__flow"
-            />
+            <div className="tm-ai-search__grid">
+              {[
+                { label: 'CUSTOMER QUESTION', sub: '"Best silk sarees in Madurai"', icon: 'search', color: 'icon-badge--magenta' },
+                { label: 'AI SEARCH', sub: 'ChatGPT / Perplexity', icon: 'sparkles', color: 'icon-badge--amber' },
+                { label: 'BUSINESS INFORMATION', sub: 'Structured data', icon: 'building', color: 'icon-badge--purple' },
+                { label: 'WEBSITE / GBP / CONTENT', sub: 'Digital presence', icon: 'globe', color: 'icon-badge--cyan' },
+                { label: 'DISCOVERY', sub: 'Business found', icon: 'check', color: 'icon-badge--green' },
+              ].map((step, index) => (
+                <div key={step.label} className="tm-ai-search__step-card glass-card">
+                  <div className="tm-ai-search__step-header">
+                    <span className="tm-ai-search__step-num">0{index + 1}</span>
+                    <span className={cx('tm-ai-search__icon', 'icon-badge', step.color)} aria-hidden="true">
+                      <TmIcon name={step.icon} size={18} />
+                    </span>
+                  </div>
+                  <span className="tm-ai-search__step-label">{step.label}</span>
+                  <span className="tm-ai-search__step-sub">{step.sub}</span>
+                </div>
+              ))}
+            </div>
           </ScrollReveal>
           <ScrollReveal>
             <div className="tm-ai-search__signals">
-              <div className="tm-ai-search__signal glass-card"><TmIcon name="building" size={18} /><span>Business Info</span></div>
-              <div className="tm-ai-search__signal glass-card"><TmIcon name="layers" size={18} /><span>Product Expertise</span></div>
-              <div className="tm-ai-search__signal glass-card"><TmIcon name="help" size={18} /><span>FAQs</span></div>
-              <div className="tm-ai-search__signal glass-card"><TmIcon name="book" size={18} /><span>Useful Content</span></div>
-              <div className="tm-ai-search__signal glass-card"><TmIcon name="star" size={18} /><span>Reviews</span></div>
-              <div className="tm-ai-search__signal glass-card"><TmIcon name="code" size={18} /><span>Structured Data</span></div>
+              {[
+                { icon: 'building', label: 'Business Info', color: 'icon-badge--magenta' },
+                { icon: 'layers', label: 'Product Expertise', color: 'icon-badge--amber' },
+                { icon: 'help', label: 'FAQs', color: 'icon-badge--purple' },
+                { icon: 'book', label: 'Useful Content', color: 'icon-badge--blue' },
+                { icon: 'star', label: 'Reviews', color: 'icon-badge--gold' },
+                { icon: 'code', label: 'Structured Data', color: 'icon-badge--cyan' },
+              ].map((sig) => (
+                <div className="tm-ai-search__signal glass-card" key={sig.label}>
+                  <span className={cx('tm-ai-search__signal-icon', 'icon-badge', sig.color)} aria-hidden="true">
+                    <TmIcon name={sig.icon} size={18} />
+                  </span>
+                  <span className="tm-ai-search__signal-label">{sig.label}</span>
+                </div>
+              ))}
             </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* Local Discovery */}
+      {/* 18. LOCAL DISCOVERY */}
       <section className="section tm-local" style={{ scrollMarginTop: '6rem' }}>
         <div className="container">
           <div className="section-heading">
@@ -991,38 +1079,43 @@ export default function TextilesMadurai() {
             <h2 className="section-heading__title">Be Visible When Buyers Look for Textile Businesses in Madurai</h2>
           </div>
           <ScrollReveal>
-            <p className="tm-local__text">
-              When local customers search for textile businesses in Madurai, Google Business Profile
-              visibility can help your business appear in local search results and Google Maps,
-              driving phone calls, direction requests and WhatsApp enquiries.
-            </p>
-          </ScrollReveal>
-          <ScrollReveal>
-            <div className="tm-local__mockup glass-card">
-              <div className="tm-local__header">
-                <TmIcon name="mappin" size={18} />
-                <span className="tm-local__business-name">Your Textile Business Name</span>
-              </div>
-              <div className="tm-local__body">
-                <div className="tm-local__info">
-                  <span>Category: Textile Shop / Saree Store</span>
-                  <span>Location: Madurai, Tamil Nadu</span>
-                  <span>Rating: Verified Profile</span>
-                  <span>Hours: Mon - Sat, 10:00 AM - 9:00 PM</span>
+            <div className="tm-local__card glass-card">
+              <p className="tm-local__text">
+                When local customers search for textile businesses in Madurai, Google Business Profile
+                visibility can help your business appear in local search results and Google Maps,
+                driving phone calls, direction requests and WhatsApp enquiries.
+              </p>
+              <div className="tm-local__mockup glass-card">
+                <div className="tm-local__header">
+                  <span className="icon-badge icon-badge--magenta" aria-hidden="true">
+                    <TmIcon name="mappin" size={18} />
+                  </span>
+                  <div className="tm-local__title-box">
+                    <span className="tm-local__business-name">Your Textile Business Name</span>
+                    <span className="tm-local__business-sub">Textile Shop / Saree Store • Madurai</span>
+                  </div>
                 </div>
-                <div className="tm-local__actions">
-                  <span className="tm-local__action">Call</span>
-                  <span className="tm-local__action">Directions</span>
-                  <span className="tm-local__action">WhatsApp</span>
+                <div className="tm-local__body">
+                  <div className="tm-local__info">
+                    <span>Category: Textile Shop / Saree Store</span>
+                    <span>Location: Madurai, Tamil Nadu</span>
+                    <span>Rating: Verified Profile</span>
+                    <span>Hours: Mon - Sat, 10:00 AM - 9:00 PM</span>
+                  </div>
+                  <div className="tm-local__actions">
+                    <span className="tm-local__action glass-card"><TmIcon name="phone" size={14} /> Call</span>
+                    <span className="tm-local__action glass-card"><TmIcon name="compass" size={14} /> Directions</span>
+                    <span className="tm-local__action glass-card"><TmIcon name="whatsapp" size={14} /> WhatsApp</span>
+                  </div>
                 </div>
-              </div>
-              <div className="tm-local__products">
-                <span className="tm-local__products-label">Products &amp; Services:</span>
-                <div className="tm-local__products-list">
-                  <span className="tm-local__product glass-card">Silk Sarees</span>
-                  <span className="tm-local__product glass-card">Dress Materials</span>
-                  <span className="tm-local__product glass-card">Readymade Garments</span>
-                  <span className="tm-local__product glass-card">Fabric</span>
+                <div className="tm-local__products">
+                  <span className="tm-local__products-label">Products &amp; Services:</span>
+                  <div className="tm-local__products-list">
+                    <span className="tm-local__product glass-card">Silk Sarees</span>
+                    <span className="tm-local__product glass-card">Dress Materials</span>
+                    <span className="tm-local__product glass-card">Readymade Garments</span>
+                    <span className="tm-local__product glass-card">Fabric</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1030,7 +1123,7 @@ export default function TextilesMadurai() {
         </div>
       </section>
 
-      {/* Textile Business Types */}
+      {/* 19. TEXTILE BUSINESS TYPES */}
       <section className="section tm-business-types" style={{ scrollMarginTop: '6rem' }}>
         <div className="container">
           <div className="section-heading">
@@ -1041,8 +1134,10 @@ export default function TextilesMadurai() {
             <div className="tm-business-types__grid">
               {BUSINESS_TYPES.map((bt) => (
                 <div className="tm-business-types__card glass-card" key={bt.title}>
-                  <TmIcon name={bt.icon} size={22} />
-                  <span className="tm-business-types__title">{bt.title}</span>
+                  <span className={cx('tm-business-types__icon', 'icon-badge', bt.color)} aria-hidden="true">
+                    <TmIcon name={bt.icon} size={20} />
+                  </span>
+                  <h3 className="tm-business-types__title">{bt.title}</h3>
                 </div>
               ))}
             </div>
@@ -1050,7 +1145,7 @@ export default function TextilesMadurai() {
         </div>
       </section>
 
-      {/* Madurai Textile Story */}
+      {/* 20. MARKET EVOLUTION */}
       <section className="section tm-story" style={{ scrollMarginTop: '6rem' }}>
         <div className="container">
           <div className="section-heading">
@@ -1058,9 +1153,14 @@ export default function TextilesMadurai() {
             <h2 className="section-heading__title">From Textile Corridors to Digital Corridors</h2>
           </div>
           <ScrollReveal>
-            <div className="tm-story__visual">
+            <div className="tm-story__grid">
               <div className="tm-story__panel tm-story__panel--traditional glass-card">
-                <h4 className="tm-story__panel-title">TRADITIONAL MARKET</h4>
+                <div className="tm-story__panel-header">
+                  <span className="icon-badge icon-badge--magenta" aria-hidden="true">
+                    <TmIcon name="building" size={20} />
+                  </span>
+                  <h3 className="tm-story__panel-title">TRADITIONAL MARKET</h3>
+                </div>
                 <div className="tm-story__panel-items">
                   <span className="tm-story__panel-item glass-card"><TmIcon name="layers" size={14} /> Fabric</span>
                   <span className="tm-story__panel-item glass-card"><TmIcon name="layers" size={14} /> Saree</span>
@@ -1068,11 +1168,13 @@ export default function TextilesMadurai() {
                   <span className="tm-story__panel-item glass-card"><TmIcon name="tag" size={14} /> Retail</span>
                 </div>
               </div>
-              <span className="tm-story__arrow" aria-hidden="true">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9l6 6 6-6" /></svg>
-              </span>
               <div className="tm-story__panel tm-story__panel--digital glass-card">
-                <h4 className="tm-story__panel-title">DIGITAL MARKET</h4>
+                <div className="tm-story__panel-header">
+                  <span className="icon-badge icon-badge--amber" aria-hidden="true">
+                    <TmIcon name="globe" size={20} />
+                  </span>
+                  <h3 className="tm-story__panel-title">DIGITAL MARKET</h3>
+                </div>
                 <div className="tm-story__panel-items">
                   <span className="tm-story__panel-item glass-card"><TmIcon name="search" size={14} /> Google</span>
                   <span className="tm-story__panel-item glass-card"><TmIcon name="instagram" size={14} /> Instagram</span>
@@ -1087,7 +1189,7 @@ export default function TextilesMadurai() {
         </div>
       </section>
 
-      {/* International Market */}
+      {/* 21. INTERNATIONAL MARKET */}
       <section className="section tm-international" style={{ scrollMarginTop: '6rem' }}>
         <div className="container">
           <div className="section-heading">
@@ -1095,34 +1197,37 @@ export default function TextilesMadurai() {
             <h2 className="section-heading__title">Take Your Madurai Textile Brand Beyond the Local Market</h2>
           </div>
           <ScrollReveal>
-            <div className="tm-international__layers">
-              <div className="tm-international__layer glass-card">
-                <TmIcon name="building" size={22} />
-                <h4 className="tm-international__layer-title">MADURAI</h4>
-                <p className="tm-international__layer-text">Home base &mdash; production hub and local market</p>
+            <div className="tm-international__grid">
+              <div className="tm-international__card glass-card">
+                <div className="tm-international__card-header">
+                  <span className="icon-badge icon-badge--magenta" aria-hidden="true"><TmIcon name="building" size={22} /></span>
+                  <span className="tm-international__badge">HUB</span>
+                </div>
+                <h3 className="tm-international__card-title">MADURAI</h3>
+                <p className="tm-international__card-text">Home base &mdash; production hub and local market</p>
               </div>
-              <span className="tm-international__arrow" aria-hidden="true">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9l6 6 6-6" /></svg>
-              </span>
-              <div className="tm-international__layer glass-card">
-                <TmIcon name="globe" size={22} />
-                <h4 className="tm-international__layer-title">INDIA</h4>
-                <p className="tm-international__layer-text">National buyers through e-commerce and marketplace platforms</p>
+              <div className="tm-international__card glass-card">
+                <div className="tm-international__card-header">
+                  <span className="icon-badge icon-badge--amber" aria-hidden="true"><TmIcon name="globe" size={22} /></span>
+                  <span className="tm-international__badge">DOMESTIC</span>
+                </div>
+                <h3 className="tm-international__card-title">INDIA</h3>
+                <p className="tm-international__card-text">National buyers through e-commerce and marketplace platforms</p>
               </div>
-              <span className="tm-international__arrow" aria-hidden="true">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9l6 6 6-6" /></svg>
-              </span>
-              <div className="tm-international__layer glass-card">
-                <TmIcon name="globe" size={22} />
-                <h4 className="tm-international__layer-title">DIASPORA</h4>
-                <p className="tm-international__layer-text">Malaysia, Singapore, US, UK &mdash; social media and WhatsApp</p>
+              <div className="tm-international__card glass-card">
+                <div className="tm-international__card-header">
+                  <span className="icon-badge icon-badge--cyan" aria-hidden="true"><TmIcon name="globe" size={22} /></span>
+                  <span className="tm-international__badge">GLOBAL</span>
+                </div>
+                <h3 className="tm-international__card-title">DIASPORA</h3>
+                <p className="tm-international__card-text">Malaysia, Singapore, US, UK &mdash; social media and WhatsApp</p>
               </div>
             </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* FAQ */}
+      {/* 22. FAQ */}
       <section className="section tm-faq" style={{ scrollMarginTop: '6rem' }}>
         <div className="container">
           <div className="section-heading">
@@ -1133,7 +1238,7 @@ export default function TextilesMadurai() {
         </div>
       </section>
 
-      {/* Related Industries */}
+      {/* 23. RELATED INDUSTRIES */}
       <section className="section tm-related" style={{ scrollMarginTop: '6rem' }}>
         <div className="container">
           <div className="section-heading">
@@ -1151,7 +1256,7 @@ export default function TextilesMadurai() {
         </div>
       </section>
 
-      {/* Final CTA */}
+      {/* 24. FINAL CTA & CONTACT FORM */}
       <CTASection
         title={CTA.title}
         primaryLabel={CTA.label}

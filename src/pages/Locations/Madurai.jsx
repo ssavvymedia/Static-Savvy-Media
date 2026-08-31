@@ -13,7 +13,7 @@ import {
   faqPageSchema,
   breadcrumbListSchema,
 } from '../../utils/schema.js'
-import { buildWhatsAppLink } from '../../utils/helpers.js'
+import { buildWhatsAppLink, cx } from '../../utils/helpers.js'
 import {
   WHATSAPP_NUMBER,
   WHATSAPP_MESSAGE,
@@ -43,60 +43,80 @@ const SERVICES = [
     title: 'Search Engine Optimization (SEO)',
     text: 'Ranking your Madurai business for city-specific and Tamil Nadu-wide queries.',
     path: '/services/seo/',
+    icon: 'seo',
+    color: 'icon-badge--purple',
   },
   {
     number: '02',
     title: 'GEO & AEO / AI Search Optimization',
     text: 'Getting cited by ChatGPT, Perplexity, and Google AI Overviews.',
     path: '/services/geo-aeo-ai-search/',
+    icon: 'geo',
+    color: 'icon-badge--blue',
   },
   {
     number: '03',
     title: 'Local SEO & Google Business Profile',
     text: 'Dominating the Google Maps pack for “near me” searches in Madurai.',
     path: '/services/local-seo/',
+    icon: 'local',
+    color: 'icon-badge--cyan',
   },
   {
     number: '04',
     title: 'Google Ads & PPC',
     text: 'Immediate visibility for high-intent buyers searching in Madurai.',
     path: '/services/google-ads/',
+    icon: 'ads',
+    color: 'icon-badge--pink',
   },
   {
     number: '05',
     title: 'Social Media Marketing',
     text: 'Instagram and Facebook for the Madurai consumer market; LinkedIn for B2B.',
     path: '/services/social-media-marketing/',
+    icon: 'social',
+    color: 'icon-badge--orange',
   },
   {
     number: '06',
     title: 'Website Design & Development',
     text: 'SEO-ready, mobile-first websites built for Madurai businesses.',
     path: '/services/website-design-development/',
+    icon: 'web',
+    color: 'icon-badge--green',
   },
   {
     number: '07',
     title: 'AI Business Automation',
     text: 'WhatsApp automation and workflow tools for Madurai SMEs.',
     path: '/services/ai-business-automation/',
+    icon: 'automation',
+    color: 'icon-badge--gold',
   },
   {
     number: '08',
     title: 'Corporate Photography & Video',
     text: 'Professional photography and video production in Madurai.',
     path: '/services/corporate-photography-video/',
+    icon: 'photography',
+    color: 'icon-badge--red',
   },
   {
     number: '09',
     title: 'AI Video Creation',
     text: 'Marketing videos for Madurai businesses.',
     path: '/services/ai-video-creation/',
+    icon: 'video',
+    color: 'icon-badge--indigo',
   },
   {
     number: '10',
     title: 'Product Photography & Creative Design',
     text: 'E-commerce photography, textile product photography, and brand design.',
     path: '/services/product-photography-creative-design/',
+    icon: 'design',
+    color: 'icon-badge--teal',
   },
 ]
 
@@ -105,21 +125,29 @@ const INDUSTRIES = [
     title: 'Textiles & Garments',
     text: "Madurai is one of Tamil Nadu’s most important textile trading hubs. We build digital presence for silk saree retailers, textile manufacturers, readymade garment businesses, and export-oriented garment units, including product photography optimised for Indian and international e-commerce platforms.",
     path: '/industries/textiles-madurai/',
+    icon: 'textiles',
+    color: 'icon-badge--purple',
   },
   {
     title: 'Education & Training',
     text: "Madurai’s concentration of engineering colleges, arts and science colleges, and coaching institutes makes education one of the city’s highest-competition digital marketing categories. We help educational institutions rank for admission-intent queries and build the authoritative online presence that today’s student-parents research before enrolling.",
     path: '/industries/education-training/',
+    icon: 'education',
+    color: 'icon-badge--blue',
   },
   {
     title: 'Healthcare & Clinics',
     text: "From specialist clinics to dental chains, Madurai’s healthcare businesses are increasingly competing on digital visibility. Local SEO and Google Business Profile optimisation are the highest-ROI starting points for most healthcare clients.",
     path: '/industries/healthcare-clinics/',
+    icon: 'healthcare',
+    color: 'icon-badge--cyan',
   },
   {
     title: 'Hospitality & Restaurants',
     text: "Year-round pilgrim and tourist traffic to Meenakshi Amman Temple drives significant hospitality demand in Madurai. We help hotels, restaurants, and wedding venues capture this high-intent traffic through Google Maps ranking and AI travel platform visibility.",
     path: '/industries/hospitality-hotels/',
+    icon: 'hospitality',
+    color: 'icon-badge--pink',
   },
 ]
 
@@ -276,8 +304,88 @@ export default function Madurai() {
               <ScrollReveal key={service.number} delay={index * 60}>
                 <article className="madurai-service-card glass-card">
                   <div className="madurai-service-card__top">
-                    <span className="madurai-service-card__badge" aria-hidden="true">
-                      {service.number}
+                    <span className={cx('madurai-service-card__badge', 'icon-badge', service.color)} aria-hidden="true">
+                      {service.icon === 'seo' && (
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <circle cx="11" cy="11" r="8" />
+                          <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                        </svg>
+                      )}
+                      {service.icon === 'geo' && (
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" />
+                        </svg>
+                      )}
+                      {service.icon === 'local' && (
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                          <circle cx="12" cy="10" r="3" />
+                        </svg>
+                      )}
+                      {service.icon === 'ads' && (
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <circle cx="12" cy="12" r="10" />
+                          <circle cx="12" cy="12" r="6" />
+                          <circle cx="12" cy="12" r="2" />
+                        </svg>
+                      )}
+                      {service.icon === 'social' && (
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <circle cx="18" cy="5" r="3" />
+                          <circle cx="6" cy="12" r="3" />
+                          <circle cx="18" cy="19" r="3" />
+                          <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" />
+                          <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
+                        </svg>
+                      )}
+                      {service.icon === 'web' && (
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                          <line x1="8" y1="21" x2="16" y2="21" />
+                          <line x1="12" y1="17" x2="12" y2="21" />
+                        </svg>
+                      )}
+                      {service.icon === 'automation' && (
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <rect x="4" y="4" width="16" height="16" rx="2" />
+                          <rect x="9" y="9" width="6" height="6" />
+                          <line x1="9" y1="1" x2="9" y2="4" />
+                          <line x1="15" y1="1" x2="15" y2="4" />
+                          <line x1="9" y1="20" x2="9" y2="23" />
+                          <line x1="15" y1="20" x2="15" y2="23" />
+                          <line x1="20" y1="9" x2="23" y2="9" />
+                          <line x1="20" y1="15" x2="23" y2="15" />
+                          <line x1="1" y1="9" x2="4" y2="9" />
+                          <line x1="1" y1="15" x2="4" y2="15" />
+                        </svg>
+                      )}
+                      {service.icon === 'photography' && (
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
+                          <circle cx="12" cy="13" r="4" />
+                        </svg>
+                      )}
+                      {service.icon === 'video' && (
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18" />
+                          <line x1="7" y1="2" x2="7" y2="22" />
+                          <line x1="17" y1="2" x2="17" y2="22" />
+                          <line x1="2" y1="12" x2="22" y2="12" />
+                          <line x1="2" y1="7" x2="7" y2="7" />
+                          <line x1="2" y1="17" x2="7" y2="17" />
+                          <line x1="17" y1="17" x2="22" y2="17" />
+                          <line x1="17" y1="7" x2="22" y2="7" />
+                        </svg>
+                      )}
+                      {service.icon === 'design' && (
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <circle cx="13.5" cy="6.5" r=".5" />
+                          <circle cx="17.5" cy="10.5" r=".5" />
+                          <circle cx="8.5" cy="7.5" r=".5" />
+                          <circle cx="6.5" cy="12.5" r=".5" />
+                          <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.92 0 1.7-.71 1.7-1.63 0-.44-.18-.85-.46-1.16-.27-.3-.43-.72-.43-1.18 0-.92.75-1.66 1.67-1.66h2.85c3.07 0 5.58-2.5 5.58-5.56 0-5.5-4.5-9.81-10.87-9.81z" />
+                        </svg>
+                      )}
                     </span>
                     <span className="madurai-service-card__number" aria-hidden="true">
                       {service.number}
@@ -321,20 +429,33 @@ export default function Madurai() {
             {INDUSTRIES.map((industry, index) => (
               <ScrollReveal key={industry.title} delay={index * 80}>
                 <article className="madurai-industry-card glass-card">
-                  <div className="madurai-industry-card__icon" aria-hidden="true">
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                      <polyline points="22 4 12 14.01 9 11.01" />
-                    </svg>
+                  <div className={cx('madurai-industry-card__icon', 'icon-badge', industry.color)} aria-hidden="true">
+                    {industry.icon === 'textiles' && (
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                        <line x1="3" y1="6" x2="21" y2="6" />
+                        <path d="M16 10a4 4 0 0 1-8 0" />
+                      </svg>
+                    )}
+                    {industry.icon === 'education' && (
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                        <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                      </svg>
+                    )}
+                    {industry.icon === 'healthcare' && (
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                        <path d="M12 8v6M9 11h6" />
+                      </svg>
+                    )}
+                    {industry.icon === 'hospitality' && (
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M18 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z" />
+                        <path d="M9 22v-4h6v4" />
+                        <path d="M8 6h.01M16 6h.01M8 10h.01M16 10h.01M8 14h.01M16 14h.01" />
+                      </svg>
+                    )}
                   </div>
                   <h3 className="madurai-industry-card__title">{industry.title}</h3>
                   <p className="madurai-industry-card__text">{industry.text}</p>

@@ -42,6 +42,7 @@ const INDUSTRIES = [
     tags: ['SEO', 'Google Ads', 'Social Commerce', 'Product Photography'],
     path: '/industries/retail-ecommerce/',
     icon: 'retail',
+    color: 'icon-badge--purple',
   },
   {
     number: '02',
@@ -51,6 +52,7 @@ const INDUSTRIES = [
     tags: ['Local SEO', 'Google Business Profile', 'Google Ads', 'AI Search'],
     path: '/industries/healthcare-clinics/',
     icon: 'healthcare',
+    color: 'icon-badge--blue',
   },
   {
     number: '03',
@@ -60,6 +62,7 @@ const INDUSTRIES = [
     tags: ['Education SEO', 'Google Ads', 'Social Media', 'GEO/AEO'],
     path: '/industries/education-training/',
     icon: 'education',
+    color: 'icon-badge--cyan',
   },
   {
     number: '04',
@@ -69,6 +72,7 @@ const INDUSTRIES = [
     tags: ['Local SEO', 'Google Maps', 'Reviews', 'Google Ads'],
     path: '/industries/hospitality-hotels/',
     icon: 'hospitality',
+    color: 'icon-badge--pink',
   },
   {
     number: '05',
@@ -78,6 +82,7 @@ const INDUSTRIES = [
     tags: ['SEO', 'Product Photography', 'E-Commerce', 'B2B Marketing'],
     path: '/industries/textiles-madurai/',
     icon: 'textiles',
+    color: 'icon-badge--orange',
   },
   {
     number: '06',
@@ -87,6 +92,7 @@ const INDUSTRIES = [
     tags: ['B2B SEO', 'LinkedIn', 'Google Ads', 'AI Search'],
     path: '/industries/port-marine-industrial-thoothukudi/',
     icon: 'industrial',
+    color: 'icon-badge--green',
   },
   {
     number: '07',
@@ -96,6 +102,7 @@ const INDUSTRIES = [
     tags: ['SEO', 'GEO/AEO', 'Google Ads', 'AI Automation'],
     path: '/industries/smes-malaysia-grant-eligible/',
     icon: 'sme',
+    color: 'icon-badge--gold',
   },
   {
     number: '08',
@@ -105,6 +112,7 @@ const INDUSTRIES = [
     tags: ['Local SEO', 'Google Ads', 'Lead Generation', 'Property Marketing'],
     path: '/industries/real-estate-builders/',
     icon: 'realestate',
+    color: 'icon-badge--red',
   },
 ]
 
@@ -484,7 +492,7 @@ export default function Industries() {
                 >
                   <div className="ihub-card__top">
                     <span className="ihub-card__number">{ind.number}</span>
-                    <span className="ihub-card__icon" aria-hidden="true">
+                    <span className={cx('ihub-card__icon', 'icon-badge', ind.color)} aria-hidden="true">
                       <HubIcon name={ind.icon} size={22} />
                     </span>
                   </div>
@@ -621,7 +629,7 @@ export default function Industries() {
           <div className="ihub-locations__grid">
             <ScrollReveal>
               <div className="ihub-loc-card glass-card">
-                <span className="ihub-loc-card__icon" aria-hidden="true">
+                <span className={cx('ihub-loc-card__icon', 'icon-badge', 'icon-badge--purple')} aria-hidden="true">
                   <HubIcon name="target" size={22} />
                 </span>
                 <h3 className="ihub-loc-card__title">Madurai</h3>
@@ -633,7 +641,7 @@ export default function Industries() {
             </ScrollReveal>
             <ScrollReveal delay={80}>
               <div className="ihub-loc-card glass-card">
-                <span className="ihub-loc-card__icon" aria-hidden="true">
+                <span className={cx('ihub-loc-card__icon', 'icon-badge', 'icon-badge--blue')} aria-hidden="true">
                   <HubIcon name="industrial" size={22} />
                 </span>
                 <h3 className="ihub-loc-card__title">Thoothukudi</h3>
@@ -645,7 +653,7 @@ export default function Industries() {
             </ScrollReveal>
             <ScrollReveal delay={160}>
               <div className="ihub-loc-card glass-card">
-                <span className="ihub-loc-card__icon" aria-hidden="true">
+                <span className={cx('ihub-loc-card__icon', 'icon-badge', 'icon-badge--cyan')} aria-hidden="true">
                   <HubIcon name="globe" size={22} />
                 </span>
                 <h3 className="ihub-loc-card__title">Malaysia</h3>

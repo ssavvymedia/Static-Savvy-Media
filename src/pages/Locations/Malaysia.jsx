@@ -13,7 +13,7 @@ import {
   faqPageSchema,
   breadcrumbListSchema,
 } from '../../utils/schema.js'
-import { buildWhatsAppLink } from '../../utils/helpers.js'
+import { buildWhatsAppLink, cx } from '../../utils/helpers.js'
 import {
   WHATSAPP_NUMBER,
   WHATSAPP_MESSAGE,
@@ -42,21 +42,29 @@ const GRANTS = [
     number: '01',
     title: 'MDEC, Digital Economy Programme',
     text: 'Supports SME adoption of digital tools and digital marketing. Our SEO, social media, and website development services may qualify under the digital marketing spend category.',
+    icon: 'digital',
+    color: 'icon-badge--purple',
   },
   {
     number: '02',
     title: 'SMECorp, SME Digitalisation Initiative',
     text: 'Government matching grants for SME digital adoption. Digital marketing services from registered vendors may be eligible for 50% matching grants up to RM5,000 per company.',
+    icon: 'finance',
+    color: 'icon-badge--blue',
   },
   {
     number: '03',
     title: 'TEKUN, Bumiputera Digital Grant',
     text: 'Digital tools and e-commerce support grants for Bumiputera-owned businesses.',
+    icon: 'launch',
+    color: 'icon-badge--cyan',
   },
   {
     number: '04',
     title: 'Cradle Fund, CIP Spark',
     text: 'Technology commercialisation funding that can support digital presence building for technology-related SMEs.',
+    icon: 'spark',
+    color: 'icon-badge--pink',
   },
 ]
 
@@ -69,42 +77,56 @@ const SERVICES = [
     title: 'SEO for Malaysia',
     text: 'English and Bahasa Malaysia keyword strategy, targeting Selangor, Kuala Lumpur, and Klang Valley search queries.',
     path: '/services/seo/malaysia/',
+    icon: 'seo',
+    color: 'icon-badge--purple',
   },
   {
     number: '02',
     title: 'Local SEO & Google Maps',
     text: 'GBP optimization for your Malaysian location, targeting “near me” and city-specific queries in Rawang, Selangor, and surrounding areas.',
     path: '/services/local-seo/malaysia/',
+    icon: 'local',
+    color: 'icon-badge--blue',
   },
   {
     number: '03',
     title: 'GEO & AEO',
     text: 'AI search visibility for Malaysian market queries, particularly valuable as Malaysian professionals increasingly use ChatGPT and Perplexity for vendor research.',
     path: '/services/geo-aeo-ai-search/',
+    icon: 'geo',
+    color: 'icon-badge--cyan',
   },
   {
     number: '04',
     title: 'Google Ads (MYR)',
     text: 'Paid search campaigns budgeted and reported in MYR, targeting Malaysian search audiences.',
     path: '/services/google-ads/',
+    icon: 'ads',
+    color: 'icon-badge--pink',
   },
   {
     number: '05',
     title: 'Social Media',
     text: 'Facebook and Instagram (dominant in Malaysia) and LinkedIn (for B2B). Bilingual content in English and Bahasa Malaysia.',
     path: '/services/social-media-marketing/',
+    icon: 'social',
+    color: 'icon-badge--orange',
   },
   {
     number: '06',
     title: 'Website Development',
     text: 'SEO-ready websites for Malaysian businesses, with local payment gateway integration (FPX, GrabPay) where required.',
     path: '/services/website-design-development/',
+    icon: 'web',
+    color: 'icon-badge--green',
   },
   {
     number: '07',
     title: 'AI Business Automation',
     text: 'Workflow automation and WhatsApp Business API setup, eligible for SME Digitalisation Initiative grant funding for qualifying businesses.',
     path: '/services/ai-business-automation/malaysia/',
+    icon: 'automation',
+    color: 'icon-badge--gold',
   },
 ]
 
@@ -254,8 +276,30 @@ export default function Malaysia() {
               <ScrollReveal key={grant.number} delay={index * 60}>
                 <article className="malaysia-grant-card glass-card">
                   <div className="malaysia-grant-card__top">
-                    <span className="malaysia-grant-card__badge" aria-hidden="true">
-                      {grant.number}
+                    <span className={cx('malaysia-grant-card__badge', 'icon-badge', grant.color)} aria-hidden="true">
+                      {grant.icon === 'digital' && (
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                          <line x1="8" y1="21" x2="16" y2="21" />
+                          <line x1="12" y1="17" x2="12" y2="21" />
+                        </svg>
+                      )}
+                      {grant.icon === 'finance' && (
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                        </svg>
+                      )}
+                      {grant.icon === 'launch' && (
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" />
+                          <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" />
+                        </svg>
+                      )}
+                      {grant.icon === 'spark' && (
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M9 18h6M10 22h4M15 14.5A7 7 0 1 0 9 14.5" />
+                        </svg>
+                      )}
                     </span>
                     <span className="malaysia-grant-card__number" aria-hidden="true">
                       {grant.number}
@@ -303,8 +347,61 @@ export default function Malaysia() {
               <ScrollReveal key={service.number} delay={index * 60}>
                 <article className="malaysia-service-card glass-card">
                   <div className="malaysia-service-card__top">
-                    <span className="malaysia-service-card__badge" aria-hidden="true">
-                      {service.number}
+                    <span className={cx('malaysia-service-card__badge', 'icon-badge', service.color)} aria-hidden="true">
+                      {service.icon === 'seo' && (
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <circle cx="11" cy="11" r="8" />
+                          <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                        </svg>
+                      )}
+                      {service.icon === 'local' && (
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                          <circle cx="12" cy="10" r="3" />
+                        </svg>
+                      )}
+                      {service.icon === 'geo' && (
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" />
+                        </svg>
+                      )}
+                      {service.icon === 'ads' && (
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <circle cx="12" cy="12" r="10" />
+                          <circle cx="12" cy="12" r="6" />
+                          <circle cx="12" cy="12" r="2" />
+                        </svg>
+                      )}
+                      {service.icon === 'social' && (
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <circle cx="18" cy="5" r="3" />
+                          <circle cx="6" cy="12" r="3" />
+                          <circle cx="18" cy="19" r="3" />
+                          <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" />
+                          <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
+                        </svg>
+                      )}
+                      {service.icon === 'web' && (
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                          <line x1="8" y1="21" x2="16" y2="21" />
+                          <line x1="12" y1="17" x2="12" y2="21" />
+                        </svg>
+                      )}
+                      {service.icon === 'automation' && (
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <rect x="4" y="4" width="16" height="16" rx="2" />
+                          <rect x="9" y="9" width="6" height="6" />
+                          <line x1="9" y1="1" x2="9" y2="4" />
+                          <line x1="15" y1="1" x2="15" y2="4" />
+                          <line x1="9" y1="20" x2="9" y2="23" />
+                          <line x1="15" y1="20" x2="15" y2="23" />
+                          <line x1="20" y1="9" x2="23" y2="9" />
+                          <line x1="20" y1="15" x2="23" y2="15" />
+                          <line x1="1" y1="9" x2="4" y2="9" />
+                          <line x1="1" y1="15" x2="4" y2="15" />
+                        </svg>
+                      )}
                     </span>
                     <span className="malaysia-service-card__number" aria-hidden="true">
                       {service.number}

@@ -6,6 +6,7 @@ import SectionHeading from '../../components/common/SectionHeading.jsx'
 import HeroSection from '../../components/hero/HeroSection.jsx'
 import FAQSection from '../../components/sections/FAQSection.jsx'
 import CTASection from '../../components/sections/CTASection.jsx'
+import ContactFormSection from '../../components/sections/ContactFormSection.jsx'
 import { ScrollReveal } from '../../components/animations/ScrollReveal.jsx'
 import { setSeo } from '../../utils/seo.js'
 import { breadcrumbListSchema, faqPageSchema } from '../../utils/schema.js'
@@ -243,6 +244,8 @@ export default function Pricing({ country: propCountry }) {
         primaryLabel={'💬 WhatsApp Us'}
         primaryHref={whatsappHref}
       />
+
+      <ContactFormSection />
     </div>
   )
 }

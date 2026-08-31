@@ -456,7 +456,11 @@
 .madurai-industry-card__icon,
 .lh-card__icon,
 .ret-service-card__icon,
-.founder-connect-card__icon {
+.founder-connect-card__icon,
+.madurai-service-card__badge,
+.malaysia-service-card__badge,
+.thoothukudi-service-card__badge,
+.malaysia-grant-card__badge {
   width: 3.25rem !important;
   height: 3.25rem !important;
   border-radius: 50% !important;
@@ -466,10 +470,96 @@
   color: #ffffff !important;
   flex-shrink: 0 !important;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  margin-bottom: 0.5rem !important;
   border: none !important;
   box-sizing: border-box !important;
   background-clip: padding-box !important;
+}
+
+/* ====================================================
+   UNIFIED ICON BADGE SYSTEM (Explicit Color Modifiers)
+   ==================================================== */
+.icon-badge {
+  width: 52px !important;
+  height: 52px !important;
+  border-radius: 50% !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #ffffff !important;
+  flex-shrink: 0 !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+  border: none !important;
+  box-sizing: border-box !important;
+}
+
+.icon-badge svg {
+  width: 1.35rem !important;
+  height: 1.35rem !important;
+  color: #ffffff !important;
+}
+
+.icon-badge:hover {
+  transform: translateY(-3px) scale(1.06) !important;
+}
+
+.icon-badge--purple {
+  background: linear-gradient(135deg, #a855f7, #7c3aed) !important;
+  box-shadow: 0 0 18px rgba(168, 85, 247, 0.45) !important;
+}
+
+.icon-badge--blue {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8) !important;
+  box-shadow: 0 0 18px rgba(59, 130, 246, 0.45) !important;
+}
+
+.icon-badge--cyan {
+  background: linear-gradient(135deg, #06b6d4, #0891b2) !important;
+  box-shadow: 0 0 18px rgba(6, 182, 212, 0.45) !important;
+}
+
+.icon-badge--pink {
+  background: linear-gradient(135deg, #ec4899, #db2777) !important;
+  box-shadow: 0 0 18px rgba(236, 72, 153, 0.45) !important;
+}
+
+.icon-badge--orange {
+  background: linear-gradient(135deg, #f97316, #ea580c) !important;
+  box-shadow: 0 0 18px rgba(249, 115, 22, 0.45) !important;
+}
+
+.icon-badge--green {
+  background: linear-gradient(135deg, #22c55e, #16a34a) !important;
+  box-shadow: 0 0 18px rgba(34, 197, 94, 0.45) !important;
+}
+
+.icon-badge--gold {
+  background: linear-gradient(135deg, #eab308, #ca8a04) !important;
+  box-shadow: 0 0 18px rgba(234, 179, 8, 0.45) !important;
+}
+
+.icon-badge--red {
+  background: linear-gradient(135deg, #ef4444, #dc2626) !important;
+  box-shadow: 0 0 18px rgba(239, 68, 68, 0.45) !important;
+}
+
+.icon-badge--indigo {
+  background: linear-gradient(135deg, #6366f1, #4338ca) !important;
+  box-shadow: 0 0 18px rgba(99, 102, 241, 0.45) !important;
+}
+
+.icon-badge--teal {
+  background: linear-gradient(135deg, #14b8a6, #0d9488) !important;
+  box-shadow: 0 0 18px rgba(20, 184, 166, 0.45) !important;
+}
+
+.icon-badge--magenta {
+  background: linear-gradient(135deg, #c2185b, #e91e63) !important;
+  box-shadow: 0 0 18px rgba(194, 24, 91, 0.45) !important;
+}
+
+.icon-badge--amber {
+  background: linear-gradient(135deg, #d4a843, #f59e0b) !important;
+  box-shadow: 0 0 18px rgba(212, 168, 67, 0.45) !important;
 }
 
 /* Make hover scale-up and enhance shadow */
@@ -553,7 +643,11 @@
 .madurai-industry-card__icon svg,
 .lh-card__icon svg,
 .ret-service-card__icon svg,
-.founder-connect-card__icon svg {
+.founder-connect-card__icon svg,
+.madurai-service-card__badge svg,
+.malaysia-service-card__badge svg,
+.thoothukudi-service-card__badge svg,
+.malaysia-grant-card__badge svg {
   width: 1.35rem !important;
   height: 1.35rem !important;
   color: #ffffff !important;
@@ -599,6 +693,10 @@
 .aiv-create-card:nth-child(1) .aiv-create-card__icon,
 .aba-automation-card:nth-child(1) .aba-automation-card__icon,
 .cpv-location-card:nth-child(1) .cpv-location-card__icon,
+.madurai-service-card:nth-child(1) .madurai-service-card__badge,
+.malaysia-service-card:nth-child(1) .malaysia-service-card__badge,
+.thoothukudi-service-card:nth-child(1) .thoothukudi-service-card__badge,
+.malaysia-grant-card:nth-child(1) .malaysia-grant-card__badge,
 .founder-connect-card__icon--whatsapp {
   background: linear-gradient(135deg, #a855f7, #7c3aed) !important;
   box-shadow: 0 0 15px rgba(168, 85, 247, 0.35) !important;
@@ -641,6 +739,10 @@
 .aiv-create-card:nth-child(2) .aiv-create-card__icon,
 .aba-automation-card:nth-child(2) .aba-automation-card__icon,
 .cpv-location-card:nth-child(2) .cpv-location-card__icon,
+.madurai-service-card:nth-child(2) .madurai-service-card__badge,
+.malaysia-service-card:nth-child(2) .malaysia-service-card__badge,
+.thoothukudi-service-card:nth-child(2) .thoothukudi-service-card__badge,
+.malaysia-grant-card:nth-child(2) .malaysia-grant-card__badge,
 .founder-connect-card__icon--linkedin {
   background: linear-gradient(135deg, #3b82f6, #1d4ed8) !important;
   box-shadow: 0 0 15px rgba(59, 130, 246, 0.35) !important;
@@ -682,6 +784,10 @@
 .ret-service-card:nth-child(3) .ret-service-card__icon,
 .aiv-create-card:nth-child(3) .aiv-create-card__icon,
 .aba-automation-card:nth-child(3) .aba-automation-card__icon,
+.madurai-service-card:nth-child(3) .madurai-service-card__badge,
+.malaysia-service-card:nth-child(3) .malaysia-service-card__badge,
+.thoothukudi-service-card:nth-child(3) .thoothukudi-service-card__badge,
+.malaysia-grant-card:nth-child(3) .malaysia-grant-card__badge,
 .founder-connect-card__icon--instagram {
   background: linear-gradient(135deg, #06b6d4, #0891b2) !important;
   box-shadow: 0 0 15px rgba(6, 182, 212, 0.35) !important;
@@ -706,7 +812,11 @@
 .hc-service-card:nth-child(4) .hc-service-card__icon,
 .hc-trust-card:nth-child(4) .hc-trust-card__icon,
 .aiv-create-card:nth-child(4) .aiv-create-card__icon,
-.aba-automation-card:nth-child(4) .aba-automation-card__icon {
+.aba-automation-card:nth-child(4) .aba-automation-card__icon,
+.madurai-service-card:nth-child(4) .madurai-service-card__badge,
+.malaysia-service-card:nth-child(4) .malaysia-service-card__badge,
+.thoothukudi-service-card:nth-child(4) .thoothukudi-service-card__badge,
+.malaysia-grant-card:nth-child(4) .malaysia-grant-card__badge {
   background: linear-gradient(135deg, #ec4899, #db2777) !important;
   box-shadow: 0 0 15px rgba(236, 72, 153, 0.35) !important;
 }
@@ -723,7 +833,10 @@
 .hh-service-card:nth-child(5) .hh-service-card__icon,
 .hc-service-card:nth-child(5) .hc-service-card__icon,
 .aiv-create-card:nth-child(5) .aiv-create-card__icon,
-.aba-automation-card:nth-child(5) .aba-automation-card__icon {
+.aba-automation-card:nth-child(5) .aba-automation-card__icon,
+.madurai-service-card:nth-child(5) .madurai-service-card__badge,
+.malaysia-service-card:nth-child(5) .malaysia-service-card__badge,
+.thoothukudi-service-card:nth-child(5) .thoothukudi-service-card__badge {
   background: linear-gradient(135deg, #f97316, #ea580c) !important;
   box-shadow: 0 0 15px rgba(249, 115, 22, 0.35) !important;
 }
@@ -734,9 +847,34 @@
 .tm-service-card:nth-child(6) .tm-service-card__icon,
 .hh-service-card:nth-child(6) .hh-service-card__icon,
 .hc-service-card:nth-child(6) .hc-service-card__icon,
-.aba-automation-card:nth-child(6) .aba-automation-card__icon {
+.aba-automation-card:nth-child(6) .aba-automation-card__icon,
+.madurai-service-card:nth-child(6) .madurai-service-card__badge,
+.malaysia-service-card:nth-child(6) .malaysia-service-card__badge,
+.thoothukudi-service-card:nth-child(6) .thoothukudi-service-card__badge {
   background: linear-gradient(135deg, #22c55e, #16a34a) !important;
   box-shadow: 0 0 15px rgba(34, 197, 94, 0.35) !important;
+}
+
+.madurai-service-card:nth-child(7) .madurai-service-card__badge,
+.malaysia-service-card:nth-child(7) .malaysia-service-card__badge,
+.thoothukudi-service-card:nth-child(7) .thoothukudi-service-card__badge {
+  background: linear-gradient(135deg, #eab308, #ca8a04) !important;
+  box-shadow: 0 0 15px rgba(234, 179, 8, 0.35) !important;
+}
+
+.madurai-service-card:nth-child(8) .madurai-service-card__badge {
+  background: linear-gradient(135deg, #ef4444, #dc2626) !important;
+  box-shadow: 0 0 15px rgba(239, 68, 68, 0.35) !important;
+}
+
+.madurai-service-card:nth-child(9) .madurai-service-card__badge {
+  background: linear-gradient(135deg, #6366f1, #4338ca) !important;
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.35) !important;
+}
+
+.madurai-service-card:nth-child(10) .madurai-service-card__badge {
+  background: linear-gradient(135deg, #14b8a6, #0d9488) !important;
+  box-shadow: 0 0 15px rgba(20, 184, 166, 0.35) !important;
 }
 
 /* ====================================================

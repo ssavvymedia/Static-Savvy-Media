@@ -13,6 +13,7 @@ import { organizationSchema, faqPageSchema, breadcrumbListSchema } from '../../u
 import { buildWhatsAppLink } from '../../utils/helpers.js'
 import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, SITE_URL } from '../../utils/constants.js'
 import aboutHeroImg from '../../assets/images/About/About.png'
+import deepanAboutImg from '../../assets/images/About/DeepanAbout.png'
 
 /* ============================================================
    CONTENT, Approved Static Savvy Media About Page Content
@@ -552,7 +553,7 @@ export default function About() {
           <ScrollReveal>
             <div className="about-founder-card">
               <div className="about-founder-card__image">
-                <div className="about-founder-card__image-placeholder" aria-hidden="true">DK</div>
+                <img src={deepanAboutImg} alt="Deepan Kanz - Founder & AI Search Specialist" className="about-founder-card__img" />
               </div>
               <div className="about-founder-card__info">
                 <h3 className="about-founder-card__name">Deepan Kanz</h3>

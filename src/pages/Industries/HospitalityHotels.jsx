@@ -319,20 +319,30 @@ export default function HospitalityHotels() {
             </p>
           </ScrollReveal>
           <div className="hh-intro__steps">
-            {['Discovery', 'Trust', 'Consideration', 'Enquiry', 'Booking'].map((step, index) => (
-              <Fragment key={step}>
-                {index > 0 && <span className="hh-intro__arrow" aria-hidden="true" />}
-                <ScrollReveal className="hh-intro__step" delay={index * 60}>
-                  <span className="hh-intro__step-dot" aria-hidden="true" />
-                  <span className="hh-intro__step-label">{step}</span>
-                </ScrollReveal>
-              </Fragment>
+            {[
+              { step: 'Discovery', icon: 'search', color: 'icon-badge--purple', desc: 'Google Search & Maps' },
+              { step: 'Trust', icon: 'shield', color: 'icon-badge--blue', desc: 'TripAdvisor & Reviews' },
+              { step: 'Consideration', icon: 'target', color: 'icon-badge--cyan', desc: 'OTAs & Amenities' },
+              { step: 'Enquiry', icon: 'message', color: 'icon-badge--orange', desc: 'WhatsApp & Direct Call' },
+              { step: 'Booking', icon: 'calendar', color: 'icon-badge--pink', desc: 'Confirmed Reservation' },
+            ].map((item, index) => (
+              <ScrollReveal key={item.step} className="hh-intro__step-card glass-card" delay={index * 60}>
+                <div className="hh-intro__step-header">
+                  <span className="hh-intro__step-num">0{index + 1}</span>
+                  <span className={cx('hh-intro__step-icon', 'icon-badge', item.color)} aria-hidden="true">
+                    <HospitalityIcon name={item.icon} size={18} />
+                  </span>
+                </div>
+                <span className="hh-intro__step-label">{item.step}</span>
+                <span className="hh-intro__step-sub">{item.desc}</span>
+              </ScrollReveal>
             ))}
           </div>
           <ScrollReveal>
-            <p className="hh-intro__quote">
-              "A hospitality business that is discoverable, credible, and easy to contact wins the enquiry, and the booking, before a competitor does."
-            </p>
+            <blockquote className="hh-intro__quote glass-card">
+              <span className="hh-intro__quote-icon" aria-hidden="true">“</span>
+              <p>A hospitality business that is discoverable, credible, and easy to contact wins the enquiry, and the booking, before a competitor does.</p>
+            </blockquote>
           </ScrollReveal>
         </div>
       </section>
@@ -349,11 +359,25 @@ export default function HospitalityHotels() {
               We build more than individual marketing activities, a complete digital traveller acquisition system that moves a prospective guest from first search to confirmed booking.
             </p>
           </ScrollReveal>
-          <ScrollReveal>
-            <div className="hh-journey__flow">
-              <Flow items={JOURNEY_STEPS} direction="horizontal" />
-            </div>
-          </ScrollReveal>
+          <div className="hh-journey__grid">
+            {JOURNEY_STEPS.map((step, index) => {
+              const colors = ['icon-badge--purple', 'icon-badge--blue', 'icon-badge--cyan', 'icon-badge--pink', 'icon-badge--gold']
+              return (
+                <ScrollReveal key={step.label} delay={index * 70}>
+                  <div className="hh-journey__card glass-card">
+                    <div className="hh-journey__card-top">
+                      <span className="hh-journey__step-badge">Step 0{index + 1}</span>
+                      <span className={cx('hh-journey__icon', 'icon-badge', colors[index % colors.length])} aria-hidden="true">
+                        <HospitalityIcon name={step.icon} size={18} />
+                      </span>
+                    </div>
+                    <h3 className="hh-journey__card-title">{step.label}</h3>
+                    <p className="hh-journey__card-sub">{step.sub}</p>
+                  </div>
+                </ScrollReveal>
+              )
+            })}
+          </div>
           <ScrollReveal>
             <div className="hh-journey__search-examples">
               <p className="hh-journey__search-label">Traveller search queries:</p>
@@ -495,13 +519,18 @@ export default function HospitalityHotels() {
           </ScrollReveal>
           <div className="hh-reviews__ecosystem">
             {[
-              { label: 'Google Reviews', icon: 'star', text: 'The most visible review platform, influences Maps ranking and traveller trust.' },
-              { label: 'TripAdvisor', icon: 'globe', text: 'The dedicated travel review platform travellers check before booking hotels and restaurants.' },
-              { label: 'Other Platforms', icon: 'compass', text: 'OTA reviews, Facebook recommendations, and industry-specific platforms that contribute to overall reputation.' },
+              { label: 'Google Reviews', icon: 'star', color: 'icon-badge--gold', text: 'The most visible review platform, influences Maps ranking and traveller trust.' },
+              { label: 'TripAdvisor', icon: 'globe', color: 'icon-badge--cyan', text: 'The dedicated travel review platform travellers check before booking hotels and restaurants.' },
+              { label: 'Other Platforms', icon: 'compass', color: 'icon-badge--purple', text: 'OTA reviews, Facebook recommendations, and industry-specific platforms that contribute to overall reputation.' },
             ].map((item, index) => (
               <ScrollReveal key={item.label} delay={index * 80}>
                 <div className="hh-reviews__card glass-card">
-                  <span className="hh-reviews__card-icon" aria-hidden="true"><HospitalityIcon name={item.icon} size={24} /></span>
+                  <div className="hh-reviews__card-header">
+                    <span className={cx('hh-reviews__card-icon', 'icon-badge', item.color)} aria-hidden="true">
+                      <HospitalityIcon name={item.icon} size={22} />
+                    </span>
+                    <span className="hh-reviews__stars-badge" aria-hidden="true">★★★★★</span>
+                  </div>
                   <h3 className="hh-reviews__card-title">{item.label}</h3>
                   <p className="hh-reviews__card-text">{item.text}</p>
                 </div>
@@ -509,18 +538,26 @@ export default function HospitalityHotels() {
             ))}
           </div>
           <ScrollReveal>
-            <div className="hh-reviews__focus">
-              <h3 className="hh-reviews__focus-title">Our Approach to Reviews</h3>
+            <div className="hh-reviews__focus glass-card">
+              <div className="hh-reviews__focus-header">
+                <span className="icon-badge icon-badge--blue" aria-hidden="true">
+                  <HospitalityIcon name="shield" size={22} />
+                </span>
+                <h3 className="hh-reviews__focus-title">Our Approach to Reviews</h3>
+              </div>
               <div className="hh-reviews__focus-items">
                 {[
-                  'Volume, encourage genuine guest feedback',
-                  'Recency, consistent flow of new reviews',
-                  'Authenticity, real experiences from real guests',
-                  'Professional responses, thank, address concerns, show care',
+                  { text: 'Volume, encourage genuine guest feedback', color: 'icon-badge--purple' },
+                  { text: 'Recency, consistent flow of new reviews', color: 'icon-badge--blue' },
+                  { text: 'Authenticity, real experiences from real guests', color: 'icon-badge--green' },
+                  { text: 'Professional responses, thank, address concerns, show care', color: 'icon-badge--pink' },
                 ].map((item) => (
-                  <span key={item} className="hh-reviews__focus-item">
-                    <HospitalityIcon name="check" size={14} />{item}
-                  </span>
+                  <div key={item.text} className="hh-reviews__focus-item-card glass-card">
+                    <span className={cx('hh-reviews__check-badge', 'icon-badge', item.color)} aria-hidden="true">
+                      <HospitalityIcon name="check" size={14} />
+                    </span>
+                    <span>{item.text}</span>
+                  </div>
                 ))}
               </div>
               <p className="hh-reviews__focus-note">
@@ -575,21 +612,21 @@ export default function HospitalityHotels() {
             <h2 className="section-heading__title">Capture Hospitality Demand in Madurai</h2>
           </div>
           <ScrollReveal>
-            <p className="hh-madurai__intro">
-              Madurai attracts temple visitors, cultural tourists, business travellers, and transit guests, creating consistent local search demand for hotels, restaurants, and hospitality services. Travellers searching for accommodation and dining options in Madurai are high-intent searchers ready to enquire or book.
-            </p>
-          </ScrollReveal>
-          <div className="hh-madurai__searches">
-            {['hotels in Madurai', 'hotel near Meenakshi Temple', 'restaurants near Meenakshi Temple', 'best hotels in Madurai', 'budget hotel near Madurai railway station'].map((query, index) => (
-              <span key={query} className="hh-madurai__search" style={{ animationDelay: `${index * 80}ms` }}>
-                <HospitalityIcon name="search" size={14} />{query}
-              </span>
-            ))}
-          </div>
-          <ScrollReveal>
-            <p className="hh-madurai__text">
-              Tourism and pilgrimage demand create local search opportunities for hospitality businesses across Madurai. We help hotels, restaurants, and hospitality services rank for these high-intent queries, ensuring your property appears when travellers are actively searching for accommodation and dining options in the city.
-            </p>
+            <div className="hh-madurai__card glass-card">
+              <p className="hh-madurai__intro">
+                Madurai attracts temple visitors, cultural tourists, business travellers, and transit guests, creating consistent local search demand for hotels, restaurants, and hospitality services. Travellers searching for accommodation and dining options in Madurai are high-intent searchers ready to enquire or book.
+              </p>
+              <div className="hh-madurai__searches">
+                {['hotels in Madurai', 'hotel near Meenakshi Temple', 'restaurants near Meenakshi Temple', 'best hotels in Madurai', 'budget hotel near Madurai railway station'].map((query, index) => (
+                  <span key={query} className="hh-madurai__search" style={{ animationDelay: `${index * 80}ms` }}>
+                    <HospitalityIcon name="search" size={14} />{query}
+                  </span>
+                ))}
+              </div>
+              <p className="hh-madurai__text">
+                Tourism and pilgrimage demand create local search opportunities for hospitality businesses across Madurai. We help hotels, restaurants, and hospitality services rank for these high-intent queries, ensuring your property appears when travellers are actively searching for accommodation and dining options in the city.
+              </p>
+            </div>
           </ScrollReveal>
         </div>
       </section>
@@ -675,11 +712,27 @@ export default function HospitalityHotels() {
               Every marketing activity connects to a clear funnel, from first search to confirmed booking. Understanding this flow ensures every channel works together to drive measurable results.
             </p>
           </ScrollReveal>
-          <ScrollReveal>
-            <div className="hh-funnel__flow">
-              <Flow items={FUNNEL} direction="horizontal" />
-            </div>
-          </ScrollReveal>
+          <div className="hh-funnel__grid">
+            {FUNNEL.map((step, index) => {
+              const isLast = index === FUNNEL.length - 1
+              const colors = ['icon-badge--purple', 'icon-badge--blue', 'icon-badge--cyan', 'icon-badge--pink', 'icon-badge--green', 'icon-badge--gold']
+              return (
+                <ScrollReveal key={step.label} delay={index * 60}>
+                  <div className={cx('hh-funnel__card', 'glass-card', isLast && 'hh-funnel__card--final')}>
+                    <div className="hh-funnel__card-top">
+                      <span className="hh-funnel__step-num">0{index + 1}</span>
+                      <span className={cx('hh-funnel__icon', 'icon-badge', colors[index % colors.length])} aria-hidden="true">
+                        <HospitalityIcon name={step.icon} size={18} />
+                      </span>
+                    </div>
+                    <h3 className="hh-funnel__card-title">{step.label}</h3>
+                    <p className="hh-funnel__card-sub">{step.sub}</p>
+                    {isLast && <span className="hh-funnel__goal-badge">Goal Achieved</span>}
+                  </div>
+                </ScrollReveal>
+              )
+            })}
+          </div>
         </div>
       </section>
 

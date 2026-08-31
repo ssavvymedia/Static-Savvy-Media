@@ -253,7 +253,7 @@ export default function Locations() {
                     </span>
                   </div>
                   <div className="lh-card__icon-row">
-                    <span className="lh-card__icon" aria-hidden="true">
+                    <span className={cx('lh-card__icon', 'icon-badge', index === 0 ? 'icon-badge--purple' : index === 1 ? 'icon-badge--blue' : 'icon-badge--cyan')} aria-hidden="true">
                       <HubIcon name={loc.icon} size={24} />
                     </span>
                     <h3 className="lh-card__title">{loc.name}</h3>
@@ -290,7 +290,7 @@ export default function Locations() {
           <div className="lh-presence__grid">
             <ScrollReveal>
               <div className="lh-presence__card glass-card">
-                <span className="lh-presence__icon" aria-hidden="true">
+                <span className="lh-presence__icon icon-badge icon-badge--purple" aria-hidden="true">
                   <HubIcon name="madurai" size={22} />
                 </span>
                 <h3 className="lh-presence__title">Headquarters</h3>
@@ -303,7 +303,7 @@ export default function Locations() {
             </ScrollReveal>
             <ScrollReveal delay={80}>
               <div className="lh-presence__card glass-card">
-                <span className="lh-presence__icon" aria-hidden="true">
+                <span className="lh-presence__icon icon-badge icon-badge--blue" aria-hidden="true">
                   <HubIcon name="thoothukudi" size={22} />
                 </span>
                 <h3 className="lh-presence__title">Regional Reach</h3>
@@ -315,7 +315,7 @@ export default function Locations() {
             </ScrollReveal>
             <ScrollReveal delay={160}>
               <div className="lh-presence__card glass-card">
-                <span className="lh-presence__icon" aria-hidden="true">
+                <span className="lh-presence__icon icon-badge icon-badge--cyan" aria-hidden="true">
                   <HubIcon name="malaysia" size={22} />
                 </span>
                 <h3 className="lh-presence__title">International</h3>

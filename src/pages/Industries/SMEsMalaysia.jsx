@@ -38,69 +38,75 @@ const SERVICES = [
   {
     title: 'SEO for Malaysian SMEs',
     icon: 'search',
+    color: 'icon-badge--blue',
     path: '/services/seo/',
     text: 'Optimize your website for searches like "IT support Kuala Lumpur" and "accounting services Penang" to capture businesses actively searching online.',
   },
   {
     title: 'GEO & AEO, AI Search Visibility',
     icon: 'sparkles',
+    color: 'icon-badge--amber',
     path: '/services/geo-aeo-ai-search/',
     text: 'Improve AI search visibility when decision-makers ask ChatGPT, Perplexity and Google AI Overviews about SME services and businesses in Malaysia.',
   },
   {
     title: 'Local SEO & Google Business Profile',
     icon: 'mappin',
+    color: 'icon-badge--purple',
     path: '/services/local-seo/',
     text: 'Optimize Google Maps and Google Business Profile visibility so local customers find your business location and services easily.',
   },
   {
     title: 'Google Ads for High-Intent Customers',
     icon: 'megaphone',
+    color: 'icon-badge--cyan',
     path: '/services/google-ads/',
     text: 'Paid search campaigns targeting high-intent buyers searching for specific services, solutions and business categories in your target markets.',
   },
   {
     title: 'Social Media Marketing',
     icon: 'share',
+    color: 'icon-badge--pink',
     path: '/services/social-media-marketing/',
     text: 'Facebook and Instagram campaigns showcasing services, expertise and credibility content to drive traffic, enquiries and customer trust.',
   },
   {
     title: 'SEO-Ready Website Development',
     icon: 'code',
+    color: 'icon-badge--green',
     path: '/services/website-design-development/',
     text: 'Professional websites with clear service messaging, conversion-focused design and WhatsApp-first enquiry flow for Malaysian businesses.',
   },
 ]
 
 const JOURNEY_STEPS = [
-  { label: 'DISCOVER', sub: 'SEO / Local SEO / AI Search', icon: 'search' },
-  { label: 'BUILD', sub: 'Website / Content / Brand', icon: 'code' },
-  { label: 'ATTRACT', sub: 'Google Ads / Social Media', icon: 'megaphone' },
-  { label: 'CONVERT', sub: 'WhatsApp / Landing Pages', icon: 'message' },
-  { label: 'GROW', sub: 'Analytics / Optimization', icon: 'target' },
+  { label: 'DISCOVER', sub: 'SEO / Local SEO / AI Search', icon: 'search', color: 'icon-badge--blue' },
+  { label: 'BUILD', sub: 'Website / Content / Brand', icon: 'code', color: 'icon-badge--cyan' },
+  { label: 'ATTRACT', sub: 'Google Ads / Social Media', icon: 'megaphone', color: 'icon-badge--purple' },
+  { label: 'CONVERT', sub: 'WhatsApp / Landing Pages', icon: 'message', color: 'icon-badge--green' },
+  { label: 'GROW', sub: 'Analytics / Optimization', icon: 'target', color: 'icon-badge--amber' },
 ]
 
 const DIGITAL_MATURITY = [
-  { label: 'STARTING', sub: 'No strong digital presence', icon: 'compass' },
-  { label: 'BUILDING', sub: 'Website + social media', icon: 'code' },
-  { label: 'GROWING', sub: 'SEO + Ads + content + analytics', icon: 'target' },
-  { label: 'SCALING', sub: 'AI search + automation + multi-market', icon: 'sparkles' },
+  { label: 'STARTING', sub: 'No strong digital presence', icon: 'compass', color: 'icon-badge--blue' },
+  { label: 'BUILDING', sub: 'Website + social media', icon: 'code', color: 'icon-badge--cyan' },
+  { label: 'GROWING', sub: 'SEO + Ads + content + analytics', icon: 'target', color: 'icon-badge--purple' },
+  { label: 'SCALING', sub: 'AI search + automation + multi-market', icon: 'sparkles', color: 'icon-badge--amber' },
 ]
 
 const INDUSTRY_CATEGORIES = [
-  { title: 'Retail', icon: 'tag' },
-  { title: 'Manufacturing', icon: 'package' },
-  { title: 'Services', icon: 'briefcase' },
-  { title: 'Professional Services', icon: 'users' },
-  { title: 'Education', icon: 'book' },
-  { title: 'Healthcare', icon: 'shield' },
-  { title: 'Hospitality', icon: 'home' },
-  { title: 'Real Estate', icon: 'building' },
-  { title: 'Food & Beverage', icon: 'zap' },
-  { title: 'E-Commerce', icon: 'shopping-cart' },
-  { title: 'B2B', icon: 'briefcase' },
-  { title: 'D2C', icon: 'share' },
+  { title: 'Retail', icon: 'tag', color: 'icon-badge--pink' },
+  { title: 'Manufacturing', icon: 'package', color: 'icon-badge--amber' },
+  { title: 'Services', icon: 'briefcase', color: 'icon-badge--blue' },
+  { title: 'Professional Services', icon: 'users', color: 'icon-badge--purple' },
+  { title: 'Education', icon: 'book', color: 'icon-badge--teal' },
+  { title: 'Healthcare', icon: 'shield', color: 'icon-badge--red' },
+  { title: 'Hospitality', icon: 'home', color: 'icon-badge--orange' },
+  { title: 'Real Estate', icon: 'building', color: 'icon-badge--cyan' },
+  { title: 'Food & Beverage', icon: 'zap', color: 'icon-badge--gold' },
+  { title: 'E-Commerce', icon: 'shopping-cart', color: 'icon-badge--magenta' },
+  { title: 'B2B', icon: 'briefcase', color: 'icon-badge--indigo' },
+  { title: 'D2C', icon: 'share', color: 'icon-badge--green' },
 ]
 
 const FAQS = [
@@ -248,11 +254,18 @@ const ICONS = {
       <circle cx="12" cy="12" r="3" />
     </>
   ),
-  layers: (
+  tag: (
     <>
-      <polygon points="12 2 2 7 12 12 22 7 12 2" />
-      <polyline points="2 17 12 22 22 17" />
-      <polyline points="2 12 12 17 22 12" />
+      <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" />
+      <line x1="7" y1="7" x2="7.01" y2="7" />
+    </>
+  ),
+  package: (
+    <>
+      <line x1="16.5" y1="9.4" x2="7.5" y2="4.21" />
+      <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+      <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+      <line x1="12" y1="22.08" x2="12" y2="12" />
     </>
   ),
   home: (
@@ -269,9 +282,7 @@ const ICONS = {
     </>
   ),
   facebook: (
-    <>
-      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-    </>
+    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
   ),
   instagram: (
     <>
@@ -287,30 +298,11 @@ const ICONS = {
       <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
     </>
   ),
-  'credit-card': (
+  layers: (
     <>
-      <rect x="1" y="4" width="22" height="16" rx="2" ry="2" />
-      <line x1="1" y1="10" x2="23" y2="10" />
-    </>
-  ),
-  refresh: (
-    <>
-      <polyline points="23 4 23 10 17 10" />
-      <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10" />
-    </>
-  ),
-  package: (
-    <>
-      <line x1="16.5" y1="9.4" x2="7.5" y2="4.21" />
-      <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
-      <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
-      <line x1="12" y1="22.08" x2="12" y2="12" />
-    </>
-  ),
-  tag: (
-    <>
-      <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" />
-      <line x1="7" y1="7" x2="7.01" y2="7" />
+      <polygon points="12 2 2 7 12 12 22 7 12 2" />
+      <polyline points="2 17 12 22 22 17" />
+      <polyline points="2 12 12 17 22 12" />
     </>
   ),
 }
@@ -333,45 +325,6 @@ function SmIcon({ name, size = 20 }) {
   )
 }
 
-function Node({ label, sub = '', icon }) {
-  return (
-    <span className="sm-node">
-      {icon && (
-        <span className="sm-node__icon" aria-hidden="true">
-          <SmIcon name={icon} size={15} />
-        </span>
-      )}
-      <span className="sm-node__labels">
-        <span className="sm-node__label">{label}</span>
-        {sub && <span className="sm-node__sub">{sub}</span>}
-      </span>
-    </span>
-  )
-}
-
-function Arrow() {
-  return (
-    <span className="sm-arrow" aria-hidden="true">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M6 9l6 6 6-6" />
-      </svg>
-    </span>
-  )
-}
-
-function Flow({ items = [], className = '', direction = 'vertical' }) {
-  return (
-    <div className={cx('sm-flow', `sm-flow--${direction}`, className)}>
-      {items.map((item, index) => (
-        <Fragment key={index}>
-          {index > 0 && <Arrow />}
-          <Node {...item} />
-        </Fragment>
-      ))}
-    </div>
-  )
-}
-
 function FaqAccordion({ faqs }) {
   const [open, setOpen] = useState(null)
 
@@ -380,7 +333,7 @@ function FaqAccordion({ faqs }) {
       {faqs.map((faq, index) => {
         const isOpen = open === index
         return (
-          <div className="sm-faq__item glass-card" key={index}>
+          <div className={cx('sm-faq__item', 'glass-card', isOpen && 'sm-faq__item--open')} key={index}>
             <h3 className="sm-faq__heading">
               <button
                 type="button"
@@ -402,11 +355,11 @@ function FaqAccordion({ faqs }) {
               id={`sm-faq-panel-${index}`}
               role="region"
               aria-labelledby={`sm-faq-button-${index}`}
-              className="sm-faq__panel"
+              className={cx('sm-faq__panel', isOpen && 'sm-faq__panel--open')}
               style={{ gridTemplateRows: isOpen ? '1fr' : '0fr' }}
             >
               <div className="sm-faq__panel-inner">
-                <p>{faq.answer}</p>
+                <p className="sm-faq__answer">{faq.answer}</p>
               </div>
             </div>
           </div>
@@ -495,7 +448,7 @@ export default function SMEsMalaysia() {
     <div className="service-template sm-page">
       <Breadcrumbs />
 
-      {/* Hero */}
+      {/* 1. HERO SECTION */}
       <HeroSection
         layout="two-column"
         eyebrow="MALAYSIA SMEs • DIGITAL TRANSFORMATION"
@@ -524,37 +477,34 @@ export default function SMEsMalaysia() {
         </div>
       </HeroSection>
 
-      {/* Value Strip */}
+      {/* 2. VALUE STRIP */}
       <section className="section sm-value-strip">
         <div className="container">
           <ScrollReveal>
             <div className="sm-value-strip__grid">
-              <div className="sm-value-strip__item glass-card">
-                <span className="sm-value-strip__num">01</span>
-                <span className="sm-value-strip__label">GET DISCOVERED</span>
-                <span className="sm-value-strip__text">Appear when customers search for services in your category across Google, social media and AI search.</span>
-              </div>
-              <div className="sm-value-strip__item glass-card">
-                <span className="sm-value-strip__num">02</span>
-                <span className="sm-value-strip__label">BUILD DIGITAL PRESENCE</span>
-                <span className="sm-value-strip__text">Create a professional website, social media presence and Google Business Profile that builds trust.</span>
-              </div>
-              <div className="sm-value-strip__item glass-card">
-                <span className="sm-value-strip__num">03</span>
-                <span className="sm-value-strip__label">GENERATE ENQUIRIES</span>
-                <span className="sm-value-strip__text">Convert digital attention into WhatsApp messages, phone calls and enquiry forms from real prospects.</span>
-              </div>
-              <div className="sm-value-strip__item glass-card">
-                <span className="sm-value-strip__num">04</span>
-                <span className="sm-value-strip__label">COMPETE DIGITALLY</span>
-                <span className="sm-value-strip__text">Strengthen your competitive position with a system designed to grow alongside your business.</span>
-              </div>
+              {[
+                { num: '01', label: 'GET DISCOVERED', icon: 'search', color: 'icon-badge--blue', text: 'Appear when customers search for services in your category across Google, social media and AI search.' },
+                { num: '02', label: 'BUILD DIGITAL PRESENCE', icon: 'monitor', color: 'icon-badge--cyan', text: 'Create a professional website, social media presence and Google Business Profile that builds trust.' },
+                { num: '03', label: 'GENERATE ENQUIRIES', icon: 'message', color: 'icon-badge--green', text: 'Convert digital attention into WhatsApp messages, phone calls and enquiry forms from real prospects.' },
+                { num: '04', label: 'COMPETE DIGITALLY', icon: 'zap', color: 'icon-badge--amber', text: 'Strengthen your competitive position with a system designed to grow alongside your business.' },
+              ].map((item) => (
+                <div key={item.num} className="sm-value-strip__item glass-card">
+                  <div className="sm-value-strip__header">
+                    <span className="sm-value-strip__num">{item.num}</span>
+                    <span className={cx('sm-value-strip__icon', 'icon-badge', item.color)} aria-hidden="true">
+                      <SmIcon name={item.icon} size={18} />
+                    </span>
+                  </div>
+                  <span className="sm-value-strip__label">{item.label}</span>
+                  <p className="sm-value-strip__text">{item.text}</p>
+                </div>
+              ))}
             </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* Introduction */}
+      {/* 3. INTRODUCTION */}
       <section className="section sm-intro">
         <div className="container">
           <div className="section-heading">
@@ -562,28 +512,30 @@ export default function SMEsMalaysia() {
             <h2 className="section-heading__title">Malaysia&rsquo;s SMEs Are Moving Into a Digital-First Economy</h2>
           </div>
           <ScrollReveal>
-            <p className="sm-intro__text">
-              Whether your business serves local customers in Kuala Lumpur, operates across multiple Malaysian states
-              or reaches customers internationally, your digital presence determines how many people discover your
-              services and how many ultimately choose you. Malaysian SMEs that invest in digital marketing build
-              stronger competitive positions in an increasingly connected economy.
-            </p>
+            <div className="sm-intro__card glass-card">
+              <p className="sm-intro__text">
+                Whether your business serves local customers in Kuala Lumpur, operates across multiple Malaysian states
+                or reaches customers internationally, your digital presence determines how many people discover your
+                services and how many ultimately choose you. Malaysian SMEs that invest in digital marketing build
+                stronger competitive positions in an increasingly connected economy.
+              </p>
+            </div>
           </ScrollReveal>
           <ScrollReveal>
             <div className="sm-intro__pillars">
               <div className="sm-intro__pillar glass-card">
-                <SmIcon name="eye" size={22} />
-                <h4 className="sm-intro__pillar-title">Visibility</h4>
+                <span className="icon-badge icon-badge--blue" aria-hidden="true"><SmIcon name="eye" size={20} /></span>
+                <h3 className="sm-intro__pillar-title">Visibility</h3>
                 <p className="sm-intro__pillar-text">Be found when customers search for services you offer in your area and beyond.</p>
               </div>
               <div className="sm-intro__pillar glass-card">
-                <SmIcon name="shield" size={22} />
-                <h4 className="sm-intro__pillar-title">Credibility</h4>
+                <span className="icon-badge icon-badge--purple" aria-hidden="true"><SmIcon name="shield" size={20} /></span>
+                <h3 className="sm-intro__pillar-title">Credibility</h3>
                 <p className="sm-intro__pillar-text">Present a professional digital presence that builds trust before the first conversation.</p>
               </div>
               <div className="sm-intro__pillar glass-card">
-                <SmIcon name="target" size={22} />
-                <h4 className="sm-intro__pillar-title">Conversion</h4>
+                <span className="icon-badge icon-badge--green" aria-hidden="true"><SmIcon name="target" size={20} /></span>
+                <h3 className="sm-intro__pillar-title">Conversion</h3>
                 <p className="sm-intro__pillar-text">Turn website visits and social media engagement into WhatsApp enquiries and business conversations.</p>
               </div>
             </div>
@@ -591,7 +543,7 @@ export default function SMEsMalaysia() {
         </div>
       </section>
 
-      {/* Journey Flow */}
+      {/* 4. SME GROWTH JOURNEY */}
       <section className="section sm-journey">
         <div className="container">
           <div className="section-heading">
@@ -599,12 +551,25 @@ export default function SMEsMalaysia() {
             <h2 className="section-heading__title">From Digital Presence to Business Growth</h2>
           </div>
           <ScrollReveal>
-            <Flow items={JOURNEY_STEPS} direction="horizontal" className="sm-journey__flow" />
+            <div className="sm-journey__grid">
+              {JOURNEY_STEPS.map((step, index) => (
+                <div className="sm-journey__card glass-card" key={step.label}>
+                  <div className="sm-journey__card-top">
+                    <span className="sm-journey__step-num">Step 0{index + 1}</span>
+                    <span className={cx('sm-journey__icon', 'icon-badge', step.color)} aria-hidden="true">
+                      <SmIcon name={step.icon} size={18} />
+                    </span>
+                  </div>
+                  <h3 className="sm-journey__card-title">{step.label}</h3>
+                  <p className="sm-journey__card-sub">{step.sub}</p>
+                </div>
+              ))}
+            </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* Services */}
+      {/* 5. SERVICES */}
       <section className="section sm-services">
         <div className="container">
           <div className="section-heading">
@@ -615,8 +580,12 @@ export default function SMEsMalaysia() {
             {SERVICES.map((svc, i) => (
               <ScrollReveal key={svc.title} delay={i * 60}>
                 <Link to={svc.path} className="sm-service-card glass-card">
-                  <span className="sm-service-card__number">{String(i + 1).padStart(2, '0')}</span>
-                  <span className="sm-service-card__icon" aria-hidden="true"><SmIcon name={svc.icon} size={22} /></span>
+                  <div className="sm-service-card__top">
+                    <span className="sm-service-card__number">{String(i + 1).padStart(2, '0')}</span>
+                    <span className={cx('sm-service-card__icon', 'icon-badge', svc.color)} aria-hidden="true">
+                      <SmIcon name={svc.icon} size={20} />
+                    </span>
+                  </div>
                   <h3 className="sm-service-card__title">{svc.title}</h3>
                   <p className="sm-service-card__text">{svc.text}</p>
                   <span className="sm-service-card__cta">
@@ -632,7 +601,7 @@ export default function SMEsMalaysia() {
         </div>
       </section>
 
-      {/* Malaysia Market */}
+      {/* 6. MALAYSIA MARKET */}
       <section className="section sm-malaysia-market">
         <div className="container">
           <div className="section-heading">
@@ -640,36 +609,36 @@ export default function SMEsMalaysia() {
             <h2 className="section-heading__title">Built for the Malaysian Market</h2>
           </div>
           <ScrollReveal>
-            <p className="sm-malaysia-market__text">
-              We understand the Malaysian business landscape because we work across it daily. From
-              local SMEs in neighbourhood commercial areas to growing businesses expanding across
-              state lines, our strategies are built around how Malaysian customers search, compare
-              and choose businesses.
-            </p>
-          </ScrollReveal>
-          <ScrollReveal>
-            <div className="sm-malaysia-market__grid">
-              <div className="sm-malaysia-market__card glass-card">
-                <SmIcon name="mappin" size={22} />
-                <h4 className="sm-malaysia-market__card-title">Local</h4>
-                <p className="sm-malaysia-market__card-text">Google Business Profile, local search and Google Maps visibility for businesses serving specific areas.</p>
-              </div>
-              <div className="sm-malaysia-market__card glass-card">
-                <SmIcon name="globe" size={22} />
-                <h4 className="sm-malaysia-market__card-title">Language</h4>
-                <p className="sm-malaysia-market__card-text">English and Bahasa Malaysia content, campaigns and customer communication for the Malaysian market.</p>
-              </div>
-              <div className="sm-malaysia-market__card glass-card">
-                <SmIcon name="users" size={22} />
-                <h4 className="sm-malaysia-market__card-title">Diaspora</h4>
-                <p className="sm-malaysia-market__card-text">Reach Malaysian and Tamil diaspora communities in Singapore, Australia and beyond with targeted strategies.</p>
+            <div className="sm-malaysia-market__card-container glass-card">
+              <p className="sm-malaysia-market__text">
+                We understand the Malaysian business landscape because we work across it daily. From
+                local SMEs in neighbourhood commercial areas to growing businesses expanding across
+                state lines, our strategies are built around how Malaysian customers search, compare
+                and choose businesses.
+              </p>
+              <div className="sm-malaysia-market__grid">
+                <div className="sm-malaysia-market__card glass-card">
+                  <span className="icon-badge icon-badge--red" aria-hidden="true"><SmIcon name="mappin" size={20} /></span>
+                  <h3 className="sm-malaysia-market__card-title">Local</h3>
+                  <p className="sm-malaysia-market__card-text">Google Business Profile, local search and Google Maps visibility for businesses serving specific areas.</p>
+                </div>
+                <div className="sm-malaysia-market__card glass-card">
+                  <span className="icon-badge icon-badge--cyan" aria-hidden="true"><SmIcon name="globe" size={20} /></span>
+                  <h3 className="sm-malaysia-market__card-title">Language</h3>
+                  <p className="sm-malaysia-market__card-text">English and Bahasa Malaysia content, campaigns and customer communication for the Malaysian market.</p>
+                </div>
+                <div className="sm-malaysia-market__card glass-card">
+                  <span className="icon-badge icon-badge--purple" aria-hidden="true"><SmIcon name="users" size={20} /></span>
+                  <h3 className="sm-malaysia-market__card-title">Diaspora</h3>
+                  <p className="sm-malaysia-market__card-text">Reach Malaysian and Tamil diaspora communities in Singapore, Australia and beyond with targeted strategies.</p>
+                </div>
               </div>
             </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* Bahasa Malaysia */}
+      {/* 7. BAHASA MALAYSIA */}
       <section className="section sm-bahasa">
         <div className="container">
           <div className="section-heading">
@@ -677,27 +646,27 @@ export default function SMEsMalaysia() {
             <h2 className="section-heading__title">Digital Marketing in English &amp; Bahasa Malaysia</h2>
           </div>
           <ScrollReveal>
-            <p className="sm-bahasa__text">
-              Malaysia is a multilingual market. Your digital marketing should speak the language your
-              customers prefer. We create content and campaigns in both English and Bahasa Malaysia
-              so your business reaches the widest possible audience across Malaysian demographics.
-            </p>
-          </ScrollReveal>
-          <ScrollReveal>
-            <div className="sm-bahasa__toggle">
-              <div className="sm-bahasa__toggle-bar glass-card">
-                <span className="sm-bahasa__option sm-bahasa__option--active">EN</span>
-                <span className="sm-bahasa__divider">/</span>
-                <span className="sm-bahasa__option">Bahasa Malaysia</span>
-              </div>
-              <div className="sm-bahasa__examples">
-                <div className="sm-bahasa__example glass-card">
-                  <span className="sm-bahasa__lang">EN</span>
-                  <span className="sm-bahasa__sample">&ldquo;Digital marketing services for SMEs in Kuala Lumpur&rdquo;</span>
+            <div className="sm-bahasa__card glass-card">
+              <p className="sm-bahasa__text">
+                Malaysia is a multilingual market. Your digital marketing should speak the language your
+                customers prefer. We create content and campaigns in both English and Bahasa Malaysia
+                so your business reaches the widest possible audience across Malaysian demographics.
+              </p>
+              <div className="sm-bahasa__toggle-wrap">
+                <div className="sm-bahasa__toggle-bar glass-card">
+                  <span className="sm-bahasa__option sm-bahasa__option--active">EN</span>
+                  <span className="sm-bahasa__divider">/</span>
+                  <span className="sm-bahasa__option">Bahasa Malaysia</span>
                 </div>
-                <div className="sm-bahasa__example glass-card">
-                  <span className="sm-bahasa__lang">BM</span>
-                  <span className="sm-bahasa__sample">&ldquo;Perkhidmatan pemasaran digital untuk PKS di Kuala Lumpur&rdquo;</span>
+                <div className="sm-bahasa__examples">
+                  <div className="sm-bahasa__example glass-card">
+                    <span className="sm-bahasa__lang glass-card">EN</span>
+                    <span className="sm-bahasa__sample">&ldquo;Digital marketing services for SMEs in Kuala Lumpur&rdquo;</span>
+                  </div>
+                  <div className="sm-bahasa__example glass-card">
+                    <span className="sm-bahasa__lang glass-card">BM</span>
+                    <span className="sm-bahasa__sample">&ldquo;Perkhidmatan pemasaran digital untuk PKS di Kuala Lumpur&rdquo;</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -705,7 +674,7 @@ export default function SMEsMalaysia() {
         </div>
       </section>
 
-      {/* Eligibility */}
+      {/* 8. ELIGIBILITY */}
       <section className="section sm-eligibility">
         <div className="container">
           <div className="section-heading">
@@ -713,45 +682,46 @@ export default function SMEsMalaysia() {
             <h2 className="section-heading__title">Could Your Business Be Eligible for SME Digital Transformation Support?</h2>
           </div>
           <ScrollReveal>
-            <p className="sm-eligibility__text">
-              Various Malaysian government programmes may offer support for SME digital transformation
-              activities including website development, digital advertising and technology adoption.
-              Eligibility depends on your business registration, revenue and employee count.
-            </p>
-          </ScrollReveal>
-          <ScrollReveal>
-            <div className="sm-eligibility__checklist glass-card">
-              <div className="sm-eligibility__item">
-                <SmIcon name="check" size={18} />
-                <span className="sm-eligibility__label">SSM registered</span>
+            <div className="sm-eligibility__card glass-card">
+              <p className="sm-eligibility__text">
+                Various Malaysian government programmes may offer support for SME digital transformation
+                activities including website development, digital advertising and technology adoption.
+                Eligibility depends on your business registration, revenue and employee count.
+              </p>
+              <div className="sm-eligibility__checklist">
+                <div className="sm-eligibility__item glass-card">
+                  <span className="icon-badge icon-badge--green" aria-hidden="true"><SmIcon name="check" size={16} /></span>
+                  <span className="sm-eligibility__label">SSM registered</span>
+                </div>
+                <div className="sm-eligibility__item glass-card">
+                  <span className="icon-badge icon-badge--green" aria-hidden="true"><SmIcon name="check" size={16} /></span>
+                  <span className="sm-eligibility__label">Revenue below RM50 million</span>
+                </div>
+                <div className="sm-eligibility__item glass-card">
+                  <span className="icon-badge icon-badge--green" aria-hidden="true"><SmIcon name="check" size={16} /></span>
+                  <span className="sm-eligibility__label">Fewer than 200 employees</span>
+                </div>
               </div>
-              <div className="sm-eligibility__item">
-                <SmIcon name="check" size={18} />
-                <span className="sm-eligibility__label">Revenue below RM50 million</span>
-              </div>
-              <div className="sm-eligibility__item">
-                <SmIcon name="check" size={18} />
-                <span className="sm-eligibility__label">Fewer than 200 employees</span>
-              </div>
+              <p className="sm-eligibility__disclaimer">
+                Disclaimer: Eligibility criteria vary by programme and are determined by the relevant
+                government agencies. The information above reflects general SME definitions and does not
+                constitute a guarantee of grant approval. We help you assess eligibility for current
+                active programmes but cannot guarantee outcomes.
+              </p>
             </div>
-          </ScrollReveal>
-          <ScrollReveal>
-            <p className="sm-eligibility__disclaimer">
-              Disclaimer: Eligibility criteria vary by programme and are determined by the relevant
-              government agencies. The information above reflects general SME definitions and does not
-              constitute a guarantee of grant approval. We help you assess eligibility for current
-              active programmes but cannot guarantee outcomes.
-            </p>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* Grant CTA */}
+      {/* 9. GRANT CTA */}
       <section className="section sm-grant-cta">
         <div className="container">
           <ScrollReveal>
             <div className="sm-grant-cta__card glass-card">
               <div className="sm-grant-cta__content">
+                <span className="icon-badge icon-badge--blue" aria-hidden="true" style={{ marginBottom: '1rem' }}>
+                  <SmIcon name="compass" size={24} />
+                </span>
                 <h3 className="sm-grant-cta__title">Check Your Eligibility</h3>
                 <p className="sm-grant-cta__text">
                   Not sure which programmes your business may qualify for? We can help you assess
@@ -769,15 +739,12 @@ export default function SMEsMalaysia() {
                   </Button>
                 </div>
               </div>
-              <div className="sm-grant-cta__visual" aria-hidden="true">
-                <SmIcon name="compass" size={48} />
-              </div>
             </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* Industry Ecosystem */}
+      {/* 10. INDUSTRY ECOSYSTEM */}
       <section className="section sm-industry-eco">
         <div className="container">
           <div className="section-heading">
@@ -788,7 +755,9 @@ export default function SMEsMalaysia() {
             <div className="sm-industry-eco__grid">
               {INDUSTRY_CATEGORIES.map((cat) => (
                 <div className="sm-industry-eco__card glass-card" key={cat.title}>
-                  <SmIcon name={cat.icon} size={20} />
+                  <span className={cx('sm-industry-eco__icon', 'icon-badge', cat.color)} aria-hidden="true">
+                    <SmIcon name={cat.icon} size={18} />
+                  </span>
                   <span className="sm-industry-eco__title">{cat.title}</span>
                 </div>
               ))}
@@ -797,7 +766,7 @@ export default function SMEsMalaysia() {
         </div>
       </section>
 
-      {/* Customer Discovery */}
+      {/* 11. CUSTOMER DISCOVERY */}
       <section className="section sm-discovery">
         <div className="container">
           <div className="section-heading">
@@ -812,26 +781,33 @@ export default function SMEsMalaysia() {
             </p>
           </ScrollReveal>
           <ScrollReveal>
-            <div className="sm-discovery__flow">
-              <Flow
-                items={[
-                  { label: 'GOOGLE SEARCH', sub: 'Service queries', icon: 'search' },
-                  { label: 'GOOGLE MAPS', sub: 'Local businesses', icon: 'mappin' },
-                  { label: 'SOCIAL MEDIA', sub: 'Facebook / Instagram', icon: 'share' },
-                  { label: 'AI SEARCH', sub: 'ChatGPT / Perplexity', icon: 'sparkles' },
-                  { label: 'WEBSITE', sub: 'Service details', icon: 'globe' },
-                  { label: 'WHATSAPP', sub: 'First contact', icon: 'whatsapp' },
-                  { label: 'ENQUIRY', sub: 'Business conversation', icon: 'message' },
-                ]}
-                direction="horizontal"
-                className="sm-discovery__main-flow"
-              />
+            <div className="sm-discovery__grid">
+              {[
+                { label: 'GOOGLE SEARCH', sub: 'Service queries', icon: 'search', color: 'icon-badge--blue' },
+                { label: 'GOOGLE MAPS', sub: 'Local businesses', icon: 'mappin', color: 'icon-badge--red' },
+                { label: 'SOCIAL MEDIA', sub: 'Facebook / Instagram', icon: 'share', color: 'icon-badge--pink' },
+                { label: 'AI SEARCH', sub: 'ChatGPT / Perplexity', icon: 'sparkles', color: 'icon-badge--amber' },
+                { label: 'WEBSITE', sub: 'Service details', icon: 'globe', color: 'icon-badge--cyan' },
+                { label: 'WHATSAPP', sub: 'First contact', icon: 'whatsapp', color: 'icon-badge--green' },
+                { label: 'ENQUIRY', sub: 'Business conversation', icon: 'message', color: 'icon-badge--purple' },
+              ].map((step, index) => (
+                <div className="sm-discovery__card glass-card" key={step.label}>
+                  <div className="sm-discovery__card-top">
+                    <span className="sm-discovery__step-num">Step 0{index + 1}</span>
+                    <span className={cx('sm-discovery__icon', 'icon-badge', step.color)} aria-hidden="true">
+                      <SmIcon name={step.icon} size={18} />
+                    </span>
+                  </div>
+                  <h3 className="sm-discovery__card-title">{step.label}</h3>
+                  <p className="sm-discovery__card-sub">{step.sub}</p>
+                </div>
+              ))}
             </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* WhatsApp Conversion */}
+      {/* 12. WHATSAPP CONVERSION */}
       <section className="section sm-whatsapp">
         <div className="container">
           <div className="section-heading">
@@ -846,25 +822,32 @@ export default function SMEsMalaysia() {
             </p>
           </ScrollReveal>
           <ScrollReveal>
-            <div className="sm-whatsapp__flow">
-              <Flow
-                items={[
-                  { label: 'GOOGLE SEARCH', sub: 'Customer finds you', icon: 'search' },
-                  { label: 'LANDING PAGE', sub: 'Service / product info', icon: 'globe' },
-                  { label: 'SERVICE DETAILS', sub: 'What you offer', icon: 'layers' },
-                  { label: 'TRUST SIGNALS', sub: 'Reviews / credentials', icon: 'star' },
-                  { label: 'WHATSAPP BUTTON', sub: 'One tap to message', icon: 'whatsapp' },
-                  { label: 'BUSINESS CONVERSATION', sub: 'Enquiry / quote / booking', icon: 'message' },
-                ]}
-                direction="horizontal"
-                className="sm-whatsapp__main-flow"
-              />
+            <div className="sm-whatsapp__grid">
+              {[
+                { label: 'GOOGLE SEARCH', sub: 'Customer finds you', icon: 'search', color: 'icon-badge--blue' },
+                { label: 'LANDING PAGE', sub: 'Service / product info', icon: 'globe', color: 'icon-badge--cyan' },
+                { label: 'SERVICE DETAILS', sub: 'What you offer', icon: 'layers', color: 'icon-badge--purple' },
+                { label: 'TRUST SIGNALS', sub: 'Reviews / credentials', icon: 'star', color: 'icon-badge--amber' },
+                { label: 'WHATSAPP BUTTON', sub: 'One tap to message', icon: 'whatsapp', color: 'icon-badge--green' },
+                { label: 'BUSINESS CONVERSATION', sub: 'Enquiry / quote / booking', icon: 'message', color: 'icon-badge--pink' },
+              ].map((step, index) => (
+                <div className="sm-whatsapp__card glass-card" key={step.label}>
+                  <div className="sm-whatsapp__card-top">
+                    <span className="sm-whatsapp__step-num">Step 0{index + 1}</span>
+                    <span className={cx('sm-whatsapp__icon', 'icon-badge', step.color)} aria-hidden="true">
+                      <SmIcon name={step.icon} size={18} />
+                    </span>
+                  </div>
+                  <h3 className="sm-whatsapp__card-title">{step.label}</h3>
+                  <p className="sm-whatsapp__card-sub">{step.sub}</p>
+                </div>
+              ))}
             </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* Local Visibility */}
+      {/* 13. LOCAL VISIBILITY */}
       <section className="section sm-local">
         <div className="container">
           <div className="section-heading">
@@ -872,29 +855,29 @@ export default function SMEsMalaysia() {
             <h2 className="section-heading__title">Help Customers Find Your Business Nearby</h2>
           </div>
           <ScrollReveal>
-            <p className="sm-local__text">
-              When local customers search for services in their area, Google Business Profile
-              visibility can help your business appear in local search results and Google Maps,
-              driving phone calls, direction requests and WhatsApp enquiries.
-            </p>
-          </ScrollReveal>
-          <ScrollReveal>
-            <div className="sm-local__mockup glass-card">
-              <div className="sm-local__header">
-                <SmIcon name="mappin" size={18} />
-                <span className="sm-local__business-name">Your Business Name</span>
-              </div>
-              <div className="sm-local__body">
-                <div className="sm-local__info">
-                  <span>Category: Service Business</span>
-                  <span>Location: Kuala Lumpur, Malaysia</span>
-                  <span>Rating: Verified Profile</span>
-                  <span>Hours: Mon - Fri, 9:00 AM - 6:00 PM</span>
+            <div className="sm-local__card glass-card">
+              <p className="sm-local__text">
+                When local customers search for services in their area, Google Business Profile
+                visibility can help your business appear in local search results and Google Maps,
+                driving phone calls, direction requests and WhatsApp enquiries.
+              </p>
+              <div className="sm-local__mockup glass-card">
+                <div className="sm-local__header">
+                  <span className="icon-badge icon-badge--blue" aria-hidden="true"><SmIcon name="mappin" size={18} /></span>
+                  <span className="sm-local__business-name">Your Business Name</span>
                 </div>
-                <div className="sm-local__actions">
-                  <span className="sm-local__action">Call</span>
-                  <span className="sm-local__action">Directions</span>
-                  <span className="sm-local__action">WhatsApp</span>
+                <div className="sm-local__body">
+                  <div className="sm-local__info">
+                    <span>Category: Service Business</span>
+                    <span>Location: Kuala Lumpur, Malaysia</span>
+                    <span>Rating: Verified Profile</span>
+                    <span>Hours: Mon - Fri, 9:00 AM - 6:00 PM</span>
+                  </div>
+                  <div className="sm-local__actions">
+                    <span className="sm-local__action glass-card"><SmIcon name="phone" size={13} /> Call</span>
+                    <span className="sm-local__action glass-card"><SmIcon name="compass" size={13} /> Directions</span>
+                    <span className="sm-local__action glass-card"><SmIcon name="whatsapp" size={13} /> WhatsApp</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -902,7 +885,7 @@ export default function SMEsMalaysia() {
         </div>
       </section>
 
-      {/* AI Search */}
+      {/* 14. AI SEARCH */}
       <section className="section sm-ai-search">
         <div className="container">
           <div className="section-heading">
@@ -919,7 +902,10 @@ export default function SMEsMalaysia() {
           <ScrollReveal>
             <div className="sm-ai-search__panels">
               <div className="sm-ai-search__panel glass-card">
-                <h4 className="sm-ai-search__panel-title"><SmIcon name="search" size={20} /> Traditional Search</h4>
+                <div className="sm-ai-search__panel-header">
+                  <span className="icon-badge icon-badge--blue" aria-hidden="true"><SmIcon name="search" size={18} /></span>
+                  <h3 className="sm-ai-search__panel-title">Traditional Search</h3>
+                </div>
                 <ul className="sm-ai-search__list">
                   <li>Google organic results</li>
                   <li>Google Business Profile</li>
@@ -928,7 +914,10 @@ export default function SMEsMalaysia() {
                 </ul>
               </div>
               <div className="sm-ai-search__panel glass-card">
-                <h4 className="sm-ai-search__panel-title"><SmIcon name="sparkles" size={20} /> AI Search</h4>
+                <div className="sm-ai-search__panel-header">
+                  <span className="icon-badge icon-badge--amber" aria-hidden="true"><SmIcon name="sparkles" size={18} /></span>
+                  <h3 className="sm-ai-search__panel-title">AI Search</h3>
+                </div>
                 <ul className="sm-ai-search__list">
                   <li>Google AI Overviews</li>
                   <li>ChatGPT recommendations</li>
@@ -940,18 +929,27 @@ export default function SMEsMalaysia() {
           </ScrollReveal>
           <ScrollReveal>
             <div className="sm-ai-search__signals">
-              <div className="sm-ai-search__signal glass-card"><SmIcon name="building" size={18} /><span>Business Info</span></div>
-              <div className="sm-ai-search__signal glass-card"><SmIcon name="layers" size={18} /><span>Service Expertise</span></div>
-              <div className="sm-ai-search__signal glass-card"><SmIcon name="help" size={18} /><span>FAQs</span></div>
-              <div className="sm-ai-search__signal glass-card"><SmIcon name="book" size={18} /><span>Useful Content</span></div>
-              <div className="sm-ai-search__signal glass-card"><SmIcon name="star" size={18} /><span>Reviews</span></div>
-              <div className="sm-ai-search__signal glass-card"><SmIcon name="code" size={18} /><span>Structured Data</span></div>
+              {[
+                { icon: 'building', label: 'Business Info', color: 'icon-badge--blue' },
+                { icon: 'layers', label: 'Service Expertise', color: 'icon-badge--cyan' },
+                { icon: 'help', label: 'FAQs', color: 'icon-badge--purple' },
+                { icon: 'book', label: 'Useful Content', color: 'icon-badge--teal' },
+                { icon: 'star', label: 'Reviews', color: 'icon-badge--amber' },
+                { icon: 'code', label: 'Structured Data', color: 'icon-badge--green' },
+              ].map((sig) => (
+                <div className="sm-ai-search__signal glass-card" key={sig.label}>
+                  <span className={cx('sm-ai-search__signal-icon', 'icon-badge', sig.color)} aria-hidden="true">
+                    <SmIcon name={sig.icon} size={18} />
+                  </span>
+                  <span className="sm-ai-search__signal-label">{sig.label}</span>
+                </div>
+              ))}
             </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* Tamil Diaspora */}
+      {/* 15. TAMIL DIASPORA REACH */}
       <section className="section sm-diaspora">
         <div className="container">
           <div className="section-heading">
@@ -968,34 +966,34 @@ export default function SMEsMalaysia() {
           <ScrollReveal>
             <div className="sm-diaspora__grid">
               <div className="sm-diaspora__card glass-card">
-                <SmIcon name="globe" size={22} />
-                <h4 className="sm-diaspora__card-title">Singapore</h4>
+                <span className="icon-badge icon-badge--cyan" aria-hidden="true"><SmIcon name="globe" size={20} /></span>
+                <h3 className="sm-diaspora__card-title">Singapore</h3>
                 <p className="sm-diaspora__card-text">Tamil diaspora community with strong social media and WhatsApp engagement patterns.</p>
               </div>
               <div className="sm-diaspora__card glass-card">
-                <SmIcon name="globe" size={22} />
-                <h4 className="sm-diaspora__card-title">Australia</h4>
+                <span className="icon-badge icon-badge--blue" aria-hidden="true"><SmIcon name="globe" size={20} /></span>
+                <h3 className="sm-diaspora__card-title">Australia</h3>
                 <p className="sm-diaspora__card-text">Growing Tamil community across Melbourne, Sydney and other major cities.</p>
               </div>
               <div className="sm-diaspora__card glass-card">
-                <SmIcon name="globe" size={22} />
-                <h4 className="sm-diaspora__card-title">United Kingdom</h4>
+                <span className="icon-badge icon-badge--purple" aria-hidden="true"><SmIcon name="globe" size={20} /></span>
+                <h3 className="sm-diaspora__card-title">United Kingdom</h3>
                 <p className="sm-diaspora__card-text">Established Tamil community with distinct digital media consumption habits.</p>
               </div>
             </div>
           </ScrollReveal>
           <ScrollReveal>
             <div className="sm-diaspora__strategy">
-              <div className="sm-diaspora__strategy-item glass-card"><SmIcon name="share" size={18} /><span>Instagram &amp; Facebook targeting</span></div>
-              <div className="sm-diaspora__strategy-item glass-card"><SmIcon name="whatsapp" size={18} /><span>WhatsApp sales channel</span></div>
-              <div className="sm-diaspora__strategy-item glass-card"><SmIcon name="search" size={18} /><span>Google Ads geo-targeting</span></div>
-              <div className="sm-diaspora__strategy-item glass-card"><SmIcon name="sparkles" size={18} /><span>AI search optimization</span></div>
+              <div className="sm-diaspora__strategy-item glass-card"><SmIcon name="share" size={14} /><span>Instagram &amp; Facebook targeting</span></div>
+              <div className="sm-diaspora__strategy-item glass-card"><SmIcon name="whatsapp" size={14} /><span>WhatsApp sales channel</span></div>
+              <div className="sm-diaspora__strategy-item glass-card"><SmIcon name="search" size={14} /><span>Google Ads geo-targeting</span></div>
+              <div className="sm-diaspora__strategy-item glass-card"><SmIcon name="sparkles" size={14} /><span>AI search optimization</span></div>
             </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* Multi-Market Map */}
+      {/* 16. MULTI-MARKET */}
       <section className="section sm-multi-market">
         <div className="container">
           <div className="section-heading">
@@ -1003,22 +1001,31 @@ export default function SMEsMalaysia() {
             <h2 className="section-heading__title">From Malaysia to Global Diaspora Markets</h2>
           </div>
           <ScrollReveal>
-            <Flow
-              items={[
-                { label: 'MALAYSIA', sub: 'Home market', icon: 'mappin' },
-                { label: 'SINGAPORE', sub: 'Regional hub', icon: 'globe' },
-                { label: 'AUSTRALIA', sub: 'Diaspora market', icon: 'globe' },
-                { label: 'UNITED KINGDOM', sub: 'Diaspora market', icon: 'globe' },
-                { label: 'GLOBAL DIASPORA', sub: 'Worldwide reach', icon: 'target' },
-              ]}
-              direction="horizontal"
-              className="sm-multi-market__flow"
-            />
+            <div className="sm-multi-market__grid">
+              {[
+                { label: 'MALAYSIA', sub: 'Home market', icon: 'mappin', color: 'icon-badge--blue' },
+                { label: 'SINGAPORE', sub: 'Regional hub', icon: 'globe', color: 'icon-badge--cyan' },
+                { label: 'AUSTRALIA', sub: 'Diaspora market', icon: 'globe', color: 'icon-badge--purple' },
+                { label: 'UNITED KINGDOM', sub: 'Diaspora market', icon: 'globe', color: 'icon-badge--teal' },
+                { label: 'GLOBAL DIASPORA', sub: 'Worldwide reach', icon: 'target', color: 'icon-badge--amber' },
+              ].map((node, index) => (
+                <div key={node.label} className="sm-multi-market__card glass-card">
+                  <div className="sm-multi-market__card-top">
+                    <span className="sm-multi-market__step-num">0{index + 1}</span>
+                    <span className={cx('sm-multi-market__icon', 'icon-badge', node.color)} aria-hidden="true">
+                      <SmIcon name={node.icon} size={18} />
+                    </span>
+                  </div>
+                  <h3 className="sm-multi-market__card-title">{node.label}</h3>
+                  <p className="sm-multi-market__card-sub">{node.sub}</p>
+                </div>
+              ))}
+            </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* Digital Maturity */}
+      {/* 17. DIGITAL MATURITY */}
       <section className="section sm-maturity">
         <div className="container">
           <div className="section-heading">
@@ -1029,9 +1036,13 @@ export default function SMEsMalaysia() {
             <div className="sm-maturity__grid">
               {DIGITAL_MATURITY.map((stage, i) => (
                 <div className="sm-maturity__card glass-card" key={stage.label}>
-                  <span className="sm-maturity__number">{String(i + 1).padStart(2, '0')}</span>
-                  <SmIcon name={stage.icon} size={22} />
-                  <h4 className="sm-maturity__label">{stage.label}</h4>
+                  <div className="sm-maturity__card-top">
+                    <span className="sm-maturity__number">0{i + 1}</span>
+                    <span className={cx('sm-maturity__icon', 'icon-badge', stage.color)} aria-hidden="true">
+                      <SmIcon name={stage.icon} size={18} />
+                    </span>
+                  </div>
+                  <h3 className="sm-maturity__label">{stage.label}</h3>
                   <p className="sm-maturity__sub">{stage.sub}</p>
                 </div>
               ))}
@@ -1040,7 +1051,7 @@ export default function SMEsMalaysia() {
         </div>
       </section>
 
-      {/* Website */}
+      {/* 18. WEBSITE */}
       <section className="section sm-website">
         <div className="container">
           <div className="section-heading">
@@ -1048,39 +1059,39 @@ export default function SMEsMalaysia() {
             <h2 className="section-heading__title">Your Website Is Your Digital Business Asset</h2>
           </div>
           <ScrollReveal>
-            <p className="sm-website__text">
-              A professional website serves as your digital storefront, working 24/7 to present your
-              services, build credibility and capture enquiries. For Malaysian SMEs, a well-designed
-              website with clear service messaging and WhatsApp integration is a foundational digital asset.
-            </p>
-          </ScrollReveal>
-          <ScrollReveal>
-            <div className="sm-website__mockup glass-card">
-              <div className="sm-website__browser-bar">
-                <span className="sm-website__dot" />
-                <span className="sm-website__dot" />
-                <span className="sm-website__dot" />
-                <span className="sm-website__url">yourbusiness.com.my</span>
-              </div>
-              <div className="sm-website__layout">
-                <div className="sm-website__section sm-website__section--hero">
-                  <span className="sm-website__section-label">Hero</span>
+            <div className="sm-website__card glass-card">
+              <p className="sm-website__text">
+                A professional website serves as your digital storefront, working 24/7 to present your
+                services, build credibility and capture enquiries. For Malaysian SMEs, a well-designed
+                website with clear service messaging and WhatsApp integration is a foundational digital asset.
+              </p>
+              <div className="sm-website__mockup glass-card">
+                <div className="sm-website__browser-bar">
+                  <span className="sm-website__dot" />
+                  <span className="sm-website__dot" />
+                  <span className="sm-website__dot" />
+                  <span className="sm-website__url">yourbusiness.com.my</span>
                 </div>
-                <div className="sm-website__section sm-website__section--services">
-                  <span className="sm-website__section-label">Services</span>
-                </div>
-                <div className="sm-website__section sm-website__section--about">
-                  <span className="sm-website__section-label">About</span>
-                </div>
-                <div className="sm-website__section sm-website__section--faq">
-                  <span className="sm-website__section-label">FAQ</span>
-                </div>
-                <div className="sm-website__section sm-website__section--contact">
-                  <span className="sm-website__section-label">Contact</span>
-                </div>
-                <div className="sm-website__section sm-website__section--whatsapp">
-                  <SmIcon name="whatsapp" size={16} />
-                  <span className="sm-website__section-label">WhatsApp</span>
+                <div className="sm-website__layout">
+                  <div className="sm-website__section sm-website__section--hero">
+                    <span className="sm-website__section-label">Hero Banner &amp; Headline</span>
+                  </div>
+                  <div className="sm-website__section sm-website__section--services">
+                    <span className="sm-website__section-label">Services Grid</span>
+                  </div>
+                  <div className="sm-website__section sm-website__section--about">
+                    <span className="sm-website__section-label">Company Credentials</span>
+                  </div>
+                  <div className="sm-website__section sm-website__section--faq">
+                    <span className="sm-website__section-label">FAQ Accordion</span>
+                  </div>
+                  <div className="sm-website__section sm-website__section--contact">
+                    <span className="sm-website__section-label">Contact Form &amp; Map</span>
+                  </div>
+                  <div className="sm-website__section sm-website__section--whatsapp">
+                    <SmIcon name="whatsapp" size={16} />
+                    <span className="sm-website__section-label">WhatsApp Enquiry Button</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1088,7 +1099,7 @@ export default function SMEsMalaysia() {
         </div>
       </section>
 
-      {/* Social Media */}
+      {/* 19. SOCIAL MEDIA */}
       <section className="section sm-social">
         <div className="container">
           <div className="section-heading">
@@ -1105,29 +1116,29 @@ export default function SMEsMalaysia() {
           <div className="sm-social__grid">
             <ScrollReveal delay={0}>
               <div className="sm-social-card glass-card">
-                <SmIcon name="facebook" size={20} />
-                <h4 className="sm-social-card__title">Facebook</h4>
+                <span className="icon-badge icon-badge--blue" aria-hidden="true"><SmIcon name="facebook" size={20} /></span>
+                <h3 className="sm-social-card__title">Facebook</h3>
                 <p className="sm-social-card__text">Largest social platform in Malaysia for business discovery and community engagement.</p>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={60}>
               <div className="sm-social-card glass-card">
-                <SmIcon name="instagram" size={20} />
-                <h4 className="sm-social-card__title">Instagram</h4>
+                <span className="icon-badge icon-badge--pink" aria-hidden="true"><SmIcon name="instagram" size={20} /></span>
+                <h3 className="sm-social-card__title">Instagram</h3>
                 <p className="sm-social-card__text">Visual platform for brand storytelling, reels and reaching younger Malaysian demographics.</p>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={120}>
               <div className="sm-social-card glass-card">
-                <SmIcon name="users" size={20} />
-                <h4 className="sm-social-card__title">LinkedIn</h4>
+                <span className="icon-badge icon-badge--purple" aria-hidden="true"><SmIcon name="users" size={20} /></span>
+                <h3 className="sm-social-card__title">LinkedIn</h3>
                 <p className="sm-social-card__text">B2B and professional services visibility for decision-makers and corporate buyers.</p>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={180}>
               <div className="sm-social-card glass-card">
-                <SmIcon name="monitor" size={20} />
-                <h4 className="sm-social-card__title">YouTube</h4>
+                <span className="icon-badge icon-badge--red" aria-hidden="true"><SmIcon name="monitor" size={20} /></span>
+                <h3 className="sm-social-card__title">YouTube</h3>
                 <p className="sm-social-card__text">Long-form video content for service education, testimonials and thought leadership.</p>
               </div>
             </ScrollReveal>
@@ -1135,7 +1146,7 @@ export default function SMEsMalaysia() {
         </div>
       </section>
 
-      {/* Google Ads */}
+      {/* 20. GOOGLE ADS */}
       <section className="section sm-google-ads">
         <div className="container">
           <div className="section-heading">
@@ -1150,24 +1161,31 @@ export default function SMEsMalaysia() {
             </p>
           </ScrollReveal>
           <ScrollReveal>
-            <div className="sm-google-ads__flow">
-              <Flow
-                items={[
-                  { label: 'SEARCH QUERY', sub: 'Customer searches', icon: 'search' },
-                  { label: 'GOOGLE AD', sub: 'Your business appears', icon: 'megaphone' },
-                  { label: 'LANDING PAGE', sub: 'Service details', icon: 'globe' },
-                  { label: 'WHATSAPP / FORM', sub: 'Enquiry action', icon: 'whatsapp' },
-                  { label: 'SALES CONVERSATION', sub: 'Business discussion', icon: 'message' },
-                ]}
-                direction="horizontal"
-                className="sm-google-ads__main-flow"
-              />
+            <div className="sm-google-ads__grid">
+              {[
+                { label: 'SEARCH QUERY', sub: 'Customer searches', icon: 'search', color: 'icon-badge--blue' },
+                { label: 'GOOGLE AD', sub: 'Your business appears', icon: 'megaphone', color: 'icon-badge--cyan' },
+                { label: 'LANDING PAGE', sub: 'Service details', icon: 'globe', color: 'icon-badge--purple' },
+                { label: 'WHATSAPP / FORM', sub: 'Enquiry action', icon: 'whatsapp', color: 'icon-badge--green' },
+                { label: 'SALES CONVERSATION', sub: 'Business discussion', icon: 'message', color: 'icon-badge--pink' },
+              ].map((step, index) => (
+                <div className="sm-google-ads__card glass-card" key={step.label}>
+                  <div className="sm-google-ads__card-top">
+                    <span className="sm-google-ads__step-num">Step 0{index + 1}</span>
+                    <span className={cx('sm-google-ads__icon', 'icon-badge', step.color)} aria-hidden="true">
+                      <SmIcon name={step.icon} size={18} />
+                    </span>
+                  </div>
+                  <h3 className="sm-google-ads__card-title">{step.label}</h3>
+                  <p className="sm-google-ads__card-sub">{step.sub}</p>
+                </div>
+              ))}
             </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* SEO */}
+      {/* 21. SEO */}
       <section className="section sm-seo">
         <div className="container">
           <div className="section-heading">
@@ -1183,18 +1201,27 @@ export default function SMEsMalaysia() {
           </ScrollReveal>
           <ScrollReveal>
             <div className="sm-seo__layers">
-              <div className="sm-seo__layer glass-card"><SmIcon name="mappin" size={18} /><span>Local Keywords</span></div>
-              <div className="sm-seo__layer glass-card"><SmIcon name="search" size={18} /><span>Service Keywords</span></div>
-              <div className="sm-seo__layer glass-card"><SmIcon name="layers" size={18} /><span>Industry Keywords</span></div>
-              <div className="sm-seo__layer glass-card"><SmIcon name="book" size={18} /><span>Content</span></div>
-              <div className="sm-seo__layer glass-card"><SmIcon name="mappin" size={18} /><span>Local SEO</span></div>
-              <div className="sm-seo__layer glass-card"><SmIcon name="sparkles" size={18} /><span>AI Search</span></div>
+              {[
+                { icon: 'mappin', label: 'Local Keywords', color: 'icon-badge--red' },
+                { icon: 'search', label: 'Service Keywords', color: 'icon-badge--blue' },
+                { icon: 'layers', label: 'Industry Keywords', color: 'icon-badge--cyan' },
+                { icon: 'book', label: 'Content', color: 'icon-badge--teal' },
+                { icon: 'mappin', label: 'Local SEO', color: 'icon-badge--purple' },
+                { icon: 'sparkles', label: 'AI Search', color: 'icon-badge--amber' },
+              ].map((l) => (
+                <div className="sm-seo__layer glass-card" key={l.label}>
+                  <span className={cx('sm-seo__layer-icon', 'icon-badge', l.color)} aria-hidden="true">
+                    <SmIcon name={l.icon} size={16} />
+                  </span>
+                  <span className="sm-seo__layer-label">{l.label}</span>
+                </div>
+              ))}
             </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* Digital Transformation System */}
+      {/* 22. ECOSYSTEM / SYSTEM */}
       <section className="section sm-ecosystem">
         <div className="container">
           <div className="section-heading">
@@ -1202,7 +1229,7 @@ export default function SMEsMalaysia() {
             <h2 className="section-heading__title">The Malaysian SME Digital Transformation System</h2>
           </div>
           <ScrollReveal>
-            <div className="sm-ecosystem__flow">
+            <div className="sm-ecosystem__card glass-card">
               <div className="sm-ecosystem__channels glass-card">
                 <span className="sm-ecosystem__channel-label">DIGITAL CHANNELS</span>
                 <div className="sm-ecosystem__channel-list">
@@ -1215,24 +1242,26 @@ export default function SMEsMalaysia() {
                   <span className="sm-ecosystem__channel"><SmIcon name="whatsapp" size={14} /> WhatsApp</span>
                 </div>
               </div>
-              <span className="sm-ecosystem__arrow" aria-hidden="true">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9l6 6 6-6" /></svg>
-              </span>
-              <span className="sm-ecosystem__node glass-card"><SmIcon name="eye" size={16} /><span>Digital Visibility</span></span>
-              <span className="sm-ecosystem__arrow" aria-hidden="true">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9l6 6 6-6" /></svg>
-              </span>
-              <span className="sm-ecosystem__node glass-card"><SmIcon name="message" size={16} /><span>Enquiries</span></span>
-              <span className="sm-ecosystem__arrow" aria-hidden="true">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9l6 6 6-6" /></svg>
-              </span>
-              <span className="sm-ecosystem__node glass-card"><SmIcon name="users" size={16} /><span>Customer Relationships</span></span>
+              <div className="sm-ecosystem__nodes">
+                <div className="sm-ecosystem__node glass-card">
+                  <span className="icon-badge icon-badge--blue" aria-hidden="true"><SmIcon name="eye" size={18} /></span>
+                  <span>Digital Visibility</span>
+                </div>
+                <div className="sm-ecosystem__node glass-card">
+                  <span className="icon-badge icon-badge--green" aria-hidden="true"><SmIcon name="message" size={18} /></span>
+                  <span>Enquiries</span>
+                </div>
+                <div className="sm-ecosystem__node glass-card">
+                  <span className="icon-badge icon-badge--purple" aria-hidden="true"><SmIcon name="users" size={18} /></span>
+                  <span>Customer Relationships</span>
+                </div>
+              </div>
             </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* FAQ */}
+      {/* 23. FAQ */}
       <section className="section sm-faq">
         <div className="container">
           <div className="section-heading">
@@ -1243,7 +1272,7 @@ export default function SMEsMalaysia() {
         </div>
       </section>
 
-      {/* Locations */}
+      {/* 24. LOCATIONS */}
       <section className="section sm-locations">
         <div className="container">
           <div className="section-heading">
@@ -1253,7 +1282,7 @@ export default function SMEsMalaysia() {
           <div className="sm-locations__grid">
             <ScrollReveal className="sm-locations__cell">
               <div className="sm-location-card glass-card">
-                <span className="sm-location-card__icon" aria-hidden="true"><SmIcon name="mappin" size={26} /></span>
+                <span className="icon-badge icon-badge--blue" aria-hidden="true"><SmIcon name="mappin" size={22} /></span>
                 <h3 className="sm-location-card__title">Malaysia</h3>
                 <p className="sm-location-card__text">
                   From Kuala Lumpur to Penang, Johor and beyond, we help SMEs across Malaysia
@@ -1263,7 +1292,7 @@ export default function SMEsMalaysia() {
             </ScrollReveal>
             <ScrollReveal className="sm-locations__cell">
               <div className="sm-location-card glass-card">
-                <span className="sm-location-card__icon" aria-hidden="true"><SmIcon name="globe" size={26} /></span>
+                <span className="icon-badge icon-badge--cyan" aria-hidden="true"><SmIcon name="globe" size={22} /></span>
                 <h3 className="sm-location-card__title">Tamil Nadu</h3>
                 <p className="sm-location-card__text">
                   From Madurai to Chennai, Coimbatore and across Tamil Nadu, we support businesses
@@ -1275,7 +1304,7 @@ export default function SMEsMalaysia() {
         </div>
       </section>
 
-      {/* Related Industries */}
+      {/* 25. RELATED INDUSTRIES */}
       <section className="section sm-related">
         <div className="container">
           <div className="section-heading">
@@ -1294,7 +1323,7 @@ export default function SMEsMalaysia() {
         </div>
       </section>
 
-      {/* Final CTA */}
+      {/* 26. FINAL CTA & CONTACT */}
       <CTASection
         title={CTA.title}
         primaryLabel={CTA.label}

@@ -264,10 +264,18 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: clamp(1rem, 2vw, 1.5rem);
+  align-items: stretch;
+}
+
+.ihub-cards > * {
+  display: flex;
+  height: 100%;
 }
 
 .ihub-card {
   position: relative;
+  width: 100%;
+  height: 100%;
   background: var(--color-surface-glass);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
@@ -318,40 +326,21 @@
 }
 
 .ihub-card__icon {
-  width: 48px;
-  height: 48px;
-  border-radius: var(--radius-md);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.4rem;
-  color: #fff;
-  flex-shrink: 0;
+  width: 52px !important;
+  height: 52px !important;
+  border-radius: 50% !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #ffffff !important;
+  flex-shrink: 0 !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease !important;
 }
 
-.ihub-card__icon--purple {
-  background: linear-gradient(135deg, #8b5cf6, #7c3aed);
-  box-shadow: 0 4px 14px rgba(139,92,246,0.3);
-}
-
-.ihub-card__icon--pink {
-  background: linear-gradient(135deg, #ec4899, #db2777);
-  box-shadow: 0 4px 14px rgba(236,72,153,0.3);
-}
-
-.ihub-card__icon--blue {
-  background: linear-gradient(135deg, #3b82f6, #2563eb);
-  box-shadow: 0 4px 14px rgba(59,130,246,0.3);
-}
-
-.ihub-card__icon--cyan {
-  background: linear-gradient(135deg, #22d3ee, #06b6d4);
-  box-shadow: 0 4px 14px rgba(34,211,238,0.3);
-}
-
-.ihub-card__icon--neon {
-  background: var(--gradient-neon);
-  box-shadow: 0 4px 14px rgba(34,211,238,0.25);
+.ihub-card__icon svg {
+  width: 1.35rem !important;
+  height: 1.35rem !important;
+  color: #ffffff !important;
 }
 
 .ihub-card__title {
@@ -365,13 +354,14 @@
   font-size: var(--fs-small);
   line-height: 1.65;
   color: var(--color-text-muted);
-  flex: 1;
+  flex: 1 1 auto;
 }
 
 .ihub-card__tags {
   display: flex;
   flex-wrap: wrap;
   gap: 0.35rem;
+  margin-top: auto;
 }
 
 .ihub-card__tag {
