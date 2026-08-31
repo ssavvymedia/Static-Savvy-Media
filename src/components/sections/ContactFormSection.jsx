@@ -15,7 +15,9 @@ const SERVICES = [
 ]
 
 // Environment-driven Google reCAPTCHA v2 Checkbox Key
-const RECAPTCHA_SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY || ''
+const RAW_SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY || ''
+const RECAPTCHA_SITE_KEY =
+  RAW_SITE_KEY && RAW_SITE_KEY !== 'PASTE_SITE_KEY_HERE' ? RAW_SITE_KEY : ''
 
 export default function ContactFormSection() {
   const [formData, setFormData] = useState({
@@ -29,6 +31,7 @@ export default function ContactFormSection() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [captchaVerified, setCaptchaVerified] = useState(!RECAPTCHA_SITE_KEY)
   const [captchaToken, setCaptchaToken] = useState(null)
+  const [captchaError, setCaptchaError] = useState(null)
 
   const recaptchaRef = useRef(null)
   const widgetIdRef = useRef(null)
@@ -60,18 +63,21 @@ export default function ContactFormSection() {
               if (isMounted) {
                 setCaptchaVerified(true)
                 setCaptchaToken(token)
+                setCaptchaError(null)
               }
             },
             'expired-callback': () => {
               if (isMounted) {
                 setCaptchaVerified(false)
                 setCaptchaToken(null)
+                setCaptchaError('reCAPTCHA session expired. Please verify the checkbox again.')
               }
             },
             'error-callback': () => {
               if (isMounted) {
                 setCaptchaVerified(false)
                 setCaptchaToken(null)
+                setCaptchaError('reCAPTCHA error occurred. Please try again.')
               }
             },
           })
@@ -113,40 +119,96 @@ export default function ContactFormSection() {
     }
   }, [formSubmitted])
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    if (RECAPTCHA_SITE_KEY && !captchaVerified) return
+
+    // Enforce reCAPTCHA completion if site key is configured
+    if (RECAPTCHA_SITE_KEY && (!captchaVerified || !captchaToken)) {
+      setCaptchaError('Please complete the reCAPTCHA verification.')
+      return
+    }
 
     setIsSubmitting(true)
-    setTimeout(() => {
-      setIsSubmitting(false)
-      setFormSubmitted(true)
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        service: '',
-        message: '',
-      })
+    setCaptchaError(null)
 
-      // Reset Google reCAPTCHA
-      if (widgetIdRef.current !== null && window.grecaptcha) {
-        try {
-          window.grecaptcha.reset(widgetIdRef.current)
-        } catch (err) {
-          // Ignore reset error
+    // Server-side verification using Netlify function / server endpoint
+    if (RECAPTCHA_SITE_KEY && captchaToken) {
+      try {
+        const response = await fetch('/.netlify/functions/verify-recaptcha', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ token: captchaToken }),
+        })
+
+        const result = await response.json()
+
+        if (!response.ok || !result.success) {
+          setCaptchaError(
+            result.message || 'reCAPTCHA verification failed. Please try again.'
+          )
+          if (widgetIdRef.current !== null && window.grecaptcha) {
+            try {
+              window.grecaptcha.reset(widgetIdRef.current)
+            } catch (err) {
+              // Ignore reset error
+            }
+          }
+          widgetIdRef.current = null
+          setCaptchaVerified(false)
+          setCaptchaToken(null)
+          setIsSubmitting(false)
+          return
         }
+      } catch (error) {
+        setCaptchaError(
+          'Network error during reCAPTCHA verification. Please try again.'
+        )
+        if (widgetIdRef.current !== null && window.grecaptcha) {
+          try {
+            window.grecaptcha.reset(widgetIdRef.current)
+          } catch (err) {
+            // Ignore reset error
+          }
+        }
+        widgetIdRef.current = null
+        setCaptchaVerified(false)
+        setCaptchaToken(null)
+        setIsSubmitting(false)
+        return
       }
-      widgetIdRef.current = null
-      setCaptchaVerified(!RECAPTCHA_SITE_KEY)
-      setCaptchaToken(null)
-    }, 1200)
+    }
+
+    // Verification succeeded -> process form submission
+    setIsSubmitting(false)
+    setFormSubmitted(true)
+    setFormData({
+      name: '',
+      email: '',
+      phone: '',
+      service: '',
+      message: '',
+    })
+
+    // Reset Google reCAPTCHA
+    if (widgetIdRef.current !== null && window.grecaptcha) {
+      try {
+        window.grecaptcha.reset(widgetIdRef.current)
+      } catch (err) {
+        // Ignore reset error
+      }
+    }
+    widgetIdRef.current = null
+    setCaptchaVerified(!RECAPTCHA_SITE_KEY)
+    setCaptchaToken(null)
   }
 
   const handleResetForm = () => {
     setFormSubmitted(false)
     setCaptchaVerified(!RECAPTCHA_SITE_KEY)
     setCaptchaToken(null)
+    setCaptchaError(null)
     widgetIdRef.current = null
   }
 
@@ -280,9 +342,15 @@ export default function ContactFormSection() {
                       <p className="recaptcha-notice-text">
                         Protected by Google reCAPTCHA Verification.<br />
                         <span className="recaptcha-notice-hint">
-                          Add <code>VITE_RECAPTCHA_SITE_KEY</code> in <code>.env</code> with your domain key to activate live verification widget.
+                          Add <code>VITE_RECAPTCHA_SITE_KEY</code> in <code>.env</code> or Netlify Site Configuration to activate live verification.
                         </span>
                       </p>
+                    </div>
+                  )}
+
+                  {captchaError && (
+                    <div className="recaptcha-error-message" role="alert">
+                      {captchaError}
                     </div>
                   )}
                 </div>
@@ -290,7 +358,7 @@ export default function ContactFormSection() {
                 <button
                   type="submit"
                   className="contact-form-submit-btn"
-                  disabled={(RECAPTCHA_SITE_KEY && !captchaVerified) || isSubmitting}
+                  disabled={(RECAPTCHA_SITE_KEY && (!captchaVerified || !captchaToken)) || isSubmitting}
                 >
                   {isSubmitting ? 'Sending...' : 'Send Message'}
                   <svg
