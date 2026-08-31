@@ -384,6 +384,8 @@
 }
 
 .geo-aeo-table-wrapper {
+  width: 100%;
+  max-width: 100%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   border-radius: var(--radius-lg);

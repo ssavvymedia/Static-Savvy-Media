@@ -420,6 +420,14 @@
   scrollbar-color: var(--color-surface) transparent;
 }
 
+.ihub-table-wrap {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 1rem;
+}
+
 .ihub-table-wrap::-webkit-scrollbar {
   height: 6px;
 }

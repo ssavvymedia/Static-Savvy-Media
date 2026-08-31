@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Button from './Button.jsx'
 import WhatsAppIcon from './WhatsAppIcon.jsx'
@@ -13,6 +13,17 @@ import logoImg from '../../assets/images/logo/SSMLOGO.png'
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const whatsappHref = buildWhatsAppLink(WHATSAPP_NUMBER)
+
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.classList.add('menu-open')
+    } else {
+      document.body.classList.remove('menu-open')
+    }
+    return () => {
+      document.body.classList.remove('menu-open')
+    }
+  }, [mobileOpen])
 
   return (
     <header className="site-header">
