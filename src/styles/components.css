@@ -154,7 +154,7 @@
 .whatsapp-btn {
   position: fixed;
   bottom: 1.5rem;
-  left: 1.5rem;
+  right: 1.5rem;
   z-index: 100;
   width: 52px;
   height: 52px;
@@ -174,7 +174,7 @@
 
 .back-to-top {
   position: fixed;
-  bottom: 1.5rem;
+  bottom: 5.25rem;
   right: 1.5rem;
   z-index: 100;
   width: 46px;

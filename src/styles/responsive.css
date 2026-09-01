@@ -175,13 +175,14 @@
   /* Safe positioning for floating WhatsApp & Back To Top buttons */
   .whatsapp-btn {
     bottom: 1rem !important;
-    left: 1rem !important;
+    right: 1rem !important;
+    left: auto !important;
     width: 46px !important;
     height: 46px !important;
   }
 
   .back-to-top {
-    bottom: 1rem !important;
+    bottom: 4.375rem !important;
     right: 1rem !important;
     width: 42px !important;
     height: 42px !important;
@@ -213,6 +214,7 @@
   }
 
   .back-to-top {
+    bottom: 4rem !important;
     width: 38px !important;
     height: 38px !important;
   }
