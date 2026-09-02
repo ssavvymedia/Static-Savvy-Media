@@ -28,7 +28,6 @@ export const NAV_LINKS = [
   { label: 'Services', path: '/services/', menu: services },
   { label: 'Locations', path: '/locations/', menu: locations },
   { label: 'Industries', path: '/industries/', menu: industries },
-  { label: 'Pricing', path: '/pricing/india/', menu: pricingMenuSections },
   { label: 'Case Studies', path: '/case-studies/' },
   { label: 'About', path: '/about/' },
   { label: 'Blog', path: '/blog/' },
