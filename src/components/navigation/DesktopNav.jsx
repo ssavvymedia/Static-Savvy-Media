@@ -6,15 +6,14 @@ import { cx } from '../../utils/helpers.js'
 import ServicesMenu from './ServicesMenu.jsx'
 import LocationsMenu from './LocationsMenu.jsx'
 import IndustriesMenu from './IndustriesMenu.jsx'
-import PricingMenu from './PricingMenu.jsx'
 
 const MENU_COMPONENTS = {
   '/services/': ServicesMenu,
   '/locations/': LocationsMenu,
   '/industries/': IndustriesMenu,
-  '/pricing/india/': PricingMenu,
-  '/pricing/malaysia/': PricingMenu,
-  '/pricing/': PricingMenu,
+  // '/pricing/india/': PricingMenu,
+  // '/pricing/malaysia/': PricingMenu,
+  // '/pricing/': PricingMenu,
 }
 
 export default function DesktopNav() {
