@@ -30,16 +30,22 @@ export async function handler(event) {
 
     const secretKey = process.env.RECAPTCHA_SECRET_KEY
 
-    if (!secretKey || secretKey === 'PASTE_SECRET_KEY_HERE') {
-      console.warn('RECAPTCHA_SECRET_KEY is not configured in server environment variables.')
+    if (
+      !secretKey ||
+      secretKey === "6LdPOKMtAAAAAP3nKvWkMb19zU2mwUq3DtAuSXif"
+    ) {
+      console.warn(
+        "RECAPTCHA_SECRET_KEY is not configured in server environment variables.",
+      );
       return {
         statusCode: 500,
-        headers: { 'Content-Type': 'application/json' },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           success: false,
-          message: 'Server error: RECAPTCHA_SECRET_KEY is not configured in environment variables.',
+          message:
+            "Server error: RECAPTCHA_SECRET_KEY is not configured in environment variables.",
         }),
-      }
+      };
     }
 
     // Verify token with Google's reCAPTCHA siteverify endpoint

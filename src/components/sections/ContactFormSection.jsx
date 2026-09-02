@@ -1,5 +1,8 @@
-import { useState, useEffect, useRef } from 'react'
+import { useRef, useState } from 'react'
+import ReCAPTCHA from 'react-google-recaptcha'
 import { ScrollReveal } from '../animations/ScrollReveal.jsx'
+
+const RECAPTCHA_SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY || ''
 
 const SERVICES = [
   'SEO',
@@ -14,11 +17,6 @@ const SERVICES = [
   'Product Photography & Creative Design',
 ]
 
-// Environment-driven Google reCAPTCHA v2 Checkbox Key
-const RAW_SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY || ''
-const RECAPTCHA_SITE_KEY =
-  RAW_SITE_KEY && RAW_SITE_KEY !== 'PASTE_SITE_KEY_HERE' ? RAW_SITE_KEY : ''
-
 export default function ContactFormSection() {
   const [formData, setFormData] = useState({
     name: '',
@@ -26,190 +24,95 @@ export default function ContactFormSection() {
     phone: '',
     service: '',
     message: '',
+    website: '',
   })
   const [formSubmitted, setFormSubmitted] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [captchaVerified, setCaptchaVerified] = useState(!RECAPTCHA_SITE_KEY)
-  const [captchaToken, setCaptchaToken] = useState(null)
-  const [captchaError, setCaptchaError] = useState(null)
-
+  const [submitError, setSubmitError] = useState(null)
+  const [recaptchaToken, setRecaptchaToken] = useState(null)
+  const [recaptchaError, setRecaptchaError] = useState(null)
   const recaptchaRef = useRef(null)
-  const widgetIdRef = useRef(null)
 
   const handleInputChange = (e) => {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
 
-  // Load and render Google reCAPTCHA v2 Checkbox when SITE_KEY is configured
-  useEffect(() => {
-    if (formSubmitted || !RECAPTCHA_SITE_KEY) return
+  const handleRecaptchaChange = (token) => {
+    setRecaptchaToken(token)
+    setRecaptchaError(null)
+  }
 
-    let isMounted = true
-
-    const renderWidget = () => {
-      if (
-        window.grecaptcha &&
-        window.grecaptcha.render &&
-        recaptchaRef.current &&
-        widgetIdRef.current === null &&
-        isMounted
-      ) {
-        try {
-          widgetIdRef.current = window.grecaptcha.render(recaptchaRef.current, {
-            sitekey: RECAPTCHA_SITE_KEY,
-            theme: 'light',
-            callback: (token) => {
-              if (isMounted) {
-                setCaptchaVerified(true)
-                setCaptchaToken(token)
-                setCaptchaError(null)
-              }
-            },
-            'expired-callback': () => {
-              if (isMounted) {
-                setCaptchaVerified(false)
-                setCaptchaToken(null)
-                setCaptchaError('reCAPTCHA session expired. Please verify the checkbox again.')
-              }
-            },
-            'error-callback': () => {
-              if (isMounted) {
-                setCaptchaVerified(false)
-                setCaptchaToken(null)
-                setCaptchaError('reCAPTCHA error occurred. Please try again.')
-              }
-            },
-          })
-        } catch (err) {
-          // Widget already rendered or DOM container unavailable
-        }
-      }
-    }
-
-    if (window.grecaptcha && window.grecaptcha.render) {
-      renderWidget()
-    } else {
-      const scriptId = 'google-recaptcha-v2-script'
-      let script = document.getElementById(scriptId)
-      if (!script) {
-        script = document.createElement('script')
-        script.id = scriptId
-        script.src = 'https://www.google.com/recaptcha/api.js?render=explicit'
-        script.async = true
-        script.defer = true
-        document.head.appendChild(script)
-      }
-
-      const checkInterval = setInterval(() => {
-        if (window.grecaptcha && window.grecaptcha.render) {
-          clearInterval(checkInterval)
-          renderWidget()
-        }
-      }, 150)
-
-      return () => {
-        isMounted = false
-        clearInterval(checkInterval)
-      }
-    }
-
-    return () => {
-      isMounted = false
-    }
-  }, [formSubmitted])
+  const handleRecaptchaExpired = () => {
+    setRecaptchaToken(null)
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
 
-    // Enforce reCAPTCHA completion if site key is configured
-    if (RECAPTCHA_SITE_KEY && (!captchaVerified || !captchaToken)) {
-      setCaptchaError('Please complete the reCAPTCHA verification.')
+    if (RECAPTCHA_SITE_KEY && !recaptchaToken) {
+      setRecaptchaError('Please verify that you are not a robot.')
       return
     }
 
     setIsSubmitting(true)
-    setCaptchaError(null)
+    setSubmitError(null)
 
-    // Server-side verification using Netlify function / server endpoint
-    if (RECAPTCHA_SITE_KEY && captchaToken) {
-      try {
-        const response = await fetch('/.netlify/functions/verify-recaptcha', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ token: captchaToken }),
-        })
+    try {
+      const response = await fetch('/.netlify/functions/submit-contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...formData,
+          recaptchaToken,
+          sourcePagePath: window.location.pathname,
+          sourcePageUrl: window.location.href,
+          sourcePageTitle: document.title,
+        }),
+      })
 
-        const result = await response.json()
+      const result = await response.json()
 
-        if (!response.ok || !result.success) {
-          setCaptchaError(
-            result.message || 'reCAPTCHA verification failed. Please try again.'
+      if (!response.ok || !result.success) {
+        if (result.code === 'VALIDATION_ERROR') {
+          setSubmitError(result.message)
+        } else if (result.code === 'RECAPTCHA_FAILED') {
+          setRecaptchaError(result.message)
+          recaptchaRef.current?.reset()
+        } else {
+          setSubmitError(
+            result.message || 'Something went wrong. Please try again.'
           )
-          if (widgetIdRef.current !== null && window.grecaptcha) {
-            try {
-              window.grecaptcha.reset(widgetIdRef.current)
-            } catch (err) {
-              // Ignore reset error
-            }
-          }
-          widgetIdRef.current = null
-          setCaptchaVerified(false)
-          setCaptchaToken(null)
-          setIsSubmitting(false)
-          return
         }
-      } catch (error) {
-        setCaptchaError(
-          'Network error during reCAPTCHA verification. Please try again.'
-        )
-        if (widgetIdRef.current !== null && window.grecaptcha) {
-          try {
-            window.grecaptcha.reset(widgetIdRef.current)
-          } catch (err) {
-            // Ignore reset error
-          }
-        }
-        widgetIdRef.current = null
-        setCaptchaVerified(false)
-        setCaptchaToken(null)
         setIsSubmitting(false)
         return
       }
-    }
 
-    // Verification succeeded -> process form submission
-    setIsSubmitting(false)
-    setFormSubmitted(true)
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      service: '',
-      message: '',
-    })
-
-    // Reset Google reCAPTCHA
-    if (widgetIdRef.current !== null && window.grecaptcha) {
-      try {
-        window.grecaptcha.reset(widgetIdRef.current)
-      } catch (err) {
-        // Ignore reset error
-      }
+      setIsSubmitting(false)
+      setFormSubmitted(true)
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        service: '',
+        message: '',
+        website: '',
+      })
+      setRecaptchaToken(null)
+      recaptchaRef.current?.reset()
+    } catch (error) {
+      setSubmitError('Network error. Please check your connection and try again.')
+      setIsSubmitting(false)
     }
-    widgetIdRef.current = null
-    setCaptchaVerified(!RECAPTCHA_SITE_KEY)
-    setCaptchaToken(null)
   }
 
   const handleResetForm = () => {
     setFormSubmitted(false)
-    setCaptchaVerified(!RECAPTCHA_SITE_KEY)
-    setCaptchaToken(null)
-    setCaptchaError(null)
-    widgetIdRef.current = null
+    setSubmitError(null)
+    setRecaptchaToken(null)
+    recaptchaRef.current?.reset()
   }
 
   return (
@@ -219,7 +122,7 @@ export default function ContactFormSection() {
           <div className="contact-form-container glass-card">
             <div className="contact-form-header">
               <span className="contact-form-badge">GET IN TOUCH</span>
-              <h2 className="contact-form-title">Let’s Start a Conversation</h2>
+              <h2 className="contact-form-title">Let's Start a Conversation</h2>
               <p className="contact-form-subtitle">
                 Tell us about your digital requirements, and we'll help identify the right strategy for your growth.
               </p>
@@ -254,6 +157,17 @@ export default function ContactFormSection() {
               </div>
             ) : (
               <form className="contact-form-element" onSubmit={handleSubmit}>
+                <input
+                  type="text"
+                  name="website"
+                  value={formData.website}
+                  onChange={handleInputChange}
+                  tabIndex={-1}
+                  autoComplete="off"
+                  aria-hidden="true"
+                  className="contact-form-honeypot"
+                  style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', opacity: 0 }}
+                />
                 <div className="contact-form-grid">
                   <div className="form-group">
                     <label htmlFor="form-name">Name</label>
@@ -324,41 +238,36 @@ export default function ContactFormSection() {
                   ></textarea>
                 </div>
 
-                {/* Dedicated Security Verification Container */}
-                <div className="contact-form-recaptcha-card">
-                  <div className="recaptcha-card-header">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                    </svg>
-                    <span>SECURITY VERIFICATION</span>
-                  </div>
-
-                  {RECAPTCHA_SITE_KEY ? (
+                {RECAPTCHA_SITE_KEY && (
+                  <div className="contact-form-recaptcha-card">
                     <div className="contact-form-recaptcha-wrapper">
-                      <div ref={recaptchaRef} className="contact-form-recaptcha" />
+                      <ReCAPTCHA
+                        ref={recaptchaRef}
+                        sitekey={RECAPTCHA_SITE_KEY}
+                        onChange={handleRecaptchaChange}
+                        onExpired={handleRecaptchaExpired}
+                        theme="dark"
+                        className="contact-form-recaptcha"
+                      />
                     </div>
-                  ) : (
-                    <div className="recaptcha-notice-block">
-                      <p className="recaptcha-notice-text">
-                        Protected by Google reCAPTCHA Verification.<br />
-                        <span className="recaptcha-notice-hint">
-                          Add <code>VITE_RECAPTCHA_SITE_KEY</code> in <code>.env</code> or Netlify Site Configuration to activate live verification.
-                        </span>
-                      </p>
-                    </div>
-                  )}
+                    {recaptchaError && (
+                      <div className="recaptcha-error-message" role="alert">
+                        {recaptchaError}
+                      </div>
+                    )}
+                  </div>
+                )}
 
-                  {captchaError && (
-                    <div className="recaptcha-error-message" role="alert">
-                      {captchaError}
-                    </div>
-                  )}
-                </div>
+                {submitError && (
+                  <div className="contact-form-submit-error" role="alert">
+                    {submitError}
+                  </div>
+                )}
 
                 <button
                   type="submit"
                   className="contact-form-submit-btn"
-                  disabled={(RECAPTCHA_SITE_KEY && (!captchaVerified || !captchaToken)) || isSubmitting}
+                  disabled={isSubmitting || (RECAPTCHA_SITE_KEY && !recaptchaToken)}
                 >
                   {isSubmitting ? 'Sending...' : 'Send Message'}
                   <svg

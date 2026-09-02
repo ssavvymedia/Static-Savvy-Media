@@ -44,6 +44,8 @@
   max-width: 20ch;
   margin-inline: auto;
   text-wrap: balance;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .hero__title .text-gradient {
@@ -288,6 +290,15 @@
 @media (max-width: 768px) {
   .hero {
     padding-block: 3.5rem 4rem;
+  }
+
+  .hero__title {
+    max-width: 100%;
+    font-size: clamp(1.5rem, 6vw, 2rem);
+  }
+
+  .hero__subtitle {
+    font-size: 0.95rem;
   }
 
   .floating-icons {

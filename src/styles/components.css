@@ -909,6 +909,41 @@
   gap: 3rem;
   text-align: center;
   align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Grid items default to min-width: auto, which means their minimum size is
+   based on the widest unbreakable content anywhere inside them (e.g. a
+   nowrap CTA button label). That silently forces the whole single-column
+   grid track wider than the viewport on mobile, dragging every sibling
+   (title, paragraph, image) along with it -- the entire page then appears
+   to overflow/clip on the right edge even though each element's own CSS
+   looks correct in isolation. min-width: 0 lets the grid track (and every
+   flex/grid descendant) actually shrink to the viewport instead. */
+.hero__inner--two-column > * {
+  min-width: 0;
+}
+
+/* Base action-row layout for the two-column hero. This must live outside any
+   media query since some pages (e.g. Service x Location pages) only load
+   their own page-scoped CSS file and never load home.css, which previously
+   was the only place `.hero__actions { display:flex }` was defined. Without
+   this base rule, CTA buttons with long, non-wrapping labels (`.btn` uses
+   white-space: nowrap) could overflow the viewport on mobile. */
+.hero--two-column .hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.75rem;
+  width: 100%;
+  min-width: 0;
+}
+
+.hero--two-column .hero__actions .btn {
+  min-width: 0;
+  max-width: 100%;
 }
 
 .hero__visual-side {
@@ -916,6 +951,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  min-width: 0;
 }
 
 .hero__image {
@@ -1000,9 +1036,40 @@
     text-align: center;
   }
 
+  .hero--two-column .hero__title {
+    max-width: 100%;
+    font-size: clamp(1.5rem, 6vw, 2rem);
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .hero--two-column .eyebrow {
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+  }
+
+  .hero--two-column .hero__subtitle {
+    font-size: 0.95rem;
+    word-break: break-word;
+  }
+
   .hero__image {
     max-height: 300px;
     margin-top: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero--two-column .hero__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero--two-column .hero__actions .btn {
+    width: 100%;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.3;
   }
 }
 
@@ -1203,7 +1270,7 @@
   transform: translateY(1px);
 }
 
-/* Dedicated Security Verification Card */
+/* reCAPTCHA container — no border/box, just centers the widget with spacing */
 .contact-form-recaptcha-card {
   display: flex;
   flex-direction: column;
@@ -1212,36 +1279,11 @@
   width: 100%;
   max-width: 440px;
   margin: 1.25rem auto 1.25rem auto;
-  padding: 1.25rem 1.75rem;
-  background: rgba(11, 17, 36, 0.7);
-  border: 1px solid rgba(139, 92, 246, 0.35);
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.08);
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  padding: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
   box-sizing: border-box;
-}
-
-.contact-form-recaptcha-card:hover {
-  border-color: rgba(139, 92, 246, 0.5);
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6), 0 0 20px rgba(139, 92, 246, 0.15);
-}
-
-.recaptcha-card-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  font-size: 0.75rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: #ffffff;
-  margin-bottom: 1rem;
-}
-
-.recaptcha-card-header svg {
-  color: #22d3ee;
-  filter: drop-shadow(0 0 4px rgba(34, 211, 238, 0.5));
 }
 
 .contact-form-recaptcha-wrapper {
@@ -1302,6 +1344,22 @@
   border: 1px solid rgba(239, 68, 68, 0.3);
   padding: 0.4rem 0.8rem;
   border-radius: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-form-submit-error {
+  color: #ef4444;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  line-height: 1.4;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
   width: 100%;
   box-sizing: border-box;
 }

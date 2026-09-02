@@ -6,6 +6,8 @@ import Button from '../common/Button.jsx'
 import { cx } from '../../utils/helpers.js'
 import logoImg from '../../assets/images/logo/SSMLOGO.png'
 
+const MOBILE_NAV_LINKS = NAV_LINKS.filter((link) => link.label !== 'Pricing')
+
 function MobileNavItem({ link, onNavigate }) {
   const { isActive } = useActiveRoute()
   const parentActive = isActive(link.path)
@@ -148,7 +150,7 @@ export default function MobileNav({ open = false, onClose, className = '' }) {
 
         <nav aria-label="Mobile navigation">
           <ul>
-            {NAV_LINKS.map((link) => (
+            {MOBILE_NAV_LINKS.map((link) => (
               <MobileNavItem key={link.path} link={link} onNavigate={onClose} />
             ))}
           </ul>
