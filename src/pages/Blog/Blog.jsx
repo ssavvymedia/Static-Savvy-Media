@@ -11,6 +11,7 @@ import { setSeo } from '../../utils/seo.js'
 import { breadcrumbListSchema } from '../../utils/schema.js'
 import { buildWhatsAppLink } from '../../utils/helpers.js'
 import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, SITE_URL } from '../../utils/constants.js'
+import { sanityClient, urlFor } from '../../utils/sanityClient.js'
 import blogHeroImg from '../../assets/images/Blog/Blog.png'
 
 /* ============================================================
@@ -40,107 +41,6 @@ const SORT_OPTIONS = [
   { key: 'featured', label: 'Featured' },
   { key: 'relevant', label: 'Most Relevant' },
 ]
-
-const BLOG_POSTS = [
-  {
-    id: 'geo-guide',
-    title: 'What Is Generative Engine Optimization (GEO)? The Complete 2026 Guide',
-    slug: '/blog/what-is-generative-engine-optimization/',
-    category: 'GEO',
-    secondaryCategory: 'AI Search',
-    keyword: 'what is generative engine optimization',
-    description:
-      'Generative Engine Optimization (GEO) is the practice of getting your business cited by ChatGPT, Perplexity and Google AI. This guide explains what GEO is, how it works and how businesses can start improving their AI search visibility.',
-    author: 'Deepan Kanz',
-    status: 'published',
-    publishedDate: '',
-    updatedDate: '',
-    readingTime: '',
-    featured: true,
-  },
-  {
-    id: 'aeo-guide',
-    title: 'What Is Answer Engine Optimization (AEO)? How to Rank in AI Answers',
-    slug: '/blog/what-is-answer-engine-optimization/',
-    category: 'AEO',
-    secondaryCategory: 'AI Search',
-    keyword: 'what is answer engine optimization',
-    description:
-      'Learn how AEO structures website content, schema and answers so AI-powered answer engines can extract and present your content for relevant searches.',
-    author: 'Deepan Kanz',
-    status: 'published',
-    publishedDate: '',
-    updatedDate: '',
-    readingTime: '',
-    featured: false,
-  },
-  {
-    id: 'madurai-seo',
-    title: 'How to Choose an SEO Agency in Madurai, Complete 2026 Guide',
-    slug: '/blog/seo-agency-madurai-complete-guide/',
-    category: 'SEO',
-    secondaryCategory: 'Madurai',
-    keyword: 'how to choose SEO agency Madurai',
-    description:
-      'The Madurai digital marketing landscape has changed dramatically. This guide explains what a good SEO agency should deliver, the red flags to avoid and the questions businesses should ask before signing an SEO contract.',
-    author: 'Deepan Kanz',
-    status: 'published',
-    publishedDate: '',
-    updatedDate: '',
-    readingTime: '',
-    featured: false,
-  },
-  {
-    id: 'malaysia-grants',
-    title: 'Using MDEC & SMECorp Grants for Digital Marketing in Malaysia, 2026 Guide',
-    slug: '/blog/digital-marketing-malaysia-sme-grant-guide/',
-    category: 'Malaysia',
-    secondaryCategory: 'Digital Marketing',
-    keyword: 'MDEC grant digital marketing Malaysia SME',
-    description:
-      "Explore Malaysia's SME digital transformation grant landscape and understand how businesses can evaluate relevant digital marketing funding opportunities.",
-    author: 'Deepan Kanz',
-    status: 'published',
-    publishedDate: '',
-    updatedDate: '',
-    readingTime: '',
-    featured: false,
-  },
-  {
-    id: 'thoothukudi-local-seo',
-    title: 'Local SEO for Thoothukudi Businesses, Port City Growth Guide 2026',
-    slug: '/blog/local-seo-thoothukudi-businesses/',
-    category: 'Local SEO',
-    secondaryCategory: 'Thoothukudi',
-    keyword: 'local SEO guide Thoothukudi businesses',
-    description:
-      'A practical guide to improving local search visibility for businesses in Thoothukudi, including Google Business Profile, local content, review strategy and NAP consistency.',
-    author: 'Deepan Kanz',
-    status: 'published',
-    publishedDate: '',
-    updatedDate: '',
-    readingTime: '',
-    featured: false,
-  },
-  {
-    id: 'local-marketing',
-    title: 'Local Marketing for Tamil Nadu & Malaysia',
-    slug: '/blog/local-marketing/',
-    category: 'Digital Marketing',
-    secondaryCategory: 'Local SEO',
-    keyword: 'local marketing Madurai Thoothukudi',
-    description:
-      'Practical local marketing strategies for businesses targeting Madurai, Thoothukudi and Malaysia.',
-    author: 'Deepan Kanz',
-    status: 'published',
-    publishedDate: '',
-    updatedDate: '',
-    readingTime: '',
-    featured: false,
-  },
-]
-
-const FEATURED_ARTICLE = BLOG_POSTS.find((p) => p.featured)
 
 const CATEGORY_COLORS = {
   GEO: '',
@@ -178,10 +78,20 @@ const ARTICLE_ICONS = {
    ============================================================ */
 
 export default function Blog() {
+  const [posts, setPosts] = useState([])
   const [activeCategory, setActiveCategory] = useState('all')
   const [searchQuery, setSearchQuery] = useState('')
   const [sortBy, setSortBy] = useState('latest')
   const jsonLdRef = useRef([])
+
+  useEffect(() => {
+    sanityClient
+      .fetch(`*[_type == "post"] | order(publishedAt desc){
+        title, "slug": slug.current, category, description, author, featured, mainImage, publishedAt
+      }`)
+      .then(setPosts)
+      .catch((err) => console.error('Sanity fetch failed:', err))
+  }, [])
 
   useEffect(() => {
     setSeo({
@@ -228,22 +138,19 @@ export default function Blog() {
 
   /* ---- Filtering + Search + Sort ---- */
   const filteredPosts = useMemo(() => {
-    let result = BLOG_POSTS
+    let result = posts
 
     if (activeCategory !== 'all') {
-      result = result.filter(
-        (p) => p.category === activeCategory || p.secondaryCategory === activeCategory,
-      )
+      result = result.filter((p) => p.category === activeCategory)
     }
 
     if (searchQuery.trim()) {
       const q = searchQuery.toLowerCase()
       result = result.filter(
         (p) =>
-          p.title.toLowerCase().includes(q) ||
-          p.description.toLowerCase().includes(q) ||
-          p.category.toLowerCase().includes(q) ||
-          p.keyword.toLowerCase().includes(q),
+          p.title?.toLowerCase().includes(q) ||
+          p.description?.toLowerCase().includes(q) ||
+          p.category?.toLowerCase().includes(q),
       )
     }
 
@@ -252,7 +159,9 @@ export default function Blog() {
     }
 
     return result
-  }, [activeCategory, searchQuery, sortBy])
+  }, [posts, activeCategory, searchQuery, sortBy])
+
+  const FEATURED_ARTICLE = useMemo(() => posts.find((p) => p.featured), [posts])
 
   const whatsappHref = buildWhatsAppLink(WHATSAPP_NUMBER, WHATSAPP_MESSAGE)
 
@@ -320,7 +229,7 @@ export default function Blog() {
                       </span>
                     )}
                   </div>
-                  <Button to={FEATURED_ARTICLE.slug} variant="primary" size="lg">
+                  <Button to={`/blog/${FEATURED_ARTICLE.slug}`} variant="primary" size="lg">
                     Read the Full Guide
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                       <path d="M5 12h14M13 6l6 6-6 6" />
@@ -411,13 +320,21 @@ export default function Blog() {
           {filteredPosts.length > 0 ? (
             <div className="blog-grid">
               {filteredPosts.map((post, index) => (
-                <ScrollReveal key={post.id} delay={index * 60}>
-                  <Link to={post.slug} style={{ textDecoration: 'none', display: 'flex' }}>
+                <ScrollReveal key={post.slug} delay={index * 60}>
+                  <Link to={`/blog/${post.slug}`} style={{ textDecoration: 'none', display: 'flex' }}>
                     <article className="blog-article-card">
                       <div className="blog-article-card__image">
-                        <span className="blog-article-card__image-icon">
-                          {ARTICLE_ICONS[post.category] || '📝'}
-                        </span>
+                        {post.mainImage ? (
+                          <img
+                            src={urlFor(post.mainImage).width(600).height(360).fit('crop').url()}
+                            alt={post.title}
+                            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                          />
+                        ) : (
+                          <span className="blog-article-card__image-icon">
+                            {ARTICLE_ICONS[post.category] || '📝'}
+                          </span>
+                        )}
                         <span className="blog-article-card__image-number">
                           {String(index + 1).padStart(2, '0')}
                         </span>
