@@ -9,11 +9,6 @@ import {
 import { caseStudies } from "./caseStudies.js";
 import { blogCategories, blogPosts } from "./blog.js";
 
-/**
- * Navigation configuration.
- * Shared by Header / DesktopNav / MobileNav / Footer and Breadcrumbs.
- */
-
 export const pricingMenuSections = [
   {
     title: "🇮🇳 India Pricing (INR)",
@@ -115,7 +110,6 @@ export function getBreadcrumbLabel(segment) {
   return BREADCRUMB_LABELS[segment] || segment;
 }
 
-// Re-export data collections for convenience.
 export {
   services,
   locations,

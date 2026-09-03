@@ -11,9 +11,6 @@ const MENU_COMPONENTS = {
   "/services/": ServicesMenu,
   "/locations/": LocationsMenu,
   "/industries/": IndustriesMenu,
-  // '/pricing/india/': PricingMenu,
-  // '/pricing/malaysia/': PricingMenu,
-  // '/pricing/': PricingMenu,
 };
 
 export default function DesktopNav() {
@@ -23,7 +20,6 @@ export default function DesktopNav() {
 
   const close = useCallback(() => setOpenMenu(null), []);
 
-  // Auto close dropdown on route changes (submenu clicks)
   useEffect(() => {
     close();
   }, [pathname, close]);
