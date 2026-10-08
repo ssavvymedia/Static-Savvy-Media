@@ -20,7 +20,7 @@ import {
   SITE_URL,
 } from '../../utils/constants.js'
 import '../../styles/pages/malaysia.css'
-import malaysiaHeroImg from '../../assets/images/locations/02malaysia.png'
+import malaysiaHeroImg from '../../assets/images/locations/02malaysia.webp'
 
 /* ============================================================
    CONTENT, Approved Static Savvy Media Malaysia Page Content
@@ -260,6 +260,9 @@ export default function Malaysia() {
         <div className="hero__visual-side">
           <img
             src={malaysiaHeroImg}
+            width={1536}
+            height={1024}
+            fetchPriority="high"
             alt="Digital Marketing Agency Malaysia"
             className="hero__image"
           />

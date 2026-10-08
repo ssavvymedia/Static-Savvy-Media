@@ -4,7 +4,7 @@ import { NAV_LINKS } from '../../data/navigation.js'
 import { useActiveRoute } from '../../hooks/useActiveRoute.js'
 import Button from '../common/Button.jsx'
 import { cx } from '../../utils/helpers.js'
-import logoImg from '../../assets/images/logo/SSMLOGO.png'
+import logoImg from '../../assets/images/logo/SSMLOGO.webp'
 
 const MOBILE_NAV_LINKS = NAV_LINKS.filter((link) => link.label !== 'Pricing')
 
@@ -139,7 +139,7 @@ export default function MobileNav({ open = false, onClose, className = '' }) {
       <div className={cx('mobile-nav', open && 'is-open', className)} aria-hidden={!open}>
         <div className="mobile-nav__header">
           <Link to="/" className="site-header__logo" onClick={onClose} aria-label="Static Savvy Media, home">
-            <img src={logoImg} alt="Static Savvy Media" className="site-header__logo-img" />
+            <img src={logoImg} width={480} height={320} alt="Static Savvy Media" className="site-header__logo-img" />
           </Link>
           <button type="button" className="mobile-nav__close" onClick={onClose} aria-label="Close menu">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">

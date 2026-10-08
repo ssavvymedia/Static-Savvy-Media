@@ -13,7 +13,7 @@ import { breadcrumbListSchema, faqPageSchema } from '../../utils/schema.js'
 import { buildWhatsAppLink } from '../../utils/helpers.js'
 import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, SITE_URL } from '../../utils/constants.js'
 import '../../styles/pages/pricing-hub.css'
-import pricingHeroImg from '../../assets/images/Pricing/PricingMain.png'
+import pricingHeroImg from '../../assets/images/Pricing/PricingMain.webp'
 
 const PACKAGES = [
   {
@@ -170,6 +170,9 @@ export default function Pricing({ country: propCountry }) {
         <div className="hero__visual-side">
           <img
             src={pricingHeroImg}
+            width={1536}
+            height={1024}
+            fetchPriority="high"
             alt={`${countryName} Digital Marketing Pricing`}
             className="hero__image"
           />

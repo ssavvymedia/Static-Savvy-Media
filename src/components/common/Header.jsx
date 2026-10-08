@@ -9,7 +9,7 @@ import { cx } from '../../utils/helpers.js'
 import { buildWhatsAppLink } from '../../utils/helpers.js'
 import { WHATSAPP_NUMBER } from '../../utils/constants.js'
 
-import logoImg from '../../assets/images/logo/SSMLOGO.png'
+import logoImg from '../../assets/images/logo/SSMLOGO.webp'
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -30,7 +30,7 @@ export default function Header() {
     <header className="site-header">
       <div className="site-header__inner">
         <Link to="/" className="site-header__logo" aria-label="Static Savvy Media, home">
-          <img src={logoImg} alt="Static Savvy Media" className="site-header__logo-img" />
+          <img src={logoImg} width={480} height={320} alt="Static Savvy Media" className="site-header__logo-img" />
         </Link>
 
         <DesktopNav />

@@ -20,7 +20,7 @@ import {
   SITE_URL,
 } from '../../utils/constants.js'
 import '../../styles/pages/thoothukudi.css'
-import thoothukudiHeroImg from '../../assets/images/locations/03thoothukudi.png'
+import thoothukudiHeroImg from '../../assets/images/locations/03thoothukudi.webp'
 
 /* ============================================================
    CONTENT, Approved Static Savvy Media Thoothukudi Page Content
@@ -249,6 +249,9 @@ export default function Thoothukudi() {
         <div className="hero__visual-side">
           <img
             src={thoothukudiHeroImg}
+            width={1536}
+            height={1024}
+            fetchPriority="high"
             alt="Digital Marketing in Thoothukudi (Tuticorin)"
             className="hero__image"
           />

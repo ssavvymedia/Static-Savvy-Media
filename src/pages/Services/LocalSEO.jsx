@@ -21,7 +21,7 @@ import {
 } from '../../utils/constants.js'
 import '../../styles/templates/service-template.css'
 import '../../styles/pages/local-seo.css'
-import localSeoHeroImg from '../../assets/images/services/03LOCALSEO.png'
+import localSeoHeroImg from '../../assets/images/services/03LOCALSEO.webp'
 
 /* ============================================================
    CONTENT, Approved Static Savvy Media Local SEO Page Content
@@ -253,7 +253,7 @@ export default function LocalSEO() {
         }
       >
         <div className="hero__visual-side">
-          <img src={localSeoHeroImg} alt="Local SEO Services" className="hero__image" />
+          <img src={localSeoHeroImg} width={1536} height={1024} fetchPriority="high" alt="Local SEO Services" className="hero__image" />
         </div>
       </HeroSection>
 

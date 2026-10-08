@@ -21,7 +21,7 @@ import {
 } from '../../utils/constants.js'
 import '../../styles/templates/service-template.css'
 import '../../styles/pages/ai-business-automation.css'
-import aiBusinessHeroImg from '../../assets/images/services/07AIBusiness.png'
+import aiBusinessHeroImg from '../../assets/images/services/07AIBusiness.webp'
 
 /* ============================================================
    CONTENT, Approved Static Savvy Media AI Business Automation
@@ -567,7 +567,7 @@ export default function AIBusinessAutomation() {
         }
       >
         <div className="hero__visual-side">
-          <img src={aiBusinessHeroImg} alt="AI Business Automation" className="hero__image" />
+          <img src={aiBusinessHeroImg} width={1536} height={1024} fetchPriority="high" alt="AI Business Automation" className="hero__image" />
         </div>
       </HeroSection>
 

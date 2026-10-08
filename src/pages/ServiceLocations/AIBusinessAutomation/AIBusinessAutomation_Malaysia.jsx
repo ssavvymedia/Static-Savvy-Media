@@ -19,7 +19,7 @@ import {
   SITE_URL,
 } from '../../../utils/constants.js'
 import '../../../styles/pages/ai-business-automation-malaysia.css'
-import heroImage from '../../../assets/images/AIBusinessAutomation/AIBusinessAutomation.png'
+import heroImage from '../../../assets/images/AIBusinessAutomation/AIBusinessAutomation.webp'
 
 /* ============================================================
    CONTENT, AI Business Automation Malaysia
@@ -276,6 +276,9 @@ export default function AIBusinessAutomation_Malaysia() {
         <div className="hero__visual-side">
           <img
             src={heroImage}
+            width={1536}
+            height={1024}
+            fetchPriority="high"
             alt="AI Business Automation"
             className="hero__image"
           />

@@ -21,7 +21,7 @@ import {
   SITE_URL,
 } from '../../utils/constants.js'
 import '../../styles/templates/service-template.css'
-import seoHeroImg from '../../assets/images/services/01SEO.png'
+import seoHeroImg from '../../assets/images/services/01SEO.webp'
 
 /* ============================================================
    CONTENT, Approved Static Savvy Media SEO Page Content
@@ -327,7 +327,7 @@ export default function SEO() {
         }
       >
         <div className="hero__visual-side">
-          <img src={seoHeroImg} alt="SEO Services" className="hero__image" />
+          <img src={seoHeroImg} width={1536} height={1024} fetchPriority="high" alt="SEO Services" className="hero__image" />
         </div>
       </HeroSection>
 

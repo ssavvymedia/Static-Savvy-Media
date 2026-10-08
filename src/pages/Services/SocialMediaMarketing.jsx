@@ -21,7 +21,7 @@ import {
 } from '../../utils/constants.js'
 import '../../styles/templates/service-template.css'
 import '../../styles/pages/social-media-marketing.css'
-import smmHeroImg from '../../assets/images/services/05socialmediamarketing.png'
+import smmHeroImg from '../../assets/images/services/05socialmediamarketing.webp'
 
 /* ============================================================
    CONTENT, Approved Static Savvy Media Social Media Marketing
@@ -308,7 +308,7 @@ export default function SocialMediaMarketing() {
         }
       >
         <div className="hero__visual-side">
-          <img src={smmHeroImg} alt="Social Media Marketing" className="hero__image" />
+          <img src={smmHeroImg} width={1536} height={1024} fetchPriority="high" alt="Social Media Marketing" className="hero__image" />
         </div>
       </HeroSection>
 

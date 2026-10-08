@@ -16,7 +16,7 @@ import {
   SITE_NAME,
 } from '../../utils/constants.js'
 import '../../styles/pages/industries-hub.css'
-import industriesHeroImg from '../../assets/images/Industries/IndustriesMain.png'
+import industriesHeroImg from '../../assets/images/Industries/IndustriesMain.webp'
 
 /* ============================================================
    CONTENT
@@ -418,6 +418,9 @@ export default function Industries() {
         <div className="hero__visual-side">
           <img
             src={industriesHeroImg}
+            width={1536}
+            height={1024}
+            fetchPriority="high"
             alt="Industries We Serve"
             className="hero__image"
           />

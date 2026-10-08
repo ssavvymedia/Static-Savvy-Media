@@ -13,7 +13,7 @@ import { breadcrumbListSchema } from '../../utils/schema.js'
 import { buildWhatsAppLink } from '../../utils/helpers.js'
 import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, SITE_URL } from '../../utils/constants.js'
 import '../../styles/pages/client4.css'
-import client4HeroImg from '../../assets/images/CaseStudies/04Client.png'
+import client4HeroImg from '../../assets/images/CaseStudies/04Client.webp'
 
 const META_TITLE = 'How [Thoothukudi Industrial Client] Doubled Leads with Google Ads | Static Savvy Media'
 const META_DESC = 'See how a Thoothukudi industrial business used Google Ads and social media marketing to strengthen digital visibility, generate relevant enquiries and improve its lead-generation system.'
@@ -163,7 +163,7 @@ export default function Client4() {
         }
       >
         <div className="hero__visual-side">
-          <img src={client4HeroImg} alt="How [Thoothukudi Industrial Client] Doubled Leads with Google Ads" className="hero__image" />
+          <img src={client4HeroImg} width={1536} height={1024} fetchPriority="high" alt="How [Thoothukudi Industrial Client] Doubled Leads with Google Ads" className="hero__image" />
         </div>
       </HeroSection>
 

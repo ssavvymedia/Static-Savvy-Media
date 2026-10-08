@@ -18,7 +18,7 @@ import {
   SITE_URL,
 } from '../../../utils/constants.js'
 import '../../../styles/pages/geo-aeo-madurai.css'
-import heroImage from '../../../assets/images/GEOAEO/GEOAEO.png'
+import heroImage from '../../../assets/images/GEOAEO/GEOAEO.webp'
 
 /* ============================================================
    CONTENT, GEO & AEO Madurai
@@ -379,6 +379,9 @@ export default function GEOAEO_Madurai() {
         <div className="hero__visual-side">
           <img
             src={heroImage}
+            width={1536}
+            height={1024}
+            fetchPriority="high"
             alt="GEO and AEO Services"
             className="hero__image"
           />

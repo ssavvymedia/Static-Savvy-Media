@@ -8,7 +8,7 @@ import FAQSection from '../components/sections/FAQSection.jsx'
 import CTASection from '../components/sections/CTASection.jsx'
 import ContactFormSection from '../components/sections/ContactFormSection.jsx'
 import { ScrollReveal } from '../components/animations/ScrollReveal.jsx'
-import HeroImage from '../assets/images/Heroimage.png'
+import HeroImage from '../assets/images/Heroimage.webp'
 import '../styles/pages/home.css'
 
 /**
@@ -49,6 +49,9 @@ export default function HomeTemplate({
         <div className="hero-image-container">
           <img
             src={HeroImage}
+            width={1536}
+            height={1024}
+            fetchPriority="high"
             alt="Static Savvy Media Hero Visual - Google SEO and AI Search Citations"
             className="hero-image"
           />

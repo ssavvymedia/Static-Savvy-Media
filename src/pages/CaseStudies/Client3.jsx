@@ -13,7 +13,7 @@ import { breadcrumbListSchema } from '../../utils/schema.js'
 import { buildWhatsAppLink } from '../../utils/helpers.js'
 import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, SITE_URL } from '../../utils/constants.js'
 import '../../styles/pages/client3.css'
-import client3HeroImg from '../../assets/images/CaseStudies/03Client.png'
+import client3HeroImg from '../../assets/images/CaseStudies/03Client.webp'
 
 const META_TITLE = 'How [Malaysian SME] Leveraged MDEC Grant & SEO to Scale, Malaysia Case Study | Static Savvy Media'
 const META_DESC = 'See how a Malaysian SME used SEO, Google Ads and digital transformation support to strengthen its online presence and build a scalable digital marketing foundation.'
@@ -125,7 +125,7 @@ export default function Client3() {
         actions={<Button href={whatsappHref} variant="primary" size="lg" target="_blank" rel="noopener noreferrer">Talk to Static Savvy Media</Button>}
       >
         <div className="hero__visual-side">
-          <img src={client3HeroImg} alt="Malaysia SEO and Google Ads Case Study" className="hero__image" />
+          <img src={client3HeroImg} width={1536} height={1024} fetchPriority="high" alt="Malaysia SEO and Google Ads Case Study" className="hero__image" />
         </div>
       </HeroSection>
 

@@ -12,7 +12,7 @@ import { breadcrumbListSchema } from '../../utils/schema.js'
 import { buildWhatsAppLink, cleanSlug } from '../../utils/helpers.js'
 import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, SITE_URL } from '../../utils/constants.js'
 import { sanityClient, urlFor } from '../../utils/sanityClient.js'
-import blogHeroImg from '../../assets/images/Blog/Blog.png'
+import blogHeroImg from '../../assets/images/Blog/Blog.webp'
 
 /* ============================================================
    CONTENT, Approved Static Savvy Media Blog Hub Content
@@ -194,7 +194,7 @@ export default function Blog() {
         }
       >
         <div className="hero__visual-side">
-          <img src={blogHeroImg} alt="Static Savvy Media Blog" className="hero__image" />
+          <img src={blogHeroImg} width={1536} height={1024} fetchPriority="high" alt="Static Savvy Media Blog" className="hero__image" />
         </div>
       </HeroSection>
 

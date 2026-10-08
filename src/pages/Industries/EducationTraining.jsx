@@ -21,7 +21,7 @@ import {
 } from '../../utils/constants.js'
 import '../../styles/templates/service-template.css'
 import '../../styles/pages/education-training.css'
-import educationHeroImg from '../../assets/images/Industries/03education.png'
+import educationHeroImg from '../../assets/images/Industries/03education.webp'
 
 /* ============================================================
    CONTENT, Approved Static Savvy Media Education & Training
@@ -512,6 +512,9 @@ export default function EducationTraining() {
         <div className="hero__visual-side">
           <img
             src={educationHeroImg}
+            width={1536}
+            height={1024}
+            fetchPriority="high"
             alt="Education & Training"
             className="hero__image"
           />

@@ -8,10 +8,10 @@ import { localBusinessSchema, breadcrumbListSchema } from '../../utils/schema.js
 import { buildWhatsAppLink } from '../../utils/helpers.js'
 import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, SITE_URL, SITE_NAME } from '../../utils/constants.js'
 
-import contactImg from '../../assets/images/Contact.png'
-import maduraiImg from '../../assets/images/locations/madurai.png'
-import thoothukudiImg from '../../assets/images/locations/thoothukudi.png'
-import malaysiaImg from '../../assets/images/locations/malaysia.png'
+import contactImg from '../../assets/images/Contact.webp'
+import maduraiImg from '../../assets/images/locations/madurai.webp'
+import thoothukudiImg from '../../assets/images/locations/thoothukudi.webp'
+import malaysiaImg from '../../assets/images/locations/malaysia.webp'
 
 const WHATSAPP_MSG_PROJECT = 'Hi Static Savvy Media, I want to discuss my project.'
 const WHATSAPP_MSG_GENERAL = 'Hi Static Savvy Media, I would like to know more about your services.'
@@ -1104,7 +1104,7 @@ export default function Contact() {
               </div>
             </div>
             <div className="contact-hero__right">
-              <img src={contactImg} alt="Contact Static Savvy Media" className="contact-hero__img" />
+              <img src={contactImg} width={1536} height={1024} fetchPriority="high" alt="Contact Static Savvy Media" className="contact-hero__img" />
             </div>
           </div>
         </div>
@@ -1167,7 +1167,7 @@ export default function Contact() {
               <ScrollReveal key={loc.title}>
                 <div className="contact-location-card glass-card">
                   <div className="contact-location-card__img-wrapper">
-                    <img src={loc.image} alt={loc.title} className="contact-location-card__img" />
+                    <img src={loc.image} width={800} height={800} loading="lazy" decoding="async" alt={loc.title} className="contact-location-card__img" />
                   </div>
                   <div className="contact-location-card__info">
                     <h3 className="contact-location-card__title">{loc.title}</h3>

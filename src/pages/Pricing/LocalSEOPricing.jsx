@@ -11,7 +11,7 @@ import { breadcrumbListSchema } from '../../utils/schema.js'
 import { buildWhatsAppLink } from '../../utils/helpers.js'
 import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, SITE_URL } from '../../utils/constants.js'
 import '../../styles/pages/local-seo-pricing.css'
-import localSeoHeroImg from '../../assets/images/Pricing/02localseo.png'
+import localSeoHeroImg from '../../assets/images/Pricing/02localseo.webp'
 
 const HERO_SUBTITLE = 'Prices shown are for guidance. Final pricing depends on project scope. All retainer prices are per month with no minimum contract term. Message us on WhatsApp for a custom quote.'
 
@@ -102,7 +102,7 @@ export default function LocalSEOPricing({ country: propCountry }) {
         actions={<Button href={whatsappHref} variant="primary" size="lg" target="_blank" rel="noopener noreferrer">WhatsApp: +91-99440-40345</Button>}
       >
         <div className="hero__visual-side">
-          <img src={localSeoHeroImg} alt={`Local SEO Pricing ${countryName}`} className="hero__image" />
+          <img src={localSeoHeroImg} width={1536} height={1024} fetchPriority="high" alt={`Local SEO Pricing ${countryName}`} className="hero__image" />
         </div>
       </HeroSection>
 

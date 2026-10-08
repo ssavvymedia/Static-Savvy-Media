@@ -22,7 +22,7 @@ import {
 } from '../../utils/constants.js'
 import '../../styles/templates/service-template.css'
 import '../../styles/pages/website-design-development.css'
-import websiteHeroImg from '../../assets/images/services/06website.png'
+import websiteHeroImg from '../../assets/images/services/06website.webp'
 
 /* ============================================================
    CONTENT, Approved Static Savvy Media Website Design & Dev
@@ -292,7 +292,7 @@ export default function WebsiteDesignDevelopment() {
         }
       >
         <div className="hero__visual-side">
-          <img src={websiteHeroImg} alt="Website Design & Development" className="hero__image" />
+          <img src={websiteHeroImg} width={1536} height={1024} fetchPriority="high" alt="Website Design & Development" className="hero__image" />
         </div>
       </HeroSection>
 

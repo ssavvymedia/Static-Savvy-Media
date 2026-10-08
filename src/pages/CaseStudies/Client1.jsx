@@ -12,7 +12,7 @@ import { breadcrumbListSchema } from '../../utils/schema.js'
 import { buildWhatsAppLink } from '../../utils/helpers.js'
 import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, SITE_URL } from '../../utils/constants.js'
 import '../../styles/pages/client1.css'
-import client1HeroImg from '../../assets/images/CaseStudies/01Client.png'
+import client1HeroImg from '../../assets/images/CaseStudies/01Client.webp'
 
 const META_TITLE = 'Madurai SEO & Local SEO Case Study | Static Savvy Media'
 const META_DESC = 'A Madurai business case study covering SEO and Local SEO, including the challenge, approach, methodology, timeline and verified results.'
@@ -109,7 +109,7 @@ export default function Client1() {
         actions={<Button href={whatsappHref} variant="primary" size="lg" target="_blank" rel="noopener noreferrer">WhatsApp: +91-99440-40345</Button>}
       >
         <div className="hero__visual-side">
-          <img src={client1HeroImg} alt="Madurai SEO and Local SEO Case Study" className="hero__image" />
+          <img src={client1HeroImg} width={1536} height={1024} fetchPriority="high" alt="Madurai SEO and Local SEO Case Study" className="hero__image" />
         </div>
       </HeroSection>
 

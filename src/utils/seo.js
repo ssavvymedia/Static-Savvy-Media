@@ -3,6 +3,11 @@ import { useLocation } from 'react-router-dom'
 import { getSeoForPath } from '../data/seoConfig.js'
 import { SITE_NAME, SITE_URL, SITE_DESCRIPTION } from './constants.js'
 
+// 1200x630 share image in /public (also the static default in index.html), used for routes
+// whose seoConfig entry has no ogImage. Per-page images live in /public/og/ (see seoConfig.js).
+// Pages that call setSeo() without an ogImage keep whatever useRouteSEO() set.
+export const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.jpg`
+
 function setMetaTag(attr, key, content) {
   if (!content) return
   let meta = document.head.querySelector(`meta[${attr}="${key}"]`)
@@ -115,7 +120,7 @@ export function useRouteSEO(customPath) {
   useEffect(() => {
     const config = getSeoForPath(path)
     if (config && config.seo) {
-      setSeo(config.seo)
+      setSeo({ ...config.seo, ogImage: config.seo.ogImage || DEFAULT_OG_IMAGE })
     }
   }, [path])
 }

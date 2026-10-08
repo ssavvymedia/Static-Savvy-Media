@@ -19,7 +19,7 @@ import {
   SITE_URL,
 } from '../../../utils/constants.js'
 import '../../../styles/pages/google-ads-thoothukudi.css'
-import heroImage from '../../../assets/images/GoogleAds/GoogleAds.png'
+import heroImage from '../../../assets/images/GoogleAds/GoogleAds.webp'
 
 /* ============================================================
    CONTENT, Google Ads Thoothukudi
@@ -313,6 +313,9 @@ export default function GoogleAds_Thoothukudi() {
         <div className="hero__visual-side">
           <img
             src={heroImage}
+            width={1672}
+            height={941}
+            fetchPriority="high"
             alt="Google Ads Services"
             className="hero__image"
           />

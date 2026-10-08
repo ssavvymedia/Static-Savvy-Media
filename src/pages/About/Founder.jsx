@@ -11,7 +11,7 @@ import { setSeo } from '../../utils/seo.js'
 import { personSchema, faqPageSchema, breadcrumbListSchema } from '../../utils/schema.js'
 import { buildWhatsAppLink } from '../../utils/helpers.js'
 import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, SITE_URL } from '../../utils/constants.js'
-import deepanFounderImg from '../../assets/images/About/DeepanFounder.png'
+import deepanFounderImg from '../../assets/images/About/DeepanFounder.webp'
 
 /* ============================================================
    CONTENT, Approved Static Savvy Media Founder Page Content
@@ -166,7 +166,7 @@ export default function Founder() {
           <div className="founder-hero">
             <div className="founder-hero__visual">
               <div className="founder-hero__portrait">
-                <img src={deepanFounderImg} alt="Deepan Kanz - Founder & AI Search Specialist" className="founder-hero__portrait-img" />
+                <img src={deepanFounderImg} width={740} height={941} fetchPriority="high" alt="Deepan Kanz - Founder & AI Search Specialist" className="founder-hero__portrait-img" />
                 <div className="founder-hero__portrait-glow" aria-hidden="true" />
               </div>
             </div>

@@ -21,7 +21,7 @@ import {
 } from '../../utils/constants.js'
 import '../../styles/templates/service-template.css'
 import '../../styles/pages/product-photography-creative-design.css'
-import productHeroImg from '../../assets/images/services/10product.png'
+import productHeroImg from '../../assets/images/services/10product.webp'
 
 /* ============================================================
    CONTENT, Approved Static Savvy Media Product Photography &
@@ -340,7 +340,7 @@ export default function ProductPhotographyCreativeDesign() {
         }
       >
         <div className="hero__visual-side">
-          <img src={productHeroImg} alt="Product Photography & Creative Design" className="hero__image" />
+          <img src={productHeroImg} width={1536} height={1024} fetchPriority="high" alt="Product Photography & Creative Design" className="hero__image" />
         </div>
       </HeroSection>
 

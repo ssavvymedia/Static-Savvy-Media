@@ -19,7 +19,7 @@ export const seoConfig = {
       focusKeyword: 'digital marketing agency',
       ogTitle: 'Digital Marketing Agency Madurai, SEO, GEO & AI Search | Static Savvy Media',
       ogDescription: "Static Savvy Media: Madurai's AI-powered digital marketing agency. SEO, GEO/AEO, Local SEO, and Google Ads for Tamil Nadu and Malaysia businesses.",
-      ogImage: `${BASE_URL}/src/assets/images/Heroimage.png`,
+      ogImage: `${BASE_URL}/og/heroimage.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'WebSite',
@@ -39,7 +39,7 @@ export const seoConfig = {
       focusKeyword: 'digital marketing agency about',
       ogTitle: 'About Us — AI-Powered Digital Marketing Agency | Static Savvy Media',
       ogDescription: 'Learn how Static Savvy Media combines AI search, data-driven SEO, Google Ads, and creative production to help businesses grow.',
-      ogImage: `${BASE_URL}/src/assets/images/About/About.png`,
+      ogImage: `${BASE_URL}/og/about-about.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Organization',
@@ -59,7 +59,7 @@ export const seoConfig = {
       focusKeyword: 'Deepan Kanz digital marketing',
       ogTitle: 'Deepan Kanz — Founder & Lead Strategist | Static Savvy Media',
       ogDescription: 'Meet Deepan Kanz, Founder & Digital Growth Strategist at Static Savvy Media.',
-      ogImage: `${BASE_URL}/src/assets/images/About/DeepanFounder.png`,
+      ogImage: `${BASE_URL}/og/about-deepanfounder.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Person',
@@ -80,7 +80,7 @@ export const seoConfig = {
       focusKeyword: 'digital marketing agency reviews',
       ogTitle: 'Client Reviews & Testimonials | Static Savvy Media',
       ogDescription: 'Read client reviews and success stories from businesses that grew with Static Savvy Media.',
-      ogImage: `${BASE_URL}/src/assets/images/About/About.png`,
+      ogImage: `${BASE_URL}/og/about-about.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Organization',
@@ -100,7 +100,7 @@ export const seoConfig = {
       focusKeyword: 'digital marketing services',
       ogTitle: 'Digital Marketing Services — SEO, GEO/AEO, Ads & AI | Static Savvy Media',
       ogDescription: 'Explore our digital marketing services: SEO, GEO/AEO, Local SEO, Google Ads, Social Media, Web Development, and AI Automation.',
-      ogImage: `${BASE_URL}/src/assets/images/services/Services.png`,
+      ogImage: `${BASE_URL}/og/services-services.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Service',
@@ -120,7 +120,7 @@ export const seoConfig = {
       focusKeyword: 'SEO services',
       ogTitle: 'SEO Services — Search Engine Optimization | Static Savvy Media',
       ogDescription: 'Drive sustainable organic growth with technical SEO, keyword strategy, high-intent content, and link building.',
-      ogImage: `${BASE_URL}/src/assets/images/services/01SEO.png`,
+      ogImage: `${BASE_URL}/og/services-01seo.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Service',
@@ -141,7 +141,7 @@ export const seoConfig = {
       focusKeyword: 'GEO AEO services',
       ogTitle: 'GEO & AEO Services — AI Search Optimization | Static Savvy Media',
       ogDescription: 'Optimize your business to get cited by ChatGPT, Perplexity, Claude, and Google AI Overviews.',
-      ogImage: `${BASE_URL}/src/assets/images/services/02GEOAEO.png`,
+      ogImage: `${BASE_URL}/og/services-02geoaeo.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Service',
@@ -161,7 +161,7 @@ export const seoConfig = {
       focusKeyword: 'local SEO services',
       ogTitle: 'Local SEO Services — Google Business Profile Optimization | Static Savvy Media',
       ogDescription: 'Dominate local map packs and high-intent local searches in your target city with expert Local SEO.',
-      ogImage: `${BASE_URL}/src/assets/images/services/03LOCALSEO.png`,
+      ogImage: `${BASE_URL}/og/services-03localseo.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Service',
@@ -181,7 +181,7 @@ export const seoConfig = {
       focusKeyword: 'Google Ads management',
       ogTitle: 'Google Ads & PPC Management Services | Static Savvy Media',
       ogDescription: 'Maximize ROI with targeted Google Search, Display, Shopping, and YouTube ad campaigns.',
-      ogImage: `${BASE_URL}/src/assets/images/services/04GoogleAds.png`,
+      ogImage: `${BASE_URL}/og/services-04googleads.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Service',
@@ -201,7 +201,7 @@ export const seoConfig = {
       focusKeyword: 'social media marketing services',
       ogTitle: 'Social Media Marketing Services | Static Savvy Media',
       ogDescription: 'Build brand authority and drive customer engagement through strategic content creation and social ads.',
-      ogImage: `${BASE_URL}/src/assets/images/services/05socialmediamarketing.png`,
+      ogImage: `${BASE_URL}/og/services-05socialmediamarketing.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Service',
@@ -221,7 +221,7 @@ export const seoConfig = {
       focusKeyword: 'website design and development',
       ogTitle: 'Website Design & Development Services | Static Savvy Media',
       ogDescription: 'Fast, mobile-responsive, conversion-optimized websites built with modern UI/UX and SEO best practices.',
-      ogImage: `${BASE_URL}/src/assets/images/services/06website.png`,
+      ogImage: `${BASE_URL}/og/services-06website.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Service',
@@ -241,7 +241,7 @@ export const seoConfig = {
       focusKeyword: 'AI business automation',
       ogTitle: 'AI Business Automation Services | Static Savvy Media',
       ogDescription: 'Streamline operations, automate lead nurture workflows, and deploy intelligent AI chatbots.',
-      ogImage: `${BASE_URL}/src/assets/images/services/07AIBusiness.png`,
+      ogImage: `${BASE_URL}/og/services-07aibusiness.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Service',
@@ -261,7 +261,7 @@ export const seoConfig = {
       focusKeyword: 'corporate photography and video',
       ogTitle: 'Corporate Photography & Video Production | Static Savvy Media',
       ogDescription: 'High-quality corporate video production, brand shoots, and commercial photography.',
-      ogImage: `${BASE_URL}/src/assets/images/services/09corporate.png`,
+      ogImage: `${BASE_URL}/og/services-09corporate.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Service',
@@ -281,7 +281,7 @@ export const seoConfig = {
       focusKeyword: 'AI video creation',
       ogTitle: 'AI Video Creation Services | Static Savvy Media',
       ogDescription: 'Create high-engaging promotional and educational videos at scale using AI video creation technology.',
-      ogImage: `${BASE_URL}/src/assets/images/services/08AIVideo.png`,
+      ogImage: `${BASE_URL}/og/services-08aivideo.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Service',
@@ -301,7 +301,7 @@ export const seoConfig = {
       focusKeyword: 'product photography creative design',
       ogTitle: 'Product Photography & Creative Design | Static Savvy Media',
       ogDescription: 'E-commerce product photography, lifestyle visuals, and graphic design that capture attention.',
-      ogImage: `${BASE_URL}/src/assets/images/services/10product.png`,
+      ogImage: `${BASE_URL}/og/services-10product.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Service',
@@ -323,7 +323,7 @@ export const seoConfig = {
       focusKeyword: 'SEO agency Madurai',
       ogTitle: 'SEO Agency Madurai — Search Engine Optimization | Static Savvy Media',
       ogDescription: 'Leading SEO agency in Madurai providing data-driven technical, on-page, and local SEO.',
-      ogImage: `${BASE_URL}/src/assets/images/locations/01Madurai.png`,
+      ogImage: `${BASE_URL}/og/locations-01madurai.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'LocalBusiness',
@@ -343,7 +343,7 @@ export const seoConfig = {
       focusKeyword: 'SEO services Thoothukudi',
       ogTitle: 'SEO Services Thoothukudi | Static Savvy Media',
       ogDescription: 'Boost search rankings and generate qualified organic leads for businesses in Thoothukudi.',
-      ogImage: `${BASE_URL}/src/assets/images/locations/03thoothukudi.png`,
+      ogImage: `${BASE_URL}/og/locations-03thoothukudi.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'LocalBusiness',
@@ -363,7 +363,7 @@ export const seoConfig = {
       focusKeyword: 'SEO Malaysia',
       ogTitle: 'SEO Malaysia, Search Engine Optimization for Malaysian Businesses | Static Savvy Media',
       ogDescription: 'SEO services in Malaysia for businesses seeking stronger Google visibility and organic search rankings.',
-      ogImage: `${BASE_URL}/src/assets/images/locations/02malaysia.png`,
+      ogImage: `${BASE_URL}/og/locations-02malaysia.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'ProfessionalService',
@@ -383,7 +383,7 @@ export const seoConfig = {
       focusKeyword: 'local SEO Madurai',
       ogTitle: 'Local SEO Services Madurai | Static Savvy Media',
       ogDescription: 'Dominating local searches and Google Maps in Madurai. Optimize your Google Business Profile.',
-      ogImage: `${BASE_URL}/src/assets/images/locations/01Madurai.png`,
+      ogImage: `${BASE_URL}/og/locations-01madurai.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'LocalBusiness',
@@ -403,7 +403,7 @@ export const seoConfig = {
       focusKeyword: 'local SEO Thoothukudi',
       ogTitle: 'Local SEO Services Thoothukudi | Static Savvy Media',
       ogDescription: 'Attract local customers in Thoothukudi with targeted Google Business Profile optimization.',
-      ogImage: `${BASE_URL}/src/assets/images/locations/03thoothukudi.png`,
+      ogImage: `${BASE_URL}/og/locations-03thoothukudi.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'LocalBusiness',
@@ -423,7 +423,7 @@ export const seoConfig = {
       focusKeyword: 'local SEO Malaysia',
       ogTitle: 'Local SEO Malaysia | Static Savvy Media',
       ogDescription: 'Help Malaysian SMEs capture high-intent local buyers across Kuala Lumpur, Rawang, and Selangor.',
-      ogImage: `${BASE_URL}/src/assets/images/locations/02malaysia.png`,
+      ogImage: `${BASE_URL}/og/locations-02malaysia.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'ProfessionalService',
@@ -443,7 +443,7 @@ export const seoConfig = {
       focusKeyword: 'GEO AEO Madurai',
       ogTitle: 'GEO & AEO Services Madurai | Static Savvy Media',
       ogDescription: 'Get your Madurai business cited by ChatGPT, Perplexity, and Google AI Overviews.',
-      ogImage: `${BASE_URL}/src/assets/images/locations/01Madurai.png`,
+      ogImage: `${BASE_URL}/og/locations-01madurai.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'LocalBusiness',
@@ -463,7 +463,7 @@ export const seoConfig = {
       focusKeyword: 'Google Ads Thoothukudi',
       ogTitle: 'Google Ads Agency Thoothukudi | Static Savvy Media',
       ogDescription: 'Targeted Google Search, Display, and Shopping PPC campaigns for businesses in Thoothukudi.',
-      ogImage: `${BASE_URL}/src/assets/images/locations/03thoothukudi.png`,
+      ogImage: `${BASE_URL}/og/locations-03thoothukudi.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'LocalBusiness',
@@ -483,7 +483,7 @@ export const seoConfig = {
       focusKeyword: 'AI business automation Malaysia',
       ogTitle: 'AI Business Automation Malaysia | Static Savvy Media',
       ogDescription: 'Empower Malaysian SMEs with custom AI workflow automation, lead nurturing, and CRM integration.',
-      ogImage: `${BASE_URL}/src/assets/images/locations/02malaysia.png`,
+      ogImage: `${BASE_URL}/og/locations-02malaysia.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'ProfessionalService',
@@ -505,7 +505,7 @@ export const seoConfig = {
       focusKeyword: 'digital marketing locations',
       ogTitle: 'Our Locations — Madurai, Thoothukudi & Malaysia | Static Savvy Media',
       ogDescription: 'Discover our service locations in Madurai, Thoothukudi, and Malaysia.',
-      ogImage: `${BASE_URL}/src/assets/images/locations/Locationmain.png`,
+      ogImage: `${BASE_URL}/og/locations-locationmain.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Organization',
@@ -525,7 +525,7 @@ export const seoConfig = {
       focusKeyword: 'digital marketing agency Madurai',
       ogTitle: 'Digital Marketing Agency Madurai | Static Savvy Media',
       ogDescription: 'Headquartered in Madurai, Static Savvy Media delivers full-service SEO, GEO/AEO, and Google Ads.',
-      ogImage: `${BASE_URL}/src/assets/images/locations/01Madurai.png`,
+      ogImage: `${BASE_URL}/og/locations-01madurai.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'LocalBusiness',
@@ -552,7 +552,7 @@ export const seoConfig = {
       focusKeyword: 'digital marketing agency Thoothukudi',
       ogTitle: 'Digital Marketing Agency Thoothukudi | Static Savvy Media',
       ogDescription: 'Digital marketing agency serving port, maritime, logistics, and retail businesses in Thoothukudi.',
-      ogImage: `${BASE_URL}/src/assets/images/locations/03thoothukudi.png`,
+      ogImage: `${BASE_URL}/og/locations-03thoothukudi.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'LocalBusiness',
@@ -579,7 +579,7 @@ export const seoConfig = {
       focusKeyword: 'digital marketing agency Malaysia',
       ogTitle: 'Digital Marketing Agency Malaysia | Static Savvy Media',
       ogDescription: 'Empowering Malaysian SMEs across Kuala Lumpur, Rawang, and Selangor with SEO and AI automation.',
-      ogImage: `${BASE_URL}/src/assets/images/locations/02malaysia.png`,
+      ogImage: `${BASE_URL}/og/locations-02malaysia.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'ProfessionalService',
@@ -608,7 +608,7 @@ export const seoConfig = {
       focusKeyword: 'industry digital marketing',
       ogTitle: 'Industry Digital Marketing Solutions | Static Savvy Media',
       ogDescription: 'Tailored digital marketing solutions for Retail, Healthcare, Education, Textiles, and Real Estate.',
-      ogImage: `${BASE_URL}/src/assets/images/Industries/IndustriesMain.png`,
+      ogImage: `${BASE_URL}/og/industries-industriesmain.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Organization',
@@ -628,7 +628,7 @@ export const seoConfig = {
       focusKeyword: 'digital marketing for retail ecommerce',
       ogTitle: 'Digital Marketing for Retail & E-Commerce | Static Savvy Media',
       ogDescription: 'Drive online store sales and retail foot traffic with targeted SEO and Google Shopping Ads.',
-      ogImage: `${BASE_URL}/src/assets/images/Industries/01retail.png`,
+      ogImage: `${BASE_URL}/og/industries-01retail.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Service',
@@ -648,7 +648,7 @@ export const seoConfig = {
       focusKeyword: 'digital marketing for healthcare clinics',
       ogTitle: 'Digital Marketing for Healthcare & Clinics | Static Savvy Media',
       ogDescription: 'Attract more patients for clinics, hospitals, and healthcare practices with compliant local SEO.',
-      ogImage: `${BASE_URL}/src/assets/images/Industries/02healthcare.png`,
+      ogImage: `${BASE_URL}/og/industries-02healthcare.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Service',
@@ -668,7 +668,7 @@ export const seoConfig = {
       focusKeyword: 'digital marketing for education institutes',
       ogTitle: 'Digital Marketing for Education & Training Institutes | Static Savvy Media',
       ogDescription: 'Increase student enrollments for schools, colleges, and coaching centers.',
-      ogImage: `${BASE_URL}/src/assets/images/Industries/03education.png`,
+      ogImage: `${BASE_URL}/og/industries-03education.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Service',
@@ -688,7 +688,7 @@ export const seoConfig = {
       focusKeyword: 'digital marketing for hotels hospitality',
       ogTitle: 'Digital Marketing for Hotels & Hospitality | Static Savvy Media',
       ogDescription: 'Boost direct hotel bookings, restaurant visits, and event inquiries.',
-      ogImage: `${BASE_URL}/src/assets/images/Industries/04hospital.png`,
+      ogImage: `${BASE_URL}/og/industries-04hospital.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Service',
@@ -708,7 +708,7 @@ export const seoConfig = {
       focusKeyword: 'digital marketing for textile industry',
       ogTitle: 'Digital Marketing for Textile Industry Madurai | Static Savvy Media',
       ogDescription: "Specialized SEO and B2B digital marketing for Madurai's textile manufacturers.",
-      ogImage: `${BASE_URL}/src/assets/images/Industries/05textile.png`,
+      ogImage: `${BASE_URL}/og/industries-05textile.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Service',
@@ -728,7 +728,7 @@ export const seoConfig = {
       focusKeyword: 'digital marketing for port marine industrial',
       ogTitle: 'Digital Marketing for Port & Industrial Businesses Thoothukudi | Static Savvy Media',
       ogDescription: 'B2B lead generation and corporate branding for maritime and port enterprises.',
-      ogImage: `${BASE_URL}/src/assets/images/Industries/06port.png`,
+      ogImage: `${BASE_URL}/og/industries-06port.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Service',
@@ -748,7 +748,7 @@ export const seoConfig = {
       focusKeyword: 'digital marketing for Malaysian SMEs',
       ogTitle: 'Digital Marketing for Malaysian SMEs (Grant Eligible) | Static Savvy Media',
       ogDescription: 'Help Malaysian SMEs leverage digital grants with high-growth SEO and AI automation.',
-      ogImage: `${BASE_URL}/src/assets/images/Industries/07SME.png`,
+      ogImage: `${BASE_URL}/og/industries-07sme.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Service',
@@ -768,7 +768,7 @@ export const seoConfig = {
       focusKeyword: 'digital marketing for real estate',
       ogTitle: 'Digital Marketing for Real Estate & Builders | Static Savvy Media',
       ogDescription: 'Generate high-quality buyer leads for real estate developers and builders.',
-      ogImage: `${BASE_URL}/src/assets/images/Industries/08realestate.png`,
+      ogImage: `${BASE_URL}/og/industries-08realestate.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Service',
@@ -790,7 +790,7 @@ export const seoConfig = {
       focusKeyword: 'digital marketing pricing India',
       ogTitle: 'Digital Marketing Packages & Pricing India | Static Savvy Media',
       ogDescription: 'Transparent digital marketing pricing plans for SEO, Google Ads, and Web Design in India.',
-      ogImage: `${BASE_URL}/src/assets/images/Pricing/PricingMain.png`,
+      ogImage: `${BASE_URL}/og/pricing-pricingmain.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'OfferCatalog',
@@ -809,7 +809,7 @@ export const seoConfig = {
       focusKeyword: 'SEO packages India pricing',
       ogTitle: 'SEO Packages & Pricing India | Static Savvy Media',
       ogDescription: 'Affordable and scalable SEO pricing packages in India.',
-      ogImage: `${BASE_URL}/src/assets/images/Pricing/01seo.png`,
+      ogImage: `${BASE_URL}/og/pricing-01seo.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Offer',
@@ -828,7 +828,7 @@ export const seoConfig = {
       focusKeyword: 'local SEO pricing India',
       ogTitle: 'Local SEO Pricing & Packages India | Static Savvy Media',
       ogDescription: 'Local SEO pricing plans tailored for single-location shops and multi-city businesses across India.',
-      ogImage: `${BASE_URL}/src/assets/images/Pricing/02localseo.png`,
+      ogImage: `${BASE_URL}/og/pricing-02localseo.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Offer',
@@ -847,7 +847,7 @@ export const seoConfig = {
       focusKeyword: 'Google Ads pricing India',
       ogTitle: 'Google Ads Management Pricing India | Static Savvy Media',
       ogDescription: 'Flexible Google Ads PPC management packages designed to maximize leads and ROI.',
-      ogImage: `${BASE_URL}/src/assets/images/Pricing/03googleads.png`,
+      ogImage: `${BASE_URL}/og/pricing-03googleads.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Offer',
@@ -866,7 +866,7 @@ export const seoConfig = {
       focusKeyword: 'social media marketing pricing India',
       ogTitle: 'Social Media Marketing Pricing India | Static Savvy Media',
       ogDescription: 'Monthly social media marketing and management plans for Instagram, Facebook, and LinkedIn.',
-      ogImage: `${BASE_URL}/src/assets/images/Pricing/04socialmedia.png`,
+      ogImage: `${BASE_URL}/og/pricing-04socialmedia.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Offer',
@@ -885,7 +885,7 @@ export const seoConfig = {
       focusKeyword: 'social media marketing pricing India',
       ogTitle: 'Social Media Marketing Pricing India | Static Savvy Media',
       ogDescription: 'Monthly social media marketing and management plans for Instagram, Facebook, and LinkedIn.',
-      ogImage: `${BASE_URL}/src/assets/images/Pricing/04socialmedia.png`,
+      ogImage: `${BASE_URL}/og/pricing-04socialmedia.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Offer',
@@ -904,7 +904,7 @@ export const seoConfig = {
       focusKeyword: 'website design development pricing India',
       ogTitle: 'Website Design & Development Pricing India | Static Savvy Media',
       ogDescription: 'Cost-effective website design and custom development pricing packages for businesses in India.',
-      ogImage: `${BASE_URL}/src/assets/images/Pricing/05websitedesign.png`,
+      ogImage: `${BASE_URL}/og/pricing-05websitedesign.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Offer',
@@ -923,7 +923,7 @@ export const seoConfig = {
       focusKeyword: 'website design development pricing India',
       ogTitle: 'Website Design & Development Pricing India | Static Savvy Media',
       ogDescription: 'Cost-effective website design and custom development pricing packages.',
-      ogImage: `${BASE_URL}/src/assets/images/Pricing/05websitedesign.png`,
+      ogImage: `${BASE_URL}/og/pricing-05websitedesign.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Offer',
@@ -942,7 +942,7 @@ export const seoConfig = {
       focusKeyword: 'AI services pricing India',
       ogTitle: 'AI Business Automation Pricing India | Static Savvy Media',
       ogDescription: 'Transparent pricing for AI workflow automation, custom chatbots, and AI search optimization.',
-      ogImage: `${BASE_URL}/src/assets/images/Pricing/06AIsevices.png`,
+      ogImage: `${BASE_URL}/og/pricing-06aisevices.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Offer',
@@ -961,7 +961,7 @@ export const seoConfig = {
       focusKeyword: 'photography video pricing India',
       ogTitle: 'Corporate Photography & Video Pricing India | Static Savvy Media',
       ogDescription: 'Custom pricing packages for commercial brand shoots and product photography.',
-      ogImage: `${BASE_URL}/src/assets/images/Pricing/07photograph.png`,
+      ogImage: `${BASE_URL}/og/pricing-07photograph.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Offer',
@@ -982,7 +982,7 @@ export const seoConfig = {
       focusKeyword: 'digital marketing pricing Malaysia MYR',
       ogTitle: 'Digital Marketing Pricing Malaysia (MYR) | Static Savvy Media',
       ogDescription: 'Transparent digital marketing pricing packages in MYR for Malaysian SMEs.',
-      ogImage: `${BASE_URL}/src/assets/images/Pricing/PricingMain.png`,
+      ogImage: `${BASE_URL}/og/pricing-pricingmain.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'OfferCatalog',
@@ -1001,7 +1001,7 @@ export const seoConfig = {
       focusKeyword: 'SEO packages Malaysia pricing',
       ogTitle: 'SEO Packages & Pricing Malaysia (MYR) | Static Savvy Media',
       ogDescription: 'SEO pricing plans in MYR for Malaysian businesses.',
-      ogImage: `${BASE_URL}/src/assets/images/Pricing/01seo.png`,
+      ogImage: `${BASE_URL}/og/pricing-01seo.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Offer',
@@ -1020,7 +1020,7 @@ export const seoConfig = {
       focusKeyword: 'local SEO pricing Malaysia',
       ogTitle: 'Local SEO Pricing Malaysia (MYR) | Static Savvy Media',
       ogDescription: 'Local SEO and Google Maps optimization packages for Malaysian businesses.',
-      ogImage: `${BASE_URL}/src/assets/images/Pricing/02localseo.png`,
+      ogImage: `${BASE_URL}/og/pricing-02localseo.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Offer',
@@ -1039,7 +1039,7 @@ export const seoConfig = {
       focusKeyword: 'Google Ads pricing Malaysia',
       ogTitle: 'Google Ads Pricing Malaysia (MYR) | Static Savvy Media',
       ogDescription: 'Performance-focused Google Ads management packages for Malaysian SMEs.',
-      ogImage: `${BASE_URL}/src/assets/images/Pricing/03googleads.png`,
+      ogImage: `${BASE_URL}/og/pricing-03googleads.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Offer',
@@ -1058,7 +1058,7 @@ export const seoConfig = {
       focusKeyword: 'social media marketing pricing Malaysia',
       ogTitle: 'Social Media Marketing Pricing Malaysia (MYR) | Static Savvy Media',
       ogDescription: 'Social media growth and content creation packages for businesses in Malaysia.',
-      ogImage: `${BASE_URL}/src/assets/images/Pricing/04socialmedia.png`,
+      ogImage: `${BASE_URL}/og/pricing-04socialmedia.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Offer',
@@ -1077,7 +1077,7 @@ export const seoConfig = {
       focusKeyword: 'social media marketing pricing Malaysia',
       ogTitle: 'Social Media Marketing Pricing Malaysia (MYR) | Static Savvy Media',
       ogDescription: 'Social media growth and content creation packages for businesses in Malaysia.',
-      ogImage: `${BASE_URL}/src/assets/images/Pricing/04socialmedia.png`,
+      ogImage: `${BASE_URL}/og/pricing-04socialmedia.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Offer',
@@ -1096,7 +1096,7 @@ export const seoConfig = {
       focusKeyword: 'website design development pricing Malaysia',
       ogTitle: 'Website Design & Development Pricing Malaysia (MYR) | Static Savvy Media',
       ogDescription: 'Modern, high-converting website design packages for Malaysian companies.',
-      ogImage: `${BASE_URL}/src/assets/images/Pricing/05websitedesign.png`,
+      ogImage: `${BASE_URL}/og/pricing-05websitedesign.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Offer',
@@ -1115,7 +1115,7 @@ export const seoConfig = {
       focusKeyword: 'website design development pricing Malaysia',
       ogTitle: 'Website Design & Development Pricing Malaysia (MYR) | Static Savvy Media',
       ogDescription: 'Modern, high-converting website design packages for Malaysian companies.',
-      ogImage: `${BASE_URL}/src/assets/images/Pricing/05websitedesign.png`,
+      ogImage: `${BASE_URL}/og/pricing-05websitedesign.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Offer',
@@ -1134,7 +1134,7 @@ export const seoConfig = {
       focusKeyword: 'AI services pricing Malaysia',
       ogTitle: 'AI Automation & GEO/AEO Pricing Malaysia (MYR) | Static Savvy Media',
       ogDescription: 'AI business automation and AI search optimization pricing plans designed for Malaysian SMEs.',
-      ogImage: `${BASE_URL}/src/assets/images/Pricing/06AIsevices.png`,
+      ogImage: `${BASE_URL}/og/pricing-06aisevices.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Offer',
@@ -1153,7 +1153,7 @@ export const seoConfig = {
       focusKeyword: 'photography video pricing Malaysia',
       ogTitle: 'Corporate Photography & Video Pricing Malaysia | Static Savvy Media',
       ogDescription: 'Professional photography and commercial video production packages for brand campaigns in Malaysia.',
-      ogImage: `${BASE_URL}/src/assets/images/Pricing/07photograph.png`,
+      ogImage: `${BASE_URL}/og/pricing-07photograph.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Offer',
@@ -1174,7 +1174,7 @@ export const seoConfig = {
       focusKeyword: 'digital marketing case studies',
       ogTitle: 'Digital Marketing Case Studies & Success Stories | Static Savvy Media',
       ogDescription: 'Discover how Static Savvy Media delivered measurable organic growth and ROI.',
-      ogImage: `${BASE_URL}/src/assets/images/CaseStudies/casestudiesMain.png`,
+      ogImage: `${BASE_URL}/og/casestudies-casestudiesmain.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'CollectionPage',
@@ -1193,7 +1193,7 @@ export const seoConfig = {
       focusKeyword: 'B2B industrial SEO case study',
       ogTitle: 'Case Study 1: B2B Industrial Growth & Lead Generation | Static Savvy Media',
       ogDescription: 'How targeted SEO scaled qualified inbound B2B inquiries for an industrial enterprise.',
-      ogImage: `${BASE_URL}/src/assets/images/CaseStudies/01Client.png`,
+      ogImage: `${BASE_URL}/og/casestudies-01client.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Article',
@@ -1212,7 +1212,7 @@ export const seoConfig = {
       focusKeyword: 'local SEO case study',
       ogTitle: 'Case Study 2: Local SEO & Google Maps Domination | Static Savvy Media',
       ogDescription: 'Achieving #1 rank in local map packs and 300% increase in phone inquiries.',
-      ogImage: `${BASE_URL}/src/assets/images/CaseStudies/02Client.png`,
+      ogImage: `${BASE_URL}/og/casestudies-02client.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Article',
@@ -1231,7 +1231,7 @@ export const seoConfig = {
       focusKeyword: 'ecommerce SEO case study',
       ogTitle: 'Case Study 3: E-Commerce & Retail Sales Scaling | Static Savvy Media',
       ogDescription: 'Scaling e-commerce revenue with combined Google Shopping ads and high-intent SEO.',
-      ogImage: `${BASE_URL}/src/assets/images/CaseStudies/03Client.png`,
+      ogImage: `${BASE_URL}/og/casestudies-03client.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Article',
@@ -1250,7 +1250,7 @@ export const seoConfig = {
       focusKeyword: 'GEO AI search case study',
       ogTitle: 'Case Study 4: AI Search & GEO Citation Growth | Static Savvy Media',
       ogDescription: 'Getting cited by ChatGPT and Google AI Overviews to capture buyer intent.',
-      ogImage: `${BASE_URL}/src/assets/images/CaseStudies/04Client.png`,
+      ogImage: `${BASE_URL}/og/casestudies-04client.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Article',
@@ -1271,7 +1271,7 @@ export const seoConfig = {
       focusKeyword: 'contact digital marketing agency',
       ogTitle: 'Contact Us — Get in Touch with Digital Experts | Static Savvy Media',
       ogDescription: 'Contact Static Savvy Media in Madurai, Thoothukudi, or Malaysia for a free digital marketing audit.',
-      ogImage: `${BASE_URL}/src/assets/images/Contact.png`,
+      ogImage: `${BASE_URL}/og/contact.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'ContactPage',
@@ -1290,7 +1290,7 @@ export const seoConfig = {
       focusKeyword: 'digital marketing FAQ',
       ogTitle: 'Frequently Asked Questions (FAQ) | Static Savvy Media',
       ogDescription: 'Find answers to common questions about our SEO, GEO/AEO, Google Ads, pricing, and timelines.',
-      ogImage: `${BASE_URL}/src/assets/images/Faq/FAQ.png`,
+      ogImage: `${BASE_URL}/og/faq-faq.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
@@ -1309,7 +1309,7 @@ export const seoConfig = {
       focusKeyword: 'privacy policy Static Savvy Media',
       ogTitle: 'Privacy Policy | Static Savvy Media',
       ogDescription: 'Read the official Privacy Policy for Static Savvy Media.',
-      ogImage: `${BASE_URL}/src/assets/images/Heroimage.png`,
+      ogImage: `${BASE_URL}/og/heroimage.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'WebPage',
@@ -1328,7 +1328,7 @@ export const seoConfig = {
       focusKeyword: 'terms and conditions Static Savvy Media',
       ogTitle: 'Terms & Conditions | Static Savvy Media',
       ogDescription: "Read the Terms & Conditions governing the use of Static Savvy Media's website.",
-      ogImage: `${BASE_URL}/src/assets/images/Heroimage.png`,
+      ogImage: `${BASE_URL}/og/heroimage.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'WebPage',
@@ -1347,7 +1347,7 @@ export const seoConfig = {
       focusKeyword: 'HTML sitemap Static Savvy Media',
       ogTitle: 'HTML Sitemap | Static Savvy Media',
       ogDescription: 'View the complete HTML sitemap for Static Savvy Media.',
-      ogImage: `${BASE_URL}/src/assets/images/Heroimage.png`,
+      ogImage: `${BASE_URL}/og/heroimage.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'WebPage',
@@ -1368,7 +1368,7 @@ export const seoConfig = {
       focusKeyword: 'digital marketing blog',
       ogTitle: 'Digital Marketing Blog | Static Savvy Media',
       ogDescription: 'Stay ahead with actionable insights on SEO, GEO/AEO, Local SEO, and AI marketing.',
-      ogImage: `${BASE_URL}/src/assets/images/Blog/Blog.png`,
+      ogImage: `${BASE_URL}/og/blog-blog.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Blog',
@@ -1387,7 +1387,7 @@ export const seoConfig = {
       focusKeyword: 'SEO blog guides',
       ogTitle: 'SEO Articles & Guides | Static Savvy Media Blog',
       ogDescription: 'Expert articles and tutorials on technical SEO, link building, and keyword research.',
-      ogImage: `${BASE_URL}/src/assets/images/Blog/Blog.png`,
+      ogImage: `${BASE_URL}/og/blog-blog.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Blog',
@@ -1406,7 +1406,7 @@ export const seoConfig = {
       focusKeyword: 'GEO AEO blog',
       ogTitle: 'GEO & AEO AI Search Articles | Static Savvy Media Blog',
       ogDescription: 'Learn how Generative Engine Optimization and Answer Engine Optimization transform search.',
-      ogImage: `${BASE_URL}/src/assets/images/Blog/Blog.png`,
+      ogImage: `${BASE_URL}/og/blog-blog.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Blog',
@@ -1425,7 +1425,7 @@ export const seoConfig = {
       focusKeyword: 'local marketing blog',
       ogTitle: 'Local Marketing & Local SEO Insights | Static Savvy Media Blog',
       ogDescription: 'Strategies and tips for dominating local search and Google Business Profiles.',
-      ogImage: `${BASE_URL}/src/assets/images/Blog/Blog.png`,
+      ogImage: `${BASE_URL}/og/blog-blog.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Blog',
@@ -1444,7 +1444,7 @@ export const seoConfig = {
       focusKeyword: 'what is Generative Engine Optimization',
       ogTitle: 'What is Generative Engine Optimization (GEO)? | Static Savvy Media Blog',
       ogDescription: 'A complete guide to Generative Engine Optimization (GEO): how AI search engines select sources.',
-      ogImage: `${BASE_URL}/src/assets/images/Blog/Blog.png`,
+      ogImage: `${BASE_URL}/og/blog-blog.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Article',
@@ -1463,7 +1463,7 @@ export const seoConfig = {
       focusKeyword: 'what is Answer Engine Optimization',
       ogTitle: 'What is Answer Engine Optimization (AEO)? | Static Savvy Media Blog',
       ogDescription: 'Understand Answer Engine Optimization (AEO) and how to get featured in direct AI answer snippets.',
-      ogImage: `${BASE_URL}/src/assets/images/Blog/Blog.png`,
+      ogImage: `${BASE_URL}/og/blog-blog.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Article',
@@ -1482,7 +1482,7 @@ export const seoConfig = {
       focusKeyword: 'SEO agency Madurai guide',
       ogTitle: 'Complete Guide to Choosing an SEO Agency in Madurai | Static Savvy Media Blog',
       ogDescription: 'How to evaluate and select the best SEO agency in Madurai for your business goals.',
-      ogImage: `${BASE_URL}/src/assets/images/Blog/Blog.png`,
+      ogImage: `${BASE_URL}/og/blog-blog.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Article',
@@ -1501,7 +1501,7 @@ export const seoConfig = {
       focusKeyword: 'digital marketing Malaysia SME grant guide',
       ogTitle: 'Digital Marketing Malaysia: SME Grant Eligibility & Strategy Guide',
       ogDescription: 'Everything Malaysian SMEs need to know about digital grant eligibility and SEO investments.',
-      ogImage: `${BASE_URL}/src/assets/images/Blog/Blog.png`,
+      ogImage: `${BASE_URL}/og/blog-blog.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Article',
@@ -1520,7 +1520,7 @@ export const seoConfig = {
       focusKeyword: 'local SEO Thoothukudi guide',
       ogTitle: 'Local SEO Guide for Businesses in Thoothukudi | Static Savvy Media Blog',
       ogDescription: 'Practical steps for Thoothukudi enterprises to optimize Google Maps and outrank competitors.',
-      ogImage: `${BASE_URL}/src/assets/images/Blog/Blog.png`,
+      ogImage: `${BASE_URL}/og/blog-blog.jpg`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'Article',

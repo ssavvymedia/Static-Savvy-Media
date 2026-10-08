@@ -20,7 +20,7 @@ import {
   SITE_URL,
 } from '../../utils/constants.js'
 import '../../styles/pages/madurai.css'
-import maduraiHeroImg from '../../assets/images/locations/01Madurai.png'
+import maduraiHeroImg from '../../assets/images/locations/01Madurai.webp'
 
 /* ============================================================
    CONTENT, Approved Static Savvy Media Madurai Page Content
@@ -288,6 +288,9 @@ export default function Madurai() {
         <div className="hero__visual-side">
           <img
             src={maduraiHeroImg}
+            width={1536}
+            height={1024}
+            fetchPriority="high"
             alt="Digital Marketing Agency in Madurai"
             className="hero__image"
           />

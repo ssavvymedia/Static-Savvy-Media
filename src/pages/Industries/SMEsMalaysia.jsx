@@ -20,7 +20,7 @@ import {
   SITE_NAME,
 } from '../../utils/constants.js'
 import '../../styles/pages/smes-malaysia.css'
-import smeHeroImg from '../../assets/images/Industries/07SME.png'
+import smeHeroImg from '../../assets/images/Industries/07SME.webp'
 
 const PAGE_TITLE =
   'Digital Marketing for Malaysian SMEs | Static Savvy Media'
@@ -471,6 +471,9 @@ export default function SMEsMalaysia() {
         <div className="hero__visual-side">
           <img
             src={smeHeroImg}
+            width={1536}
+            height={1024}
+            fetchPriority="high"
             alt="Malaysia SMEs"
             className="hero__image"
           />

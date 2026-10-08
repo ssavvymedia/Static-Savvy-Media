@@ -23,7 +23,7 @@ import {
 } from '../../utils/constants.js'
 import '../../styles/templates/service-template.css'
 import '../../styles/pages/geo-aeo.css'
-import geoAeoHeroImg from '../../assets/images/services/02GEOAEO.png'
+import geoAeoHeroImg from '../../assets/images/services/02GEOAEO.webp'
 
 /* ============================================================
    CONTENT, Approved Static Savvy Media GEO & AEO Page Content
@@ -387,7 +387,7 @@ export default function GEOAEO() {
         }
       >
         <div className="hero__visual-side">
-          <img src={geoAeoHeroImg} alt="GEO & AEO Optimization" className="hero__image" />
+          <img src={geoAeoHeroImg} width={1536} height={1024} fetchPriority="high" alt="GEO & AEO Optimization" className="hero__image" />
         </div>
       </HeroSection>
 

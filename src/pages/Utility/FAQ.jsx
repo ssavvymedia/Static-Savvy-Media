@@ -6,7 +6,7 @@ import { setSeo } from '../../utils/seo.js'
 import { faqPageSchema, breadcrumbListSchema } from '../../utils/schema.js'
 import { buildWhatsAppLink } from '../../utils/helpers.js'
 import { WHATSAPP_NUMBER, SITE_URL } from '../../utils/constants.js'
-import faqHeroImg from '../../assets/images/Faq/FAQ.png'
+import faqHeroImg from '../../assets/images/Faq/FAQ.webp'
 
 const WHATSAPP_MSG = 'Hi Static Savvy Media, I have a question about your digital marketing services.'
 
@@ -171,6 +171,9 @@ export default function FAQ() {
         <div className="hero__visual-side">
           <img
             src={faqHeroImg}
+            width={1536}
+            height={1024}
+            fetchPriority="high"
             alt="Frequently Asked Questions - Digital Marketing, SEO, GEO & AEO"
             className="hero__image"
           />

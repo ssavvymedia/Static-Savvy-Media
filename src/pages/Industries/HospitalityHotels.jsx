@@ -20,7 +20,7 @@ import {
   SITE_NAME,
 } from '../../utils/constants.js'
 import '../../styles/pages/hospitality-hotels.css'
-import hospitalityHeroImg from '../../assets/images/Industries/04hospital.png'
+import hospitalityHeroImg from '../../assets/images/Industries/04hospital.webp'
 
 const PAGE_TITLE =
   'Digital Marketing for Hotels & Hospitality Businesses | Madurai & Tamil Nadu | Static Savvy Media'
@@ -280,6 +280,9 @@ export default function HospitalityHotels() {
         <div className="hero__visual-side">
           <img
             src={hospitalityHeroImg}
+            width={1536}
+            height={1024}
+            fetchPriority="high"
             alt="Hospitality & Hotels"
             className="hero__image"
           />

@@ -21,7 +21,7 @@ import {
 } from '../../utils/constants.js'
 import '../../styles/templates/service-template.css'
 import '../../styles/pages/healthcare-clinics.css'
-import healthcareHeroImg from '../../assets/images/Industries/02healthcare.png'
+import healthcareHeroImg from '../../assets/images/Industries/02healthcare.webp'
 
 /* ============================================================
    CONTENT, Approved Static Savvy Media Healthcare & Clinics
@@ -532,6 +532,9 @@ export default function HealthcareClinics() {
         <div className="hero__visual-side">
           <img
             src={healthcareHeroImg}
+            width={1536}
+            height={1024}
+            fetchPriority="high"
             alt="Healthcare & Clinics"
             className="hero__image"
           />

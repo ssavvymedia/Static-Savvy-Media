@@ -17,7 +17,7 @@ import {
   SITE_URL,
 } from '../../utils/constants.js'
 import '../../styles/pages/locations-hub.css'
-import locationHeroImg from '../../assets/images/locations/Locationmain.png'
+import locationHeroImg from '../../assets/images/locations/Locationmain.webp'
 
 const PAGE_TITLE =
   'Our Locations, Madurai, Thoothukudi & Malaysia | Static Savvy Media'
@@ -221,6 +221,9 @@ export default function Locations() {
         <div className="hero__visual-side">
           <img
             src={locationHeroImg}
+            width={1536}
+            height={1024}
+            fetchPriority="high"
             alt="Our Locations - Madurai, Thoothukudi & Malaysia"
             className="hero__image"
           />

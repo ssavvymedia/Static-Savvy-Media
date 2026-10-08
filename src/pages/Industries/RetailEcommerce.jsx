@@ -20,7 +20,7 @@ import {
   SITE_NAME,
 } from '../../utils/constants.js'
 import '../../styles/pages/retail-ecommerce.css'
-import retailHeroImg from '../../assets/images/Industries/01retail.png'
+import retailHeroImg from '../../assets/images/Industries/01retail.webp'
 
 const PAGE_TITLE =
   'Digital Marketing for Retail & E-Commerce Businesses | Static Savvy Media'
@@ -508,6 +508,9 @@ export default function RetailEcommerce() {
         <div className="hero__visual-side">
           <img
             src={retailHeroImg}
+            width={1536}
+            height={1024}
+            fetchPriority="high"
             alt="Retail & E-Commerce"
             className="hero__image"
           />

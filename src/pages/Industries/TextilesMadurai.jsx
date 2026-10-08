@@ -20,7 +20,7 @@ import {
   SITE_NAME,
 } from '../../utils/constants.js'
 import '../../styles/pages/textiles-madurai.css'
-import textileHeroImg from '../../assets/images/Industries/05textile.png'
+import textileHeroImg from '../../assets/images/Industries/05textile.webp'
 
 const PAGE_TITLE =
   'Digital Marketing for Textile & Garment Businesses in Madurai | Static Savvy Media'
@@ -504,6 +504,9 @@ export default function TextilesMadurai() {
         <div className="hero__visual-side">
           <img
             src={textileHeroImg}
+            width={1536}
+            height={1024}
+            fetchPriority="high"
             alt="Madurai Textiles"
             className="hero__image"
           />

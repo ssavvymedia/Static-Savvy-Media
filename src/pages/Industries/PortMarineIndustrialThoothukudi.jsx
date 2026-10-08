@@ -20,7 +20,7 @@ import {
   SITE_NAME,
 } from '../../utils/constants.js'
 import '../../styles/pages/port-marine-industrial.css'
-import portHeroImg from '../../assets/images/Industries/06port.png'
+import portHeroImg from '../../assets/images/Industries/06port.webp'
 
 /* ============================================================
    CONTENT — Approved Static Savvy Media Port, Marine & Industrial
@@ -489,6 +489,9 @@ export default function PortMarineIndustrialThoothukudi() {
         <div className="hero__visual-side">
           <img
             src={portHeroImg}
+            width={1536}
+            height={1024}
+            fetchPriority="high"
             alt="Port, Marine & Industrial"
             className="hero__image"
           />

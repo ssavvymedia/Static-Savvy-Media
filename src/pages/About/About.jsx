@@ -12,8 +12,8 @@ import { setSeo } from '../../utils/seo.js'
 import { organizationSchema, faqPageSchema, breadcrumbListSchema } from '../../utils/schema.js'
 import { buildWhatsAppLink } from '../../utils/helpers.js'
 import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, SITE_URL } from '../../utils/constants.js'
-import aboutHeroImg from '../../assets/images/About/About.png'
-import deepanAboutImg from '../../assets/images/About/DeepanAbout.png'
+import aboutHeroImg from '../../assets/images/About/About.webp'
+import deepanAboutImg from '../../assets/images/About/DeepanAbout.webp'
 
 /* ============================================================
    CONTENT, Approved Static Savvy Media About Page Content
@@ -248,7 +248,7 @@ export default function About() {
         }
       >
         <div className="hero__visual-side">
-          <img src={aboutHeroImg} alt="About Static Savvy Media" className="hero__image" />
+          <img src={aboutHeroImg} width={1536} height={1024} fetchPriority="high" alt="About Static Savvy Media" className="hero__image" />
         </div>
       </HeroSection>
 
@@ -553,7 +553,7 @@ export default function About() {
           <ScrollReveal>
             <div className="about-founder-card">
               <div className="about-founder-card__image">
-                <img src={deepanAboutImg} alt="Deepan Kanz - Founder & AI Search Specialist" className="about-founder-card__img" />
+                <img src={deepanAboutImg} width={651} height={941} loading="lazy" decoding="async" alt="Deepan Kanz - Founder & AI Search Specialist" className="about-founder-card__img" />
               </div>
               <div className="about-founder-card__info">
                 <h3 className="about-founder-card__name">Deepan Kanz</h3>

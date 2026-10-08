@@ -3,7 +3,7 @@ import { FOOTER_LINKS } from '../../data/navigation.js'
 import { SITE_NAME, SOCIAL_LINKS } from '../../utils/constants.js'
 import { useActiveRoute } from '../../hooks/useActiveRoute.js'
 import { cx } from '../../utils/helpers.js'
-import logoImg from '../../assets/images/logo/SSMLOGO.png'
+import logoImg from '../../assets/images/logo/SSMLOGO.webp'
 
 const COLUMN_ICONS = {
   Services: (
@@ -85,7 +85,7 @@ export default function Footer() {
         <div className="site-footer__grid">
           <div className="site-footer__brand">
             <Link to="/" className="site-footer__logo" aria-label={`${SITE_NAME}, home`}>
-              <img src={logoImg} alt={SITE_NAME} className="site-footer__logo-img" />
+              <img src={logoImg} width={480} height={320} loading="lazy" decoding="async" alt={SITE_NAME} className="site-footer__logo-img" />
             </Link>
 
             <div className="site-footer__socials">

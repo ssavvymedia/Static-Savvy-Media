@@ -13,7 +13,7 @@ import { breadcrumbListSchema } from '../../utils/schema.js'
 import { buildWhatsAppLink } from '../../utils/helpers.js'
 import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, SITE_URL } from '../../utils/constants.js'
 import '../../styles/pages/client2.css'
-import client2HeroImg from '../../assets/images/CaseStudies/02Client.png'
+import client2HeroImg from '../../assets/images/CaseStudies/02Client.webp'
 
 const META_TITLE = 'How [CLIENT/DESCRIPTOR] Got Cited by AI Search, GEO/AEO + SEO Case Study | Static Savvy Media'
 const META_DESC = 'Improved AI search visibility using Static Savvy Media\'s GEO/AEO and SEO strategy. Explore the challenge, methodology, implementation and verified results.'
@@ -143,7 +143,7 @@ export default function Client2() {
         actions={<Button href={whatsappHref} variant="primary" size="lg" target="_blank" rel="noopener noreferrer">Talk to Static Savvy Media</Button>}
       >
         <div className="hero__visual-side">
-          <img src={client2HeroImg} alt="GEO/AEO and SEO Case Study" className="hero__image" />
+          <img src={client2HeroImg} width={1536} height={1024} fetchPriority="high" alt="GEO/AEO and SEO Case Study" className="hero__image" />
         </div>
       </HeroSection>
 

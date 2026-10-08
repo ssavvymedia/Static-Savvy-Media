@@ -21,7 +21,7 @@ import {
 } from '../../utils/constants.js'
 import '../../styles/templates/service-template.css'
 import '../../styles/pages/ai-video-creation.css'
-import aiVideoHeroImg from '../../assets/images/services/08AIVideo.png'
+import aiVideoHeroImg from '../../assets/images/services/08AIVideo.webp'
 
 /* ============================================================
    CONTENT, Approved Static Savvy Media AI Video Creation
@@ -438,7 +438,7 @@ export default function AIVideoCreation() {
         }
       >
         <div className="hero__visual-side">
-          <img src={aiVideoHeroImg} alt="AI Video Creation" className="hero__image" />
+          <img src={aiVideoHeroImg} width={1536} height={1024} fetchPriority="high" alt="AI Video Creation" className="hero__image" />
         </div>
       </HeroSection>
 

@@ -13,7 +13,7 @@ import { breadcrumbListSchema } from '../../utils/schema.js'
 import { buildWhatsAppLink } from '../../utils/helpers.js'
 import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, SITE_URL } from '../../utils/constants.js'
 import '../../styles/pages/case-studies.css'
-import casestudiesMain from '../../assets/images/CaseStudies/casestudiesMain.png'
+import casestudiesMain from '../../assets/images/CaseStudies/casestudiesMain.webp'
 
 const PAGE_TITLE = 'Client Results & Case Studies | Static Savvy Media'
 const PAGE_DESCRIPTION = 'See how Static Savvy Media approaches real digital growth challenges across SEO, Local SEO, GEO/AEO, Google Ads, Social Media and other digital services.'
@@ -109,7 +109,7 @@ export default function CaseStudies() {
         }
       >
         <div className="hero__visual-side">
-          <img src={casestudiesMain} alt="Client Results & Case Studies" className="hero__image" />
+          <img src={casestudiesMain} width={1672} height={941} fetchPriority="high" alt="Client Results & Case Studies" className="hero__image" />
         </div>
       </HeroSection>
 

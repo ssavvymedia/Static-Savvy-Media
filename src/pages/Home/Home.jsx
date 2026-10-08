@@ -6,9 +6,9 @@ import { organizationSchema, webSiteSchema, faqPageSchema } from '../../utils/sc
 import { buildWhatsAppLink } from '../../utils/helpers.js'
 import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, SITE_URL } from '../../utils/constants.js'
 
-import maduraiImage from '../../assets/images/locations/madurai.png'
-import thoothukudiImage from '../../assets/images/locations/thoothukudi.png'
-import malaysiaImage from '../../assets/images/locations/malaysia.png'
+import maduraiImage from '../../assets/images/locations/madurai.webp'
+import thoothukudiImage from '../../assets/images/locations/thoothukudi.webp'
+import malaysiaImage from '../../assets/images/locations/malaysia.webp'
 
 const PAGE_TITLE =
   'Digital Marketing Agency Madurai, SEO, GEO & AI Search | Static Savvy Media'
@@ -190,7 +190,7 @@ const MARKETS = [
     name: (
       <>
         <div className="location-card__image-wrapper">
-          <img src={maduraiImage} alt="Madurai cityscape landmark" />
+          <img src={maduraiImage} width={800} height={800} loading="lazy" decoding="async" alt="Madurai cityscape landmark" />
         </div>
         <span className="location-card__title-text">Madurai, Tamil Nadu</span>
       </>
@@ -204,7 +204,7 @@ const MARKETS = [
     name: (
       <>
         <div className="location-card__image-wrapper">
-          <img src={thoothukudiImage} alt="Thoothukudi harbour coastal scenery" />
+          <img src={thoothukudiImage} width={800} height={800} loading="lazy" decoding="async" alt="Thoothukudi harbour coastal scenery" />
         </div>
         <span className="location-card__title-text">Thoothukudi (Tuticorin), Tamil Nadu</span>
       </>
@@ -218,7 +218,7 @@ const MARKETS = [
     name: (
       <>
         <div className="location-card__image-wrapper">
-          <img src={malaysiaImage} alt="Selangor Malaysia cityscape skyline" />
+          <img src={malaysiaImage} width={800} height={800} loading="lazy" decoding="async" alt="Selangor Malaysia cityscape skyline" />
         </div>
         <span className="location-card__title-text">Rawang & Selangor, Malaysia</span>
       </>

@@ -22,7 +22,7 @@ import {
 } from '../../utils/constants.js'
 import '../../styles/templates/service-template.css'
 import '../../styles/pages/corporate-photography-video.css'
-import corporateHeroImg from '../../assets/images/services/09corporate.png'
+import corporateHeroImg from '../../assets/images/services/09corporate.webp'
 
 /* ============================================================
    CONTENT, Approved Static Savvy Media Corporate Photo & Video
@@ -558,7 +558,7 @@ export default function CorporatePhotographyVideo() {
         }
       >
         <div className="hero__visual-side">
-          <img src={corporateHeroImg} alt="Corporate Photography & Video" className="hero__image" />
+          <img src={corporateHeroImg} width={1536} height={1024} fetchPriority="high" alt="Corporate Photography & Video" className="hero__image" />
         </div>
       </HeroSection>
 

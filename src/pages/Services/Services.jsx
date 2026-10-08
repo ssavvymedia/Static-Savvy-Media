@@ -11,7 +11,7 @@ import { organizationSchema, breadcrumbListSchema } from '../../utils/schema.js'
 import { buildWhatsAppLink } from '../../utils/helpers.js'
 import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, SITE_URL } from '../../utils/constants.js'
 import '../../styles/pages/service.css'
-import servicesHeroImg from '../../assets/images/services/Services.png'
+import servicesHeroImg from '../../assets/images/services/Services.webp'
 
 const PAGE_TITLE =
   'Digital Marketing Services, SEO, GEO/AEO, Ads & More | Static Savvy Media'
@@ -280,7 +280,7 @@ export default function Services() {
       subtitle={INTRO}
       heroVisual={
         <div className="hero__visual-side">
-          <img src={servicesHeroImg} alt="Services" className="hero__image" />
+          <img src={servicesHeroImg} width={1536} height={1024} fetchPriority="high" alt="Services" className="hero__image" />
         </div>
       }
       grid={<CustomServicesGrid title="Our Digital Marketing Services" />}

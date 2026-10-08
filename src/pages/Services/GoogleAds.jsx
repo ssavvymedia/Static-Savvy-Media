@@ -22,7 +22,7 @@ import {
 } from '../../utils/constants.js'
 import '../../styles/templates/service-template.css'
 import '../../styles/pages/google-ads.css'
-import googleAdsHeroImg from '../../assets/images/services/04GoogleAds.png'
+import googleAdsHeroImg from '../../assets/images/services/04GoogleAds.webp'
 
 /* ============================================================
    CONTENT, Approved Static Savvy Media Google Ads Page Content
@@ -263,7 +263,7 @@ export default function GoogleAds() {
         }
       >
         <div className="hero__visual-side">
-          <img src={googleAdsHeroImg} alt="Google Ads Management" className="hero__image" />
+          <img src={googleAdsHeroImg} width={1536} height={1024} fetchPriority="high" alt="Google Ads Management" className="hero__image" />
         </div>
       </HeroSection>
 

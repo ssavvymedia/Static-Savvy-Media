@@ -20,7 +20,7 @@ import {
   SITE_NAME,
 } from '../../utils/constants.js'
 import '../../styles/pages/real-estate-builders.css'
-import realEstateHeroImg from '../../assets/images/Industries/08realestate.png'
+import realEstateHeroImg from '../../assets/images/Industries/08realestate.webp'
 
 /* ============================================================
    CONTENT, Approved Static Savvy Media Real Estate & Builders
@@ -482,6 +482,9 @@ export default function RealEstateBuilders() {
         <div className="hero__visual-side">
           <img
             src={realEstateHeroImg}
+            width={1536}
+            height={1024}
+            fetchPriority="high"
             alt="Real Estate & Builders"
             className="hero__image"
           />

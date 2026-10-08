@@ -15,7 +15,7 @@ import {
   SITE_URL,
 } from '../../utils/constants.js'
 import '../../styles/pages/ai-pricing.css'
-import aiHeroImg from '../../assets/images/Pricing/06AIsevices.png'
+import aiHeroImg from '../../assets/images/Pricing/06AIsevices.webp'
 
 const HERO_SUBTITLE =
   'Prices shown are for guidance. Final pricing depends on project scope. All retainer prices are per month with no minimum contract term. Message us on WhatsApp for a custom quote.'
@@ -162,7 +162,7 @@ export default function AIPricing({ country: propCountry }) {
         }
       >
         <div className="hero__visual-side">
-          <img src={aiHeroImg} alt={`AI Services Pricing ${countryName}`} className="hero__image" />
+          <img src={aiHeroImg} width={1536} height={1024} fetchPriority="high" alt={`AI Services Pricing ${countryName}`} className="hero__image" />
         </div>
       </HeroSection>
 
