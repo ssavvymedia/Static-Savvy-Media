@@ -29,3 +29,11 @@ export function buildWhatsAppLink(number, message = '') {
   const base = `https://wa.me/${number.replace(/[^0-9]/g, '')}`
   return message ? `${base}?text=${encodeURIComponent(message)}` : base
 }
+
+/**
+ * Clean a CMS slug for use in a URL path segment: trims whitespace and leading/trailing
+ * slashes (one Sanity post was saved as "/seo-audit-services-madurai").
+ */
+export function cleanSlug(value) {
+  return String(value || '').trim().replace(/^\/+|\/+$/g, '')
+}

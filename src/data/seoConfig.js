@@ -1,6 +1,8 @@
 import { SITE_NAME, SITE_URL } from '../utils/constants.js'
 
-const BASE_URL = (typeof process !== 'undefined' && process.env?.VITE_SITE_URL) || SITE_URL || 'https://staticsavvymedia.com'
+// Single source of truth for the site origin (see utils/constants.js). Canonicals below are
+// normalised to the www + trailing-slash form by setSeo(), whatever form is written here.
+const BASE_URL = SITE_URL
 
 /**
  * Centralized SEO Configuration for Static Savvy Media.
@@ -1530,12 +1532,14 @@ export const seoConfig = {
 }
 
 /**
- * Helper to get SEO config for any route path.
+ * Helper to get SEO config for any route path. Returns null when the path has no entry.
  */
 export function getSeoForPath(pathname) {
   let normalizedPath = pathname || '/'
   if (normalizedPath.length > 1 && normalizedPath.endsWith('/')) {
     normalizedPath = normalizedPath.slice(0, -1)
   }
-  return seoConfig[normalizedPath] || seoConfig['/']
+  // No homepage fallback: unknown paths (NotFound) and Sanity blog posts set their own SEO.
+  // Falling back to '/' gave those pages the homepage title and canonical.
+  return seoConfig[normalizedPath] || null
 }

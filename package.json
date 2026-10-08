@@ -8,7 +8,9 @@
     "dev:netlify": "netlify dev",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "seo:generate": "node scripts/seo/generate-seo-files.mjs",
+    "seo:check": "node scripts/seo/generate-seo-files.mjs --check"
   },
   "dependencies": {
     "@portabletext/react": "^8.0.1",

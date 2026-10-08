@@ -1,0 +1,455 @@
+legacy_path,seen_as,hosts,gsc_clicks_90d,gsc_impressions_90d,action,target,confidence,reason
+/,/,www.ssm,29,1570,live,,,live route today (no redirect needed)
+/about,/about,www.ssm,3,809,live,,,live route today (no redirect needed)
+/post/best-digital-marketing-agency-in-malaysia-for-small-businesses-a-buyer-s-checklist,/post/best-digital-marketing-agency-in-malaysia-for-small-businesses-a-buyer-s-checklist,www.ssm,2,703,redirect,/locations/malaysia/,medium,Malaysia agency buyer guide -> Malaysia location page
+/post/best-digital-marketing-company-in-madurai,/post/best-digital-marketing-company-in-madurai,www.ssm,0,455,redirect,/locations/madurai/,medium,Madurai agency post -> Madurai location page
+/on-pageseoservicesinmadurai,/on-pageseoservicesinmadurai,www.ssm,0,428,redirect,/services/seo/madurai/,high,old SEO service page -> SEO Madurai
+/technicalseoagencyinmadurai,/technicalseoagencyinmadurai,www (GSC only),0,394,redirect,/services/seo/madurai/,high,old SEO service page -> SEO Madurai
+/local-seo-services-madurai,/local-seo-services-madurai,www (GSC only),0,328,redirect,/services/local-seo/madurai/,high,old local SEO / GBP page -> Local SEO Madurai
+/website-development-madurai,/website-development-madurai,www (GSC only),1,323,redirect,/services/website-design-development/,high,old website / e-commerce / landing page service -> Website Design & Development
+/ecommerceseoservicesinmadurai,/ecommerceseoservicesinmadurai,www.ssm,0,321,redirect,/services/seo/madurai/,medium,SEO sub-topic -> SEO Madurai (no dedicated page)
+/seobloggingservicesmadurai,/seobloggingservicesmadurai,www.ssm,0,243,redirect,/services/seo/madurai/,medium,SEO sub-topic -> SEO Madurai (no dedicated page)
+/localseoservicesinmadurai,/localseoservicesinmadurai,www.ssm,1,228,redirect,/services/local-seo/madurai/,high,old local SEO / GBP page -> Local SEO Madurai
+/websitedevelopmentcompanyinmadurai,/websitedevelopmentcompanyinmadurai,www (GSC only),0,204,redirect,/services/website-design-development/,high,old website / e-commerce / landing page service -> Website Design & Development
+/blogs/digital-marketing-strategies-for-small-businesses-in-madurai,/blogs/digital-marketing-strategies-for-small-businesses-in-madurai,www.ssm,0,193,redirect,/locations/madurai/,medium,Madurai digital marketing guide/post -> Madurai location page
+/youtubemarketingservicesinmadurai,/youtubemarketingservicesinmadurai,www (GSC only),1,179,redirect,/services/social-media-marketing/,high,old social / Meta ads / LinkedIn / YouTube marketing page -> Social Media Marketing service
+/videomarketingservicesinmadurai,/videomarketingservicesinmadurai,www (GSC only),0,159,redirect,/services/corporate-photography-video/,medium,video marketing page -> Corporate Photography & Video
+/aiseoservicesinmadurai,/aiseoservicesinmadurai,www.ssm,1,155,redirect,/services/geo-aeo-ai-search/madurai/,high,old AI SEO / GEO / AEO page -> GEO & AEO Madurai
+/u1designservicesinmadurai,/u1designservicesinmadurai,www (GSC only),0,148,redirect,/services/website-design-development/,medium,UI/UX or e-commerce solution page -> Website Design & Development (no dedicated page)
+/digitalmarketingagencyinmadurai,/digitalmarketingagencyinmadurai,www.ssm,0,122,redirect,/locations/madurai/,high,"old ""digital marketing agency Madurai"" page -> Madurai location page"
+/linkedinmarketingservicesinmadurai,/linkedinmarketingservicesinmadurai,www.ssm,2,117,redirect,/services/social-media-marketing/,high,old social / Meta ads / LinkedIn / YouTube marketing page -> Social Media Marketing service
+/blogs/local-seo-services-in-madurai,/blogs/local-seo-services-in-madurai,www.ssm,0,101,redirect,/services/local-seo/madurai/,high,old local SEO / GBP page -> Local SEO Madurai
+/post/top-10-best-affiliate-programs-to-make-money-online-in-2026,/post/top-10-best-affiliate-programs-to-make-money-online-in-2026,www.ssm,3,99,404,,,off-topic / not offered / theme demo or shop page: leave 404
+/post/seo-for-jewellery-shops-to-boost-online-visibility-and-sales,/post/seo-for-jewellery-shops-to-boost-online-visibility-and-sales,www.ssm,0,93,redirect,/industries/retail-ecommerce/,medium,jewellery shop SEO -> Retail & E-commerce industry page
+/seo-blogging-services-madurai,/seo-blogging-services-madurai,www (GSC only),0,85,redirect,/services/seo/madurai/,medium,SEO sub-topic -> SEO Madurai (no dedicated page)
+/contact,/contact,www.ssm,0,82,live,,,live route today (no redirect needed)
+/blogs/complete-guide-to-digital-marketing-in-madurai,/blogs/complete-guide-to-digital-marketing-in-madurai,www.ssm,0,71,redirect,/locations/madurai/,medium,Madurai digital marketing guide/post -> Madurai location page
+/facebook-marketing-services-in-madurai,/facebook-marketing-services-in-madurai,www.ssm,0,62,redirect,/services/social-media-marketing/,high,old social / Meta ads / LinkedIn / YouTube marketing page -> Social Media Marketing service
+/googleadsagencyinmadurai,/googleadsagencyinmadurai,www.ssm,1,62,redirect,/services/google-ads/,high,old Google Ads / PPC page -> Google Ads service (YouTube ads are run in Google Ads)
+/post/best-digital-marketing-agency-in-madurai-how-to-choose-the-right-one-for-your-business,/post/best-digital-marketing-agency-in-madurai-how-to-choose-the-right-one-for-your-business,www.ssm,0,61,redirect,/blog/how-to-choose-the-right-digital-marketing-agency-in-madurai/,high,same topic: choosing a Madurai agency
+/ai-seo-services-madurai,/ai-seo-services-madurai,www (GSC only),0,59,redirect,/services/geo-aeo-ai-search/madurai/,high,old AI SEO / GEO / AEO page -> GEO & AEO Madurai
+/generativeengineoptimizationagencyinmadurai,/generativeengineoptimizationagencyinmadurai,www.ssm,1,53,redirect,/services/geo-aeo-ai-search/madurai/,high,old AI SEO / GEO / AEO page -> GEO & AEO Madurai
+/instagrammarketingagencyinmadurai,/instagrammarketingagencyinmadurai,www.ssm,0,53,redirect,/services/social-media-marketing/,high,old social / Meta ads / LinkedIn / YouTube marketing page -> Social Media Marketing service
+/post/craft-a-winning-sme-digital-growth-plan-a-practical-sme-digital-strategies-guide,/post/craft-a-winning-sme-digital-growth-plan-a-practical-sme-digital-strategies-guide,www.ssm,0,53,redirect,/services/,low,generic SME growth plan post (no equivalent) -> Services hub
+/meta-ads-agency-madurai,/meta-ads-agency-madurai,www (GSC only),0,50,redirect,/services/social-media-marketing/,high,old social / Meta ads / LinkedIn / YouTube marketing page -> Social Media Marketing service
+/aimarketingautomationservicesinmadurai,/aimarketingautomationservicesinmadurai,www.ssm,1,45,redirect,/services/ai-business-automation/,high,AI / WhatsApp automation page -> AI Business Automation (covers WhatsApp automation)
+/ecommercewebsitedevelopmentinmadurai,/ecommercewebsitedevelopmentinmadurai,www.ssm,0,45,redirect,/services/website-design-development/,high,old website / e-commerce / landing page service -> Website Design & Development
+/blog,/blog,www.ssm,0,43,live,,,live route today (no redirect needed)
+/digital-marketing-agency-thoothukudi,/digital-marketing-agency-thoothukudi,www.ssm,0,43,redirect,/locations/thoothukudi/,high,old Thoothukudi page -> Thoothukudi location page
+/whatsapp-automation-madurai,/whatsapp-automation-madurai,www (GSC only),0,43,redirect,/services/ai-business-automation/,high,AI / WhatsApp automation page -> AI Business Automation (covers WhatsApp automation)
+/answerengineoptimizationserviceinmadurai,/answerengineoptimizationserviceinmadurai,www.ssm,0,37,redirect,/services/geo-aeo-ai-search/madurai/,high,old AI SEO / GEO / AEO page -> GEO & AEO Madurai
+/metaadsagencyinmadurai,/metaadsagencyinmadurai,www.ssm,0,37,redirect,/services/social-media-marketing/,high,old social / Meta ads / LinkedIn / YouTube marketing page -> Social Media Marketing service
+/post/social-media-marketing-for-jewellery-shops-in-madurai-a-practical-guide,/post/social-media-marketing-for-jewellery-shops-in-madurai-a-practical-guide,www.ssm,0,36,redirect,/services/social-media-marketing/,medium,social media post -> Social Media Marketing service
+/linkedin-marketing-madurai,/linkedin-marketing-madurai,www (GSC only),1,35,redirect,/services/social-media-marketing/,high,old social / Meta ads / LinkedIn / YouTube marketing page -> Social Media Marketing service
+/post/unlocking-growth-with-static-savvy-media-solutions,/post/unlocking-growth-with-static-savvy-media-solutions,www (GSC only),0,31,redirect,/about/,medium,brand post about Static Savvy Media -> About
+/aeo-services-madurai,/aeo-services-madurai,www (GSC only),3,30,redirect,/services/geo-aeo-ai-search/madurai/,high,old AI SEO / GEO / AEO page -> GEO & AEO Madurai
+/google-ads-agency-madurai,/google-ads-agency-madurai,www (GSC only),0,30,redirect,/services/google-ads/,high,old Google Ads / PPC page -> Google Ads service (YouTube ads are run in Google Ads)
+/youtube-ads-services-in-madurai,/youtube-ads-services-in-madurai,www (GSC only),0,30,redirect,/services/google-ads/,high,old Google Ads / PPC page -> Google Ads service (YouTube ads are run in Google Ads)
+/ecommerce-website-development-madurai,/ecommerce-website-development-madurai,www (GSC only),0,29,redirect,/services/website-design-development/,high,old website / e-commerce / landing page service -> Website Design & Development
+/industries-we-serve,/industries-we-serve,www.ssm,0,29,redirect,/industries/,high,old industries page -> Industries hub
+/uxresearch,/uxresearch,www (GSC only),0,29,redirect,/services/website-design-development/,medium,UI/UX or e-commerce solution page -> Website Design & Development (no dedicated page)
+/geo-services-madurai,/geo-services-madurai,www (GSC only),2,26,redirect,/services/geo-aeo-ai-search/madurai/,high,old AI SEO / GEO / AEO page -> GEO & AEO Madurai
+/instagram-marketing-madurai,/instagram-marketing-madurai,www (GSC only),0,25,redirect,/services/social-media-marketing/,high,old social / Meta ads / LinkedIn / YouTube marketing page -> Social Media Marketing service
+/brandingservicesinmadurai,/brandingservicesinmadurai,www.ssm,0,24,redirect,/services/product-photography-creative-design/,high,"branding page -> Creative Design (brand identity, logo)"
+/ai-video-production-madurai,/ai-video-production-madurai,www (GSC only),1,22,redirect,/services/ai-video-creation/,high,AI video page -> AI Video Creation
+/cmswebsitedevelopmentcompanyinmadurai,/cmswebsitedevelopmentcompanyinmadurai,www.ssm,0,21,redirect,/services/website-design-development/,high,old website / e-commerce / landing page service -> Website Design & Development
+/digital-marketing-agency-malaysia,/digital-marketing-agency-malaysia,www.ssm,0,20,redirect,/locations/malaysia/,high,old Malaysia page -> Malaysia location page
+/facebookmarketingservicesinmadurai,/facebookmarketingservicesinmadurai,www.ssm,0,20,redirect,/services/social-media-marketing/,high,old social / Meta ads / LinkedIn / YouTube marketing page -> Social Media Marketing service
+/blogs,/blogs,www.ssm,0,18,redirect,/blog/,high,old blog index / pagination -> Blog
+/cms-website-development-madurai,/cms-website-development-madurai,www (GSC only),0,18,redirect,/services/website-design-development/,high,old website / e-commerce / landing page service -> Website Design & Development
+/post/local-seo-pricing-in-madurai-what-should-you-actually-pay-in-2026,/post/local-seo-pricing-in-madurai-what-should-you-actually-pay-in-2026,www.ssm,0,15,redirect,/pricing/india/local-seo/,high,local SEO pricing -> Local SEO pricing (India)
+/post/practical-ways-to-use-ai-for-sme-development,/post/practical-ways-to-use-ai-for-sme-development,www.ssm,0,15,redirect,/services/ai-business-automation/,medium,AI for SMEs / AI lead generation post -> AI Business Automation
+/post/blog-hostinger-best-web-hosting-company,/post/blog-hostinger-best-web-hosting-company,www (GSC only),0,14,404,,,off-topic / not offered / theme demo or shop page: leave 404
+/post/digital-marketing-for-madurai-textile-businesses-a-practical-guide,/post/digital-marketing-for-madurai-textile-businesses-a-practical-guide,www.ssm,0,12,redirect,/industries/textiles-madurai/,high,textile marketing -> Textiles Madurai industry page
+/post/how-a-digital-marketing-agency-in-madurai-can-transform-your-business-growth,/post/how-a-digital-marketing-agency-in-madurai-can-transform-your-business-growth,www (GSC only),0,10,redirect,/locations/madurai/,medium,Madurai agency post -> Madurai location page
+/post/how-can-google-business-profile-optimization-improve-local-rankings,/post/how-can-google-business-profile-optimization-improve-local-rankings,www (GSC only),0,10,redirect,/services/local-seo/madurai/,medium,local SEO / Google Maps / GBP post -> Local SEO Madurai
+/post/transforming-sme-growth-with-ai-applications-for-sme-growth,/post/transforming-sme-growth-with-ai-applications-for-sme-growth,www (GSC only),0,10,redirect,/services/ai-business-automation/,medium,AI for SMEs / AI lead generation post -> AI Business Automation
+/post/ai-usage-in-sme-growth-effective-ways-to-use-ai-for-sme-growth,/post/ai-usage-in-sme-growth-effective-ways-to-use-ai-for-sme-growth,www.ssm,0,9,redirect,/services/ai-business-automation/,medium,AI for SMEs / AI lead generation post -> AI Business Automation
+/post/where-to-find-affordable-seo-services-in-madurai,/post/where-to-find-affordable-seo-services-in-madurai,www.ssm,0,9,redirect,/services/seo/madurai/,high,"commercial ""SEO services in Madurai"" intent -> SEO Madurai"
+/post/where-to-find-seo-social-media-marketing-google-my-business-google-ads-and-content-creation-serv,/post/where-to-find-seo-social-media-marketing-google-my-business-google-ads-and-content-creation-serv,www.ssm,0,9,redirect,/services/,medium,multi-service intent -> Services hub
+/blog/page/3,/blog/page/3,www (GSC only),0,8,redirect,/blog/,high,old blog index / pagination -> Blog
+/post/digital-growth-strategies-for-smes-effective-plans-to-accelerate-your-business,/post/digital-growth-strategies-for-smes-effective-plans-to-accelerate-your-business,www (GSC only),0,8,redirect,/services/,low,generic SME growth plan post (no equivalent) -> Services hub
+/post/how-to-get-your-madurai-business-to-show-up-on-google-in-2026,/post/how-to-get-your-madurai-business-to-show-up-on-google-in-2026,www.ssm,0,8,redirect,/services/local-seo/madurai/,medium,local SEO / Google Maps / GBP post -> Local SEO Madurai
+/post/facebook-marketing-for-malaysian-small-businesses-what-still-works-in-2026,/post/facebook-marketing-for-malaysian-small-businesses-what-still-works-in-2026,www.ssm,0,7,redirect,/services/social-media-marketing/,medium,social media post -> Social Media Marketing service
+/post/how-local-seo-and-gmb-optimization-can-boost-your-business-in-madurai,/post/how-local-seo-and-gmb-optimization-can-boost-your-business-in-madurai,www.ssm,1,7,redirect,/services/local-seo/madurai/,medium,local SEO / Google Maps / GBP post -> Local SEO Madurai
+/post/choosing-the-best-seo-agency-in-malaysia-for-your-business-growth,/post/choosing-the-best-seo-agency-in-malaysia-for-your-business-growth,www (GSC only),0,6,redirect,/services/seo/malaysia/,high,SEO agency Malaysia -> SEO Malaysia
+/post/how-local-seo-helps-madurai-businesses-rank-on-google-maps-and-get-more-customers,/post/how-local-seo-helps-madurai-businesses-rank-on-google-maps-and-get-more-customers,www.ssm,0,6,redirect,/services/local-seo/madurai/,medium,local SEO / Google Maps / GBP post -> Local SEO Madurai
+/post/seo-agency-in-malaysia-why-selangor-businesses-need-local-search-optimization,/post/seo-agency-in-malaysia-why-selangor-businesses-need-local-search-optimization,www.ssm,0,6,redirect,/services/seo/malaysia/,high,SEO agency Malaysia -> SEO Malaysia
+/post/using-ai-for-sme-development-amplify-growth-with-smart-technology,/post/using-ai-for-sme-development-amplify-growth-with-smart-technology,www.ssm,0,6,redirect,/services/ai-business-automation/,medium,AI for SMEs / AI lead generation post -> AI Business Automation
+/post/what-are-ai-automation-tools-for-marketing,/post/what-are-ai-automation-tools-for-marketing,www.ssm,0,6,redirect,/services/ai-business-automation/,medium,AI for SMEs / AI lead generation post -> AI Business Automation
+/conversiondesign,/conversiondesign,www.ssm,0,5,redirect,/services/website-design-development/,medium,UI/UX or e-commerce solution page -> Website Design & Development (no dedicated page)
+/post/best-seo-tools-for-sme-automation-unlocking-growth-with-smart-technology,/post/best-seo-tools-for-sme-automation-unlocking-growth-with-smart-technology,www (GSC only),0,5,redirect,/services/seo/,medium,SEO tools / SEO guide post -> SEO service
+/post/develop-a-winning-digital-growth-plan-for-smes-digital-growth-strategies-for-smes,/post/develop-a-winning-digital-growth-plan-for-smes-digital-growth-strategies-for-smes,www.ssm,0,5,redirect,/services/,low,generic SME growth plan post (no equivalent) -> Services hub
+/post/google-my-business-optimization-guide-for-madurai-shop-owners,/post/google-my-business-optimization-guide-for-madurai-shop-owners,www.ssm,0,5,redirect,/services/local-seo/madurai/,medium,local SEO / Google Maps / GBP post -> Local SEO Madurai
+/post/how-to-automate-marketing-with-ai-and-find-digital-marketing-support-in-tamil-nadu,/post/how-to-automate-marketing-with-ai-and-find-digital-marketing-support-in-tamil-nadu,www.ssm,0,5,redirect,/services/ai-business-automation/,medium,AI for SMEs / AI lead generation post -> AI Business Automation
+/ui-ux-design-madurai,/ui-ux-design-madurai,www (GSC only),1,5,redirect,/services/website-design-development/,medium,UI/UX or e-commerce solution page -> Website Design & Development (no dedicated page)
+/websiteredesignservicesinmadurai,/websiteredesignservicesinmadurai,www (GSC only),0,5,redirect,/services/website-design-development/,high,old website / e-commerce / landing page service -> Website Design & Development
+/blog/page/2,/blog/page/2,www (GSC only),0,4,redirect,/blog/,high,old blog index / pagination -> Blog
+/landing-page-design-madurai,/landing-page-design-madurai,www (GSC only),0,4,redirect,/services/website-design-development/,high,old website / e-commerce / landing page service -> Website Design & Development
+/post/using-ai-for-sme-growth-unlocking-new-opportunities-for-your-business,/post/using-ai-for-sme-growth-unlocking-new-opportunities-for-your-business,www (GSC only),0,4,redirect,/services/ai-business-automation/,medium,AI for SMEs / AI lead generation post -> AI Business Automation
+/post/how-ai-powered-lead-generation-transforms-growth-for-smes,/post/how-ai-powered-lead-generation-transforms-growth-for-smes,www.ssm,0,3,redirect,/services/ai-business-automation/,medium,AI for SMEs / AI lead generation post -> AI Business Automation
+/post/seo-automation-tools-for-smes-in-india-boost-your-digital-presence,/post/seo-automation-tools-for-smes-in-india-boost-your-digital-presence,www.ssm,0,3,redirect,/services/seo/,medium,SEO tools / SEO guide post -> SEO service
+/website-redesign-services-madurai,/website-redesign-services-madurai,www (GSC only),0,3,redirect,/services/website-design-development/,high,old website / e-commerce / landing page service -> Website Design & Development
+/blank-2-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1,/blank-2-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1,www.ssm,0,2,404,,,off-topic / not offered / theme demo or shop page: leave 404
+/landingpagedesigninmadurai,/landingpagedesigninmadurai,www.ssm,0,2,redirect,/services/website-design-development/,high,old website / e-commerce / landing page service -> Website Design & Development
+/post/how-local-seo-helps-madurai-businesses-rank-on-google-maps-get-more-customers,/post/how-local-seo-helps-madurai-businesses-rank-on-google-maps-get-more-customers,www.ssm,0,2,redirect,/services/local-seo/madurai/,medium,local SEO / Google Maps / GBP post -> Local SEO Madurai
+/post/static-media-marketing-insights-unlocking-growth-for-ambitious-smes,/post/static-media-marketing-insights-unlocking-growth-for-ambitious-smes,www.ssm,0,2,redirect,/about/,medium,brand post about Static Savvy Media -> About
+/post/top-e-commerce-website-services-india-unlocking-growth-for-your-business-1,/post/top-e-commerce-website-services-india-unlocking-growth-for-your-business-1,www (GSC only),0,2,redirect,/services/website-design-development/,medium,e-commerce website post -> Website Design & Development
+/post/where-can-i-find-seo-services-in-madurai,/post/where-can-i-find-seo-services-in-madurai,www.ssm,0,2,redirect,/services/seo/madurai/,high,"commercial ""SEO services in Madurai"" intent -> SEO Madurai"
+/post/why-most-madurai-business-websites-don-t-rank-on-google-and-how-to-fix-it,/post/why-most-madurai-business-websites-don-t-rank-on-google-and-how-to-fix-it,www.ssm,0,2,redirect,/services/seo/madurai/,medium,Madurai SEO post -> SEO Madurai
+/post/why-most-madurai-businesses-are-invisible-online-and-how-to-fix-it,/post/why-most-madurai-businesses-are-invisible-online-and-how-to-fix-it,www.ssm,0,2,redirect,/services/local-seo/madurai/,medium,local SEO / Google Maps / GBP post -> Local SEO Madurai
+/case-studies,/case-studies/,ssm,0,1,live,,,live route today (no redirect needed)
+/industries,/industries/,www (GSC only),0,1,live,,,live route today (no redirect needed)
+/locations,/locations/,www (GSC only),0,1,live,,,live route today (no redirect needed)
+/post/ai-tools-for-lead-generation-unlocking-growth-for-smes,/post/ai-tools-for-lead-generation-unlocking-growth-for-smes,www (GSC only),0,1,redirect,/services/ai-business-automation/,medium,AI for SMEs / AI lead generation post -> AI Business Automation
+/post/how-madurai-restaurants-can-get-more-customers-using-google-maps-and-local-seo,/post/how-madurai-restaurants-can-get-more-customers-using-google-maps-and-local-seo,www.ssm,0,1,redirect,/services/local-seo/madurai/,medium,local SEO / Google Maps / GBP post -> Local SEO Madurai
+/post/lead-generation-strategies-that-work-for-ambitious-smes-in-madurai,/post/lead-generation-strategies-that-work-for-ambitious-smes-in-madurai,www.ssm,0,1,redirect,/services/,low,generic SME growth plan post (no equivalent) -> Services hub
+/post/mastering-digital-growth-plans-for-smes-proven-digital-strategies-for-smes-success,/post/mastering-digital-growth-plans-for-smes-proven-digital-strategies-for-smes-success,www (GSC only),0,1,redirect,/services/,low,generic SME growth plan post (no equivalent) -> Services hub
+/post/static-media-strategies-for-smes-understanding-static-savvy-media-for-smes,/post/static-media-strategies-for-smes-understanding-static-savvy-media-for-smes,www.ssm,0,1,redirect,/about/,medium,brand post about Static Savvy Media -> About
+/post/who-offers-integrated-digital-marketing-solutions-in-tamil-nadu,/post/who-offers-integrated-digital-marketing-solutions-in-tamil-nadu,www.ssm,0,1,redirect,/services/,medium,multi-service intent -> Services hub
+/services,/services/,ssm,0,1,live,,,live route today (no redirect needed)
+/10-best-ai-agent-tools-for-digital-marketing-in-2025,/10-best-ai-agent-tools-for-digital-marketing-in-2025/,ssm,0,0,redirect,/services/ai-business-automation/,low,AI tools post -> AI Business Automation
+/2025-paid-ad-trends-madurai,/2025-paid-ad-trends-madurai/,ssm,0,0,redirect,/services/google-ads/,medium,paid ads blog post -> Google Ads service
+/2025-seo-trends-madurai-companies-cant-ignore,/2025-seo-trends-madurai-companies-cant-ignore/,ssm,0,0,redirect,/services/seo/madurai/,medium,SEO sub-topic -> SEO Madurai (no dedicated page)
+/about-us,/about-us/,ssm,0,0,redirect,/about/,high,old About page
+/ai-content-optimization-eeat-framework-2025,/ai-content-optimization-eeat-framework-2025/,ssm,0,0,redirect,/blog/how-to-rank-in-ai-search/,medium,AI search optimisation post -> current AI search post
+/ai-digital-marketing-madurai-top-7-ways,/ai-digital-marketing-madurai-top-7-ways/,ssm,0,0,redirect,/services/ai-business-automation/,low,AI tools post -> AI Business Automation
+/ai-seo-in-2025-complete-guide-to-optimize-for-artificial-intelligence-search,/ai-seo-in-2025-complete-guide-to-optimize-for-artificial-intelligence-search/,ssm,0,0,redirect,/blog/how-to-rank-in-ai-search/,medium,AI search optimisation post -> current AI search post
+/ai-tools-every-madurai-entrepreneur-should-know,/ai-tools-every-madurai-entrepreneur-should-know/,ssm,0,0,redirect,/services/ai-business-automation/,low,AI tools post -> AI Business Automation
+/best-black-friday-hosting-deals-2025-top-global-offers-for-2025-2026,/best-black-friday-hosting-deals-2025-top-global-offers-for-2025-2026/,ssm,0,0,404,,,off-topic / not offered / theme demo or shop page: leave 404
+/best-practices-for-social-media-marketing-in-madurai-2025,/best-practices-for-social-media-marketing-in-madurai-2025/,ssm,0,0,redirect,/services/social-media-marketing/,medium,social media blog post -> Social Media Marketing service
+/branding-and-identity,/branding-and-identity/,ssm,0,0,redirect,/services/product-photography-creative-design/,high,"branding page -> Creative Design (brand identity, logo)"
+/branding-service-in-madurai,/branding-service-in-madurai,www.ssm,0,0,redirect,/services/product-photography-creative-design/,high,"branding page -> Creative Design (brand identity, logo)"
+/business,/business/,ssm,0,0,404,,,off-topic / not offered / theme demo or shop page: leave 404
+/business/page/2,/business/page/2/,ssm,0,0,404,,,off-topic / not offered / theme demo or shop page: leave 404
+/business/page/3,/business/page/3/,ssm,0,0,404,,,off-topic / not offered / theme demo or shop page: leave 404
+/cart-page,/cart-page,www.ssm,0,0,404,,,off-topic / not offered / theme demo or shop page: leave 404
+/case-study-how-static-savvy-media-boosted-sales-for-a-madurai-retailer,/case-study-how-static-savvy-media-boosted-sales-for-a-madurai-retailer/,ssm,0,0,redirect,/case-studies/,medium,old case study / portfolio -> Case Studies hub
+/category/all-products,/category/all-products,www.ssm,0,0,404,,,off-topic / not offered / theme demo or shop page: leave 404
+/challenge-thanks,/challenge-thanks,www.ssm,0,0,404,,,off-topic / not offered / theme demo or shop page: leave 404
+/challenges,/challenges,www.ssm,0,0,404,,,off-topic / not offered / theme demo or shop page: leave 404
+/chatgpt-seo-prompts-2025,/chatgpt-seo-prompts-2025/,ssm,0,0,redirect,/blog/how-to-rank-in-ai-search/,low,ChatGPT/SEO post -> AI search post
+/cloud-solution,/cloud-solution/,ssm,0,0,404,,,off-topic / not offered / theme demo or shop page: leave 404
+/contact-us,/contact-us/,ssm,0,0,redirect,/contact/,high,old Contact page
+/contact.php,/contact.php,ssm,0,0,redirect,/contact/,high,old Contact page
+/content-marketing,/content-marketing/,ssm,0,0,redirect,/services/seo/,low,content marketing (no service page) -> SEO service (covers content)
+/content-marketing-service-in-madurai,/content-marketing-service-in-madurai,www.ssm,0,0,redirect,/services/seo/,low,content marketing (no service page) -> SEO service (covers content)
+/cybersecurity,/cybersecurity/,ssm,0,0,404,,,off-topic / not offered / theme demo or shop page: leave 404
+/digital-marketing,/digital-marketing/,ssm,0,0,redirect,/services/,medium,old generic services page -> Services hub
+/digital-marketing-is-not-a-luxury-anymore-how-madurai-businesses-are-losing-customers-without-it,/digital-marketing-is-not-a-luxury-anymore-how-madurai-businesses-are-losing-customers-without-it/,ssm,0,0,redirect,/locations/madurai/,medium,Madurai digital marketing guide/post -> Madurai location page
+/digital-marketing-madurai-2025,/digital-marketing-madurai-2025/,ssm,0,0,redirect,/locations/madurai/,medium,Madurai digital marketing guide/post -> Madurai location page
+/digital-marketing-madurai-local-businesses-2025-guide,/digital-marketing-madurai-local-businesses-2025-guide/,ssm,0,0,redirect,/locations/madurai/,medium,Madurai digital marketing guide/post -> Madurai location page
+/digital-marketing-service-in-madurai,/digital-marketing-service-in-madurai,www.ssm,0,0,redirect,/locations/madurai/,high,"old ""digital marketing agency Madurai"" page -> Madurai location page"
+/digital-marketing-strategies-for-dental-clinics-in-2025,/digital-marketing-strategies-for-dental-clinics-in-2025/,ssm,0,0,redirect,/industries/healthcare-clinics/,medium,dental clinic marketing post -> Healthcare & Clinics industry page
+/digitalmarketingagencythoothukudi,/digitalmarketingagencythoothukudi,www.ssm,0,0,redirect,/locations/thoothukudi/,high,old Thoothukudi page -> Thoothukudi location page
+/digitalmarketingservice,/digitalmarketingservice,www.ssm,0,0,redirect,/services/,medium,old generic services page -> Services hub
+/discover-your-digital-mastery-course-in-madurai,/discover-your-digital-mastery-course-in-madurai,www.ssm,0,0,404,,,off-topic / not offered / theme demo or shop page: leave 404
+/e-commerce-seo-madurai,/e-commerce-seo-madurai/,ssm,0,0,redirect,/services/seo/madurai/,medium,SEO sub-topic -> SEO Madurai (no dedicated page)
+/e-commerce-solutions,/e-commerce-solutions/,ssm,0,0,redirect,/services/website-design-development/,medium,UI/UX or e-commerce solution page -> Website Design & Development (no dedicated page)
+/ecommerce-solutions,/ecommerce-solutions,www.ssm,0,0,redirect,/services/website-design-development/,medium,UI/UX or e-commerce solution page -> Website Design & Development (no dedicated page)
+/empowering-your-digital-presence-content-marketing,/empowering-your-digital-presence-content-marketing/,ssm,0,0,redirect,/services/seo/,low,content marketing (no service page) -> SEO service (covers content)
+/experience-next-level-growth-with-the-best-branding-company-in-madurai-elevate-your-identity-in-2025,/experience-next-level-growth-with-the-best-branding-company-in-madurai-elevate-your-identity-in-2025/,ssm,0,0,redirect,/services/product-photography-creative-design/,medium,branding blog post -> Creative Design
+/faq,/faq/,ssm,0,0,live,,,live route today (no redirect needed)
+/generative-engine-optimization-ai-seo,/generative-engine-optimization-ai-seo/,ssm,0,0,redirect,/blog/what-is-generative-engine-optimization/,high,old GEO explainer post -> current GEO explainer post
+/generative-engine-optimization-geo-changing-seo-2025,/generative-engine-optimization-geo-changing-seo-2025/,ssm,0,0,redirect,/blog/what-is-generative-engine-optimization/,high,old GEO explainer post -> current GEO explainer post
+/geo-generative-engine-optimization-the-must-know-seo-revolution-for-2025,/geo-generative-engine-optimization-the-must-know-seo-revolution-for-2025/,ssm,0,0,redirect,/blog/what-is-generative-engine-optimization/,high,old GEO explainer post -> current GEO explainer post
+/geo-the-complete-guide-to-generative-engine-optimization-in-2025,/geo-the-complete-guide-to-generative-engine-optimization-in-2025/,ssm,0,0,redirect,/blog/what-is-generative-engine-optimization/,high,old GEO explainer post -> current GEO explainer post
+/google-ads-management-madurai,/google-ads-management-madurai/,ssm,0,0,redirect,/services/google-ads/,high,old Google Ads / PPC page -> Google Ads service (YouTube ads are run in Google Ads)
+/google-my-business-optimization-madurai,/google-my-business-optimization-madurai/,ssm,0,0,redirect,/services/local-seo/madurai/,high,old local SEO / GBP page -> Local SEO Madurai
+/hi,/hi,www.ssm,0,0,redirect,/,medium,old Tamil/Hindi homepage (Wix language versions) -> homepage
+/hi/about,/hi/about,www.ssm,0,0,redirect,/about/,high,old /hi language version -> live page
+/hi/blog,/hi/blog,www.ssm,0,0,redirect,/blog/,high,old /hi language version -> live page
+/hi/branding-service-in-madurai,/hi/branding-service-in-madurai,www.ssm,0,0,redirect,/services/product-photography-creative-design/,high,"old /hi language version; branding page -> Creative Design (brand identity, logo)"
+/hi/cart-page,/hi/cart-page,www.ssm,0,0,404,,,old /hi language version; off-topic / not offered / theme demo or shop page: leave 404
+/hi/category/all-products,/hi/category/all-products,www.ssm,0,0,404,,,old /hi language version; off-topic / not offered / theme demo or shop page: leave 404
+/hi/challenge-thanks,/hi/challenge-thanks,www.ssm,0,0,404,,,old /hi language version; off-topic / not offered / theme demo or shop page: leave 404
+/hi/challenges,/hi/challenges,www.ssm,0,0,404,,,old /hi language version; off-topic / not offered / theme demo or shop page: leave 404
+/hi/contact-us,/hi/contact-us,www.ssm,0,0,redirect,/contact/,high,old /hi language version; old Contact page
+/hi/content-marketing-service-in-madurai,/hi/content-marketing-service-in-madurai,www.ssm,0,0,redirect,/services/seo/,low,old /hi language version; content marketing (no service page) -> SEO service (covers content)
+/hi/digital-marketing-service-in-madurai,/hi/digital-marketing-service-in-madurai,www.ssm,0,0,redirect,/locations/madurai/,high,"old /hi language version; old ""digital marketing agency Madurai"" page -> Madurai location page"
+/hi/discover-your-digital-mastery-course-in-madurai,/hi/discover-your-digital-mastery-course-in-madurai,www.ssm,0,0,404,,,old /hi language version; off-topic / not offered / theme demo or shop page: leave 404
+/hi/ecommerce-solutions,/hi/ecommerce-solutions,www.ssm,0,0,redirect,/services/website-design-development/,medium,old /hi language version; UI/UX or e-commerce solution page -> Website Design & Development (no dedicated page)
+/hi/pay-per-click-advertising-in-madurai,/hi/pay-per-click-advertising-in-madurai,www.ssm,0,0,redirect,/services/google-ads/,high,old /hi language version; old Google Ads / PPC page -> Google Ads service (YouTube ads are run in Google Ads)
+/hi/pricing,/hi/pricing,www.ssm,0,0,redirect,/pricing/india/,high,old /hi language version -> live pricing page
+/hi/privacy-policy,/hi/privacy-policy,www.ssm,0,0,redirect,/privacy-policy/,high,old /hi language version -> live page
+/hi/product-page/i-m-a-product,/hi/product-page/i-m-a-product,www.ssm,0,0,404,,,old theme demo / shop page: leave 404
+/hi/product-page/i-m-a-product-1,/hi/product-page/i-m-a-product-1,www.ssm,0,0,404,,,old theme demo / shop page: leave 404
+/hi/product-page/i-m-a-product-10,/hi/product-page/i-m-a-product-10,www.ssm,0,0,404,,,old theme demo / shop page: leave 404
+/hi/product-page/i-m-a-product-11,/hi/product-page/i-m-a-product-11,www.ssm,0,0,404,,,old theme demo / shop page: leave 404
+/hi/product-page/i-m-a-product-2,/hi/product-page/i-m-a-product-2,www.ssm,0,0,404,,,old theme demo / shop page: leave 404
+/hi/product-page/i-m-a-product-3,/hi/product-page/i-m-a-product-3,www.ssm,0,0,404,,,old theme demo / shop page: leave 404
+/hi/product-page/i-m-a-product-4,/hi/product-page/i-m-a-product-4,www.ssm,0,0,404,,,old theme demo / shop page: leave 404
+/hi/product-page/i-m-a-product-5,/hi/product-page/i-m-a-product-5,www.ssm,0,0,404,,,old theme demo / shop page: leave 404
+/hi/product-page/i-m-a-product-6,/hi/product-page/i-m-a-product-6,www.ssm,0,0,404,,,old theme demo / shop page: leave 404
+/hi/product-page/i-m-a-product-7,/hi/product-page/i-m-a-product-7,www.ssm,0,0,404,,,old theme demo / shop page: leave 404
+/hi/product-page/i-m-a-product-8,/hi/product-page/i-m-a-product-8,www.ssm,0,0,404,,,old theme demo / shop page: leave 404
+/hi/product-page/i-m-a-product-9,/hi/product-page/i-m-a-product-9,www.ssm,0,0,404,,,old theme demo / shop page: leave 404
+/hi/refund-policy,/hi/refund-policy,www.ssm,0,0,404,,,old /hi language version; off-topic / not offered / theme demo or shop page: leave 404
+/hi/search,/hi/search,www.ssm,0,0,404,,,old /hi language version; off-topic / not offered / theme demo or shop page: leave 404
+/hi/search-engine-optimization-in-madurai,/hi/search-engine-optimization-in-madurai,www.ssm,0,0,redirect,/services/seo/madurai/,high,old /hi language version; old SEO service page -> SEO Madurai
+/hi/services,/hi/services,www.ssm,0,0,redirect,/services/,high,old /hi language version -> live page
+/hi/social-media-marketing-in-madurai,/hi/social-media-marketing-in-madurai,www.ssm,0,0,redirect,/services/social-media-marketing/,high,old /hi language version; old social / Meta ads / LinkedIn / YouTube marketing page -> Social Media Marketing service
+/hi/terms-and-coniditions,/hi/terms-and-coniditions,www.ssm,0,0,redirect,/terms/,high,old /hi language version; old Terms page
+/hi/ui-ux-designing-service-in-madurai,/hi/ui-ux-designing-service-in-madurai,www.ssm,0,0,redirect,/services/website-design-development/,medium,old /hi language version; UI/UX or e-commerce solution page -> Website Design & Development (no dedicated page)
+/hi/website-design-and-development-in-madurai,/hi/website-design-and-development-in-madurai,www.ssm,0,0,redirect,/services/website-design-development/,high,old /hi language version; old website / e-commerce / landing page service -> Website Design & Development
+/hi/whatsapp-marketing-service-in-madurai,/hi/whatsapp-marketing-service-in-madurai,www.ssm,0,0,redirect,/services/ai-business-automation/,high,old /hi language version; AI / WhatsApp automation page -> AI Business Automation (covers WhatsApp automation)
+/how-generative-engine-optimization-is-changing-digital-marketing-in-madurai,/how-generative-engine-optimization-is-changing-digital-marketing-in-madurai/,ssm,0,0,redirect,/services/geo-aeo-ai-search/madurai/,medium,GEO blog post (Madurai) -> GEO & AEO Madurai
+/how-to-select-the-right-advertising-agency-in-madurai-7-essential-criteria-for-business-success,/how-to-select-the-right-advertising-agency-in-madurai-7-essential-criteria-for-business-success/,ssm,0,0,redirect,/blog/how-to-choose-the-right-digital-marketing-agency-in-madurai/,medium,choosing an agency post -> current agency-choice post
+/index.php?rest_route=%2Fconvertful%2Fv2%2F,/index.php?rest_route=%2Fconvertful%2Fv2%2F,ssm,0,0,404,,,off-topic / not offered / theme demo or shop page: leave 404
+/it-solution,/it-solution/,ssm,0,0,404,,,off-topic / not offered / theme demo or shop page: leave 404
+/local-seo-madurai-near-me,/local-seo-madurai-near-me/,ssm,0,0,redirect,/services/local-seo/madurai/,high,old local SEO / GBP page -> Local SEO Madurai
+/local-seo-secrets-how-madurai-companies-dominate-google-maps,/local-seo-secrets-how-madurai-companies-dominate-google-maps/,ssm,0,0,redirect,/services/local-seo/madurai/,medium,local SEO blog post -> Local SEO Madurai
+/local-seo-services,/local-seo-services/,ssm,0,0,redirect,/services/local-seo/,high,old local SEO service page -> Local SEO service
+/locations.kml,/locations.kml,ssm,0,0,404,,,off-topic / not offered / theme demo or shop page: leave 404
+/madurai-digital-marketing-guide-2025-seo-website-social-media-ai-branding,/madurai-digital-marketing-guide-2025-seo-website-social-media-ai-branding/,ssm,0,0,redirect,/locations/madurai/,medium,Madurai digital marketing guide/post -> Madurai location page
+/members-area/kjdeepz2020/profile,/members-area/kjdeepz2020/profile,www.ssm,0,0,404,,,off-topic / not offered / theme demo or shop page: leave 404
+/mobile-app,/mobile-app/,ssm,0,0,404,,,off-topic / not offered / theme demo or shop page: leave 404
+/mobile-app-development,/mobile-app-development/,ssm,0,0,404,,,off-topic / not offered / theme demo or shop page: leave 404
+/mobileappdevelopment,/mobileappdevelopment,www.ssm,0,0,404,,,off-topic / not offered / theme demo or shop page: leave 404
+/online-reputation-management,/online-reputation-management/,ssm,0,0,404,,,off-topic / not offered / theme demo or shop page: leave 404
+/pay-per-click-advertising,/pay-per-click-advertising/,ssm,0,0,redirect,/services/google-ads/,high,old Google Ads / PPC page -> Google Ads service (YouTube ads are run in Google Ads)
+/pay-per-click-advertising-in-madurai,/pay-per-click-advertising-in-madurai,www.ssm,0,0,redirect,/services/google-ads/,high,old Google Ads / PPC page -> Google Ads service (YouTube ads are run in Google Ads)
+/portfolio,/portfolio/,ssm,0,0,redirect,/case-studies/,medium,old case study / portfolio -> Case Studies hub
+/post/ai-overviews-vs-google-search-what-madurai-businesses-need-to-know-in-2026,/post/ai-overviews-vs-google-search-what-madurai-businesses-need-to-know-in-2026,www.ssm,0,0,redirect,/blog/how-to-rank-in-ai-search/,medium,AI search post -> current AI search post
+/post/ai-powered-strategies-for-lead-generation,/post/ai-powered-strategies-for-lead-generation,www.ssm,0,0,redirect,/services/ai-business-automation/,medium,AI for SMEs / AI lead generation post -> AI Business Automation
+/post/ai-tools-for-lead-generation-boosting-growth-for-smes,/post/ai-tools-for-lead-generation-boosting-growth-for-smes,www.ssm,0,0,redirect,/services/ai-business-automation/,medium,AI for SMEs / AI lead generation post -> AI Business Automation
+/post/best-ai-tools-for-writing-web-seo,/post/best-ai-tools-for-writing-web-seo,www.ssm,0,0,redirect,/services/seo/,medium,SEO tools / SEO guide post -> SEO service
+/post/best-wordpress-themes-for-real-estate,/post/best-wordpress-themes-for-real-estate,www.ssm,0,0,404,,,off-topic / not offered / theme demo or shop page: leave 404
+/post/clone-any-website-in-just-a-few-seconds-using-10-web-io,/post/clone-any-website-in-just-a-few-seconds-using-10-web-io,www.ssm,0,0,404,,,off-topic / not offered / theme demo or shop page: leave 404
+/post/google-ads-vs-seo-for-madurai-small-businesses-which-gets-results-faster,/post/google-ads-vs-seo-for-madurai-small-businesses-which-gets-results-faster,www.ssm,0,0,redirect,/blog/seo-vs-google-ads-madurai/,high,same topic: SEO vs Google Ads for Madurai
+/post/hosting-services,/post/hosting-services,www.ssm,0,0,404,,,off-topic / not offered / theme demo or shop page: leave 404
+/post/how-ai-powered-lead-generation-transforms-growth-for-smes-in-india,/post/how-ai-powered-lead-generation-transforms-growth-for-smes-in-india,www.ssm,0,0,redirect,/services/ai-business-automation/,medium,AI for SMEs / AI lead generation post -> AI Business Automation
+/post/how-ai-search-and-geo-optimization-can-boost-your-business-reach,/post/how-ai-search-and-geo-optimization-can-boost-your-business-reach,www.ssm,0,0,redirect,/blog/how-to-rank-in-ai-search/,medium,AI search post -> current AI search post
+/post/how-much-does-it-cost-to-hire-a-digital-marketer-in-madurai,/post/how-much-does-it-cost-to-hire-a-digital-marketer-in-madurai,www.ssm,0,0,redirect,/blog/digital-marketing-service-costs-in-madurai-2026-pricing-guide/,high,same topic: Madurai digital marketing costs
+/post/how-to-join-amazon-affiliate-account-step-by-step,/post/how-to-join-amazon-affiliate-account-step-by-step,www.ssm,0,0,404,,,off-topic / not offered / theme demo or shop page: leave 404
+/post/how-to-lose-weight-simple-solutions,/post/how-to-lose-weight-simple-solutions,www.ssm,0,0,404,,,off-topic / not offered / theme demo or shop page: leave 404
+/post/how-we-helped-a-madurai-restaurant-get-300-more-walk-in-customers-with-local-seo,/post/how-we-helped-a-madurai-restaurant-get-300-more-walk-in-customers-with-local-seo,www.ssm,0,0,redirect,/case-studies/,medium,old case study post -> Case Studies hub
+/post/mastering-seo-in-2024-the-ultimate-guide-to-ranking-1-on-google,/post/mastering-seo-in-2024-the-ultimate-guide-to-ranking-1-on-google,www.ssm,0,0,redirect,/services/seo/,medium,SEO tools / SEO guide post -> SEO service
+/post/revolutionizing-lead-generation-with-ai-driven-lead-generation-tools,/post/revolutionizing-lead-generation-with-ai-driven-lead-generation-tools,www.ssm,0,0,redirect,/services/ai-business-automation/,medium,AI for SMEs / AI lead generation post -> AI Business Automation
+/post/seo-for-salons-how-to-boost-your-salon-s-online-presence-and-attract-more-clients,/post/seo-for-salons-how-to-boost-your-salon-s-online-presence-and-attract-more-clients,www.ssm,0,0,redirect,/blog/social-media-marketing-salons-aesthetics-madurai/,medium,salon marketing -> current salon marketing post
+/post/the-smoothie-diet-reviews-2022,/post/the-smoothie-diet-reviews-2022,www.ssm,0,0,404,,,off-topic / not offered / theme demo or shop page: leave 404
+/post/the-top-ai-tools-you-need-to-succeed-in-2024-a-comprehensive-guide-for-professionals,/post/the-top-ai-tools-you-need-to-succeed-in-2024-a-comprehensive-guide-for-professionals,www.ssm,0,0,redirect,/services/ai-business-automation/,low,AI tools listicle -> AI Business Automation
+/post/the-ultimate-guide-to-google-business-profile-seo-rank-1-on-google-maps-in-2024,/post/the-ultimate-guide-to-google-business-profile-seo-rank-1-on-google-maps-in-2024,www.ssm,0,0,redirect,/services/local-seo/madurai/,medium,local SEO / Google Maps / GBP post -> Local SEO Madurai
+/post/top-affiliate-programs-in-2024,/post/top-affiliate-programs-in-2024,www.ssm,0,0,404,,,off-topic / not offered / theme demo or shop page: leave 404
+/post/top-ai-image-generator-websites,/post/top-ai-image-generator-websites,www.ssm,0,0,404,,,off-topic / not offered / theme demo or shop page: leave 404
+/post/top-automated-seo-tools-for-smes,/post/top-automated-seo-tools-for-smes,www.ssm,0,0,redirect,/services/seo/,medium,SEO tools / SEO guide post -> SEO service
+/post/unique-valentine-s-day-gifts-a-guide-to-exceptional-presents,/post/unique-valentine-s-day-gifts-a-guide-to-exceptional-presents,www.ssm,0,0,404,,,off-topic / not offered / theme demo or shop page: leave 404
+/pricing,/pricing,www.ssm,0,0,alias,,,live duplicate route; 301 alias in vercel.json
+/privacy-policy,/privacy-policy,www.ssm,0,0,live,,,live route today (no redirect needed)
+/product-page/i-m-a-product,/product-page/i-m-a-product,www.ssm,0,0,404,,,old theme demo / shop page: leave 404
+/product-page/i-m-a-product-1,/product-page/i-m-a-product-1,www.ssm,0,0,404,,,old theme demo / shop page: leave 404
+/product-page/i-m-a-product-10,/product-page/i-m-a-product-10,www.ssm,0,0,404,,,old theme demo / shop page: leave 404
+/product-page/i-m-a-product-11,/product-page/i-m-a-product-11,www.ssm,0,0,404,,,old theme demo / shop page: leave 404
+/product-page/i-m-a-product-2,/product-page/i-m-a-product-2,www.ssm,0,0,404,,,old theme demo / shop page: leave 404
+/product-page/i-m-a-product-3,/product-page/i-m-a-product-3,www.ssm,0,0,404,,,old theme demo / shop page: leave 404
+/product-page/i-m-a-product-4,/product-page/i-m-a-product-4,www.ssm,0,0,404,,,old theme demo / shop page: leave 404
+/product-page/i-m-a-product-5,/product-page/i-m-a-product-5,www.ssm,0,0,404,,,old theme demo / shop page: leave 404
+/product-page/i-m-a-product-6,/product-page/i-m-a-product-6,www.ssm,0,0,404,,,old theme demo / shop page: leave 404
+/product-page/i-m-a-product-7,/product-page/i-m-a-product-7,www.ssm,0,0,404,,,old theme demo / shop page: leave 404
+/product-page/i-m-a-product-8,/product-page/i-m-a-product-8,www.ssm,0,0,404,,,old theme demo / shop page: leave 404
+/product-page/i-m-a-product-9,/product-page/i-m-a-product-9,www.ssm,0,0,404,,,old theme demo / shop page: leave 404
+/project-category/3d-design,/project-category/3d-design/,ssm,0,0,404,,,old theme demo / shop page: leave 404
+/project-category/analysis,/project-category/analysis/,ssm,0,0,404,,,old theme demo / shop page: leave 404
+/project-category/app-design,/project-category/app-design/,ssm,0,0,404,,,old theme demo / shop page: leave 404
+/project-category/computer-software,/project-category/computer-software/,ssm,0,0,404,,,old theme demo / shop page: leave 404
+/project-category/healthcare,/project-category/healthcare/,ssm,0,0,404,,,old theme demo / shop page: leave 404
+/project-category/helpdesk,/project-category/helpdesk/,ssm,0,0,404,,,old theme demo / shop page: leave 404
+/project-category/marketing,/project-category/marketing/,ssm,0,0,404,,,old theme demo / shop page: leave 404
+/project-category/real-estate,/project-category/real-estate/,ssm,0,0,404,,,old theme demo / shop page: leave 404
+/project-category/technology,/project-category/technology/,ssm,0,0,404,,,old theme demo / shop page: leave 404
+/project-category/web-design,/project-category/web-design/,ssm,0,0,redirect,/services/website-design-development/,low,old portfolio category -> Website Design & Development
+/project/astarte-medical,/project/astarte-medical/,ssm,0,0,404,,,old theme demo / shop page: leave 404
+/project/cae-blue-phantom,/project/cae-blue-phantom/,ssm,0,0,404,,,old theme demo / shop page: leave 404
+/project/cloud-migration-and-integration-project-it-solutions-portfolio,/project/cloud-migration-and-integration-project-it-solutions-portfolio/,ssm,0,0,404,,,old theme demo / shop page: leave 404
+/project/dashboard-design,/project/dashboard-design/,ssm,0,0,404,,,old theme demo / shop page: leave 404
+/project/driving-digital-transformation-explore-the-depth-of-our-it-projects,/project/driving-digital-transformation-explore-the-depth-of-our-it-projects/,ssm,0,0,404,,,old theme demo / shop page: leave 404
+/project/explore-our-it-solutions-portfolio-for-public-sector-organizations,/project/explore-our-it-solutions-portfolio-for-public-sector-organizations/,ssm,0,0,404,,,old theme demo / shop page: leave 404
+/project/explore-our-it-solutions-portfolio-for-public-sector-organizations-copy,/project/explore-our-it-solutions-portfolio-for-public-sector-organizations-copy/,ssm,0,0,404,,,old theme demo / shop page: leave 404
+/project/liberkeys,/project/liberkeys/,ssm,0,0,404,,,old theme demo / shop page: leave 404
+/project/mobile-app-design,/project/mobile-app-design/,ssm,0,0,404,,,old theme demo / shop page: leave 404
+/project/mobile-app-design-2,/project/mobile-app-design-2/,ssm,0,0,404,,,old theme demo / shop page: leave 404
+/project/mobile-app-design-3,/project/mobile-app-design-3/,ssm,0,0,404,,,old theme demo / shop page: leave 404
+/project/pioneering-progress-exploring-the-evolution-and-impact-of,/project/pioneering-progress-exploring-the-evolution-and-impact-of/,ssm,0,0,404,,,old theme demo / shop page: leave 404
+/project/revolutionizing-it-strategies-a-closer-look-at-our-dynamic-it-solutions,/project/revolutionizing-it-strategies-a-closer-look-at-our-dynamic-it-solutions/,ssm,0,0,404,,,old theme demo / shop page: leave 404
+/project/tech-triumphs-celebrating-our-achievements-in-it-solutions,/project/tech-triumphs-celebrating-our-achievements-in-it-solutions/,ssm,0,0,404,,,old theme demo / shop page: leave 404
+/project/technology-solution,/project/technology-solution/,ssm,0,0,404,,,old theme demo / shop page: leave 404
+/project/unlocking-potential-explore-our-comprehensive-it-portfolio,/project/unlocking-potential-explore-our-comprehensive-it-portfolio/,ssm,0,0,404,,,old theme demo / shop page: leave 404
+/refund-policy,/refund-policy,www.ssm,0,0,404,,,off-topic / not offered / theme demo or shop page: leave 404
+/resources,/resources/,ssm,0,0,404,,,off-topic / not offered / theme demo or shop page: leave 404
+/sample-page,/sample-page/,ssm,0,0,404,,,off-topic / not offered / theme demo or shop page: leave 404
+/search,/search,www.ssm,0,0,404,,,off-topic / not offered / theme demo or shop page: leave 404
+/search-engine-optimization,/search-engine-optimization/,ssm,0,0,redirect,/services/seo/,high,old SEO service page -> SEO service
+/search-engine-optimization-in-madurai,/search-engine-optimization-in-madurai,www.ssm,0,0,redirect,/services/seo/madurai/,high,old SEO service page -> SEO Madurai
+/seo-mistakes-madurai-2,/seo-mistakes-madurai-2/,ssm,0,0,redirect,/services/seo/madurai/,medium,SEO sub-topic -> SEO Madurai (no dedicated page)
+/seo-services-in-madurai,/seo-services-in-madurai/,ssm,0,0,redirect,/services/seo/madurai/,high,old SEO service page -> SEO Madurai
+/service,/service,www.ssm,0,0,redirect,/services/,medium,old generic services page -> Services hub
+/service-category/consultation,/service-category/consultation/,ssm,0,0,404,,,old theme demo / shop page: leave 404
+/service-category/management,/service-category/management/,ssm,0,0,404,,,old theme demo / shop page: leave 404
+/service-category/solution,/service-category/solution/,ssm,0,0,404,,,old theme demo / shop page: leave 404
+/service-category/strategy,/service-category/strategy/,ssm,0,0,404,,,old theme demo / shop page: leave 404
+/service-category/transfer,/service-category/transfer/,ssm,0,0,404,,,old theme demo / shop page: leave 404
+/service/branding,/service/branding/,ssm,0,0,redirect,/services/product-photography-creative-design/,high,"branding page -> Creative Design (brand identity, logo)"
+/service/cloud-hosting-services-madurai,/service/cloud-hosting-services-madurai/,ssm,0,0,404,,,old theme demo / shop page: leave 404
+/service/content-marketing,/service/content-marketing/,ssm,0,0,redirect,/services/seo/,low,content marketing (no service page) -> SEO service (covers content)
+/service/data-tracking-and-security,/service/data-tracking-and-security/,ssm,0,0,404,,,old theme demo / shop page: leave 404
+/service/data-tracking-and-security-2,/service/data-tracking-and-security-2/,ssm,0,0,404,,,old theme demo / shop page: leave 404
+/service/digital-marketing,/service/digital-marketing/,ssm,0,0,redirect,/services/,medium,old generic services page -> Services hub
+/service/e-commerce-development,/service/e-commerce-development/,ssm,0,0,redirect,/services/website-design-development/,high,old website / e-commerce / landing page service -> Website Design & Development
+/service/hosting,/service/hosting/,ssm,0,0,404,,,old theme demo / shop page: leave 404
+/service/it-management-services,/service/it-management-services/,ssm,0,0,404,,,old theme demo / shop page: leave 404
+/service/it-management-services-2,/service/it-management-services-2/,ssm,0,0,404,,,old theme demo / shop page: leave 404
+/service/it-management-services-3,/service/it-management-services-3/,ssm,0,0,404,,,old theme demo / shop page: leave 404
+/service/modern-technology-solution,/service/modern-technology-solution/,ssm,0,0,404,,,old theme demo / shop page: leave 404
+/service/modern-technology-solution-2,/service/modern-technology-solution-2/,ssm,0,0,404,,,old theme demo / shop page: leave 404
+/service/pay-per-click-advertising,/service/pay-per-click-advertising/,ssm,0,0,redirect,/services/google-ads/,high,old Google Ads / PPC page -> Google Ads service (YouTube ads are run in Google Ads)
+/service/search-engine-optimisation,/service/search-engine-optimisation/,ssm,0,0,redirect,/services/seo/,high,old SEO service page -> SEO service
+/service/social-media-marketing,/service/social-media-marketing/,ssm,0,0,redirect,/services/social-media-marketing/,high,old social / Meta ads / LinkedIn / YouTube marketing page -> Social Media Marketing service
+/service/u1-ux-designing,/service/u1-ux-designing/,ssm,0,0,redirect,/services/website-design-development/,medium,UI/UX or e-commerce solution page -> Website Design & Development (no dedicated page)
+/service/ui-ux-designing,/service/ui-ux-designing/,ssm,0,0,redirect,/services/website-design-development/,medium,UI/UX or e-commerce solution page -> Website Design & Development (no dedicated page)
+/service/website-design-development,/service/website-design-development/,ssm,0,0,redirect,/services/website-design-development/,high,old website / e-commerce / landing page service -> Website Design & Development
+/services-6,/services-6,www.ssm,0,0,redirect,/services/,medium,old generic services page -> Services hub
+/services-faq,/services-faq/,ssm,0,0,redirect,/faq/,high,old FAQ page
+/social-media-marketing,/social-media-marketing/,ssm,0,0,redirect,/services/social-media-marketing/,high,old social / Meta ads / LinkedIn / YouTube marketing page -> Social Media Marketing service
+/social-media-marketing-agency-madurai,/social-media-marketing-agency-madurai/,ssm,0,0,redirect,/services/social-media-marketing/,high,old social / Meta ads / LinkedIn / YouTube marketing page -> Social Media Marketing service
+/social-media-marketing-in-madurai,/social-media-marketing-in-madurai,www.ssm,0,0,redirect,/services/social-media-marketing/,high,old social / Meta ads / LinkedIn / YouTube marketing page -> Social Media Marketing service
+/sub-services,/sub-services/,ssm,0,0,404,,,off-topic / not offered / theme demo or shop page: leave 404
+/ta,/ta,www.ssm,0,0,redirect,/,medium,old Tamil/Hindi homepage (Wix language versions) -> homepage
+/ta/about,/ta/about,www.ssm,0,0,redirect,/about/,high,old /ta language version -> live page
+/ta/blog,/ta/blog,www.ssm,0,0,redirect,/blog/,high,old /ta language version -> live page
+/ta/branding-service-in-madurai,/ta/branding-service-in-madurai,www.ssm,0,0,redirect,/services/product-photography-creative-design/,high,"old /ta language version; branding page -> Creative Design (brand identity, logo)"
+/ta/cart-page,/ta/cart-page,www.ssm,0,0,404,,,old /ta language version; off-topic / not offered / theme demo or shop page: leave 404
+/ta/category/all-products,/ta/category/all-products,www.ssm,0,0,404,,,old /ta language version; off-topic / not offered / theme demo or shop page: leave 404
+/ta/challenge-thanks,/ta/challenge-thanks,www.ssm,0,0,404,,,old /ta language version; off-topic / not offered / theme demo or shop page: leave 404
+/ta/challenges,/ta/challenges,www.ssm,0,0,404,,,old /ta language version; off-topic / not offered / theme demo or shop page: leave 404
+/ta/contact-us,/ta/contact-us,www.ssm,0,0,redirect,/contact/,high,old /ta language version; old Contact page
+/ta/content-marketing-service-in-madurai,/ta/content-marketing-service-in-madurai,www.ssm,0,0,redirect,/services/seo/,low,old /ta language version; content marketing (no service page) -> SEO service (covers content)
+/ta/digital-marketing-service-in-madurai,/ta/digital-marketing-service-in-madurai,www.ssm,0,0,redirect,/locations/madurai/,high,"old /ta language version; old ""digital marketing agency Madurai"" page -> Madurai location page"
+/ta/discover-your-digital-mastery-course-in-madurai,/ta/discover-your-digital-mastery-course-in-madurai,www.ssm,0,0,404,,,old /ta language version; off-topic / not offered / theme demo or shop page: leave 404
+/ta/ecommerce-solutions,/ta/ecommerce-solutions,www.ssm,0,0,redirect,/services/website-design-development/,medium,old /ta language version; UI/UX or e-commerce solution page -> Website Design & Development (no dedicated page)
+/ta/pay-per-click-advertising-in-madurai,/ta/pay-per-click-advertising-in-madurai,www.ssm,0,0,redirect,/services/google-ads/,high,old /ta language version; old Google Ads / PPC page -> Google Ads service (YouTube ads are run in Google Ads)
+/ta/pricing,/ta/pricing,www.ssm,0,0,redirect,/pricing/india/,high,old /ta language version -> live pricing page
+/ta/privacy-policy,/ta/privacy-policy,www.ssm,0,0,redirect,/privacy-policy/,high,old /ta language version -> live page
+/ta/product-page/i-m-a-product,/ta/product-page/i-m-a-product,www.ssm,0,0,404,,,old theme demo / shop page: leave 404
+/ta/product-page/i-m-a-product-1,/ta/product-page/i-m-a-product-1,www.ssm,0,0,404,,,old theme demo / shop page: leave 404
+/ta/product-page/i-m-a-product-10,/ta/product-page/i-m-a-product-10,www.ssm,0,0,404,,,old theme demo / shop page: leave 404
+/ta/product-page/i-m-a-product-11,/ta/product-page/i-m-a-product-11,www.ssm,0,0,404,,,old theme demo / shop page: leave 404
+/ta/product-page/i-m-a-product-2,/ta/product-page/i-m-a-product-2,www.ssm,0,0,404,,,old theme demo / shop page: leave 404
+/ta/product-page/i-m-a-product-3,/ta/product-page/i-m-a-product-3,www.ssm,0,0,404,,,old theme demo / shop page: leave 404
+/ta/product-page/i-m-a-product-4,/ta/product-page/i-m-a-product-4,www.ssm,0,0,404,,,old theme demo / shop page: leave 404
+/ta/product-page/i-m-a-product-5,/ta/product-page/i-m-a-product-5,www.ssm,0,0,404,,,old theme demo / shop page: leave 404
+/ta/product-page/i-m-a-product-6,/ta/product-page/i-m-a-product-6,www.ssm,0,0,404,,,old theme demo / shop page: leave 404
+/ta/product-page/i-m-a-product-7,/ta/product-page/i-m-a-product-7,www.ssm,0,0,404,,,old theme demo / shop page: leave 404
+/ta/product-page/i-m-a-product-8,/ta/product-page/i-m-a-product-8,www.ssm,0,0,404,,,old theme demo / shop page: leave 404
+/ta/product-page/i-m-a-product-9,/ta/product-page/i-m-a-product-9,www.ssm,0,0,404,,,old theme demo / shop page: leave 404
+/ta/refund-policy,/ta/refund-policy,www.ssm,0,0,404,,,old /ta language version; off-topic / not offered / theme demo or shop page: leave 404
+/ta/search,/ta/search,www.ssm,0,0,404,,,old /ta language version; off-topic / not offered / theme demo or shop page: leave 404
+/ta/search-engine-optimization-in-madurai,/ta/search-engine-optimization-in-madurai,www.ssm,0,0,redirect,/services/seo/madurai/,high,old /ta language version; old SEO service page -> SEO Madurai
+/ta/services,/ta/services,www.ssm,0,0,redirect,/services/,high,old /ta language version -> live page
+/ta/social-media-marketing-in-madurai,/ta/social-media-marketing-in-madurai,www.ssm,0,0,redirect,/services/social-media-marketing/,high,old /ta language version; old social / Meta ads / LinkedIn / YouTube marketing page -> Social Media Marketing service
+/ta/terms-and-coniditions,/ta/terms-and-coniditions,www.ssm,0,0,redirect,/terms/,high,old /ta language version; old Terms page
+/ta/ui-ux-designing-service-in-madurai,/ta/ui-ux-designing-service-in-madurai,www.ssm,0,0,redirect,/services/website-design-development/,medium,old /ta language version; UI/UX or e-commerce solution page -> Website Design & Development (no dedicated page)
+/ta/website-design-and-development-in-madurai,/ta/website-design-and-development-in-madurai,www.ssm,0,0,redirect,/services/website-design-development/,high,old /ta language version; old website / e-commerce / landing page service -> Website Design & Development
+/ta/whatsapp-marketing-service-in-madurai,/ta/whatsapp-marketing-service-in-madurai,www.ssm,0,0,redirect,/services/ai-business-automation/,high,old /ta language version; AI / WhatsApp automation page -> AI Business Automation (covers WhatsApp automation)
+/tag/2025-deals,/tag/2025-deals/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
+/tag/2025-guide,/tag/2025-guide/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
+/tag/2025-marketing-trends,/tag/2025-marketing-trends/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
+/tag/2025-seo,/tag/2025-seo/,ssm,0,0,redirect,/services/seo/,low,old WordPress tag archive with a clear topical match
+/tag/2025-seo-trends,/tag/2025-seo-trends/,ssm,0,0,redirect,/services/seo/,low,old WordPress tag archive with a clear topical match
+/tag/advertising-agency,/tag/advertising-agency/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
+/tag/advertising-agency-in-madurai,/tag/advertising-agency-in-madurai/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
+/tag/advertising-company-madurai,/tag/advertising-company-madurai/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
+/tag/advertising-services-madurai-for-small-business,/tag/advertising-services-madurai-for-small-business/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
+/tag/ai-agent-tools,/tag/ai-agent-tools/,ssm,0,0,redirect,/services/ai-business-automation/,low,old WordPress tag archive with a clear topical match
+/tag/ai-citation,/tag/ai-citation/,ssm,0,0,redirect,/services/geo-aeo-ai-search/,low,old WordPress tag archive with a clear topical match
+/tag/ai-content-optimisation,/tag/ai-content-optimisation/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
+/tag/ai-content-optimization,/tag/ai-content-optimization/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
+/tag/ai-marketing-tools,/tag/ai-marketing-tools/,ssm,0,0,redirect,/services/ai-business-automation/,low,old WordPress tag archive with a clear topical match
+/tag/ai-search-optimization,/tag/ai-search-optimization/,ssm,0,0,redirect,/services/geo-aeo-ai-search/,low,old WordPress tag archive with a clear topical match
+/tag/ai-seo,/tag/ai-seo/,ssm,0,0,redirect,/services/geo-aeo-ai-search/,low,old WordPress tag archive with a clear topical match
+/tag/ai-seo-tools-2025,/tag/ai-seo-tools-2025/,ssm,0,0,redirect,/services/geo-aeo-ai-search/,low,old WordPress tag archive with a clear topical match
+/tag/ai-tools,/tag/ai-tools/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
+/tag/ai-tools-for-marketers,/tag/ai-tools-for-marketers/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
+/tag/answer-engine-optimisation,/tag/answer-engine-optimisation/,ssm,0,0,redirect,/blog/what-is-answer-engine-optimization/,low,old WordPress tag archive with a clear topical match
+/tag/app-dev,/tag/app-dev/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
+/tag/artificial-intelligence-seo,/tag/artificial-intelligence-seo/,ssm,0,0,redirect,/services/geo-aeo-ai-search/,low,old WordPress tag archive with a clear topical match
+/tag/backlinking,/tag/backlinking/,ssm,0,0,redirect,/services/seo/,low,old WordPress tag archive with a clear topical match
+/tag/bert,/tag/bert/,ssm,0,0,redirect,/services/seo/,low,old WordPress tag archive with a clear topical match
+/tag/best-advertising-agency-for-business-in-madurai,/tag/best-advertising-agency-for-business-in-madurai/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
+/tag/best-ai-agent-tools-for-digital-marketing-2025,/tag/best-ai-agent-tools-for-digital-marketing-2025/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
+/tag/black-friday,/tag/black-friday/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
+/tag/brand-identity,/tag/brand-identity/,ssm,0,0,redirect,/services/product-photography-creative-design/,low,old WordPress tag archive with a clear topical match
+/tag/brand-strategy,/tag/brand-strategy/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
+/tag/branding-company-madurai,/tag/branding-company-madurai/,ssm,0,0,redirect,/services/product-photography-creative-design/,low,old WordPress tag archive with a clear topical match
+/tag/business,/tag/business/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
+/tag/business-growth,/tag/business-growth/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
+/tag/business-seo,/tag/business-seo/,ssm,0,0,redirect,/services/seo/,low,old WordPress tag archive with a clear topical match
+/tag/case-study,/tag/case-study/,ssm,0,0,redirect,/case-studies/,low,old WordPress tag archive with a clear topical match
+/tag/chatgpt-for-seo-optimization,/tag/chatgpt-for-seo-optimization/,ssm,0,0,redirect,/blog/how-to-rank-in-ai-search/,low,old WordPress tag archive with a clear topical match
+/tag/chatgpt-seo,/tag/chatgpt-seo/,ssm,0,0,redirect,/blog/how-to-rank-in-ai-search/,low,old WordPress tag archive with a clear topical match
+/tag/chatgpt-seo-prompts-2025,/tag/chatgpt-seo-prompts-2025/,ssm,0,0,redirect,/blog/how-to-rank-in-ai-search/,low,old WordPress tag archive with a clear topical match
+/tag/consultants,/tag/consultants/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
+/tag/content-credibility,/tag/content-credibility/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
+/tag/content-generation-ai,/tag/content-generation-ai/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
+/tag/content-marketing,/tag/content-marketing/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
+/tag/content-marketing-2025,/tag/content-marketing-2025/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
+/tag/content-strategy,/tag/content-strategy/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
+/tag/cyber-monday-2025,/tag/cyber-monday-2025/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
+/tag/cybersecurity,/tag/cybersecurity/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
+/tag/data,/tag/data/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
+/tag/dental-clinics,/tag/dental-clinics/,ssm,0,0,redirect,/industries/healthcare-clinics/,low,old WordPress tag archive with a clear topical match
+/tag/dental-marketing,/tag/dental-marketing/,ssm,0,0,redirect,/industries/healthcare-clinics/,low,old WordPress tag archive with a clear topical match
+/tag/digital-advertising,/tag/digital-advertising/,ssm,0,0,redirect,/services/google-ads/,low,old WordPress tag archive with a clear topical match
+/tag/digital-marketing,/tag/digital-marketing/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
+/tag/digital-marketing-2025,/tag/digital-marketing-2025/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
+/tag/digital-marketing-agency-madurai,/tag/digital-marketing-agency-madurai/,ssm,0,0,redirect,/locations/madurai/,low,old WordPress tag archive with a clear topical match
+/tag/digital-marketing-madurai,/tag/digital-marketing-madurai/,ssm,0,0,redirect,/locations/madurai/,low,old WordPress tag archive with a clear topical match
+/tag/digital-marketing-results,/tag/digital-marketing-results/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
+/tag/digital-marketing-tools-2025,/tag/digital-marketing-tools-2025/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
+/tag/digital-marketing-trends-2025,/tag/digital-marketing-trends-2025/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
+/tag/e-e-a-t,/tag/e-e-a-t/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
+/tag/e-e-a-t-framework,/tag/e-e-a-t-framework/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
+/tag/email-marketing,/tag/email-marketing/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
+/tag/experience-expertise-authority-trust,/tag/experience-expertise-authority-trust/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
+/tag/facebook-marketing,/tag/facebook-marketing/,ssm,0,0,redirect,/services/social-media-marketing/,low,old WordPress tag archive with a clear topical match
+/tag/generative-ai,/tag/generative-ai/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
+/tag/generative-engine-optimization,/tag/generative-engine-optimization/,ssm,0,0,redirect,/blog/what-is-generative-engine-optimization/,low,old WordPress tag archive with a clear topical match
+/tag/generative-engine-optimization-geo,/tag/generative-engine-optimization-geo/,ssm,0,0,redirect,/blog/what-is-generative-engine-optimization/,low,old WordPress tag archive with a clear topical match
+/tag/geo,/tag/geo/,ssm,0,0,redirect,/blog/what-is-generative-engine-optimization/,low,old WordPress tag archive with a clear topical match
+/tag/global-hosting-trends,/tag/global-hosting-trends/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
+/tag/google-ads,/tag/google-ads/,ssm,0,0,redirect,/services/google-ads/,low,old WordPress tag archive with a clear topical match
+/tag/google-ads-madurai,/tag/google-ads-madurai/,ssm,0,0,redirect,/services/google-ads/,low,old WordPress tag archive with a clear topical match
+/tag/google-business-profile,/tag/google-business-profile/,ssm,0,0,redirect,/services/local-seo/madurai/,low,old WordPress tag archive with a clear topical match
+/tag/google-my-business,/tag/google-my-business/,ssm,0,0,redirect,/services/local-seo/madurai/,low,old WordPress tag archive with a clear topical match
+/tag/google-sge,/tag/google-sge/,ssm,0,0,redirect,/services/geo-aeo-ai-search/,low,old WordPress tag archive with a clear topical match
+/tag/healthcare-marketing,/tag/healthcare-marketing/,ssm,0,0,redirect,/industries/healthcare-clinics/,low,old WordPress tag archive with a clear topical match
+/tag/hosting,/tag/hosting/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
+/tag/hosting-deals,/tag/hosting-deals/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
+/tag/how-to-choose-advertising-agency-madurai,/tag/how-to-choose-advertising-agency-madurai/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
+/tag/instagram-marketing,/tag/instagram-marketing/,ssm,0,0,redirect,/services/social-media-marketing/,low,old WordPress tag archive with a clear topical match
+/tag/it,/tag/it/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
+/tag/local-advertising-agency-madurai-criteria,/tag/local-advertising-agency-madurai-criteria/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
+/tag/local-business-growth,/tag/local-business-growth/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
+/tag/local-business-marketing,/tag/local-business-marketing/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
+/tag/local-search,/tag/local-search/,ssm,0,0,redirect,/services/local-seo/madurai/,low,old WordPress tag archive with a clear topical match
+/tag/local-seo,/tag/local-seo/,ssm,0,0,redirect,/services/local-seo/madurai/,low,old WordPress tag archive with a clear topical match
+/tag/local-seo-madurai,/tag/local-seo-madurai/,ssm,0,0,redirect,/services/local-seo/madurai/,low,old WordPress tag archive with a clear topical match
+/tag/logo-design,/tag/logo-design/,ssm,0,0,redirect,/services/product-photography-creative-design/,low,old WordPress tag archive with a clear topical match
+/tag/madurai,/tag/madurai/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
+/tag/madurai-advertising-agency-checklist,/tag/madurai-advertising-agency-checklist/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
+/tag/madurai-brands,/tag/madurai-brands/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
+/tag/madurai-business-growth,/tag/madurai-business-growth/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
+/tag/madurai-business-seo,/tag/madurai-business-seo/,ssm,0,0,redirect,/services/seo/madurai/,low,old WordPress tag archive with a clear topical match
+/tag/madurai-case-study,/tag/madurai-case-study/,ssm,0,0,redirect,/case-studies/,low,old WordPress tag archive with a clear topical match
+/tag/madurai-marketing,/tag/madurai-marketing/,ssm,0,0,redirect,/locations/madurai/,low,old WordPress tag archive with a clear topical match
+/tag/madurai-seo,/tag/madurai-seo/,ssm,0,0,redirect,/services/seo/madurai/,low,old WordPress tag archive with a clear topical match
+/tag/marketing-agency,/tag/marketing-agency/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
+/tag/marketing-automation-ai,/tag/marketing-automation-ai/,ssm,0,0,redirect,/services/ai-business-automation/,low,old WordPress tag archive with a clear topical match
+/tag/marketing-campaign,/tag/marketing-campaign/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
+/tag/marketing-technology-ai,/tag/marketing-technology-ai/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
+/tag/near-me-searches,/tag/near-me-searches/,ssm,0,0,redirect,/services/local-seo/madurai/,low,old WordPress tag archive with a clear topical match
+/tag/online-marketing-madurai,/tag/online-marketing-madurai/,ssm,0,0,redirect,/locations/madurai/,low,old WordPress tag archive with a clear topical match
+/tag/online-marketing-strategies,/tag/online-marketing-strategies/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
+/tag/optimization,/tag/optimization/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
+/tag/paid-ads,/tag/paid-ads/,ssm,0,0,redirect,/services/google-ads/,low,old WordPress tag archive with a clear topical match
+/tag/paid-advertising,/tag/paid-advertising/,ssm,0,0,redirect,/services/google-ads/,low,old WordPress tag archive with a clear topical match
+/tag/perplexity-ai,/tag/perplexity-ai/,ssm,0,0,redirect,/services/geo-aeo-ai-search/,low,old WordPress tag archive with a clear topical match

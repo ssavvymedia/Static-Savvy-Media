@@ -25,6 +25,26 @@ function setJsonLd(schemaData) {
   script.textContent = JSON.stringify(schemaData || {})
 }
 
+/**
+ * Normalise any canonical/og:url to the single production form:
+ *   https://www.staticsavvymedia.com/<path>/
+ * Accepts absolute URLs on any host (e.g. the old non-www constant), relative paths, and
+ * strips query strings and hashes. Paths are given a trailing slash (the form the site's
+ * internal links, the sitemap and the server config use); file-like paths (*.xml) are left alone.
+ */
+export function toCanonicalUrl(url) {
+  const base = new URL(SITE_URL)
+  const u = new URL(url || '/', base)
+  u.protocol = base.protocol
+  u.host = base.host
+  u.search = ''
+  u.hash = ''
+  let path = u.pathname.replace(/\/{2,}/g, '/')
+  if (!path.endsWith('/') && !/\.[a-z0-9]+$/i.test(path)) path += '/'
+  u.pathname = path
+  return u.toString()
+}
+
 export function setDocumentTitle(title) {
   document.title = title || SITE_NAME
 }
@@ -43,7 +63,7 @@ export function setSeo({
 }) {
   const finalTitle = title || SITE_NAME
   const finalDesc = description || SITE_DESCRIPTION
-  const finalCanonical = canonical || SITE_URL
+  const finalCanonical = toCanonicalUrl(canonical || '/')
 
   setDocumentTitle(finalTitle)
 

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://staticsavvymedia.com/sitemap.xml
+Sitemap: https://www.staticsavvymedia.com/sitemap.xml

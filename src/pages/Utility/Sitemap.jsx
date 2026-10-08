@@ -75,8 +75,6 @@ const SITEMAP_SECTIONS = [
     title: 'Blog',
     links: [
       { label: 'Blog', path: '/blog' },
-      { label: 'SEO', path: '/blog/seo' },
-      { label: 'GEO / AEO', path: '/blog/geo-aeo' },
       { label: 'Local Marketing', path: '/blog/local-marketing' },
       { label: 'What Is GEO', path: '/blog/what-is-generative-engine-optimization' },
       { label: 'What Is AEO', path: '/blog/what-is-answer-engine-optimization' },

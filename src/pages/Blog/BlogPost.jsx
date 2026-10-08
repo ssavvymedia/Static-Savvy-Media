@@ -7,7 +7,7 @@ import { ScrollReveal } from '../../components/animations/ScrollReveal.jsx'
 import { sanityClient, urlFor } from '../../utils/sanityClient.js'
 import { setSeo } from '../../utils/seo.js'
 import { breadcrumbListSchema } from '../../utils/schema.js'
-import { buildWhatsAppLink } from '../../utils/helpers.js'
+import { buildWhatsAppLink, cleanSlug } from '../../utils/helpers.js'
 import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, SITE_URL } from '../../utils/constants.js'
 
 /* ============================================================
@@ -78,10 +78,12 @@ export default function BlogPost() {
     setPost(undefined)
     sanityClient
       .fetch(
-        `*[_type == "post" && slug.current == $slug][0]{
+        // Also match a slug saved with a stray leading slash in Sanity ("/my-post"), so the post
+        // still renders at /blog/my-post/. The content itself should still be fixed in Sanity.
+        `*[_type == "post" && slug.current in [$slug, "/" + $slug]][0]{
           title, "slug": slug.current, category, description, author, mainImage, body, publishedAt, seoTitle, seoDescription
         }`,
-        { slug },
+        { slug: cleanSlug(slug) },
       )
       .then((data) => setPost(data ?? null))
       .catch((err) => {
@@ -94,9 +96,20 @@ export default function BlogPost() {
   const readingTime = useMemo(() => estimateReadingTime(post?.body), [post])
   const publishedLabel = useMemo(() => formatDate(post?.publishedAt), [post])
   const whatsappHref = buildWhatsAppLink(WHATSAPP_NUMBER, WHATSAPP_MESSAGE)
-  const pageUrl = post ? `${SITE_URL}/blog/${post.slug}` : ''
+  const pageUrl = post ? `${SITE_URL}/blog/${cleanSlug(post.slug)}` : ''
 
   useEffect(() => {
+    if (post === null) {
+      // "Article not found": /blog/:slug/ is served for any slug so new Sanity posts work without
+      // a deploy. Keep this state out of the index (no soft 404) and drop the previous canonical.
+      setSeo({
+        title: 'Article not found | Static Savvy Media Blog',
+        description: 'This post may have been unpublished or the link is incorrect.',
+        canonical: '/blog/',
+        robots: 'noindex,follow',
+      })
+      return undefined
+    }
     if (!post) return undefined
 
     setSeo({

@@ -77,6 +77,7 @@ import FAQ from '../pages/Utility/FAQ.jsx'
 import PrivacyPolicy from '../pages/Utility/PrivacyPolicy.jsx'
 import Terms from '../pages/Utility/Terms.jsx'
 import Sitemap from '../pages/Utility/Sitemap.jsx'
+import NotFound from '../pages/Utility/NotFound.jsx'
 
 export default function AppRoutes() {
   return (
@@ -188,9 +189,10 @@ export default function AppRoutes() {
         />
 
         {/* ---- Pricing Routes ---- */}
+        {/* Direct loads of /pricing/ get a server-side 301 (vercel.json); this covers in-app links. */}
         <Route
           path="/pricing"
-          element={<Navigate to="/pricing/india" replace />}
+          element={<Navigate to="/pricing/india/" replace />}
         />
 
         {/* India Pricing */}
@@ -315,7 +317,12 @@ export default function AppRoutes() {
         />
       </Route>
 
-      <Route path="*" element={<Navigate to="/" replace />} />
+      {/* Unknown URLs: real "not found" view marked noindex (no redirect to the homepage,
+          which created soft 404s). NOTE: when adding a non-blog route above, also run
+          `npm run seo:generate` so vercel.json serves it on direct load. */}
+      <Route element={<ContentLayout />}>
+        <Route path="*" element={<NotFound />} />
+      </Route>
     </Routes>
   );
 }

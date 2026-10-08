@@ -9,7 +9,7 @@ import ContactFormSection from '../../components/sections/ContactFormSection.jsx
 import { ScrollReveal } from '../../components/animations/ScrollReveal.jsx'
 import { setSeo } from '../../utils/seo.js'
 import { breadcrumbListSchema } from '../../utils/schema.js'
-import { buildWhatsAppLink } from '../../utils/helpers.js'
+import { buildWhatsAppLink, cleanSlug } from '../../utils/helpers.js'
 import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, SITE_URL } from '../../utils/constants.js'
 import { sanityClient, urlFor } from '../../utils/sanityClient.js'
 import blogHeroImg from '../../assets/images/Blog/Blog.png'
@@ -229,7 +229,7 @@ export default function Blog() {
                       </span>
                     )}
                   </div>
-                  <Button to={`/blog/${FEATURED_ARTICLE.slug}`} variant="primary" size="lg">
+                  <Button to={`/blog/${cleanSlug(FEATURED_ARTICLE.slug)}/`} variant="primary" size="lg">
                     Read the Full Guide
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                       <path d="M5 12h14M13 6l6 6-6 6" />
@@ -321,7 +321,7 @@ export default function Blog() {
             <div className="blog-grid">
               {filteredPosts.map((post, index) => (
                 <ScrollReveal key={post.slug} delay={index * 60}>
-                  <Link to={`/blog/${post.slug}`} style={{ textDecoration: 'none', display: 'flex' }}>
+                  <Link to={`/blog/${cleanSlug(post.slug)}/`} style={{ textDecoration: 'none', display: 'flex' }}>
                     <article className="blog-article-card">
                       <div className="blog-article-card__image">
                         {post.mainImage ? (
