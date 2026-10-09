@@ -73,8 +73,12 @@ echo "== 7. robots.txt / sitemap.xml use the www host"
 "${CURL[@]}" "$BASE/robots.txt" | grep -q "Sitemap: https://www.staticsavvymedia.com/sitemap.xml" && pass=$((pass+1)) || { fail=$((fail+1)); echo "FAIL robots.txt Sitemap line"; }
 "${CURL[@]}" "$BASE/sitemap.xml" | grep -q "<loc>https://staticsavvymedia.com" && { fail=$((fail+1)); echo "FAIL sitemap still has non-www locs"; } || pass=$((pass+1))
 
+echo "== 8. Contact form API is routed to the Vercel Function (GET only: expects 405, sends nothing)"
+check "$BASE/api/submit-contact" 405
+"${CURL[@]}" "$BASE/api/submit-contact" | grep -q '"METHOD_NOT_ALLOWED"' && pass=$((pass+1)) || { fail=$((fail+1)); echo "FAIL /api/submit-contact is not the JSON function"; }
+
 if [[ "$BASE" == "https://www.staticsavvymedia.com" ]]; then
-  echo "== 8. Host redirects unchanged (production only)"
+  echo "== 9. Host redirects unchanged (production only)"
   check "https://staticsavvymedia.com/about/" 308 "https://www.staticsavvymedia.com/about/"
   check "http://www.staticsavvymedia.com/about/" 308 "https://www.staticsavvymedia.com/about/"
 fi

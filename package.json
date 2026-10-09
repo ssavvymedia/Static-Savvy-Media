@@ -10,7 +10,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "seo:generate": "node scripts/seo/generate-seo-files.mjs",
-    "seo:check": "node scripts/seo/generate-seo-files.mjs --check"
+    "seo:check": "node scripts/seo/generate-seo-files.mjs --check",
+    "test:contact": "node --test tests/"
   },
   "dependencies": {
     "@portabletext/react": "^8.0.1",

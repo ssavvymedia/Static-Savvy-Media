@@ -1,7 +1,7 @@
 // Shared HTML/text email template for the contact-form notification.
-// Imported by BOTH netlify/functions/submit-contact.js (production / `netlify dev`)
-// and vite.config.js (the `npm run dev` fallback middleware) so the two paths
-// can never drift out of sync again.
+// Imported by server/contact/submit-contact.js, which backs api/submit-contact.js (Vercel),
+// the `npm run dev` middleware in vite.config.js and netlify/functions (`netlify dev`), so they
+// can never drift out of sync.
 
 function escapeHtml(value = '') {
   return String(value)
@@ -12,7 +12,7 @@ function escapeHtml(value = '') {
     .replace(/'/g, '&#039;')
 }
 
-const SITE_URL = 'https://staticsavvymedia.com'
+const SITE_URL = 'https://www.staticsavvymedia.com'
 
 // Friendly label for a route path, so the email reads "Contact Page" instead
 // of a raw "/contact/". Falls back to the raw path for anything not listed.
@@ -48,7 +48,6 @@ export function buildEnquiryEmail({
     ? `https://wa.me/${whatsappDigits}?text=${encodeURIComponent(`Hi ${name}, thanks for reaching out to Static Savvy Media`)}`
     : null
   const safePageTitle = escapeHtml((sourcePageTitle || '').replace(/\s*[|—-]\s*Static Savvy Media.*$/i, '').trim())
-  const safePagePath = escapeHtml(sourcePagePath || '')
   const pageUrl = sourcePageUrl || (sourcePagePath ? `${SITE_URL}${sourcePagePath}` : SITE_URL)
   const safePageUrl = escapeHtml(pageUrl)
   const safePageLabel = escapeHtml(pageLabel(sourcePagePath))

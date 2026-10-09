@@ -23,21 +23,22 @@ npm run build
 npm run preview
 ```
 
-## Contact Form / Netlify Functions (local dev)
+## Contact form API
 
-The contact form posts to `/.netlify/functions/submit-contact`. Plain `vite`
-(`npm run dev`) only serves the frontend and does **not** run Netlify
-Functions, so the form will 404 locally unless you use the Netlify CLI
-instead:
+The contact form (`src/components/sections/ContactFormSection.jsx`) posts JSON to
+`/api/submit-contact`, a Vercel Function (`api/submit-contact.js`, Node.js runtime). The logic
+(honeypot, reCAPTCHA v2 check, validation, SMTP email via nodemailer) lives in
+`server/contact/submit-contact.js` and is shared by:
 
-```bash
-npm install          # installs netlify-cli as a devDependency
-npm run dev:netlify  # runs `netlify dev` — proxies Vite AND serves the function
-```
+- `api/submit-contact.js`: production and preview deployments on Vercel
+- `vite.config.js`: `npm run dev` serves the same endpoint through a dev middleware
+- `netlify/functions/submit-contact.js`: `npm run dev:netlify` only (legacy, not used in production)
 
-The first time you run it, the CLI will ask you to log in / link the site
-(`netlify link`) if it isn't linked yet. Once deployed to Netlify, the
-function works automatically — no extra setup needed in production.
+On a successful submission the form pushes `{ event: 'generate_lead' }` to the GTM `dataLayer`.
+GTM needs a GA4 Event tag (event name `generate_lead`) fired by a Custom Event trigger on
+`generate_lead` for it to reach GA4.
+
+`npm run test:contact` runs the function against a local fake SMTP server (no email is sent).
 
 ## Environment Variables
 
@@ -52,8 +53,10 @@ Copy `.env.example` to `.env` and fill in real values:
   `index.html` (Google Tag Manager + Microsoft Clarity), listed here for
   reference only.
 
-In the Netlify dashboard, set the same variables under **Site configuration
-→ Environment variables** for production/preview deploys.
+On Vercel, set the server-side variables (SMTP\_\*, MAIL\_FROM, MAIL\_FROM\_NAME, ADMIN\_EMAIL,
+RECAPTCHA\_SECRET\_KEY) and `VITE_RECAPTCHA_SITE_KEY` under **Project → Settings → Environment
+Variables** for Production (and Preview if you test forms on previews). `VITE_` variables are
+baked in at build time, so redeploy after changing them.
 
 ## Hosting, routing & SEO files
 

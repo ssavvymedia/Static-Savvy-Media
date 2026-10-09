@@ -4,6 +4,25 @@ import { ScrollReveal } from '../animations/ScrollReveal.jsx'
 
 const RECAPTCHA_SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY || ''
 
+// Vercel Function: api/submit-contact.js
+const CONTACT_ENDPOINT = '/api/submit-contact'
+
+// GA4 lead conversion, sent through GTM's dataLayer. Called only after the server
+// confirms the enquiry was emailed (HTTP 2xx and success: true).
+function trackLead(service) {
+  try {
+    window.dataLayer = window.dataLayer || []
+    window.dataLayer.push({
+      event: 'generate_lead',
+      form_id: 'contact_form',
+      lead_service: service || undefined,
+      page_path: window.location.pathname,
+    })
+  } catch {
+    // Analytics must never break the form.
+  }
+}
+
 const SERVICES = [
   'SEO',
   'GEO & AEO',
@@ -59,7 +78,7 @@ export default function ContactFormSection() {
     setSubmitError(null)
 
     try {
-      const response = await fetch('/.netlify/functions/submit-contact', {
+      const response = await fetch(CONTACT_ENDPOINT, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -90,6 +109,8 @@ export default function ContactFormSection() {
         return
       }
 
+      // Skip when the honeypot was filled: the server fakes a success for bots.
+      if (!formData.website) trackLead(formData.service)
       setIsSubmitting(false)
       setFormSubmitted(true)
       setFormData({
@@ -102,7 +123,7 @@ export default function ContactFormSection() {
       })
       setRecaptchaToken(null)
       recaptchaRef.current?.reset()
-    } catch (error) {
+    } catch {
       setSubmitError('Network error. Please check your connection and try again.')
       setIsSubmitting(false)
     }
