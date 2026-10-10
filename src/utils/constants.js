@@ -14,6 +14,45 @@ export const CONTACT_PHONE = ''
 export const CONTACT_EMAIL = ''
 export const WHATSAPP_NUMBER = '+91 99440 40345'
 export const WHATSAPP_MESSAGE = 'Hi Static Savvy Media, I would like to know more about your services.'
+
+// Malaysia office (Rawang, Selangor). Owner-confirmed details: calls go to the Malaysian
+// number; WhatsApp stays on the Indian number (WHATSAPP_NUMBER). Keep visible text and
+// LocalBusiness JSON-LD in sync by reading from here.
+export const MALAYSIA_OFFICE = {
+  name: 'Static Savvy Media, Malaysia',
+  phoneDisplay: '+60 12-453 7030',
+  phoneE164: '+60124537030',
+  phoneHref: 'tel:+60124537030',
+  whatsappDisplay: '+91 99440 40345',
+  whatsappNumber: WHATSAPP_NUMBER,
+  hoursDisplay: 'Mon–Fri, 9 AM – 6 PM (MYT)',
+  hoursNote: 'Sat & Sun closed',
+  streetAddress: 'NO.9, Jalan Anggun 2J, Taman Anggun 2',
+  postalCode: '48000',
+  addressLocality: 'Rawang',
+  addressRegion: 'Selangor',
+  addressCountry: 'MY',
+  landmark: 'Near AEON Mall Rawang',
+}
+
+// schema.org fragments for the Malaysia office (used by LocalBusiness / ProfessionalService JSON-LD).
+export const MALAYSIA_POSTAL_ADDRESS = {
+  '@type': 'PostalAddress',
+  streetAddress: MALAYSIA_OFFICE.streetAddress,
+  addressLocality: MALAYSIA_OFFICE.addressLocality,
+  addressRegion: MALAYSIA_OFFICE.addressRegion,
+  postalCode: MALAYSIA_OFFICE.postalCode,
+  addressCountry: MALAYSIA_OFFICE.addressCountry,
+}
+
+export const MALAYSIA_OPENING_HOURS_SPEC = [
+  {
+    '@type': 'OpeningHoursSpecification',
+    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+    opens: '09:00',
+    closes: '18:00',
+  },
+]
 export const SOCIAL_LINKS = {
   instagram: 'https://www.instagram.com/staticsavvymedia',
   facebook: 'https://www.facebook.com/staticsavvymedia',

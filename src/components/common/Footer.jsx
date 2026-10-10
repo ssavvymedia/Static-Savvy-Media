@@ -160,7 +160,7 @@ export default function Footer() {
               </a>
             </div>
 
-            <p>Premium digital marketing agency. Placeholder tagline, populated in the content phase.</p>
+            <p>Digital marketing, SEO and web design for businesses in Madurai, Thoothukudi and Malaysia.</p>
           </div>
 
           <FooterColumn title="Services" links={FOOTER_LINKS.services} />

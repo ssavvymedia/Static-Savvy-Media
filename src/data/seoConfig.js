@@ -1,4 +1,10 @@
-import { SITE_NAME, SITE_URL } from '../utils/constants.js'
+import {
+  SITE_NAME,
+  SITE_URL,
+  MALAYSIA_OFFICE,
+  MALAYSIA_POSTAL_ADDRESS,
+  MALAYSIA_OPENING_HOURS_SPEC,
+} from '../utils/constants.js'
 
 // Single source of truth for the site origin (see utils/constants.js). Canonicals below are
 // normalised to the www + trailing-slash form by setSeo(), whatever form is written here.
@@ -368,7 +374,9 @@ export const seoConfig = {
         '@context': 'https://schema.org',
         '@type': 'ProfessionalService',
         name: `${SITE_NAME} - SEO Malaysia`,
-        address: { '@type': 'PostalAddress', addressLocality: 'Rawang', addressRegion: 'Selangor', addressCountry: 'MY' },
+        telephone: MALAYSIA_OFFICE.phoneE164,
+        address: MALAYSIA_POSTAL_ADDRESS,
+        openingHoursSpecification: MALAYSIA_OPENING_HOURS_SPEC,
       },
       robots: 'index,follow',
     },
@@ -428,7 +436,9 @@ export const seoConfig = {
         '@context': 'https://schema.org',
         '@type': 'ProfessionalService',
         name: `${SITE_NAME} - Local SEO Malaysia`,
-        address: { '@type': 'PostalAddress', addressCountry: 'MY' },
+        telephone: MALAYSIA_OFFICE.phoneE164,
+        address: MALAYSIA_POSTAL_ADDRESS,
+        openingHoursSpecification: MALAYSIA_OPENING_HOURS_SPEC,
       },
       robots: 'index,follow',
     },
@@ -488,7 +498,9 @@ export const seoConfig = {
         '@context': 'https://schema.org',
         '@type': 'ProfessionalService',
         name: `${SITE_NAME} - AI Automation Malaysia`,
-        address: { '@type': 'PostalAddress', addressCountry: 'MY' },
+        telephone: MALAYSIA_OFFICE.phoneE164,
+        address: MALAYSIA_POSTAL_ADDRESS,
+        openingHoursSpecification: MALAYSIA_OPENING_HOURS_SPEC,
       },
       robots: 'index,follow',
     },
@@ -584,14 +596,9 @@ export const seoConfig = {
         '@context': 'https://schema.org',
         '@type': 'ProfessionalService',
         name: `${SITE_NAME} Malaysia`,
-        address: {
-          '@type': 'PostalAddress',
-          streetAddress: '2, 9, Jalan Anggun 2J, Taman Anggun',
-          addressLocality: 'Rawang',
-          addressRegion: 'Selangor',
-          postalCode: '48000',
-          addressCountry: 'MY',
-        },
+        telephone: MALAYSIA_OFFICE.phoneE164,
+        address: MALAYSIA_POSTAL_ADDRESS,
+        openingHoursSpecification: MALAYSIA_OPENING_HOURS_SPEC,
       },
       robots: 'index,follow',
     },
