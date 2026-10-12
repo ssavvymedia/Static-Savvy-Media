@@ -17,6 +17,7 @@ import {
   WHATSAPP_NUMBER,
   WHATSAPP_MESSAGE,
   SITE_URL,
+  GOOGLE_TRUST_LINE,
 } from '../../../utils/constants.js'
 import '../../../styles/pages/local-seo-madurai.css'
 
@@ -25,10 +26,10 @@ import '../../../styles/pages/local-seo-madurai.css'
    ============================================================ */
 
 const PAGE_TITLE =
-  'Local SEO Madurai, Google Maps & GBP Optimization for Madurai Businesses | Static Savvy Media'
+  'Local SEO Madurai: Google Maps & GBP | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
-  'Local SEO in Madurai focused on Google Business Profile, Google Maps visibility, citations, reviews, local landing pages and local search optimization for Madurai businesses.'
+  'Get found on Google Maps in Madurai. GBP optimisation, citations & review strategy from a team rated 4.9★ from 108 Google reviews. WhatsApp us today.'
 
 const HERO_EYEBROW = 'LOCAL SEO · MADURAI'
 
@@ -341,13 +342,14 @@ export default function LocalSEO_Madurai() {
               </ScrollReveal>
               <ScrollReveal delay={240}>
                 <div className="lseo-hero__actions">
-                  <Button href={whatsappHref} variant="primary" size="lg">
-                    Get a Local SEO Consultation
+                  <Button href={whatsappHref} variant="primary" size="lg" target="_blank" rel="noopener noreferrer">
+                    WhatsApp for a Free Consultation
                   </Button>
-                  <Button to="/services/local-seo/" variant="outline" size="lg">
-                    Explore Local SEO Services
+                  <Button to="/contact/" variant="outline" size="lg">
+                    Contact Us
                   </Button>
                 </div>
+                <p className="lseo-hero__trust">{GOOGLE_TRUST_LINE}</p>
               </ScrollReveal>
             </div>
           </div>

@@ -1468,3 +1468,12 @@
   }
 }
 
+
+/* Trust line under hero CTAs (Madurai CTR, 2026-10). Full-width row inside .hero__actions. */
+.hero__trust {
+  flex-basis: 100%;
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  text-align: inherit;
+}

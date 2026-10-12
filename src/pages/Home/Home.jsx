@@ -4,26 +4,27 @@ import WhatsAppIcon from '../../components/common/WhatsAppIcon.jsx'
 import { setSeo } from '../../utils/seo.js'
 import { organizationSchema, webSiteSchema, faqPageSchema } from '../../utils/schema.js'
 import { buildWhatsAppLink } from '../../utils/helpers.js'
-import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, SITE_URL } from '../../utils/constants.js'
+import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, SITE_URL, GOOGLE_TRUST_LINE } from '../../utils/constants.js'
 
 import maduraiImage from '../../assets/images/locations/madurai.webp'
 import thoothukudiImage from '../../assets/images/locations/thoothukudi.webp'
 import malaysiaImage from '../../assets/images/locations/malaysia.webp'
 
 const PAGE_TITLE =
-  'Digital Marketing Agency Madurai, SEO, GEO & AI Search | Static Savvy Media'
+  'Digital Marketing Company in Madurai | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
-  "Static Savvy Media: Madurai's AI-powered digital marketing agency. SEO, GEO/AEO, Local SEO, and Google Ads for Tamil Nadu and Malaysia businesses. WhatsApp: +91-99440-40345."
+  'Madurai digital marketing agency rated 4.9★ from 108 Google reviews. SEO, Local SEO, Google Ads & AI search for local businesses. WhatsApp us today.'
 
 const HERO = {
   eyebrow: 'Premium Digital Marketing Agency',
   title: (
     <>
-      Get Found by Google. Get Cited by ChatGPT.{' '}
-      <span className="text-gradient">Win Clients from Both.</span>
+      Digital Marketing Company in Madurai: Get Found by Google.{' '}
+      <span className="text-gradient">Get Cited by ChatGPT.</span>
     </>
   ),
+  trust: GOOGLE_TRUST_LINE,
   intro:
     'Your next client is not just searching Google. They are asking ChatGPT. They are querying Perplexity. They are using AI-powered voice search. Static Savvy Media is the digital marketing agency built for this new reality, the only agency in Tamil Nadu purpose-built to get your business visible across traditional search and AI-powered answer engines.',
 }

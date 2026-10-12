@@ -15,6 +15,13 @@ export const CONTACT_EMAIL = ''
 export const WHATSAPP_NUMBER = '+91 99440 40345'
 export const WHATSAPP_MESSAGE = 'Hi Static Savvy Media, I would like to know more about your services.'
 
+// Madurai Google Business Profile rating, owner-supplied (2026-10-12). Update both values together
+// when the profile changes. Visible text only: do NOT emit as AggregateRating/Review JSON-LD
+// (Google treats self-hosted first-party review markup as self-serving).
+export const GOOGLE_RATING = '4.9'
+export const GOOGLE_REVIEW_COUNT = 108
+export const GOOGLE_TRUST_LINE = `${GOOGLE_RATING}★ from ${GOOGLE_REVIEW_COUNT} Google reviews · Madurai office`
+
 // Malaysia office (Rawang, Selangor). Owner-confirmed details: calls go to the Malaysian
 // number; WhatsApp stays on the Indian number (WHATSAPP_NUMBER). Keep visible text and
 // LocalBusiness JSON-LD in sync by reading from here.

@@ -537,3 +537,9 @@
     transform: rotate(90deg);
   }
 }
+
+.seo-mdu-hero__trust {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+}

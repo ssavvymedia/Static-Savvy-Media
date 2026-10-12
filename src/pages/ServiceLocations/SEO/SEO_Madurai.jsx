@@ -17,6 +17,7 @@ import {
   WHATSAPP_NUMBER,
   WHATSAPP_MESSAGE,
   SITE_URL,
+  GOOGLE_TRUST_LINE,
 } from '../../../utils/constants.js'
 import '../../../styles/pages/seo-madurai.css'
 
@@ -25,10 +26,10 @@ import '../../../styles/pages/seo-madurai.css'
    ============================================================ */
 
 const PAGE_TITLE =
-  'SEO Agency in Madurai, Search Engine Optimization Tamil Nadu | Static Savvy Media'
+  'SEO Company in Madurai for More Leads | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
-  'SEO services in Madurai for businesses that want stronger Google visibility, better search rankings and qualified organic enquiries through technical SEO, keyword strategy, content and on-page optimization.'
+  'SEO company in Madurai rated 4.9★ from 108 Google reviews. Technical, on-page & local SEO that turns Google searches into enquiries. WhatsApp us today.'
 
 const HERO_EYEBROW = 'SEO · MADURAI'
 
@@ -345,13 +346,14 @@ export default function SEO_Madurai() {
               </ScrollReveal>
               <ScrollReveal delay={240}>
                 <div className="seo-mdu-hero__actions">
-                  <Button href={whatsappHref} variant="primary" size="lg">
-                    Get an SEO Consultation
+                  <Button href={whatsappHref} variant="primary" size="lg" target="_blank" rel="noopener noreferrer">
+                    WhatsApp for a Free Consultation
                   </Button>
-                  <Button to="/services/seo/" variant="outline" size="lg">
-                    Explore SEO Services
+                  <Button to="/contact/" variant="outline" size="lg">
+                    Contact Us
                   </Button>
                 </div>
+                <p className="seo-mdu-hero__trust">{GOOGLE_TRUST_LINE}</p>
               </ScrollReveal>
             </div>
           </div>

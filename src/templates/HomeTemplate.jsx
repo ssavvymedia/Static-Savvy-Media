@@ -35,15 +35,21 @@ export default function HomeTemplate({
         subtitle={hero?.intro}
         layout="two-column"
         actions={
-          <Button
-            href={whatsappHref}
-            variant="primary"
-            size="lg"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            WhatsApp: +91-99440-40345
-          </Button>
+          <>
+            <Button
+              href={whatsappHref}
+              variant="primary"
+              size="lg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              WhatsApp for a Free Consultation
+            </Button>
+            <Button to="/contact/" variant="outline" size="lg">
+              Contact Us
+            </Button>
+            {hero?.trust && <p className="hero__trust">{hero.trust}</p>}
+          </>
         }
       >
         <div className="hero-image-container">

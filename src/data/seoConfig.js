@@ -16,15 +16,15 @@ const BASE_URL = SITE_URL
  */
 export const seoConfig = {
   '/': {
-    title: 'Digital Marketing Agency Madurai, SEO, GEO & AI Search | Static Savvy Media',
+    title: 'Digital Marketing Company in Madurai | Static Savvy Media',
     slug: '',
     seo: {
-      title: 'Digital Marketing Agency Madurai, SEO, GEO & AI Search | Static Savvy Media',
-      description: "Static Savvy Media: Madurai's AI-powered digital marketing agency. SEO, GEO/AEO, Local SEO, and Google Ads for Tamil Nadu and Malaysia businesses. WhatsApp: +91-99440-40345.",
+      title: 'Digital Marketing Company in Madurai | Static Savvy Media',
+      description: 'Madurai digital marketing agency rated 4.9★ from 108 Google reviews. SEO, Local SEO, Google Ads & AI search for local businesses. WhatsApp us today.',
       canonical: `${BASE_URL}/`,
       focusKeyword: 'digital marketing agency',
-      ogTitle: 'Digital Marketing Agency Madurai, SEO, GEO & AI Search | Static Savvy Media',
-      ogDescription: "Static Savvy Media: Madurai's AI-powered digital marketing agency. SEO, GEO/AEO, Local SEO, and Google Ads for Tamil Nadu and Malaysia businesses.",
+      ogTitle: 'Digital Marketing Company in Madurai | Static Savvy Media',
+      ogDescription: 'Madurai digital marketing agency rated 4.9★ from 108 Google reviews. SEO, Local SEO, Google Ads & AI search for local businesses. WhatsApp us today.',
       ogImage: `${BASE_URL}/og/heroimage.jpg`,
       schema: {
         '@context': 'https://schema.org',
@@ -320,15 +320,15 @@ export const seoConfig = {
 
   // Service Location Pages
   '/services/seo/madurai': {
-    title: 'SEO Agency Madurai — Search Engine Optimization | Static Savvy Media',
+    title: 'SEO Company in Madurai for More Leads | Static Savvy Media',
     slug: 'services/seo/madurai',
     seo: {
-      title: 'SEO Agency Madurai — Search Engine Optimization | Static Savvy Media',
-      description: 'Leading SEO agency in Madurai providing data-driven technical, on-page, and local search engine optimization for businesses.',
+      title: 'SEO Company in Madurai for More Leads | Static Savvy Media',
+      description: 'SEO company in Madurai rated 4.9★ from 108 Google reviews. Technical, on-page & local SEO that turns Google searches into enquiries. WhatsApp us today.',
       canonical: `${BASE_URL}/services/seo/madurai`,
       focusKeyword: 'SEO agency Madurai',
-      ogTitle: 'SEO Agency Madurai — Search Engine Optimization | Static Savvy Media',
-      ogDescription: 'Leading SEO agency in Madurai providing data-driven technical, on-page, and local SEO.',
+      ogTitle: 'SEO Company in Madurai for More Leads | Static Savvy Media',
+      ogDescription: 'SEO company in Madurai rated 4.9★ from 108 Google reviews. Technical, on-page & local SEO that turns Google searches into enquiries. WhatsApp us today.',
       ogImage: `${BASE_URL}/og/locations-01madurai.jpg`,
       schema: {
         '@context': 'https://schema.org',
@@ -382,15 +382,15 @@ export const seoConfig = {
     },
   },
   '/services/local-seo/madurai': {
-    title: 'Local SEO Services Madurai — Rank #1 on Google Maps | Static Savvy Media',
+    title: 'Local SEO Madurai: Google Maps & GBP | Static Savvy Media',
     slug: 'services/local-seo/madurai',
     seo: {
-      title: 'Local SEO Services Madurai — Rank #1 on Google Maps | Static Savvy Media',
-      description: 'Dominating local searches and Google Maps in Madurai. Optimize your Google Business Profile and attract local store visits.',
+      title: 'Local SEO Madurai: Google Maps & GBP | Static Savvy Media',
+      description: 'Get found on Google Maps in Madurai. GBP optimisation, citations & review strategy from a team rated 4.9★ from 108 Google reviews. WhatsApp us today.',
       canonical: `${BASE_URL}/services/local-seo/madurai`,
       focusKeyword: 'local SEO Madurai',
-      ogTitle: 'Local SEO Services Madurai | Static Savvy Media',
-      ogDescription: 'Dominating local searches and Google Maps in Madurai. Optimize your Google Business Profile.',
+      ogTitle: 'Local SEO Madurai: Google Maps & GBP | Static Savvy Media',
+      ogDescription: 'Get found on Google Maps in Madurai. GBP optimisation, citations & review strategy from a team rated 4.9★ from 108 Google reviews. WhatsApp us today.',
       ogImage: `${BASE_URL}/og/locations-01madurai.jpg`,
       schema: {
         '@context': 'https://schema.org',
