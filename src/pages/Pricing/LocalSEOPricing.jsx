@@ -97,7 +97,7 @@ export default function LocalSEOPricing({ country: propCountry }) {
       <HeroSection
         layout="two-column"
         eyebrow={`LOCAL SEO PRICING (${currencyCode})`}
-        title={`Local SEO Pricing (${countryName}), Google Maps Domination Plans`}
+        title={`Local SEO Pricing (${countryName}), Google Maps Visibility Plans`}
         subtitle={HERO_SUBTITLE}
         actions={<Button href={whatsappHref} variant="primary" size="lg" target="_blank" rel="noopener noreferrer">WhatsApp: +91-99440-40345</Button>}
       >

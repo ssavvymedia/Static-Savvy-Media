@@ -142,7 +142,7 @@ const FAQS = [
   {
     question: 'Do you create content in Bahasa Malaysia?',
     answer:
-      'Yes. We create Bahasa Malaysia content for social media, website pages, and blog posts. All BM content is written or reviewed by native speakers, not machine-translated from English.',
+      'Yes. We create Bahasa Malaysia content for social media, website pages, and blog posts. BM content is written or reviewed by a person, not published straight from machine translation.',
   },
   {
     question: 'Can you help with e-commerce on Lazada and Shopee Malaysia?',

@@ -57,7 +57,7 @@ const SERVICES = [
   {
     number: '03',
     title: 'Local SEO & Google Business Profile',
-    text: 'Dominating the Google Maps pack for “near me” searches in Madurai.',
+    text: 'Improving your Google Maps visibility for “near me” searches in Madurai.',
     path: '/services/local-seo/',
     icon: 'local',
     color: 'icon-badge--cyan',
@@ -160,7 +160,7 @@ const FAQS = [
   {
     question: 'Do you offer Tamil-language digital marketing?',
     answer:
-      "Yes. We create Tamil-language content for social media, local SEO, and blog posts for clients targeting Tamil Nadu’s Tamil-speaking audience, particularly for voice search optimisation. Our team is Tamil-native and we do not rely on machine translation.",
+      "Yes. We create Tamil-language content for social media, local SEO, and blog posts for clients targeting Tamil Nadu’s Tamil-speaking audience, particularly for voice search optimisation. Our Madurai team writes Tamil content in-house rather than relying on machine translation.",
   },
   {
     question: 'Can I come to your office in Madurai for a consultation?',

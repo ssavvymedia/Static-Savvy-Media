@@ -90,11 +90,11 @@ const FAQS = [
   },
   {
     question: 'How do you measure GEO and AEO success?',
-    answer: 'We track: appearance frequency in Google AI Overviews (via Search Console), featured snippet capture rate, direct answer box appearances, branded query growth, and inbound enquiry source attribution. We also manually test your citation frequency in ChatGPT and Perplexity monthly.',
+    answer: 'We track: organic clicks and impressions in Search Console, featured snippet appearances, direct answer box appearances, branded query growth, and inbound enquiry source attribution. We also manually test your citation frequency in ChatGPT and Perplexity monthly.',
   },
   {
-    question: 'Is Static Savvy Media the only GEO and AEO agency in Tamil Nadu?',
-    answer: 'To our knowledge, yes. We are the first and currently the only agency in Tamil Nadu to offer GEO and AEO as a primary, dedicated service, not an add-on or marketing label applied to standard SEO work. Deepan Kanz has been specializing in AI search visibility since 2024.',
+    question: 'Is GEO and AEO a separate service at Static Savvy Media?',
+    answer: 'Yes. We offer GEO and AEO as a dedicated service with its own deliverables, not just a label on standard SEO work. It is led by our founder, Deepan Kanz, and usually runs alongside SEO because the two share the same foundations.',
   },
 ]
 
@@ -657,7 +657,7 @@ export default function GEOAEO() {
       <CTASection
         eyebrow="Get Started"
         title="Be the first business in your category to be cited by AI search."
-        subtitle="The window for first-mover advantage in GEO and AEO is open right now. Message us on WhatsApp."
+        subtitle="Ask us for a free check of how AI tools describe your business today. Message us on WhatsApp."
         primaryLabel="Start Your GEO/AEO Strategy"
         primaryHref={whatsappHref}
       />

@@ -50,7 +50,7 @@ const PLATFORMS = [
     title: "Facebook",
     icon: "facebook",
     content:
-      "Community building and paid advertising. Facebook’s targeting is unmatched for local audience reach, ideal for event promotion, lead generation campaigns, and retargeting website visitors.",
+      "Community building and paid advertising. Facebook’s location and interest targeting is strong for local audiences, ideal for event promotion, lead generation campaigns, and retargeting website visitors.",
     color: "facebook",
   },
   {
@@ -144,7 +144,7 @@ const FAQS = [
   {
     question: "Can you create content in Tamil and Bahasa Malaysia?",
     answer:
-      "Yes. We create bilingual content, Tamil and English for Tamil Nadu markets, English and Bahasa Malaysia for Malaysia markets. All Tamil and Bahasa content is written by native speakers, we do not rely on machine translation.",
+      "Yes. We create bilingual content, Tamil and English for Tamil Nadu markets, English and Bahasa Malaysia for Malaysia markets. Tamil and Bahasa Malaysia content is written and checked by people, not published straight from machine translation.",
   },
   {
     question: "How long before social media shows real business results?",

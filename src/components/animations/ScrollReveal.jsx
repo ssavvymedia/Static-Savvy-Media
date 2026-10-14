@@ -43,3 +43,5 @@ export function ScrollReveal({
     </Tag>
   );
 }
+
+export default ScrollReveal;

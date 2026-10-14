@@ -123,7 +123,7 @@ const MARKETS = [
 const WHY_US = [
   {
     title: 'GEO & AEO First',
-    text: 'The only agency in Tamil Nadu that treats AI search visibility as a primary deliverable, not an afterthought.',
+    text: 'AI search visibility (GEO and AEO) is a core deliverable in our plans, not an afterthought.',
   },
   {
     title: 'Transparent, Verified Results',

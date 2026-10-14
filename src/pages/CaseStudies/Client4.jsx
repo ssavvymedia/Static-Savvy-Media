@@ -15,7 +15,7 @@ import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, SITE_URL } from '../../utils/constan
 import '../../styles/pages/client4.css'
 import client4HeroImg from '../../assets/images/CaseStudies/04Client.webp'
 
-const META_TITLE = 'How [Thoothukudi Industrial Client] Doubled Leads with Google Ads | Static Savvy Media'
+const META_TITLE = 'Google Ads Lead Generation for a Thoothukudi Industrial Business | Static Savvy Media'
 const META_DESC = 'See how a Thoothukudi industrial business used Google Ads and social media marketing to strengthen digital visibility, generate relevant enquiries and improve its lead-generation system.'
 
 const SUMMARY = [
@@ -124,7 +124,7 @@ export default function Client4() {
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'How [Thoothukudi Industrial Client] Doubled Leads with Google Ads',
+    headline: 'Google Ads Lead Generation for a Thoothukudi Industrial Business',
     description: META_DESC,
     author: { '@type': 'Organization', name: 'Static Savvy Media' },
     publisher: { '@type': 'Organization', name: 'Static Savvy Media', url: SITE_URL },
@@ -153,7 +153,7 @@ export default function Client4() {
       <HeroSection
         layout="two-column"
         eyebrow="CASE STUDY · THOOTHUKUDI · GOOGLE ADS + SOCIAL MEDIA"
-        title="How [Thoothukudi Industrial Client] Doubled Leads with Google Ads"
+        title="Google Ads Lead Generation for a Thoothukudi Industrial Business"
         subtitle="A Thoothukudi-focused industrial case study demonstrating how targeted Google Ads, social media marketing and conversion-focused digital strategy can help B2B businesses generate stronger inbound enquiry opportunities."
         actions={
           <>
@@ -163,7 +163,7 @@ export default function Client4() {
         }
       >
         <div className="hero__visual-side">
-          <img src={client4HeroImg} width={1536} height={1024} fetchPriority="high" alt="How [Thoothukudi Industrial Client] Doubled Leads with Google Ads" className="hero__image" />
+          <img src={client4HeroImg} width={1536} height={1024} fetchPriority="high" alt="Google Ads Lead Generation for a Thoothukudi Industrial Business" className="hero__image" />
         </div>
       </HeroSection>
 
@@ -348,9 +348,8 @@ export default function Client4() {
           <SectionHeading eyebrow="THE RESULTS" title="The Results" />
           <div className="c4-results-primary">
             <div className="c4-results-headline">
-              <div className="c4-results-big-number">2X</div>
-              <div className="c4-results-label">Leads</div>
-              <div className="c4-results-sublabel">Verified Lead Growth</div>
+              <div className="c4-results-label">More qualified enquiries</div>
+              <div className="c4-results-sublabel">Tracked through WhatsApp, calls and forms</div>
             </div>
           </div>
           <div className="c4-results-grid">
@@ -362,7 +361,7 @@ export default function Client4() {
             ))}
           </div>
           <div className="c4-results-note">
-            <p><strong>Important:</strong> The headline "Doubled Leads" remains only if the business has verified data supporting the claim. Supporting metrics are displayed once verified campaign data is available.</p>
+            <p>Specific figures will be published here only once verified campaign data can be shared.</p>
           </div>
         </section>
       </ScrollReveal>

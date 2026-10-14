@@ -118,7 +118,7 @@ const FAQS = [
   {
     question: 'Do I need to speak Bahasa Malaysia to work with your team?',
     answer:
-      'No. Our team communicates in English and Bahasa Malaysia. For Malaysian clients who prefer BM communication, we accommodate this. All content we produce in BM is written or reviewed by native speakers.',
+      'No. Our team communicates in English and Bahasa Malaysia. For Malaysian clients who prefer BM communication, we accommodate this. BM content is written or reviewed by a person before it is published.',
   },
   {
     question: 'Can you help my Malaysian business reach the Tamil diaspora in Singapore and Australia?',

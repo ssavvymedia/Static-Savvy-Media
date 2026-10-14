@@ -238,7 +238,7 @@ export default function LocalSEO() {
       <HeroSection
         layout="two-column"
         eyebrow="Service"
-        title="Local SEO Services, Dominate Google Maps in Your City"
+        title="Local SEO Services, Get Found on Google Maps in Your City"
         subtitle={HERO_SUBTITLE}
         actions={
           <Button
