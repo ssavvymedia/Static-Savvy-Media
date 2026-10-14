@@ -234,7 +234,7 @@ const WHY_CHOOSE = [
   {
     title: 'GEO & AEO First',
     description:
-      'The only agency in Tamil Nadu that treats AI search visibility as a primary deliverable, not an afterthought.',
+      'AI search visibility (GEO and AEO) is a core deliverable in our plans, not an afterthought.',
     icon: (
       <div className="premium-icon-container premium-icon-container--purple">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">

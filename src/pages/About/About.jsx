@@ -64,7 +64,7 @@ const MARKETS = [
 const WHY_CHOOSE = [
   {
     title: 'GEO & AEO First',
-    text: 'The only agency in Tamil Nadu that treats AI search visibility as a primary deliverable, not an afterthought.',
+    text: 'AI search visibility (GEO and AEO) is a core deliverable in our plans, not an afterthought.',
     icon: '✨',
   },
   {
@@ -559,7 +559,7 @@ export default function About() {
                 <h3 className="about-founder-card__name">Deepan Kanz</h3>
                 <p className="about-founder-card__role">Founder &amp; AI Search Specialist</p>
                 <p className="about-founder-card__bio">
-                  Deepan Kanz founded Static Savvy Media with a single focus: building digital marketing that works in the era of AI search. He is Tamil Nadu&apos;s first dedicated practitioner of Generative Engine Optimization (GEO) and Answer Engine Optimization (AEO), and the person behind Static Savvy Media&apos;s GEO/AEO methodology.
+                  Deepan Kanz founded Static Savvy Media with a single focus: building digital marketing that works in the era of AI search. He specialises in Generative Engine Optimization (GEO) and Answer Engine Optimization (AEO), and the person behind Static Savvy Media&apos;s GEO/AEO methodology.
                 </p>
                 <p className="about-founder-card__bio">
                   His background in digital marketing spans SEO, paid search, social media and content strategy. His focus shifted significantly in 2024 when AI search engines moved from experimental to mainstream. He recognized that the fundamental mechanics of online discovery were shifting, and that agencies still building 2019-era SEO strategies were going to leave their clients behind.

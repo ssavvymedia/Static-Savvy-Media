@@ -33,13 +33,13 @@ const PAGE_TITLE =
   'GEO & AEO Optimization India, Get Cited by ChatGPT, Perplexity & Google AI | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
-  "Tamil Nadu's first GEO and AEO specialist agency. We structure your online presence so ChatGPT, Perplexity, and Google AI Overviews cite your business as the authoritative answer in your category."
+  "GEO and AEO services from Madurai. We structure your online presence so ChatGPT, Perplexity and Google AI Overviews can understand, trust and cite your business."
 
 const HERO_SUBTITLE =
-  'When someone asks ChatGPT "Which digital marketing agency should I hire in Madurai?", your business either appears in the answer, or it doesn’t. Traditional SEO determines what shows in the blue links. GEO and AEO determine what shows in the AI’s response itself. We are the only agency in Tamil Nadu purpose-built to optimize for both.'
+  'When someone asks ChatGPT "Which digital marketing agency should I hire in Madurai?", your business either appears in the answer, or it doesn’t. Traditional SEO determines what shows in the blue links. GEO and AEO determine what shows in the AI’s response itself. We offer AI search optimisation (GEO and AEO) alongside SEO, so you can be visible in both.'
 
 const FLAGSHIP_HIGHLIGHT =
-  "Static Savvy Media is Tamil Nadu’s first GEO & AEO specialist agency. AI search optimization is not an add-on here, it is the core of everything we build."
+  "At Static Savvy Media, AI search optimisation (GEO and AEO) is a dedicated service, not an add-on, and it shapes how we plan SEO and content."
 
 const SEARCH_REALITY = {
   paragraph1:
@@ -185,7 +185,7 @@ const FAQS = [
   {
     question: 'Is GEO/AEO only relevant for large businesses?',
     answer:
-      'Not at all. Local SMEs in Tamil Nadu and Malaysia have a significant opportunity because most competitors have not yet heard of GEO or AEO. Being the first business in your local category to build AI search visibility is a substantial competitive advantage that compounds over time.',
+      'Not at all. Local SMEs in Tamil Nadu and Malaysia can benefit, because AI tools often answer local questions such as which clinic, shop or supplier to choose. Building clear, well-structured information early helps your business become a reliable source for those answers.',
   },
   {
     question: 'How do you measure GEO and AEO success?',
@@ -193,9 +193,9 @@ const FAQS = [
       'We track: appearance frequency in Google AI Overviews (via Search Console), featured snippet capture rate, direct answer box appearances, branded query growth, and inbound enquiry source attribution. We also manually test your citation frequency in ChatGPT and Perplexity monthly.',
   },
   {
-    question: 'Is Static Savvy Media the only GEO and AEO agency in Tamil Nadu?',
+    question: 'Is GEO and AEO a separate service at Static Savvy Media?',
     answer:
-      'To our knowledge, yes. We are the first and currently the only agency in Tamil Nadu to offer GEO and AEO as a primary, dedicated service, not an add-on or marketing label applied to standard SEO work. Deepan Kanz has been specializing in AI search visibility since 2024.',
+      'Yes. We offer GEO and AEO as a dedicated service with its own deliverables, not just a label on standard SEO work. It is led by our founder, Deepan Kanz, and usually runs alongside SEO because the two share the same foundations.',
   },
 ]
 
@@ -212,9 +212,9 @@ const RELATED_LOCATIONS = [
 ]
 
 const CTA = {
-  title: 'Be the first business in your category to be cited by AI search.',
+  title: 'Make your business easier for AI search to find and cite.',
   subtitle:
-    'The window for first-mover advantage in GEO and AEO is open right now. Message us on WhatsApp.',
+    'Ask us for a free check of how AI tools describe your business today. Message us on WhatsApp.',
   label: (
     <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.55rem', verticalAlign: 'middle' }}>
       <WhatsAppIcon size={22} />

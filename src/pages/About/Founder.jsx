@@ -216,7 +216,7 @@ export default function Founder() {
                   Deepan Kanz founded Static Savvy Media with a single focus: building digital marketing that works in the era of <span className="founder-editorial__highlight">AI Search</span>.
                 </p>
                 <p>
-                  He is Tamil Nadu&apos;s first dedicated practitioner of Generative Engine Optimization (<span className="founder-editorial__highlight">GEO</span>) and Answer Engine Optimization (<span className="founder-editorial__highlight--cyan">AEO</span>), and the person behind Static Savvy Media&apos;s <span className="founder-editorial__highlight--pink">GEO/AEO</span> methodology.
+                  He specialises in Generative Engine Optimization (<span className="founder-editorial__highlight">GEO</span>) and Answer Engine Optimization (<span className="founder-editorial__highlight--cyan">AEO</span>), and the person behind Static Savvy Media&apos;s <span className="founder-editorial__highlight--pink">GEO/AEO</span> methodology.
                 </p>
                 <p>
                   His work in <span className="founder-editorial__highlight">Digital Marketing</span> is focused on making businesses visible across traditional search and the rapidly growing world of AI search.
