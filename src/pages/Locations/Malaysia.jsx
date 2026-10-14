@@ -152,8 +152,10 @@ const FAQS = [
 ]
 
 const RELATED_SERVICES = [
-  { name: 'SEO', path: '/services/seo/' },
-  { name: 'Local SEO', path: '/services/local-seo/' },
+  { name: 'SEO in Kuala Lumpur', path: '/services/seo/kuala-lumpur/' },
+  { name: 'Digital Marketing in Kuala Lumpur', path: '/locations/kuala-lumpur/' },
+  { name: 'SEO Malaysia', path: '/services/seo/malaysia/' },
+  { name: 'Local SEO Malaysia', path: '/services/local-seo/malaysia/' },
   { name: 'GEO & AEO, AI Search', path: '/services/geo-aeo-ai-search/' },
   { name: 'Google Ads', path: '/services/google-ads/' },
   { name: 'Social Media Marketing', path: '/services/social-media-marketing/' },
@@ -162,6 +164,7 @@ const RELATED_SERVICES = [
 ]
 
 const OTHER_LOCATIONS = [
+  { name: 'Kuala Lumpur', path: '/locations/kuala-lumpur/' },
   { name: 'Madurai', path: '/locations/madurai/' },
   { name: 'Thoothukudi', path: '/locations/thoothukudi/' },
   { name: 'All Locations', path: '/locations/' },

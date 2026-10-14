@@ -24,6 +24,8 @@ import ProductPhotographyCreativeDesign from '../pages/Services/ProductPhotograp
 import SEO_Madurai from '../pages/ServiceLocations/SEO/SEO_Madurai.jsx'
 import SEO_Thoothukudi from '../pages/ServiceLocations/SEO/SEO_Thoothukudi.jsx'
 import SEO_Malaysia from '../pages/ServiceLocations/SEO/SEO_Malaysia.jsx'
+import SEO_KualaLumpur from '../pages/ServiceLocations/SEO/SEO_KualaLumpur.jsx'
+import SocialMedia_Madurai from '../pages/ServiceLocations/SocialMedia/SocialMedia_Madurai.jsx'
 import LocalSEO_Madurai from '../pages/ServiceLocations/LocalSEO/LocalSEO_Madurai.jsx'
 import LocalSEO_Thoothukudi from '../pages/ServiceLocations/LocalSEO/LocalSEO_Thoothukudi.jsx'
 import LocalSEO_Malaysia from '../pages/ServiceLocations/LocalSEO/LocalSEO_Malaysia.jsx'
@@ -35,6 +37,7 @@ import Locations from '../pages/Locations/Locations.jsx'
 import Madurai from '../pages/Locations/Madurai.jsx'
 import Thoothukudi from '../pages/Locations/Thoothukudi.jsx'
 import Malaysia from '../pages/Locations/Malaysia.jsx'
+import KualaLumpur from '../pages/Locations/KualaLumpur.jsx'
 
 import Industries from '../pages/Industries/Industries.jsx'
 import RetailEcommerce from '../pages/Industries/RetailEcommerce.jsx'
@@ -124,6 +127,11 @@ export default function AppRoutes() {
         <Route path="/services/seo/madurai" element={<SEO_Madurai />} />
         <Route path="/services/seo/thoothukudi" element={<SEO_Thoothukudi />} />
         <Route path="/services/seo/malaysia" element={<SEO_Malaysia />} />
+        <Route path="/services/seo/kuala-lumpur" element={<SEO_KualaLumpur />} />
+        <Route
+          path="/services/social-media-marketing/madurai"
+          element={<SocialMedia_Madurai />}
+        />
         <Route
           path="/services/local-seo/madurai"
           element={<LocalSEO_Madurai />}
@@ -153,6 +161,7 @@ export default function AppRoutes() {
         <Route path="/locations/madurai" element={<Madurai />} />
         <Route path="/locations/thoothukudi" element={<Thoothukudi />} />
         <Route path="/locations/malaysia" element={<Malaysia />} />
+        <Route path="/locations/kuala-lumpur" element={<KualaLumpur />} />
 
         <Route path="/industries" element={<Industries />} />
         <Route

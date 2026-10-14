@@ -154,6 +154,7 @@ const FAQS = [
 ]
 
 const RELATED_SERVICES = [
+  { name: 'Social Media Marketing in Madurai', path: '/services/social-media-marketing/madurai/' },
   { name: 'Google Ads', path: '/services/google-ads/' },
   { name: 'AI Video Creation', path: '/services/ai-video-creation/' },
   { name: 'Corporate Photography & Video', path: '/services/corporate-photography-video/' },

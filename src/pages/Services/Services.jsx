@@ -19,6 +19,18 @@ const PAGE_TITLE =
 const PAGE_DESCRIPTION =
   'Digital marketing services in Madurai, SEO, GEO/AEO, Local SEO, Google Ads, social media, website design and AI automation from Static Savvy Media. WhatsApp: +91-99440-40345.'
 
+const LOCATION_SERVICE_LINKS = [
+  { name: 'SEO Company in Madurai', path: '/services/seo/madurai/' },
+  { name: 'Local SEO in Madurai', path: '/services/local-seo/madurai/' },
+  { name: 'Social Media Marketing in Madurai', path: '/services/social-media-marketing/madurai/' },
+  { name: 'GEO & AEO in Madurai', path: '/services/geo-aeo-ai-search/madurai/' },
+  { name: 'SEO in Thoothukudi', path: '/services/seo/thoothukudi/' },
+  { name: 'Google Ads in Thoothukudi', path: '/services/google-ads/thoothukudi/' },
+  { name: 'SEO in Kuala Lumpur', path: '/services/seo/kuala-lumpur/' },
+  { name: 'Digital Marketing in Kuala Lumpur', path: '/locations/kuala-lumpur/' },
+  { name: 'SEO in Malaysia', path: '/services/seo/malaysia/' },
+]
+
 const INTRO =
   'Static Savvy Media is a Madurai-based digital marketing agency delivering services across Search Engine Optimization (SEO), GEO & AEO AI search, Local SEO, Google Ads & PPC, social media marketing, website design & development, AI business automation, and photography-video content creation, with offices in Madurai, Thoothukudi, and Rawang, Malaysia.'
 
@@ -283,7 +295,25 @@ export default function Services() {
           <img src={servicesHeroImg} width={1536} height={1024} fetchPriority="high" alt="Services" className="hero__image" />
         </div>
       }
-      grid={<CustomServicesGrid title="Our Digital Marketing Services" />}
+      grid={
+        <>
+          <CustomServicesGrid title="Our Digital Marketing Services" />
+          <section className="section">
+            <div className="container">
+              <div className="section-heading">
+                <h2 className="section-heading__title">Services by Location</h2>
+              </div>
+              <div className="related-content__links" style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', justifyContent: 'center' }}>
+                {LOCATION_SERVICE_LINKS.map((item) => (
+                  <Link key={item.path} to={item.path} className="related-content__link">
+                    {item.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+        </>
+      }
       ctaTitle={CTA.title}
       ctaSubtitle={CTA.subtitle}
       ctaLabel={ctaLabelWithHeaderIcon}

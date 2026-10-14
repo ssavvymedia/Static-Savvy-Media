@@ -75,6 +75,16 @@ const LOCATIONS = [
     path: '/locations/malaysia/',
     icon: 'malaysia',
   },
+  {
+    number: '04',
+    name: 'Kuala Lumpur',
+    badge: 'Klang Valley',
+    description:
+      'Serving Kuala Lumpur and the Klang Valley from our Rawang, Selangor office: SEO for google.com.my in English and Bahasa Malaysia, Google Ads, social media and WhatsApp automation.',
+    services: ['SEO in Kuala Lumpur', 'Google Ads & Social Media', 'WhatsApp & AI Automation'],
+    path: '/locations/kuala-lumpur/',
+    icon: 'malaysia',
+  },
 ]
 
 const FAQS = [

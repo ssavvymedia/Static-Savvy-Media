@@ -17,30 +17,30 @@ legacy_path,seen_as,hosts,gsc_clicks_90d,gsc_impressions_90d,action,target,confi
 /aiseoservicesinmadurai,/aiseoservicesinmadurai,www.ssm,1,155,redirect,/services/geo-aeo-ai-search/madurai/,high,old AI SEO / GEO / AEO page -> GEO & AEO Madurai
 /u1designservicesinmadurai,/u1designservicesinmadurai,www (GSC only),0,148,redirect,/services/website-design-development/,medium,UI/UX or e-commerce solution page -> Website Design & Development (no dedicated page)
 /digitalmarketingagencyinmadurai,/digitalmarketingagencyinmadurai,www.ssm,0,122,redirect,/locations/madurai/,high,"old ""digital marketing agency Madurai"" page -> Madurai location page"
-/linkedinmarketingservicesinmadurai,/linkedinmarketingservicesinmadurai,www.ssm,2,117,redirect,/services/social-media-marketing/,high,old social / Meta ads / LinkedIn / YouTube marketing page -> Social Media Marketing service
+/linkedinmarketingservicesinmadurai,/linkedinmarketingservicesinmadurai,www.ssm,2,117,redirect,/services/social-media-marketing/madurai/,high,old social / Meta ads / LinkedIn / YouTube marketing page -> Social Media Marketing service
 /blogs/local-seo-services-in-madurai,/blogs/local-seo-services-in-madurai,www.ssm,0,101,redirect,/services/local-seo/madurai/,high,old local SEO / GBP page -> Local SEO Madurai
 /post/top-10-best-affiliate-programs-to-make-money-online-in-2026,/post/top-10-best-affiliate-programs-to-make-money-online-in-2026,www.ssm,3,99,404,,,off-topic / not offered / theme demo or shop page: leave 404
 /post/seo-for-jewellery-shops-to-boost-online-visibility-and-sales,/post/seo-for-jewellery-shops-to-boost-online-visibility-and-sales,www.ssm,0,93,redirect,/industries/retail-ecommerce/,medium,jewellery shop SEO -> Retail & E-commerce industry page
 /seo-blogging-services-madurai,/seo-blogging-services-madurai,www (GSC only),0,85,redirect,/services/seo/madurai/,medium,SEO sub-topic -> SEO Madurai (no dedicated page)
 /contact,/contact,www.ssm,0,82,live,,,live route today (no redirect needed)
 /blogs/complete-guide-to-digital-marketing-in-madurai,/blogs/complete-guide-to-digital-marketing-in-madurai,www.ssm,0,71,redirect,/locations/madurai/,medium,Madurai digital marketing guide/post -> Madurai location page
-/facebook-marketing-services-in-madurai,/facebook-marketing-services-in-madurai,www.ssm,0,62,redirect,/services/social-media-marketing/,high,old social / Meta ads / LinkedIn / YouTube marketing page -> Social Media Marketing service
+/facebook-marketing-services-in-madurai,/facebook-marketing-services-in-madurai,www.ssm,0,62,redirect,/services/social-media-marketing/madurai/,high,old social / Meta ads / LinkedIn / YouTube marketing page -> Social Media Marketing service
 /googleadsagencyinmadurai,/googleadsagencyinmadurai,www.ssm,1,62,redirect,/services/google-ads/,high,old Google Ads / PPC page -> Google Ads service (YouTube ads are run in Google Ads)
 /post/best-digital-marketing-agency-in-madurai-how-to-choose-the-right-one-for-your-business,/post/best-digital-marketing-agency-in-madurai-how-to-choose-the-right-one-for-your-business,www.ssm,0,61,redirect,/blog/how-to-choose-the-right-digital-marketing-agency-in-madurai/,high,same topic: choosing a Madurai agency
 /ai-seo-services-madurai,/ai-seo-services-madurai,www (GSC only),0,59,redirect,/services/geo-aeo-ai-search/madurai/,high,old AI SEO / GEO / AEO page -> GEO & AEO Madurai
 /generativeengineoptimizationagencyinmadurai,/generativeengineoptimizationagencyinmadurai,www.ssm,1,53,redirect,/services/geo-aeo-ai-search/madurai/,high,old AI SEO / GEO / AEO page -> GEO & AEO Madurai
-/instagrammarketingagencyinmadurai,/instagrammarketingagencyinmadurai,www.ssm,0,53,redirect,/services/social-media-marketing/,high,old social / Meta ads / LinkedIn / YouTube marketing page -> Social Media Marketing service
+/instagrammarketingagencyinmadurai,/instagrammarketingagencyinmadurai,www.ssm,0,53,redirect,/services/social-media-marketing/madurai/,high,old social / Meta ads / LinkedIn / YouTube marketing page -> Social Media Marketing service
 /post/craft-a-winning-sme-digital-growth-plan-a-practical-sme-digital-strategies-guide,/post/craft-a-winning-sme-digital-growth-plan-a-practical-sme-digital-strategies-guide,www.ssm,0,53,redirect,/services/,low,generic SME growth plan post (no equivalent) -> Services hub
-/meta-ads-agency-madurai,/meta-ads-agency-madurai,www (GSC only),0,50,redirect,/services/social-media-marketing/,high,old social / Meta ads / LinkedIn / YouTube marketing page -> Social Media Marketing service
+/meta-ads-agency-madurai,/meta-ads-agency-madurai,www (GSC only),0,50,redirect,/services/social-media-marketing/madurai/,high,old social / Meta ads / LinkedIn / YouTube marketing page -> Social Media Marketing service
 /aimarketingautomationservicesinmadurai,/aimarketingautomationservicesinmadurai,www.ssm,1,45,redirect,/services/ai-business-automation/,high,AI / WhatsApp automation page -> AI Business Automation (covers WhatsApp automation)
 /ecommercewebsitedevelopmentinmadurai,/ecommercewebsitedevelopmentinmadurai,www.ssm,0,45,redirect,/services/website-design-development/,high,old website / e-commerce / landing page service -> Website Design & Development
 /blog,/blog,www.ssm,0,43,live,,,live route today (no redirect needed)
 /digital-marketing-agency-thoothukudi,/digital-marketing-agency-thoothukudi,www.ssm,0,43,redirect,/locations/thoothukudi/,high,old Thoothukudi page -> Thoothukudi location page
 /whatsapp-automation-madurai,/whatsapp-automation-madurai,www (GSC only),0,43,redirect,/services/ai-business-automation/,high,AI / WhatsApp automation page -> AI Business Automation (covers WhatsApp automation)
 /answerengineoptimizationserviceinmadurai,/answerengineoptimizationserviceinmadurai,www.ssm,0,37,redirect,/services/geo-aeo-ai-search/madurai/,high,old AI SEO / GEO / AEO page -> GEO & AEO Madurai
-/metaadsagencyinmadurai,/metaadsagencyinmadurai,www.ssm,0,37,redirect,/services/social-media-marketing/,high,old social / Meta ads / LinkedIn / YouTube marketing page -> Social Media Marketing service
-/post/social-media-marketing-for-jewellery-shops-in-madurai-a-practical-guide,/post/social-media-marketing-for-jewellery-shops-in-madurai-a-practical-guide,www.ssm,0,36,redirect,/services/social-media-marketing/,medium,social media post -> Social Media Marketing service
-/linkedin-marketing-madurai,/linkedin-marketing-madurai,www (GSC only),1,35,redirect,/services/social-media-marketing/,high,old social / Meta ads / LinkedIn / YouTube marketing page -> Social Media Marketing service
+/metaadsagencyinmadurai,/metaadsagencyinmadurai,www.ssm,0,37,redirect,/services/social-media-marketing/madurai/,high,old social / Meta ads / LinkedIn / YouTube marketing page -> Social Media Marketing service
+/post/social-media-marketing-for-jewellery-shops-in-madurai-a-practical-guide,/post/social-media-marketing-for-jewellery-shops-in-madurai-a-practical-guide,www.ssm,0,36,redirect,/services/social-media-marketing/madurai/,medium,social media post -> Social Media Marketing service
+/linkedin-marketing-madurai,/linkedin-marketing-madurai,www (GSC only),1,35,redirect,/services/social-media-marketing/madurai/,high,old social / Meta ads / LinkedIn / YouTube marketing page -> Social Media Marketing service
 /post/unlocking-growth-with-static-savvy-media-solutions,/post/unlocking-growth-with-static-savvy-media-solutions,www (GSC only),0,31,redirect,/about/,medium,brand post about Static Savvy Media -> About
 /aeo-services-madurai,/aeo-services-madurai,www (GSC only),3,30,redirect,/services/geo-aeo-ai-search/madurai/,high,old AI SEO / GEO / AEO page -> GEO & AEO Madurai
 /google-ads-agency-madurai,/google-ads-agency-madurai,www (GSC only),0,30,redirect,/services/google-ads/,high,old Google Ads / PPC page -> Google Ads service (YouTube ads are run in Google Ads)
@@ -49,12 +49,12 @@ legacy_path,seen_as,hosts,gsc_clicks_90d,gsc_impressions_90d,action,target,confi
 /industries-we-serve,/industries-we-serve,www.ssm,0,29,redirect,/industries/,high,old industries page -> Industries hub
 /uxresearch,/uxresearch,www (GSC only),0,29,redirect,/services/website-design-development/,medium,UI/UX or e-commerce solution page -> Website Design & Development (no dedicated page)
 /geo-services-madurai,/geo-services-madurai,www (GSC only),2,26,redirect,/services/geo-aeo-ai-search/madurai/,high,old AI SEO / GEO / AEO page -> GEO & AEO Madurai
-/instagram-marketing-madurai,/instagram-marketing-madurai,www (GSC only),0,25,redirect,/services/social-media-marketing/,high,old social / Meta ads / LinkedIn / YouTube marketing page -> Social Media Marketing service
+/instagram-marketing-madurai,/instagram-marketing-madurai,www (GSC only),0,25,redirect,/services/social-media-marketing/madurai/,high,old social / Meta ads / LinkedIn / YouTube marketing page -> Social Media Marketing service
 /brandingservicesinmadurai,/brandingservicesinmadurai,www.ssm,0,24,redirect,/services/product-photography-creative-design/,high,"branding page -> Creative Design (brand identity, logo)"
 /ai-video-production-madurai,/ai-video-production-madurai,www (GSC only),1,22,redirect,/services/ai-video-creation/,high,AI video page -> AI Video Creation
 /cmswebsitedevelopmentcompanyinmadurai,/cmswebsitedevelopmentcompanyinmadurai,www.ssm,0,21,redirect,/services/website-design-development/,high,old website / e-commerce / landing page service -> Website Design & Development
 /digital-marketing-agency-malaysia,/digital-marketing-agency-malaysia,www.ssm,0,20,redirect,/locations/malaysia/,high,old Malaysia page -> Malaysia location page
-/facebookmarketingservicesinmadurai,/facebookmarketingservicesinmadurai,www.ssm,0,20,redirect,/services/social-media-marketing/,high,old social / Meta ads / LinkedIn / YouTube marketing page -> Social Media Marketing service
+/facebookmarketingservicesinmadurai,/facebookmarketingservicesinmadurai,www.ssm,0,20,redirect,/services/social-media-marketing/madurai/,high,old social / Meta ads / LinkedIn / YouTube marketing page -> Social Media Marketing service
 /blogs,/blogs,www.ssm,0,18,redirect,/blog/,high,old blog index / pagination -> Blog
 /cms-website-development-madurai,/cms-website-development-madurai,www (GSC only),0,18,redirect,/services/website-design-development/,high,old website / e-commerce / landing page service -> Website Design & Development
 /post/local-seo-pricing-in-madurai-what-should-you-actually-pay-in-2026,/post/local-seo-pricing-in-madurai-what-should-you-actually-pay-in-2026,www.ssm,0,15,redirect,/pricing/india/local-seo/,high,local SEO pricing -> Local SEO pricing (India)
@@ -117,7 +117,7 @@ legacy_path,seen_as,hosts,gsc_clicks_90d,gsc_impressions_90d,action,target,confi
 /ai-seo-in-2025-complete-guide-to-optimize-for-artificial-intelligence-search,/ai-seo-in-2025-complete-guide-to-optimize-for-artificial-intelligence-search/,ssm,0,0,redirect,/blog/how-to-rank-in-ai-search/,medium,AI search optimisation post -> current AI search post
 /ai-tools-every-madurai-entrepreneur-should-know,/ai-tools-every-madurai-entrepreneur-should-know/,ssm,0,0,redirect,/services/ai-business-automation/,low,AI tools post -> AI Business Automation
 /best-black-friday-hosting-deals-2025-top-global-offers-for-2025-2026,/best-black-friday-hosting-deals-2025-top-global-offers-for-2025-2026/,ssm,0,0,404,,,off-topic / not offered / theme demo or shop page: leave 404
-/best-practices-for-social-media-marketing-in-madurai-2025,/best-practices-for-social-media-marketing-in-madurai-2025/,ssm,0,0,redirect,/services/social-media-marketing/,medium,social media blog post -> Social Media Marketing service
+/best-practices-for-social-media-marketing-in-madurai-2025,/best-practices-for-social-media-marketing-in-madurai-2025/,ssm,0,0,redirect,/services/social-media-marketing/madurai/,medium,social media blog post -> Social Media Marketing service
 /branding-and-identity,/branding-and-identity/,ssm,0,0,redirect,/services/product-photography-creative-design/,high,"branding page -> Creative Design (brand identity, logo)"
 /branding-service-in-madurai,/branding-service-in-madurai,www.ssm,0,0,redirect,/services/product-photography-creative-design/,high,"branding page -> Creative Design (brand identity, logo)"
 /business,/business/,ssm,0,0,404,,,off-topic / not offered / theme demo or shop page: leave 404
@@ -188,7 +188,7 @@ legacy_path,seen_as,hosts,gsc_clicks_90d,gsc_impressions_90d,action,target,confi
 /hi/search,/hi/search,www.ssm,0,0,404,,,old /hi language version; off-topic / not offered / theme demo or shop page: leave 404
 /hi/search-engine-optimization-in-madurai,/hi/search-engine-optimization-in-madurai,www.ssm,0,0,redirect,/services/seo/madurai/,high,old /hi language version; old SEO service page -> SEO Madurai
 /hi/services,/hi/services,www.ssm,0,0,redirect,/services/,high,old /hi language version -> live page
-/hi/social-media-marketing-in-madurai,/hi/social-media-marketing-in-madurai,www.ssm,0,0,redirect,/services/social-media-marketing/,high,old /hi language version; old social / Meta ads / LinkedIn / YouTube marketing page -> Social Media Marketing service
+/hi/social-media-marketing-in-madurai,/hi/social-media-marketing-in-madurai,www.ssm,0,0,redirect,/services/social-media-marketing/madurai/,high,old /hi language version; old social / Meta ads / LinkedIn / YouTube marketing page -> Social Media Marketing service
 /hi/terms-and-coniditions,/hi/terms-and-coniditions,www.ssm,0,0,redirect,/terms/,high,old /hi language version; old Terms page
 /hi/ui-ux-designing-service-in-madurai,/hi/ui-ux-designing-service-in-madurai,www.ssm,0,0,redirect,/services/website-design-development/,medium,old /hi language version; UI/UX or e-commerce solution page -> Website Design & Development (no dedicated page)
 /hi/website-design-and-development-in-madurai,/hi/website-design-and-development-in-madurai,www.ssm,0,0,redirect,/services/website-design-development/,high,old /hi language version; old website / e-commerce / landing page service -> Website Design & Development
