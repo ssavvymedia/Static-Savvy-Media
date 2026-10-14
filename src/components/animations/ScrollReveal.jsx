@@ -21,7 +21,9 @@ export function ScrollReveal({ children, className = '', delay = 0, asTag = 'div
           }
         })
       },
-      { threshold: 0.15 },
+      // threshold 0 (not a ratio): elements taller than ~6.7 viewports
+      // (long blog bodies) can never reach a 15% ratio and stayed invisible.
+      { threshold: 0, rootMargin: '0px 0px -10% 0px' },
     )
 
     observer.observe(el)
