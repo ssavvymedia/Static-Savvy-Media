@@ -26,14 +26,14 @@ const HERO = {
   ),
   trust: GOOGLE_TRUST_LINE,
   intro:
-    'Your next client is not just searching Google. They are asking ChatGPT. They are querying Perplexity. They are using AI-powered voice search. Static Savvy Media is the digital marketing agency built for this new reality, the only agency in Tamil Nadu purpose-built to get your business visible across traditional search and AI-powered answer engines.',
+    'Your next client is not just searching Google. They are asking ChatGPT. They are querying Perplexity. They are using AI-powered voice search. Static Savvy Media is a Madurai digital marketing agency built for this new reality, helping your business stay visible across traditional search and AI-powered answer engines.',
 }
 
 const SERVICES = [
   {
     slug: 'seo',
     name: 'Search Engine Optimization (SEO)',
-    path: '/services/seo/',
+    path: '/services/seo/madurai/',
     summary:
       'Technical SEO, keyword strategy, content development, and link building that drives consistent organic traffic growth month on month.',
     monogram: (
@@ -93,7 +93,7 @@ const SERVICES = [
   {
     slug: 'social-media-marketing',
     name: 'Social Media Marketing',
-    path: '/services/social-media-marketing/',
+    path: '/services/social-media-marketing/madurai/',
     summary:
       'Instagram, Facebook, and LinkedIn content and ad management that builds brand equity and drives qualified leads.',
     monogram: (

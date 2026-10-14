@@ -137,9 +137,10 @@ const RELATED_SERVICES = [
 ]
 
 const RELATED_LOCATIONS = [
-  { name: 'Madurai', path: '/services/seo/madurai/' },
+  { name: 'SEO Company in Madurai', path: '/services/seo/madurai/' },
   { name: 'Thoothukudi', path: '/services/seo/thoothukudi/' },
   { name: 'Malaysia', path: '/services/seo/malaysia/' },
+  { name: 'SEO Kuala Lumpur', path: '/services/seo/kuala-lumpur/' },
 ]
 
 const RELATED_INDUSTRIES = [

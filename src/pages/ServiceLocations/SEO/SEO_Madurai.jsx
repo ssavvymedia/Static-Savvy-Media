@@ -26,18 +26,18 @@ import '../../../styles/pages/seo-madurai.css'
    ============================================================ */
 
 const PAGE_TITLE =
-  'SEO Company in Madurai for More Leads | Static Savvy Media'
+  'SEO Company in Madurai | SEO Services | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
-  'SEO company in Madurai rated 4.9★ from 108 Google reviews. Technical, on-page & local SEO that turns Google searches into enquiries. WhatsApp us today.'
+  'SEO company in Madurai rated 4.9★ from 108 Google reviews. Technical, on-page and content SEO services that turn Google searches into enquiries.'
 
 const HERO_EYEBROW = 'SEO · MADURAI'
 
 const HERO_TITLE =
-  'SEO Agency in Madurai, Search Engine Optimization Tamil Nadu'
+  'SEO Company in Madurai, SEO Services That Bring Real Enquiries'
 
 const HERO_PARAGRAPH =
-  'Get your Madurai business in front of the right customers when they are actively searching for your products and services. Static Savvy Media combines technical SEO, keyword strategy, on-page optimization, content development, internal linking, schema and performance measurement to build sustainable organic search visibility.'
+  'Static Savvy Media is an SEO company based in Madurai. We help local shops, clinics, schools, manufacturers and service businesses show up when people in Madurai and across Tamil Nadu search Google for what they sell. Get your Madurai business in front of the right customers when they are actively searching for your products and services. Static Savvy Media combines technical SEO, keyword strategy, on-page optimization, content development, internal linking, schema and performance measurement to build sustainable organic search visibility.'
 
 const SEO_SERVICES = [
   {
@@ -106,36 +106,42 @@ const CONTENT_TYPES = [
 
 const INDUSTRIES = [
   {
-    title: 'Retail & E-commerce',
-    text: 'Help customers find your products when searching online in Madurai.',
+    title: 'Textiles, Sarees & Garments',
+    text: 'Madurai is known for Sungudi and silk sarees. We build category pages, product schema and Tamil + English content so buyers searching for sarees, wholesale fabrics or garment manufacturers find your shop, not just a marketplace listing.',
+    link: { to: '/industries/textiles-madurai/', label: 'Textile marketing in Madurai' },
   },
   {
-    title: 'Professional Services',
-    text: 'Connect with clients searching for accounting, legal and consulting services.',
+    title: 'Hospitals, Clinics & Diagnostics',
+    text: 'Patients compare doctors online before they visit. We structure department and doctor pages, add MedicalClinic-friendly information and answer common treatment questions clearly, without making medical claims.',
+    link: { to: '/industries/healthcare-clinics/', label: 'Healthcare marketing' },
   },
   {
-    title: 'Healthcare',
-    text: 'Reach patients searching for clinics, doctors and healthcare services.',
+    title: 'Hotels, Restaurants & Temple Tourism',
+    text: 'Visitors to the Meenakshi Amman Temple and nearby attractions search for stays and food near the temple, the railway junction and the airport. We target those "near" searches with location pages and accurate business details.',
+    link: { to: '/industries/hospitality-hotels/', label: 'Hospitality marketing' },
   },
   {
-    title: 'Education & Training',
-    text: 'Connect with students and parents searching for educational institutions.',
+    title: 'Schools, Colleges & Coaching Centres',
+    text: 'Parents and students search by course, area and admission season. We plan content around admission timelines and course-specific pages so you are visible when decisions are being made.',
+    link: { to: '/industries/education-training/', label: 'Education marketing' },
   },
   {
-    title: 'Real Estate',
-    text: 'Reach buyers and renters searching for properties in Madurai.',
+    title: 'Jewellery, Retail & E-commerce',
+    text: 'Jewellers and retailers on Town Hall Road, Masi Streets and beyond compete with national brands online. We focus on product and collection pages, local intent keywords and fast mobile pages.',
+    link: { to: '/industries/retail-ecommerce/', label: 'Retail marketing' },
   },
   {
-    title: 'Manufacturing & B2B',
-    text: 'Help B2B buyers discover your products and manufacturing services.',
+    title: 'Real Estate & Builders',
+    text: 'Plot and apartment buyers search by locality: Anna Nagar, K.K. Nagar, Bypass Road, Thirunagar and the Ring Road corridor. We build project and locality pages that answer what buyers actually ask.',
+    link: { to: '/industries/real-estate-builders/', label: 'Real estate marketing' },
   },
   {
-    title: 'Hospitality & Restaurants',
-    text: 'Attract diners and travellers searching for local experiences.',
+    title: 'Manufacturing, Industrial & B2B',
+    text: 'Buyers from other states look for suppliers in the Kappalur and Uchapatti industrial areas and around Madurai. We create product and capability pages that rank for specific B2B searches, not just your company name.',
   },
   {
-    title: 'Local Service Businesses',
-    text: 'Reach customers searching for plumbers, electricians and local services.',
+    title: 'Professional & Local Services',
+    text: 'Auditors, lawyers, architects, interior designers and home-service businesses win work from specific searches. We map each service to its own page so Google can match it to the right query.',
   },
 ]
 
@@ -177,6 +183,59 @@ const PROCESS_STEPS = [
   },
 ]
 
+const MONTHLY_INCLUDES = [
+  {
+    title: 'Every month',
+    items: [
+      'Technical health check: crawl errors, indexing, Core Web Vitals and broken links',
+      'On-page updates to priority pages: titles, meta descriptions, headings and internal links',
+      'New or improved content (service pages, FAQs or blog posts) planned from real search queries',
+      'Google Search Console and GA4 review, with a plain-language report and next steps',
+    ],
+  },
+  {
+    title: 'When the site needs it',
+    items: [
+      'Schema markup (Organization, LocalBusiness, Service, FAQ, Breadcrumb)',
+      'Redirect plans when pages move, so you keep the rankings you already have',
+      'Page speed and image optimisation on WordPress, Shopify, Wix or custom sites',
+      'Tamil and English keyword targeting where your customers search in both',
+    ],
+  },
+  {
+    title: 'What we will not do',
+    items: [
+      'Promise a guaranteed #1 ranking. Nobody controls Google, and anyone who promises that is guessing',
+      'Buy bulk backlinks or use private blog networks that risk a penalty',
+      'Stuff keywords into your pages. We write for customers first',
+      'Lock you into reports you cannot verify. You keep access to your own Search Console and analytics',
+    ],
+  },
+]
+
+const FIRST_90_DAYS = [
+  {
+    number: 'Weeks 1–2',
+    title: 'Audit & baseline',
+    text: 'We connect Search Console and GA4, crawl the site, record where you rank today for the searches that matter in Madurai, and list every issue in order of impact.',
+  },
+  {
+    number: 'Weeks 3–6',
+    title: 'Fix the foundations',
+    text: 'Technical fixes, page titles and descriptions, heading structure, internal links and schema. These changes are often the quickest to show up in Search Console.',
+  },
+  {
+    number: 'Weeks 7–10',
+    title: 'Build the pages you are missing',
+    text: 'Most Madurai business sites have one page trying to rank for everything. We create focused service and area pages, and FAQs based on what customers actually ask.',
+  },
+  {
+    number: 'Weeks 11–13',
+    title: 'Review & plan the next quarter',
+    text: 'We compare clicks, impressions, positions and enquiries against the baseline, keep what is working and set priorities for the next three months.',
+  },
+]
+
 const MEASUREMENT = [
   'Google Search Console data',
   'Google Analytics / GA4 insights',
@@ -212,11 +271,11 @@ const WHY_US = [
 ]
 
 const RELATED_SERVICES = [
-  { name: 'Local SEO', path: '/services/local-seo/' },
+  { name: 'Local SEO Madurai', path: '/services/local-seo/madurai/' },
   { name: 'Google Ads', path: '/services/google-ads/' },
-  { name: 'GEO & AEO', path: '/services/geo-aeo-ai-search/' },
+  { name: 'GEO & AEO Madurai', path: '/services/geo-aeo-ai-search/madurai/' },
   { name: 'Website Design & Development', path: '/services/website-design-development/' },
-  { name: 'Social Media Marketing', path: '/services/social-media-marketing/' },
+  { name: 'Social Media Marketing Madurai', path: '/services/social-media-marketing/madurai/' },
   { name: 'AI Business Automation', path: '/services/ai-business-automation/' },
 ]
 
@@ -236,9 +295,39 @@ const LOCATION_PAGES = [
     path: '/services/seo/malaysia/',
     current: false,
   },
+  {
+    name: 'Kuala Lumpur',
+    path: '/services/seo/kuala-lumpur/',
+    current: false,
+  },
 ]
 
 const FAQS = [
+  {
+    question: 'What is the difference between SEO services and Local SEO in Madurai?',
+    answer:
+      'SEO services improve how your website ranks in the normal Google results for searches like "textile wholesaler Madurai" or "best skin clinic in Madurai". Local SEO focuses on your Google Business Profile and the map results. Most Madurai businesses benefit from both, and we can run them together.',
+  },
+  {
+    question: 'Do you guarantee first-page rankings?',
+    answer:
+      'No. Google does not let anyone guarantee positions, so we do not promise them. We agree on target searches, show you where you rank today, and report honestly on movement in clicks, impressions, positions and enquiries every month.',
+  },
+  {
+    question: 'Can you do SEO for a Tamil-language or bilingual website?',
+    answer:
+      'Yes. Many customers in Madurai search in English, Tamil or a mix of both. We research both, and can create Tamil content and set the correct language tags so Google shows the right version.',
+  },
+  {
+    question: 'Do I need a new website before starting SEO?',
+    answer:
+      'Usually not. We start with an audit of your current site. If the platform makes basic SEO impossible or the site is very slow, we will say so and explain the options, including our website development service.',
+  },
+  {
+    question: 'Will I have to meet you in person?',
+    answer:
+      'Only if you want to. Our team is based in Madurai, so in-person meetings are easy to arrange, but most clients prefer WhatsApp updates and a short monthly call.',
+  },
   {
     question: 'What does an SEO agency in Madurai do?',
     answer:
@@ -295,7 +384,7 @@ export default function SEO_Madurai() {
       ogType: 'website',
       schema: [
         serviceSchema({
-          name: 'SEO Services, Madurai',
+          name: 'SEO Services in Madurai',
           description: PAGE_DESCRIPTION,
           url: `${SITE_URL}/services/seo/madurai/`,
           areaServed: 'Madurai, Tamil Nadu',
@@ -567,13 +656,74 @@ export default function SEO_Madurai() {
         </div>
       </section>
 
+      {/* ---- What's Included (monthly) ---- */}
+      <section className="section seo-mdu-included-section">
+        <div className="container">
+          <ScrollReveal>
+            <div className="section-heading section-heading--left">
+              <span className="section-heading__eyebrow">What You Get</span>
+              <h2 className="section-heading__title">What Is Included in Our Madurai SEO Services</h2>
+              <p className="section-heading__subtitle">
+                Clear deliverables, so you always know what you are paying for.
+              </p>
+            </div>
+          </ScrollReveal>
+          <div className="seo-mdu-industry-grid">
+            {MONTHLY_INCLUDES.map((group, i) => (
+              <ScrollReveal key={group.title} delay={i * 80}>
+                <div className="seo-mdu-industry-card glass-card">
+                  <h3 className="seo-mdu-industry-card__title">{group.title}</h3>
+                  <ul className="seo-mdu-industry-card__text">
+                    {group.items.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ---- First 90 days ---- */}
+      <section className="section seo-mdu-90-section">
+        <div className="container">
+          <ScrollReveal>
+            <div className="section-heading section-heading--left">
+              <span className="section-heading__eyebrow">Timeline</span>
+              <h2 className="section-heading__title">Your First 90 Days With Our SEO Team</h2>
+            </div>
+          </ScrollReveal>
+          <div className="seo-mdu-process-grid">
+            {FIRST_90_DAYS.map((step) => (
+              <ScrollReveal key={step.number}>
+                <div className="seo-mdu-process-card glass-card">
+                  <span className="seo-mdu-process-card__number">{step.number}</span>
+                  <h3 className="seo-mdu-process-card__title">{step.title}</h3>
+                  <p className="seo-mdu-process-card__text">{step.text}</p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+          <p className="section-heading__subtitle" style={{ marginTop: 'var(--space-lg)' }}>
+            Want to see costs first? See <Link to="/pricing/india/seo/">SEO pricing in India</Link>,
+            or read our guide to <Link to="/blog/seo-vs-google-ads-madurai/">SEO vs Google Ads for Madurai businesses</Link>.
+          </p>
+        </div>
+      </section>
+
       {/* ---- Industries ---- */}
       <section className="section seo-mdu-industries-section">
         <div className="container">
           <ScrollReveal>
             <div className="section-heading section-heading--left">
               <span className="section-heading__eyebrow">Industries</span>
-              <h2 className="section-heading__title">SEO for Different Madurai Business Types</h2>
+              <h2 className="section-heading__title">SEO for Madurai's Key Industries</h2>
+              <p className="section-heading__subtitle">
+                Search behaviour in Madurai is shaped by its textile trade, its hospitals,
+                its colleges and the steady flow of temple visitors. We plan keywords around
+                how your customers actually search, by product, by locality and by language.
+              </p>
             </div>
           </ScrollReveal>
           <div className="seo-mdu-industry-grid">
@@ -582,6 +732,11 @@ export default function SEO_Madurai() {
                 <div className="seo-mdu-industry-card glass-card">
                   <h3 className="seo-mdu-industry-card__title">{item.title}</h3>
                   <p className="seo-mdu-industry-card__text">{item.text}</p>
+                  {item.link && (
+                    <Link to={item.link.to} className="seo-mdu-local-card__link">
+                      {item.link.label}
+                    </Link>
+                  )}
                 </div>
               </ScrollReveal>
             ))}

@@ -320,15 +320,15 @@ export const seoConfig = {
 
   // Service Location Pages
   '/services/seo/madurai': {
-    title: 'SEO Company in Madurai for More Leads | Static Savvy Media',
+    title: 'SEO Company in Madurai | SEO Services | Static Savvy Media',
     slug: 'services/seo/madurai',
     seo: {
-      title: 'SEO Company in Madurai for More Leads | Static Savvy Media',
-      description: 'SEO company in Madurai rated 4.9★ from 108 Google reviews. Technical, on-page & local SEO that turns Google searches into enquiries. WhatsApp us today.',
+      title: 'SEO Company in Madurai | SEO Services | Static Savvy Media',
+      description: 'SEO company in Madurai rated 4.9★ from 108 Google reviews. Technical, on-page and content SEO services that turn Google searches into enquiries.',
       canonical: `${BASE_URL}/services/seo/madurai`,
-      focusKeyword: 'SEO agency Madurai',
-      ogTitle: 'SEO Company in Madurai for More Leads | Static Savvy Media',
-      ogDescription: 'SEO company in Madurai rated 4.9★ from 108 Google reviews. Technical, on-page & local SEO that turns Google searches into enquiries. WhatsApp us today.',
+      focusKeyword: 'SEO company in Madurai',
+      ogTitle: 'SEO Company in Madurai | SEO Services | Static Savvy Media',
+      ogDescription: 'SEO company in Madurai rated 4.9★ from 108 Google reviews. Technical, on-page and content SEO services that turn Google searches into enquiries.',
       ogImage: `${BASE_URL}/og/locations-01madurai.jpg`,
       schema: {
         '@context': 'https://schema.org',
