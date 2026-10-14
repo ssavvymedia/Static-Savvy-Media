@@ -4,8 +4,8 @@
  */
 
 export const blogCategories = [
-  { slug: 'seo', name: 'SEO', path: '/blog/seo/' },
-  { slug: 'geo-aeo', name: 'GEO & AEO', path: '/blog/geo-aeo/' },
+  { slug: 'seo', name: 'SEO', path: '/blog/seo-agency-madurai-complete-guide/' },
+  { slug: 'geo-aeo', name: 'GEO & AEO', path: '/blog/what-is-generative-engine-optimization/' },
   { slug: 'local-marketing', name: 'Local Marketing', path: '/blog/local-marketing/' },
 ]
 

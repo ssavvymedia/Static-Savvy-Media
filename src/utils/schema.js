@@ -18,7 +18,13 @@ export function webSiteSchema(data = {}) {
 }
 
 export function serviceSchema(data = {}) {
-  return schema('Service', { serviceType: data.serviceType || SITE_NAME, ...data })
+  const out = { serviceType: data.serviceType || data.name || SITE_NAME, ...data }
+  // schema.org expects provider to be an Organization, not a plain string.
+  if (!out.provider || typeof out.provider === 'string') {
+    out.provider = { '@type': 'Organization', name: out.provider || SITE_NAME, url: SITE_URL }
+  }
+  if (typeof out.areaServed === 'string') out.areaServed = { '@type': 'Place', name: out.areaServed }
+  return schema('Service', out)
 }
 
 export function localBusinessSchema(data = {}) {
@@ -33,17 +39,34 @@ export function personSchema(data = {}) {
   return schema('Person', data)
 }
 
+/* Accepts faqPageSchema({ faqs }) or faqPageSchema(faqs). Items may already be Question
+ * entities, or plain { question, answer } / { q, a } objects. Several pages passed the bare
+ * array, which used to produce an FAQPage with an empty mainEntity (invalid). */
 export function faqPageSchema(data = {}) {
-  return schema('FAQPage', { mainEntity: data.faqs || [] })
+  const list = Array.isArray(data) ? data : data.faqs || []
+  const mainEntity = list
+    .map((f) => {
+      if (f && f['@type'] === 'Question') return f
+      const name = f?.question ?? f?.q ?? f?.name
+      const text = f?.answer ?? f?.a ?? f?.text
+      if (!name || !text) return null
+      return { '@type': 'Question', name: String(name), acceptedAnswer: { '@type': 'Answer', text: String(text) } }
+    })
+    .filter(Boolean)
+  return schema('FAQPage', { mainEntity })
 }
 
+/* Accepts breadcrumbListSchema({ items }) or breadcrumbListSchema(items). Items may use
+ * { name, item }, { name, url } or { label, path } (relative paths are made absolute). */
 export function breadcrumbListSchema(data = {}) {
+  const list = Array.isArray(data) ? data : data.items || []
+  const abs = (u) => (!u ? undefined : /^https?:/.test(u) ? u : `${SITE_URL}${u.startsWith('/') ? '' : '/'}${u}`)
   return schema('BreadcrumbList', {
-    itemListElement: (data.items || []).map((item, index) => ({
+    itemListElement: list.map((item, index) => ({
       '@type': 'ListItem',
       position: index + 1,
-      name: item.name,
-      item: item.item,
+      name: item.name ?? item.label,
+      item: abs(item.item ?? item.url ?? item.path ?? item.to),
     })),
   })
 }

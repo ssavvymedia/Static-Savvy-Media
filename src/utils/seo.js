@@ -65,6 +65,7 @@ export function setSeo({
   schema,
   robots = 'index,follow',
   ogType = 'website',
+  fromRouteConfig = false,
 }) {
   const finalTitle = title || SITE_NAME
   const finalDesc = description || SITE_DESCRIPTION
@@ -106,8 +107,14 @@ export function setSeo({
   // JSON-LD Schema
   if (schema) {
     setJsonLd(schema)
+    // Remember that this route's page supplied its own JSON-LD, so the layout-level
+    // useRouteSEO() (whose effect runs after the page's) does not replace it with the
+    // generic seoConfig schema.
+    if (!fromRouteConfig && typeof window !== 'undefined') pageSchemaPath = window.location.pathname
   }
 }
+
+let pageSchemaPath = null
 
 /**
  * Custom Hook: useRouteSEO
@@ -120,7 +127,13 @@ export function useRouteSEO(customPath) {
   useEffect(() => {
     const config = getSeoForPath(path)
     if (config && config.seo) {
-      setSeo({ ...config.seo, ogImage: config.seo.ogImage || DEFAULT_OG_IMAGE })
+      const pageHasSchema = pageSchemaPath === window.location.pathname
+      setSeo({
+        ...config.seo,
+        schema: pageHasSchema ? undefined : config.seo.schema,
+        ogImage: config.seo.ogImage || DEFAULT_OG_IMAGE,
+        fromRouteConfig: true,
+      })
     }
   }, [path])
 }
