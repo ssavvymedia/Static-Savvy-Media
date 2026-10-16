@@ -19,22 +19,22 @@ import deepanAboutImg from '../../assets/images/About/DeepanAbout.webp'
    CONTENT, Approved Static Savvy Media About Page Content
    ============================================================ */
 
-const PAGE_TITLE = 'About Static Savvy Media, Our Story, Mission & Team'
+const PAGE_TITLE = 'About Static Savvy Media | Digital Marketing Agency in Madurai'
 
 const PAGE_DESCRIPTION =
-  'Learn about Static Savvy Media, an AI-first digital marketing agency serving businesses across Madurai, Thoothukudi and Malaysia with SEO, GEO, AEO, Google Ads, social media and AI-powered digital solutions.'
+  'Learn about Static Savvy Media, a Madurai digital marketing agency rated 4.9★ from 108 Google reviews. SEO, Local SEO, Google Ads & AI search for Tamil Nadu and Malaysia.'
 
 const SERVICES = [
-  { number: '01', title: 'SEO', text: 'Search engine optimisation designed to improve organic visibility and long-term discoverability.' },
-  { number: '02', title: 'GEO & AEO', text: 'Generative Engine Optimization and Answer Engine Optimization designed to improve visibility inside AI-generated answers.' },
-  { number: '03', title: 'Local SEO', text: 'Google Business Profile and Google Maps optimisation for local and regional businesses.' },
-  { number: '04', title: 'Google Ads', text: 'High-intent paid search campaigns designed to capture demand and generate measurable enquiries.' },
-  { number: '05', title: 'Social Media Marketing', text: 'Platform-specific content and social strategies designed to build audience visibility and business credibility.' },
-  { number: '06', title: 'Website Design & Development', text: 'Conversion-focused websites designed with SEO, AI search visibility and WhatsApp-first enquiry generation in mind.' },
-  { number: '07', title: 'AI Business Automation', text: 'AI-powered workflows and automation systems that reduce manual work and help teams focus on growth.' },
-  { number: '08', title: 'Corporate Photography & Video', text: 'Professional brand imagery and video production from the Madurai studio, content designed to build trust before a word is read.' },
-  { number: '09', title: 'AI Video Creation', text: 'Marketing-grade videos produced with AI to reduce production time and cost while maintaining professional presentation.' },
-  { number: '10', title: 'Product Photography & Creative Design', text: 'E-commerce-ready product imagery and graphic design designed to help turn browsers into buyers.' },
+  { number: '01', title: 'SEO', text: 'Search engine optimisation designed to improve organic visibility and long-term discoverability.', path: '/services/seo/madurai/' },
+  { number: '02', title: 'GEO & AEO', text: 'Generative Engine Optimization and Answer Engine Optimization designed to improve visibility inside AI-generated answers.', path: '/services/geo-aeo-ai-search/' },
+  { number: '03', title: 'Local SEO', text: 'Google Business Profile and Google Maps optimisation for local and regional businesses.', path: '/services/local-seo/madurai/' },
+  { number: '04', title: 'Google Ads', text: 'High-intent paid search campaigns designed to capture demand and generate measurable enquiries.', path: '/services/google-ads/' },
+  { number: '05', title: 'Social Media Marketing', text: 'Platform-specific content and social strategies designed to build audience visibility and business credibility.', path: '/services/social-media-marketing/madurai/' },
+  { number: '06', title: 'Website Design & Development', text: 'Conversion-focused websites designed with SEO, AI search visibility and WhatsApp-first enquiry generation in mind.', path: '/services/website-design-development/' },
+  { number: '07', title: 'AI Business Automation', text: 'AI-powered workflows and automation systems that reduce manual work and help teams focus on growth.', path: '/services/ai-business-automation/' },
+  { number: '08', title: 'Corporate Photography & Video', text: 'Professional brand imagery and video production from the Madurai studio, content designed to build trust before a word is read.', path: '/services/corporate-photography-video/' },
+  { number: '09', title: 'AI Video Creation', text: 'Marketing-grade videos produced with AI to reduce production time and cost while maintaining professional presentation.', path: '/services/ai-video-creation/' },
+  { number: '10', title: 'Product Photography & Creative Design', text: 'E-commerce-ready product imagery and graphic design designed to help turn browsers into buyers.', path: '/services/product-photography-creative-design/' },
 ]
 
 const MARKETS = [
@@ -374,11 +374,13 @@ export default function About() {
           <div className="about-service-grid">
             {SERVICES.map((service, index) => (
               <ScrollReveal key={service.number} delay={index * 60}>
-                <div className="about-service-card">
-                  <div className="about-service-card__number">{service.number}</div>
-                  <h3 className="about-service-card__title">{service.title}</h3>
-                  <p className="about-service-card__text">{service.text}</p>
-                </div>
+                <Link to={service.path} style={{ textDecoration: 'none', color: 'inherit' }}>
+                  <div className="about-service-card">
+                    <div className="about-service-card__number">{service.number}</div>
+                    <h3 className="about-service-card__title">{service.title}</h3>
+                    <p className="about-service-card__text">{service.text}</p>
+                  </div>
+                </Link>
               </ScrollReveal>
             ))}
           </div>

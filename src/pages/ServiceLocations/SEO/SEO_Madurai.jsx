@@ -271,6 +271,7 @@ const WHY_US = [
 ]
 
 const RELATED_SERVICES = [
+  { name: 'Digital Marketing in Madurai', path: '/locations/madurai/' },
   { name: 'Local SEO Madurai', path: '/services/local-seo/madurai/' },
   { name: 'Google Ads', path: '/services/google-ads/' },
   { name: 'GEO & AEO Madurai', path: '/services/geo-aeo-ai-search/madurai/' },

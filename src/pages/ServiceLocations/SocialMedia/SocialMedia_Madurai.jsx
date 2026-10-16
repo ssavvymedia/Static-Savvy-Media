@@ -5,12 +5,12 @@ import { SITE_URL, GOOGLE_TRUST_LINE } from '../../../utils/constants.js'
 
 const PATH = '/services/social-media-marketing/madurai/'
 const DESCRIPTION =
-  'Social media marketing company in Madurai: Facebook and Instagram marketing, Meta ads, reels and content in Tamil and English. Rated 4.9★ on Google.'
+  'Social media marketing company in Madurai: Facebook, Instagram and YouTube marketing, Meta ads, reels and content in Tamil and English. Rated 4.9★ on Google.'
 
 const content = {
   path: PATH,
   ogImage: '/og/services-05socialmediamarketing.jpg',
-  title: 'Social Media Marketing Company in Madurai | Static Savvy Media',
+  title: 'Social Media Marketing in Madurai — FB, Instagram & YouTube | Static Savvy Media',
   description: DESCRIPTION,
   eyebrow: 'SOCIAL MEDIA · MADURAI',
   h1: 'Social Media Marketing Company in Madurai, Facebook & Instagram That Bring Enquiries',
@@ -38,6 +38,10 @@ const content = {
         {
           title: 'Instagram Marketing',
           text: 'Reels, carousels and stories that show your products, space and people. Instagram works especially well for textiles and sarees, jewellery, salons, cafes and restaurants, where visuals decide the visit.',
+        },
+        {
+          title: 'YouTube Marketing',
+          text: 'Channel setup, video ideas and promotions that help Madurai businesses show their work, explain services and appear in YouTube and Google video results.',
         },
         {
           title: 'Meta Ads (Facebook + Instagram)',
@@ -111,9 +115,10 @@ const content = {
   related: [
     { name: 'Social Media Marketing (all locations)', path: '/services/social-media-marketing/' },
     { name: 'SEO Company in Madurai', path: '/services/seo/madurai/' },
-    { name: 'Local SEO Madurai', path: '/services/local-seo/madurai/' },
-    { name: 'Google Ads', path: '/services/google-ads/' },
+    { name: 'Local SEO Services in Madurai', path: '/services/local-seo/madurai/' },
     { name: 'Digital Marketing in Madurai', path: '/locations/madurai/' },
+    { name: 'Contact', path: '/contact/' },
+    { name: 'Google Ads', path: '/services/google-ads/' },
   ],
   faqTitle: 'Frequently Asked Questions, Social Media Marketing Madurai',
   faqs: [

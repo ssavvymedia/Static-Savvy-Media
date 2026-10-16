@@ -26,10 +26,10 @@ import '../../../styles/pages/local-seo-madurai.css'
    ============================================================ */
 
 const PAGE_TITLE =
-  'Local SEO Madurai: Google Maps & GBP | Static Savvy Media'
+  'Local SEO Services in Madurai | Maps & GBP | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
-  'Get found on Google Maps in Madurai. GBP optimisation, citations & review strategy from a team rated 4.9★ from 108 Google reviews. WhatsApp us today.'
+  'Local SEO services in Madurai to rank on Google Maps. GBP optimisation, citations & reviews from a team rated 4.9★ from 108 Google reviews. WhatsApp us today.'
 
 const HERO_EYEBROW = 'LOCAL SEO · MADURAI'
 
@@ -213,6 +213,8 @@ const WHY_US = [
 ]
 
 const RELATED_SERVICES = [
+  { name: 'Digital Marketing in Madurai', path: '/locations/madurai/' },
+  { name: 'Contact', path: '/contact/' },
   { name: 'SEO', path: '/services/seo/' },
   { name: 'Google Ads', path: '/services/google-ads/' },
   { name: 'GEO & AEO', path: '/services/geo-aeo-ai-search/' },

@@ -11,10 +11,10 @@ import thoothukudiImage from '../../assets/images/locations/thoothukudi.webp'
 import malaysiaImage from '../../assets/images/locations/malaysia.webp'
 
 const PAGE_TITLE =
-  'Digital Marketing Company in Madurai | Static Savvy Media'
+  'Digital Marketing Company in Madurai — SEO & Ads | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
-  'Madurai digital marketing agency rated 4.9★ from 108 Google reviews. SEO, Local SEO, Google Ads & AI search for local businesses. WhatsApp us today.'
+  'Need a digital marketing company in Madurai? Rated 4.9★ from 108 Google reviews. SEO, Local SEO, Google Ads & social media that bring enquiries. WhatsApp us today.'
 
 const HERO = {
   eyebrow: 'Premium Digital Marketing Agency',
@@ -62,7 +62,7 @@ const SERVICES = [
   {
     slug: 'local-seo',
     name: 'Local SEO & Google Business Profile',
-    path: '/services/local-seo/',
+    path: '/services/local-seo/madurai/',
     summary:
       'Rank in Google Maps and local search for every city where your clients are looking, Madurai, Thoothukudi, and beyond.',
     monogram: (
