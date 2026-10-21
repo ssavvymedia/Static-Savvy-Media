@@ -15,9 +15,8 @@ export default function NotFound() {
     setSeo({
       title: 'Page not found | Static Savvy Media',
       description: 'The page you are looking for does not exist or has moved.',
-      // noindex pages don't need a canonical; point it at the homepage so the previous page's
-      // canonical isn't left behind after in-app navigation.
-      canonical: '/',
+      // noindex page: drop the canonical so neither the homepage's nor the previous page's remains.
+      canonical: false,
       robots: 'noindex,follow',
     })
   }, [])

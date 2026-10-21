@@ -69,7 +69,8 @@ export function setSeo({
 }) {
   const finalTitle = title || SITE_NAME
   const finalDesc = description || SITE_DESCRIPTION
-  const finalCanonical = toCanonicalUrl(canonical || '/')
+  // canonical === false (e.g. the 404 view) removes the tag instead of leaving a stale one.
+  const finalCanonical = canonical === false ? null : toCanonicalUrl(canonical || window.location.pathname)
 
   setDocumentTitle(finalTitle)
 
@@ -81,7 +82,7 @@ export function setSeo({
   setMetaTag('property', 'og:title', ogTitle || finalTitle)
   setMetaTag('property', 'og:description', ogDescription || finalDesc)
   setMetaTag('property', 'og:type', ogType)
-  setMetaTag('property', 'og:url', finalCanonical)
+  if (finalCanonical) setMetaTag('property', 'og:url', finalCanonical)
   setMetaTag('property', 'og:site_name', SITE_NAME)
   if (ogImage) {
     setMetaTag('property', 'og:image', ogImage)
@@ -97,12 +98,16 @@ export function setSeo({
 
   // Canonical Link
   let link = document.head.querySelector('link[rel="canonical"]')
+  if (!finalCanonical) {
+    if (link) link.remove()
+  } else {
   if (!link) {
     link = document.createElement('link')
     link.setAttribute('rel', 'canonical')
     document.head.appendChild(link)
   }
   link.setAttribute('href', finalCanonical)
+  }
 
   // JSON-LD Schema
   if (schema) {

@@ -19,7 +19,9 @@
  *   npm run seo:check               # exit 1 if vercel.json is out of date with the router/CSV
  *
  * Run it after adding or removing a non-blog route, or publishing a Sanity post you want in the
- * sitemap. Blog posts at /blog/<slug>/ work without regenerating (pattern rewrite).
+ * sitemap. Blog posts are listed explicitly (unknown /blog/<x>/ paths 404), so a newly published
+ * Sanity post needs `npm run seo:generate` (refreshes scripts/seo/sanity-posts.json) and a deploy.
+ * --check uses the committed snapshot so it is deterministic.
  */
 import { readFileSync, writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
@@ -104,7 +106,35 @@ const routes = [...read('src/routes/AppRoutes.jsx').matchAll(/path="([^"]+)"/g)]
 const pages = routes.filter((p) => p !== '*' && !p.includes(':') && !(p in ALIASES))
 if (!routes.includes('/blog/:slug')) fail('expected a /blog/:slug route in AppRoutes.jsx')
 const isPage = (p) => p === '/' || pages.includes(p.replace(/\/$/, ''))
-const isBlogSlug = (p) => /^\/blog\/[^/]+\/?$/.test(p)
+
+/* ---------- Sanity posts ---------- */
+async function loadPosts() {
+  const snapshot = 'scripts/seo/sanity-posts.json'
+  const query = '*[_type == "post" && defined(slug.current) && !(_id in path("drafts.**"))] | order(publishedAt desc){"slug": slug.current, _updatedAt}'
+  const url = `https://${SANITY_PROJECT}.apicdn.sanity.io/v2024-01-01/data/query/${SANITY_DATASET}?query=${encodeURIComponent(query)}`
+  if (CHECK) return JSON.parse(read(snapshot))
+  try {
+    const res = await fetch(url, { signal: AbortSignal.timeout(15000) })
+    if (!res.ok) throw new Error(`HTTP ${res.status}`)
+    const posts = (await res.json()).result
+    writeFileSync(join(ROOT, snapshot), `${JSON.stringify(posts, null, 2)}\n`)
+    return posts
+  } catch (err) {
+    console.warn(`Sanity fetch failed (${err.message}); using ${snapshot}`)
+    return JSON.parse(read(snapshot))
+  }
+}
+
+const posts = await loadPosts()
+const cleanSlug = (s) => String(s || '').trim().replace(/^\/+|\/+$/g, '')
+const blogPosts = posts
+  .map((p) => ({ path: `/blog/${cleanSlug(p.slug)}`, lastmod: (p._updatedAt || '').slice(0, 10), raw: p.slug }))
+  .filter((p) => /^\/blog\/[a-z0-9-]+$/.test(p.path) && !pages.includes(p.path) && !(p.path in ALIASES))
+
+const blogSlugPaths = blogPosts.map((b) => b.path)
+
+// Only known blog posts (Sanity snapshot) are served; any other /blog/<x>/ is a real 404.
+const isBlogSlug = (p) => blogSlugPaths.includes(p.replace(/\/$/, ''))
 
 /* ---------- redirects ---------- */
 const legacy = parseCsv(read('scripts/seo/legacy-redirects.csv')).filter((r) => r.action === 'redirect')
@@ -130,7 +160,7 @@ for (const r of redirects) {
 // Real pages: /about -> /about/ (the form used by canonicals, the sitemap and internal links).
 // Unknown no-slash paths are NOT redirected; they 404 directly.
 for (const p of pages) if (p !== '/') redirects.push({ source: p, destination: slash(p), statusCode: 308 })
-redirects.push({ source: '/blog/:slug', destination: '/blog/:slug/', statusCode: 308 })
+for (const b of blogSlugPaths) redirects.push({ source: b, destination: slash(b), statusCode: 308 })
 
 const vercel = {
   $schema: 'https://openapi.vercel.sh/vercel.json',
@@ -139,7 +169,7 @@ const vercel = {
   // robots.txt, favicons) are served first by the filesystem and are never rewritten.
   rewrites: [
     ...pages.filter((p) => p !== '/').map((p) => ({ source: slash(p), destination: '/index.html' })),
-    { source: '/blog/:slug/', destination: '/index.html' },
+    ...blogSlugPaths.map((b) => ({ source: slash(b), destination: '/index.html' })),
   ],
 }
 const vercelJson = `${JSON.stringify(vercel, null, 2)}\n`
@@ -150,29 +180,6 @@ if (CHECK) {
   console.log(`vercel.json is up to date (${vercel.rewrites.length} rewrites, ${redirects.length} redirects).`)
   process.exit(0)
 }
-
-/* ---------- Sanity posts ---------- */
-async function loadPosts() {
-  const snapshot = 'scripts/seo/sanity-posts.json'
-  const query = '*[_type == "post" && defined(slug.current) && !(_id in path("drafts.**"))] | order(publishedAt desc){"slug": slug.current, _updatedAt}'
-  const url = `https://${SANITY_PROJECT}.apicdn.sanity.io/v2024-01-01/data/query/${SANITY_DATASET}?query=${encodeURIComponent(query)}`
-  try {
-    const res = await fetch(url, { signal: AbortSignal.timeout(15000) })
-    if (!res.ok) throw new Error(`HTTP ${res.status}`)
-    const posts = (await res.json()).result
-    writeFileSync(join(ROOT, snapshot), `${JSON.stringify(posts, null, 2)}\n`)
-    return posts
-  } catch (err) {
-    console.warn(`Sanity fetch failed (${err.message}); using ${snapshot}`)
-    return JSON.parse(read(snapshot))
-  }
-}
-
-const posts = await loadPosts()
-const cleanSlug = (s) => String(s || '').trim().replace(/^\/+|\/+$/g, '')
-const blogPosts = posts
-  .map((p) => ({ path: `/blog/${cleanSlug(p.slug)}`, lastmod: (p._updatedAt || '').slice(0, 10), raw: p.slug }))
-  .filter((p) => /^\/blog\/[a-z0-9-]+$/.test(p.path) && !pages.includes(p.path) && !(p.path in ALIASES))
 
 /* ---------- sitemap.xml ---------- */
 const rule = (p) => SITEMAP_RULES.find(([re]) => re.test(p)) || fail(`no sitemap rule for ${p}`)
@@ -204,7 +211,7 @@ writeFileSync(join(ROOT, 'vercel.json'), vercelJson)
 writeFileSync(join(ROOT, 'public/sitemap.xml'), sitemap)
 writeFileSync(join(ROOT, 'public/robots.txt'), robots)
 const legacyCount = legacy.length
-console.log(`vercel.json: ${vercel.rewrites.length} rewrites, ${redirects.length} redirects (${Object.keys(ALIASES).length} alias + ${legacyCount} legacy 301s, ${pages.length - 1} slash 308s + blog pattern)`)
+console.log(`vercel.json: ${vercel.rewrites.length} rewrites, ${redirects.length} redirects (${Object.keys(ALIASES).length} alias + ${legacyCount} legacy 301s, ${pages.length - 1} slash 308s + blog post 308s)`)
 console.log(`sitemap.xml: ${locs.length} URLs (${pages.length} routes + ${blogPosts.length} Sanity posts)`)
 const fixed = blogPosts.filter((b) => b.raw !== cleanSlug(b.raw))
 if (fixed.length) console.log(`note: Sanity slug(s) with stray slashes, fix in Sanity Studio: ${fixed.map((b) => JSON.stringify(b.raw)).join(', ')}`)

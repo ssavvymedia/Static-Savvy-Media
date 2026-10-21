@@ -1722,8 +1722,53 @@
       "statusCode": 308
     },
     {
-      "source": "/blog/:slug",
-      "destination": "/blog/:slug/",
+      "source": "/blog/how-to-rank-in-ai-search",
+      "destination": "/blog/how-to-rank-in-ai-search/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog/social-media-marketing-madurai-small-businesses",
+      "destination": "/blog/social-media-marketing-madurai-small-businesses/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog/google-business-profile-checklist-madurai",
+      "destination": "/blog/google-business-profile-checklist-madurai/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog/seo-vs-google-ads-madurai",
+      "destination": "/blog/seo-vs-google-ads-madurai/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog/social-media-marketing-salons-aesthetics-madurai",
+      "destination": "/blog/social-media-marketing-salons-aesthetics-madurai/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog/seo-audit-services-madurai",
+      "destination": "/blog/seo-audit-services-madurai/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog/local-seo-guide-hardware-stores-retail-madurai",
+      "destination": "/blog/local-seo-guide-hardware-stores-retail-madurai/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog/digital-marketing-service-costs-in-madurai-2026-pricing-guide",
+      "destination": "/blog/digital-marketing-service-costs-in-madurai-2026-pricing-guide/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog/how-to-choose-the-right-digital-marketing-agency-in-madurai",
+      "destination": "/blog/how-to-choose-the-right-digital-marketing-agency-in-madurai/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog/what-is-geo-generative-engine-optimization-in-digital-marketing",
+      "destination": "/blog/what-is-geo-generative-engine-optimization-in-digital-marketing/",
       "statusCode": 308
     }
   ],
@@ -2021,7 +2066,43 @@
       "destination": "/index.html"
     },
     {
-      "source": "/blog/:slug/",
+      "source": "/blog/how-to-rank-in-ai-search/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/social-media-marketing-madurai-small-businesses/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/google-business-profile-checklist-madurai/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/seo-vs-google-ads-madurai/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/social-media-marketing-salons-aesthetics-madurai/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/seo-audit-services-madurai/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/local-seo-guide-hardware-stores-retail-madurai/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/digital-marketing-service-costs-in-madurai-2026-pricing-guide/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/how-to-choose-the-right-digital-marketing-agency-in-madurai/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/what-is-geo-generative-engine-optimization-in-digital-marketing/",
       "destination": "/index.html"
     }
   ]

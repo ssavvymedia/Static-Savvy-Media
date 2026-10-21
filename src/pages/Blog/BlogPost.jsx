@@ -100,12 +100,12 @@ export default function BlogPost() {
 
   useEffect(() => {
     if (post === null) {
-      // "Article not found": /blog/:slug/ is served for any slug so new Sanity posts work without
-      // a deploy. Keep this state out of the index (no soft 404) and drop the previous canonical.
+      // Only known slugs are served by Vercel (others 404); this covers in-app links to an
+      // unpublished post. Keep it out of the index and drop the canonical.
       setSeo({
         title: 'Article not found | Static Savvy Media Blog',
         description: 'This post may have been unpublished or the link is incorrect.',
-        canonical: '/blog/',
+        canonical: false,
         robots: 'noindex,follow',
       })
       return undefined
