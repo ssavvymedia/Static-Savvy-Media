@@ -109,7 +109,7 @@ const SERVICES = [
   {
     slug: 'website-design-development',
     name: 'Website Design & Development',
-    path: '/services/website-design-development/',
+    path: '/services/website-design-development/madurai/',
     summary:
       'SEO-ready, Core Web Vitals-optimised websites built to convert. Next.js or WordPress chosen for your project, not ours.',
     monogram: (

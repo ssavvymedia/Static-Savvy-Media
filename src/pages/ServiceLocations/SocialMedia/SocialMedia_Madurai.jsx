@@ -10,7 +10,7 @@ const DESCRIPTION =
 const content = {
   path: PATH,
   ogImage: '/og/services-05socialmediamarketing.jpg',
-  title: 'Social Media Marketing in Madurai — FB, Instagram & YouTube | Static Savvy Media',
+  title: 'Social Media Marketing Agency in Madurai | Static Savvy Media',
   description: DESCRIPTION,
   eyebrow: 'SOCIAL MEDIA · MADURAI',
   h1: 'Social Media Marketing Company in Madurai, Facebook & Instagram That Bring Enquiries',

@@ -26,7 +26,7 @@ import '../../../styles/pages/local-seo-madurai.css'
    ============================================================ */
 
 const PAGE_TITLE =
-  'Local SEO Services in Madurai | Maps & GBP | Static Savvy Media'
+  'Local SEO Company in Madurai | Google Maps & GBP | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
   'Local SEO services in Madurai to rank on Google Maps. GBP optimisation, citations & reviews from a team rated 4.9★ from 108 Google reviews. WhatsApp us today.'
@@ -34,7 +34,7 @@ const PAGE_DESCRIPTION =
 const HERO_EYEBROW = 'LOCAL SEO · MADURAI'
 
 const HERO_TITLE =
-  'Local SEO Madurai, Google Maps & GBP Optimization for Madurai Businesses'
+  'Local SEO Company in Madurai, Rank on Google Maps & Get Found Near Me'
 
 const HERO_PARAGRAPH =
   'When customers search for a business near them, Google often shows the local map results before traditional organic results. Static Savvy Media helps Madurai businesses improve their local search presence through Google Business Profile optimization, local citations, review strategy, local landing pages and consistent business information.'

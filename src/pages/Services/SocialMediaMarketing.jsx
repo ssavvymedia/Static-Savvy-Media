@@ -28,10 +28,10 @@ import smmHeroImg from "../../assets/images/services/05socialmediamarketing.webp
    ============================================================ */
 
 const PAGE_TITLE =
-  "Social Media Marketing in Madurai — Instagram, FB & YouTube | Static Savvy Media";
+  "Social Media Marketing Services — Madurai, Tamil Nadu & Malaysia | Static Savvy Media";
 
 const PAGE_DESCRIPTION =
-  "Social media marketing for Madurai businesses: Instagram, Facebook, YouTube and LinkedIn content plus Meta ads. Rated 4.9★ from 108 Google reviews. WhatsApp us today.";
+  "Social media marketing services for businesses in Tamil Nadu and Malaysia: Instagram, Facebook, YouTube and LinkedIn content plus Meta ads. Rated 4.9★ on Google.";
 
 const HERO_SUBTITLE =
   "Social media done right is not about posting every day and hoping something goes viral. It is a deliberate, data-driven practice of building brand awareness, demonstrating expertise, and creating consistent touchpoints that turn cold audiences into warm enquiries, and warm enquiries into WhatsApp conversations that convert.";
@@ -738,6 +738,9 @@ export default function SocialMediaMarketing() {
               >
                 <path d="M5 12h14M13 6l6 6-6 6" />
               </svg>
+            </Link>
+            <Link to="/services/social-media-marketing/madurai/" className="related-content__link">
+              Social Media Marketing Agency in Madurai
             </Link>
             <Link to="/faq/" className="related-content__link">
               FAQ

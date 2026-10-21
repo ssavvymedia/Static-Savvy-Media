@@ -26,6 +26,7 @@ import SEO_Thoothukudi from '../pages/ServiceLocations/SEO/SEO_Thoothukudi.jsx'
 import SEO_Malaysia from '../pages/ServiceLocations/SEO/SEO_Malaysia.jsx'
 import SEO_KualaLumpur from '../pages/ServiceLocations/SEO/SEO_KualaLumpur.jsx'
 import SocialMedia_Madurai from '../pages/ServiceLocations/SocialMedia/SocialMedia_Madurai.jsx'
+import WebsiteDevelopment_Madurai from '../pages/ServiceLocations/WebsiteDevelopment/WebsiteDevelopment_Madurai.jsx'
 import LocalSEO_Madurai from '../pages/ServiceLocations/LocalSEO/LocalSEO_Madurai.jsx'
 import LocalSEO_Thoothukudi from '../pages/ServiceLocations/LocalSEO/LocalSEO_Thoothukudi.jsx'
 import LocalSEO_Malaysia from '../pages/ServiceLocations/LocalSEO/LocalSEO_Malaysia.jsx'
@@ -125,6 +126,10 @@ export default function AppRoutes() {
         />
 
         <Route path="/services/seo/madurai" element={<SEO_Madurai />} />
+        <Route
+          path="/services/website-design-development/madurai"
+          element={<WebsiteDevelopment_Madurai />}
+        />
         <Route path="/services/seo/thoothukudi" element={<SEO_Thoothukudi />} />
         <Route path="/services/seo/malaysia" element={<SEO_Malaysia />} />
         <Route path="/services/seo/kuala-lumpur" element={<SEO_KualaLumpur />} />

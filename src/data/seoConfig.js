@@ -227,19 +227,19 @@ export const seoConfig = {
   },
   "/services/social-media-marketing": {
     title:
-      "Social Media Marketing in Madurai — Instagram, FB & YouTube | Static Savvy Media",
+      "Social Media Marketing Services — Madurai, Tamil Nadu & Malaysia | Static Savvy Media",
     slug: "services/social-media-marketing",
     seo: {
       title:
-        "Social Media Marketing in Madurai — Instagram, FB & YouTube | Static Savvy Media",
+        "Social Media Marketing Services — Madurai, Tamil Nadu & Malaysia | Static Savvy Media",
       description:
-        "Social media marketing for Madurai businesses: Instagram, Facebook, YouTube and LinkedIn content plus Meta ads. Rated 4.9★ from 108 Google reviews. WhatsApp us today.",
+        "Social media marketing services for businesses in Tamil Nadu and Malaysia: Instagram, Facebook, YouTube and LinkedIn content plus Meta ads. Rated 4.9★ on Google.",
       canonical: `${BASE_URL}/services/social-media-marketing`,
       focusKeyword: "social media marketing madurai",
       ogTitle:
-        "Social Media Marketing in Madurai — Instagram, FB & YouTube | Static Savvy Media",
+        "Social Media Marketing Services — Madurai, Tamil Nadu & Malaysia | Static Savvy Media",
       ogDescription:
-        "Social media marketing for Madurai businesses: Instagram, Facebook, YouTube and LinkedIn content plus Meta ads. Rated 4.9★ from 108 Google reviews. WhatsApp us today.",
+        "Social media marketing services for businesses in Tamil Nadu and Malaysia: Instagram, Facebook, YouTube and LinkedIn content plus Meta ads. Rated 4.9★ on Google.",
       ogImage: `${BASE_URL}/og/services-05socialmediamarketing.jpg`,
       schema: {
         "@context": "https://schema.org",
@@ -443,17 +443,40 @@ export const seoConfig = {
       robots: "index,follow",
     },
   },
+  "/services/website-design-development/madurai": {
+    title: "Web Design & Development Company in Madurai | Static Savvy Media",
+    slug: "services/website-design-development/madurai",
+    seo: {
+      title: "Web Design & Development Company in Madurai | Static Savvy Media",
+      description:
+        "Website design and development company in Madurai. Fast, mobile-first, SEO-ready business, WordPress and e-commerce websites. Rated 4.9★ on Google. WhatsApp us.",
+      canonical: `${BASE_URL}/services/website-design-development/madurai`,
+      focusKeyword: "website development company in Madurai",
+      ogTitle: "Web Design & Development Company in Madurai | Static Savvy Media",
+      ogDescription: "Fast, mobile-first, SEO-ready websites for Madurai businesses.",
+      ogImage: `${BASE_URL}/og/services-06website.jpg`,
+      schema: {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        name: "Website Design & Development in Madurai",
+        serviceType: "Website design and development",
+        provider: { "@type": "Organization", name: SITE_NAME },
+        areaServed: { "@type": "City", name: "Madurai" },
+      },
+      robots: "index,follow",
+    },
+  },
   "/services/local-seo/madurai": {
-    title: "Local SEO Services in Madurai | Maps & GBP | Static Savvy Media",
+    title: "Local SEO Company in Madurai | Google Maps & GBP | Static Savvy Media",
     slug: "services/local-seo/madurai",
     seo: {
-      title: "Local SEO Services in Madurai | Maps & GBP | Static Savvy Media",
+      title: "Local SEO Company in Madurai | Google Maps & GBP | Static Savvy Media",
       description:
         "Local SEO services in Madurai to rank on Google Maps. GBP optimisation, citations & reviews from a team rated 4.9★ from 108 Google reviews. WhatsApp us today.",
       canonical: `${BASE_URL}/services/local-seo/madurai`,
       focusKeyword: "local SEO services Madurai",
       ogTitle:
-        "Local SEO Services in Madurai | Maps & GBP | Static Savvy Media",
+        "Local SEO Company in Madurai | Google Maps & GBP | Static Savvy Media",
       ogDescription:
         "Local SEO services in Madurai to rank on Google Maps. GBP optimisation, citations & reviews from a team rated 4.9★ from 108 Google reviews. WhatsApp us today.",
       ogImage: `${BASE_URL}/og/locations-01madurai.jpg`,

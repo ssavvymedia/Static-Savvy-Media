@@ -29,7 +29,7 @@ import websiteHeroImg from '../../assets/images/services/06website.webp'
    ============================================================ */
 
 const PAGE_TITLE =
-  'Website Design & Development, SEO-Ready, Fast & Beautiful | Static Savvy Media Madurai'
+  'Website Design & Development Services | India & Malaysia | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
   'Custom website design and development in Madurai. SEO-ready, Core Web Vitals optimised, mobile-first. WordPress and Next.js builds that rank, load fast, and convert visitors into WhatsApp enquiries.'
@@ -698,6 +698,9 @@ export default function WebsiteDesignDevelopment() {
                 </svg>
               </Link>
             ))}
+            <Link to="/services/website-design-development/madurai/" className="related-content__link">
+              Website Development in Madurai
+            </Link>
             <Link to="/faq/" className="related-content__link">
               FAQ
               <svg

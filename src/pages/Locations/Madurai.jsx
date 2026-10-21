@@ -82,7 +82,7 @@ const SERVICES = [
     number: '06',
     title: 'Website Design & Development',
     text: 'SEO-ready, mobile-first websites built for Madurai businesses.',
-    path: '/services/website-design-development/',
+    path: '/services/website-design-development/madurai/',
     icon: 'web',
     color: 'icon-badge--green',
   },
@@ -180,7 +180,7 @@ const RELATED_SERVICES = [
   { name: 'GEO & AEO, AI Search', path: '/services/geo-aeo-ai-search/' },
   { name: 'Google Ads', path: '/services/google-ads/' },
   { name: 'Social Media Marketing', path: '/services/social-media-marketing/' },
-  { name: 'Website Design & Development', path: '/services/website-design-development/' },
+  { name: 'Website Design & Development in Madurai', path: '/services/website-design-development/madurai/' },
   { name: 'AI Business Automation', path: '/services/ai-business-automation/' },
   { name: 'Corporate Photography & Video', path: '/services/corporate-photography-video/' },
   { name: 'AI Video Creation', path: '/services/ai-video-creation/' },
@@ -303,6 +303,10 @@ export default function Madurai() {
           <div className="section-heading">
             <span className="section-heading__eyebrow">What We Deliver</span>
             <h2 className="section-heading__title">Digital Marketing Services in Madurai</h2>
+            <p className="section-heading__subtitle">
+              This page covers our Madurai office and local team. For an overview of Static Savvy Media as a{' '}
+              <Link to="/">digital marketing company in Madurai</Link>, visit our homepage.
+            </p>
           </div>
           <div className="madurai-services__grid">
             {SERVICES.map((service, index) => (

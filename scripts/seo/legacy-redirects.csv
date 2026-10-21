@@ -2,7 +2,7 @@ legacy_path,seen_as,hosts,gsc_clicks_90d,gsc_impressions_90d,action,target,confi
 /,/,www.ssm,29,1570,live,,,live route today (no redirect needed)
 /about,/about,www.ssm,3,809,live,,,live route today (no redirect needed)
 /post/best-digital-marketing-agency-in-malaysia-for-small-businesses-a-buyer-s-checklist,/post/best-digital-marketing-agency-in-malaysia-for-small-businesses-a-buyer-s-checklist,www.ssm,2,703,redirect,/locations/malaysia/,medium,Malaysia agency buyer guide -> Malaysia location page
-/post/best-digital-marketing-company-in-madurai,/post/best-digital-marketing-company-in-madurai,www.ssm,0,455,redirect,/locations/madurai/,medium,Madurai agency post -> Madurai location page
+/post/best-digital-marketing-company-in-madurai,/post/best-digital-marketing-company-in-madurai,www.ssm,0,455,redirect,/,medium,Madurai agency post -> homepage (GBP-tagged URL; avoids homepage vs /locations/madurai/ cannibalisation)
 /on-pageseoservicesinmadurai,/on-pageseoservicesinmadurai,www.ssm,0,428,redirect,/services/seo/madurai/,high,old SEO service page -> SEO Madurai
 /technicalseoagencyinmadurai,/technicalseoagencyinmadurai,www (GSC only),0,394,redirect,/services/seo/madurai/,high,old SEO service page -> SEO Madurai
 /local-seo-services-madurai,/local-seo-services-madurai,www (GSC only),0,328,redirect,/services/local-seo/madurai/,high,old local SEO / GBP page -> Local SEO Madurai
@@ -16,7 +16,7 @@ legacy_path,seen_as,hosts,gsc_clicks_90d,gsc_impressions_90d,action,target,confi
 /videomarketingservicesinmadurai,/videomarketingservicesinmadurai,www (GSC only),0,159,redirect,/services/corporate-photography-video/,medium,video marketing page -> Corporate Photography & Video
 /aiseoservicesinmadurai,/aiseoservicesinmadurai,www.ssm,1,155,redirect,/services/geo-aeo-ai-search/madurai/,high,old AI SEO / GEO / AEO page -> GEO & AEO Madurai
 /u1designservicesinmadurai,/u1designservicesinmadurai,www (GSC only),0,148,redirect,/services/website-design-development/,medium,UI/UX or e-commerce solution page -> Website Design & Development (no dedicated page)
-/digitalmarketingagencyinmadurai,/digitalmarketingagencyinmadurai,www.ssm,0,122,redirect,/locations/madurai/,high,"old ""digital marketing agency Madurai"" page -> Madurai location page"
+/digitalmarketingagencyinmadurai,/digitalmarketingagencyinmadurai,www.ssm,0,122,redirect,/,high,"old ""digital marketing agency Madurai"" page -> homepage (GBP-tagged URL; avoids homepage vs /locations/madurai/ cannibalisation)"
 /linkedinmarketingservicesinmadurai,/linkedinmarketingservicesinmadurai,www.ssm,2,117,redirect,/services/social-media-marketing/madurai/,high,old social / Meta ads / LinkedIn / YouTube marketing page -> Social Media Marketing service
 /blogs/local-seo-services-in-madurai,/blogs/local-seo-services-in-madurai,www.ssm,0,101,redirect,/services/local-seo/madurai/,high,old local SEO / GBP page -> Local SEO Madurai
 /post/top-10-best-affiliate-programs-to-make-money-online-in-2026,/post/top-10-best-affiliate-programs-to-make-money-online-in-2026,www.ssm,3,99,404,,,off-topic / not offered / theme demo or shop page: leave 404
