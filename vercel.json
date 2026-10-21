@@ -1432,6 +1432,11 @@
       "statusCode": 308
     },
     {
+      "source": "/services/website-design-development/madurai",
+      "destination": "/services/website-design-development/madurai/",
+      "statusCode": 308
+    },
+    {
       "source": "/services/seo/thoothukudi",
       "destination": "/services/seo/thoothukudi/",
       "statusCode": 308
@@ -1781,6 +1786,10 @@
     },
     {
       "source": "/services/seo/madurai/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/services/website-design-development/madurai/",
       "destination": "/index.html"
     },
     {
