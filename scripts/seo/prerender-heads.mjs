@@ -44,7 +44,15 @@ try {
   await vite.close()
 }
 
-const ssr = await ssrBodies(ROOT, readdirSync(join(DIST, 'assets')))
+/* SSR bodies are an enhancement: if the render fails, ship the plain shells (as before) instead of
+ * failing the deploy, and leave the reason in an HTML comment on the affected routes. */
+let ssr = new Map(), ssrError = ''
+try {
+  ssr = await ssrBodies(ROOT, readdirSync(join(DIST, 'assets')))
+} catch (e) {
+  ssrError = String(e?.stack || e).split('\n').slice(0, 4).join(' | ').replace(/--/g, '- -').slice(0, 600)
+  console.warn(`prerender-heads: SSR bodies skipped: ${ssrError}`)
+}
 
 /* Sanity blog posts (public CDN, read-only): same title/description rules as BlogPost.jsx.
  * If the fetch fails the post shells still get the right canonical, just the default title. */
@@ -122,6 +130,7 @@ for (const route of routes) {
     const ld = JSON.stringify(ssrBody.schema).replace(/</g, '\\u003c')
     html = html.replace('</head>', `  <script type="application/ld+json" id="json-ld-schema">${ld}</script>\n  </head>`)
   }
+  if (ssrError && !body) html = html.replace('<div id="root"></div>', `<!-- ssr-bodies failed: ${ssrError} --><div id="root"></div>`)
   const outDir = join(DIST, route)
   mkdirSync(outDir, { recursive: true })
   const out = join(outDir, 'index.html')

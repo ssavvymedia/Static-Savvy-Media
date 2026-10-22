@@ -50,7 +50,7 @@ function fixAssets(html, distAssets) {
 }
 
 export async function ssrBodies(root, distAssets) {
-  const vite = await createServer({ root, mode: 'production', logLevel: 'error', server: { middlewareMode: true, hmr: false }, appType: 'custom' })
+  const vite = await createServer({ root, mode: 'production', logLevel: 'error', server: { middlewareMode: true, hmr: false, watch: null, ws: false }, appType: 'custom', optimizeDeps: { noDiscovery: true, include: [] } })
   const out = new Map()
   try {
     const { ssrRoutes } = await vite.ssrLoadModule('/src/data/ssrRoutes.js')
