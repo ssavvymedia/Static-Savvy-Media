@@ -11,10 +11,11 @@
  *
  * Runs at the end of `vite build` (plugin in vite.config.js). Fails the build if a route can't be written.
  */
-import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs'
+import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { createServer } from 'vite'
+import { ssrBodies } from './ssr-bodies.mjs'
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..')
 const DIST = join(ROOT, 'dist')
@@ -42,6 +43,8 @@ try {
 } finally {
   await vite.close()
 }
+
+const ssr = await ssrBodies(ROOT, readdirSync(join(DIST, 'assets')))
 
 /* Sanity blog posts (public CDN, read-only): same title/description rules as BlogPost.jsx.
  * If the fetch fails the post shells still get the right canonical, just the default title. */
@@ -110,6 +113,13 @@ for (const route of routes) {
     withBody++
     html = setTag(html, /<div id="root"><\/div>/, `<div id="root">${renderBodyHtml(body)}</div>`, 'root', route)
     const ld = JSON.stringify(body.schema).replace(/</g, '\\u003c')
+    html = html.replace('</head>', `  <script type="application/ld+json" id="json-ld-schema">${ld}</script>\n  </head>`)
+  }
+  const ssrBody = !body && ssr.get(route.endsWith('/') ? route : `${route}/`)
+  if (ssrBody) {
+    withBody++
+    html = setTag(html, /<div id="root"><\/div>/, `<div id="root">${ssrBody.html}</div>`, 'root', route)
+    const ld = JSON.stringify(ssrBody.schema).replace(/</g, '\\u003c')
     html = html.replace('</head>', `  <script type="application/ld+json" id="json-ld-schema">${ld}</script>\n  </head>`)
   }
   const outDir = join(DIST, route)

@@ -15,7 +15,7 @@ const PAGE_TITLE =
   'Digital Marketing Company in Madurai — SEO & Ads | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
-  'Need a digital marketing company in Madurai? Rated 4.9★ from 108 Google reviews. SEO, Local SEO, Google Ads & social media that bring enquiries. WhatsApp us today.'
+  'Need a digital marketing company in Madurai? Rated 4.9★ from 100+ Google reviews. SEO, Local SEO, Google Ads & social media that bring enquiries. WhatsApp us today.'
 
 const HERO = {
   eyebrow: 'Premium Digital Marketing Agency',

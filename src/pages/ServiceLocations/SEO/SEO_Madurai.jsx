@@ -29,7 +29,7 @@ const PAGE_TITLE =
   'SEO Company in Madurai | SEO Services | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
-  'SEO company in Madurai rated 4.9★ from 108 Google reviews. Technical, on-page and content SEO services that turn Google searches into enquiries.'
+  'SEO company in Madurai rated 4.9★ from 100+ Google reviews. Technical, on-page and content SEO services that turn Google searches into enquiries.'
 
 const HERO_EYEBROW = 'SEO · MADURAI'
 

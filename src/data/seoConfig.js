@@ -23,13 +23,13 @@ export const seoConfig = {
       title:
         "Digital Marketing Company in Madurai — SEO & Ads | Static Savvy Media",
       description:
-        "Need a digital marketing company in Madurai? Rated 4.9★ from 108 Google reviews. SEO, Local SEO, Google Ads & social media that bring enquiries. WhatsApp us today.",
+        "Need a digital marketing company in Madurai? Rated 4.9★ from 100+ Google reviews. SEO, Local SEO, Google Ads & social media that bring enquiries. WhatsApp us today.",
       canonical: `${BASE_URL}/`,
       focusKeyword: "digital marketing company in madurai",
       ogTitle:
         "Digital Marketing Company in Madurai — SEO & Ads | Static Savvy Media",
       ogDescription:
-        "Need a digital marketing company in Madurai? Rated 4.9★ from 108 Google reviews. SEO, Local SEO, Google Ads & social media that bring enquiries. WhatsApp us today.",
+        "Need a digital marketing company in Madurai? Rated 4.9★ from 100+ Google reviews. SEO, Local SEO, Google Ads & social media that bring enquiries. WhatsApp us today.",
       ogImage: `${BASE_URL}/og/heroimage.jpg`,
       schema: {
         "@context": "https://schema.org",
@@ -46,12 +46,12 @@ export const seoConfig = {
     seo: {
       title: "About Static Savvy Media | Digital Marketing Agency in Madurai",
       description:
-        "Learn about Static Savvy Media, a Madurai digital marketing agency rated 4.9★ from 108 Google reviews. SEO, Local SEO, Google Ads & AI search for Tamil Nadu and Malaysia.",
+        "Learn about Static Savvy Media, a Madurai digital marketing agency rated 4.9★ from 100+ Google reviews. SEO, Local SEO, Google Ads & AI search for Tamil Nadu and Malaysia.",
       canonical: `${BASE_URL}/about`,
       focusKeyword: "digital marketing agency madurai",
       ogTitle: "About Static Savvy Media | Digital Marketing Agency in Madurai",
       ogDescription:
-        "Learn about Static Savvy Media, a Madurai digital marketing agency rated 4.9★ from 108 Google reviews. SEO, Local SEO, Google Ads & AI search for Tamil Nadu and Malaysia.",
+        "Learn about Static Savvy Media, a Madurai digital marketing agency rated 4.9★ from 100+ Google reviews. SEO, Local SEO, Google Ads & AI search for Tamil Nadu and Malaysia.",
       ogImage: `${BASE_URL}/og/about-about.jpg`,
       schema: {
         "@context": "https://schema.org",
@@ -368,12 +368,12 @@ export const seoConfig = {
     seo: {
       title: "SEO Company in Madurai | SEO Services | Static Savvy Media",
       description:
-        "SEO company in Madurai rated 4.9★ from 108 Google reviews. Technical, on-page and content SEO services that turn Google searches into enquiries.",
+        "SEO company in Madurai rated 4.9★ from 100+ Google reviews. Technical, on-page and content SEO services that turn Google searches into enquiries.",
       canonical: `${BASE_URL}/services/seo/madurai`,
       focusKeyword: "SEO company in Madurai",
       ogTitle: "SEO Company in Madurai | SEO Services | Static Savvy Media",
       ogDescription:
-        "SEO company in Madurai rated 4.9★ from 108 Google reviews. Technical, on-page and content SEO services that turn Google searches into enquiries.",
+        "SEO company in Madurai rated 4.9★ from 100+ Google reviews. Technical, on-page and content SEO services that turn Google searches into enquiries.",
       ogImage: `${BASE_URL}/og/locations-01madurai.jpg`,
       schema: {
         "@context": "https://schema.org",
@@ -472,13 +472,13 @@ export const seoConfig = {
     seo: {
       title: "Local SEO Company in Madurai | Google Maps & GBP | Static Savvy Media",
       description:
-        "Local SEO services in Madurai to rank on Google Maps. GBP optimisation, citations & reviews from a team rated 4.9★ from 108 Google reviews. WhatsApp us today.",
+        "Local SEO services in Madurai to rank on Google Maps. GBP optimisation, citations & reviews from a team rated 4.9★ from 100+ Google reviews. WhatsApp us today.",
       canonical: `${BASE_URL}/services/local-seo/madurai`,
       focusKeyword: "local SEO services Madurai",
       ogTitle:
         "Local SEO Company in Madurai | Google Maps & GBP | Static Savvy Media",
       ogDescription:
-        "Local SEO services in Madurai to rank on Google Maps. GBP optimisation, citations & reviews from a team rated 4.9★ from 108 Google reviews. WhatsApp us today.",
+        "Local SEO services in Madurai to rank on Google Maps. GBP optimisation, citations & reviews from a team rated 4.9★ from 100+ Google reviews. WhatsApp us today.",
       ogImage: `${BASE_URL}/og/locations-01madurai.jpg`,
       schema: {
         "@context": "https://schema.org",

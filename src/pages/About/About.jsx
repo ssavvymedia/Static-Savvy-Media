@@ -22,7 +22,7 @@ import deepanAboutImg from '../../assets/images/About/DeepanAbout.webp'
 const PAGE_TITLE = 'About Static Savvy Media | Digital Marketing Agency in Madurai'
 
 const PAGE_DESCRIPTION =
-  'Learn about Static Savvy Media, a Madurai digital marketing agency rated 4.9★ from 108 Google reviews. SEO, Local SEO, Google Ads & AI search for Tamil Nadu and Malaysia.'
+  'Learn about Static Savvy Media, a Madurai digital marketing agency rated 4.9★ from 100+ Google reviews. SEO, Local SEO, Google Ads & AI search for Tamil Nadu and Malaysia.'
 
 const SERVICES = [
   { number: '01', title: 'SEO', text: 'Search engine optimisation designed to improve organic visibility and long-term discoverability.', path: '/services/seo/madurai/' },
