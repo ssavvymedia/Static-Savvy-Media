@@ -66,8 +66,15 @@ export async function ssrBodies(root, distAssets) {
       address: C.MALAYSIA_POSTAL_ADDRESS, parentOrganization: { '@id': ORG_ID },
     }
     for (const r of ssrRoutes) {
-      const { default: Page } = await vite.ssrLoadModule(r.module)
-      const html = fixAssets(renderToString(React.createElement(MemoryRouter, { initialEntries: [r.route] }, React.createElement(Page))), distAssets)
+      const mod = await vite.ssrLoadModule(r.module)
+      const Page = mod.default
+      let raw
+      try {
+        raw = renderToString(React.createElement(MemoryRouter, { initialEntries: [r.route] }, React.createElement(Page)))
+      } catch (e) {
+        throw new Error(`${r.route}: ${e.message.slice(0, 160)} [Page=${typeof Page} keys=${Object.keys(mod).join(',')} MemoryRouter=${typeof MemoryRouter} react=${React.version}]`)
+      }
+      const html = fixAssets(raw, distAssets)
       const h1 = html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/)
       if (!h1) throw new Error(`ssr-bodies: no <h1> rendered for ${r.route}`)
       const qs = textsByClassSuffix(html, ['faq__question', 'faq-section__question']), as = textsByClassSuffix(html, ['faq__answer', 'faq-section__answer'])
