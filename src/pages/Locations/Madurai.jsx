@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import { MADURAI_FAQS } from '../../data/pages/maduraiFaqs.js'
 import { Link } from 'react-router-dom'
 import Breadcrumbs from '../../components/common/Breadcrumbs.jsx'
 import Button from '../../components/common/Button.jsx'
@@ -30,7 +31,7 @@ const PAGE_TITLE =
   'Digital Marketing Agency in Madurai, SEO, GEO/AEO & More | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
-  "Static Savvy Media is Madurai’s AI-powered digital marketing agency. SEO, Local SEO, GEO/AEO, Google Ads, social media, web design, and AI automation. Call +91-99440-40345."
+  'Digital marketing agency in Madurai (Kamarajar Salai): SEO, Local SEO, Google Ads, social media, websites and AI search, in Tamil & English. WhatsApp +91 99440 40345.'
 
 const HERO_EYEBROW = 'Madurai • Static Savvy Media HQ'
 
@@ -151,35 +152,17 @@ const INDUSTRIES = [
   },
 ]
 
-const FAQS = [
-  {
-    question: 'What types of businesses do you work with in Madurai?',
-    answer:
-      'Businesses across Madurai’s main economic sectors: textiles and garments, education, healthcare, hospitality, retail, and professional services. Our smallest Madurai clients are 2–3 person businesses; our largest have 50+ staff. Message us on WhatsApp and we will advise on the right starting point for your business.',
-  },
-  {
-    question: 'Do you offer Tamil-language digital marketing?',
-    answer:
-      "Yes. We create Tamil-language content for social media, local SEO, and blog posts for clients targeting Tamil Nadu’s Tamil-speaking audience, particularly for voice search optimisation. Our Madurai team writes Tamil content in-house rather than relying on machine translation.",
-  },
-  {
-    question: 'Can I come to your office in Madurai for a consultation?',
-    answer:
-      'Yes, and we welcome it. In-person consultations are available Monday through Saturday by appointment. Message us on WhatsApp to schedule. We are also happy to meet via Google Meet or WhatsApp video call.',
-  },
-  {
-    question: 'Is digital marketing worth investing in for a small business in Madurai?',
-    answer:
-      "Yes, particularly Local SEO and Google Business Profile optimization, which have the highest ROI for small local businesses. A Madurai business that does not appear in the top 3 Google Maps results for its category is missing the majority of local search-driven enquiries. The cost of fixing this is lower than most business owners expect, and the return is consistent and compounding.",
-  },
-]
+const FAQS = MADURAI_FAQS
 
 const RELATED_SERVICES = [
   { name: 'SEO', path: '/services/seo/' },
   { name: 'Local SEO', path: '/services/local-seo/' },
   { name: 'GEO & AEO, AI Search', path: '/services/geo-aeo-ai-search/' },
   { name: 'Google Ads', path: '/services/google-ads/' },
-  { name: 'Social Media Marketing', path: '/services/social-media-marketing/' },
+  { name: 'Social Media Marketing in Madurai', path: '/services/social-media-marketing/madurai/' },
+  { name: 'SEO Company in Madurai', path: '/services/seo/madurai/' },
+  { name: 'Advertising Agency in Madurai', path: '/services/advertising-agency/madurai/' },
+  { name: 'Top Digital Marketing Companies in Madurai (guide)', path: '/blog/top-digital-marketing-companies-in-madurai/' },
   { name: 'Website Design & Development in Madurai', path: '/services/website-design-development/madurai/' },
   { name: 'AI Business Automation', path: '/services/ai-business-automation/' },
   { name: 'Corporate Photography & Video', path: '/services/corporate-photography-video/' },
@@ -190,6 +173,7 @@ const RELATED_SERVICES = [
 const OTHER_LOCATIONS = [
   { name: 'Thoothukudi', path: '/locations/thoothukudi/' },
   { name: 'Malaysia', path: '/locations/malaysia/' },
+  { name: 'Tamil Nadu', path: '/locations/tamil-nadu/' },
   { name: 'All Locations', path: '/locations/' },
 ]
 

@@ -658,7 +658,7 @@ export const seoConfig = {
       title:
         "Digital Marketing Agency Madurai — SEO, Ads & AI | Static Savvy Media",
       description:
-        "Headquartered in Madurai, Static Savvy Media delivers full-service SEO, GEO/AEO, Google Ads, and digital growth for local enterprises.",
+        "Digital marketing agency in Madurai (Kamarajar Salai): SEO, Local SEO, Google Ads, social media, websites and AI search, in Tamil & English. WhatsApp +91 99440 40345.",
       canonical: `${BASE_URL}/locations/madurai`,
       focusKeyword: "digital marketing agency Madurai",
       ogTitle: "Digital Marketing Agency Madurai | Static Savvy Media",
@@ -1867,6 +1867,42 @@ export const seoConfig = {
         "Social media marketing company in Madurai: Facebook, Instagram and YouTube marketing, Meta ads, reels and content in Tamil and English. Rated 4.9★ on Google.",
       canonical: `${BASE_URL}/services/social-media-marketing/madurai`,
       ogImage: `${BASE_URL}/og/services-05socialmediamarketing.jpg`,
+      robots: "index,follow",
+    },
+  },
+  "/services/advertising-agency/madurai": {
+    title: "Advertising Agency in Madurai | Google & Meta Ads | Static Savvy Media",
+    slug: "services/advertising-agency/madurai",
+    seo: {
+      title: "Advertising Agency in Madurai | Google & Meta Ads | Static Savvy Media",
+      description:
+        "Advertising agency in Madurai for Google Ads, Meta (Facebook & Instagram) ads, YouTube ads and WhatsApp lead campaigns, with conversion tracking. WhatsApp +91 99440 40345.",
+      canonical: `${BASE_URL}/services/advertising-agency/madurai`,
+      ogImage: `${BASE_URL}/og/locations-01madurai.jpg`,
+      robots: "index,follow",
+    },
+  },
+  "/locations/tamil-nadu": {
+    title: "Digital Marketing Agency in Tamil Nadu | Static Savvy Media",
+    slug: "locations/tamil-nadu",
+    seo: {
+      title: "Digital Marketing Agency in Tamil Nadu | Static Savvy Media",
+      description:
+        "Digital marketing agency in Tamil Nadu with offices in Madurai and Thoothukudi: SEO, Local SEO, Google Ads, social media and AI search for businesses across the state.",
+      canonical: `${BASE_URL}/locations/tamil-nadu`,
+      ogImage: `${BASE_URL}/og/locations-01madurai.jpg`,
+      robots: "index,follow",
+    },
+  },
+  "/blog/top-digital-marketing-companies-in-madurai": {
+    title: "Top Digital Marketing Companies in Madurai (2026 Comparison)",
+    slug: "blog/top-digital-marketing-companies-in-madurai",
+    seo: {
+      title: "Top Digital Marketing Companies in Madurai (2026 Comparison)",
+      description:
+        "A plain comparison of well-known digital marketing companies in Madurai: services, focus, locations and Google ratings as seen in October 2026, plus how to choose.",
+      canonical: `${BASE_URL}/blog/top-digital-marketing-companies-in-madurai`,
+      ogImage: `${BASE_URL}/og/locations-01madurai.jpg`,
       robots: "index,follow",
     },
   },

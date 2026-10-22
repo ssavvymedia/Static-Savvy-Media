@@ -46,6 +46,9 @@ import HealthcareClinics from '../pages/Industries/HealthcareClinics.jsx'
 import EducationTraining from '../pages/Industries/EducationTraining.jsx'
 import HospitalityHotels from '../pages/Industries/HospitalityHotels.jsx'
 import TextilesMadurai from '../pages/Industries/TextilesMadurai.jsx'
+import AdvertisingAgency_Madurai from '../pages/ServiceLocations/Advertising/AdvertisingAgency_Madurai.jsx'
+import TamilNadu from '../pages/Locations/TamilNadu.jsx'
+import TopCompaniesMadurai from '../pages/Blog/TopCompaniesMadurai.jsx'
 import PortMarineIndustrialThoothukudi from '../pages/Industries/PortMarineIndustrialThoothukudi.jsx'
 import SMEsMalaysia from '../pages/Industries/SMEsMalaysia.jsx'
 import RealEstateBuilders from '../pages/Industries/RealEstateBuilders.jsx'
@@ -167,6 +170,8 @@ export default function AppRoutes() {
         <Route path="/locations/thoothukudi" element={<Thoothukudi />} />
         <Route path="/locations/malaysia" element={<Malaysia />} />
         <Route path="/locations/kuala-lumpur" element={<KualaLumpur />} />
+        <Route path="/locations/tamil-nadu" element={<TamilNadu />} />
+        <Route path="/services/advertising-agency/madurai" element={<AdvertisingAgency_Madurai />} />
 
         <Route path="/industries" element={<Industries />} />
         <Route
@@ -309,6 +314,7 @@ export default function AppRoutes() {
         <Route path="/blog/seo" element={<BlogSEO />} />
         <Route path="/blog/geo-aeo" element={<BlogGEOAEO />} />
         <Route path="/blog/local-marketing" element={<BlogLocalMarketing />} />
+        <Route path="/blog/top-digital-marketing-companies-in-madurai" element={<TopCompaniesMadurai />} />
         <Route
           path="/blog/what-is-generative-engine-optimization"
           element={<WhatIsGEO />}

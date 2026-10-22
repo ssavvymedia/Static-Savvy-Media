@@ -35,9 +35,10 @@ const vite = await createServer({
   server: { middlewareMode: true, hmr: false },
   appType: 'custom',
 })
-let getSeoForPath
+let getSeoForPath, prerenderBodies, renderBodyHtml
 try {
   ;({ getSeoForPath } = await vite.ssrLoadModule('/src/data/seoConfig.js'))
+  ;({ prerenderBodies, renderBodyHtml } = await vite.ssrLoadModule('/src/data/prerenderBodies.js'))
 } finally {
   await vite.close()
 }
@@ -71,6 +72,7 @@ const vercel = JSON.parse(readFileSync(join(ROOT, 'vercel.json'), 'utf8'))
 const routes = vercel.rewrites.filter((r) => r.destination === '/index.html').map((r) => r.source)
 
 let withMeta = 0
+let withBody = 0
 for (const route of routes) {
   if (!route.startsWith('/') || !route.endsWith('/') || route.includes(':') || route.includes('(')) {
     throw new Error(`prerender-heads: unexpected rewrite source ${route}`)
@@ -101,10 +103,27 @@ for (const route of routes) {
       html = html.replace(/<meta name="twitter:image" content="[^"]*"\s*\/?>/, `<meta name="twitter:image" content="${img}" />`)
     }
   }
+  /* Crawlable body + JSON-LD for key routes (src/data/prerenderBodies.js). React's createRoot()
+   * replaces #root on load; the runtime setSeo() overwrites the script with the same id. */
+  const body = prerenderBodies[route]
+  if (body) {
+    withBody++
+    html = setTag(html, /<div id="root"><\/div>/, `<div id="root">${renderBodyHtml(body)}</div>`, 'root', route)
+    const ld = JSON.stringify(body.schema).replace(/</g, '\\u003c')
+    html = html.replace('</head>', `  <script type="application/ld+json" id="json-ld-schema">${ld}</script>\n  </head>`)
+  }
   const outDir = join(DIST, route)
   mkdirSync(outDir, { recursive: true })
   const out = join(outDir, 'index.html')
   writeFileSync(out, html)
   if (!existsSync(out)) throw new Error(`prerender-heads: failed to write ${out}`)
 }
-console.log(`prerender-heads: wrote ${routes.length} route shells (${withMeta} with their own title/description).`)
+/* Homepage: dist/index.html itself (every other route already has its own file above). */
+if (prerenderBodies['/']) {
+  let home = setTag(shell, /<div id="root"><\/div>/, `<div id="root">${renderBodyHtml(prerenderBodies['/'])}</div>`, 'root', '/')
+  const ld = JSON.stringify(prerenderBodies['/'].schema).replace(/</g, '\\u003c')
+  home = home.replace('</head>', `  <script type="application/ld+json" id="json-ld-schema">${ld}</script>\n  </head>`)
+  writeFileSync(join(DIST, 'index.html'), home)
+  withBody++
+}
+console.log(`prerender-heads: wrote ${routes.length} route shells (${withMeta} with their own title/description, ${withBody} with crawlable body + JSON-LD).`)

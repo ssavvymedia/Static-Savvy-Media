@@ -7,6 +7,7 @@ export const locations = [
   { slug: 'madurai', name: 'Madurai', path: '/locations/madurai/' },
   { slug: 'malaysia', name: 'Malaysia', path: '/locations/malaysia/' },
   { slug: 'thoothukudi', name: 'Thoothukudi', path: '/locations/thoothukudi/' },
+  { slug: 'tamil-nadu', name: 'Tamil Nadu', path: '/locations/tamil-nadu/' },
 ]
 
 export function getLocationBySlug(slug) {

@@ -81,7 +81,7 @@ legacy_path,seen_as,hosts,gsc_clicks_90d,gsc_impressions_90d,action,target,confi
 /post/best-seo-tools-for-sme-automation-unlocking-growth-with-smart-technology,/post/best-seo-tools-for-sme-automation-unlocking-growth-with-smart-technology,www (GSC only),0,5,redirect,/services/seo/,medium,SEO tools / SEO guide post -> SEO service
 /post/develop-a-winning-digital-growth-plan-for-smes-digital-growth-strategies-for-smes,/post/develop-a-winning-digital-growth-plan-for-smes-digital-growth-strategies-for-smes,www.ssm,0,5,redirect,/services/,low,generic SME growth plan post (no equivalent) -> Services hub
 /post/google-my-business-optimization-guide-for-madurai-shop-owners,/post/google-my-business-optimization-guide-for-madurai-shop-owners,www.ssm,0,5,redirect,/services/local-seo/madurai/,medium,local SEO / Google Maps / GBP post -> Local SEO Madurai
-/post/how-to-automate-marketing-with-ai-and-find-digital-marketing-support-in-tamil-nadu,/post/how-to-automate-marketing-with-ai-and-find-digital-marketing-support-in-tamil-nadu,www.ssm,0,5,redirect,/services/ai-business-automation/,medium,AI for SMEs / AI lead generation post -> AI Business Automation
+/post/how-to-automate-marketing-with-ai-and-find-digital-marketing-support-in-tamil-nadu,/post/how-to-automate-marketing-with-ai-and-find-digital-marketing-support-in-tamil-nadu,www.ssm,0,5,redirect,/locations/tamil-nadu/,medium,Tamil Nadu digital marketing post -> new Tamil Nadu page (2026-10-22)
 /ui-ux-design-madurai,/ui-ux-design-madurai,www (GSC only),1,5,redirect,/services/website-design-development/,medium,UI/UX or e-commerce solution page -> Website Design & Development (no dedicated page)
 /websiteredesignservicesinmadurai,/websiteredesignservicesinmadurai,www (GSC only),0,5,redirect,/services/website-design-development/,high,old website / e-commerce / landing page service -> Website Design & Development
 /blog/page/2,/blog/page/2,www (GSC only),0,4,redirect,/blog/,high,old blog index / pagination -> Blog
@@ -106,7 +106,7 @@ legacy_path,seen_as,hosts,gsc_clicks_90d,gsc_impressions_90d,action,target,confi
 /post/lead-generation-strategies-that-work-for-ambitious-smes-in-madurai,/post/lead-generation-strategies-that-work-for-ambitious-smes-in-madurai,www.ssm,0,1,redirect,/services/,low,generic SME growth plan post (no equivalent) -> Services hub
 /post/mastering-digital-growth-plans-for-smes-proven-digital-strategies-for-smes-success,/post/mastering-digital-growth-plans-for-smes-proven-digital-strategies-for-smes-success,www (GSC only),0,1,redirect,/services/,low,generic SME growth plan post (no equivalent) -> Services hub
 /post/static-media-strategies-for-smes-understanding-static-savvy-media-for-smes,/post/static-media-strategies-for-smes-understanding-static-savvy-media-for-smes,www.ssm,0,1,redirect,/about/,medium,brand post about Static Savvy Media -> About
-/post/who-offers-integrated-digital-marketing-solutions-in-tamil-nadu,/post/who-offers-integrated-digital-marketing-solutions-in-tamil-nadu,www.ssm,0,1,redirect,/services/,medium,multi-service intent -> Services hub
+/post/who-offers-integrated-digital-marketing-solutions-in-tamil-nadu,/post/who-offers-integrated-digital-marketing-solutions-in-tamil-nadu,www.ssm,0,1,redirect,/locations/tamil-nadu/,medium,Tamil Nadu digital marketing post -> new Tamil Nadu page (2026-10-22)
 /services,/services/,ssm,0,1,live,,,live route today (no redirect needed)
 /10-best-ai-agent-tools-for-digital-marketing-in-2025,/10-best-ai-agent-tools-for-digital-marketing-in-2025/,ssm,0,0,redirect,/services/ai-business-automation/,low,AI tools post -> AI Business Automation
 /2025-paid-ad-trends-madurai,/2025-paid-ad-trends-madurai/,ssm,0,0,redirect,/services/google-ads/,medium,paid ads blog post -> Google Ads service
@@ -194,7 +194,7 @@ legacy_path,seen_as,hosts,gsc_clicks_90d,gsc_impressions_90d,action,target,confi
 /hi/website-design-and-development-in-madurai,/hi/website-design-and-development-in-madurai,www.ssm,0,0,redirect,/services/website-design-development/,high,old /hi language version; old website / e-commerce / landing page service -> Website Design & Development
 /hi/whatsapp-marketing-service-in-madurai,/hi/whatsapp-marketing-service-in-madurai,www.ssm,0,0,redirect,/services/ai-business-automation/,high,old /hi language version; AI / WhatsApp automation page -> AI Business Automation (covers WhatsApp automation)
 /how-generative-engine-optimization-is-changing-digital-marketing-in-madurai,/how-generative-engine-optimization-is-changing-digital-marketing-in-madurai/,ssm,0,0,redirect,/services/geo-aeo-ai-search/madurai/,medium,GEO blog post (Madurai) -> GEO & AEO Madurai
-/how-to-select-the-right-advertising-agency-in-madurai-7-essential-criteria-for-business-success,/how-to-select-the-right-advertising-agency-in-madurai-7-essential-criteria-for-business-success/,ssm,0,0,redirect,/blog/how-to-choose-the-right-digital-marketing-agency-in-madurai/,medium,choosing an agency post -> current agency-choice post
+/how-to-select-the-right-advertising-agency-in-madurai-7-essential-criteria-for-business-success,/how-to-select-the-right-advertising-agency-in-madurai-7-essential-criteria-for-business-success/,ssm,0,0,redirect,/services/advertising-agency/madurai/,medium,advertising agency Madurai topic -> new Advertising Agency Madurai page (2026-10-22)
 /index.php?rest_route=%2Fconvertful%2Fv2%2F,/index.php?rest_route=%2Fconvertful%2Fv2%2F,ssm,0,0,404,,,off-topic / not offered / theme demo or shop page: leave 404
 /it-solution,/it-solution/,ssm,0,0,404,,,off-topic / not offered / theme demo or shop page: leave 404
 /local-seo-madurai-near-me,/local-seo-madurai-near-me/,ssm,0,0,redirect,/services/local-seo/madurai/,high,old local SEO / GBP page -> Local SEO Madurai
@@ -355,10 +355,10 @@ legacy_path,seen_as,hosts,gsc_clicks_90d,gsc_impressions_90d,action,target,confi
 /tag/2025-marketing-trends,/tag/2025-marketing-trends/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
 /tag/2025-seo,/tag/2025-seo/,ssm,0,0,redirect,/services/seo/,low,old WordPress tag archive with a clear topical match
 /tag/2025-seo-trends,/tag/2025-seo-trends/,ssm,0,0,redirect,/services/seo/,low,old WordPress tag archive with a clear topical match
-/tag/advertising-agency,/tag/advertising-agency/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
-/tag/advertising-agency-in-madurai,/tag/advertising-agency-in-madurai/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
-/tag/advertising-company-madurai,/tag/advertising-company-madurai/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
-/tag/advertising-services-madurai-for-small-business,/tag/advertising-services-madurai-for-small-business/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
+/tag/advertising-agency,/tag/advertising-agency/,ssm,0,0,redirect,/services/advertising-agency/madurai/,medium,advertising agency Madurai topic -> new Advertising Agency Madurai page (2026-10-22)
+/tag/advertising-agency-in-madurai,/tag/advertising-agency-in-madurai/,ssm,0,0,redirect,/services/advertising-agency/madurai/,medium,advertising agency Madurai topic -> new Advertising Agency Madurai page (2026-10-22)
+/tag/advertising-company-madurai,/tag/advertising-company-madurai/,ssm,0,0,redirect,/services/advertising-agency/madurai/,medium,advertising agency Madurai topic -> new Advertising Agency Madurai page (2026-10-22)
+/tag/advertising-services-madurai-for-small-business,/tag/advertising-services-madurai-for-small-business/,ssm,0,0,redirect,/services/advertising-agency/madurai/,medium,advertising agency Madurai topic -> new Advertising Agency Madurai page (2026-10-22)
 /tag/ai-agent-tools,/tag/ai-agent-tools/,ssm,0,0,redirect,/services/ai-business-automation/,low,old WordPress tag archive with a clear topical match
 /tag/ai-citation,/tag/ai-citation/,ssm,0,0,redirect,/services/geo-aeo-ai-search/,low,old WordPress tag archive with a clear topical match
 /tag/ai-content-optimisation,/tag/ai-content-optimisation/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
@@ -374,7 +374,7 @@ legacy_path,seen_as,hosts,gsc_clicks_90d,gsc_impressions_90d,action,target,confi
 /tag/artificial-intelligence-seo,/tag/artificial-intelligence-seo/,ssm,0,0,redirect,/services/geo-aeo-ai-search/,low,old WordPress tag archive with a clear topical match
 /tag/backlinking,/tag/backlinking/,ssm,0,0,redirect,/services/seo/,low,old WordPress tag archive with a clear topical match
 /tag/bert,/tag/bert/,ssm,0,0,redirect,/services/seo/,low,old WordPress tag archive with a clear topical match
-/tag/best-advertising-agency-for-business-in-madurai,/tag/best-advertising-agency-for-business-in-madurai/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
+/tag/best-advertising-agency-for-business-in-madurai,/tag/best-advertising-agency-for-business-in-madurai/,ssm,0,0,redirect,/services/advertising-agency/madurai/,medium,advertising agency Madurai topic -> new Advertising Agency Madurai page (2026-10-22)
 /tag/best-ai-agent-tools-for-digital-marketing-2025,/tag/best-ai-agent-tools-for-digital-marketing-2025/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
 /tag/black-friday,/tag/black-friday/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
 /tag/brand-identity,/tag/brand-identity/,ssm,0,0,redirect,/services/product-photography-creative-design/,low,old WordPress tag archive with a clear topical match
@@ -424,10 +424,10 @@ legacy_path,seen_as,hosts,gsc_clicks_90d,gsc_impressions_90d,action,target,confi
 /tag/healthcare-marketing,/tag/healthcare-marketing/,ssm,0,0,redirect,/industries/healthcare-clinics/,low,old WordPress tag archive with a clear topical match
 /tag/hosting,/tag/hosting/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
 /tag/hosting-deals,/tag/hosting-deals/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
-/tag/how-to-choose-advertising-agency-madurai,/tag/how-to-choose-advertising-agency-madurai/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
+/tag/how-to-choose-advertising-agency-madurai,/tag/how-to-choose-advertising-agency-madurai/,ssm,0,0,redirect,/services/advertising-agency/madurai/,medium,advertising agency Madurai topic -> new Advertising Agency Madurai page (2026-10-22)
 /tag/instagram-marketing,/tag/instagram-marketing/,ssm,0,0,redirect,/services/social-media-marketing/,low,old WordPress tag archive with a clear topical match
 /tag/it,/tag/it/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
-/tag/local-advertising-agency-madurai-criteria,/tag/local-advertising-agency-madurai-criteria/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
+/tag/local-advertising-agency-madurai-criteria,/tag/local-advertising-agency-madurai-criteria/,ssm,0,0,redirect,/services/advertising-agency/madurai/,medium,advertising agency Madurai topic -> new Advertising Agency Madurai page (2026-10-22)
 /tag/local-business-growth,/tag/local-business-growth/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
 /tag/local-business-marketing,/tag/local-business-marketing/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
 /tag/local-search,/tag/local-search/,ssm,0,0,redirect,/services/local-seo/madurai/,low,old WordPress tag archive with a clear topical match
@@ -435,7 +435,7 @@ legacy_path,seen_as,hosts,gsc_clicks_90d,gsc_impressions_90d,action,target,confi
 /tag/local-seo-madurai,/tag/local-seo-madurai/,ssm,0,0,redirect,/services/local-seo/madurai/,low,old WordPress tag archive with a clear topical match
 /tag/logo-design,/tag/logo-design/,ssm,0,0,redirect,/services/product-photography-creative-design/,low,old WordPress tag archive with a clear topical match
 /tag/madurai,/tag/madurai/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
-/tag/madurai-advertising-agency-checklist,/tag/madurai-advertising-agency-checklist/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
+/tag/madurai-advertising-agency-checklist,/tag/madurai-advertising-agency-checklist/,ssm,0,0,redirect,/services/advertising-agency/madurai/,medium,advertising agency Madurai topic -> new Advertising Agency Madurai page (2026-10-22)
 /tag/madurai-brands,/tag/madurai-brands/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
 /tag/madurai-business-growth,/tag/madurai-business-growth/,ssm,0,0,404,,,"old WordPress tag archive, no clear match: leave 404"
 /tag/madurai-business-seo,/tag/madurai-business-seo/,ssm,0,0,redirect,/services/seo/madurai/,low,old WordPress tag archive with a clear topical match

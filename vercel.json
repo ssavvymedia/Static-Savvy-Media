@@ -418,7 +418,7 @@
     },
     {
       "source": "/post/how-to-automate-marketing-with-ai-and-find-digital-marketing-support-in-tamil-nadu{/}?",
-      "destination": "/services/ai-business-automation/",
+      "destination": "/locations/tamil-nadu/",
       "statusCode": 301
     },
     {
@@ -523,7 +523,7 @@
     },
     {
       "source": "/post/who-offers-integrated-digital-marketing-solutions-in-tamil-nadu{/}?",
-      "destination": "/services/",
+      "destination": "/locations/tamil-nadu/",
       "statusCode": 301
     },
     {
@@ -803,7 +803,7 @@
     },
     {
       "source": "/how-to-select-the-right-advertising-agency-in-madurai-7-essential-criteria-for-business-success{/}?",
-      "destination": "/blog/how-to-choose-the-right-digital-marketing-agency-in-madurai/",
+      "destination": "/services/advertising-agency/madurai/",
       "statusCode": 301
     },
     {
@@ -1122,6 +1122,26 @@
       "statusCode": 301
     },
     {
+      "source": "/tag/advertising-agency{/}?",
+      "destination": "/services/advertising-agency/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/advertising-agency-in-madurai{/}?",
+      "destination": "/services/advertising-agency/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/advertising-company-madurai{/}?",
+      "destination": "/services/advertising-agency/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/advertising-services-madurai-for-small-business{/}?",
+      "destination": "/services/advertising-agency/madurai/",
+      "statusCode": 301
+    },
+    {
       "source": "/tag/ai-agent-tools{/}?",
       "destination": "/services/ai-business-automation/",
       "statusCode": 301
@@ -1169,6 +1189,11 @@
     {
       "source": "/tag/bert{/}?",
       "destination": "/services/seo/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/best-advertising-agency-for-business-in-madurai{/}?",
+      "destination": "/services/advertising-agency/madurai/",
       "statusCode": 301
     },
     {
@@ -1282,8 +1307,18 @@
       "statusCode": 301
     },
     {
+      "source": "/tag/how-to-choose-advertising-agency-madurai{/}?",
+      "destination": "/services/advertising-agency/madurai/",
+      "statusCode": 301
+    },
+    {
       "source": "/tag/instagram-marketing{/}?",
       "destination": "/services/social-media-marketing/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/local-advertising-agency-madurai-criteria{/}?",
+      "destination": "/services/advertising-agency/madurai/",
       "statusCode": 301
     },
     {
@@ -1304,6 +1339,11 @@
     {
       "source": "/tag/logo-design{/}?",
       "destination": "/services/product-photography-creative-design/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/madurai-advertising-agency-checklist{/}?",
+      "destination": "/services/advertising-agency/madurai/",
       "statusCode": 301
     },
     {
@@ -1512,6 +1552,16 @@
       "statusCode": 308
     },
     {
+      "source": "/locations/tamil-nadu",
+      "destination": "/locations/tamil-nadu/",
+      "statusCode": 308
+    },
+    {
+      "source": "/services/advertising-agency/madurai",
+      "destination": "/services/advertising-agency/madurai/",
+      "statusCode": 308
+    },
+    {
       "source": "/industries",
       "destination": "/industries/",
       "statusCode": 308
@@ -1694,6 +1744,11 @@
     {
       "source": "/blog/local-marketing",
       "destination": "/blog/local-marketing/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog/top-digital-marketing-companies-in-madurai",
+      "destination": "/blog/top-digital-marketing-companies-in-madurai/",
       "statusCode": 308
     },
     {
@@ -1898,6 +1953,14 @@
       "destination": "/index.html"
     },
     {
+      "source": "/locations/tamil-nadu/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/services/advertising-agency/madurai/",
+      "destination": "/index.html"
+    },
+    {
       "source": "/industries/",
       "destination": "/index.html"
     },
@@ -2043,6 +2106,10 @@
     },
     {
       "source": "/blog/local-marketing/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/top-digital-marketing-companies-in-madurai/",
       "destination": "/index.html"
     },
     {
