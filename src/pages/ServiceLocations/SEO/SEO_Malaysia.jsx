@@ -25,18 +25,18 @@ import '../../../styles/pages/seo-malaysia.css'
    ============================================================ */
 
 const PAGE_TITLE =
-  'SEO Malaysia, Search Engine Optimization for Malaysian Businesses | Static Savvy Media'
+  'SEO Services Malaysia | SEO Agency for KL & Selangor | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
-  'SEO services in Malaysia for businesses seeking stronger Google visibility, organic search rankings and qualified enquiries through technical SEO, keyword strategy, content and on-page optimization.'
+  'SEO services in Malaysia from our Rawang, Selangor office: technical SEO, English and Bahasa Malaysia keyword research, on-page SEO and content for google.com.my. Call +60 12-453 7030.'
 
 const HERO_EYEBROW = 'SEO · MALAYSIA'
 
 const HERO_TITLE =
-  'SEO Malaysia, Search Engine Optimization for Malaysian Businesses'
+  'SEO Services in Malaysia, SEO Agency for Kuala Lumpur & Selangor Businesses'
 
 const HERO_PARAGRAPH =
-  'Get your Malaysian business in front of the right customers when they are actively searching for your products and services. Static Savvy Media combines technical SEO, keyword strategy, on-page optimization, content development, internal linking, schema and performance measurement to build sustainable organic search visibility.'
+  'Static Savvy Media is an SEO agency with an office in Rawang, Selangor, serving businesses across Kuala Lumpur, the Klang Valley and the rest of Malaysia. Get your Malaysian business in front of the right customers when they are actively searching for your products and services. Static Savvy Media combines technical SEO, keyword strategy, on-page optimization, content development, internal linking, schema and performance measurement to build sustainable organic search visibility.'
 
 const SEO_SERVICES = [
   {
@@ -138,6 +138,33 @@ const INDUSTRIES = [
   },
 ]
 
+const MALAYSIA_SEARCH_FACTORS = [
+  {
+    title: 'English, Bahasa Malaysia and Chinese searches',
+    text: 'Malaysian customers search in more than one language, often for the same service. We research English and Bahasa Malaysia keywords separately (and Chinese where your customers use it), then decide which pages need which language instead of translating everything.',
+  },
+  {
+    title: 'Ranking on google.com.my, not just google.com',
+    text: 'Results in Malaysia are localised. We track visibility for Malaysian searches in Google Search Console, set the right language and region signals, and build pages around the cities and states you actually serve.',
+  },
+  {
+    title: 'Kuala Lumpur, Selangor and the Klang Valley',
+    text: 'KL, Petaling Jaya, Shah Alam, Rawang and other Klang Valley areas behave like separate markets in search. Service pages are written for the areas you cover, with Local SEO and Google Maps for walk-in and nearby customers.',
+  },
+  {
+    title: 'Mobile-first, WhatsApp-ready pages',
+    text: 'Most Malaysian service enquiries start on a phone and continue on WhatsApp or a call. We make pages fast on mobile data and put clear call and WhatsApp actions where searchers decide.',
+  },
+]
+
+const MALAYSIA_LINKS = [
+  { name: 'Digital marketing agency in Malaysia', path: '/locations/malaysia/' },
+  { name: 'Digital marketing agency in Kuala Lumpur', path: '/locations/kuala-lumpur/' },
+  { name: 'SEO company in Kuala Lumpur', path: '/services/seo/kuala-lumpur/' },
+  { name: 'Local SEO and Google Maps in Malaysia', path: '/services/local-seo/malaysia/' },
+  { name: 'SEO pricing in Malaysia', path: '/pricing/malaysia/seo/' },
+]
+
 const PROCESS_STEPS = [
   {
     number: '01',
@@ -235,6 +262,11 @@ const LOCATION_PAGES = [
     path: '/services/seo/malaysia/',
     current: true,
   },
+  {
+    name: 'Kuala Lumpur',
+    path: '/services/seo/kuala-lumpur/',
+    current: false,
+  },
 ]
 
 const FAQS = [
@@ -267,6 +299,21 @@ const FAQS = [
     question: 'Can SEO help Malaysian businesses?',
     answer:
       'Yes. SEO helps Malaysian businesses become more discoverable when customers actively search for relevant products and services. Both traditional organic SEO and Local SEO can work together to improve overall search visibility.',
+  },
+  {
+    question: 'Where is your Malaysia office and which areas do you serve?',
+    answer:
+      'Our Malaysia office is in Rawang, Selangor. We provide SEO services to businesses in Rawang, Kuala Lumpur, Petaling Jaya, Shah Alam and the wider Klang Valley, and work with clients elsewhere in Malaysia remotely. You can call +60 12-453 7030 or message us on WhatsApp.',
+  },
+  {
+    question: 'Do you do SEO in Bahasa Malaysia as well as English?',
+    answer:
+      'Yes. We research English and Bahasa Malaysia search terms separately, and Chinese where it matters for your customers, then plan which pages and content each language needs so Google can show the right version to the right searcher.',
+  },
+  {
+    question: 'How much do SEO services cost in Malaysia?',
+    answer:
+      'It depends on how many services and locations you want to rank for, how competitive they are and the current condition of your website. See our Malaysia SEO pricing page for details, or book a consultation and we will recommend a scope for your business.',
   },
   {
     question: 'What is the difference between SEO and Local SEO?',
@@ -534,6 +581,43 @@ export default function SEO_Malaysia() {
       </section>
 
       {/* ---- SEO + Local Search ---- */}
+      {/* ---- SEO for the Malaysian market ---- */}
+      <section className="section">
+        <div className="container">
+          <ScrollReveal>
+            <div className="section-heading section-heading--left">
+              <span className="section-heading__eyebrow">Malaysia</span>
+              <h2 className="section-heading__title">How SEO Works Differently in Malaysia</h2>
+              <p className="section-heading__subtitle">
+                SEO in Malaysia is not a copy of SEO anywhere else. Language, location and how
+                people contact a business all change which pages rank and which pages win the enquiry.
+              </p>
+            </div>
+          </ScrollReveal>
+          <div className="seo-mys-services-grid">
+            {MALAYSIA_SEARCH_FACTORS.map((item, i) => (
+              <ScrollReveal key={item.title} delay={i * 80}>
+                <div className="seo-mys-service-card glass-card">
+                  <h3 className="seo-mys-service-card__title">{item.title}</h3>
+                  <p className="seo-mys-service-card__text">{item.text}</p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+          <ScrollReveal>
+            <p className="section-heading__subtitle" style={{ marginTop: 'var(--space-lg)' }}>
+              More for Malaysian businesses:{' '}
+              {MALAYSIA_LINKS.map((item, i) => (
+                <span key={item.path}>
+                  <Link to={item.path}>{item.name}</Link>
+                  {i < MALAYSIA_LINKS.length - 1 ? ' · ' : ''}
+                </span>
+              ))}
+            </p>
+          </ScrollReveal>
+        </div>
+      </section>
+
       <section className="section seo-mys-local-section">
         <div className="container">
           <ScrollReveal>

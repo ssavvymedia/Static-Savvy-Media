@@ -418,17 +418,17 @@ export const seoConfig = {
   },
   "/services/seo/malaysia": {
     title:
-      "SEO Malaysia, Search Engine Optimization for Malaysian Businesses | Static Savvy Media",
+      "SEO Services Malaysia | SEO Agency for KL & Selangor | Static Savvy Media",
     slug: "services/seo/malaysia",
     seo: {
       title:
-        "SEO Malaysia, Search Engine Optimization for Malaysian Businesses | Static Savvy Media",
+        "SEO Services Malaysia | SEO Agency for KL & Selangor | Static Savvy Media",
       description:
-        "SEO services in Malaysia for businesses seeking stronger Google visibility, organic search rankings and qualified enquiries through technical SEO.",
+        "SEO services in Malaysia from our Rawang, Selangor office: technical SEO, English and Bahasa Malaysia keyword research, on-page SEO and content for google.com.my. Call +60 12-453 7030.",
       canonical: `${BASE_URL}/services/seo/malaysia`,
       focusKeyword: "SEO Malaysia",
       ogTitle:
-        "SEO Malaysia, Search Engine Optimization for Malaysian Businesses | Static Savvy Media",
+        "SEO Services Malaysia | SEO Agency for KL & Selangor | Static Savvy Media",
       ogDescription:
         "SEO services in Malaysia for businesses seeking stronger Google visibility and organic search rankings.",
       ogImage: `${BASE_URL}/og/locations-02malaysia.jpg`,
@@ -719,7 +719,7 @@ export const seoConfig = {
       title:
         "Digital Marketing Agency Malaysia — Rawang, Selangor | Static Savvy Media",
       description:
-        "Empowering Malaysian SMEs across Kuala Lumpur, Rawang, and Selangor with SEO, GEO/AEO, AI automation, and grant-eligible digital solutions.",
+        "Digital marketing company in Malaysia with an office in Rawang, Selangor. SEO, Local SEO, Google Ads, social media and websites for SMEs in Kuala Lumpur and the Klang Valley.",
       canonical: `${BASE_URL}/locations/malaysia`,
       focusKeyword: "digital marketing agency Malaysia",
       ogTitle: "Digital Marketing Agency Malaysia | Static Savvy Media",
@@ -1829,6 +1829,44 @@ export const seoConfig = {
         "@type": "Article",
         headline: "Local SEO Guide for Businesses in Thoothukudi",
       },
+      robots: "index,follow",
+    },
+  },
+  // Pages below set their own SEO in the page file; these entries mirror those values so the
+  // prerendered HTML (scripts/seo/prerender-heads.mjs) carries the same title and description.
+  "/locations/kuala-lumpur": {
+    title: "Digital Marketing Agency in Kuala Lumpur | Static Savvy Media",
+    slug: "locations/kuala-lumpur",
+    seo: {
+      title: "Digital Marketing Agency in Kuala Lumpur | Static Savvy Media",
+      description:
+        "Digital marketing agency for Kuala Lumpur businesses: SEO, Google Ads, social media, websites and AI automation, from our Rawang, Selangor office.",
+      canonical: `${BASE_URL}/locations/kuala-lumpur`,
+      ogImage: `${BASE_URL}/og/locations-02malaysia.jpg`,
+      robots: "index,follow",
+    },
+  },
+  "/services/seo/kuala-lumpur": {
+    title: "SEO Company in Kuala Lumpur | SEO Services KL | Static Savvy Media",
+    slug: "services/seo/kuala-lumpur",
+    seo: {
+      title: "SEO Company in Kuala Lumpur | SEO Services KL | Static Savvy Media",
+      description:
+        "SEO services for Kuala Lumpur businesses: technical SEO, English and Bahasa Malaysia content, and local search for KL and the Klang Valley. Call +60 12-453 7030.",
+      canonical: `${BASE_URL}/services/seo/kuala-lumpur`,
+      ogImage: `${BASE_URL}/og/locations-02malaysia.jpg`,
+      robots: "index,follow",
+    },
+  },
+  "/services/social-media-marketing/madurai": {
+    title: "Social Media Marketing Agency in Madurai | Static Savvy Media",
+    slug: "services/social-media-marketing/madurai",
+    seo: {
+      title: "Social Media Marketing Agency in Madurai | Static Savvy Media",
+      description:
+        "Social media marketing company in Madurai: Facebook, Instagram and YouTube marketing, Meta ads, reels and content in Tamil and English. Rated 4.9★ on Google.",
+      canonical: `${BASE_URL}/services/social-media-marketing/madurai`,
+      ogImage: `${BASE_URL}/og/services-05socialmediamarketing.jpg`,
       robots: "index,follow",
     },
   },
