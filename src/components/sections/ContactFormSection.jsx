@@ -1,6 +1,9 @@
 import { useRef, useState } from 'react'
-import ReCAPTCHA from 'react-google-recaptcha'
+import ReCAPTCHAModule from 'react-google-recaptcha'
 import { ScrollReveal } from '../animations/ScrollReveal.jsx'
+
+// CJS interop: Node (build-time SSR in scripts/seo/ssr-bodies.mjs) hands back the module object.
+const ReCAPTCHA = ReCAPTCHAModule?.default ?? ReCAPTCHAModule
 
 const RECAPTCHA_SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY || ''
 
