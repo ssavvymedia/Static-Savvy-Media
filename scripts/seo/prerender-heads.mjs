@@ -9,7 +9,7 @@
  * replaced it. Vercel serves a matching static file before applying rewrites, so these files win;
  * the vercel.json rewrites stay as a fallback to the shell.
  *
- * Runs after `vite build` (see package.json "build"). Fails the build if a route can't be written.
+ * Runs at the end of `vite build` (plugin in vite.config.js). Fails the build if a route can't be written.
  */
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs'
 import { dirname, join } from 'node:path'
@@ -30,6 +30,7 @@ function setTag(html, re, replacement, label, route) {
 
 const vite = await createServer({
   root: ROOT,
+  configFile: false,
   logLevel: 'error',
   server: { middlewareMode: true, hmr: false },
   appType: 'custom',

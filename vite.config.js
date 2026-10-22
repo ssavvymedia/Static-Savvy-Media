@@ -1,6 +1,7 @@
 import { defineConfig, loadEnv } from 'vite'
 import react from '@vitejs/plugin-react'
 import { fileURLToPath, URL } from 'node:url'
+import { execFileSync } from 'node:child_process'
 import { handleContactSubmission, parseJsonBody } from './server/contact/submit-contact.js'
 
 // Paths served by the dev middleware: the production endpoint (Vercel Function
@@ -51,6 +52,19 @@ export default defineConfig(({ mode }) => {
                 jsonRes(500, { success: false, code: 'DEV_ERROR', message: err.message || 'Server error.' })
               }
             })
+          })
+        },
+      },
+      {
+        // Writes dist/<route>/index.html with each route's own canonical, title and description
+        // (scripts/seo/prerender-heads.mjs). Runs inside `vite build` so it happens whatever
+        // build command the host uses; a failure fails the build.
+        name: 'prerender-route-heads',
+        apply: 'build',
+        closeBundle() {
+          execFileSync(process.execPath, [fileURLToPath(new URL('./scripts/seo/prerender-heads.mjs', import.meta.url))], {
+            stdio: 'inherit',
+            env: process.env,
           })
         },
       },
