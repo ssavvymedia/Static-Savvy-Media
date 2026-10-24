@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
+import BlogFeaturedImage from '../../components/blog/BlogFeaturedImage.jsx'
 import Breadcrumbs from '../../components/common/Breadcrumbs.jsx'
 import CTASection from '../../components/sections/CTASection.jsx'
 import { ScrollReveal } from '../../components/animations/ScrollReveal.jsx'
@@ -276,6 +277,8 @@ export default function WhatIsAEO() {
           </div>
         </div>
       </section>
+
+      <BlogFeaturedImage slug="what-is-answer-engine-optimization" />
 
       {/* ARTICLE + TOC */}
       <section className="section section--alt">

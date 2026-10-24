@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
+import BlogFeaturedImage from '../../components/blog/BlogFeaturedImage.jsx'
 import Breadcrumbs from '../../components/common/Breadcrumbs.jsx'
 import CTASection from '../../components/sections/CTASection.jsx'
 import { ScrollReveal } from '../../components/animations/ScrollReveal.jsx'
@@ -377,6 +378,8 @@ export default function MalaysiaGrantGuide() {
           </div>
         </div>
       </section>
+
+      <BlogFeaturedImage slug="digital-marketing-malaysia-sme-grant-guide" />
 
       {/* ============================================================
           ARTICLE BODY + TOC

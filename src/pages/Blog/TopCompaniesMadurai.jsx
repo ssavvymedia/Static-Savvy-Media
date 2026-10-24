@@ -1,3 +1,4 @@
+import BlogFeaturedImage from '../../components/blog/BlogFeaturedImage.jsx'
 import LocalServicePage from '../../templates/LocalServicePage.jsx'
 import { SITE_URL, SITE_NAME } from '../../utils/constants.js'
 import { content as base, PATH, DESCRIPTION } from '../../data/pages/topCompaniesMadurai.js'
@@ -20,5 +21,10 @@ const content = {
 }
 
 export default function TopCompaniesMadurai() {
-  return <LocalServicePage content={content} />
+  return (
+    <>
+      <LocalServicePage content={content} />
+      <BlogFeaturedImage slug="top-digital-marketing-companies-in-madurai" />
+    </>
+  )
 }

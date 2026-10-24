@@ -1,3 +1,4 @@
+import { newBlogPosts } from "./newBlogPosts.js";
 import {
   SITE_NAME,
   SITE_URL,
@@ -15,6 +16,7 @@ const BASE_URL = SITE_URL;
  * Maps every single public route to its unique SEO metadata object.
  */
 export const seoConfig = {
+  ...Object.fromEntries(newBlogPosts.map((p) => [`/blog/${p.slug}`, { title: p.title, slug: `blog/${p.slug}`, seo: { title: p.title, description: p.description, canonical: `${BASE_URL}/blog/${p.slug}/`, ogTitle: p.title, ogDescription: p.description, ogImage: `${BASE_URL}/og/blog/${p.slug}.jpg`, robots: "index,follow" } }])),
   "/": {
     title:
       "Digital Marketing Company in Madurai — SEO & Ads | Static Savvy Media",
@@ -1726,7 +1728,7 @@ export const seoConfig = {
         "What is Generative Engine Optimization (GEO)? | Static Savvy Media Blog",
       ogDescription:
         "A complete guide to Generative Engine Optimization (GEO): how AI search engines select sources.",
-      ogImage: `${BASE_URL}/og/blog-blog.jpg`,
+      ogImage: `${BASE_URL}/og/blog/what-is-generative-engine-optimization.jpg`,
       schema: {
         "@context": "https://schema.org",
         "@type": "Article",
@@ -1750,7 +1752,7 @@ export const seoConfig = {
         "What is Answer Engine Optimization (AEO)? | Static Savvy Media Blog",
       ogDescription:
         "Understand Answer Engine Optimization (AEO) and how to get featured in direct AI answer snippets.",
-      ogImage: `${BASE_URL}/og/blog-blog.jpg`,
+      ogImage: `${BASE_URL}/og/blog/what-is-answer-engine-optimization.jpg`,
       schema: {
         "@context": "https://schema.org",
         "@type": "Article",
@@ -1774,7 +1776,7 @@ export const seoConfig = {
         "Complete Guide to Choosing an SEO Agency in Madurai | Static Savvy Media Blog",
       ogDescription:
         "How to evaluate and select the best SEO agency in Madurai for your business goals.",
-      ogImage: `${BASE_URL}/og/blog-blog.jpg`,
+      ogImage: `${BASE_URL}/og/blog/seo-agency-madurai-complete-guide.jpg`,
       schema: {
         "@context": "https://schema.org",
         "@type": "Article",
@@ -1798,7 +1800,7 @@ export const seoConfig = {
         "Digital Marketing Malaysia: SME Grant Eligibility & Strategy Guide",
       ogDescription:
         "Everything Malaysian SMEs need to know about digital grant eligibility and SEO investments.",
-      ogImage: `${BASE_URL}/og/blog-blog.jpg`,
+      ogImage: `${BASE_URL}/og/blog/digital-marketing-malaysia-sme-grant-guide.jpg`,
       schema: {
         "@context": "https://schema.org",
         "@type": "Article",
@@ -1823,7 +1825,7 @@ export const seoConfig = {
         "Local SEO Guide for Businesses in Thoothukudi | Static Savvy Media Blog",
       ogDescription:
         "Practical steps for Thoothukudi enterprises to optimize Google Maps and outrank competitors.",
-      ogImage: `${BASE_URL}/og/blog-blog.jpg`,
+      ogImage: `${BASE_URL}/og/blog/local-seo-thoothukudi-businesses.jpg`,
       schema: {
         "@context": "https://schema.org",
         "@type": "Article",
@@ -1902,7 +1904,7 @@ export const seoConfig = {
       description:
         "A plain comparison of well-known digital marketing companies in Madurai: services, focus, locations and Google ratings as seen in October 2026, plus how to choose.",
       canonical: `${BASE_URL}/blog/top-digital-marketing-companies-in-madurai`,
-      ogImage: `${BASE_URL}/og/locations-01madurai.jpg`,
+      ogImage: `${BASE_URL}/og/blog/top-digital-marketing-companies-in-madurai.jpg`,
       robots: "index,follow",
     },
   },

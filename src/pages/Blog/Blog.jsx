@@ -12,6 +12,7 @@ import { breadcrumbListSchema } from '../../utils/schema.js'
 import { buildWhatsAppLink, cleanSlug } from '../../utils/helpers.js'
 import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, SITE_URL } from '../../utils/constants.js'
 import { sanityClient, urlFor } from '../../utils/sanityClient.js'
+import { staticBlogCards } from '../../data/blogImages.js'
 import blogHeroImg from '../../assets/images/Blog/Blog.webp'
 
 /* ============================================================
@@ -78,7 +79,7 @@ const ARTICLE_ICONS = {
    ============================================================ */
 
 export default function Blog() {
-  const [posts, setPosts] = useState([])
+  const [posts, setPosts] = useState(staticBlogCards)
   const [activeCategory, setActiveCategory] = useState('all')
   const [searchQuery, setSearchQuery] = useState('')
   const [sortBy, setSortBy] = useState('latest')
@@ -89,8 +90,8 @@ export default function Blog() {
       .fetch(`*[_type == "post"] | order(publishedAt desc){
         title, "slug": slug.current, category, description, author, featured, mainImage, publishedAt
       }`)
-      .then(setPosts)
-      .catch((err) => console.error('Sanity fetch failed:', err))
+      .then((data) => setPosts([...staticBlogCards, ...(data || [])].sort((a, b) => String(b.publishedAt || '').localeCompare(String(a.publishedAt || '')))))
+      .catch((err) => { console.error('Sanity fetch failed:', err); setPosts(staticBlogCards) })
   }, [])
 
   useEffect(() => {
@@ -324,7 +325,9 @@ export default function Blog() {
                   <Link to={`/blog/${cleanSlug(post.slug)}/`} style={{ textDecoration: 'none', display: 'flex' }}>
                     <article className="blog-article-card">
                       <div className="blog-article-card__image">
-                        {post.mainImage ? (
+                        {post.image ? (
+                          <img src={post.image.src} alt={post.alt || post.title} width={600} height={315} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                        ) : post.mainImage ? (
                           <img
                             src={urlFor(post.mainImage).width(600).height(360).fit('crop').url()}
                             alt={post.title}

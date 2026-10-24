@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
+import BlogFeaturedImage from '../../components/blog/BlogFeaturedImage.jsx'
 import Breadcrumbs from '../../components/common/Breadcrumbs.jsx'
 import Button from '../../components/common/Button.jsx'
 import CTASection from '../../components/sections/CTASection.jsx'
@@ -242,6 +243,8 @@ export default function GEOAEO() {
           </div>
         </div>
       </section>
+
+      <BlogFeaturedImage slug="what-is-generative-engine-optimization" />
 
       {/* ============================================================
           ARTICLE BODY + TOC

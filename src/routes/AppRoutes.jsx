@@ -1,3 +1,4 @@
+import StaticBlogPost from "../pages/Blog/StaticBlogPost.jsx";
 import { Routes, Route, Navigate } from 'react-router-dom'
 import LandingLayout from '../layouts/LandingLayout.jsx'
 import ContentLayout from '../layouts/ContentLayout.jsx'
@@ -331,6 +332,18 @@ export default function AppRoutes() {
           path="/blog/digital-marketing-malaysia-sme-grant-guide"
           element={<MalaysiaGrantGuide />}
         />
+        <Route path="/blog/facebook-instagram-google-ads-agency-madurai" element={<StaticBlogPost />} />
+        <Route path="/blog/whatsapp-marketing-madurai-businesses" element={<StaticBlogPost />} />
+        <Route path="/blog/website-design-company-madurai-checklist" element={<StaticBlogPost />} />
+        <Route path="/blog/how-to-choose-digital-marketing-agency-malaysia" element={<StaticBlogPost />} />
+        <Route path="/blog/rawang-local-seo-google-business-profile" element={<StaticBlogPost />} />
+        <Route path="/blog/seo-services-selangor-shah-alam-petaling-jaya" element={<StaticBlogPost />} />
+        <Route path="/blog/google-business-profile-optimisation-malaysia" element={<StaticBlogPost />} />
+        <Route path="/blog/social-media-marketing-malaysia-smes" element={<StaticBlogPost />} />
+        <Route path="/blog/digital-marketing-agency-chennai-businesses" element={<StaticBlogPost />} />
+        <Route path="/blog/digital-marketing-coimbatore-manufacturers-b2b" element={<StaticBlogPost />} />
+        <Route path="/blog/digital-marketing-trichy-businesses" element={<StaticBlogPost />} />
+        <Route path="/blog/digital-marketing-tirunelveli-businesses" element={<StaticBlogPost />} />
         <Route
           path="/blog/local-seo-thoothukudi-businesses"
           element={<LocalSEOThoothukudi />}

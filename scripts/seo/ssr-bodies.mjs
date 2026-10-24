@@ -89,6 +89,10 @@ export async function ssrBodies(root, distAssets) {
         { '@type': 'Organization', '@id': ORG_ID, name: 'Static Savvy Media', url: `${HOST}/`, telephone: PHONE },
         { '@type': 'BreadcrumbList', itemListElement: crumbs.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: `${HOST}${c.path}` })) },
       ]
+      if (r.route.startsWith('/blog/')) {
+        const slug = segs[segs.length - 1]
+        nodes.push({ '@type': 'BlogPosting', headline: decode(h1[1]), image: `${HOST}/og/blog/${slug}.jpg`, url: `${HOST}${r.route}`, mainEntityOfPage: `${HOST}${r.route}`, datePublished: '2026-10-24', dateModified: '2026-10-24', author: { '@type': 'Person', name: 'Deepan Kanz', url: `${HOST}/about/deepan-kanz/` }, publisher: { '@id': ORG_ID } })
+      }
       if (faqs.length) nodes.push({ '@type': 'FAQPage', mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) })
       out.set(r.route, { html: `<main data-prerender="ssr">${html}</main>`, schema: { '@context': 'https://schema.org', '@graph': nodes }, h1: decode(h1[1]), faqCount: faqs.length })
     }

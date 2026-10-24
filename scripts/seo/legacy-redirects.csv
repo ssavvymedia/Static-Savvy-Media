@@ -1,7 +1,7 @@
 legacy_path,seen_as,hosts,gsc_clicks_90d,gsc_impressions_90d,action,target,confidence,reason
 /,/,www.ssm,29,1570,live,,,live route today (no redirect needed)
 /about,/about,www.ssm,3,809,live,,,live route today (no redirect needed)
-/post/best-digital-marketing-agency-in-malaysia-for-small-businesses-a-buyer-s-checklist,/post/best-digital-marketing-agency-in-malaysia-for-small-businesses-a-buyer-s-checklist,www.ssm,2,703,redirect,/locations/malaysia/,medium,Malaysia agency buyer guide -> Malaysia location page
+/post/best-digital-marketing-agency-in-malaysia-for-small-businesses-a-buyer-s-checklist,/post/best-digital-marketing-agency-in-malaysia-for-small-businesses-a-buyer-s-checklist,www.ssm,2,703,redirect,/blog/how-to-choose-digital-marketing-agency-malaysia/,medium,Malaysia agency buyer guide -> rebuilt buyer checklist post (same intent)
 /post/best-digital-marketing-company-in-madurai,/post/best-digital-marketing-company-in-madurai,www.ssm,0,455,redirect,/,medium,Madurai agency post -> homepage (GBP-tagged URL; avoids homepage vs /locations/madurai/ cannibalisation)
 /on-pageseoservicesinmadurai,/on-pageseoservicesinmadurai,www.ssm,0,428,redirect,/services/seo/madurai/,high,old SEO service page -> SEO Madurai
 /technicalseoagencyinmadurai,/technicalseoagencyinmadurai,www (GSC only),0,394,redirect,/services/seo/madurai/,high,old SEO service page -> SEO Madurai

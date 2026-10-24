@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
+import BlogFeaturedImage from '../../components/blog/BlogFeaturedImage.jsx'
 import Breadcrumbs from '../../components/common/Breadcrumbs.jsx'
 import CTASection from '../../components/sections/CTASection.jsx'
 import { ScrollReveal } from '../../components/animations/ScrollReveal.jsx'
@@ -371,6 +372,8 @@ export default function SEOAgencyMaduraiGuide() {
           </div>
         </div>
       </section>
+
+      <BlogFeaturedImage slug="seo-agency-madurai-complete-guide" />
 
       <section className="section section--alt">
         <div className="container">

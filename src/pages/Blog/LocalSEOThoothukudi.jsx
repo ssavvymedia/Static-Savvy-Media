@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
+import BlogFeaturedImage from '../../components/blog/BlogFeaturedImage.jsx'
 import Breadcrumbs from '../../components/common/Breadcrumbs.jsx'
 import Button from '../../components/common/Button.jsx'
 import CTASection from '../../components/sections/CTASection.jsx'
@@ -363,6 +364,8 @@ export default function LocalSEOThoothukudi() {
           </div>
         </div>
       </section>
+
+      <BlogFeaturedImage slug="local-seo-thoothukudi-businesses" />
 
       {/* ============================================================
           ARTICLE BODY + TOC

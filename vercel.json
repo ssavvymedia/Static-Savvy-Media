@@ -38,7 +38,7 @@
     },
     {
       "source": "/post/best-digital-marketing-agency-in-malaysia-for-small-businesses-a-buyer-s-checklist{/}?",
-      "destination": "/locations/malaysia/",
+      "destination": "/blog/how-to-choose-digital-marketing-agency-malaysia/",
       "statusCode": 301
     },
     {
@@ -1772,6 +1772,66 @@
       "statusCode": 308
     },
     {
+      "source": "/blog/facebook-instagram-google-ads-agency-madurai",
+      "destination": "/blog/facebook-instagram-google-ads-agency-madurai/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog/whatsapp-marketing-madurai-businesses",
+      "destination": "/blog/whatsapp-marketing-madurai-businesses/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog/website-design-company-madurai-checklist",
+      "destination": "/blog/website-design-company-madurai-checklist/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog/how-to-choose-digital-marketing-agency-malaysia",
+      "destination": "/blog/how-to-choose-digital-marketing-agency-malaysia/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog/rawang-local-seo-google-business-profile",
+      "destination": "/blog/rawang-local-seo-google-business-profile/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog/seo-services-selangor-shah-alam-petaling-jaya",
+      "destination": "/blog/seo-services-selangor-shah-alam-petaling-jaya/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog/google-business-profile-optimisation-malaysia",
+      "destination": "/blog/google-business-profile-optimisation-malaysia/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog/social-media-marketing-malaysia-smes",
+      "destination": "/blog/social-media-marketing-malaysia-smes/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog/digital-marketing-agency-chennai-businesses",
+      "destination": "/blog/digital-marketing-agency-chennai-businesses/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog/digital-marketing-coimbatore-manufacturers-b2b",
+      "destination": "/blog/digital-marketing-coimbatore-manufacturers-b2b/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog/digital-marketing-trichy-businesses",
+      "destination": "/blog/digital-marketing-trichy-businesses/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog/digital-marketing-tirunelveli-businesses",
+      "destination": "/blog/digital-marketing-tirunelveli-businesses/",
+      "statusCode": 308
+    },
+    {
       "source": "/blog/local-seo-thoothukudi-businesses",
       "destination": "/blog/local-seo-thoothukudi-businesses/",
       "statusCode": 308
@@ -2126,6 +2186,54 @@
     },
     {
       "source": "/blog/digital-marketing-malaysia-sme-grant-guide/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/facebook-instagram-google-ads-agency-madurai/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/whatsapp-marketing-madurai-businesses/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/website-design-company-madurai-checklist/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/how-to-choose-digital-marketing-agency-malaysia/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/rawang-local-seo-google-business-profile/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/seo-services-selangor-shah-alam-petaling-jaya/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/google-business-profile-optimisation-malaysia/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/social-media-marketing-malaysia-smes/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/digital-marketing-agency-chennai-businesses/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/digital-marketing-coimbatore-manufacturers-b2b/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/digital-marketing-trichy-businesses/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/digital-marketing-tirunelveli-businesses/",
       "destination": "/index.html"
     },
     {
