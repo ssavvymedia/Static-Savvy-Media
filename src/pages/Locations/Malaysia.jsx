@@ -158,6 +158,7 @@ const RELATED_SERVICES = [
   { name: 'Local SEO Malaysia', path: '/services/local-seo/malaysia/' },
   { name: 'GEO & AEO, AI Search', path: '/services/geo-aeo-ai-search/' },
   { name: 'Google Ads', path: '/services/google-ads/' },
+  { name: 'Google Ads Agency Kuala Lumpur', path: '/services/google-ads/kuala-lumpur/' },
   { name: 'Social Media Marketing', path: '/services/social-media-marketing/' },
   { name: 'Website Design & Development', path: '/services/website-design-development/' },
   { name: 'AI Business Automation', path: '/services/ai-business-automation/' },

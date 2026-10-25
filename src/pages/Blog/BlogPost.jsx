@@ -1,5 +1,6 @@
 import { useState, useEffect, useMemo, useRef } from 'react'
 import { Link, useParams } from 'react-router-dom'
+import { applySanityOverride } from '../../data/blogOverrides.js'
 import { PortableText } from '@portabletext/react'
 import Breadcrumbs from '../../components/common/Breadcrumbs.jsx'
 import CTASection from '../../components/sections/CTASection.jsx'
@@ -85,7 +86,7 @@ export default function BlogPost() {
         }`,
         { slug: cleanSlug(slug) },
       )
-      .then((data) => setPost(data ?? null))
+      .then((data) => setPost(data ? applySanityOverride(data) : null))
       .catch((err) => {
         console.error('Sanity fetch failed:', err)
         setPost(null)
@@ -217,6 +218,11 @@ export default function BlogPost() {
               <h1 className="blog-post-header__title">{post.title}</h1>
               {post.description && (
                 <p className="blog-post-header__description">{post.description}</p>
+              )}
+              {post.callout && (
+                <p className="blog-post-header__description">
+                  {post.callout.text} <Link to={post.callout.to}>{post.callout.label}</Link> page.
+                </p>
               )}
               <div className="blog-post-header__meta">
                 {post.author && (

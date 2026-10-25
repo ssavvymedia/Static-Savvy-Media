@@ -26,6 +26,7 @@ import SEO_Madurai from '../pages/ServiceLocations/SEO/SEO_Madurai.jsx'
 import SEO_Thoothukudi from '../pages/ServiceLocations/SEO/SEO_Thoothukudi.jsx'
 import SEO_Malaysia from '../pages/ServiceLocations/SEO/SEO_Malaysia.jsx'
 import SEO_KualaLumpur from '../pages/ServiceLocations/SEO/SEO_KualaLumpur.jsx'
+import GoogleAds_KualaLumpur from '../pages/ServiceLocations/GoogleAds/GoogleAds_KualaLumpur.jsx'
 import SocialMedia_Madurai from '../pages/ServiceLocations/SocialMedia/SocialMedia_Madurai.jsx'
 import WebsiteDevelopment_Madurai from '../pages/ServiceLocations/WebsiteDevelopment/WebsiteDevelopment_Madurai.jsx'
 import LocalSEO_Madurai from '../pages/ServiceLocations/LocalSEO/LocalSEO_Madurai.jsx'
@@ -137,6 +138,7 @@ export default function AppRoutes() {
         <Route path="/services/seo/thoothukudi" element={<SEO_Thoothukudi />} />
         <Route path="/services/seo/malaysia" element={<SEO_Malaysia />} />
         <Route path="/services/seo/kuala-lumpur" element={<SEO_KualaLumpur />} />
+        <Route path="/services/google-ads/kuala-lumpur" element={<GoogleAds_KualaLumpur />} />
         <Route
           path="/services/social-media-marketing/madurai"
           element={<SocialMedia_Madurai />}
@@ -337,6 +339,8 @@ export default function AppRoutes() {
         <Route path="/blog/website-design-company-madurai-checklist" element={<StaticBlogPost />} />
         <Route path="/blog/how-to-choose-digital-marketing-agency-malaysia" element={<StaticBlogPost />} />
         <Route path="/blog/seo-cost-malaysia-price-guide" element={<StaticBlogPost />} />
+        <Route path="/blog/how-long-does-seo-take-madurai" element={<StaticBlogPost />} />
+        <Route path="/blog/is-seo-worth-it-small-business-madurai" element={<StaticBlogPost />} />
         <Route path="/blog/rawang-local-seo-google-business-profile" element={<StaticBlogPost />} />
         <Route path="/blog/seo-services-selangor-shah-alam-petaling-jaya" element={<StaticBlogPost />} />
         <Route path="/blog/google-business-profile-optimisation-malaysia" element={<StaticBlogPost />} />

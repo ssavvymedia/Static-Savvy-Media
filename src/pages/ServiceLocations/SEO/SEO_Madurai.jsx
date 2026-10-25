@@ -26,15 +26,15 @@ import '../../../styles/pages/seo-madurai.css'
    ============================================================ */
 
 const PAGE_TITLE =
-  'SEO Company in Madurai | SEO Services | Static Savvy Media'
+  'SEO Company in Madurai | SEO Services & Agency | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
-  'SEO company in Madurai rated 4.9★ from 100+ Google reviews. Technical, on-page and content SEO services that turn Google searches into enquiries.'
+  'SEO company in Madurai rated 4.9★ from 100+ Google reviews. Technical, on-page and content SEO from ₹12,000/month that turns Google searches into enquiries.'
 
 const HERO_EYEBROW = 'SEO · MADURAI'
 
 const HERO_TITLE =
-  'SEO Company in Madurai, SEO Services That Bring Real Enquiries'
+  'SEO Company in Madurai — SEO Services That Bring Real Enquiries'
 
 const HERO_PARAGRAPH =
   'Static Savvy Media is an SEO company based in Madurai. We help local shops, clinics, schools, manufacturers and service businesses show up when people in Madurai and across Tamil Nadu search Google for what they sell. Get your Madurai business in front of the right customers when they are actively searching for your products and services. Static Savvy Media combines technical SEO, keyword strategy, on-page optimization, content development, internal linking, schema and performance measurement to build sustainable organic search visibility.'
@@ -332,17 +332,22 @@ const FAQS = [
   {
     question: 'What does an SEO agency in Madurai do?',
     answer:
-      'An SEO agency in Madurai helps businesses improve their organic search visibility through technical SEO, keyword research, on-page optimization, content development, internal linking, schema implementation and performance measurement. The goal is to connect businesses with people actively searching for their products or services.',
+      'An SEO agency in Madurai improves how often your business appears in Google for the searches your customers use. An SEO agency in Madurai helps businesses improve their organic search visibility through technical SEO, keyword research, on-page optimization, content development, internal linking, schema implementation and performance measurement. The goal is to connect businesses with people actively searching for their products or services.',
   },
   {
     question: 'How long does SEO take to show results?',
     answer:
-      'Timelines vary based on competition, domain authority, technical condition, content quality, search demand, industry and existing visibility. Some improvements may be visible within weeks, while competitive keywords may take several months of consistent effort.',
+      'Most Madurai businesses see early movement in 1 to 3 months and steadier enquiries in 4 to 6 months; competitive city-wide terms can take 6 to 12 months. Technical and Google Business Profile fixes can show within weeks. Our guide "How long does SEO take for a Madurai business?" has the month-by-month timeline.',
   },
   {
     question: 'How much does SEO cost in Madurai?',
     answer:
-      'SEO costs depend on the scope of work, competition and business objectives. We recommend starting with a consultation to understand your specific needs and providing a tailored recommendation. Visit our pricing page for more details.',
+      'Our SEO retainers in India are ₹12,000 a month (Starter), ₹22,000 a month (Growth) and ₹40,000 a month (Scale), with no minimum contract term. Final pricing depends on scope, competition and how much content your site needs; full details are on our SEO pricing page for India.',
+  },
+  {
+    question: 'Who is the best SEO company in Madurai?',
+    answer:
+      'The best SEO company in Madurai for you is the one that shows its process, publishes its prices, reports on enquiries rather than just rankings, and never promises guaranteed positions or sells bulk links. Static Savvy Media is a Madurai-based SEO company rated 4.9★ from 100+ Google reviews; compare us on those criteria alongside other agencies before you decide.',
   },
   {
     question: 'Can SEO help local businesses in Madurai?',
@@ -443,7 +448,15 @@ export default function SEO_Madurai() {
                     Contact Us
                   </Button>
                 </div>
-                <p className="seo-mdu-hero__trust">{GOOGLE_TRUST_LINE}</p>
+                <p className="seo-mdu-hero__trust">
+                  {GOOGLE_TRUST_LINE} · <Link to="/about/reviews/">Read our reviews</Link>
+                </p>
+                <p className="seo-mdu-hero__trust">
+                  SEO plans from ₹12,000/month, no lock-in. <Link to="/pricing/india/seo/">See SEO pricing</Link>
+                </p>
+                <p className="seo-mdu-hero__trust">
+                  Reviewed by <Link to="/about/deepan-kanz/">Deepan Kanz</Link>, founder · Last updated 25 October 2026
+                </p>
               </ScrollReveal>
             </div>
           </div>
@@ -663,7 +676,7 @@ export default function SEO_Madurai() {
           <ScrollReveal>
             <div className="section-heading section-heading--left">
               <span className="section-heading__eyebrow">What You Get</span>
-              <h2 className="section-heading__title">What Is Included in Our Madurai SEO Services</h2>
+              <h2 className="section-heading__title">Your Monthly SEO Deliverables in Madurai</h2>
               <p className="section-heading__subtitle">
                 Clear deliverables, so you always know what you are paying for.
               </p>
@@ -709,7 +722,25 @@ export default function SEO_Madurai() {
           <p className="section-heading__subtitle" style={{ marginTop: 'var(--space-lg)' }}>
             Want to see costs first? See <Link to="/pricing/india/seo/">SEO pricing in India</Link>,
             or read our guide to <Link to="/blog/seo-vs-google-ads-madurai/">SEO vs Google Ads for Madurai businesses</Link>.
+            For a realistic month-by-month view, read <Link to="/blog/how-long-does-seo-take-madurai/">how long SEO takes for a Madurai business</Link>,
+            and if you are still deciding, <Link to="/blog/is-seo-worth-it-small-business-madurai/">whether SEO is worth it for a small business in Madurai</Link>.
           </p>
+        </div>
+      </section>
+
+      {/* ---- Madurai office (NAP) ---- */}
+      <section className="section">
+        <div className="container">
+          <div className="section-heading section-heading--left">
+            <span className="section-heading__eyebrow">Madurai Office</span>
+            <h2 className="section-heading__title">Meet Our SEO Team in Madurai</h2>
+            <p className="section-heading__subtitle">
+              Static Savvy Media, 2nd Floor, 4/3, Srinivasa Perumal Koil St, Kamarajar Salai, Madurai, Tamil Nadu 625009.
+              Call or WhatsApp <a href="tel:+919944040345">+91 99440 40345</a>. We work with businesses across Madurai,
+              including Anna Nagar, KK Nagar, Tallakulam, Goripalayam, Munichalai and the Meenakshi Amman Temple area,
+              and with the rest of south Tamil Nadu. See our <Link to="/locations/madurai/">Madurai office page</Link> and our <Link to="/services/local-seo/madurai/">Local SEO service in Madurai</Link> for Google Maps visibility.
+            </p>
+          </div>
         </div>
       </section>
 

@@ -89,6 +89,17 @@ export default function LocalServicePage({ content }) {
         </div>
       </section>
 
+      {content.image && (
+        <div className="container">
+          <figure style={{ margin: '0 auto 2rem', maxWidth: '1000px' }}>
+            <picture>
+              <source srcSet={content.image.webp} type="image/webp" />
+              <img src={content.image.jpg} alt={content.image.alt} width={1200} height={630} loading="eager" style={{ width: '100%', height: 'auto', borderRadius: '16px' }} />
+            </picture>
+          </figure>
+        </div>
+      )}
+
       {content.sections.map((sec) => (
         <section key={sec.heading} className="section">
           <div className="container">

@@ -1492,6 +1492,11 @@
       "statusCode": 308
     },
     {
+      "source": "/services/google-ads/kuala-lumpur",
+      "destination": "/services/google-ads/kuala-lumpur/",
+      "statusCode": 308
+    },
+    {
       "source": "/services/social-media-marketing/madurai",
       "destination": "/services/social-media-marketing/madurai/",
       "statusCode": 308
@@ -1797,6 +1802,16 @@
       "statusCode": 308
     },
     {
+      "source": "/blog/how-long-does-seo-take-madurai",
+      "destination": "/blog/how-long-does-seo-take-madurai/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog/is-seo-worth-it-small-business-madurai",
+      "destination": "/blog/is-seo-worth-it-small-business-madurai/",
+      "statusCode": 308
+    },
+    {
       "source": "/blog/rawang-local-seo-google-business-profile",
       "destination": "/blog/rawang-local-seo-google-business-profile/",
       "statusCode": 308
@@ -1967,6 +1982,10 @@
     },
     {
       "source": "/services/seo/kuala-lumpur/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/services/google-ads/kuala-lumpur/",
       "destination": "/index.html"
     },
     {
@@ -2211,6 +2230,14 @@
     },
     {
       "source": "/blog/seo-cost-malaysia-price-guide/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/how-long-does-seo-take-madurai/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/is-seo-worth-it-small-business-madurai/",
       "destination": "/index.html"
     },
     {

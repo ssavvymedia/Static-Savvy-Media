@@ -8,13 +8,14 @@ export const DESCRIPTION =
 export const content = {
   path: PATH,
   ogImage: '/og/locations-01madurai.jpg',
-  title: 'Top Digital Marketing Companies in Madurai (2026 Comparison)',
+  title: 'Digital Marketing Companies in Madurai Compared (2026): Services, Focus & Ratings',
   description: DESCRIPTION,
   eyebrow: 'GUIDE · UPDATED OCTOBER 2026',
-  h1: 'Top Digital Marketing Companies in Madurai: A 2026 Comparison',
+  h1: 'Digital Marketing Companies in Madurai Compared: A 2026 Guide',
   intro: [
     'Disclosure first: this guide is written by Static Savvy Media, which is one of the Madurai agencies listed. We have tried to be fair. Every company below is described from its own website and its public Google Maps listing, and we have not ranked anyone by quality.',
     'Google ratings and review counts are as they appeared on Google Maps on 22 October 2026 and will change. Check the live listing, ask for references and compare proposals before you choose any agency, including us.',
+    'This page compares full-service digital marketing agencies. If you only need search engine optimisation, see our SEO company in Madurai page (linked below) for what an SEO engagement with us includes and costs.',
   ],
   crumbs: [
     { name: 'Home', path: '/' },

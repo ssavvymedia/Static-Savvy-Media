@@ -1,4 +1,5 @@
 import { newBlogPosts } from "./newBlogPosts.js";
+import { sanityPostOverrides } from "./blogOverrides.js";
 import {
   SITE_NAME,
   SITE_URL,
@@ -16,6 +17,7 @@ const BASE_URL = SITE_URL;
  * Maps every single public route to its unique SEO metadata object.
  */
 export const seoConfig = {
+  ...Object.fromEntries(Object.entries(sanityPostOverrides).map(([slug, o]) => [`/blog/${slug}`, { title: o.seoTitle, slug: `blog/${slug}`, seo: { title: o.seoTitle, description: o.seoDescription, canonical: `${BASE_URL}/blog/${slug}/`, ogTitle: o.seoTitle, ogDescription: o.seoDescription, robots: "index,follow" } }])),
   ...Object.fromEntries(newBlogPosts.map((p) => [`/blog/${p.slug}`, { title: p.title, slug: `blog/${p.slug}`, seo: { title: p.title, description: p.description, canonical: `${BASE_URL}/blog/${p.slug}/`, ogTitle: p.title, ogDescription: p.description, ogImage: `${BASE_URL}/og/blog/${p.slug}.jpg`, robots: "index,follow" } }])),
   "/": {
     title:
@@ -365,17 +367,17 @@ export const seoConfig = {
 
   // Service Location Pages
   "/services/seo/madurai": {
-    title: "SEO Company in Madurai | SEO Services | Static Savvy Media",
+    title: "SEO Company in Madurai | SEO Services & Agency | Static Savvy Media",
     slug: "services/seo/madurai",
     seo: {
-      title: "SEO Company in Madurai | SEO Services | Static Savvy Media",
+      title: "SEO Company in Madurai | SEO Services & Agency | Static Savvy Media",
       description:
-        "SEO company in Madurai rated 4.9★ from 100+ Google reviews. Technical, on-page and content SEO services that turn Google searches into enquiries.",
+        "SEO company in Madurai rated 4.9★ from 100+ Google reviews. Technical, on-page and content SEO from ₹12,000/month that turns Google searches into enquiries.",
       canonical: `${BASE_URL}/services/seo/madurai`,
       focusKeyword: "SEO company in Madurai",
-      ogTitle: "SEO Company in Madurai | SEO Services | Static Savvy Media",
+      ogTitle: "SEO Company in Madurai | SEO Services & Agency | Static Savvy Media",
       ogDescription:
-        "SEO company in Madurai rated 4.9★ from 100+ Google reviews. Technical, on-page and content SEO services that turn Google searches into enquiries.",
+        "SEO company in Madurai rated 4.9★ from 100+ Google reviews. Technical, on-page and content SEO from ₹12,000/month that turns Google searches into enquiries.",
       ogImage: `${BASE_URL}/og/locations-01madurai.jpg`,
       schema: {
         "@context": "https://schema.org",
@@ -1198,16 +1200,16 @@ export const seoConfig = {
     },
   },
   "/pricing/malaysia/seo": {
-    title: "SEO Packages & Pricing Malaysia (MYR) | Static Savvy Media",
+    title: "SEO Packages & Pricing Malaysia (2026) | From MYR 650/Month",
     slug: "pricing/malaysia/seo",
     seo: {
-      title: "SEO Packages & Pricing Malaysia (MYR) | Static Savvy Media",
+      title: "SEO Packages & Pricing Malaysia (2026) | From MYR 650/Month",
       description:
-        "SEO pricing plans in MYR for Malaysian businesses seeking sustainable top-page Google rankings.",
+        "Our SEO packages in Malaysia: Starter MYR 650, Growth MYR 1,200 and Scale MYR 2,200 a month, no minimum contract. See what each plan includes for KL, Selangor and nationwide SEO.",
       canonical: `${BASE_URL}/pricing/malaysia/seo`,
       focusKeyword: "SEO packages Malaysia pricing",
-      ogTitle: "SEO Packages & Pricing Malaysia (MYR) | Static Savvy Media",
-      ogDescription: "SEO pricing plans in MYR for Malaysian businesses.",
+      ogTitle: "SEO Packages & Pricing Malaysia (2026) | From MYR 650/Month",
+      ogDescription: "Our SEO packages in Malaysia: Starter MYR 650, Growth MYR 1,200 and Scale MYR 2,200 a month, no minimum contract. See what each plan includes for KL, Selangor and nationwide SEO.",
       ogImage: `${BASE_URL}/og/pricing-01seo.jpg`,
       schema: {
         "@context": "https://schema.org",
@@ -1763,24 +1765,24 @@ export const seoConfig = {
   },
   "/blog/seo-agency-madurai-complete-guide": {
     title:
-      "Complete Guide to Choosing an SEO Agency in Madurai | Static Savvy Media Blog",
+      "Hiring for SEO in Madurai? 2026 Checklist, Red Flags & Questions to Ask",
     slug: "blog/seo-agency-madurai-complete-guide",
     seo: {
       title:
-        "Complete Guide to Choosing an SEO Agency in Madurai | Static Savvy Media Blog",
+        "Hiring for SEO in Madurai? 2026 Checklist, Red Flags & Questions to Ask",
       description:
-        "How to evaluate and select the best SEO agency in Madurai for your business goals, budget, and local market competition.",
+        "A buyer’s checklist for Madurai business owners comparing SEO providers: what good SEO work includes, red flags, questions to ask, typical costs and GEO/AEO.",
       canonical: `${BASE_URL}/blog/seo-agency-madurai-complete-guide`,
-      focusKeyword: "SEO agency Madurai guide",
+      focusKeyword: "how to choose an SEO provider in Madurai",
       ogTitle:
-        "Complete Guide to Choosing an SEO Agency in Madurai | Static Savvy Media Blog",
+        "Hiring for SEO in Madurai? 2026 Checklist, Red Flags & Questions to Ask",
       ogDescription:
-        "How to evaluate and select the best SEO agency in Madurai for your business goals.",
+        "A buyer’s checklist for Madurai business owners comparing SEO providers.",
       ogImage: `${BASE_URL}/og/blog/seo-agency-madurai-complete-guide.jpg`,
       schema: {
         "@context": "https://schema.org",
         "@type": "Article",
-        headline: "Complete Guide to Choosing an SEO Agency in Madurai",
+        headline: "Hiring for SEO in Madurai? The 2026 Buyer’s Checklist",
       },
       robots: "index,follow",
     },
@@ -1848,15 +1850,27 @@ export const seoConfig = {
       robots: "index,follow",
     },
   },
+  "/services/google-ads/kuala-lumpur": {
+    title: "Google Ads Agency Kuala Lumpur | PPC Management KL | Static Savvy Media",
+    slug: "services/google-ads/kuala-lumpur",
+    seo: {
+      title: "Google Ads Agency Kuala Lumpur | PPC Management KL | Static Savvy Media",
+      description:
+        "Google Ads management for KL businesses: search, Performance Max & call campaigns built around enquiries and WhatsApp leads. Fees from MYR 550/month. Call +60 12-453 7030.",
+      canonical: `${BASE_URL}/services/google-ads/kuala-lumpur`,
+      ogImage: `${BASE_URL}/og/services-google-ads-kuala-lumpur.jpg`,
+      robots: "index,follow",
+    },
+  },
   "/services/seo/kuala-lumpur": {
-    title: "SEO Company in Kuala Lumpur | SEO Services KL | Static Savvy Media",
+    title: "SEO Services KL | SEO Company in Kuala Lumpur | Static Savvy Media",
     slug: "services/seo/kuala-lumpur",
     seo: {
-      title: "SEO Company in Kuala Lumpur | SEO Services KL | Static Savvy Media",
+      title: "SEO Services KL | SEO Company in Kuala Lumpur | Static Savvy Media",
       description:
-        "SEO services for Kuala Lumpur businesses: technical SEO, English and Bahasa Malaysia content, and local search for KL and the Klang Valley. Call +60 12-453 7030.",
+        "SEO services in Kuala Lumpur for SMEs: technical, local and English/BM content SEO for KL & Klang Valley. Monthly reports, no lock-in. Call +60 12-453 7030.",
       canonical: `${BASE_URL}/services/seo/kuala-lumpur`,
-      ogImage: `${BASE_URL}/og/locations-02malaysia.jpg`,
+      ogImage: `${BASE_URL}/og/services-seo-kuala-lumpur.jpg`,
       robots: "index,follow",
     },
   },
@@ -1897,10 +1911,10 @@ export const seoConfig = {
     },
   },
   "/blog/top-digital-marketing-companies-in-madurai": {
-    title: "Top Digital Marketing Companies in Madurai (2026 Comparison)",
+    title: "Digital Marketing Companies in Madurai Compared (2026): Services, Focus & Ratings",
     slug: "blog/top-digital-marketing-companies-in-madurai",
     seo: {
-      title: "Top Digital Marketing Companies in Madurai (2026 Comparison)",
+      title: "Digital Marketing Companies in Madurai Compared (2026): Services, Focus & Ratings",
       description:
         "A plain comparison of well-known digital marketing companies in Madurai: services, focus, locations and Google ratings as seen in October 2026, plus how to choose.",
       canonical: `${BASE_URL}/blog/top-digital-marketing-companies-in-madurai`,

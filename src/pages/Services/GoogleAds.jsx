@@ -133,6 +133,7 @@ const FAQS = [
 ]
 
 const RELATED_SERVICES = [
+  { name: 'Google Ads Agency Kuala Lumpur', path: '/services/google-ads/kuala-lumpur/' },
   { name: 'SEO', path: '/services/seo/' },
   { name: 'Local SEO', path: '/services/local-seo/' },
   { name: 'GEO & AEO', path: '/services/geo-aeo-ai-search/' },

@@ -160,7 +160,7 @@ const MALAYSIA_SEARCH_FACTORS = [
 const MALAYSIA_LINKS = [
   { name: 'Digital marketing agency in Malaysia', path: '/locations/malaysia/' },
   { name: 'Digital marketing agency in Kuala Lumpur', path: '/locations/kuala-lumpur/' },
-  { name: 'SEO company in Kuala Lumpur', path: '/services/seo/kuala-lumpur/' },
+  { name: 'SEO services in KL', path: '/services/seo/kuala-lumpur/' },
   { name: 'Local SEO and Google Maps in Malaysia', path: '/services/local-seo/malaysia/' },
   { name: 'SEO pricing in Malaysia', path: '/pricing/malaysia/seo/' },
 ]

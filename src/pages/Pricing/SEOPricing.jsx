@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import { useParams, useLocation } from 'react-router-dom'
+import { Link, useParams, useLocation } from 'react-router-dom'
 import Breadcrumbs from '../../components/common/Breadcrumbs.jsx'
 import Button from '../../components/common/Button.jsx'
 import HeroSection from '../../components/hero/HeroSection.jsx'
@@ -72,8 +72,8 @@ export default function SEOPricing({ country: propCountry }) {
   const countryName = isMalaysia ? 'Malaysia' : 'India'
   const currencyCode = isMalaysia ? 'MYR' : 'INR'
 
-  const pageTitle = `SEO Pricing ${countryName}, Monthly Retainer Plans (${currencyCode}) | Static Savvy Media`
-  const pageDescription = `Transparent SEO pricing for ${countryName} businesses in ${currencyCode}. Starter, Growth, and Scale monthly retainers. No hidden fees.`
+  const pageTitle = isMalaysia ? 'SEO Packages & Pricing Malaysia (2026) | From MYR 650/Month' : `SEO Pricing ${countryName}, Monthly Retainer Plans (${currencyCode}) | Static Savvy Media`
+  const pageDescription = isMalaysia ? 'Our SEO packages in Malaysia: Starter MYR 650, Growth MYR 1,200 and Scale MYR 2,200 a month, no minimum contract. See what each plan includes for KL, Selangor and nationwide SEO.' : `Transparent SEO pricing for ${countryName} businesses in ${currencyCode}. Starter, Growth, and Scale monthly retainers. No hidden fees.`
 
   const jsonLdRef = useRef([])
 
@@ -153,6 +153,22 @@ export default function SEOPricing({ country: propCountry }) {
           </div>
         </div>
       </section>
+
+      {isMalaysia && (
+        <section className="section">
+          <div className="container">
+            <div className="section-heading">
+              <h2 className="section-heading__title">How Our Malaysia SEO Prices Compare</h2>
+              <p className="section-heading__subtitle">
+                This page is the single source for our Malaysia SEO prices. For what SEO typically costs across the
+                Malaysian market and what drives the price, read our <Link to="/blog/seo-cost-malaysia-price-guide/">guide to SEO costs in Malaysia</Link>.
+                For what the work looks like in the city, see <Link to="/services/seo/kuala-lumpur/">SEO services in Kuala Lumpur</Link> or <Link to="/services/seo/malaysia/">SEO services in Malaysia</Link>.
+                Running ads too? See <Link to="/pricing/malaysia/google-ads/">Google Ads pricing in Malaysia</Link>.
+              </p>
+            </div>
+          </div>
+        </section>
+      )}
 
       <section className="section seo-pricing-progression section--alt">
         <div className="container">
