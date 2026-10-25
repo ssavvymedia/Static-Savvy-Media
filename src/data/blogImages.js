@@ -17,7 +17,7 @@ export const legacyStaticPosts = [
 
 /** Cards for the blog list (newest first). */
 export const staticBlogCards = [
-  ...newBlogPosts.map((p) => ({ slug: p.slug, title: p.h1, description: p.description, category: p.category, publishedAt: '2026-10-24', alt: p.imageAlt })),
+  ...[...newBlogPosts].sort((a, b) => (b.published || '2026-10-24').localeCompare(a.published || '2026-10-24')).map((p) => ({ slug: p.slug, title: p.h1, description: p.description, category: p.category, publishedAt: p.published || '2026-10-24', alt: p.imageAlt })),
   ...legacyStaticPosts.map((p) => ({ ...p, alt: `${p.title}, Static Savvy Media blog` })),
 ].map((p) => ({ ...p, image: img(p.slug), author: 'Deepan Kanz', static: true }))
 

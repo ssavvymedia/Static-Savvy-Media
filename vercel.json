@@ -1792,6 +1792,11 @@
       "statusCode": 308
     },
     {
+      "source": "/blog/seo-cost-malaysia-price-guide",
+      "destination": "/blog/seo-cost-malaysia-price-guide/",
+      "statusCode": 308
+    },
+    {
       "source": "/blog/rawang-local-seo-google-business-profile",
       "destination": "/blog/rawang-local-seo-google-business-profile/",
       "statusCode": 308
@@ -2202,6 +2207,10 @@
     },
     {
       "source": "/blog/how-to-choose-digital-marketing-agency-malaysia/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/seo-cost-malaysia-price-guide/",
       "destination": "/index.html"
     },
     {

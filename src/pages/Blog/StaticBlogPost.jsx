@@ -41,7 +41,7 @@ export default function StaticBlogPost() {
       schema: {
         '@context': 'https://schema.org',
         '@graph': [
-          { '@type': 'BlogPosting', headline: post.h1, description: post.description, image, url, mainEntityOfPage: url, datePublished: '2026-10-24', dateModified: '2026-10-24', author: { '@type': 'Person', name: 'Deepan Kanz', url: `${SITE_URL}/about/deepan-kanz/` }, publisher: { '@type': 'Organization', name: 'Static Savvy Media', url: SITE_URL, logo: { '@type': 'ImageObject', url: `${SITE_URL}/favicon.png` } } },
+          { '@type': 'BlogPosting', headline: post.h1, description: post.description, image, url, mainEntityOfPage: url, datePublished: post.published || '2026-10-24', dateModified: post.published || '2026-10-24', author: { '@type': 'Person', name: 'Deepan Kanz', url: `${SITE_URL}/about/deepan-kanz/` }, publisher: { '@type': 'Organization', name: 'Static Savvy Media', url: SITE_URL, logo: { '@type': 'ImageObject', url: `${SITE_URL}/favicon.png` } } },
           { '@type': 'Organization', '@id': `${SITE_URL}/#organization`, name: 'Static Savvy Media', url: `${SITE_URL}/`, telephone: '+91 99440 40345' },
           myRegion
             ? { '@type': 'ProfessionalService', '@id': `${SITE_URL}/locations/malaysia/#localbusiness`, name: 'Static Savvy Media Malaysia', url: `${SITE_URL}/locations/malaysia/`, telephone: '+60 12-453 7030', address: { '@type': 'PostalAddress', addressLocality: 'Rawang', addressRegion: 'Selangor', addressCountry: 'MY' }, parentOrganization: { '@id': `${SITE_URL}/#organization` } }
@@ -68,7 +68,7 @@ export default function StaticBlogPost() {
             <p className="blog-post-header__description">{post.intro}</p>
             <div className="blog-post-header__meta">
               <span className="blog-post-header__meta-item">Deepan Kanz, Static Savvy Media</span>
-              <span className="blog-post-header__meta-item">24 October 2026</span>
+              <span className="blog-post-header__meta-item">{post.publishedLabel || '24 October 2026'}</span>
               <span className="blog-post-header__meta-item">{myRegion ? 'Rawang, Selangor, Malaysia' : 'Madurai, Tamil Nadu (HQ)'}</span>
             </div>
           </header>
