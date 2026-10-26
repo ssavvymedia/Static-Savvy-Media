@@ -31,19 +31,40 @@ const PAGE_TITLE =
   'Digital Marketing Agency in Madurai, SEO, GEO/AEO & More | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
-  'Digital marketing agency in Madurai (Kamarajar Salai): SEO, Local SEO, Google Ads, social media, websites and AI search, in Tamil & English. WhatsApp +91 99440 40345.'
+  'Madurai digital marketing agency at Kamarajar Salai since 2021, rated 4.9★ from 100+ Google reviews. SEO from ₹12,000/month, Local SEO, Ads, social & websites. WhatsApp +91 99440 40345.'
 
 const HERO_EYEBROW = 'Madurai • Static Savvy Media HQ'
 
 const HERO_SUBTITLE =
   'Madurai is not just our headquarters, it is our home market. We understand the Madurai business landscape because we have built our own business here: the textile corridor, the education institutions driving student demand, the healthcare cluster, the hospitality businesses serving pilgrims and tourists at Meenakshi Amman Temple, and the growing retail ecosystem. When we build digital marketing for Madurai businesses, we build for the city we live in.'
 
+
+const QUICK_ANSWER =
+  'Static Savvy Media is a digital marketing agency headquartered in Madurai, at 2nd Floor, 4/3, Srinivasa Perumal Koil St, Kamarajar Salai (625009). Since 1 October 2021 our Madurai team has run SEO, Local SEO and Google Business Profile, Google & Meta ads, social media, websites and AI search (GEO/AEO) for local businesses, in Tamil and English. We are rated 4.9★ on Google from 100+ reviews, and SEO plans start at ₹12,000 a month with no lock-in.'
+
+const QUICK_FACTS = [
+  { label: 'Madurai office', value: '2nd Floor, 4/3, Srinivasa Perumal Koil St, Kamarajar Salai, Madurai 625009' },
+  { label: 'Serving Madurai since', value: '1 October 2021' },
+  { label: 'Google rating', value: '4.9★ from 100+ Google reviews' },
+  { label: 'Office hours', value: 'Monday–Saturday, 9:00 AM – 6:30 PM IST (visits by appointment)' },
+  { label: 'Languages', value: 'Tamil and English' },
+  { label: 'SEO pricing', value: 'From ₹12,000/month, no minimum term', link: { to: '/pricing/india/seo/', label: 'See SEO pricing' } },
+  { label: 'Phone / WhatsApp', value: '+91 99440 40345' },
+]
+
+const HOW_WE_WORK = [
+  { title: '1. Free audit', text: 'We check your Google Business Profile, website and current Google rankings in Madurai, and show what is costing you enquiries.' },
+  { title: '2. Plan', text: 'A 90-day plan for the channels that fit your budget, usually Local SEO and Google Maps first for local businesses.' },
+  { title: '3. Execution from Madurai', text: 'Our Madurai team does the work in-house: pages, Tamil and English content, Google Business Profile, ads and reporting.' },
+  { title: '4. Monthly report', text: 'Calls, WhatsApp messages, direction requests, form enquiries and rankings, so you see what the spend returns.' },
+]
+
 const SERVICES = [
   {
     number: '01',
     title: 'Search Engine Optimization (SEO)',
     text: 'Ranking your Madurai business for city-specific and Tamil Nadu-wide queries.',
-    path: '/services/seo/',
+    path: '/services/seo/madurai/',
     icon: 'seo',
     color: 'icon-badge--purple',
   },
@@ -51,7 +72,7 @@ const SERVICES = [
     number: '02',
     title: 'GEO & AEO / AI Search Optimization',
     text: 'Getting cited by ChatGPT, Perplexity, and Google AI Overviews.',
-    path: '/services/geo-aeo-ai-search/',
+    path: '/services/geo-aeo-ai-search/madurai/',
     icon: 'geo',
     color: 'icon-badge--blue',
   },
@@ -59,7 +80,7 @@ const SERVICES = [
     number: '03',
     title: 'Local SEO & Google Business Profile',
     text: 'Improving your Google Maps visibility for “near me” searches in Madurai.',
-    path: '/services/local-seo/',
+    path: '/services/local-seo/madurai/',
     icon: 'local',
     color: 'icon-badge--cyan',
   },
@@ -67,7 +88,7 @@ const SERVICES = [
     number: '04',
     title: 'Google Ads & PPC',
     text: 'Immediate visibility for high-intent buyers searching in Madurai.',
-    path: '/services/google-ads/',
+    path: '/services/advertising-agency/madurai/',
     icon: 'ads',
     color: 'icon-badge--pink',
   },
@@ -75,7 +96,7 @@ const SERVICES = [
     number: '05',
     title: 'Social Media Marketing',
     text: 'Instagram and Facebook for the Madurai consumer market; LinkedIn for B2B.',
-    path: '/services/social-media-marketing/',
+    path: '/services/social-media-marketing/madurai/',
     icon: 'social',
     color: 'icon-badge--orange',
   },
@@ -280,6 +301,54 @@ export default function Madurai() {
           />
         </div>
       </HeroSection>
+
+      {/* ---- Quick answer (answer-first for search & AI engines) ---- */}
+      <section className="section madurai-quick">
+        <div className="container">
+          <div className="glass-card" style={{ padding: '2rem' }}>
+            <h2 className="section-heading__title">Looking for a digital marketing agency in Madurai?</h2>
+            <p>{QUICK_ANSWER}</p>
+            <dl style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1rem', marginTop: '1.5rem' }}>
+              {QUICK_FACTS.map((f) => (
+                <div key={f.label}>
+                  <dt style={{ fontWeight: 600, opacity: 0.8 }}>{f.label}</dt>
+                  <dd style={{ margin: 0 }}>
+                    {f.value}
+                    {f.link && (
+                      <>
+                        {' '}
+                        <Link to={f.link.to}>{f.link.label}</Link>
+                      </>
+                    )}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      {/* ---- How we work with Madurai businesses ---- */}
+      <section className="section madurai-process section--alt">
+        <div className="container">
+          <div className="section-heading">
+            <span className="section-heading__eyebrow">How It Works</span>
+            <h2 className="section-heading__title">How We Work With Madurai Businesses</h2>
+          </div>
+          <ol style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1rem', listStyle: 'none', padding: 0 }}>
+            {HOW_WE_WORK.map((step) => (
+              <li key={step.title} className="glass-card" style={{ padding: '1.25rem' }}>
+                <h3>{step.title}</h3>
+                <p>{step.text}</p>
+              </li>
+            ))}
+          </ol>
+          <p style={{ marginTop: '1rem' }}>
+            Want to start with the audit? <Link to="/contact/">Request a free audit</Link> or read{' '}
+            <Link to="/blog/how-long-does-seo-take-madurai/">how long SEO takes for a Madurai business</Link>.
+          </p>
+        </div>
+      </section>
 
       {/* ---- Digital Marketing Services in Madurai ---- */}
       <section className="section madurai-services">
@@ -602,7 +671,7 @@ export default function Madurai() {
       {/* ---- Final CTA ---- */}
       <CTASection
         title="Ready to grow your Madurai business?"
-        subtitle="Message us on WhatsApp, Madurai’s only GEO & AEO agency is ready to talk."
+        subtitle="Message us on WhatsApp and our Madurai team will reply during office hours."
         primaryLabel="WhatsApp: +91-99440-40345"
         primaryHref={whatsappHref}
       />

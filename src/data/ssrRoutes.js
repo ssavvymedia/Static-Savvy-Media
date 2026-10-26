@@ -6,6 +6,7 @@
  * Plain data only (no JSX): loaded by Node at build time.
  */
 export const ssrRoutes = [
+  { route: '/locations/madurai/', module: '/src/pages/Locations/Madurai.jsx', office: 'madurai', service: 'Digital marketing agency in Madurai', serviceType: 'Digital marketing', area: { '@type': 'City', name: 'Madurai' } },
   { route: '/services/seo/madurai/', module: '/src/pages/ServiceLocations/SEO/SEO_Madurai.jsx', office: 'madurai', service: 'SEO services in Madurai', serviceType: 'Search engine optimization', area: { '@type': 'City', name: 'Madurai' } },
   { route: '/services/social-media-marketing/madurai/', module: '/src/pages/ServiceLocations/SocialMedia/SocialMedia_Madurai.jsx', office: 'madurai', service: 'Social media marketing in Madurai', serviceType: 'Social media marketing', area: { '@type': 'City', name: 'Madurai' } },
   { route: '/services/local-seo/madurai/', module: '/src/pages/ServiceLocations/LocalSEO/LocalSEO_Madurai.jsx', office: 'madurai', service: 'Local SEO and Google Business Profile optimisation in Madurai', serviceType: 'Local SEO', area: { '@type': 'City', name: 'Madurai' } },

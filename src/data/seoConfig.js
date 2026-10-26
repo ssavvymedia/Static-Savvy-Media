@@ -662,7 +662,7 @@ export const seoConfig = {
       title:
         "Digital Marketing Agency Madurai — SEO, Ads & AI | Static Savvy Media",
       description:
-        "Digital marketing agency in Madurai (Kamarajar Salai): SEO, Local SEO, Google Ads, social media, websites and AI search, in Tamil & English. WhatsApp +91 99440 40345.",
+        "Madurai digital marketing agency at Kamarajar Salai since 2021, rated 4.9★ from 100+ Google reviews. SEO from ₹12,000/month, Local SEO, Ads, social & websites. WhatsApp +91 99440 40345.",
       canonical: `${BASE_URL}/locations/madurai`,
       focusKeyword: "digital marketing agency Madurai",
       ogTitle: "Digital Marketing Agency Madurai | Static Savvy Media",

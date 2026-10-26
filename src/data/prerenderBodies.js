@@ -9,7 +9,6 @@
  * Plain data only (no JSX): this file is loaded by Node at build time.
  */
 import { HOME_FAQS } from './pages/homeFaqs.js'
-import { MADURAI_FAQS } from './pages/maduraiFaqs.js'
 import { content as ADS } from './pages/advertisingAgencyMadurai.js'
 import { content as TN } from './pages/tamilNadu.js'
 import { content as TOP } from './pages/topCompaniesMadurai.js'
@@ -112,34 +111,7 @@ export const prerenderBodies = {
     faqs: HOME_FAQS,
     schema: graph(organization, maduraiBusiness, { '@type': 'WebSite', name: 'Static Savvy Media', url: `${HOST}/`, publisher: { '@id': ORG_ID } }, faqPage(HOME_FAQS)),
   },
-  '/locations/madurai/': {
-    h1: 'Digital Marketing Agency in Madurai, Static Savvy Media HQ',
-    intro: [
-      'Static Savvy Media is headquartered in Madurai at Kamarajar Salai. Our Madurai team delivers SEO, Local SEO and Google Business Profile optimisation, Google Ads, social media marketing, website design and GEO/AEO for businesses in Madurai and across Tamil Nadu, with content in Tamil and English.',
-      `Visit by appointment (Monday to Saturday) or WhatsApp ${PHONE}.`,
-    ],
-    sections: [
-      {
-        heading: 'Services from our Madurai office',
-        items: [
-          { title: 'SEO', link: { to: '/services/seo/madurai/', label: 'SEO company in Madurai' } },
-          { title: 'Local SEO', link: { to: '/services/local-seo/madurai/', label: 'Local SEO in Madurai' } },
-          { title: 'Advertising', link: { to: '/services/advertising-agency/madurai/', label: 'Advertising agency in Madurai' } },
-          { title: 'Social media', link: { to: '/services/social-media-marketing/madurai/', label: 'Social media marketing in Madurai' } },
-          { title: 'Websites', link: { to: '/services/website-design-development/madurai/', label: 'Website design in Madurai' } },
-          { title: 'AI search', link: { to: '/services/geo-aeo-ai-search/madurai/', label: 'GEO & AEO in Madurai' } },
-        ],
-      },
-    ],
-    related: [
-      { name: 'Home', path: '/' },
-      { name: 'Digital Marketing Agency in Tamil Nadu', path: '/locations/tamil-nadu/' },
-      { name: 'Top Digital Marketing Companies in Madurai (guide)', path: '/blog/top-digital-marketing-companies-in-madurai/' },
-      { name: 'Textiles marketing in Madurai', path: '/industries/textiles-madurai/' },
-    ],
-    faqs: MADURAI_FAQS,
-    schema: graph({ ...maduraiBusiness, url: `${HOST}/locations/madurai/` }, faqPage(MADURAI_FAQS), crumbs([{ name: 'Home', path: '/' }, { name: 'Locations', path: '/locations/' }, { name: 'Madurai', path: '/locations/madurai/' }])),
-  },
+  /* /locations/madurai/ is server-rendered from its real component via src/data/ssrRoutes.js. */
   [ADS.path]: fromContent(ADS, [{ '@type': 'Service', name: 'Digital Advertising in Madurai', serviceType: 'Online advertising', provider: { '@id': MADURAI_ID }, areaServed: { '@type': 'City', name: 'Madurai' }, url: `${HOST}${ADS.path}` }, maduraiBusiness]),
   [TN.path]: fromContent(TN, [{ '@type': 'Service', name: 'Digital Marketing in Tamil Nadu', serviceType: 'Digital marketing', provider: { '@id': ORG_ID }, areaServed: { '@type': 'State', name: 'Tamil Nadu' }, url: `${HOST}${TN.path}` }, organization]),
   [TOP.path]: fromContent(TOP, [{ '@type': 'Article', headline: TOP.h1, datePublished: '2026-10-22', dateModified: '2026-10-22', author: { '@id': ORG_ID }, publisher: { '@id': ORG_ID }, url: `${HOST}${TOP.path}` }, organization]),
