@@ -19,10 +19,10 @@ import deepanAboutImg from '../../assets/images/About/DeepanAbout.webp'
    CONTENT, Approved Static Savvy Media About Page Content
    ============================================================ */
 
-const PAGE_TITLE = 'About Static Savvy Media | Digital Marketing Agency in Madurai'
+const PAGE_TITLE = 'About Static Savvy Media | Founded 2021 by Deepan Kanz'
 
 const PAGE_DESCRIPTION =
-  'Learn about Static Savvy Media, a Madurai digital marketing agency rated 4.9★ from 100+ Google reviews. SEO, Local SEO, Google Ads & AI search for Tamil Nadu and Malaysia.'
+  'Static Savvy Media is an AI-first digital marketing agency founded on 1 October 2021 by Deepan Kanz. HQ in Madurai, with an office in Rawang, Malaysia. Our story, team and approach.'
 
 const SERVICES = [
   { number: '01', title: 'SEO', text: 'Search engine optimisation designed to improve organic visibility and long-term discoverability.', path: '/services/seo/madurai/' },
@@ -126,6 +126,14 @@ const FAQS = [
     answer: 'Static Savvy Media is an AI-first digital marketing agency serving businesses across Madurai, Thoothukudi and Malaysia with SEO, GEO, AEO, Local SEO, Google Ads, social media, website development and AI-powered digital solutions.',
   },
   {
+    question: 'When was Static Savvy Media founded, and who founded it?',
+    answer: 'Static Savvy Media was founded on 1 October 2021 by Deepan Kanz, who still leads strategy as founder. The agency started in Madurai, Tamil Nadu, which remains its headquarters.',
+  },
+  {
+    question: 'Where is Static Savvy Media\u2019s head office?',
+    answer: 'The head office is at 2nd Floor, 4/3, Srinivasa Perumal Koil St, Kamarajar Salai, Madurai 625009, Tamil Nadu. Malaysian clients are served from the Rawang, Selangor office. For Madurai services, see the Madurai digital marketing agency page at staticsavvymedia.com/locations/madurai/.',
+  },
+  {
     question: 'Where does Static Savvy Media operate?',
     answer: 'The agency operates across three key markets: Madurai, Tamil Nadu; Thoothukudi, Tamil Nadu; and Rawang & Selangor, Malaysia. The agency also works remotely with businesses across India, Singapore and Southeast Asia.',
   },
@@ -168,10 +176,11 @@ export default function About() {
       name: 'Static Savvy Media',
       description: PAGE_DESCRIPTION,
       url: `${SITE_URL}/about/`,
-      foundingDate: '2024',
+      foundingDate: '2021-10-01',
       founder: {
         '@type': 'Person',
         name: 'Deepan Kanz',
+        url: `${SITE_URL}/about/deepan-kanz/`,
       },
       areaServed: [
         { '@type': 'City', name: 'Madurai' },
@@ -231,11 +240,11 @@ export default function About() {
         eyebrow="ABOUT STATIC SAVVY MEDIA"
         title={
           <>
-            Digital Marketing Built for{' '}
-            <span className="text-gradient">the AI Era</span>
+            About Static Savvy Media:{' '}
+            <span className="text-gradient">AI-First Marketing Since 2021</span>
           </>
         }
-        subtitle="Static Savvy Media is an AI-first digital marketing agency helping businesses become visible, discoverable and credible across traditional search and the rapidly changing world of AI search."
+        subtitle="Founded on 1 October 2021 by Deepan Kanz, Static Savvy Media is an AI-first digital marketing agency helping businesses become visible, discoverable and credible across traditional search, Google Maps and AI answers."
         actions={
           <>
             <Button href={whatsappHref} variant="primary" size="lg" target="_blank" rel="noopener noreferrer">
@@ -272,8 +281,19 @@ export default function About() {
                   Our work combines SEO, GEO, AEO, Local SEO, Google Ads, Social Media, Website Development, AI Business Automation and Creative Production. We help businesses build a stronger digital presence across search engines, maps, social platforms and AI-generated answers.
                 </p>
                 <p>
-                  The agency is based in Madurai and serves businesses across Tamil Nadu, Thoothukudi and Malaysia.
+                  The agency is headquartered in Madurai and serves businesses across Tamil Nadu, Thoothukudi and Malaysia. If you are a local business looking for a{' '}
+                  <Link to="/">digital marketing company in Madurai</Link>, start with our{' '}
+                  <Link to="/locations/madurai/">Madurai digital marketing agency page</Link>{' '}
+                  for services, pricing and our Kamarajar Salai office. Malaysian businesses can see our{' '}
+                  <Link to="/locations/kuala-lumpur/">Kuala Lumpur digital marketing services</Link>.
                 </p>
+                <ul className="about-who-we-are__facts">
+                  <li><strong>Founded:</strong> 1 October 2021</li>
+                  <li><strong>Founder:</strong> <Link to="/about/deepan-kanz/">Deepan Kanz</Link></li>
+                  <li><strong>Headquarters:</strong> Kamarajar Salai, Madurai, Tamil Nadu</li>
+                  <li><strong>Malaysia office:</strong> Rawang, Selangor</li>
+                  <li><strong>Google rating (Madurai):</strong> 4.9★ from 100+ reviews</li>
+                </ul>
                 <div className="about-who-we-are__services">
                   <span className="about-who-we-are__chip">SEO</span>
                   <span className="about-who-we-are__chip about-who-we-are__chip--pink">GEO</span>

@@ -83,7 +83,15 @@ export async function ssrBodies(root, distAssets) {
       const segs = r.route.split('/').filter(Boolean)
       const crumbs = [{ name: 'Home', path: '/' }, ...segs.map((s, i) => ({ name: getBreadcrumbLabel(s), path: `/${segs.slice(0, i + 1).join('/')}/` }))]
       const biz = r.office === 'madurai' ? madurai : malaysia
-      const nodes = [
+      const isAbout = r.kind === 'about'
+      const nodes = isAbout ? [
+        { '@type': 'AboutPage', '@id': `${HOST}${r.route}#webpage`, name: decode(h1[1]), url: `${HOST}${r.route}`, about: { '@id': ORG_ID }, mainEntity: { '@id': ORG_ID } },
+        { '@type': 'Organization', '@id': ORG_ID, name: 'Static Savvy Media', url: `${HOST}/`, telephone: PHONE, foundingDate: '2021-10-01', foundingLocation: { '@type': 'Place', name: 'Madurai, Tamil Nadu, India' }, founder: { '@id': `${HOST}/about/deepan-kanz/#person` }, areaServed: [{ '@type': 'City', name: 'Madurai' }, { '@type': 'City', name: 'Thoothukudi' }, { '@type': 'Country', name: 'Malaysia' }], subOrganization: [{ '@id': madurai['@id'] }, { '@id': malaysia['@id'] }] },
+        { '@type': 'Person', '@id': `${HOST}/about/deepan-kanz/#person`, name: 'Deepan Kanz', jobTitle: 'Founder', url: `${HOST}/about/deepan-kanz/`, worksFor: { '@id': ORG_ID } },
+        madurai,
+        malaysia,
+        { '@type': 'BreadcrumbList', itemListElement: crumbs.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: `${HOST}${c.path}` })) },
+      ] : [
         { '@type': 'Service', name: r.service, serviceType: r.serviceType, provider: { '@id': biz['@id'] }, areaServed: r.area, url: `${HOST}${r.route}` },
         biz,
         { '@type': 'Organization', '@id': ORG_ID, name: 'Static Savvy Media', url: `${HOST}/`, telephone: PHONE },

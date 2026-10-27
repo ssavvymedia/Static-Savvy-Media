@@ -45,17 +45,17 @@ export const seoConfig = {
     },
   },
   "/about": {
-    title: "About Static Savvy Media | Digital Marketing Agency in Madurai",
+    title: "About Static Savvy Media | Founded 2021 by Deepan Kanz",
     slug: "about",
     seo: {
-      title: "About Static Savvy Media | Digital Marketing Agency in Madurai",
+      title: "About Static Savvy Media | Founded 2021 by Deepan Kanz",
       description:
-        "Learn about Static Savvy Media, a Madurai digital marketing agency rated 4.9★ from 100+ Google reviews. SEO, Local SEO, Google Ads & AI search for Tamil Nadu and Malaysia.",
+        "Static Savvy Media is an AI-first digital marketing agency founded on 1 October 2021 by Deepan Kanz. HQ in Madurai, with an office in Rawang, Malaysia. Our story, team and approach.",
       canonical: `${BASE_URL}/about`,
-      focusKeyword: "digital marketing agency madurai",
-      ogTitle: "About Static Savvy Media | Digital Marketing Agency in Madurai",
+      focusKeyword: "about static savvy media",
+      ogTitle: "About Static Savvy Media | Founded 2021 by Deepan Kanz",
       ogDescription:
-        "Learn about Static Savvy Media, a Madurai digital marketing agency rated 4.9★ from 100+ Google reviews. SEO, Local SEO, Google Ads & AI search for Tamil Nadu and Malaysia.",
+        "Static Savvy Media is an AI-first digital marketing agency founded on 1 October 2021 by Deepan Kanz. HQ in Madurai, with an office in Rawang, Malaysia. Our story, team and approach.",
       ogImage: `${BASE_URL}/og/about-about.jpg`,
       schema: {
         "@context": "https://schema.org",

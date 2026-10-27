@@ -1151,3 +1151,13 @@
     justify-content: center;
   }
 }
+
+.about-who-we-are__facts {
+  list-style: none;
+  margin: 1rem 0 1.25rem;
+  padding: 0;
+  display: grid;
+  gap: 0.4rem;
+}
+.about-who-we-are__facts li { line-height: 1.5; }
+.about-who-we-are__content p a { text-decoration: underline; }
