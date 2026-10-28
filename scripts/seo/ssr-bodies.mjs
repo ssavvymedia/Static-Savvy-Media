@@ -73,14 +73,14 @@ export async function ssrBodies(root, distAssets) {
       const Page = mod.default
       let raw
       try {
-        raw = renderToString(React.createElement(MemoryRouter, { initialEntries: [r.route] }, React.createElement(Page)))
+        raw = renderToString(React.createElement(MemoryRouter, { initialEntries: [r.route] }, React.createElement(Page, r.props || null)))
       } catch (e) {
         throw new Error(`${r.route}: ${e.message.slice(0, 160)} [Page=${typeof Page} keys=${Object.keys(mod).join(',')} MemoryRouter=${typeof MemoryRouter} react=${React.version}]`)
       }
       const html = fixAssets(raw, distAssets)
       const h1 = html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/)
       if (!h1) throw new Error(`ssr-bodies: no <h1> rendered for ${r.route}`)
-      const qs = textsByClassSuffix(html, ['faq__question', 'faq-section__question']), as = textsByClassSuffix(html, ['faq__answer', 'faq-section__answer'])
+      const qs = textsByClassSuffix(html, ['faq__question', 'faq-section__question', 'faq-item__question']), as = textsByClassSuffix(html, ['faq__answer', 'faq-section__answer', 'faq-item__answer'])
       if (qs.length !== as.length) throw new Error(`ssr-bodies: ${qs.length} FAQ questions vs ${as.length} answers on ${r.route}`)
       const faqs = qs.map((q, i) => ({ q, a: as[i] })).filter((f) => f.q && f.a)
       const segs = r.route.split('/').filter(Boolean)
@@ -107,7 +107,7 @@ export async function ssrBodies(root, distAssets) {
         malaysia,
         { '@type': 'BreadcrumbList', itemListElement: crumbs.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: `${HOST}${c.path}` })) },
       ] : [
-        { '@type': 'Service', name: r.service, serviceType: r.serviceType, provider: { '@id': biz['@id'] }, areaServed: r.area, url: `${HOST}${r.route}`, ...(r.offers ? { offers: r.offers.map(([name, price]) => ({ '@type': 'Offer', name, price: String(price), priceCurrency: r.currency || 'INR', url: `${HOST}${r.route}`, priceSpecification: { '@type': 'UnitPriceSpecification', price: String(price), priceCurrency: r.currency || 'INR', unitText: 'MONTH' } })) } : {}) },
+        { '@type': 'Service', name: r.service || decode(h1[1]), serviceType: r.serviceType, provider: { '@id': biz['@id'] }, areaServed: r.area, url: `${HOST}${r.route}`, ...(r.offers ? { offers: r.offers.map(([name, price]) => ({ '@type': 'Offer', name, price: String(price), priceCurrency: r.currency || 'INR', url: `${HOST}${r.route}`, priceSpecification: { '@type': 'UnitPriceSpecification', price: String(price), priceCurrency: r.currency || 'INR', unitText: 'MONTH' } })) } : {}) },
         biz,
         { '@type': 'Organization', '@id': ORG_ID, name: 'Static Savvy Media', url: `${HOST}/`, telephone: PHONE },
         { '@type': 'BreadcrumbList', itemListElement: crumbs.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: `${HOST}${c.path}` })) },

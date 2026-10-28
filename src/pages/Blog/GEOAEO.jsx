@@ -1,3 +1,4 @@
+import RelatedReading from '../../components/blog/RelatedReading.jsx'
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import BlogFeaturedImage from '../../components/blog/BlogFeaturedImage.jsx'
@@ -657,6 +658,8 @@ export default function GEOAEO() {
       {/* ============================================================
           FINAL CTA
           ============================================================ */}
+      <RelatedReading links={[['/services/geo-aeo-ai-search/', 'GEO & AEO services for AI search'], ['/services/geo-aeo-ai-search/madurai/', 'GEO & AEO in Madurai'], ['/blog/what-is-answer-engine-optimization/', 'What is answer engine optimisation (AEO)?'], ['/blog/agentic-ai-tools-small-business-marketing/', 'Top agentic AI tools for small business marketing'], ['/blog/seo-agency-madurai-complete-guide/', 'Hiring for SEO in Madurai: buyer’s checklist'], ['/pricing/india/seo/', 'SEO pricing (India)']]} />
+
       <CTASection
         eyebrow="Get Started"
         title="Be the first business in your category to be cited by AI search."

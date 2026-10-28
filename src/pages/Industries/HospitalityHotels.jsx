@@ -193,7 +193,7 @@ function FaqAccordion({ faqs }) {
               </button>
             </h3>
             <div id={`hh-faq-panel-${index}`} role="region" aria-labelledby={`hh-faq-button-${index}`} className="hh-faq__panel" style={{ gridTemplateRows: isOpen ? '1fr' : '0fr' }}>
-              <div className="hh-faq__panel-inner"><p>{faq.answer}</p></div>
+              <div className="hh-faq__panel-inner"><p className="hh-faq__answer">{faq.answer}</p></div>
             </div>
           </div>
         )

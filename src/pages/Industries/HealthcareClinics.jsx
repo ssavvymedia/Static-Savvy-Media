@@ -402,7 +402,7 @@ function FaqAccordion({ faqs }) {
               style={{ gridTemplateRows: isOpen ? '1fr' : '0fr' }}
             >
               <div className="hc-faq__panel-inner">
-                <p>{faq.answer}</p>
+                <p className="hc-faq__answer">{faq.answer}</p>
               </div>
             </div>
           </div>

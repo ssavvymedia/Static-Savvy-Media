@@ -1,3 +1,4 @@
+import RelatedReading from '../../components/blog/RelatedReading.jsx'
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import BlogFeaturedImage from '../../components/blog/BlogFeaturedImage.jsx'
@@ -509,6 +510,8 @@ export default function WhatIsAEO() {
       </section>
 
       {/* FINAL CTA */}
+      <RelatedReading links={[['/services/geo-aeo-ai-search/', 'GEO & AEO services for AI search'], ['/services/geo-aeo-ai-search/madurai/', 'GEO & AEO in Madurai'], ['/blog/what-is-generative-engine-optimization/', 'What is generative engine optimisation (GEO)?'], ['/services/seo/madurai/', 'SEO services in Madurai'], ['/blog/affordable-seo-company-madurai-pricing/', 'SEO prices in Madurai (incl. AEO + GEO plan)']]} />
+
       <CTASection
         eyebrow="AEO Strategy"
         title="Ready to Build Your AEO Strategy?"

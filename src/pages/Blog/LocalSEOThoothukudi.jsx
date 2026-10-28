@@ -1,3 +1,4 @@
+import RelatedReading from '../../components/blog/RelatedReading.jsx'
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import BlogFeaturedImage from '../../components/blog/BlogFeaturedImage.jsx'
@@ -695,6 +696,8 @@ export default function LocalSEOThoothukudi() {
       {/* ============================================================
           FINAL CTA
           ============================================================ */}
+      <RelatedReading links={[['/services/local-seo/thoothukudi/', 'Local SEO in Thoothukudi'], ['/services/seo/thoothukudi/', 'SEO in Thoothukudi'], ['/services/google-ads/thoothukudi/', 'Google Ads in Thoothukudi'], ['/locations/thoothukudi/', 'Digital marketing in Thoothukudi'], ['/industries/port-marine-industrial-thoothukudi/', 'Port, marine and industrial marketing'], ['/pricing/india/local-seo/', 'Local SEO pricing (India)']]} />
+
       <CTASection
         eyebrow="Local SEO"
         title="Need Local SEO for Your Thoothukudi Business?"

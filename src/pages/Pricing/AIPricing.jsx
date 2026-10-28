@@ -4,6 +4,7 @@ import Breadcrumbs from '../../components/common/Breadcrumbs.jsx'
 import Button from '../../components/common/Button.jsx'
 import HeroSection from '../../components/hero/HeroSection.jsx'
 import CTASection from '../../components/sections/CTASection.jsx'
+import PricingNextSteps from '../../components/pricing/PricingNextSteps.jsx'
 import ContactFormSection from '../../components/sections/ContactFormSection.jsx'
 import { ScrollReveal } from '../../components/animations/ScrollReveal.jsx'
 import { setSeo } from '../../utils/seo.js'
@@ -197,6 +198,8 @@ export default function AIPricing({ country: propCountry }) {
           </div>
         </div>
       </section>
+
+      <PricingNextSteps service="ai" country={activeCountry} />
 
       <CTASection
         title="Not sure which tier is right for you?"

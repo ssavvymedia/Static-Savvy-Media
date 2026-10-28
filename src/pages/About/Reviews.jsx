@@ -234,10 +234,10 @@ export default function Reviews() {
               </div>
               <div className="reviews-hero-dashboard__rating-display">
                 <div className="reviews-hero-dashboard__rating-number">
-                  {hasReviews ? ratingStats.average.toFixed(1) : ', '}
+                  {hasReviews ? ratingStats.average.toFixed(1) : '4.9'}
                 </div>
                 <div className="reviews-hero-dashboard__rating-label">
-                  {hasReviews ? `/ 5 · ${ratingStats.total} reviews` : 'Rating data loading...'}
+                  {hasReviews ? `/ 5 · ${ratingStats.total} reviews` : '/ 5 on Google · 100+ reviews'}
                 </div>
               </div>
             </div>

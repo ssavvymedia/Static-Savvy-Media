@@ -1,3 +1,4 @@
+import RelatedReading from '../../components/blog/RelatedReading.jsx'
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import BlogFeaturedImage from '../../components/blog/BlogFeaturedImage.jsx'
@@ -708,6 +709,8 @@ export default function MalaysiaGrantGuide() {
       {/* ============================================================
           FINAL CTA
           ============================================================ */}
+      <RelatedReading links={[['/industries/smes-malaysia-grant-eligible/', 'Digital marketing for grant-eligible SMEs'], ['/services/seo/malaysia/', 'SEO services in Malaysia'], ['/services/ai-business-automation/malaysia/', 'AI business automation in Malaysia'], ['/blog/seo-cost-malaysia-price-guide/', 'SEO cost in Malaysia: 2026 price guide'], ['/pricing/malaysia/', 'Malaysia pricing'], ['/locations/malaysia/', 'Static Savvy Media Malaysia (Rawang)']]} />
+
       <CTASection
         eyebrow="Malaysia SME Services"
         title="Grow Your Malaysian Business With Grant-Aware Digital Marketing"

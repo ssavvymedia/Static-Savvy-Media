@@ -382,7 +382,7 @@ function FaqAccordion({ faqs }) {
               style={{ gridTemplateRows: isOpen ? '1fr' : '0fr' }}
             >
               <div className="edu-faq__panel-inner">
-                <p>{faq.answer}</p>
+                <p className="edu-faq__answer">{faq.answer}</p>
               </div>
             </div>
           </div>

@@ -1,3 +1,4 @@
+import RelatedReading from '../../components/blog/RelatedReading.jsx'
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import Breadcrumbs from '../../components/common/Breadcrumbs.jsx'
@@ -667,6 +668,8 @@ export default function SEO() {
       {/* ============================================================
           FINAL CTA
           ============================================================ */}
+      <RelatedReading links={[['/services/seo/madurai/', 'SEO services in Madurai'], ['/services/local-seo/madurai/', 'Local SEO in Madurai'], ['/blog/affordable-seo-company-madurai-pricing/', 'Affordable SEO in Madurai: 2026 prices'], ['/blog/how-long-does-seo-take-madurai/', 'How long does SEO take?'], ['/blog/is-seo-worth-it-small-business-madurai/', 'Is SEO worth it for a small business?'], ['/pricing/india/seo/', 'SEO pricing (India)'], ['/locations/madurai/', 'Digital marketing agency in Madurai']]} />
+
       <CTASection
         eyebrow="SEO Services"
         title="Looking for an SEO Agency in Madurai?"
