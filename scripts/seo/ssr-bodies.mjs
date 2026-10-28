@@ -1,7 +1,8 @@
 /**
  * Build-time server render of the routes in src/data/ssrRoutes.js. Returns
- * Map(route -> { html, schema }) where html is the page component's own markup (React's createRoot()
- * replaces it on load) and schema is a JSON-LD @graph built only from that render plus site constants.
+ * Map(route -> { html, app, schema }): html is the page component's own markup (used for H1/FAQ
+ * extraction), app is the full <App /> markup (layout + header + page + footer) that ships inside
+ * #root so main.jsx can hydrateRoot() it with no visible flash or layout shift, and schema is a JSON-LD @graph built only from that render plus site constants.
  * A page that fails to render or has no H1 is skipped with a build warning and ships as the plain shell.
  */
 import { renderToString } from 'react-dom/server'
@@ -58,6 +59,10 @@ export async function ssrBodies(root, distAssets) {
     const { ssrRoutes } = await vite.ssrLoadModule('/src/data/ssrRoutes.js')
     const { getBreadcrumbLabel } = await vite.ssrLoadModule('/src/data/navigation.js')
     const C = await vite.ssrLoadModule('/src/utils/constants.js')
+    const App = (await vite.ssrLoadModule('/src/App.jsx')).default
+    /* Full-app render: must match what the client renders on its first pass (hydrateRoot). */
+    const renderApp = (route) => fixAssets(renderToString(React.createElement(MemoryRouter, { initialEntries: [route] }, React.createElement(App))), distAssets)
+    try { out.set('/', { app: renderApp('/') }) } catch (e) { console.warn(`ssr-bodies: home app render skipped: ${String(e?.message || e).slice(0, 300)}`) }
     const madurai = {
       '@type': 'ProfessionalService', '@id': `${HOST}/locations/madurai/#localbusiness`, name: 'Static Savvy Media', url: `${HOST}/locations/madurai/`, telephone: PHONE,
       address: { '@type': 'PostalAddress', streetAddress: '2nd Floor, 4/3, Srinivasa Perumal Koil St, Kamarajar Salai', addressLocality: 'Madurai', addressRegion: 'Tamil Nadu', postalCode: '625009', addressCountry: 'IN' },
@@ -120,7 +125,9 @@ export async function ssrBodies(root, distAssets) {
         nodes.push({ '@type': r.kind === 'article' ? 'Article' : 'BlogPosting', headline: decode(h1[1]), image: `${HOST}/og/blog/${slug}.jpg`, url: `${HOST}${r.route}`, mainEntityOfPage: `${HOST}${r.route}`, datePublished: r.published || '2026-10-24', dateModified: r.modified || r.published || '2026-10-24', author: { '@type': 'Person', name: 'Deepan Kanz', url: `${HOST}/about/deepan-kanz/` }, publisher: { '@id': ORG_ID } })
       }
       if (faqs.length) nodes.push({ '@type': 'FAQPage', mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) })
-      out.set(r.route, { html: `<main data-prerender="ssr">${html}</main>`, schema: { '@context': 'https://schema.org', '@graph': nodes }, h1: decode(h1[1]), faqCount: faqs.length })
+      let app = null
+      try { app = renderApp(r.route) } catch (e) { console.warn(`ssr-bodies: ${r.route} full-app render failed, shipping page body only: ${String(e?.message || e).slice(0, 200)}`) }
+      out.set(r.route, { html: `<main data-prerender="ssr">${html}</main>`, app, schema: { '@context': 'https://schema.org', '@graph': nodes }, h1: decode(h1[1]), faqCount: faqs.length })
      } catch (e) {
       console.warn(`ssr-bodies: skipped ${r.route} (ships as plain shell): ${String(e?.message || e).slice(0, 300)}`)
      }

@@ -166,7 +166,11 @@ const UNLISTED = (p) => p.startsWith('/p/')
 
 const vercel = {
   $schema: 'https://openapi.vercel.sh/vercel.json',
-  headers: [{ source: '/p/(.*)', headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }] }],
+  headers: [
+    /* Vite's content-hashed build files never change under the same name: cache them for a year. */
+    { source: '/assets/(.*)', headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }] },
+    { source: '/p/(.*)', headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }] },
+  ],
   redirects,
   // Only real routes are rewritten to the SPA shell. Static files (assets, sitemap.xml,
   // robots.txt, favicons) are served first by the filesystem and are never rewritten.

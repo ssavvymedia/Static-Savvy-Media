@@ -1,7 +1,6 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useSyncExternalStore } from 'react'
 import { createPortal } from 'react-dom'
 import { Link } from 'react-router-dom'
-import Button from './Button.jsx'
 import WhatsAppIcon from './WhatsAppIcon.jsx'
 import DesktopNav from '../navigation/DesktopNav.jsx'
 import MobileNav from '../navigation/MobileNav.jsx'
@@ -11,8 +10,14 @@ import { WHATSAPP_NUMBER } from '../../utils/constants.js'
 
 import logoImg from '../../assets/images/logo/SSMLOGO.webp'
 
+/* false during the server render and the hydration pass, true afterwards: the mobile-nav portal
+ * (into document.body) is not part of the prerendered HTML, so it mounts right after hydration. */
+const noopSubscribe = () => () => {}
+const useHydrated = () => useSyncExternalStore(noopSubscribe, () => true, () => false)
+
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false)
+  const hydrated = useHydrated()
   const whatsappHref = buildWhatsAppLink(WHATSAPP_NUMBER)
 
   useEffect(() => {
@@ -82,7 +87,7 @@ export default function Header() {
         </div>
       </div>
 
-      {createPortal(
+      {hydrated && createPortal(
         <MobileNav open={mobileOpen} onClose={() => setMobileOpen(false)} className={cx(mobileOpen && 'is-open')} />,
         document.body
       )}

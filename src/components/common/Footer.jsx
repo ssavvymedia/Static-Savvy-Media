@@ -170,7 +170,7 @@ export default function Footer() {
         </div>
 
         <div className="site-footer__bottom">
-          <span>&copy; {new Date().getFullYear()} {SITE_NAME}. All rights reserved.</span>
+          <span suppressHydrationWarning>&copy; {new Date().getFullYear()} {SITE_NAME}. All rights reserved.</span>
           <span>Madurai · Thoothukudi · Malaysia</span>
         </div>
       </div>

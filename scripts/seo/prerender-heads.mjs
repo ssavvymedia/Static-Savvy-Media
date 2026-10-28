@@ -24,6 +24,11 @@ const HOST = 'https://www.staticsavvymedia.com'
 const esc = (s) =>
   String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
 
+/* #root for a server-rendered route: the full app markup (hydrated) or, failing that, the page body. */
+const rootHtml = (r, route) => r.app
+  ? `<div id="root" data-ssr="${esc(route.endsWith('/') ? route : `${route}/`)}">${r.app}</div>`
+  : `<div id="root">${r.html}</div>`
+
 function setTag(html, re, replacement, label, route) {
   if (!re.test(html)) throw new Error(`prerender-heads: ${label} tag not found in dist/index.html (route ${route})`)
   return html.replace(re, replacement)
@@ -117,8 +122,9 @@ for (const route of routes) {
       html = html.replace(/<meta name="twitter:image" content="[^"]*"\s*\/?>/, `<meta name="twitter:image" content="${img}" />`)
     }
   }
-  /* Crawlable body + JSON-LD for key routes (src/data/prerenderBodies.js). React's createRoot()
-   * replaces #root on load; the runtime setSeo() overwrites the script with the same id. */
+  /* Crawlable body + JSON-LD for key routes (src/data/prerenderBodies.js). Where the full app was
+   * server-rendered, #root ships that markup with data-ssr="<route>" and main.jsx hydrates it in place
+   * (no flash/shift); otherwise createRoot() replaces it. setSeo() overwrites the script with the same id. */
   const body = prerenderBodies[route]
   if (body) {
     withBody++
@@ -129,7 +135,7 @@ for (const route of routes) {
   const ssrBody = !body && ssr.get(route.endsWith('/') ? route : `${route}/`)
   if (ssrBody) {
     withBody++
-    html = setTag(html, /<div id="root"><\/div>/, `<div id="root">${ssrBody.html}</div>`, 'root', route)
+    html = setTag(html, /<div id="root"><\/div>/, rootHtml(ssrBody, route), 'root', route)
     const ld = JSON.stringify(ssrBody.schema).replace(/</g, '\\u003c')
     html = html.replace('</head>', `  <script type="application/ld+json" id="json-ld-schema">${ld}</script>\n  </head>`)
   }
@@ -142,7 +148,8 @@ for (const route of routes) {
 }
 /* Homepage: dist/index.html itself (every other route already has its own file above). */
 if (prerenderBodies['/']) {
-  let home = setTag(shell, /<div id="root"><\/div>/, `<div id="root">${renderBodyHtml(prerenderBodies['/'])}</div>`, 'root', '/')
+  const homeApp = ssr.get('/')
+  let home = setTag(shell, /<div id="root"><\/div>/, homeApp?.app ? rootHtml(homeApp, '/') : `<div id="root">${renderBodyHtml(prerenderBodies['/'])}</div>`, 'root', '/')
   const ld = JSON.stringify(prerenderBodies['/'].schema).replace(/</g, '\\u003c')
   home = home.replace('</head>', `  <script type="application/ld+json" id="json-ld-schema">${ld}</script>\n  </head>`)
   writeFileSync(join(DIST, 'index.html'), home)
