@@ -1012,17 +1012,22 @@ export const seoConfig = {
     seo: {
       title: "Local SEO Pricing & Packages India | Static Savvy Media",
       description:
-        "Local SEO pricing plans tailored for single-location shops and multi-city businesses across India.",
+        "Local SEO pricing in India: GBP ₹6,000, GBP + Website SEO ₹12,000 and GBP + SEO + AEO + GEO ₹20,000 a month, no minimum contract.",
       canonical: `${BASE_URL}/pricing/india/local-seo`,
       focusKeyword: "local SEO pricing India",
       ogTitle: "Local SEO Pricing & Packages India | Static Savvy Media",
       ogDescription:
-        "Local SEO pricing plans tailored for single-location shops and multi-city businesses across India.",
+        "Local SEO pricing in India: GBP ₹6,000, GBP + Website SEO ₹12,000 and GBP + SEO + AEO + GEO ₹20,000 a month, no minimum contract.",
       ogImage: `${BASE_URL}/og/pricing-02localseo.jpg`,
       schema: {
         "@context": "https://schema.org",
-        "@type": "Offer",
+        "@type": "OfferCatalog",
         name: "Local SEO Packages India",
+        itemListElement: [
+          { "@type": "Offer", name: "Google Business Profile management (12 posts/month)", price: "6000", priceCurrency: "INR", priceSpecification: { "@type": "UnitPriceSpecification", price: "6000", priceCurrency: "INR", unitText: "MONTH" } },
+          { "@type": "Offer", name: "Google Business Profile + website SEO (4 blogs/month)", price: "12000", priceCurrency: "INR", priceSpecification: { "@type": "UnitPriceSpecification", price: "12000", priceCurrency: "INR", unitText: "MONTH" } },
+          { "@type": "Offer", name: "Google Business Profile + website SEO + AEO + GEO", price: "20000", priceCurrency: "INR", priceSpecification: { "@type": "UnitPriceSpecification", price: "20000", priceCurrency: "INR", unitText: "MONTH" } },
+        ],
       },
       robots: "index,follow",
     },
@@ -1235,17 +1240,22 @@ export const seoConfig = {
     seo: {
       title: "Local SEO Pricing Malaysia (MYR) | Static Savvy Media",
       description:
-        "Local SEO and Google Maps optimization packages for Malaysian retail stores, clinics, and local service providers.",
+        "Local SEO pricing in Malaysia: GBP MYR 800, GBP + Website SEO MYR 1,500 and GBP + SEO + AEO + GEO MYR 2,000 a month, no minimum contract.",
       canonical: `${BASE_URL}/pricing/malaysia/local-seo`,
       focusKeyword: "local SEO pricing Malaysia",
       ogTitle: "Local SEO Pricing Malaysia (MYR) | Static Savvy Media",
       ogDescription:
-        "Local SEO and Google Maps optimization packages for Malaysian businesses.",
+        "Local SEO pricing in Malaysia: GBP MYR 800, GBP + Website SEO MYR 1,500 and GBP + SEO + AEO + GEO MYR 2,000 a month, no minimum contract.",
       ogImage: `${BASE_URL}/og/pricing-02localseo.jpg`,
       schema: {
         "@context": "https://schema.org",
-        "@type": "Offer",
+        "@type": "OfferCatalog",
         name: "Local SEO Packages Malaysia",
+        itemListElement: [
+          { "@type": "Offer", name: "Google Business Profile management (12 posts/month)", price: "800", priceCurrency: "MYR", priceSpecification: { "@type": "UnitPriceSpecification", price: "800", priceCurrency: "MYR", unitText: "MONTH" } },
+          { "@type": "Offer", name: "Google Business Profile + website SEO (4 blogs/month)", price: "1500", priceCurrency: "MYR", priceSpecification: { "@type": "UnitPriceSpecification", price: "1500", priceCurrency: "MYR", unitText: "MONTH" } },
+          { "@type": "Offer", name: "Google Business Profile + website SEO + AEO + GEO", price: "2000", priceCurrency: "MYR", priceSpecification: { "@type": "UnitPriceSpecification", price: "2000", priceCurrency: "MYR", unitText: "MONTH" } },
+        ],
       },
       robots: "index,follow",
     },

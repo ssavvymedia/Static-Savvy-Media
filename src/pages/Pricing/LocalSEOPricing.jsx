@@ -17,42 +17,44 @@ const HERO_SUBTITLE = 'Prices shown are for guidance. Final pricing depends on p
 
 const PLANS = [
   {
-    name: 'Starter',
-    priceINR: '₹8,000',
-    priceMYR: 'MYR 450',
-    unit: 'per month',
-    features: [
-      'GBP optimization',
-      'NAP audit & correction',
-      '20 citation submissions',
-      'Review request template',
-      '1 location page content review',
-    ],
-  },
-  {
-    name: 'Growth',
-    priceINR: '₹15,000',
+    name: 'GBP',
+    priceINR: '₹6,000',
     priceMYR: 'MYR 800',
+    amountINR: 6000,
+    amountMYR: 800,
     unit: 'per month',
     features: [
-      'Everything in Starter +',
-      '50 citation submissions',
-      'GBP post schedule (4/month)',
-      'Review management',
-      '2 locally-targeted blog posts/month',
+      'Google Business Profile (GBP) optimisation & management',
+      '12 GBP posts per month',
+      'Better visibility on Google Maps & the local 3-pack',
+      'Monthly report',
     ],
   },
   {
-    name: 'Scale',
-    priceINR: '₹28,000',
+    name: 'GBP + Website SEO',
+    priceINR: '₹12,000',
     priceMYR: 'MYR 1,500',
+    amountINR: 12000,
+    amountMYR: 1500,
     unit: 'per month',
     features: [
-      'Everything in Growth +',
-      'Multi-location GBP management (up to 3 locations)',
-      '100+ citations',
-      'GBP Q&A management',
-      'Local schema on all pages',
+      'Everything in GBP +',
+      'On-page & technical SEO on your website',
+      '4 blog posts per month',
+      'Monthly GSC + GA4 report',
+    ],
+  },
+  {
+    name: 'GBP + SEO + AEO + GEO',
+    priceINR: '₹20,000',
+    priceMYR: 'MYR 2,000',
+    amountINR: 20000,
+    amountMYR: 2000,
+    unit: 'per month',
+    features: [
+      'Everything in GBP + Website SEO +',
+      'AEO: FAQs, answer-first content & schema markup',
+      'GEO: optimisation for ChatGPT, Gemini & Google AI Overviews',
     ],
   },
 ]
@@ -67,7 +69,7 @@ export default function LocalSEOPricing({ country: propCountry }) {
   const currencyCode = isMalaysia ? 'MYR' : 'INR'
 
   const pageTitle = `Local SEO Pricing ${countryName}, Google Maps & GBP Optimization Plans (${currencyCode}) | Static Savvy Media`
-  const pageDescription = `Transparent local SEO pricing for ${countryName} businesses in ${currencyCode}. GBP optimization, citation building, and review management packages.`
+  const pageDescription = isMalaysia ? 'Local SEO pricing in Malaysia: GBP MYR 800, GBP + Website SEO MYR 1,500 and GBP + SEO + AEO + GEO MYR 2,000 a month, no minimum contract.' : 'Local SEO pricing in India: GBP ₹6,000, GBP + Website SEO ₹12,000 and GBP + SEO + AEO + GEO ₹20,000 a month, no minimum contract.'
 
   const jsonLdRef = useRef([])
 
@@ -78,7 +80,25 @@ export default function LocalSEOPricing({ country: propCountry }) {
       { name: `${countryName} Pricing`, item: `${SITE_URL}/pricing/${activeCountry}/` },
       { name: 'Local SEO', item: `${SITE_URL}/pricing/${activeCountry}/local-seo/` },
     ]})
-    const scripts = [breadcrumbs].map((data) => {
+    const offerCatalog = {
+      '@context': 'https://schema.org',
+      '@type': 'OfferCatalog',
+      name: `Local SEO Packages ${countryName}`,
+      url: `${SITE_URL}/pricing/${activeCountry}/local-seo/`,
+      itemListElement: PLANS.map((plan) => {
+        const price = String(isMalaysia ? plan.amountMYR : plan.amountINR)
+        return {
+          '@type': 'Offer',
+          name: `${plan.name} local SEO plan`,
+          price,
+          priceCurrency: currencyCode,
+          url: `${SITE_URL}/pricing/${activeCountry}/local-seo/`,
+          priceSpecification: { '@type': 'UnitPriceSpecification', price, priceCurrency: currencyCode, unitText: 'MONTH' },
+          itemOffered: { '@type': 'Service', name: plan.name, serviceType: 'Local SEO' },
+        }
+      }),
+    }
+    const scripts = [breadcrumbs, offerCatalog].map((data) => {
       const script = document.createElement('script')
       script.type = 'application/ld+json'
       script.text = JSON.stringify(data)
@@ -87,7 +107,7 @@ export default function LocalSEOPricing({ country: propCountry }) {
     })
     jsonLdRef.current = scripts
     return () => { jsonLdRef.current.forEach((s) => s.remove()); jsonLdRef.current = [] }
-  }, [activeCountry, countryName, pageTitle, pageDescription])
+  }, [activeCountry, countryName, currencyCode, isMalaysia, pageTitle, pageDescription])
 
   const whatsappHref = buildWhatsAppLink(WHATSAPP_NUMBER, WHATSAPP_MESSAGE)
 
