@@ -39,7 +39,6 @@ const read = (rel) => readFileSync(join(ROOT, rel), 'utf8')
 /* Router routes that duplicate another page (same component, canonical already points to the
  * target). Served as permanent redirects instead of second copies. */
 const ALIASES = {
-  '/pricing': '/pricing/india',
   '/pricing/india/social-media-marketing': '/pricing/india/social-media',
   '/pricing/india/website-design-development': '/pricing/india/website',
   '/pricing/malaysia/social-media-marketing': '/pricing/malaysia/social-media',
@@ -59,6 +58,7 @@ const SITEMAP_RULES = [
   [/^\/locations/, 'weekly', '0.8'],
   [/^\/industries$/, 'weekly', '0.7'],
   [/^\/industries\//, 'weekly', '0.6'],
+  [/^\/pricing$/, 'weekly', '0.8'],
   [/^\/pricing\/india$/, 'weekly', '0.8'],
   [/^\/pricing\/india\//, 'weekly', '0.7'],
   [/^\/pricing\/malaysia$/, 'weekly', '0.7'],

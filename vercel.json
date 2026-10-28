@@ -2,11 +2,6 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "redirects": [
     {
-      "source": "/pricing{/}?",
-      "destination": "/pricing/india/",
-      "statusCode": 301
-    },
-    {
       "source": "/pricing/india/social-media-marketing{/}?",
       "destination": "/pricing/india/social-media/",
       "statusCode": 301
@@ -1657,6 +1652,11 @@
       "statusCode": 308
     },
     {
+      "source": "/pricing",
+      "destination": "/pricing/",
+      "statusCode": 308
+    },
+    {
       "source": "/pricing/india",
       "destination": "/pricing/india/",
       "statusCode": 308
@@ -2174,6 +2174,10 @@
     },
     {
       "source": "/industries/real-estate-builders/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/pricing/",
       "destination": "/index.html"
     },
     {

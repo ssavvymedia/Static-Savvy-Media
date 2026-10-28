@@ -22,8 +22,24 @@
     padding-inline: 1.25rem;
   }
 
+  /* 10 top-level links (Pricing added): tighten spacing so the bar fits down to 1025px. */
+  .desktop-nav__list {
+    gap: 0.1rem;
+  }
+
+  .desktop-nav__link {
+    padding: 0.5rem 0.5rem;
+  }
+
   .grid--4 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* ---- Narrow laptops (1025-1150px): icon-only header WhatsApp so the 10-link nav fits ---- */
+@media (min-width: 1025px) and (max-width: 1150px) {
+  .site-header__whatsapp-content {
+    display: none;
   }
 }
 

@@ -961,6 +961,21 @@ export const seoConfig = {
   },
 
   // Pricing Pages
+  "/pricing": {
+    title: "Digital Marketing Pricing: India, Malaysia, Dubai & Singapore | Static Savvy Media",
+    slug: "pricing",
+    seo: {
+      title: "Digital Marketing Pricing: India, Malaysia, Dubai & Singapore | Static Savvy Media",
+      description:
+        "SEO & Google Business Profile, website, social media and lead generation prices in INR, MYR, AED and SGD. SEO from ₹6,000, RM 800, AED 800 or SGD 500 a month.",
+      canonical: `${BASE_URL}/pricing/`,
+      ogImage: `${BASE_URL}/og/pricing-pricingmain.jpg`,
+      ogTitle: "Digital Marketing Pricing: India, Malaysia, Dubai & Singapore",
+      ogDescription:
+        "Monthly SEO, social media and lead generation plans and one-time website prices for India, Malaysia, Dubai and Singapore.",
+      robots: "index,follow",
+    },
+  },
   "/pricing/india": {
     title: "Digital Marketing Packages & Pricing India | Static Savvy Media",
     slug: "pricing/india",

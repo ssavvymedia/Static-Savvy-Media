@@ -97,6 +97,7 @@ export async function ssrBodies(root, distAssets) {
       const nodes = r.kind === 'article' ? [org, crumbList]
         : r.kind === 'page' ? [
           { '@type': r.pageType || 'WebPage', '@id': `${HOST}${r.route}#webpage`, name: decode(h1[1]), url: `${HOST}${r.route}`, isPartOf: { '@type': 'WebSite', '@id': `${HOST}/#website`, url: `${HOST}/`, name: 'Static Savvy Media' }, about: { '@id': ORG_ID }, publisher: { '@id': ORG_ID } },
+          ...(r.extraNodes || []),
           ...(r.office && biz ? [biz] : []),
           org,
           crumbList,

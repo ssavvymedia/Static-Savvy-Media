@@ -28,6 +28,7 @@ export const NAV_LINKS = [
   { label: "Locations", path: "/locations/", menu: locations },
   { label: "Industries", path: "/industries/", menu: industries },
   { label: "Case Studies", path: "/case-studies/" },
+  { label: "Pricing", path: "/pricing/" },
   { label: "About", path: "/about/" },
   { label: "Blog", path: "/blog/" },
   { label: "FAQ", path: "/faq/" },
@@ -41,6 +42,7 @@ export const FOOTER_LINKS = {
   company: [
     { label: "About", path: "/about/" },
     { label: "Case Studies", path: "/case-studies/" },
+    { label: "Pricing", path: "/pricing/" },
     { label: "Blog", path: "/blog/" },
     { label: "Contact", path: "/contact/" },
   ],

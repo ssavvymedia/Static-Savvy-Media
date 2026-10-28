@@ -1,5 +1,5 @@
 import StaticBlogPost from "../pages/Blog/StaticBlogPost.jsx";
-import { Routes, Route, Navigate } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import LandingLayout from '../layouts/LandingLayout.jsx'
 import ContentLayout from '../layouts/ContentLayout.jsx'
 import BlogLayout from '../layouts/BlogLayout.jsx'
@@ -57,6 +57,7 @@ import SMEsMalaysia from '../pages/Industries/SMEsMalaysia.jsx'
 import RealEstateBuilders from '../pages/Industries/RealEstateBuilders.jsx'
 
 import Pricing from '../pages/Pricing/Pricing.jsx'
+import PricingHub from '../pages/Pricing/PricingHub.jsx'
 import SEOPricing from '../pages/Pricing/SEOPricing.jsx'
 import LocalSEOPricing from '../pages/Pricing/LocalSEOPricing.jsx'
 import GoogleAdsPricing from '../pages/Pricing/GoogleAdsPricing.jsx'
@@ -221,11 +222,8 @@ export default function AppRoutes() {
         />
 
         {/* ---- Pricing Routes ---- */}
-        {/* Direct loads of /pricing/ get a server-side 301 (vercel.json); this covers in-app links. */}
-        <Route
-          path="/pricing"
-          element={<Navigate to="/pricing/india/" replace />}
-        />
+        {/* Master pricing hub: all four countries, links to the country pricing pages. */}
+        <Route path="/pricing" element={<PricingHub />} />
 
         {/* India Pricing */}
         <Route path="/pricing/india" element={<Pricing country="india" />} />
