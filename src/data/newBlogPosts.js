@@ -373,6 +373,7 @@ export const newBlogPosts = [
       { q: 'Does Static Savvy Media offer SEO in Selangor?', a: 'Yes. Our Malaysia team in Rawang serves Selangor and Kuala Lumpur. Call +60 12-453 7030.' },
     ],
     related: [
+      { to: '/locations/selangor/', label: 'Digital marketing agency in Selangor' },
       { to: '/services/seo/malaysia/', label: 'SEO services in Malaysia' },
       { to: '/services/seo/kuala-lumpur/', label: 'SEO services in Kuala Lumpur' },
       { to: '/locations/malaysia/', label: 'Static Savvy Media Malaysia' },
@@ -469,6 +470,7 @@ export const newBlogPosts = [
       { q: 'How do I contact Static Savvy Media?', a: 'WhatsApp +91 99440 40345 or use the contact form. Our head office is in Madurai.' },
     ],
     related: [
+      { to: '/locations/chennai/', label: 'Digital marketing agency for Chennai businesses' },
       { to: '/locations/tamil-nadu/', label: 'Digital marketing across Tamil Nadu' },
       { to: '/locations/madurai/', label: 'Madurai head office' },
       { to: '/services/seo/madurai/', label: 'SEO services from Madurai' },
@@ -497,6 +499,7 @@ export const newBlogPosts = [
       { q: 'Does Static Savvy Media serve Coimbatore?', a: 'Yes. Our head office is in Madurai and we serve businesses across Tamil Nadu. WhatsApp +91 99440 40345.' },
     ],
     related: [
+      { to: '/locations/coimbatore/', label: 'Digital marketing for Coimbatore businesses' },
       { to: '/locations/tamil-nadu/', label: 'Digital marketing across Tamil Nadu' },
       { to: '/services/seo/', label: 'SEO services' },
       { to: '/locations/madurai/', label: 'Madurai head office' },
@@ -525,6 +528,7 @@ export const newBlogPosts = [
       { q: 'Does Static Savvy Media work with Trichy businesses?', a: 'Yes. We serve Trichy and the rest of Tamil Nadu from our Madurai head office. WhatsApp +91 99440 40345.' },
     ],
     related: [
+      { to: '/locations/trichy/', label: 'Digital marketing agency for Trichy businesses' },
       { to: '/locations/tamil-nadu/', label: 'Digital marketing across Tamil Nadu' },
       { to: '/industries/', label: 'Industries we serve' },
       { to: '/locations/madurai/', label: 'Madurai head office' },
@@ -553,6 +557,7 @@ export const newBlogPosts = [
       { q: 'Does Static Savvy Media serve Tirunelveli?', a: 'Yes. We serve Tirunelveli and the rest of Tamil Nadu from our Madurai head office. WhatsApp +91 99440 40345.' },
     ],
     related: [
+      { to: '/locations/tirunelveli/', label: 'Digital marketing for Tirunelveli businesses' },
       { to: '/locations/tamil-nadu/', label: 'Digital marketing across Tamil Nadu' },
       { to: '/locations/thoothukudi/', label: 'Digital marketing in Thoothukudi' },
       { to: '/locations/madurai/', label: 'Madurai head office' },

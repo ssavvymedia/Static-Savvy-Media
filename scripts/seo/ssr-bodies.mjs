@@ -89,7 +89,7 @@ export async function ssrBodies(root, distAssets) {
       /* Unmapped slugs (blog posts etc.) would show the raw slug: use the page H1 for the last crumb. */
       const crumbName = (s, i) => { const l = getBreadcrumbLabel(s); return l === s && i === segs.length - 1 ? decode(h1[1]) : l }
       const crumbs = [{ name: 'Home', path: '/' }, ...segs.map((s, i) => ({ name: crumbName(s, i), path: `/${segs.slice(0, i + 1).join('/')}/` }))]
-      const biz = r.office === 'madurai' ? madurai : malaysia
+      const biz = r.office === 'madurai' ? madurai : r.office === 'org' ? null : malaysia
       const isAbout = r.kind === 'about'
       const crumbList = { '@type': 'BreadcrumbList', itemListElement: crumbs.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: `${HOST}${c.path}` })) }
       const org = { '@type': 'Organization', '@id': ORG_ID, name: 'Static Savvy Media', url: `${HOST}/`, telephone: PHONE, email: EMAIL, sameAs: ORG_SAME_AS }
@@ -97,7 +97,7 @@ export async function ssrBodies(root, distAssets) {
       const nodes = r.kind === 'article' ? [org, crumbList]
         : r.kind === 'page' ? [
           { '@type': r.pageType || 'WebPage', '@id': `${HOST}${r.route}#webpage`, name: decode(h1[1]), url: `${HOST}${r.route}`, isPartOf: { '@type': 'WebSite', '@id': `${HOST}/#website`, url: `${HOST}/`, name: 'Static Savvy Media' }, about: { '@id': ORG_ID }, publisher: { '@id': ORG_ID } },
-          ...(r.office ? [biz] : []),
+          ...(r.office && biz ? [biz] : []),
           org,
           crumbList,
         ]
@@ -109,8 +109,8 @@ export async function ssrBodies(root, distAssets) {
         malaysia,
         { '@type': 'BreadcrumbList', itemListElement: crumbs.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: `${HOST}${c.path}` })) },
       ] : [
-        { '@type': 'Service', name: r.service || decode(h1[1]), serviceType: r.serviceType, provider: { '@id': biz['@id'] }, areaServed: r.area, url: `${HOST}${r.route}`, ...(r.offers ? { offers: r.offers.map(([name, price]) => ({ '@type': 'Offer', name, price: String(price), priceCurrency: r.currency || 'INR', url: `${HOST}${r.route}`, priceSpecification: { '@type': 'UnitPriceSpecification', price: String(price), priceCurrency: r.currency || 'INR', unitText: 'MONTH' } })) } : {}) },
-        biz,
+        { '@type': 'Service', name: r.service || decode(h1[1]), serviceType: r.serviceType, provider: { '@id': biz ? biz['@id'] : ORG_ID }, areaServed: r.area, url: `${HOST}${r.route}`, ...(r.offers ? { offers: r.offers.map(([name, price]) => ({ '@type': 'Offer', name, price: String(price), priceCurrency: r.currency || 'INR', url: `${HOST}${r.route}`, priceSpecification: { '@type': 'UnitPriceSpecification', price: String(price), priceCurrency: r.currency || 'INR', unitText: 'MONTH' } })) } : {}) },
+        ...(biz ? [biz] : []),
         org,
         { '@type': 'BreadcrumbList', itemListElement: crumbs.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: `${HOST}${c.path}` })) },
       ]

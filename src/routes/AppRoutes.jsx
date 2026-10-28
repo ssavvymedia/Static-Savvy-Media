@@ -41,6 +41,7 @@ import Madurai from '../pages/Locations/Madurai.jsx'
 import Thoothukudi from '../pages/Locations/Thoothukudi.jsx'
 import Malaysia from '../pages/Locations/Malaysia.jsx'
 import KualaLumpur from '../pages/Locations/KualaLumpur.jsx'
+import CityLanding from '../pages/Locations/CityLanding.jsx'
 
 import Industries from '../pages/Industries/Industries.jsx'
 import RetailEcommerce from '../pages/Industries/RetailEcommerce.jsx'
@@ -174,6 +175,15 @@ export default function AppRoutes() {
         <Route path="/locations/malaysia" element={<Malaysia />} />
         <Route path="/locations/kuala-lumpur" element={<KualaLumpur />} />
         <Route path="/locations/tamil-nadu" element={<TamilNadu />} />
+        <Route path="/locations/chennai" element={<CityLanding slug="chennai" />} />
+        <Route path="/locations/coimbatore" element={<CityLanding slug="coimbatore" />} />
+        <Route path="/locations/trichy" element={<CityLanding slug="trichy" />} />
+        <Route path="/locations/salem" element={<CityLanding slug="salem" />} />
+        <Route path="/locations/tirunelveli" element={<CityLanding slug="tirunelveli" />} />
+        <Route path="/locations/tiruppur" element={<CityLanding slug="tiruppur" />} />
+        <Route path="/locations/selangor" element={<CityLanding slug="selangor" />} />
+        <Route path="/locations/singapore" element={<CityLanding slug="singapore" />} />
+        <Route path="/locations/dubai" element={<CityLanding slug="dubai" />} />
         <Route path="/services/advertising-agency/madurai" element={<AdvertisingAgency_Madurai />} />
 
         <Route path="/industries" element={<Industries />} />

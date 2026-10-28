@@ -1,4 +1,5 @@
 import { newBlogPosts } from "./newBlogPosts.js";
+import { cityPages } from "./cityPages.js";
 import { sanityPostOverrides } from "./blogOverrides.js";
 import {
   SITE_NAME,
@@ -17,6 +18,7 @@ const BASE_URL = SITE_URL;
  * Maps every single public route to its unique SEO metadata object.
  */
 export const seoConfig = {
+  ...Object.fromEntries(cityPages.map((c) => [`/locations/${c.slug}`, { title: c.title, slug: `locations/${c.slug}`, seo: { title: c.title, description: c.description, canonical: `${BASE_URL}/locations/${c.slug}/`, ogTitle: c.title, ogDescription: c.description, robots: "index,follow" } }])),
   ...Object.fromEntries(Object.entries(sanityPostOverrides).map(([slug, o]) => [`/blog/${slug}`, { title: o.seoTitle, slug: `blog/${slug}`, seo: { title: o.seoTitle, description: o.seoDescription, canonical: `${BASE_URL}/blog/${slug}/`, ogTitle: o.seoTitle, ogDescription: o.seoDescription, robots: "index,follow" } }])),
   ...Object.fromEntries(newBlogPosts.map((p) => [`/blog/${p.slug}`, { title: p.title, slug: `blog/${p.slug}`, seo: { title: p.title, description: p.description, canonical: `${BASE_URL}/blog/${p.slug}/`, ogTitle: p.title, ogDescription: p.description, ogImage: `${BASE_URL}/og/blog/${p.slug}.jpg`, robots: "index,follow" } }])),
   "/": {

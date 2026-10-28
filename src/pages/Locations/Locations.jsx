@@ -85,6 +85,96 @@ const LOCATIONS = [
     path: '/locations/kuala-lumpur/',
     icon: 'malaysia',
   },
+  {
+    number: '05',
+    name: 'Chennai',
+    badge: 'Remote · Madurai HQ',
+    description:
+      'Locality-level SEO, Google Business Profile and tightly geo-targeted ads for Chennai clinics, manufacturers, IT firms and retailers, run from our Madurai head office.',
+    services: ['Locality SEO & GBP', 'Google Ads', 'GEO/AEO'],
+    path: '/locations/chennai/',
+    icon: 'pin',
+  },
+  {
+    number: '06',
+    name: 'Coimbatore',
+    badge: 'Remote · Madurai HQ',
+    description:
+      'Product-catalogue websites, SEO, LinkedIn and Google Ads for Coimbatore pump, motor, textile-machinery and engineering manufacturers, plus clinics and retail.',
+    services: ['B2B SEO & websites', 'LinkedIn for buyers', 'Product photography'],
+    path: '/locations/coimbatore/',
+    icon: 'pin',
+  },
+  {
+    number: '07',
+    name: 'Trichy',
+    badge: 'Near Madurai HQ',
+    description:
+      'Local SEO and ads that reach patients, students and pilgrims coming to Trichy from Karur, Pudukkottai, Perambalur, Ariyalur and Thanjavur.',
+    services: ['Local SEO & GBP', 'Admissions campaigns', 'Hospital marketing'],
+    path: '/locations/trichy/',
+    icon: 'pin',
+  },
+  {
+    number: '08',
+    name: 'Salem',
+    badge: 'Remote · Madurai HQ',
+    description:
+      'Google Maps, websites and product pages for Salem sago and food units, steel and engineering suppliers, silk weavers, clinics and Yercaud tourism.',
+    services: ['GBP clean-up', 'Product pages', 'WhatsApp catalogues'],
+    path: '/locations/salem/',
+    icon: 'pin',
+  },
+  {
+    number: '09',
+    name: 'Tirunelveli',
+    badge: 'Near Thoothukudi office',
+    description:
+      'Online ordering for Tirunelveli sweets and food brands, admissions marketing for Palayamkottai institutions, and local SEO for retailers.',
+    services: ['E-commerce & GBP', 'Festival campaigns', 'Education marketing'],
+    path: '/locations/tirunelveli/',
+    icon: 'pin',
+  },
+  {
+    number: '10',
+    name: 'Tiruppur',
+    badge: 'Remote · Madurai HQ',
+    description:
+      'Capability websites, SEO and LinkedIn for Tiruppur knitwear exporters, private-label manufacturers and job-work units.',
+    services: ['B2B export websites', 'LinkedIn & SEO', 'Factory photography'],
+    path: '/locations/tiruppur/',
+    icon: 'pin',
+  },
+  {
+    number: '11',
+    name: 'Selangor',
+    badge: 'Rawang office',
+    description:
+      'Petaling Jaya, Shah Alam, Subang Jaya and Klang, served from our office in Rawang, Selangor. Prices in MYR.',
+    services: ['SEO & GBP', 'Google Ads', 'Bahasa Malaysia content'],
+    path: '/locations/selangor/',
+    icon: 'malaysia',
+  },
+  {
+    number: '12',
+    name: 'Singapore',
+    badge: 'Remote · MY & IN',
+    description:
+      'Google Business Profile, SEO and AI-search optimisation for Singapore SMEs, run remotely on Singapore time. Prices in SGD.',
+    services: ['GBP & local SEO', 'GEO/AEO', 'Answer-first pages'],
+    path: '/locations/singapore/',
+    icon: 'malaysia',
+  },
+  {
+    number: '13',
+    name: 'Dubai',
+    badge: 'Remote · India',
+    description:
+      'Map-pack, SEO and AI-search work for Dubai SMEs, run remotely from India, 1.5 hours ahead of Dubai. Prices in AED.',
+    services: ['GBP & local SEO', 'GEO/AEO', 'Google Ads'],
+    path: '/locations/dubai/',
+    icon: 'malaysia',
+  },
 ]
 
 const FAQS = [
@@ -130,6 +220,12 @@ const ICONS = {
       <circle cx="12" cy="12" r="10" />
       <path d="M2 12h20" />
       <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+    </>
+  ),
+  pin: (
+    <>
+      <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z" />
+      <circle cx="12" cy="10" r="3" />
     </>
   ),
   check: <path d="M20 6L9 17l-5-5" />,

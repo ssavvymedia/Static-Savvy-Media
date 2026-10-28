@@ -1,8 +1,14 @@
+import { useLocation } from 'react-router-dom'
 import { buildWhatsAppLink } from '../../utils/helpers.js'
-import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE } from '../../utils/constants.js'
+import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, MALAYSIA_OFFICE } from '../../utils/constants.js'
+
+// Routes whose floating button opens the Malaysia (+60) WhatsApp line instead of the Indian one.
+const MY_WHATSAPP_ROUTES = ['/locations/selangor']
 
 export default function WhatsAppButton() {
-  const href = buildWhatsAppLink(WHATSAPP_NUMBER, WHATSAPP_MESSAGE)
+  const { pathname } = useLocation()
+  const isMy = MY_WHATSAPP_ROUTES.some((r) => pathname === r || pathname.startsWith(`${r}/`))
+  const href = buildWhatsAppLink(isMy ? MALAYSIA_OFFICE.phoneE164 : WHATSAPP_NUMBER, WHATSAPP_MESSAGE)
 
   return (
     <a

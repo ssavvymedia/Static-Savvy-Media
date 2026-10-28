@@ -1,3 +1,5 @@
+import { cityPages, PRICE_TIERS } from './cityPages.js'
+
 /**
  * Routes whose real page component is server-rendered at build time (scripts/seo/prerender-heads.mjs)
  * so the raw HTML carries the same H1, body copy, FAQs and internal links visitors see, plus a
@@ -100,4 +102,17 @@ export const ssrRoutes = [
   {'route': '/blog/seo-agency-madurai-complete-guide/', 'module': '/src/pages/Blog/SEO.jsx', 'kind': 'article', 'office': 'madurai', 'published': '2026-08-15'},
   {'route': '/blog/digital-marketing-malaysia-sme-grant-guide/', 'module': '/src/pages/Blog/MalaysiaGrantGuide.jsx', 'kind': 'article', 'office': 'malaysia', 'published': '2026-08-20'},
   {'route': '/blog/local-seo-thoothukudi-businesses/', 'module': '/src/pages/Blog/LocalSEOThoothukudi.jsx', 'kind': 'article', 'office': 'madurai', 'published': '2026-08-25'},
+  /* City landing pages (src/data/cityPages.js). office 'org' = provider is the Organization, so no
+   * LocalBusiness node with an address in another city is emitted; Selangor uses the real Rawang office. */
+  ...cityPages.map((c) => ({
+    route: `/locations/${c.slug}/`,
+    module: '/src/pages/Locations/CityLanding.jsx',
+    props: { slug: c.slug },
+    office: c.office || 'org',
+    service: `Digital marketing in ${c.name}`,
+    serviceType: 'Digital marketing',
+    area: { '@type': c.areaType, name: c.name, ...(c.containedIn ? { containedInPlace: { '@type': c.containedIn === 'Tamil Nadu' ? 'State' : 'Country', name: c.containedIn } } : {}) },
+    currency: PRICE_TIERS[c.region].currency,
+    offers: PRICE_TIERS[c.region].plans.map((p) => [p.name, p.price]),
+  })),
 ]

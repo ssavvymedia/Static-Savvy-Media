@@ -2,17 +2,6 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "redirects": [
     {
-      "source": "/(.*)",
-      "has": [
-        {
-          "type": "host",
-          "value": "madurai.staticsavvymedia.com"
-        }
-      ],
-      "destination": "https://www.staticsavvymedia.com/locations/madurai/",
-      "statusCode": 301
-    },
-    {
       "source": "/pricing{/}?",
       "destination": "/pricing/india/",
       "statusCode": 301
@@ -1573,6 +1562,51 @@
       "statusCode": 308
     },
     {
+      "source": "/locations/chennai",
+      "destination": "/locations/chennai/",
+      "statusCode": 308
+    },
+    {
+      "source": "/locations/coimbatore",
+      "destination": "/locations/coimbatore/",
+      "statusCode": 308
+    },
+    {
+      "source": "/locations/trichy",
+      "destination": "/locations/trichy/",
+      "statusCode": 308
+    },
+    {
+      "source": "/locations/salem",
+      "destination": "/locations/salem/",
+      "statusCode": 308
+    },
+    {
+      "source": "/locations/tirunelveli",
+      "destination": "/locations/tirunelveli/",
+      "statusCode": 308
+    },
+    {
+      "source": "/locations/tiruppur",
+      "destination": "/locations/tiruppur/",
+      "statusCode": 308
+    },
+    {
+      "source": "/locations/selangor",
+      "destination": "/locations/selangor/",
+      "statusCode": 308
+    },
+    {
+      "source": "/locations/singapore",
+      "destination": "/locations/singapore/",
+      "statusCode": 308
+    },
+    {
+      "source": "/locations/dubai",
+      "destination": "/locations/dubai/",
+      "statusCode": 308
+    },
+    {
       "source": "/services/advertising-agency/madurai",
       "destination": "/services/advertising-agency/madurai/",
       "statusCode": 308
@@ -2064,6 +2098,42 @@
     },
     {
       "source": "/locations/tamil-nadu/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/locations/chennai/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/locations/coimbatore/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/locations/trichy/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/locations/salem/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/locations/tirunelveli/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/locations/tiruppur/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/locations/selangor/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/locations/singapore/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/locations/dubai/",
       "destination": "/index.html"
     },
     {
