@@ -1,7 +1,7 @@
 import { PRICE_TIERS } from './cityPages.js'
 
 /**
- * Master pricing (/pricing/): four services x four countries. Prices supplied by the owner on
+ * Country pricing (unlisted, noindex pages under /p/): four services x four countries. Prices supplied by the owner on
  * 28 Oct 2026. Plain data only (also read by the build-time prerender for Offer schema).
  * SEO tier features reuse PRICE_TIERS (cityPages.js) so the city pages and this page never disagree.
  */
@@ -11,6 +11,14 @@ export const PRICING_COUNTRIES = [
   { key: 'dubai', label: 'Dubai', flag: '🇦🇪', currency: 'AED', symbol: 'AED ', iso: 'AE', countryName: 'United Arab Emirates', whatsapp: '+91 99440 40345' },
   { key: 'singapore', label: 'Singapore', flag: '🇸🇬', currency: 'SGD', symbol: 'SGD ', iso: 'SG', countryName: 'Singapore', whatsapp: '+91 99440 40345' },
 ]
+
+/** Unlisted per-country pricing pages: noindex,nofollow, never linked, not in the sitemap or llms.txt. */
+export const UNLISTED_PRICING_PATHS = {
+  india: '/p/india-9xajei/',
+  malaysia: '/p/malaysia-2josdx/',
+  dubai: '/p/dubai-a8aokh/',
+  singapore: '/p/singapore-xseszo/',
+}
 
 export function formatPrice(country, amount) {
   const c = PRICING_COUNTRIES.find((x) => x.key === country)
@@ -71,27 +79,25 @@ export function plansFor(service, country) {
   return list.map((p, i) => ({ ...p, featured: i === 1 }))
 }
 
-export const PRICING_FAQS = [
-  { question: 'Are these prices monthly?', answer: 'SEO & Google Business Profile, social media marketing and lead generation are monthly fees. Website development is a one-time fee.' },
-  { question: 'Is ad spend included in social media and lead generation plans?', answer: 'No. Ad spend is extra for social media marketing and lead generation. The plan price covers our management work; the budget you spend on ads is separate.' },
-  { question: 'What is the difference between the three SEO plans?', answer: 'The first plan covers your Google Business Profile only (12 posts a month; 8 a month in Dubai). The second adds website SEO with 4 blog posts a month. The third adds Answer Engine Optimisation (AEO) and Generative Engine Optimisation (GEO) for AI search tools such as ChatGPT, Perplexity and Google AI Overviews.' },
-  { question: 'Which currency will I be billed in?', answer: 'Prices are listed in the local currency for each market: Indian rupees (₹) for India, Malaysian ringgit (RM) for Malaysia, UAE dirham (AED) for Dubai and Singapore dollars (SGD) for Singapore.' },
-  { question: 'How much does a custom website cost?', answer: 'Custom websites are quoted per project. Message us on WhatsApp or send an enquiry with what you need and we will scope it and send a written quote.' },
-  { question: 'Do you have offices in Dubai and Singapore?', answer: 'No. Our offices are in Madurai and Thoothukudi (India) and Rawang (Malaysia). We serve Dubai and Singapore businesses remotely, with video calls and WhatsApp.' },
-  { question: 'How do I get started?', answer: 'Message us on WhatsApp or send the enquiry form with your business and the plan you are interested in. We will review your current setup and confirm the right plan before you commit.' },
-]
+const CURRENCY_NAMES = { india: 'Indian rupees (₹)', malaysia: 'Malaysian ringgit (RM)', dubai: 'UAE dirham (AED)', singapore: 'Singapore dollars (SGD)' }
 
-/** Existing detailed pricing pages, linked from the hub. */
-export const COUNTRY_PRICING_LINKS = {
-  india: { hub: '/pricing/india/', pages: [['SEO', '/pricing/india/seo/'], ['Local SEO', '/pricing/india/local-seo/'], ['Google Ads', '/pricing/india/google-ads/'], ['Social media', '/pricing/india/social-media/'], ['Website', '/pricing/india/website/'], ['AI services', '/pricing/india/ai-services/'], ['Photography & video', '/pricing/india/photography-video/']] },
-  malaysia: { hub: '/pricing/malaysia/', pages: [['SEO', '/pricing/malaysia/seo/'], ['Local SEO', '/pricing/malaysia/local-seo/'], ['Google Ads', '/pricing/malaysia/google-ads/'], ['Social media', '/pricing/malaysia/social-media/'], ['Website', '/pricing/malaysia/website/'], ['AI services', '/pricing/malaysia/ai-services/'], ['Photography & video', '/pricing/malaysia/photography-video/']] },
-  dubai: { hub: '/locations/dubai/', pages: [] },
-  singapore: { hub: '/locations/singapore/', pages: [] },
+/** FAQs for one country's page (no mention of the other countries' pages). */
+export function pricingFaqsFor(country) {
+  const posts = country === 'dubai' ? 8 : 12
+  return [
+    { question: 'Are these prices monthly?', answer: 'SEO & Google Business Profile, social media marketing and lead generation are monthly fees. Website development is a one-time fee.' },
+    { question: 'Is ad spend included in social media and lead generation plans?', answer: 'No. Ad spend is extra for social media marketing and lead generation. The plan price covers our management work; the budget you spend on ads is separate.' },
+    { question: 'What is the difference between the three SEO plans?', answer: `The first plan covers your Google Business Profile only (${posts} posts a month). The second adds website SEO with 4 blog posts a month. The third adds Answer Engine Optimisation (AEO) and Generative Engine Optimisation (GEO) for AI search tools such as ChatGPT, Perplexity and Google AI Overviews.` },
+    { question: 'Which currency are these prices in?', answer: `All prices on this page are in ${CURRENCY_NAMES[country]}.` },
+    { question: 'How much does a custom website cost?', answer: 'Custom websites are quoted per project. Message us on WhatsApp or send an enquiry with what you need and we will scope it and send a written quote.' },
+    { question: 'How do I get started?', answer: 'Message us on WhatsApp or send the enquiry form with your business and the plan you are interested in. We will review your current setup and confirm the right plan before you commit.' },
+  ]
 }
 
-/** Service nodes with one Offer per priced tier per country (used by the prerender and the client). */
-export function pricingServiceNodes(host, orgId) {
-  const url = `${host}/pricing/`
+/** Service nodes with one Offer per priced tier for one country. */
+export function pricingServiceNodes(host, orgId, countryKey) {
+  const c = PRICING_COUNTRIES.find((x) => x.key === countryKey)
+  const url = `${host}${UNLISTED_PRICING_PATHS[countryKey]}`
   return PRICING_SERVICES.map((s) => ({
     '@type': 'Service',
     '@id': `${url}#${s.key}`,
@@ -99,10 +105,10 @@ export function pricingServiceNodes(host, orgId) {
     serviceType: s.serviceType,
     provider: { '@id': orgId },
     url,
-    areaServed: PRICING_COUNTRIES.map((c) => ({ '@type': 'Country', name: c.countryName })),
-    offers: PRICING_COUNTRIES.flatMap((c) => plansFor(s, c.key).filter((p) => p.price != null).map((p) => ({
+    areaServed: { '@type': 'Country', name: c.countryName },
+    offers: plansFor(s, c.key).filter((p) => p.price != null).map((p) => ({
       '@type': 'Offer',
-      name: `${s.title}: ${p.name} (${c.label})`,
+      name: `${s.title}: ${p.name}`,
       price: String(p.price),
       priceCurrency: c.currency,
       eligibleRegion: { '@type': 'Country', name: c.countryName },
@@ -113,6 +119,6 @@ export function pricingServiceNodes(host, orgId) {
         priceCurrency: c.currency,
         ...(s.billing === 'month' ? { unitText: 'MONTH' } : {}),
       },
-    }))),
+    })),
   }))
 }

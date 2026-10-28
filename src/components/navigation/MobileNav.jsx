@@ -6,7 +6,7 @@ import Button from '../common/Button.jsx'
 import { cx } from '../../utils/helpers.js'
 import logoImg from '../../assets/images/logo/SSMLOGO.webp'
 
-const MOBILE_NAV_LINKS = NAV_LINKS
+const MOBILE_NAV_LINKS = NAV_LINKS.filter((link) => link.label !== 'Pricing')
 
 function MobileNavItem({ link, onNavigate }) {
   const { isActive } = useActiveRoute()

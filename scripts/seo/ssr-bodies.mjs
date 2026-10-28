@@ -100,7 +100,7 @@ export async function ssrBodies(root, distAssets) {
           ...(r.extraNodes || []),
           ...(r.office && biz ? [biz] : []),
           org,
-          crumbList,
+          ...(r.noCrumbs ? [] : [crumbList]),
         ]
         : isAbout ? [
         { '@type': 'AboutPage', '@id': `${HOST}${r.route}#webpage`, name: decode(h1[1]), url: `${HOST}${r.route}`, about: { '@id': ORG_ID }, mainEntity: { '@id': ORG_ID } },

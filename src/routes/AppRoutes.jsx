@@ -57,7 +57,7 @@ import SMEsMalaysia from '../pages/Industries/SMEsMalaysia.jsx'
 import RealEstateBuilders from '../pages/Industries/RealEstateBuilders.jsx'
 
 import Pricing from '../pages/Pricing/Pricing.jsx'
-import PricingHub from '../pages/Pricing/PricingHub.jsx'
+import CountryPricing from '../pages/Pricing/CountryPricing.jsx'
 import SEOPricing from '../pages/Pricing/SEOPricing.jsx'
 import LocalSEOPricing from '../pages/Pricing/LocalSEOPricing.jsx'
 import GoogleAdsPricing from '../pages/Pricing/GoogleAdsPricing.jsx'
@@ -222,8 +222,12 @@ export default function AppRoutes() {
         />
 
         {/* ---- Pricing Routes ---- */}
-        {/* Master pricing hub: all four countries, links to the country pricing pages. */}
-        <Route path="/pricing" element={<PricingHub />} />
+        {/* /pricing/ 301s to the home page (scripts/seo/legacy-redirects.csv). Unlisted per-country
+            pricing pages (noindex,nofollow; never linked; not in sitemap). Paths: masterPricing.js */}
+        <Route path="/p/india-9xajei" element={<CountryPricing country="india" />} />
+        <Route path="/p/malaysia-2josdx" element={<CountryPricing country="malaysia" />} />
+        <Route path="/p/dubai-a8aokh" element={<CountryPricing country="dubai" />} />
+        <Route path="/p/singapore-xseszo" element={<CountryPricing country="singapore" />} />
 
         {/* India Pricing */}
         <Route path="/pricing/india" element={<Pricing country="india" />} />

@@ -1,5 +1,5 @@
 import { cityPages, PRICE_TIERS } from './cityPages.js'
-import { pricingServiceNodes } from './masterPricing.js'
+import { pricingServiceNodes, PRICING_COUNTRIES, UNLISTED_PRICING_PATHS } from './masterPricing.js'
 
 /**
  * Routes whose real page component is server-rendered at build time (scripts/seo/prerender-heads.mjs)
@@ -103,8 +103,8 @@ export const ssrRoutes = [
   {'route': '/blog/seo-agency-madurai-complete-guide/', 'module': '/src/pages/Blog/SEO.jsx', 'kind': 'article', 'office': 'madurai', 'published': '2026-08-15'},
   {'route': '/blog/digital-marketing-malaysia-sme-grant-guide/', 'module': '/src/pages/Blog/MalaysiaGrantGuide.jsx', 'kind': 'article', 'office': 'malaysia', 'published': '2026-08-20'},
   {'route': '/blog/local-seo-thoothukudi-businesses/', 'module': '/src/pages/Blog/LocalSEOThoothukudi.jsx', 'kind': 'article', 'office': 'madurai', 'published': '2026-08-25'},
-  /* Master pricing hub: WebPage + one Service per service with an Offer per priced tier per country. */
-  { route: '/pricing/', module: '/src/pages/Pricing/PricingHub.jsx', kind: 'page', pageType: 'WebPage', office: 'org', extraNodes: pricingServiceNodes('https://www.staticsavvymedia.com', 'https://www.staticsavvymedia.com/#organization') },
+  /* Unlisted per-country pricing pages (noindex,nofollow): prices server-rendered for direct loads. */
+  ...PRICING_COUNTRIES.map((c) => ({ route: UNLISTED_PRICING_PATHS[c.key], module: '/src/pages/Pricing/CountryPricing.jsx', props: { country: c.key }, kind: 'page', pageType: 'WebPage', office: 'org', noCrumbs: true, extraNodes: pricingServiceNodes('https://www.staticsavvymedia.com', 'https://www.staticsavvymedia.com/#organization', c.key) })),
   /* City landing pages (src/data/cityPages.js). office 'org' = provider is the Organization, so no
    * LocalBusiness node with an address in another city is emitted; Selangor uses the real Rawang office. */
   ...cityPages.map((c) => ({

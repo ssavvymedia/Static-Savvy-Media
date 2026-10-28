@@ -108,6 +108,9 @@ for (const route of routes) {
       html = setTag(html, /<meta\s+name="description"\s+content="[^"]*"\s*\/?>/, `<meta name="description" content="${desc}" />`, 'description', route)
       html = html.replace(/<meta property="og:description" content="[^"]*"\s*\/?>/, `<meta property="og:description" content="${esc(seo.ogDescription || seo.description)}" />`)
     }
+    if (seo.robots && !/^index/i.test(seo.robots)) {
+      html = html.replace('</head>', `  <meta name="robots" content="${esc(seo.robots)}" />\n  </head>`)
+    }
     if (seo.ogImage) {
       const img = esc(seo.ogImage.replace(/^https?:\/\/[^/]+/, HOST))
       html = html.replace(/<meta property="og:image" content="[^"]*"\s*\/?>/, `<meta property="og:image" content="${img}" />`)

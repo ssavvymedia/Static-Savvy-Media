@@ -1,5 +1,6 @@
 import { newBlogPosts } from "./newBlogPosts.js";
 import { cityPages } from "./cityPages.js";
+import { PRICING_COUNTRIES, UNLISTED_PRICING_PATHS } from "./masterPricing.js";
 import { sanityPostOverrides } from "./blogOverrides.js";
 import {
   SITE_NAME,
@@ -18,6 +19,13 @@ const BASE_URL = SITE_URL;
  * Maps every single public route to its unique SEO metadata object.
  */
 export const seoConfig = {
+  // Unlisted per-country pricing pages: noindex,nofollow (also X-Robots-Tag in vercel.json).
+  ...Object.fromEntries(PRICING_COUNTRIES.map((c) => {
+    const path = UNLISTED_PRICING_PATHS[c.key];
+    const title = `${c.label} Pricing | Static Savvy Media`;
+    const description = `Static Savvy Media prices for ${c.label} in ${c.currency}: SEO & Google Business Profile, website development, social media marketing and lead generation.`;
+    return [path.replace(/\/$/, ""), { title, slug: path.replace(/^\/|\/$/g, ""), seo: { title, description, canonical: `${BASE_URL}${path}`, ogTitle: title, ogDescription: description, robots: "noindex,nofollow" } }];
+  })),
   ...Object.fromEntries(cityPages.map((c) => [`/locations/${c.slug}`, { title: c.title, slug: `locations/${c.slug}`, seo: { title: c.title, description: c.description, canonical: `${BASE_URL}/locations/${c.slug}/`, ogTitle: c.title, ogDescription: c.description, robots: "index,follow" } }])),
   ...Object.fromEntries(Object.entries(sanityPostOverrides).map(([slug, o]) => [`/blog/${slug}`, { title: o.seoTitle, slug: `blog/${slug}`, seo: { title: o.seoTitle, description: o.seoDescription, canonical: `${BASE_URL}/blog/${slug}/`, ogTitle: o.seoTitle, ogDescription: o.seoDescription, robots: "index,follow" } }])),
   ...Object.fromEntries(newBlogPosts.map((p) => [`/blog/${p.slug}`, { title: p.title, slug: `blog/${p.slug}`, seo: { title: p.title, description: p.description, canonical: `${BASE_URL}/blog/${p.slug}/`, ogTitle: p.title, ogDescription: p.description, ogImage: `${BASE_URL}/og/blog/${p.slug}.jpg`, robots: "index,follow" } }])),
@@ -961,21 +969,6 @@ export const seoConfig = {
   },
 
   // Pricing Pages
-  "/pricing": {
-    title: "Digital Marketing Pricing: India, Malaysia, Dubai & Singapore | Static Savvy Media",
-    slug: "pricing",
-    seo: {
-      title: "Digital Marketing Pricing: India, Malaysia, Dubai & Singapore | Static Savvy Media",
-      description:
-        "SEO & Google Business Profile, website, social media and lead generation prices in INR, MYR, AED and SGD. SEO from ₹6,000, RM 800, AED 800 or SGD 500 a month.",
-      canonical: `${BASE_URL}/pricing/`,
-      ogImage: `${BASE_URL}/og/pricing-pricingmain.jpg`,
-      ogTitle: "Digital Marketing Pricing: India, Malaysia, Dubai & Singapore",
-      ogDescription:
-        "Monthly SEO, social media and lead generation plans and one-time website prices for India, Malaysia, Dubai and Singapore.",
-      robots: "index,follow",
-    },
-  },
   "/pricing/india": {
     title: "Digital Marketing Packages & Pricing India | Static Savvy Media",
     slug: "pricing/india",

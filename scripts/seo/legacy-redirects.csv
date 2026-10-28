@@ -234,7 +234,7 @@ legacy_path,seen_as,hosts,gsc_clicks_90d,gsc_impressions_90d,action,target,confi
 /post/top-ai-image-generator-websites,/post/top-ai-image-generator-websites,www.ssm,0,0,404,,,off-topic / not offered / theme demo or shop page: leave 404
 /post/top-automated-seo-tools-for-smes,/post/top-automated-seo-tools-for-smes,www.ssm,0,0,redirect,/services/seo/,medium,SEO tools / SEO guide post -> SEO service
 /post/unique-valentine-s-day-gifts-a-guide-to-exceptional-presents,/post/unique-valentine-s-day-gifts-a-guide-to-exceptional-presents,www.ssm,0,0,404,,,off-topic / not offered / theme demo or shop page: leave 404
-/pricing,/pricing,www.ssm,0,0,alias,,,live duplicate route; 301 alias in vercel.json
+/pricing,/pricing,www.ssm,0,0,redirect,/,high,master pricing hub removed (pricing is now on unlisted per-country pages); 301 to home
 /privacy-policy,/privacy-policy,www.ssm,0,0,live,,,live route today (no redirect needed)
 /product-page/i-m-a-product,/product-page/i-m-a-product,www.ssm,0,0,404,,,old theme demo / shop page: leave 404
 /product-page/i-m-a-product-1,/product-page/i-m-a-product-1,www.ssm,0,0,404,,,old theme demo / shop page: leave 404
