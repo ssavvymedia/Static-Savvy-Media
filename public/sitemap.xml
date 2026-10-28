@@ -30,7 +30,7 @@
   <url><loc>https://www.staticsavvymedia.com/services/local-seo/malaysia/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.staticsavvymedia.com/services/geo-aeo-ai-search/madurai/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.staticsavvymedia.com/services/google-ads/thoothukudi/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.staticsavvymedia.com/services/ai-business-automation/malaysia/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.staticsavvymedia.com/services/ai-business-automation/malaysia/</loc><lastmod>2026-10-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
 
   <url><loc>https://www.staticsavvymedia.com/locations/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.staticsavvymedia.com/locations/madurai/</loc><lastmod>2026-10-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
@@ -108,6 +108,8 @@
   <url><loc>https://www.staticsavvymedia.com/blog/digital-marketing-coimbatore-manufacturers-b2b/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://www.staticsavvymedia.com/blog/digital-marketing-trichy-businesses/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://www.staticsavvymedia.com/blog/digital-marketing-tirunelveli-businesses/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.staticsavvymedia.com/blog/best-web-hosting-india-malaysia-small-business/</loc><lastmod>2026-10-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.staticsavvymedia.com/blog/agentic-ai-tools-small-business-marketing/</loc><lastmod>2026-10-28</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://www.staticsavvymedia.com/blog/local-seo-thoothukudi-businesses/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <!-- Sanity CMS posts (rendered by /blog/:slug); lastmod = Sanity _updatedAt -->
   <url><loc>https://www.staticsavvymedia.com/blog/how-to-rank-in-ai-search/</loc><lastmod>2026-09-23</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>

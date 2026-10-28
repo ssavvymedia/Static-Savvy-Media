@@ -38,4 +38,6 @@ export const ssrRoutes = [
   { route: '/blog/digital-marketing-coimbatore-manufacturers-b2b/', module: '/src/pages/Blog/StaticBlogPost.jsx', office: 'madurai', service: "Digital Marketing for Coimbatore Manufacturers: Getting B2B and Export Enquiries Online", serviceType: 'Digital marketing', area: { '@type': 'State', name: 'Tamil Nadu' } },
   { route: '/blog/digital-marketing-trichy-businesses/', module: '/src/pages/Blog/StaticBlogPost.jsx', office: 'madurai', service: "Digital Marketing in Trichy: Local SEO and Lead Generation for Hospitals, Colleges and Retail", serviceType: 'Digital marketing', area: { '@type': 'State', name: 'Tamil Nadu' } },
   { route: '/blog/digital-marketing-tirunelveli-businesses/', module: '/src/pages/Blog/StaticBlogPost.jsx', office: 'madurai', service: "Digital Marketing in Tirunelveli: How Local Brands Can Sell Beyond the District", serviceType: 'Digital marketing', area: { '@type': 'State', name: 'Tamil Nadu' } },
+  { route: '/blog/best-web-hosting-india-malaysia-small-business/', module: '/src/pages/Blog/StaticBlogPost.jsx', kind: 'article', office: 'madurai', published: '2026-10-28' },
+  { route: '/blog/agentic-ai-tools-small-business-marketing/', module: '/src/pages/Blog/StaticBlogPost.jsx', kind: 'article', office: 'malaysia', published: '2026-10-28' },
 ]

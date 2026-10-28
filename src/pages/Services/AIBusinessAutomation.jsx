@@ -896,6 +896,9 @@ export default function AIBusinessAutomation() {
                 </svg>
               </Link>
             ))}
+            <Link to="/blog/agentic-ai-tools-small-business-marketing/" className="related-content__link">
+              Top Agentic AI Tools Compared
+            </Link>
             <Link to="/faq/" className="related-content__link">
               FAQ
               <svg

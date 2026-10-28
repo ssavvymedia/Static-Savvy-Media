@@ -2,7 +2,7 @@
  * Build-time server render of the routes in src/data/ssrRoutes.js. Returns
  * Map(route -> { html, schema }) where html is the page component's own markup (React's createRoot()
  * replaces it on load) and schema is a JSON-LD @graph built only from that render plus site constants.
- * Throws if a page has no H1, so a broken render fails the build instead of shipping empty HTML.
+ * A page that fails to render or has no H1 is skipped with a build warning and ships as the plain shell.
  */
 import { renderToString } from 'react-dom/server'
 import * as React from 'react'
@@ -66,6 +66,9 @@ export async function ssrBodies(root, distAssets) {
       address: C.MALAYSIA_POSTAL_ADDRESS, parentOrganization: { '@id': ORG_ID },
     }
     for (const r of ssrRoutes) {
+     /* One page failing to render must not strip the crawlable body from every other route:
+      * skip it (it ships as the plain shell, as before) and say so in the build log. */
+     try {
       const mod = await vite.ssrLoadModule(r.module)
       const Page = mod.default
       let raw
@@ -81,10 +84,22 @@ export async function ssrBodies(root, distAssets) {
       if (qs.length !== as.length) throw new Error(`ssr-bodies: ${qs.length} FAQ questions vs ${as.length} answers on ${r.route}`)
       const faqs = qs.map((q, i) => ({ q, a: as[i] })).filter((f) => f.q && f.a)
       const segs = r.route.split('/').filter(Boolean)
-      const crumbs = [{ name: 'Home', path: '/' }, ...segs.map((s, i) => ({ name: getBreadcrumbLabel(s), path: `/${segs.slice(0, i + 1).join('/')}/` }))]
+      /* Unmapped slugs (blog posts etc.) would show the raw slug: use the page H1 for the last crumb. */
+      const crumbName = (s, i) => { const l = getBreadcrumbLabel(s); return l === s && i === segs.length - 1 ? decode(h1[1]) : l }
+      const crumbs = [{ name: 'Home', path: '/' }, ...segs.map((s, i) => ({ name: crumbName(s, i), path: `/${segs.slice(0, i + 1).join('/')}/` }))]
       const biz = r.office === 'madurai' ? madurai : malaysia
       const isAbout = r.kind === 'about'
-      const nodes = isAbout ? [
+      const crumbList = { '@type': 'BreadcrumbList', itemListElement: crumbs.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: `${HOST}${c.path}` })) }
+      const org = { '@type': 'Organization', '@id': ORG_ID, name: 'Static Savvy Media', url: `${HOST}/`, telephone: PHONE }
+      /* 'article' = guide post (no Service claim); 'page' = hub/utility page (WebPage subtype, e.g. CollectionPage, ContactPage). */
+      const nodes = r.kind === 'article' ? [org, crumbList]
+        : r.kind === 'page' ? [
+          { '@type': r.pageType || 'WebPage', '@id': `${HOST}${r.route}#webpage`, name: decode(h1[1]), url: `${HOST}${r.route}`, isPartOf: { '@type': 'WebSite', '@id': `${HOST}/#website`, url: `${HOST}/`, name: 'Static Savvy Media' }, about: { '@id': ORG_ID }, publisher: { '@id': ORG_ID } },
+          ...(r.office ? [biz] : []),
+          org,
+          crumbList,
+        ]
+        : isAbout ? [
         { '@type': 'AboutPage', '@id': `${HOST}${r.route}#webpage`, name: decode(h1[1]), url: `${HOST}${r.route}`, about: { '@id': ORG_ID }, mainEntity: { '@id': ORG_ID } },
         { '@type': 'Organization', '@id': ORG_ID, name: 'Static Savvy Media', url: `${HOST}/`, telephone: PHONE, foundingDate: '2021-10-01', foundingLocation: { '@type': 'Place', name: 'Madurai, Tamil Nadu, India' }, founder: { '@id': `${HOST}/about/deepan-kanz/#person` }, areaServed: [{ '@type': 'City', name: 'Madurai' }, { '@type': 'City', name: 'Thoothukudi' }, { '@type': 'Country', name: 'Malaysia' }], subOrganization: [{ '@id': madurai['@id'] }, { '@id': malaysia['@id'] }] },
         { '@type': 'Person', '@id': `${HOST}/about/deepan-kanz/#person`, name: 'Deepan Kanz', jobTitle: 'Founder', url: `${HOST}/about/deepan-kanz/`, worksFor: { '@id': ORG_ID } },
@@ -97,12 +112,15 @@ export async function ssrBodies(root, distAssets) {
         { '@type': 'Organization', '@id': ORG_ID, name: 'Static Savvy Media', url: `${HOST}/`, telephone: PHONE },
         { '@type': 'BreadcrumbList', itemListElement: crumbs.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: `${HOST}${c.path}` })) },
       ]
-      if (r.route.startsWith('/blog/')) {
+      if (r.route.startsWith('/blog/') && r.kind !== 'page') {
         const slug = segs[segs.length - 1]
-        nodes.push({ '@type': 'BlogPosting', headline: decode(h1[1]), image: `${HOST}/og/blog/${slug}.jpg`, url: `${HOST}${r.route}`, mainEntityOfPage: `${HOST}${r.route}`, datePublished: r.published || '2026-10-24', dateModified: r.published || '2026-10-24', author: { '@type': 'Person', name: 'Deepan Kanz', url: `${HOST}/about/deepan-kanz/` }, publisher: { '@id': ORG_ID } })
+        nodes.push({ '@type': r.kind === 'article' ? 'Article' : 'BlogPosting', headline: decode(h1[1]), image: `${HOST}/og/blog/${slug}.jpg`, url: `${HOST}${r.route}`, mainEntityOfPage: `${HOST}${r.route}`, datePublished: r.published || '2026-10-24', dateModified: r.modified || r.published || '2026-10-24', author: { '@type': 'Person', name: 'Deepan Kanz', url: `${HOST}/about/deepan-kanz/` }, publisher: { '@id': ORG_ID } })
       }
       if (faqs.length) nodes.push({ '@type': 'FAQPage', mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) })
       out.set(r.route, { html: `<main data-prerender="ssr">${html}</main>`, schema: { '@context': 'https://schema.org', '@graph': nodes }, h1: decode(h1[1]), faqCount: faqs.length })
+     } catch (e) {
+      console.warn(`ssr-bodies: skipped ${r.route} (ships as plain shell): ${String(e?.message || e).slice(0, 300)}`)
+     }
     }
   } finally {
     await vite.close()

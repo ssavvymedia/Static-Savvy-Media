@@ -350,6 +350,8 @@ export default function AppRoutes() {
         <Route path="/blog/digital-marketing-coimbatore-manufacturers-b2b" element={<StaticBlogPost />} />
         <Route path="/blog/digital-marketing-trichy-businesses" element={<StaticBlogPost />} />
         <Route path="/blog/digital-marketing-tirunelveli-businesses" element={<StaticBlogPost />} />
+        <Route path="/blog/best-web-hosting-india-malaysia-small-business" element={<StaticBlogPost />} />
+        <Route path="/blog/agentic-ai-tools-small-business-marketing" element={<StaticBlogPost />} />
         <Route
           path="/blog/local-seo-thoothukudi-businesses"
           element={<LocalSEOThoothukudi />}

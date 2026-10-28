@@ -110,7 +110,10 @@ const content = {
         <p>
           See <Link to="/pricing/india/website/">website pricing</Link>, or pair your new site with{' '}
           <Link to="/services/local-seo/madurai/">local SEO in Madurai</Link> and{' '}
-          <Link to="/services/geo-aeo-ai-search/madurai/">AI search optimisation (GEO)</Link>.
+          <Link to="/services/geo-aeo-ai-search/madurai/">AI search optimisation (GEO)</Link>. Choosing a host?
+          Compare price, renewal and uptime in our{' '}
+          <Link to="/blog/best-web-hosting-india-malaysia-small-business/">top 5 web hosting guide</Link>, or use our{' '}
+          <Link to="/blog/website-design-company-madurai-checklist/">website design company checklist</Link>.
         </p>
       ),
     },
@@ -121,6 +124,7 @@ const content = {
     { name: 'Local SEO Services in Madurai', path: '/services/local-seo/madurai/' },
     { name: 'Social Media Marketing in Madurai', path: '/services/social-media-marketing/madurai/' },
     { name: 'Digital Marketing in Madurai', path: '/locations/madurai/' },
+    { name: 'Best Web Hosting: Top 5 Compared', path: '/blog/best-web-hosting-india-malaysia-small-business/' },
     { name: 'Contact', path: '/contact/' },
   ],
   faqTitle: 'Frequently Asked Questions, Website Development Madurai',

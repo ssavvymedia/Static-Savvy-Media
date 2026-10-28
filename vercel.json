@@ -1857,6 +1857,16 @@
       "statusCode": 308
     },
     {
+      "source": "/blog/best-web-hosting-india-malaysia-small-business",
+      "destination": "/blog/best-web-hosting-india-malaysia-small-business/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog/agentic-ai-tools-small-business-marketing",
+      "destination": "/blog/agentic-ai-tools-small-business-marketing/",
+      "statusCode": 308
+    },
+    {
       "source": "/blog/local-seo-thoothukudi-businesses",
       "destination": "/blog/local-seo-thoothukudi-businesses/",
       "statusCode": 308
@@ -2279,6 +2289,14 @@
     },
     {
       "source": "/blog/digital-marketing-tirunelveli-businesses/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/best-web-hosting-india-malaysia-small-business/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/agentic-ai-tools-small-business-marketing/",
       "destination": "/index.html"
     },
     {
