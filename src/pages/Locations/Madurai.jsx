@@ -48,7 +48,7 @@ const QUICK_FACTS = [
   { label: 'Google rating', value: '4.9★ from 100+ Google reviews' },
   { label: 'Office hours', value: 'Monday–Saturday, 9:00 AM – 6:30 PM IST (visits by appointment)' },
   { label: 'Languages', value: 'Tamil and English' },
-  { label: 'SEO pricing', value: 'From ₹12,000/month, no minimum term', link: { to: '/pricing/india/seo/', label: 'See SEO pricing' } },
+  { label: 'SEO pricing', value: 'Google Business Profile from ₹6,000/month, GBP + website SEO from ₹12,000/month, no minimum term', link: { to: '/blog/affordable-seo-company-madurai-pricing/', label: 'See Madurai SEO prices' } },
   { label: 'Phone / WhatsApp', value: '+91 99440 40345' },
 ]
 

@@ -9,6 +9,45 @@ export const MY_LINE = '+60 12-453 7030'
 export const newBlogPosts = [
   /* ============================== MADURAI ============================== */
   {
+    slug: 'affordable-seo-company-madurai-pricing',
+    region: 'madurai',
+    category: 'Madurai',
+    published: '2026-10-28',
+    publishedLabel: '28 October 2026',
+    title: 'Affordable SEO Company in Madurai: 2026 Prices & What You Get | Static Savvy Media',
+    h1: 'Affordable SEO Company in Madurai: What SEO Costs in 2026 and What You Get',
+    description: 'Affordable SEO in Madurai: Google Business Profile management from ₹6,000/month, GBP + website SEO from ₹12,000 and GBP + SEO + AEO + GEO at ₹20,000. No lock-in. See what each plan includes.',
+    imageAlt: 'Affordable SEO company in Madurai 2026 prices: GBP from ₹6,000 and SEO from ₹12,000 a month, Static Savvy Media',
+    intro: 'Short answer: an affordable SEO company in Madurai should give you a written list of monthly work, reports that show calls and WhatsApp enquiries, and no long lock-in, at a price a local business can keep paying for several months. At Static Savvy Media, our Madurai head office (Kamarajar Salai, since 1 October 2021) offers three monthly plans for Indian businesses: Google Business Profile management at ₹6,000, Google Business Profile + website SEO at ₹12,000, and Google Business Profile + website SEO + AEO + GEO (AI search) at ₹20,000. This guide explains what each plan includes, how they compare with typical Madurai prices, and how to tell cheap SEO from affordable SEO.',
+    body: [
+      { h2: 'Our SEO prices in Madurai at a glance', p: ['All three plans are billed monthly in INR with no minimum contract term. Ad spend for Google or Meta ads is not included and is paid directly to the platform.'], list: ['Google Business Profile (GBP) plan, ₹6,000 a month: profile optimisation and management with 12 Google Business Profile posts a month, so you show up better on Google Maps and the local 3-pack in Madurai.', 'GBP + Website SEO, ₹12,000 a month: everything in the GBP plan, plus on-page and technical SEO on your website and 4 blog posts a month targeting the questions Madurai customers actually search.', 'GBP + Website SEO + AEO + GEO, ₹20,000 a month: everything above, plus answer engine optimisation (FAQs, featured-snippet-style answers, schema markup) and generative engine optimisation so your business is easier for ChatGPT, Gemini and Google AI Overviews to find and cite.'] },
+      { h2: 'Which plan fits your Madurai business?', h3: [
+        { t: 'Shops, clinics and service businesses that live on Google Maps', p: 'If most customers find you by searching "near me" or "in Anna Nagar / K.K. Nagar / Madurai", start with the ₹6,000 GBP plan. A well-managed profile with regular posts, correct categories and reviews is the cheapest lasting visibility a local business can buy. See our [local SEO services in Madurai](/services/local-seo/madurai/).' },
+        { t: 'Businesses that want website enquiries, not only calls', p: 'If customers compare options on your website before calling (schools, hospitals, builders, B2B suppliers, textile and export businesses), the ₹12,000 GBP + Website SEO plan adds the on-page fixes and 4 blogs a month needed to rank pages, not just the profile. Details are on our [SEO services in Madurai](/services/seo/madurai/) page.' },
+        { t: 'Businesses competing for "best" and AI recommendations', p: 'If buyers in your category ask ChatGPT or Google "which is the best … in Madurai?", the ₹20,000 plan adds AEO and GEO work so your brand details, FAQs and proof are clear enough to be cited. Read more about [GEO and AEO in Madurai](/services/geo-aeo-ai-search/madurai/).' },
+      ] },
+      { h2: 'How our prices compare with other Madurai SEO quotes', p: ['When we checked the published prices of Madurai SEO providers on 28 October 2026, entry-level monthly SEO packages started at roughly ₹5,000 to ₹10,000, and larger packages ran from about ₹15,000 to ₹45,000 a month. So ₹6,000 to ₹20,000 a month sits in the affordable range for the market.', 'The headline number matters less than what is included. Compare quotes by deliverables: how many Google Business Profile posts, how many blog posts or pages, what technical work, how links are earned, how enquiries are tracked, and who owns the accounts. Our [checklist for hiring an SEO provider in Madurai](/blog/seo-agency-madurai-complete-guide/) lists the questions to ask.'] },
+      { h2: 'Cheap SEO vs affordable SEO: red flags', list: ['A guaranteed number one ranking on Google (no honest agency can promise this)', 'Hundreds of backlinks a day for a few thousand rupees, which is usually spam that can hurt your site', 'No written list of monthly work', 'Reports that only show rankings or "impressions", never calls, WhatsApp chats or form enquiries', 'The agency creates your Google Business Profile, Search Console or Analytics in its own name', 'A 12-month lock-in before you have seen any work'] },
+      { h2: 'How long before affordable SEO pays back?', p: ['Google Business Profile improvements can lift Maps visibility within weeks. Website rankings for competitive Madurai keywords usually take three to six months, and results build over time as content and reviews grow. Our guide on [how long SEO takes in Madurai](/blog/how-long-does-seo-take-madurai/) has a month-by-month timeline, and [is SEO worth it for a small business in Madurai](/blog/is-seo-worth-it-small-business-madurai/) shows a simple payback formula.'] },
+      { h2: 'Why Madurai businesses choose Static Savvy Media', p: ['We are a Madurai-headquartered digital marketing agency founded on 1 October 2021 by Deepan Kanz, rated 4.9★ on Google from 100+ reviews. Our team works in Tamil and English, and every plan is monthly with no lock-in. Visit our [Madurai digital marketing agency page](/locations/madurai/) for the office address and hours, or message us on WhatsApp at +91 99440 40345 for a free audit before you choose a plan.'] },
+    ],
+    faqs: [
+      { q: 'What is the most affordable SEO company in Madurai?', a: 'Look for a Madurai SEO company that publishes its prices, lists monthly deliverables in writing, tracks enquiries and has no long lock-in. Static Savvy Media’s plans start at ₹6,000 a month for Google Business Profile management and ₹12,000 a month for Google Business Profile plus website SEO, with no minimum contract term.' },
+      { q: 'How much does SEO cost in Madurai per month?', a: 'Published entry-level SEO packages in Madurai start at roughly ₹5,000 to ₹10,000 a month, with larger packages from about ₹15,000 to ₹45,000. Static Savvy Media charges ₹6,000 (GBP), ₹12,000 (GBP + website SEO with 4 blogs) and ₹20,000 (GBP + SEO + AEO + GEO) a month.' },
+      { q: 'What is included in the ₹6,000 Google Business Profile plan?', a: 'Google Business Profile optimisation and management with 12 posts a month, aimed at better visibility on Google Maps and the local 3-pack in Madurai. Website SEO and blogs start from the ₹12,000 plan.' },
+      { q: 'Is cheap SEO worth it for a small business?', a: 'Only if the work is real and white-hat. Very cheap packages often cut content and rely on spammy backlinks, which can harm your site. Affordable SEO means a fair monthly price with clear deliverables and enquiry tracking.' },
+      { q: 'Do I need a long-term contract for SEO in Madurai?', a: 'No. Our plans are monthly with no minimum term, although SEO works best when you give it at least three to six months.' },
+      { q: 'Does the price include Google Ads or Meta ads spend?', a: 'No. Ad spend is paid directly to Google or Meta. Our SEO plans cover organic visibility on Google Search, Google Maps and AI search.' },
+      { q: 'Can I get a free SEO audit before choosing a plan?', a: 'Yes. Message our Madurai team on WhatsApp at +91 99440 40345 and we will review your website and Google Business Profile before recommending a plan.' },
+    ],
+    related: [
+      { to: '/locations/madurai/', label: 'Digital marketing agency in Madurai' },
+      { to: '/services/seo/madurai/', label: 'SEO services in Madurai' },
+      { to: '/services/local-seo/madurai/', label: 'Local SEO in Madurai' },
+      { to: '/services/geo-aeo-ai-search/madurai/', label: 'GEO & AEO in Madurai' },
+    ],
+  },
+  {
     slug: 'how-long-does-seo-take-madurai',
     region: 'madurai',
     category: 'Madurai',

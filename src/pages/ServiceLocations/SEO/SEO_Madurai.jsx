@@ -720,7 +720,7 @@ export default function SEO_Madurai() {
             ))}
           </div>
           <p className="section-heading__subtitle" style={{ marginTop: 'var(--space-lg)' }}>
-            Want to see costs first? See <Link to="/pricing/india/seo/">SEO pricing in India</Link>,
+            Want to see costs first? Compare our <Link to="/blog/affordable-seo-company-madurai-pricing/">affordable SEO plans in Madurai</Link> or see <Link to="/pricing/india/seo/">SEO pricing in India</Link>,
             or read our guide to <Link to="/blog/seo-vs-google-ads-madurai/">SEO vs Google Ads for Madurai businesses</Link>.
             For a realistic month-by-month view, read <Link to="/blog/how-long-does-seo-take-madurai/">how long SEO takes for a Madurai business</Link>,
             and if you are still deciding, <Link to="/blog/is-seo-worth-it-small-business-madurai/">whether SEO is worth it for a small business in Madurai</Link>.

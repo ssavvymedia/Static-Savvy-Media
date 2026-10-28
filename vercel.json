@@ -1802,6 +1802,11 @@
       "statusCode": 308
     },
     {
+      "source": "/blog/affordable-seo-company-madurai-pricing",
+      "destination": "/blog/affordable-seo-company-madurai-pricing/",
+      "statusCode": 308
+    },
+    {
       "source": "/blog/how-long-does-seo-take-madurai",
       "destination": "/blog/how-long-does-seo-take-madurai/",
       "statusCode": 308
@@ -2230,6 +2235,10 @@
     },
     {
       "source": "/blog/seo-cost-malaysia-price-guide/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/affordable-seo-company-madurai-pricing/",
       "destination": "/index.html"
     },
     {

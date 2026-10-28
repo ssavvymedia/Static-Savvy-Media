@@ -92,7 +92,7 @@ export async function ssrBodies(root, distAssets) {
         malaysia,
         { '@type': 'BreadcrumbList', itemListElement: crumbs.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: `${HOST}${c.path}` })) },
       ] : [
-        { '@type': 'Service', name: r.service, serviceType: r.serviceType, provider: { '@id': biz['@id'] }, areaServed: r.area, url: `${HOST}${r.route}` },
+        { '@type': 'Service', name: r.service, serviceType: r.serviceType, provider: { '@id': biz['@id'] }, areaServed: r.area, url: `${HOST}${r.route}`, ...(r.offers ? { offers: r.offers.map(([name, price]) => ({ '@type': 'Offer', name, price: String(price), priceCurrency: 'INR', url: `${HOST}${r.route}`, priceSpecification: { '@type': 'UnitPriceSpecification', price: String(price), priceCurrency: 'INR', unitText: 'MONTH' } })) } : {}) },
         biz,
         { '@type': 'Organization', '@id': ORG_ID, name: 'Static Savvy Media', url: `${HOST}/`, telephone: PHONE },
         { '@type': 'BreadcrumbList', itemListElement: crumbs.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: `${HOST}${c.path}` })) },

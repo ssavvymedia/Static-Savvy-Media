@@ -339,6 +339,7 @@ export default function AppRoutes() {
         <Route path="/blog/website-design-company-madurai-checklist" element={<StaticBlogPost />} />
         <Route path="/blog/how-to-choose-digital-marketing-agency-malaysia" element={<StaticBlogPost />} />
         <Route path="/blog/seo-cost-malaysia-price-guide" element={<StaticBlogPost />} />
+        <Route path="/blog/affordable-seo-company-madurai-pricing" element={<StaticBlogPost />} />
         <Route path="/blog/how-long-does-seo-take-madurai" element={<StaticBlogPost />} />
         <Route path="/blog/is-seo-worth-it-small-business-madurai" element={<StaticBlogPost />} />
         <Route path="/blog/rawang-local-seo-google-business-profile" element={<StaticBlogPost />} />
