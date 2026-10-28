@@ -662,7 +662,7 @@ export const seoConfig = {
       title:
         "Digital Marketing Agency Madurai — SEO, Ads & AI | Static Savvy Media",
       description:
-        "Madurai digital marketing agency at Kamarajar Salai since 2021, rated 4.9★ from 100+ Google reviews. SEO from ₹12,000/month, Local SEO, Ads, social & websites. WhatsApp +91 99440 40345.",
+        "Madurai digital marketing agency at Kamarajar Salai since 2021, rated 4.9★ from 100+ Google reviews. SEO from ₹6,000/month, Local SEO, Ads, social & websites. WhatsApp +91 99440 40345.",
       canonical: `${BASE_URL}/locations/madurai`,
       focusKeyword: "digital marketing agency Madurai",
       ogTitle: "Digital Marketing Agency Madurai | Static Savvy Media",
@@ -987,16 +987,21 @@ export const seoConfig = {
     seo: {
       title: "SEO Packages & Pricing India | Static Savvy Media",
       description:
-        "Affordable and scalable SEO pricing packages in India for startups, local businesses, and growing enterprises.",
+        "SEO pricing in India: GBP ₹6,000, GBP + Website SEO ₹12,000 and GBP + SEO + AEO + GEO ₹20,000 a month, no minimum contract. See what each plan includes.",
       canonical: `${BASE_URL}/pricing/india/seo`,
       focusKeyword: "SEO packages India pricing",
       ogTitle: "SEO Packages & Pricing India | Static Savvy Media",
-      ogDescription: "Affordable and scalable SEO pricing packages in India.",
+      ogDescription: "SEO pricing in India: GBP ₹6,000, GBP + Website SEO ₹12,000 and GBP + SEO + AEO + GEO ₹20,000 a month, no minimum contract.",
       ogImage: `${BASE_URL}/og/pricing-01seo.jpg`,
       schema: {
         "@context": "https://schema.org",
-        "@type": "Offer",
+        "@type": "OfferCatalog",
         name: "SEO Packages India",
+        itemListElement: [
+          { "@type": "Offer", name: "Google Business Profile management (12 posts/month)", price: "6000", priceCurrency: "INR", priceSpecification: { "@type": "UnitPriceSpecification", price: "6000", priceCurrency: "INR", unitText: "MONTH" } },
+          { "@type": "Offer", name: "Google Business Profile + website SEO (4 blogs/month)", price: "12000", priceCurrency: "INR", priceSpecification: { "@type": "UnitPriceSpecification", price: "12000", priceCurrency: "INR", unitText: "MONTH" } },
+          { "@type": "Offer", name: "Google Business Profile + website SEO + AEO + GEO", price: "20000", priceCurrency: "INR", priceSpecification: { "@type": "UnitPriceSpecification", price: "20000", priceCurrency: "INR", unitText: "MONTH" } },
+        ],
       },
       robots: "index,follow",
     },
@@ -1200,21 +1205,26 @@ export const seoConfig = {
     },
   },
   "/pricing/malaysia/seo": {
-    title: "SEO Packages & Pricing Malaysia (2026) | From MYR 650/Month",
+    title: "SEO Packages & Pricing Malaysia (2026) | From MYR 800/Month",
     slug: "pricing/malaysia/seo",
     seo: {
-      title: "SEO Packages & Pricing Malaysia (2026) | From MYR 650/Month",
+      title: "SEO Packages & Pricing Malaysia (2026) | From MYR 800/Month",
       description:
-        "Our SEO packages in Malaysia: Starter MYR 650, Growth MYR 1,200 and Scale MYR 2,200 a month, no minimum contract. See what each plan includes for KL, Selangor and nationwide SEO.",
+        "Our SEO packages in Malaysia: GBP MYR 800, GBP + Website SEO MYR 1,500 and GBP + SEO + AEO + GEO MYR 2,000 a month, no minimum contract. See what each plan includes.",
       canonical: `${BASE_URL}/pricing/malaysia/seo`,
       focusKeyword: "SEO packages Malaysia pricing",
-      ogTitle: "SEO Packages & Pricing Malaysia (2026) | From MYR 650/Month",
-      ogDescription: "Our SEO packages in Malaysia: Starter MYR 650, Growth MYR 1,200 and Scale MYR 2,200 a month, no minimum contract. See what each plan includes for KL, Selangor and nationwide SEO.",
+      ogTitle: "SEO Packages & Pricing Malaysia (2026) | From MYR 800/Month",
+      ogDescription: "Our SEO packages in Malaysia: GBP MYR 800, GBP + Website SEO MYR 1,500 and GBP + SEO + AEO + GEO MYR 2,000 a month, no minimum contract. See what each plan includes.",
       ogImage: `${BASE_URL}/og/pricing-01seo.jpg`,
       schema: {
         "@context": "https://schema.org",
-        "@type": "Offer",
+        "@type": "OfferCatalog",
         name: "SEO Packages Malaysia",
+        itemListElement: [
+          { "@type": "Offer", name: "Google Business Profile management (12 posts/month)", price: "800", priceCurrency: "MYR", priceSpecification: { "@type": "UnitPriceSpecification", price: "800", priceCurrency: "MYR", unitText: "MONTH" } },
+          { "@type": "Offer", name: "Google Business Profile + website SEO (4 blogs/month)", price: "1500", priceCurrency: "MYR", priceSpecification: { "@type": "UnitPriceSpecification", price: "1500", priceCurrency: "MYR", unitText: "MONTH" } },
+          { "@type": "Offer", name: "Google Business Profile + website SEO + AEO + GEO", price: "2000", priceCurrency: "MYR", priceSpecification: { "@type": "UnitPriceSpecification", price: "2000", priceCurrency: "MYR", unitText: "MONTH" } },
+        ],
       },
       robots: "index,follow",
     },

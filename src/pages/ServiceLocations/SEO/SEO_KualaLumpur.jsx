@@ -102,7 +102,7 @@ const content = {
       heading: 'How Much Do SEO Services Cost in Kuala Lumpur?',
       kind: 'checks',
       items: [
-        'Our SEO plans for Malaysia start at MYR 650 a month (Starter), with Growth at MYR 1,200 and Scale at MYR 2,200 a month.',
+        'Our SEO plans for Malaysia are MYR 800 a month (Google Business Profile), MYR 1,500 (GBP + website SEO) and MYR 2,000 (GBP + SEO + AEO + GEO).',
         'All retainers are monthly with no minimum contract term; final pricing depends on keywords, locations, languages and content volume.',
         'One-off audits are available if you want a diagnosis before committing to monthly work.',
       ],
@@ -143,7 +143,7 @@ const content = {
   ],
   faqTitle: 'Frequently Asked Questions, SEO Services in Kuala Lumpur',
   faqs: [
-    { question: 'How much do SEO services cost in KL?', answer: 'Our SEO plans for Malaysia are MYR 650, MYR 1,200 and MYR 2,200 a month (Starter, Growth and Scale), with no minimum contract term. Final pricing depends on keywords, locations, languages and content volume; full inclusions are on our Malaysia SEO pricing page.' },
+    { question: 'How much do SEO services cost in KL?', answer: 'Our SEO plans for Malaysia are MYR 800, MYR 1,500 and MYR 2,000 a month (GBP, GBP + website SEO, and GBP + SEO + AEO + GEO), with no minimum contract term. Final pricing depends on keywords, locations, languages and content volume; full inclusions are on our Malaysia SEO pricing page.' },
     { question: 'How long does SEO take in Kuala Lumpur?', answer: 'Usually 3 to 6 months for local and neighbourhood terms, and longer for competitive city-wide terms. Technical and Google Business Profile fixes can show movement within weeks. We do not guarantee rankings.' },
     { question: 'Do you do Bahasa Malaysia SEO?', answer: 'Yes. We research and optimise English and Bahasa Malaysia content separately, because the search terms and intent are often different. Chinese-language content can be planned where your audience needs it.' },
     { question: 'Do you have an office in Malaysia?', answer: `Yes. Our Malaysia office is at ${MALAYSIA_OFFICE.streetAddress}, ${MALAYSIA_OFFICE.postalCode} ${MALAYSIA_OFFICE.addressLocality}, ${MALAYSIA_OFFICE.addressRegion} (${MALAYSIA_OFFICE.landmark}), north of Kuala Lumpur. Meetings can be in person or online.` },

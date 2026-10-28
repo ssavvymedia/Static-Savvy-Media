@@ -31,7 +31,7 @@ const PAGE_TITLE =
   'Digital Marketing Agency in Madurai, SEO, GEO/AEO & More | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
-  'Madurai digital marketing agency at Kamarajar Salai since 2021, rated 4.9★ from 100+ Google reviews. SEO from ₹12,000/month, Local SEO, Ads, social & websites. WhatsApp +91 99440 40345.'
+  'Madurai digital marketing agency at Kamarajar Salai since 2021, rated 4.9★ from 100+ Google reviews. SEO from ₹6,000/month, Local SEO, Ads, social & websites. WhatsApp +91 99440 40345.'
 
 const HERO_EYEBROW = 'Madurai • Static Savvy Media HQ'
 

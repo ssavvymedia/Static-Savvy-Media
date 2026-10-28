@@ -342,7 +342,7 @@ const FAQS = [
   {
     question: 'How much does SEO cost in Madurai?',
     answer:
-      'Our SEO retainers in India are ₹12,000 a month (Starter), ₹22,000 a month (Growth) and ₹40,000 a month (Scale), with no minimum contract term. Final pricing depends on scope, competition and how much content your site needs; full details are on our SEO pricing page for India.',
+      'Our SEO plans in India are ₹6,000 a month (Google Business Profile management with 12 posts), ₹12,000 a month (GBP + website SEO with 4 blogs) and ₹20,000 a month (GBP + website SEO + AEO + GEO), with no minimum contract term. Final pricing depends on scope, competition and how much content your site needs; full details are on our SEO pricing page for India.',
   },
   {
     question: 'Who is the best SEO company in Madurai?',
@@ -452,7 +452,7 @@ export default function SEO_Madurai() {
                   {GOOGLE_TRUST_LINE} · <Link to="/about/reviews/">Read our reviews</Link>
                 </p>
                 <p className="seo-mdu-hero__trust">
-                  SEO plans from ₹12,000/month, no lock-in. <Link to="/pricing/india/seo/">See SEO pricing</Link>
+                  SEO plans from ₹6,000/month, no lock-in. <Link to="/pricing/india/seo/">See SEO pricing</Link>
                 </p>
                 <p className="seo-mdu-hero__trust">
                   Reviewed by <Link to="/about/deepan-kanz/">Deepan Kanz</Link>, founder · Last updated 25 October 2026

@@ -17,50 +17,49 @@ const HERO_SUBTITLE = 'Prices shown are for guidance. Final pricing depends on p
 
 const PLANS = [
   {
-    name: 'Starter',
+    name: 'GBP',
+    priceINR: '₹6,000',
+    priceMYR: 'MYR 800',
+    amountINR: 6000,
+    amountMYR: 800,
+    features: [
+      'Google Business Profile (GBP) optimisation & management',
+      '12 GBP posts per month',
+      'Better visibility on Google Maps & the local 3-pack',
+      'Monthly report',
+    ],
+  },
+  {
+    name: 'GBP + Website SEO',
     priceINR: '₹12,000',
-    priceMYR: 'MYR 650',
+    priceMYR: 'MYR 1,500',
+    amountINR: 12000,
+    amountMYR: 1500,
     features: [
-      'Technical audit & fixes',
-      '10 keywords targeted',
-      'On-page optimization for 5 pages',
+      'Everything in GBP +',
+      'On-page & technical SEO on your website',
+      '4 blog posts per month',
       'Monthly GSC + GA4 report',
-      '1 blog post per month',
     ],
   },
   {
-    name: 'Growth',
-    priceINR: '₹22,000',
-    priceMYR: 'MYR 1,200',
+    name: 'GBP + SEO + AEO + GEO',
+    priceINR: '₹20,000',
+    priceMYR: 'MYR 2,000',
+    amountINR: 20000,
+    amountMYR: 2000,
     features: [
-      'Everything in Starter +',
-      '25 keywords',
-      'On-page for 15 pages',
-      'FAQPage schema on all service pages',
-      '3 blog posts per month',
-      'Link building (5 quality links/month)',
-    ],
-  },
-  {
-    name: 'Scale',
-    priceINR: '₹40,000',
-    priceMYR: 'MYR 2,200',
-    features: [
-      'Everything in Growth +',
-      '60+ keywords',
-      'Full site schema implementation',
-      'GEO/AEO optimization included',
-      '8 blog posts per month',
-      '15+ links/month',
-      'Bi-weekly reporting',
+      'Everything in GBP + Website SEO +',
+      'AEO: FAQs, answer-first content & schema markup',
+      'GEO: optimisation for ChatGPT, Gemini & Google AI Overviews',
     ],
   },
 ]
 
 const PROGRESSION = [
-  { tier: 'Starter', label: 'Core SEO Foundation', items: ['10 keywords', '5-page optimization', 'Monthly reporting', '1 blog'] },
-  { tier: 'Growth', label: 'More Keywords + Content + Links', items: ['25 keywords', '15-page optimization', 'FAQPage schema', '3 blogs', '5 quality links/month'] },
-  { tier: 'Scale', label: 'Full SEO + GEO/AEO + Advanced', items: ['60+ keywords', 'Full site schema', 'GEO/AEO', '8 blogs', '15+ links/month', 'Bi-weekly reporting'] },
+  { tier: 'GBP', label: 'Google Maps Foundation', items: ['GBP optimisation & management', '12 GBP posts/month'] },
+  { tier: 'GBP + Website SEO', label: 'Maps + Website Rankings', items: ['Everything in GBP', 'On-page & technical SEO', '4 blogs/month'] },
+  { tier: 'GBP + SEO + AEO + GEO', label: 'Full SEO + AI Search', items: ['Everything in GBP + Website SEO', 'AEO (answer engine optimisation)', 'GEO (AI search visibility)'] },
 ]
 
 export default function SEOPricing({ country: propCountry }) {
@@ -72,8 +71,8 @@ export default function SEOPricing({ country: propCountry }) {
   const countryName = isMalaysia ? 'Malaysia' : 'India'
   const currencyCode = isMalaysia ? 'MYR' : 'INR'
 
-  const pageTitle = isMalaysia ? 'SEO Packages & Pricing Malaysia (2026) | From MYR 650/Month' : `SEO Pricing ${countryName}, Monthly Retainer Plans (${currencyCode}) | Static Savvy Media`
-  const pageDescription = isMalaysia ? 'Our SEO packages in Malaysia: Starter MYR 650, Growth MYR 1,200 and Scale MYR 2,200 a month, no minimum contract. See what each plan includes for KL, Selangor and nationwide SEO.' : `Transparent SEO pricing for ${countryName} businesses in ${currencyCode}. Starter, Growth, and Scale monthly retainers. No hidden fees.`
+  const pageTitle = isMalaysia ? 'SEO Packages & Pricing Malaysia (2026) | From MYR 800/Month' : `SEO Pricing ${countryName}, Monthly Retainer Plans (${currencyCode}) | Static Savvy Media`
+  const pageDescription = isMalaysia ? 'Our SEO packages in Malaysia: GBP MYR 800, GBP + Website SEO MYR 1,500 and GBP + SEO + AEO + GEO MYR 2,000 a month, no minimum contract. See what each plan includes.' : 'SEO pricing in India: GBP ₹6,000, GBP + Website SEO ₹12,000 and GBP + SEO + AEO + GEO ₹20,000 a month, no minimum contract. See what each plan includes.'
 
   const jsonLdRef = useRef([])
 
@@ -84,7 +83,25 @@ export default function SEOPricing({ country: propCountry }) {
       { name: `${countryName} Pricing`, item: `${SITE_URL}/pricing/${activeCountry}/` },
       { name: 'SEO', item: `${SITE_URL}/pricing/${activeCountry}/seo/` },
     ]})
-    const scripts = [breadcrumbs].map((data) => {
+    const offerCatalog = {
+      '@context': 'https://schema.org',
+      '@type': 'OfferCatalog',
+      name: `SEO Packages ${countryName}`,
+      url: `${SITE_URL}/pricing/${activeCountry}/seo/`,
+      itemListElement: PLANS.map((plan) => {
+        const price = String(isMalaysia ? plan.amountMYR : plan.amountINR)
+        return {
+          '@type': 'Offer',
+          name: `${plan.name} SEO plan`,
+          price,
+          priceCurrency: currencyCode,
+          url: `${SITE_URL}/pricing/${activeCountry}/seo/`,
+          priceSpecification: { '@type': 'UnitPriceSpecification', price, priceCurrency: currencyCode, unitText: 'MONTH' },
+          itemOffered: { '@type': 'Service', name: plan.name, serviceType: 'Search engine optimization' },
+        }
+      }),
+    }
+    const scripts = [breadcrumbs, offerCatalog].map((data) => {
       const script = document.createElement('script')
       script.type = 'application/ld+json'
       script.text = JSON.stringify(data)
@@ -93,7 +110,7 @@ export default function SEOPricing({ country: propCountry }) {
     })
     jsonLdRef.current = scripts
     return () => { jsonLdRef.current.forEach((s) => s.remove()); jsonLdRef.current = [] }
-  }, [activeCountry, countryName, pageTitle, pageDescription])
+  }, [activeCountry, countryName, currencyCode, isMalaysia, pageTitle, pageDescription])
 
   const whatsappHref = buildWhatsAppLink(WHATSAPP_NUMBER, WHATSAPP_MESSAGE)
 

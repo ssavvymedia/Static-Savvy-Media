@@ -23,7 +23,7 @@ export const MADURAI_FAQS = [
   {
     question: 'How much does digital marketing cost in Madurai?',
     answer:
-      'At Static Savvy Media, SEO plans for Madurai businesses start at ₹12,000 a month (Starter), with Growth at ₹22,000 and Scale at ₹40,000 a month, and no minimum contract term. Ad spend for Google or Meta ads is paid separately to the platform. Full details are on our India pricing pages, and we can recommend the right plan after a free audit.',
+      'At Static Savvy Media, SEO plans for Madurai businesses are ₹6,000 a month (Google Business Profile management with 12 posts), ₹12,000 a month (GBP + website SEO with 4 blogs) and ₹20,000 a month (GBP + website SEO + AEO + GEO), with no minimum contract term. Ad spend for Google or Meta ads is paid separately to the platform. Full details are on our India pricing pages, and we can recommend the right plan after a free audit.',
   },
   {
     question: 'How long does it take to see results from SEO in Madurai?',
