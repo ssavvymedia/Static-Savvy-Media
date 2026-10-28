@@ -13,7 +13,7 @@ export const HOME_FAQS = [
   {
     question: 'How do I get started with Static Savvy Media?',
     answer:
-      'The fastest way is WhatsApp, message us at +91-99440-40345. We typically respond within the hour during business hours and will discuss your goals and the right starting point for your business.',
+      'The fastest way is WhatsApp, message us at +91 99440 40345. We typically respond within the hour during business hours and will discuss your goals and the right starting point for your business.',
   },
   {
     question: 'Can Malaysian SMEs use government grants to fund your services?',

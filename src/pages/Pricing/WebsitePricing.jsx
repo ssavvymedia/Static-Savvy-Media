@@ -126,7 +126,7 @@ export default function WebsitePricing({ country: propCountry }) {
         eyebrow={`WEBSITE DESIGN & DEVELOPMENT PRICING (${currencyCode})`}
         title={`Website Design & Development Pricing (${countryName})`}
         subtitle={HERO_SUBTITLE}
-        actions={<Button href={whatsappHref} variant="primary" size="lg" target="_blank" rel="noopener noreferrer">WhatsApp: +91-99440-40345</Button>}
+        actions={<Button href={whatsappHref} variant="primary" size="lg" target="_blank" rel="noopener noreferrer">WhatsApp: +91 99440 40345</Button>}
       >
         <div className="hero__visual-side">
           <img src={websiteHeroImg} width={1536} height={1024} fetchPriority="high" alt={`Website Design Pricing ${countryName}`} className="hero__image" />

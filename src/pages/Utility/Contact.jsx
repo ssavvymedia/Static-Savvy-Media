@@ -6,7 +6,7 @@ import ContactFormSection from '../../components/sections/ContactFormSection.jsx
 import { setSeo } from '../../utils/seo.js'
 import { localBusinessSchema, breadcrumbListSchema } from '../../utils/schema.js'
 import { buildWhatsAppLink } from '../../utils/helpers.js'
-import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, SITE_URL, SITE_NAME, MALAYSIA_OFFICE } from '../../utils/constants.js'
+import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, SITE_URL, SITE_NAME, MALAYSIA_OFFICE, ORG_SAME_AS } from '../../utils/constants.js'
 
 import contactImg from '../../assets/images/Contact.webp'
 import maduraiImg from '../../assets/images/locations/madurai.webp'
@@ -248,7 +248,7 @@ const LOCATIONS = [
     title: 'Madurai',
     subtitle: 'Static Savvy Media, Madurai',
     region: 'Madurai, Tamil Nadu',
-    phone: '+91-99440-40345',
+    phone: '+91 99440 40345',
     phoneHref: 'tel:+919944040345',
     hours: 'Monday–Saturday, 9:00 AM – 6:30 PM IST',
     note: 'Headquarters',
@@ -258,7 +258,7 @@ const LOCATIONS = [
     title: 'Thoothukudi',
     subtitle: 'Static Savvy Media, Thoothukudi',
     region: 'Thoothukudi (Tuticorin), Tamil Nadu',
-    phone: '+91-99440-40345',
+    phone: '+91 99440 40345',
     phoneHref: 'tel:+919944040345',
     hours: null,
     note: "Serving the port city’s industrial, marine, manufacturing and retail businesses.",
@@ -382,7 +382,7 @@ export default function Contact() {
   useEffect(() => {
     setSeo({
       title: 'Contact Static Savvy Media, WhatsApp, Madurai · Thoothukudi · Malaysia',
-      description: 'Contact Static Savvy Media for SEO, GEO/AEO, Local SEO, Google Ads, websites, social media, AI automation and creative services. WhatsApp us at +91-99440-40345.',
+      description: 'Contact Static Savvy Media for SEO, GEO/AEO, Local SEO, Google Ads, websites, social media, AI automation and creative services. WhatsApp us at +91 99440 40345.',
       canonical: `${SITE_URL}/contact/`,
       ogType: 'website',
     })
@@ -394,12 +394,15 @@ export default function Contact() {
       url: `${SITE_URL}/contact/`,
       mainEntity: {
         '@type': 'Organization',
+        '@id': `${SITE_URL}/#organization`,
         name: SITE_NAME,
-        url: SITE_URL,
-        telephone: '+91-99440-40345',
+        url: `${SITE_URL}/`,
+        email: 'info@staticsavvymedia.com',
+        sameAs: ORG_SAME_AS,
+        telephone: '+91 99440 40345',
         contactPoint: {
           '@type': 'ContactPoint',
-          telephone: '+91-99440-40345',
+          telephone: '+91 99440 40345',
           contactType: 'customer service',
           availableLanguage: ['English', 'Tamil'],
         },
@@ -407,7 +410,7 @@ export default function Contact() {
     }
 
     const localBiz = localBusinessSchema({
-      telephone: '+91-99440-40345',
+      telephone: '+91 99440 40345',
       areaServed: ['Madurai', 'Thoothukudi', 'Malaysia'],
     })
 
@@ -1106,7 +1109,7 @@ export default function Contact() {
                   className="btn btn--ghost btn--lg"
                   aria-label="Call Static Savvy Media"
                 >
-                  +91-99440-40345
+                  +91 99440 40345
                 </a>
               </div>
             </div>
@@ -1278,7 +1281,7 @@ export default function Contact() {
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                     <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
                   </svg>
-                  +91-99440-40345
+                  +91 99440 40345
                 </a>
               </div>
             </div>

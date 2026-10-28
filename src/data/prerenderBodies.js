@@ -9,6 +9,7 @@
  * Plain data only (no JSX): this file is loaded by Node at build time.
  */
 import { HOME_FAQS } from './pages/homeFaqs.js'
+import { ORG_SAME_AS, GBP_MAPS } from './sameAs.js'
 import { content as ADS } from './pages/advertisingAgencyMadurai.js'
 import { content as TN } from './pages/tamilNadu.js'
 import { content as TOP } from './pages/topCompaniesMadurai.js'
@@ -35,6 +36,7 @@ const maduraiBusiness = {
   url: `${HOST}/`,
   telephone: PHONE,
   address: MADURAI_ADDRESS,
+  hasMap: GBP_MAPS.madurai,
   areaServed: [
     { '@type': 'City', name: 'Madurai' },
     { '@type': 'State', name: 'Tamil Nadu' },
@@ -50,8 +52,11 @@ const organization = {
   url: `${HOST}/`,
   logo: `${HOST}/og/heroimage.jpg`,
   telephone: PHONE,
+  email: 'info@staticsavvymedia.com',
+  foundingDate: '2021-10-01',
   founder: { '@type': 'Person', name: 'Deepan Kanz', url: `${HOST}/about/deepan-kanz/` },
   address: MADURAI_ADDRESS,
+  sameAs: ORG_SAME_AS,
 }
 
 const faqPage = (faqs) => ({

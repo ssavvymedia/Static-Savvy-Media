@@ -2,6 +2,9 @@
  * Global site constants.
  * Structural configuration only — populated further in the content phase.
  */
+import { ORG_SAME_AS, GBP_MAPS } from "../data/sameAs.js";
+export { ORG_SAME_AS, GBP_MAPS };
+
 export const SITE_NAME = "Static Savvy Media";
 // Canonical production origin (no trailing slash). The site is served on www; the bare domain
 // 308-redirects to it. VITE_SITE_URL can override this at build time (Vite exposes VITE_* vars on

@@ -165,7 +165,7 @@ export default function Pricing({ country: propCountry }) {
         eyebrow={`${countryName.toUpperCase()} PRICING`}
         title={`Transparent Pricing (${currencyCode}), Plans for Every Stage of Growth`}
         subtitle={heroSubtitle}
-        actions={<Button href={whatsappHref} variant="primary" size="lg" target="_blank" rel="noopener noreferrer">WhatsApp: +91-99440-40345</Button>}
+        actions={<Button href={whatsappHref} variant="primary" size="lg" target="_blank" rel="noopener noreferrer">WhatsApp: +91 99440 40345</Button>}
       >
         <div className="hero__visual-side">
           <img

@@ -17,7 +17,7 @@ const PAGE_TITLE =
   'Digital Marketing Services, SEO, GEO/AEO, Ads & More | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
-  'Digital marketing services in Madurai, SEO, GEO/AEO, Local SEO, Google Ads, social media, website design and AI automation from Static Savvy Media. WhatsApp: +91-99440-40345.'
+  'Digital marketing services in Madurai, SEO, GEO/AEO, Local SEO, Google Ads, social media, website design and AI automation from Static Savvy Media. WhatsApp: +91 99440 40345.'
 
 const LOCATION_SERVICE_LINKS = [
   { name: 'SEO Company in Madurai', path: '/services/seo/madurai/' },
@@ -281,7 +281,7 @@ export default function Services() {
   const ctaLabelWithHeaderIcon = (
     <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.55rem', verticalAlign: 'middle' }}>
       <WhatsAppIcon size={20} />
-      <span>WhatsApp: +91-99440-40345</span>
+      <span>WhatsApp: +91 99440 40345</span>
     </span>
   )
 

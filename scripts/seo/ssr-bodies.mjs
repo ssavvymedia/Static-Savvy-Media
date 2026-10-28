@@ -8,10 +8,12 @@ import { renderToString } from 'react-dom/server'
 import * as React from 'react'
 import { MemoryRouter } from 'react-router-dom'
 import { createServer } from 'vite'
+import { ORG_SAME_AS, GBP_MAPS } from '../../src/data/sameAs.js'
 
 const HOST = 'https://www.staticsavvymedia.com'
 const PHONE = '+91 99440 40345'
 const ORG_ID = `${HOST}/#organization`
+const EMAIL = 'info@staticsavvymedia.com'
 const decode = (s) => s.replace(/<br\s*\/?>/g, ' ').replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/&#x27;|&#39;/g, "'").replace(/&quot;/g, '"').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ').trim()
 
 /* Text of every element whose class list has a token ending in `suffix` (React output is well-formed,
@@ -59,11 +61,11 @@ export async function ssrBodies(root, distAssets) {
     const madurai = {
       '@type': 'ProfessionalService', '@id': `${HOST}/locations/madurai/#localbusiness`, name: 'Static Savvy Media', url: `${HOST}/locations/madurai/`, telephone: PHONE,
       address: { '@type': 'PostalAddress', streetAddress: '2nd Floor, 4/3, Srinivasa Perumal Koil St, Kamarajar Salai', addressLocality: 'Madurai', addressRegion: 'Tamil Nadu', postalCode: '625009', addressCountry: 'IN' },
-      parentOrganization: { '@id': ORG_ID },
+      hasMap: GBP_MAPS.madurai, parentOrganization: { '@id': ORG_ID },
     }
     const malaysia = {
       '@type': 'ProfessionalService', '@id': `${HOST}/locations/malaysia/#localbusiness`, name: C.MALAYSIA_OFFICE.name, url: `${HOST}/locations/malaysia/`,
-      address: C.MALAYSIA_POSTAL_ADDRESS, parentOrganization: { '@id': ORG_ID },
+      address: C.MALAYSIA_POSTAL_ADDRESS, telephone: C.MALAYSIA_OFFICE.phoneE164, hasMap: GBP_MAPS.malaysia, parentOrganization: { '@id': ORG_ID },
     }
     for (const r of ssrRoutes) {
      /* One page failing to render must not strip the crawlable body from every other route:
@@ -90,7 +92,7 @@ export async function ssrBodies(root, distAssets) {
       const biz = r.office === 'madurai' ? madurai : malaysia
       const isAbout = r.kind === 'about'
       const crumbList = { '@type': 'BreadcrumbList', itemListElement: crumbs.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: `${HOST}${c.path}` })) }
-      const org = { '@type': 'Organization', '@id': ORG_ID, name: 'Static Savvy Media', url: `${HOST}/`, telephone: PHONE }
+      const org = { '@type': 'Organization', '@id': ORG_ID, name: 'Static Savvy Media', url: `${HOST}/`, telephone: PHONE, email: EMAIL, sameAs: ORG_SAME_AS }
       /* 'article' = guide post (no Service claim); 'page' = hub/utility page (WebPage subtype, e.g. CollectionPage, ContactPage). */
       const nodes = r.kind === 'article' ? [org, crumbList]
         : r.kind === 'page' ? [
@@ -101,7 +103,7 @@ export async function ssrBodies(root, distAssets) {
         ]
         : isAbout ? [
         { '@type': 'AboutPage', '@id': `${HOST}${r.route}#webpage`, name: decode(h1[1]), url: `${HOST}${r.route}`, about: { '@id': ORG_ID }, mainEntity: { '@id': ORG_ID } },
-        { '@type': 'Organization', '@id': ORG_ID, name: 'Static Savvy Media', url: `${HOST}/`, telephone: PHONE, foundingDate: '2021-10-01', foundingLocation: { '@type': 'Place', name: 'Madurai, Tamil Nadu, India' }, founder: { '@id': `${HOST}/about/deepan-kanz/#person` }, areaServed: [{ '@type': 'City', name: 'Madurai' }, { '@type': 'City', name: 'Thoothukudi' }, { '@type': 'Country', name: 'Malaysia' }], subOrganization: [{ '@id': madurai['@id'] }, { '@id': malaysia['@id'] }] },
+        { '@type': 'Organization', '@id': ORG_ID, name: 'Static Savvy Media', url: `${HOST}/`, telephone: PHONE, email: EMAIL, sameAs: ORG_SAME_AS, foundingDate: '2021-10-01', foundingLocation: { '@type': 'Place', name: 'Madurai, Tamil Nadu, India' }, founder: { '@id': `${HOST}/about/deepan-kanz/#person` }, areaServed: [{ '@type': 'City', name: 'Madurai' }, { '@type': 'City', name: 'Thoothukudi' }, { '@type': 'Country', name: 'Malaysia' }], subOrganization: [{ '@id': madurai['@id'] }, { '@id': malaysia['@id'] }] },
         { '@type': 'Person', '@id': `${HOST}/about/deepan-kanz/#person`, name: 'Deepan Kanz', jobTitle: 'Founder', url: `${HOST}/about/deepan-kanz/`, worksFor: { '@id': ORG_ID } },
         madurai,
         malaysia,
@@ -109,7 +111,7 @@ export async function ssrBodies(root, distAssets) {
       ] : [
         { '@type': 'Service', name: r.service || decode(h1[1]), serviceType: r.serviceType, provider: { '@id': biz['@id'] }, areaServed: r.area, url: `${HOST}${r.route}`, ...(r.offers ? { offers: r.offers.map(([name, price]) => ({ '@type': 'Offer', name, price: String(price), priceCurrency: r.currency || 'INR', url: `${HOST}${r.route}`, priceSpecification: { '@type': 'UnitPriceSpecification', price: String(price), priceCurrency: r.currency || 'INR', unitText: 'MONTH' } })) } : {}) },
         biz,
-        { '@type': 'Organization', '@id': ORG_ID, name: 'Static Savvy Media', url: `${HOST}/`, telephone: PHONE },
+        org,
         { '@type': 'BreadcrumbList', itemListElement: crumbs.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: `${HOST}${c.path}` })) },
       ]
       if (r.route.startsWith('/blog/') && r.kind !== 'page') {

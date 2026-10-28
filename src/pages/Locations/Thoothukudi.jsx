@@ -30,7 +30,7 @@ const PAGE_TITLE =
   'Digital Marketing in Thoothukudi (Tuticorin), SEO, Ads & More | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
-  "Static Savvy Media serves Thoothukudi businesses with SEO, Local SEO, Google Ads, and social media marketing. Port city specialists, industrial, marine, manufacturing, and retail. WhatsApp: +91-99440-40345."
+  "Static Savvy Media serves Thoothukudi businesses with SEO, Local SEO, Google Ads, and social media marketing. Port city specialists, industrial, marine, manufacturing, and retail. WhatsApp: +91 99440 40345."
 
 const HERO_EYEBROW = 'Thoothukudi • Tuticorin • Port City'
 
@@ -242,7 +242,7 @@ export default function Thoothukudi() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            WhatsApp: +91-99440-40345
+            WhatsApp: +91 99440 40345
           </Button>
         }
       >
@@ -542,7 +542,7 @@ export default function Thoothukudi() {
       <CTASection
         title="Grow your Thoothukudi business with digital marketing that understands the port city economy."
         subtitle=""
-        primaryLabel="WhatsApp: +91-99440-40345"
+        primaryLabel="WhatsApp: +91 99440 40345"
         primaryHref={whatsappHref}
       />
       <ContactFormSection />

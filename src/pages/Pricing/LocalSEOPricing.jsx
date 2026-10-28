@@ -120,7 +120,7 @@ export default function LocalSEOPricing({ country: propCountry }) {
         eyebrow={`LOCAL SEO PRICING (${currencyCode})`}
         title={`Local SEO Pricing (${countryName}), Google Maps Visibility Plans`}
         subtitle={HERO_SUBTITLE}
-        actions={<Button href={whatsappHref} variant="primary" size="lg" target="_blank" rel="noopener noreferrer">WhatsApp: +91-99440-40345</Button>}
+        actions={<Button href={whatsappHref} variant="primary" size="lg" target="_blank" rel="noopener noreferrer">WhatsApp: +91 99440 40345</Button>}
       >
         <div className="hero__visual-side">
           <img src={localSeoHeroImg} width={1536} height={1024} fetchPriority="high" alt={`Local SEO Pricing ${countryName}`} className="hero__image" />

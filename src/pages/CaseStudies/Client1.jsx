@@ -106,7 +106,7 @@ export default function Client1() {
         eyebrow="CASE STUDY · MADURAI"
         title="Madurai SEO and Local SEO Case Study"
         subtitle="A detailed look at the challenge, SEO strategy, Local SEO implementation and measurable outcomes of a Madurai business project."
-        actions={<Button href={whatsappHref} variant="primary" size="lg" target="_blank" rel="noopener noreferrer">WhatsApp: +91-99440-40345</Button>}
+        actions={<Button href={whatsappHref} variant="primary" size="lg" target="_blank" rel="noopener noreferrer">WhatsApp: +91 99440 40345</Button>}
       >
         <div className="hero__visual-side">
           <img src={client1HeroImg} width={1536} height={1024} fetchPriority="high" alt="Madurai SEO and Local SEO Case Study" className="hero__image" />
@@ -320,7 +320,7 @@ export default function Client1() {
         primaryLabel={
           <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.55rem', verticalAlign: 'middle' }}>
             <WhatsAppIcon size={22} />
-            <span>WhatsApp: +91-99440-40345</span>
+            <span>WhatsApp: +91 99440 40345</span>
           </span>
         }
         primaryHref={whatsappHref}

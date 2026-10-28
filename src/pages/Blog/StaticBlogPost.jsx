@@ -5,7 +5,7 @@ import CTASection from '../../components/sections/CTASection.jsx'
 import BlogFeaturedImage from '../../components/blog/BlogFeaturedImage.jsx'
 import { setSeo } from '../../utils/seo.js'
 import { buildWhatsAppLink } from '../../utils/helpers.js'
-import { WHATSAPP_NUMBER, SITE_URL } from '../../utils/constants.js'
+import { WHATSAPP_NUMBER, SITE_URL, ORG_SAME_AS } from '../../utils/constants.js'
 import { getNewBlogPost, WA, MY_LINE } from '../../data/newBlogPosts.js'
 import { getAffiliate, AFFILIATE_REL } from '../../data/affiliateLinks.js'
 
@@ -77,7 +77,7 @@ export default function StaticBlogPost() {
         '@context': 'https://schema.org',
         '@graph': [
           { '@type': isArticle ? 'Article' : 'BlogPosting', headline: post.h1, description: post.description, image, url, mainEntityOfPage: url, datePublished: post.published || '2026-10-24', dateModified: post.modified || post.published || '2026-10-24', author: { '@type': 'Person', name: 'Deepan Kanz', url: `${SITE_URL}/about/deepan-kanz/` }, publisher: { '@type': 'Organization', name: 'Static Savvy Media', url: SITE_URL, logo: { '@type': 'ImageObject', url: `${SITE_URL}/favicon.png` } } },
-          { '@type': 'Organization', '@id': `${SITE_URL}/#organization`, name: 'Static Savvy Media', url: `${SITE_URL}/`, telephone: '+91 99440 40345' },
+          { '@type': 'Organization', '@id': `${SITE_URL}/#organization`, name: 'Static Savvy Media', url: `${SITE_URL}/`, telephone: '+91 99440 40345', email: 'info@staticsavvymedia.com', sameAs: ORG_SAME_AS },
           ...(isArticle ? [] : [myRegion
             ? { '@type': 'ProfessionalService', '@id': `${SITE_URL}/locations/malaysia/#localbusiness`, name: 'Static Savvy Media Malaysia', url: `${SITE_URL}/locations/malaysia/`, telephone: '+60 12-453 7030', address: { '@type': 'PostalAddress', addressLocality: 'Rawang', addressRegion: 'Selangor', addressCountry: 'MY' }, parentOrganization: { '@id': `${SITE_URL}/#organization` } }
             : { '@type': 'ProfessionalService', '@id': `${SITE_URL}/locations/madurai/#localbusiness`, name: 'Static Savvy Media', url: `${SITE_URL}/locations/madurai/`, telephone: '+91 99440 40345', address: { '@type': 'PostalAddress', streetAddress: '2nd Floor, 4/3, Srinivasa Perumal Koil St, Kamarajar Salai', addressLocality: 'Madurai', addressRegion: 'Tamil Nadu', postalCode: '625009', addressCountry: 'IN' }, parentOrganization: { '@id': `${SITE_URL}/#organization` } },

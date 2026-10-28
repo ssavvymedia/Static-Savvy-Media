@@ -123,7 +123,7 @@ export default function SEOPricing({ country: propCountry }) {
         eyebrow={`SEO PRICING (${currencyCode})`}
         title={`SEO Pricing (${countryName}), Monthly Retainer Plans`}
         subtitle={HERO_SUBTITLE}
-        actions={<Button href={whatsappHref} variant="primary" size="lg" target="_blank" rel="noopener noreferrer">WhatsApp: +91-99440-40345</Button>}
+        actions={<Button href={whatsappHref} variant="primary" size="lg" target="_blank" rel="noopener noreferrer">WhatsApp: +91 99440 40345</Button>}
       >
         <div className="hero__visual-side">
           <img src={seoHeroImg} width={1536} height={1024} fetchPriority="high" alt={`SEO Pricing ${countryName}`} className="hero__image" />

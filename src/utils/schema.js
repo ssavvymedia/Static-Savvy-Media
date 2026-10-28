@@ -1,4 +1,4 @@
-import { SITE_NAME, SITE_URL } from './constants.js'
+import { SITE_NAME, SITE_URL, ORG_SAME_AS } from './constants.js'
 
 /**
  * Structured data builders.
@@ -10,7 +10,8 @@ function schema(type, data) {
 }
 
 export function organizationSchema(data = {}) {
-  return schema('Organization', { name: SITE_NAME, url: SITE_URL, ...data })
+  // One Organization entity site-wide: same @id, canonical URL and official profiles (sameAs).
+  return schema('Organization', { '@id': `${SITE_URL}/#organization`, name: SITE_NAME, url: `${SITE_URL}/`, logo: `${SITE_URL}/favicon.png`, telephone: '+91 99440 40345', email: 'info@staticsavvymedia.com', sameAs: ORG_SAME_AS, ...data })
 }
 
 export function webSiteSchema(data = {}) {

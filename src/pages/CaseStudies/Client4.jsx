@@ -535,7 +535,7 @@ export default function Client4() {
         primaryLabel={
           <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.55rem', verticalAlign: 'middle' }}>
             <WhatsAppIcon size={22} />
-            <span>WhatsApp: +91-99440-40345</span>
+            <span>WhatsApp: +91 99440 40345</span>
           </span>
         }
         primaryHref={whatsappHref}

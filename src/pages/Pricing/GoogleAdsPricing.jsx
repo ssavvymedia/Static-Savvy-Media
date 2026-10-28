@@ -88,7 +88,7 @@ export default function GoogleAdsPricing({ country: propCountry }) {
         eyebrow={`GOOGLE ADS PRICING (${currencyCode})`}
         title={`Google Ads Pricing (${countryName}), Management Fee Packages`}
         subtitle={HERO_SUBTITLE}
-        actions={<Button href={whatsappHref} variant="primary" size="lg" target="_blank" rel="noopener noreferrer">WhatsApp: +91-99440-40345</Button>}
+        actions={<Button href={whatsappHref} variant="primary" size="lg" target="_blank" rel="noopener noreferrer">WhatsApp: +91 99440 40345</Button>}
       >
         <div className="hero__visual-side">
           <img src={googleAdsHeroImg} width={1536} height={1024} fetchPriority="high" alt={`Google Ads Pricing ${countryName}`} className="hero__image" />

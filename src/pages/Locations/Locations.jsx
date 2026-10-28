@@ -352,7 +352,7 @@ export default function Locations() {
       <CTASection
         title="Ready to Grow Your Business Locally?"
         subtitle="Message us on WhatsApp, we respond within the hour, every business day."
-        primaryLabel="WhatsApp: +91-99440-40345"
+        primaryLabel="WhatsApp: +91 99440 40345"
         primaryHref={whatsappHref}
         secondaryLabel="Explore Our Services"
         secondaryTo="/services/"

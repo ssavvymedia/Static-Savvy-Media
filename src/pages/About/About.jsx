@@ -147,7 +147,7 @@ const FAQS = [
   },
   {
     question: 'How do I get started?',
-    answer: 'The fastest way is WhatsApp. Message +91-99440-40345 for an initial conversation about your digital marketing strategy.',
+    answer: 'The fastest way is WhatsApp. Message +91 99440 40345 for an initial conversation about your digital marketing strategy.',
   },
 ]
 
@@ -175,7 +175,6 @@ export default function About() {
     const org = organizationSchema({
       name: 'Static Savvy Media',
       description: PAGE_DESCRIPTION,
-      url: `${SITE_URL}/about/`,
       foundingDate: '2021-10-01',
       founder: {
         '@type': 'Person',

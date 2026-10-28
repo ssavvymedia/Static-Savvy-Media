@@ -15,7 +15,7 @@ export const AFFILIATE_REL = 'sponsored nofollow noopener'
 export const AFFILIATE_LINKS = {
   /* ---------- Web hosting (blog: best-web-hosting-india-malaysia-small-business) ---------- */
   hostinger_in: { name: 'Hostinger (India)', url: 'https://www.hostinger.com/in?REFERRALCODE=deepankanz', affiliate: true },
-  hostinger_my: { name: 'Hostinger (Malaysia)', url: 'https://www.hostinger.my/web-hosting', affiliate: false },
+  hostinger_my: { name: 'Hostinger (Malaysia)', url: 'https://www.hostinger.com/my/web-hosting', affiliate: false },
   milesweb: { name: 'MilesWeb', url: 'https://www.milesweb.in/hosting/web-hosting', affiliate: false },
   exabytes: { name: 'Exabytes', url: 'https://www.exabytes.my/web-hosting/business-web-hosting', affiliate: false },
   siteground: { name: 'SiteGround', url: 'https://www.siteground.com/web-hosting.htm', affiliate: false },

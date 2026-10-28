@@ -323,7 +323,7 @@ export default function SEO() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            WhatsApp: +91-99440-40345
+            WhatsApp: +91 99440 40345
           </Button>
         }
       >
