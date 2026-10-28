@@ -100,6 +100,37 @@ export default function LocalServicePage({ content }) {
         </div>
       )}
 
+      {content.quickAnswer && (
+        <section className="section">
+          <div className="container">
+            <div className="glass-card" style={{ padding: '2rem' }}>
+              <h2 className="section-heading__title">{content.quickAnswer.heading}</h2>
+              {content.quickAnswer.text.map((para) => (
+                <p key={para.slice(0, 32)}>{para}</p>
+              ))}
+              {content.quickAnswer.facts && (
+                <dl style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1rem', marginTop: '1.5rem' }}>
+                  {content.quickAnswer.facts.map((f) => (
+                    <div key={f.label}>
+                      <dt style={{ fontWeight: 600, opacity: 0.8 }}>{f.label}</dt>
+                      <dd style={{ margin: 0 }}>
+                        {f.value}
+                        {f.link && (
+                          <>
+                            {' '}
+                            <Link to={f.link.to}>{f.link.label}</Link>
+                          </>
+                        )}
+                      </dd>
+                    </div>
+                  ))}
+                </dl>
+              )}
+            </div>
+          </div>
+        </section>
+      )}
+
       {content.sections.map((sec) => (
         <section key={sec.heading} className="section">
           <div className="container">

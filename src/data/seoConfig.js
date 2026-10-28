@@ -453,7 +453,7 @@ export const seoConfig = {
     seo: {
       title: "Web Design & Development Company in Madurai | Static Savvy Media",
       description:
-        "Website design and development company in Madurai. Fast, mobile-first, SEO-ready business, WordPress and e-commerce websites. Rated 4.9★ on Google. WhatsApp us.",
+        "Web design company in Madurai since 2021: mobile-first, SEO-ready business, WordPress and e-commerce websites, landing pages from ₹15,000. Rated 4.9★ on Google.",
       canonical: `${BASE_URL}/services/website-design-development/madurai`,
       focusKeyword: "website development company in Madurai",
       ogTitle: "Web Design & Development Company in Madurai | Static Savvy Media",
