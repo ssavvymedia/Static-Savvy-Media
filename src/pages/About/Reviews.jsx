@@ -8,9 +8,10 @@ import CTASection from '../../components/sections/CTASection.jsx'
 import ContactFormSection from '../../components/sections/ContactFormSection.jsx'
 import { ScrollReveal } from '../../components/animations/ScrollReveal.jsx'
 import { setSeo } from '../../utils/seo.js'
-import { localBusinessSchema, reviewSchema, faqPageSchema, breadcrumbListSchema } from '../../utils/schema.js'
+import { breadcrumbListSchema } from '../../utils/schema.js'
 import { buildWhatsAppLink } from '../../utils/helpers.js'
 import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, SITE_URL } from '../../utils/constants.js'
+import { GOOGLE_REVIEWS, GBP_REVIEW_SUMMARY } from '../../data/googleReviews.js'
 
 /* ============================================================
    CONTENT, Approved Static Savvy Media Reviews Page Content
@@ -22,15 +23,18 @@ const PAGE_DESCRIPTION =
   'Read client reviews of Static Savvy Media across Madurai, Thoothukudi and Malaysia. Explore real feedback and ratings from our Google Business Profiles.'
 
 /**
- * Reviews dataset.
- *
- * Connect a real Google Business Profile / GMB API source here.
- * The architecture supports loading, error, and empty states.
- *
- * When no reviews are available, the page shows a polished empty state.
- * DO NOT populate this array with fabricated review data.
+ * Reviews dataset: real Google reviews copied word for word from the Madurai Google Business
+ * Profile (src/data/googleReviews.js). DO NOT add fabricated reviews. Visible only: no Review /
+ * AggregateRating schema is emitted (self-serving review markup).
  */
-const REVIEWS = []
+const REVIEWS = GOOGLE_REVIEWS.map((r) => ({
+  id: r.id,
+  reviewerName: r.name,
+  reviewText: r.text,
+  rating: 5,
+  location: 'Madurai',
+  source: 'Google review',
+}))
 
 const LOCATIONS = [
   { key: 'all', label: 'All Locations' },
@@ -39,11 +43,6 @@ const LOCATIONS = [
   { key: 'Malaysia', label: 'Malaysia' },
 ]
 
-const SORT_OPTIONS = [
-  { key: 'recent', label: 'Most Recent' },
-  { key: 'highest', label: 'Highest Rated' },
-  { key: 'lowest', label: 'Lowest Rated' },
-]
 
 /* ============================================================
    HELPER, Star Renderer
@@ -67,7 +66,6 @@ function StarRating({ rating, size = '0.9rem' }) {
 
 export default function Reviews() {
   const [activeLocation, setActiveLocation] = useState('all')
-  const [sortBy, setSortBy] = useState('recent')
   const [expandedIds, setExpandedIds] = useState(new Set())
   const [loading] = useState(false)
   const [error] = useState(null)
@@ -98,45 +96,6 @@ export default function Reviews() {
       return script
     })
 
-    /* Only add LocalBusiness + AggregateRating + Review schemas if real reviews exist */
-    if (REVIEWS.length > 0) {
-      const averageRating = REVIEWS.reduce((sum, r) => sum + r.rating, 0) / REVIEWS.length
-
-      const localBiz = localBusinessSchema({
-        name: 'Static Savvy Media',
-        url: SITE_URL,
-        aggregateRating: {
-          '@type': 'AggregateRating',
-          ratingValue: Math.round(averageRating * 10) / 10,
-          reviewCount: REVIEWS.length,
-          bestRating: 5,
-          worstRating: 1,
-        },
-        review: REVIEWS.map((review) => ({
-          '@type': 'Review',
-          reviewBody: review.reviewText,
-          author: { '@type': 'Person', name: review.reviewerName },
-          reviewRating: {
-            '@type': 'Rating',
-            ratingValue: review.rating,
-            bestRating: 5,
-            worstRating: 1,
-          },
-          itemReviewed: {
-            '@type': 'Organization',
-            name: 'Static Savvy Media',
-            url: SITE_URL,
-          },
-        })),
-      })
-
-      const script = document.createElement('script')
-      script.type = 'application/ld+json'
-      script.text = JSON.stringify(localBiz)
-      document.head.appendChild(script)
-      scripts.push(script)
-    }
-
     jsonLdRef.current = scripts
 
     return () => {
@@ -147,49 +106,27 @@ export default function Reviews() {
 
   /* ---- Derived Data ---- */
   const filteredReviews = useMemo(() => {
-    let result = activeLocation === 'all'
+    const result = activeLocation === 'all'
       ? REVIEWS
       : REVIEWS.filter((r) => r.location === activeLocation)
 
-    if (sortBy === 'highest') {
-      result = [...result].sort((a, b) => b.rating - a.rating)
-    } else if (sortBy === 'lowest') {
-      result = [...result].sort((a, b) => a.rating - b.rating)
-    } else {
-      result = [...result].sort((a, b) => new Date(b.date) - new Date(a.date))
-    }
 
     return result
-  }, [activeLocation, sortBy])
-
-  const ratingStats = useMemo(() => {
-    const source = activeLocation === 'all' ? REVIEWS : REVIEWS.filter((r) => r.location === activeLocation)
-    if (source.length === 0) {
-      return { average: 0, total: 0, distribution: [0, 0, 0, 0, 0] }
-    }
-    const total = source.length
-    const sum = source.reduce((acc, r) => acc + r.rating, 0)
-    const average = sum / total
-    const distribution = [0, 0, 0, 0, 0]
-    source.forEach((r) => {
-      if (r.rating >= 1 && r.rating <= 5) distribution[r.rating - 1]++
-    })
-    return { average, total, distribution }
   }, [activeLocation])
 
-  const locationStats = useMemo(() => {
-    const stats = {}
-    for (const loc of ['Madurai', 'Thoothukudi', 'Malaysia']) {
-      const locReviews = REVIEWS.filter((r) => r.location === loc)
-      if (locReviews.length > 0) {
-        const avg = locReviews.reduce((s, r) => s + r.rating, 0) / locReviews.length
-        stats[loc] = { average: Math.round(avg * 10) / 10, count: locReviews.length }
-      } else {
-        stats[loc] = null
-      }
-    }
-    return stats
-  }, [])
+  /* Rating figures come from the Google Business Profile itself (not computed from the
+     quoted sample), so the page never overstates the rating. */
+  const ratingStats = useMemo(() => (
+    activeLocation === 'all' || activeLocation === 'Madurai'
+      ? { average: GBP_REVIEW_SUMMARY.rating, total: GBP_REVIEW_SUMMARY.count }
+      : { average: 0, total: 0 }
+  ), [activeLocation])
+
+  const locationStats = {
+    Madurai: { average: GBP_REVIEW_SUMMARY.rating, count: GBP_REVIEW_SUMMARY.count },
+    Thoothukudi: null,
+    Malaysia: null,
+  }
 
   /* ---- Read More Toggle ---- */
   const toggleExpanded = (id) => {
@@ -234,16 +171,16 @@ export default function Reviews() {
               </div>
               <div className="reviews-hero-dashboard__rating-display">
                 <div className="reviews-hero-dashboard__rating-number">
-                  {hasReviews ? ratingStats.average.toFixed(1) : '4.9'}
+                  {GBP_REVIEW_SUMMARY.rating.toFixed(1)}
                 </div>
                 <div className="reviews-hero-dashboard__rating-label">
-                  {hasReviews ? `/ 5 · ${ratingStats.total} reviews` : '/ 5 on Google · 100+ reviews'}
+                  {`/ 5 on Google · ${GBP_REVIEW_SUMMARY.count} reviews`}
                 </div>
               </div>
             </div>
             <div className="reviews-hero-dashboard__stars">
               {[1, 2, 3, 4, 5].map((s) => (
-                <span key={s} className={`reviews-hero-dashboard__star ${s > (hasReviews ? Math.round(ratingStats.average) : 0) ? 'reviews-hero-dashboard__star--empty' : ''}`}>
+                <span key={s} className={`reviews-hero-dashboard__star ${s > 5 ? 'reviews-hero-dashboard__star--empty' : ''}`}>
                   ★
                 </span>
               ))}
@@ -252,13 +189,13 @@ export default function Reviews() {
               <div className="reviews-hero-dashboard__mini-card">
                 <span className="reviews-hero-dashboard__mini-stars">★★★★★</span>
                 <span className="reviews-hero-dashboard__mini-text">
-                  {hasReviews ? 'Verified client feedback' : 'Google Business Profile reviews'}
+                  {'Google Business Profile reviews'}
                 </span>
               </div>
               <div className="reviews-hero-dashboard__mini-card">
                 <span className="reviews-hero-dashboard__mini-stars">★★★★★</span>
                 <span className="reviews-hero-dashboard__mini-text">
-                  {hasReviews ? `${ratingStats.total} total reviews` : '3 locations covered'}
+                  {`${GBP_REVIEW_SUMMARY.count} reviews on Google`}
                 </span>
               </div>
             </div>
@@ -340,52 +277,19 @@ export default function Reviews() {
                 ))}
               </div>
 
-              {/* ---- Sort Control ---- */}
-              {hasReviews && (
-                <div className="reviews-sort">
-                  <span className="reviews-sort__label">Sort by:</span>
-                  <select
-                    className="reviews-sort__select"
-                    value={sortBy}
-                    onChange={(e) => setSortBy(e.target.value)}
-                  >
-                    {SORT_OPTIONS.map((opt) => (
-                      <option key={opt.key} value={opt.key}>{opt.label}</option>
-                    ))}
-                  </select>
-                </div>
-              )}
-
-              {/* ---- Rating Summary ---- */}
-              {hasReviews && (
+              {/* ---- Rating Summary (from the Google Business Profile) ---- */}
+              {hasReviews && ratingStats.total > 0 && (
                 <ScrollReveal>
                   <div className="reviews-rating-summary glass-card gradient-border">
                     <div className="reviews-rating-summary__big">
                       <div className="reviews-rating-summary__number">
                         {ratingStats.average.toFixed(1)}
                       </div>
-                      <div className="reviews-rating-summary__label">Average Rating</div>
+                      <div className="reviews-rating-summary__label">Google rating</div>
                       <div className="reviews-rating-summary__count">
-                        {ratingStats.total} {ratingStats.total === 1 ? 'review' : 'reviews'}
+                        {ratingStats.total} reviews ·{' '}
+                        <a href={GBP_REVIEW_SUMMARY.url} target="_blank" rel="noopener noreferrer">View on Google</a>
                       </div>
-                    </div>
-                    <div className="reviews-rating-summary__bars">
-                      {[5, 4, 3, 2, 1].map((star) => {
-                        const count = ratingStats.distribution[star - 1]
-                        const pct = ratingStats.total > 0 ? (count / ratingStats.total) * 100 : 0
-                        return (
-                          <div key={star} className="reviews-rating-summary__bar-row">
-                            <span className="reviews-rating-summary__bar-label">{star} ★</span>
-                            <div className="reviews-rating-summary__bar-track">
-                              <div
-                                className="reviews-rating-summary__bar-fill"
-                                style={{ width: `${pct}%` }}
-                              />
-                            </div>
-                            <span className="reviews-rating-summary__bar-count">{count}</span>
-                          </div>
-                        )
-                      })}
                     </div>
                   </div>
                 </ScrollReveal>
@@ -431,7 +335,7 @@ export default function Reviews() {
                   <SectionHeading
                     eyebrow="Reviews"
                     title={`${activeLocation === 'all' ? 'All' : activeLocation} Client Reviews`}
-                    subtitle={`Showing ${filteredReviews.length} ${filteredReviews.length === 1 ? 'review' : 'reviews'}`}
+                    subtitle={`${filteredReviews.length} Google reviews quoted word for word from our Madurai Google Business Profile`}
                   />
                   <div className="reviews-grid">
                     {filteredReviews.map((review, index) => (
@@ -481,6 +385,7 @@ export default function Reviews() {
                               )}
                             </div>
                             <div className="review-card__location">{review.location}</div>
+                            <a className="review-card__google-link" href={GBP_REVIEW_SUMMARY.url} target="_blank" rel="noopener noreferrer">View on Google</a>
                             {review.date && (
                               <div className="review-card__date">{review.date}</div>
                             )}

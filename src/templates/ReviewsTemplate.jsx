@@ -12,7 +12,7 @@ export default function ReviewsTemplate() {
     <div className="reviews-template">
       <Breadcrumbs />
       <HeroSection eyebrow="Reviews" title="Client Reviews" />
-      <TestimonialsSection title="Verified Reviews" />
+      <TestimonialsSection title="Verified Google Reviews" count={7} />
       <CTASection title="Join Our Happy Clients" />
     </div>
   )

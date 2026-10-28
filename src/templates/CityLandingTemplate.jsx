@@ -13,7 +13,9 @@ import { faqPageSchema, breadcrumbListSchema } from '../utils/schema.js'
 import { buildWhatsAppLink } from '../utils/helpers.js'
 import { SITE_URL } from '../utils/constants.js'
 import { ORG_SAME_AS, GBP_MAPS } from '../data/sameAs.js'
-import { PRICE_TIERS } from '../data/cityPages.js'
+import { PRICE_TIERS, cityPages } from '../data/cityPages.js'
+import GoogleReviewsSection from '../components/sections/GoogleReviewsSection.jsx'
+import { pickReviews } from '../data/googleReviews.js'
 import networkImg from '../assets/images/locations/Locationmain.webp'
 import founderImg from '../assets/images/About/DeepanFounder.webp'
 import '../styles/pages/city-landing.css'
@@ -226,6 +228,13 @@ export default function CityLandingTemplate({ city }) {
           </div>
         </div>
       </section>
+
+      {/* ---------------- GOOGLE REVIEWS (verbatim, visible only, no schema) ---------------- */}
+      <GoogleReviewsSection
+        reviews={pickReviews(Math.max(0, cityPages.findIndex((c) => c.slug === city.slug)) * 3, 3)}
+        title={`What clients say about working with us`}
+        subtitle={`Real Google reviews from our Madurai clients. ${city.name} clients get the same team and process.`}
+      />
 
       {/* ---------------- FOUNDER ---------------- */}
       <section className="section city-founder">
