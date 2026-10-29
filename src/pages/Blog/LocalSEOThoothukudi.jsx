@@ -696,7 +696,7 @@ export default function LocalSEOThoothukudi() {
       {/* ============================================================
           FINAL CTA
           ============================================================ */}
-      <RelatedReading links={[['/services/local-seo/thoothukudi/', 'Local SEO in Thoothukudi'], ['/services/seo/thoothukudi/', 'SEO in Thoothukudi'], ['/services/google-ads/thoothukudi/', 'Google Ads in Thoothukudi'], ['/locations/thoothukudi/', 'Digital marketing in Thoothukudi'], ['/industries/port-marine-industrial-thoothukudi/', 'Port, marine and industrial marketing'], ['/pricing/india/local-seo/', 'Local SEO pricing (India)']]} />
+      <RelatedReading links={[['/services/local-seo/thoothukudi/', 'Local SEO in Thoothukudi'], ['/services/seo/thoothukudi/', 'SEO in Thoothukudi'], ['/services/google-ads/thoothukudi/', 'Google Ads in Thoothukudi'], ['/locations/thoothukudi/', 'Digital marketing in Thoothukudi'], ['/industries/port-marine-industrial-thoothukudi/', 'Port, marine and industrial marketing'], ['/contact/', 'Get a custom quote']]} />
 
       <CTASection
         eyebrow="Local SEO"

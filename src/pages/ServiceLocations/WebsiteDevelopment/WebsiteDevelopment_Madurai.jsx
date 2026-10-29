@@ -5,7 +5,7 @@ import { SITE_URL, GOOGLE_TRUST_LINE } from '../../../utils/constants.js'
 
 const PATH = '/services/website-design-development/madurai/'
 const DESCRIPTION =
-  'Web design company in Madurai since 2021: mobile-first, SEO-ready business, WordPress and e-commerce websites, landing pages from ₹15,000. Rated 4.9★ on Google.'
+  'Web design company in Madurai since 2021: mobile-first, SEO-ready business, WordPress and e-commerce websites and landing pages. Rated 4.9★ on Google.'
 
 const content = {
   path: PATH,
@@ -30,7 +30,7 @@ const content = {
       { label: 'Madurai office', value: '2nd Floor, 4/3, Srinivasa Perumal Koil St, Kamarajar Salai, Madurai 625009 (visits by appointment)' },
       { label: 'Building websites since', value: '1 October 2021' },
       { label: 'Google rating', value: '4.9★ from 106 Google reviews' },
-      { label: 'Website prices', value: 'Landing pages from ₹15,000, business websites from ₹45,000, e-commerce from ₹80,000', link: { to: '/pricing/india/website/', label: 'See website pricing' } },
+      { label: 'Website quotes', value: 'Landing pages, business websites and e-commerce stores, each quoted after a short discovery call', link: { to: '/contact/', label: 'Get a custom quote' } },
       { label: 'Languages', value: 'Tamil and English' },
       { label: 'Phone / WhatsApp', value: '+91 99440 40345' },
     ],
@@ -56,14 +56,14 @@ const content = {
       ],
     },
     {
-      eyebrow: 'Pricing',
-      heading: 'Website Design Prices in Madurai',
-      subtitle: 'Guide prices from our published website pricing. You get a written quote after a short discovery call, and you own the finished site.',
+      eyebrow: 'Packages',
+      heading: 'Website Packages in Madurai',
+      subtitle: 'Every website is quoted for your project. You get a written quote after a short discovery call, and you own the finished site.',
       kind: 'cards',
       items: [
-        { title: 'Landing Page: ₹15,000–25,000', text: 'One conversion-focused page for a Google Ads campaign or product launch, with WhatsApp button, GA4 and conversion tracking. Usually 5–10 business days.' },
-        { title: 'Business Website: ₹45,000–75,000', text: 'Up to 20 pages on WordPress or Next.js with an SEO foundation (schema, sitemap, canonical tags), WhatsApp CTA, GA4 and 30 days of support.' },
-        { title: 'E-commerce Website: ₹80,000–1,50,000', text: 'WooCommerce or custom store for up to 500 products with Razorpay payments, SEO foundation and 60 days of support.', link: { to: '/pricing/india/website/', label: 'Full website pricing' } },
+        { title: 'Landing Page', text: 'One conversion-focused page for a Google Ads campaign or product launch, with WhatsApp button, GA4 and conversion tracking. Usually 5–10 business days.' },
+        { title: 'Business Website', text: 'Up to 20 pages on WordPress or Next.js with an SEO foundation (schema, sitemap, canonical tags), WhatsApp CTA, GA4 and 30 days of support.' },
+        { title: 'E-commerce Website', text: 'WooCommerce or custom store for up to 500 products with Razorpay payments, SEO foundation and 60 days of support.', link: { to: '/contact/', label: 'Get a custom quote' } },
       ],
     },
     {
@@ -108,7 +108,7 @@ const content = {
       ],
       after: (
         <p>
-          See <Link to="/pricing/india/website/">website pricing</Link>, or pair your new site with{' '}
+          <Link to="/contact/">Get a custom website quote</Link> (or WhatsApp +91 99440 40345), or pair your new site with{' '}
           <Link to="/services/local-seo/madurai/">local SEO in Madurai</Link> and{' '}
           <Link to="/services/geo-aeo-ai-search/madurai/">AI search optimisation (GEO)</Link>. Choosing a host?
           Compare price, renewal and uptime in our{' '}
@@ -128,9 +128,10 @@ const content = {
     { name: 'Contact', path: '/contact/' },
   ],
   faqTitle: 'Frequently Asked Questions, Website Development Madurai',
+  quote: { service: 'a website in Madurai', text: 'Tell us what the site needs to do. After a short discovery call we send a written quote with pages, features, timeline and support, and you own the finished site.', points: ['Written quote after a short call', 'You own the domain and site', 'SEO foundation built in'] },
   faqs: [
-    { question: 'How much does a website cost in Madurai?', answer: 'Our published guide prices are ₹15,000–25,000 for a landing page, ₹45,000–75,000 for a business website of up to 20 pages and ₹80,000–1,50,000 for an e-commerce website. The final price depends on the number of pages, features and content, and we send a written quote after a short discovery call.' },
-    { question: 'What is the best web design company in Madurai for a small business?', answer: 'Choose a Madurai web design company that shows its prices, builds mobile-first, sets up SEO basics (titles, schema, sitemap, Search Console) before launch, adds WhatsApp and call buttons, and gives you full ownership of your domain and website. Static Savvy Media does all of these from its Madurai office and is rated 4.9★ from 106 Google reviews.' },
+    { question: 'How much does a website cost in Madurai?', answer: 'It depends on the type of site (a landing page, a business website of up to 20 pages, or an e-commerce store), the number of pages, features and content. We send a written quote after a short discovery call. Message us on WhatsApp at +91 99440 40345 or send an enquiry for a custom quote.' },
+    { question: 'What is the best web design company in Madurai for a small business?', answer: 'Choose a Madurai web design company that gives you a clear written quote, builds mobile-first, sets up SEO basics (titles, schema, sitemap, Search Console) before launch, adds WhatsApp and call buttons, and gives you full ownership of your domain and website. Static Savvy Media does all of these from its Madurai office and is rated 4.9★ from 106 Google reviews.' },
     { question: 'What is the difference between web design and website development?', answer: 'Web design is the layout, look and content plan of each page. Website development is the build: code or CMS, speed, forms, payments, tracking and security. We handle both, so the design you approve is the site that goes live.' },
     { question: 'How long does it take to build a website?', answer: 'A small business website usually takes a few weeks from approved content to launch. E-commerce and custom builds take longer. We share a timeline before starting.' },
     { question: 'Will my website be SEO-friendly?', answer: 'Yes. Titles, meta descriptions, headings, schema markup, sitemap, speed and Search Console are set up before launch, so the site is ready to rank.' },

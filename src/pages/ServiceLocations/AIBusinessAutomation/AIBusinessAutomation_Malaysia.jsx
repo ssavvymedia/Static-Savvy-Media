@@ -497,16 +497,16 @@ export default function AIBusinessAutomation_Malaysia() {
         </div>
       </section>
 
-      {/* Further reading: guides, pricing and related Malaysia services */}
+      {/* Further reading: guides and related Malaysia services */}
       <section className="section">
         <div className="container">
           <div className="section-heading section-heading--left">
             <span className="section-heading__eyebrow">Plan Your Automation</span>
-            <h2 className="section-heading__title">Guides, Pricing and Related Services</h2>
+            <h2 className="section-heading__title">Guides and Related Services</h2>
           </div>
           <ul className="related-content__links" style={{ listStyle: 'none', padding: 0 }}>
             <li><Link to="/blog/agentic-ai-tools-small-business-marketing/" className="related-content__link">Top agentic AI tools for small business marketing (compared)</Link></li>
-            <li><Link to="/pricing/malaysia/ai-services/" className="related-content__link">AI service pricing in Malaysia</Link></li>
+            <li><Link to="/contact/" className="related-content__link">Get a custom quote for AI automation (WhatsApp +60 12-453 7030)</Link></li>
             <li><Link to="/blog/digital-marketing-malaysia-sme-grant-guide/" className="related-content__link">Malaysia SME digital grant guide</Link></li>
             <li><Link to="/industries/smes-malaysia-grant-eligible/" className="related-content__link">Digital marketing for grant-eligible Malaysian SMEs</Link></li>
             <li><Link to="/services/seo/malaysia/" className="related-content__link">SEO services in Malaysia</Link></li>

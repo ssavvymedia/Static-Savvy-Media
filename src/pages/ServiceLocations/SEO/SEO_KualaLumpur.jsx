@@ -11,7 +11,7 @@ import {
 
 const PATH = '/services/seo/kuala-lumpur/'
 const DESCRIPTION =
-  'SEO in Kuala Lumpur for SMEs: rank on Google and Google Maps across KL & the Klang Valley. Technical, local and English/BM SEO from RM 800/month, no lock-in. Call +60 12-453 7030.'
+  'SEO in Kuala Lumpur for SMEs: rank on Google and Google Maps across KL & the Klang Valley. Technical, local and English/BM SEO, no lock-in. Call +60 12-453 7030.'
 
 const content = {
   path: PATH,
@@ -102,11 +102,11 @@ const content = {
       heading: 'How Much Do SEO Services Cost in Kuala Lumpur?',
       kind: 'checks',
       items: [
-        'Our SEO plans for Malaysia are MYR 800 a month (Google Business Profile), MYR 1,500 (GBP + website SEO) and MYR 2,000 (GBP + SEO + AEO + GEO).',
-        'All retainers are monthly with no minimum contract term; final pricing depends on keywords, locations, languages and content volume.',
+        'Three monthly plans: Google Business Profile management, GBP plus website SEO, and GBP + SEO + AEO + GEO for AI search.',
+        'Every plan is quoted after a free review: the fee depends on keywords, locations, languages and content volume. Retainers are monthly with no minimum contract term.',
         'One-off audits are available if you want a diagnosis before committing to monthly work.',
       ],
-      after: <>Full plan inclusions are on our <Link to="/pricing/malaysia/seo/">SEO pricing page for Malaysia</Link>. For what other agencies charge, read <Link to="/blog/seo-cost-malaysia-price-guide/">how much SEO costs in Malaysia</Link>.</>,
+      after: <>For a custom quote, WhatsApp <a href="https://wa.me/60124537030">+60 12-453 7030</a> or <Link to="/contact/">send an enquiry</Link>. For what agencies typically charge, read <Link to="/blog/seo-cost-malaysia-price-guide/">how much SEO costs in Malaysia</Link>.</>,
     },
     {
       eyebrow: 'AI Search',
@@ -126,14 +126,13 @@ const content = {
         'A Malaysia office in Rawang, Selangor, with calls on +60 12-453 7030 during Malaysian business hours (Mon–Fri, 9 AM – 6 PM MYT).',
         'A larger SEO and content team at our Madurai headquarters, so work keeps moving across both time zones.',
         'Rated 4.9★ from 106 Google reviews on our Madurai office profile.',
-        'Published prices, monthly contracts and full account ownership for you.',
+        'Clear written quotes, monthly contracts and full account ownership for you.',
       ],
       after: <>Need ads as well? See our <Link to="/services/google-ads/kuala-lumpur/">Google Ads agency in Kuala Lumpur</Link> page, or our <Link to="/locations/kuala-lumpur/">digital marketing services in Kuala Lumpur</Link>.</>,
     },
   ],
   contactBlock: <MalaysiaContactBlock heading="Talk to Our Malaysia Team About SEO in KL" />,
   related: [
-    { name: 'SEO Pricing Malaysia', path: '/pricing/malaysia/seo/' },
     { name: 'Google Ads Agency Kuala Lumpur', path: '/services/google-ads/kuala-lumpur/' },
     { name: 'Digital Marketing in Kuala Lumpur', path: '/locations/kuala-lumpur/' },
     { name: 'SEO in Malaysia', path: '/services/seo/malaysia/' },
@@ -142,8 +141,9 @@ const content = {
     { name: 'Malaysia Office', path: '/locations/malaysia/' },
   ],
   faqTitle: 'Frequently Asked Questions, SEO Services in Kuala Lumpur',
+  quote: { region: 'malaysia', service: 'SEO in Kuala Lumpur' },
   faqs: [
-    { question: 'How much do SEO services cost in KL?', answer: 'Our SEO plans for Malaysia are MYR 800, MYR 1,500 and MYR 2,000 a month (GBP, GBP + website SEO, and GBP + SEO + AEO + GEO), with no minimum contract term. Final pricing depends on keywords, locations, languages and content volume; full inclusions are on our Malaysia SEO pricing page.' },
+    { question: 'How much do SEO services cost in KL?', answer: 'It depends on keywords, locations, languages and content volume. We offer three monthly plans (GBP, GBP + website SEO, and GBP + SEO + AEO + GEO) with no minimum contract term, each quoted after a free review. Message us on WhatsApp at +60 12-453 7030 or send an enquiry for a custom quote.' },
     { question: 'How long does SEO take in Kuala Lumpur?', answer: 'Usually 3 to 6 months for local and neighbourhood terms, and longer for competitive city-wide terms. Technical and Google Business Profile fixes can show movement within weeks. We do not guarantee rankings.' },
     { question: 'Do you do Bahasa Malaysia SEO?', answer: 'Yes. We research and optimise English and Bahasa Malaysia content separately, because the search terms and intent are often different. Chinese-language content can be planned where your audience needs it.' },
     { question: 'Do you have an office in Malaysia?', answer: `Yes. Our Malaysia office is at ${MALAYSIA_OFFICE.streetAddress}, ${MALAYSIA_OFFICE.postalCode} ${MALAYSIA_OFFICE.addressLocality}, ${MALAYSIA_OFFICE.addressRegion} (${MALAYSIA_OFFICE.landmark}), north of Kuala Lumpur. Meetings can be in person or online.` },

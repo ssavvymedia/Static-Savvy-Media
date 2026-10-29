@@ -658,7 +658,7 @@ export default function GEOAEO() {
       {/* ============================================================
           FINAL CTA
           ============================================================ */}
-      <RelatedReading links={[['/services/geo-aeo-ai-search/', 'GEO & AEO services for AI search'], ['/services/geo-aeo-ai-search/madurai/', 'GEO & AEO in Madurai'], ['/blog/what-is-answer-engine-optimization/', 'What is answer engine optimisation (AEO)?'], ['/blog/agentic-ai-tools-small-business-marketing/', 'Top agentic AI tools for small business marketing'], ['/blog/seo-agency-madurai-complete-guide/', 'Hiring for SEO in Madurai: buyer’s checklist'], ['/pricing/india/seo/', 'SEO pricing (India)']]} />
+      <RelatedReading links={[['/services/geo-aeo-ai-search/', 'GEO & AEO services for AI search'], ['/services/geo-aeo-ai-search/madurai/', 'GEO & AEO in Madurai'], ['/blog/what-is-answer-engine-optimization/', 'What is answer engine optimisation (AEO)?'], ['/blog/agentic-ai-tools-small-business-marketing/', 'Top agentic AI tools for small business marketing'], ['/blog/seo-agency-madurai-complete-guide/', 'Hiring for SEO in Madurai: buyer’s checklist'], ['/contact/', 'Get a custom quote']]} />
 
       <CTASection
         eyebrow="Get Started"

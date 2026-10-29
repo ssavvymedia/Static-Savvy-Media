@@ -252,7 +252,7 @@ const FAQS = [
   {
     question: 'How much does SEO cost?',
     answer:
-      'SEO costs depend on the scope of work, competition and business objectives. We recommend starting with a consultation to understand your specific needs. Visit our pricing page for more details.',
+      'SEO costs depend on the scope of work, competition and business objectives. We quote every plan after a free consultation on your specific needs. Message us on WhatsApp at +91 99440 40345 or send an enquiry for a custom quote.',
   },
   {
     question: 'Can SEO and Local SEO work together?',

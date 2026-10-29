@@ -709,7 +709,7 @@ export default function MalaysiaGrantGuide() {
       {/* ============================================================
           FINAL CTA
           ============================================================ */}
-      <RelatedReading links={[['/industries/smes-malaysia-grant-eligible/', 'Digital marketing for grant-eligible SMEs'], ['/services/seo/malaysia/', 'SEO services in Malaysia'], ['/services/ai-business-automation/malaysia/', 'AI business automation in Malaysia'], ['/blog/seo-cost-malaysia-price-guide/', 'SEO cost in Malaysia: 2026 price guide'], ['/pricing/malaysia/', 'Malaysia pricing'], ['/locations/malaysia/', 'Static Savvy Media Malaysia (Rawang)']]} />
+      <RelatedReading links={[['/industries/smes-malaysia-grant-eligible/', 'Digital marketing for grant-eligible SMEs'], ['/services/seo/malaysia/', 'SEO services in Malaysia'], ['/services/ai-business-automation/malaysia/', 'AI business automation in Malaysia'], ['/blog/seo-cost-malaysia-price-guide/', 'SEO cost in Malaysia: 2026 price guide'], ['/locations/malaysia/', 'Digital marketing in Malaysia'], ['/locations/malaysia/', 'Static Savvy Media Malaysia (Rawang)']]} />
 
       <CTASection
         eyebrow="Malaysia SME Services"

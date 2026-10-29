@@ -62,7 +62,7 @@ export const content = {
     { name: 'Advertising Agency in Madurai', path: '/services/advertising-agency/madurai/' },
     { name: 'Social Media Marketing in Madurai', path: '/services/social-media-marketing/madurai/' },
     { name: 'Digital Marketing in Thoothukudi', path: '/locations/thoothukudi/' },
-    { name: 'Pricing (India)', path: '/pricing/india/' },
+    { name: 'Contact for a quote', path: '/contact/' },
   ],
   faqTitle: 'Digital Marketing in Tamil Nadu: Common Questions',
   faqs: [

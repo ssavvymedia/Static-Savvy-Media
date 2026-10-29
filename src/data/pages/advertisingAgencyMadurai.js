@@ -61,7 +61,6 @@ export const content = {
   ],
   related: [
     { name: 'Google Ads', path: '/services/google-ads/' },
-    { name: 'Google Ads pricing (India)', path: '/pricing/india/google-ads/' },
     { name: 'Social Media Marketing in Madurai', path: '/services/social-media-marketing/madurai/' },
     { name: 'SEO Company in Madurai', path: '/services/seo/madurai/' },
     { name: 'SEO vs Google Ads for Madurai businesses', path: '/blog/seo-vs-google-ads-madurai/' },

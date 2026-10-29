@@ -176,12 +176,6 @@ const RELATED_SERVICES = [
   { name: 'Google Ads', path: '/services/google-ads/' },
 ]
 
-const PRICING_REFERENCE = [
-  { name: 'Product Photography, Half Day', amount: '₹12,000 / MYR 650' },
-  { name: 'Corporate Photography, Full Day', amount: '₹20,000 / MYR 1,100' },
-  { name: 'Brand Video, 60–90 sec', amount: '₹35,000–55,000 / MYR 1,900–3,000' },
-]
-
 const CTA = {
   title: 'Show clients who you really are, with photography that builds trust.',
   label: (

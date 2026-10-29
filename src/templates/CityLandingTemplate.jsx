@@ -13,7 +13,8 @@ import { faqPageSchema, breadcrumbListSchema } from '../utils/schema.js'
 import { buildWhatsAppLink } from '../utils/helpers.js'
 import { SITE_URL } from '../utils/constants.js'
 import { ORG_SAME_AS, GBP_MAPS } from '../data/sameAs.js'
-import { PRICE_TIERS, cityPages } from '../data/cityPages.js'
+import { PLAN_TIERS, cityPages } from '../data/cityPages.js'
+import '../styles/quote-cta.css'
 import GoogleReviewsSection from '../components/sections/GoogleReviewsSection.jsx'
 import { pickReviews } from '../data/googleReviews.js'
 import networkImg from '../assets/images/locations/Locationmain.webp'
@@ -30,13 +31,12 @@ const PROCESS = [
 ]
 
 export default function CityLandingTemplate({ city }) {
-  const tiers = PRICE_TIERS[city.region]
+  const tiers = PLAN_TIERS[city.region]
   const path = `/locations/${city.slug}/`
   const pageUrl = `${SITE_URL}${path}`
   const waMessage = `Hi Static Savvy Media, I run a business in ${city.name} and would like a free digital marketing review.`
   const waHref = buildWhatsAppLink(city.whatsapp.number, waMessage)
   const reviewsHref = GBP_MAPS.madurai
-  const isMalaysia = city.region === 'malaysia'
 
   useEffect(() => {
     const area = { '@type': city.areaType, name: city.name, ...(city.containedIn ? { containedInPlace: { '@type': city.containedIn === 'Tamil Nadu' ? 'State' : 'Country', name: city.containedIn } } : {}) }
@@ -48,14 +48,6 @@ export default function CityLandingTemplate({ city }) {
       url: pageUrl,
       areaServed: area,
       provider: { '@id': `${SITE_URL}/#organization` },
-      offers: tiers.plans.map((p) => ({
-        '@type': 'Offer',
-        name: p.name,
-        price: String(p.price),
-        priceCurrency: tiers.currency,
-        url: pageUrl,
-        priceSpecification: { '@type': 'UnitPriceSpecification', price: String(p.price), priceCurrency: tiers.currency, unitText: 'MONTH' },
-      })),
     }
     const org = { '@type': 'Organization', '@id': `${SITE_URL}/#organization`, name: 'Static Savvy Media', url: `${SITE_URL}/`, telephone: '+91 99440 40345', email: 'info@staticsavvymedia.com', sameAs: ORG_SAME_AS, foundingDate: '2021-10-01' }
     const faq = faqPageSchema(city.faqs)
@@ -76,7 +68,7 @@ export default function CityLandingTemplate({ city }) {
       ogImage: `${SITE_URL}${networkImg}`,
       schema: { '@context': 'https://schema.org', '@graph': [service, org, strip(faq), strip(crumbs)] },
     })
-  }, [city, tiers, path, pageUrl])
+  }, [city, path, pageUrl])
 
   return (
     <div className={`city-page city-page--${city.region}`}>
@@ -184,26 +176,25 @@ export default function CityLandingTemplate({ city }) {
         </div>
       </section>
 
-      {/* ---------------- PRICING ---------------- */}
-      <section className="section city-pricing" id="pricing">
+      {/* ---------------- PLANS (no public prices: every plan is quoted) ---------------- */}
+      <section className="section city-pricing" id="plans">
         <div className="container">
-          <SectionHeading eyebrow="Pricing" title={`Monthly plans for ${city.name} (${tiers.currency})`} subtitle="Published monthly prices. Ad spend, if you run ads, is paid directly to Google or Meta." />
+          <SectionHeading eyebrow="Plans & quotes" title={`Monthly plans for ${city.name} businesses`} subtitle="Every plan is quoted for your business after a free review. Ad spend, if you run ads, is paid directly to Google or Meta." />
           <div className="city-grid city-grid--3">
             {tiers.plans.map((p) => (
               <article key={p.name} className={`city-card city-price${p.popular ? ' city-price--popular' : ''}`}>
                 {p.popular && <span className="city-price__badge">Recommended</span>}
                 <h3>{p.name}</h3>
-                <p className="city-price__amount">{p.display}<span>/month</span></p>
+                <p className="city-price__amount city-price__amount--quote">Custom quote</p>
                 <ul className="city-checklist">{p.features.map((f) => <li key={f}>{f}</li>)}</ul>
-                <Button href={buildWhatsAppLink(city.whatsapp.number, `Hi Static Savvy Media, I'm interested in the ${p.name} plan (${p.display}/month) for my ${city.name} business.`)} variant={p.popular ? 'primary' : 'ghost'} size="md" target="_blank" rel="noopener noreferrer">
-                  Ask on WhatsApp
+                <Button href={buildWhatsAppLink(city.whatsapp.number, `Hi Static Savvy Media, I'd like a quote for the ${p.name} plan for my ${city.name} business.`)} variant={p.popular ? 'primary' : 'ghost'} size="md" target="_blank" rel="noopener noreferrer">
+                  Get a quote on WhatsApp
                 </Button>
               </article>
             ))}
           </div>
           <p className="city-note">
-            {tiers.pricingPath !== '/contact/' ? <>Full price list: <Link to={tiers.pricingPath}>{isMalaysia ? 'Malaysia' : 'India'} pricing</Link>. </> : null}
-            Website builds, ads management and photography are quoted separately.
+            Prefer email? <a href="#city-enquiry">Send an enquiry</a> or WhatsApp {city.whatsapp.display}. Website builds, ads management and photography are quoted separately.
           </p>
         </div>
       </section>

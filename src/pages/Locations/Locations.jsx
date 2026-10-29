@@ -150,7 +150,7 @@ const LOCATIONS = [
     name: 'Selangor',
     badge: 'Rawang office',
     description:
-      'Petaling Jaya, Shah Alam, Subang Jaya and Klang, served from our office in Rawang, Selangor. Prices in MYR.',
+      'Petaling Jaya, Shah Alam, Subang Jaya and Klang, served from our office in Rawang, Selangor. Quotes in MYR.',
     services: ['SEO & GBP', 'Google Ads', 'Bahasa Malaysia content'],
     path: '/locations/selangor/',
     icon: 'malaysia',
@@ -160,7 +160,7 @@ const LOCATIONS = [
     name: 'Singapore',
     badge: 'Remote · MY & IN',
     description:
-      'Google Business Profile, SEO and AI-search optimisation for Singapore SMEs, run remotely on Singapore time. Prices in SGD.',
+      'Google Business Profile, SEO and AI-search optimisation for Singapore SMEs, run remotely on Singapore time. Quotes in SGD.',
     services: ['GBP & local SEO', 'GEO/AEO', 'Answer-first pages'],
     path: '/locations/singapore/',
     icon: 'malaysia',
@@ -170,7 +170,7 @@ const LOCATIONS = [
     name: 'Dubai',
     badge: 'Remote · India',
     description:
-      'Map-pack, SEO and AI-search work for Dubai SMEs, run remotely from India, 1.5 hours ahead of Dubai. Prices in AED.',
+      'Map-pack, SEO and AI-search work for Dubai SMEs, run remotely from India, 1.5 hours ahead of Dubai. Quotes in AED.',
     services: ['GBP & local SEO', 'GEO/AEO', 'Google Ads'],
     path: '/locations/dubai/',
     icon: 'malaysia',

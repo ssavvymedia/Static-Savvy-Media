@@ -33,7 +33,7 @@ const PAGE_TITLE =
   'Digital Marketing Agency in Madurai, SEO, GEO/AEO & More | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
-  'Madurai digital marketing agency at Kamarajar Salai since 2021, rated 4.9★ from 106 Google reviews. SEO from ₹6,000/month, Local SEO, Ads, social & websites. WhatsApp +91 99440 40345.'
+  'Madurai digital marketing agency at Kamarajar Salai since 2021, rated 4.9★ from 106 Google reviews. SEO, Local SEO, Ads, social & websites. Custom quotes: WhatsApp +91 99440 40345.'
 
 const HERO_EYEBROW = 'Madurai • Static Savvy Media HQ'
 
@@ -42,7 +42,7 @@ const HERO_SUBTITLE =
 
 
 const QUICK_ANSWER =
-  'Static Savvy Media is a digital marketing agency headquartered in Madurai, at 2nd Floor, 4/3, Srinivasa Perumal Koil St, Kamarajar Salai (625009). Since 1 October 2021 our Madurai team has run SEO, Local SEO and Google Business Profile, Google & Meta ads, social media, websites and AI search (GEO/AEO) for local businesses, in Tamil and English. We are rated 4.9★ on Google from 106 reviews, and SEO plans start at ₹12,000 a month with no lock-in.'
+  'Static Savvy Media is a digital marketing agency headquartered in Madurai, at 2nd Floor, 4/3, Srinivasa Perumal Koil St, Kamarajar Salai (625009). Since 1 October 2021 our Madurai team has run SEO, Local SEO and Google Business Profile, Google & Meta ads, social media, websites and AI search (GEO/AEO) for local businesses, in Tamil and English. We are rated 4.9★ on Google from 106 reviews, and every SEO plan is quoted after a free audit, with no lock-in.'
 
 const QUICK_FACTS = [
   { label: 'Madurai office', value: '2nd Floor, 4/3, Srinivasa Perumal Koil St, Kamarajar Salai, Madurai 625009' },
@@ -50,7 +50,7 @@ const QUICK_FACTS = [
   { label: 'Google rating', value: '4.9★ from 106 Google reviews' },
   { label: 'Office hours', value: 'Monday–Saturday, 9:00 AM – 6:30 PM IST (visits by appointment)' },
   { label: 'Languages', value: 'Tamil and English' },
-  { label: 'SEO pricing', value: 'Google Business Profile from ₹6,000/month, GBP + website SEO from ₹12,000/month, no minimum term', link: { to: '/blog/affordable-seo-company-madurai-pricing/', label: 'See Madurai SEO prices' } },
+  { label: 'SEO quotes', value: 'Google Business Profile and website SEO plans, quoted after a free audit, no minimum term', link: { to: '/contact/', label: 'Get a custom quote' } },
   { label: 'Phone / WhatsApp', value: '+91 99440 40345' },
 ]
 

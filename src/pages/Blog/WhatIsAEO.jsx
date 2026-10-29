@@ -43,7 +43,7 @@ const AEO_OUTCOMES = [
 const AEO_EXAMPLE = {
   question: 'How much does a website cost for a small business?',
   before: 'We are a passionate team of designers who have built many beautiful websites. Every project is unique and we love working with clients, so please contact us to discuss your requirements and we will be happy to help.',
-  after: 'A small business website usually costs a one-time fee that depends on the number of pages, features such as booking or e-commerce, and who writes the content. Our Starter plan covers a simple brochure site; larger or custom builds are quoted after a short call. Below: what each price level includes and what adds cost.',
+  after: 'A small business website usually costs a one-time fee that depends on the number of pages, features such as booking or e-commerce, and who writes the content. Our Starter plan covers a simple brochure site; larger or custom builds are quoted after a short call. Below: what each type of site includes and what adds cost.',
 }
 
 const MEASURE_STEPS = [
@@ -188,7 +188,7 @@ const FAQS = [
   },
   {
     question: 'How much does AEO cost with Static Savvy Media?',
-    answer: 'AEO and GEO are included in our top monthly plan, together with Google Business Profile management and website SEO: ₹20,000 a month in India and RM 2,000 a month in Malaysia, with no lock-in.',
+    answer: 'AEO and GEO are included in our top monthly plan, together with Google Business Profile management and website SEO, with no lock-in. We quote it after a free review of your site: WhatsApp +91 99440 40345 (India) or +60 12-453 7030 (Malaysia), or send an enquiry.',
   },
 ]
 

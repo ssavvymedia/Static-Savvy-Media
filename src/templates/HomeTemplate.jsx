@@ -104,7 +104,7 @@ export default function HomeTemplate({
         <div className="container">
           <SectionHeading
             title="Where We Work"
-            subtitle="Headquartered in Madurai since 2021, with offices in Thoothukudi and Rawang (Malaysia). Pick your country or city for local services, pricing and contact details."
+            subtitle="Headquartered in Madurai since 2021, with offices in Thoothukudi and Rawang (Malaysia). Pick your country or city for local services and contact details."
           />
           <div className="where-we-work__grid">
             {markets.map((m) => (

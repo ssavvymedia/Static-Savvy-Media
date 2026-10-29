@@ -55,15 +55,7 @@ import PortMarineIndustrialThoothukudi from '../pages/Industries/PortMarineIndus
 import SMEsMalaysia from '../pages/Industries/SMEsMalaysia.jsx'
 import RealEstateBuilders from '../pages/Industries/RealEstateBuilders.jsx'
 
-import Pricing from '../pages/Pricing/Pricing.jsx'
-import CountryPricing from '../pages/Pricing/CountryPricing.jsx'
-import SEOPricing from '../pages/Pricing/SEOPricing.jsx'
-import LocalSEOPricing from '../pages/Pricing/LocalSEOPricing.jsx'
-import GoogleAdsPricing from '../pages/Pricing/GoogleAdsPricing.jsx'
-import SocialMediaPricing from '../pages/Pricing/SocialMediaPricing.jsx'
-import WebsitePricing from '../pages/Pricing/WebsitePricing.jsx'
-import AIPricing from '../pages/Pricing/AIPricing.jsx'
-import PhotographyVideoPricing from '../pages/Pricing/PhotographyVideoPricing.jsx'
+import CountryPricing from '../pages/Pricing/CountryPricingRoute.jsx'
 
 import CaseStudies from '../pages/CaseStudies/CaseStudies.jsx'
 import Client1 from '../pages/CaseStudies/Client1.jsx'
@@ -220,94 +212,14 @@ export default function AppRoutes() {
           element={<RealEstateBuilders />}
         />
 
-        {/* ---- Pricing Routes ---- */}
-        {/* /pricing/ 301s to the home page (scripts/seo/legacy-redirects.csv). Unlisted per-country
-            pricing pages (noindex,nofollow; never linked; not in sitemap). Paths: masterPricing.js */}
+        {/* ---- Pricing ---- */}
+        {/* No public pricing pages: /pricing/ and every /pricing/* page 301 to a service, location or
+            the home page (scripts/seo/legacy-redirects.csv). Prices are shared only at proposal time via
+            these unlisted per-country pages (noindex,nofollow; never linked; not in sitemap). Paths: masterPricing.js */}
         <Route path="/p/india-9xajei" element={<CountryPricing country="india" />} />
         <Route path="/p/malaysia-2josdx" element={<CountryPricing country="malaysia" />} />
         <Route path="/p/dubai-a8aokh" element={<CountryPricing country="dubai" />} />
         <Route path="/p/singapore-xseszo" element={<CountryPricing country="singapore" />} />
-
-        {/* India Pricing */}
-        <Route path="/pricing/india" element={<Pricing country="india" />} />
-        <Route
-          path="/pricing/india/seo"
-          element={<SEOPricing country="india" />}
-        />
-        <Route
-          path="/pricing/india/local-seo"
-          element={<LocalSEOPricing country="india" />}
-        />
-        <Route
-          path="/pricing/india/google-ads"
-          element={<GoogleAdsPricing country="india" />}
-        />
-        <Route
-          path="/pricing/india/social-media"
-          element={<SocialMediaPricing country="india" />}
-        />
-        <Route
-          path="/pricing/india/social-media-marketing"
-          element={<SocialMediaPricing country="india" />}
-        />
-        <Route
-          path="/pricing/india/website"
-          element={<WebsitePricing country="india" />}
-        />
-        <Route
-          path="/pricing/india/website-design-development"
-          element={<WebsitePricing country="india" />}
-        />
-        <Route
-          path="/pricing/india/ai-services"
-          element={<AIPricing country="india" />}
-        />
-        <Route
-          path="/pricing/india/photography-video"
-          element={<PhotographyVideoPricing country="india" />}
-        />
-
-        {/* Malaysia Pricing */}
-        <Route
-          path="/pricing/malaysia"
-          element={<Pricing country="malaysia" />}
-        />
-        <Route
-          path="/pricing/malaysia/seo"
-          element={<SEOPricing country="malaysia" />}
-        />
-        <Route
-          path="/pricing/malaysia/local-seo"
-          element={<LocalSEOPricing country="malaysia" />}
-        />
-        <Route
-          path="/pricing/malaysia/google-ads"
-          element={<GoogleAdsPricing country="malaysia" />}
-        />
-        <Route
-          path="/pricing/malaysia/social-media"
-          element={<SocialMediaPricing country="malaysia" />}
-        />
-        <Route
-          path="/pricing/malaysia/social-media-marketing"
-          element={<SocialMediaPricing country="malaysia" />}
-        />
-        <Route
-          path="/pricing/malaysia/website"
-          element={<WebsitePricing country="malaysia" />}
-        />
-        <Route
-          path="/pricing/malaysia/website-design-development"
-          element={<WebsitePricing country="malaysia" />}
-        />
-        <Route
-          path="/pricing/malaysia/ai-services"
-          element={<AIPricing country="malaysia" />}
-        />
-        <Route
-          path="/pricing/malaysia/photography-video"
-          element={<PhotographyVideoPricing country="malaysia" />}
-        />
 
         <Route path="/case-studies" element={<CaseStudies />} />
         <Route path="/case-studies/client-1" element={<Client1 />} />

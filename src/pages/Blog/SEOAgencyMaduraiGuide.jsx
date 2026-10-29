@@ -447,7 +447,7 @@ export default function SEOAgencyMaduraiGuide() {
               </div>
 
               <h2 id="seo-cost">What Does SEO Cost in Madurai?</h2>
-              <p>An indicative pricing range for SEO in Madurai is approximately <strong>₹8,000–₹40,000 per month</strong> depending on scope. Pricing should be evaluated based on scope, expertise, website complexity, competition, content volume, technical requirements, reporting, and business objectives. Our own published plans are on the <Link to="/pricing/india/seo/">SEO pricing page for India</Link>.</p>
+              <p>An indicative pricing range for SEO in Madurai is approximately <strong>₹8,000–₹40,000 per month</strong> depending on scope. Pricing should be evaluated based on scope, expertise, website complexity, competition, content volume, technical requirements, reporting, and business objectives. For a quote for your own business, <Link to="/contact/">send an enquiry</Link> or WhatsApp +91 99440 40345.</p>
 
               <div className="seo-guide-pricing-grid">
                 {PRICING_LEVELS.map((level, index) => (

@@ -11,7 +11,7 @@ import {
 
 const PATH = '/services/google-ads/kuala-lumpur/'
 const DESCRIPTION =
-  'Google Ads management for KL businesses: search, Performance Max & call campaigns built around enquiries and WhatsApp leads. Fees from MYR 550/month. Call +60 12-453 7030.'
+  'Google Ads management for KL businesses: search, Performance Max & call campaigns built around enquiries and WhatsApp leads. Get a custom quote: +60 12-453 7030.'
 
 const content = {
   path: PATH,
@@ -70,15 +70,15 @@ const content = {
       ],
     },
     {
-      eyebrow: 'Pricing',
+      eyebrow: 'Quotes',
       heading: 'Google Ads Budget and Management Fee in KL',
       kind: 'checks',
       items: [
-        'Management fee: Starter MYR 550, Growth MYR 950 and Scale MYR 1,700 a month (flat fee, not a percentage of spend).',
-        'Recommended ad spend: about MYR 800–1,500 a month for Starter, MYR 1,500–3,000 for Growth and MYR 4,000+ for Scale.',
+        'Management fee: a flat monthly fee quoted for your campaign scope (Starter, Growth or Scale), not a percentage of ad spend.',
+        'Recommended ad spend: we suggest a starting budget after checking cost per click in your sector and area; competitive sectors such as legal or aesthetics need more.',
         'Ad spend is paid directly to Google from your own account; our fee is invoiced separately.',
       ],
-      after: <>Full inclusions for each plan are on our <Link to="/pricing/malaysia/google-ads/">Google Ads pricing page for Malaysia</Link>.</>,
+      after: <>For a custom quote, WhatsApp <a href="https://wa.me/60124537030">+60 12-453 7030</a> or <Link to="/contact/">send an enquiry</Link>. We reply with a recommended budget and a written management-fee quote.</>,
     },
     {
       eyebrow: 'Industries',
@@ -117,7 +117,7 @@ const content = {
   ],
   contactBlock: <MalaysiaContactBlock heading="Talk to Our Malaysia Team About Google Ads in KL" />,
   related: [
-    { name: 'Google Ads Pricing Malaysia', path: '/pricing/malaysia/google-ads/' },
+    { name: 'Google Ads management', path: '/services/google-ads/' },
     { name: 'SEO Services in Kuala Lumpur', path: '/services/seo/kuala-lumpur/' },
     { name: 'Google Ads Services', path: '/services/google-ads/' },
     { name: 'Digital Marketing in Kuala Lumpur', path: '/locations/kuala-lumpur/' },
@@ -126,9 +126,10 @@ const content = {
     { name: 'Contact', path: '/contact/' },
   ],
   faqTitle: 'Frequently Asked Questions, Google Ads in Kuala Lumpur',
+  quote: { region: 'malaysia', service: 'Google Ads management in Kuala Lumpur', text: 'We review your account, sector and competitors first, then send a written plan with a recommended ad budget and a flat monthly management fee. No percentage of spend, no lock-in.' },
   faqs: [
-    { question: 'What is the minimum Google Ads budget in KL?', answer: 'For our Starter plan we recommend about MYR 800–1,500 a month in ad spend, paid directly to Google, plus a MYR 550 monthly management fee. Very competitive sectors such as legal or aesthetics usually need more.' },
-    { question: 'Do you charge a percentage of ad spend or a flat fee?', answer: 'A flat monthly management fee: MYR 550 (Starter), MYR 950 (Growth) or MYR 1,700 (Scale), depending on campaign scope. It is not a percentage of your ad spend.' },
+    { question: 'What is the minimum Google Ads budget in KL?', answer: 'It depends on your sector, area and cost per click. We recommend a starting ad budget, paid directly to Google, after a free review of your market, alongside a flat monthly management fee quoted for your scope. Very competitive sectors such as legal or aesthetics usually need more. Message us on WhatsApp at +60 12-453 7030 or send an enquiry for a custom quote.' },
+    { question: 'Do you charge a percentage of ad spend or a flat fee?', answer: 'A flat monthly management fee (Starter, Growth or Scale), quoted for your campaign scope after a free review. It is not a percentage of your ad spend.' },
     { question: 'How fast do Google Ads bring leads?', answer: 'Typically within the first few weeks, once ads are approved and conversion tracking is working. Cost per lead usually improves over the first 60 to 90 days as we cut wasted searches and refine bids.' },
     { question: 'Do you own my ad account?', answer: 'No. The Google Ads account stays in your company’s name and you pay Google directly. We work in it with manager access, which you can remove at any time.' },
     { question: 'Can you track WhatsApp enquiries from ads?', answer: 'Yes. We set up WhatsApp click tracking as a conversion in GA4 and Google Ads, alongside call and form tracking, so you can see which campaigns produce enquiries.' },
@@ -152,14 +153,6 @@ const content = {
         url: `${SITE_URL}/locations/malaysia/`,
         telephone: MALAYSIA_OFFICE.phoneE164,
         address: MALAYSIA_POSTAL_ADDRESS,
-      },
-      offers: {
-        '@type': 'AggregateOffer',
-        priceCurrency: 'MYR',
-        lowPrice: '550',
-        highPrice: '1700',
-        description: 'Monthly management fee, ad spend paid separately to Google',
-        url: `${SITE_URL}/pricing/malaysia/google-ads/`,
       },
     }),
     professionalServiceSchema({

@@ -106,7 +106,7 @@ const content = {
       ],
       after: (
         <p>
-          See <Link to="/pricing/india/social-media/">social media pricing</Link>, or read our guide to{' '}
+          <Link to="/contact/">Get a custom quote</Link> (or WhatsApp +91 99440 40345), or read our guide to{' '}
           <Link to="/blog/social-media-marketing-madurai-small-businesses/">social media marketing for Madurai small businesses</Link>.
         </p>
       ),
@@ -121,6 +121,7 @@ const content = {
     { name: 'Google Ads', path: '/services/google-ads/' },
   ],
   faqTitle: 'Frequently Asked Questions, Social Media Marketing Madurai',
+  quote: { service: 'social media marketing in Madurai' },
   faqs: [
     {
       question: 'Which is better for a Madurai business, Facebook or Instagram?',

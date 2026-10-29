@@ -60,6 +60,9 @@ export async function ssrBodies(root, distAssets) {
     const { getBreadcrumbLabel } = await vite.ssrLoadModule('/src/data/navigation.js')
     const C = await vite.ssrLoadModule('/src/utils/constants.js')
     const App = (await vite.ssrLoadModule('/src/App.jsx')).default
+    /* The unlisted /p/ price pages are code-split (prices kept out of the main bundle): load that chunk
+     * first so the full-app render includes the page, matching the client, which preloads before hydrating. */
+    await (await vite.ssrLoadModule('/src/pages/Pricing/countryPricingLoader.js')).preloadCountryPricing()
     /* Full-app render: must match what the client renders on its first pass (hydrateRoot). */
     const renderApp = (route) => fixAssets(renderToString(React.createElement(MemoryRouter, { initialEntries: [route] }, React.createElement(App))), distAssets)
     try { out.set('/', { app: renderApp('/') }) } catch (e) { console.warn(`ssr-bodies: home app render skipped: ${String(e?.message || e).slice(0, 300)}`) }
@@ -115,7 +118,7 @@ export async function ssrBodies(root, distAssets) {
         malaysia,
         { '@type': 'BreadcrumbList', itemListElement: crumbs.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: `${HOST}${c.path}` })) },
       ] : [
-        { '@type': 'Service', name: r.service || decode(h1[1]), serviceType: r.serviceType, provider: { '@id': biz ? biz['@id'] : ORG_ID }, areaServed: r.area, url: `${HOST}${r.route}`, ...(r.offers ? { offers: r.offers.map(([name, price]) => ({ '@type': 'Offer', name, price: String(price), priceCurrency: r.currency || 'INR', url: `${HOST}${r.route}`, priceSpecification: { '@type': 'UnitPriceSpecification', price: String(price), priceCurrency: r.currency || 'INR', unitText: 'MONTH' } })) } : {}) },
+        { '@type': 'Service', name: r.service || decode(h1[1]), serviceType: r.serviceType, provider: { '@id': biz ? biz['@id'] : ORG_ID }, areaServed: r.area, url: `${HOST}${r.route}` },
         ...(biz ? [biz] : []),
         org,
         { '@type': 'BreadcrumbList', itemListElement: crumbs.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: `${HOST}${c.path}` })) },

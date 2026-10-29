@@ -1,26 +1,8 @@
 import { services } from "./services.js";
 import { locations, locationGroups } from "./locations.js";
 import { industries } from "./industries.js";
-import {
-  indiaPricingPlans,
-  malaysiaPricingPlans,
-  pricingPlans,
-} from "./pricing.js";
 import { caseStudies } from "./caseStudies.js";
 import { blogCategories, blogPosts } from "./blog.js";
-
-export const pricingMenuSections = [
-  {
-    title: "🇮🇳 India Pricing (INR)",
-    path: "/pricing/india/",
-    items: indiaPricingPlans,
-  },
-  {
-    title: "🇲🇾 Malaysia Pricing (MYR)",
-    path: "/pricing/malaysia/",
-    items: malaysiaPricingPlans,
-  },
-];
 
 export const NAV_LINKS = [
   { label: "Home", path: "/" },
@@ -97,8 +79,6 @@ export const BREADCRUMB_LABELS = {
     "Port, Marine & Industrial (Thoothukudi)",
   "smes-malaysia-grant-eligible": "SMEs (Malaysia, Grant Eligible)",
   "real-estate-builders": "Real Estate & Builders",
-  pricing: "Pricing",
-  india: "India Pricing",
   "ai-services": "AI Services",
   "photography-video": "Photography & Video",
   "case-studies": "Case Studies",
@@ -128,7 +108,6 @@ export {
   locations,
   locationGroups,
   industries,
-  pricingPlans,
   caseStudies,
   blogCategories,
   blogPosts,

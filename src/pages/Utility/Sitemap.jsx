@@ -100,7 +100,7 @@ export default function Sitemap() {
   useEffect(() => {
     setSeo({
       title: `HTML Sitemap | ${SITE_NAME}`,
-      description: `Explore the ${SITE_NAME} website through our HTML sitemap, including services, locations, industries, pricing, case studies, blog, company and legal pages.`,
+      description: `Explore the ${SITE_NAME} website through our HTML sitemap, including services, locations, industries, case studies, blog, company and legal pages.`,
       canonical: `${SITE_URL}/sitemap/`,
       ogType: 'website',
     })
@@ -135,7 +135,7 @@ export default function Sitemap() {
             <h1 className="hero__title sitemap-hero__title"><span className="hero__title-white">Site</span><span className="hero__title-gradient">map</span></h1>
             <p className="sitemap-hero__text">
               An organized overview of the main Static Savvy Media website pages.
-              Find services, locations, industries, pricing, case studies, blog
+              Find services, locations, industries, case studies, blog
               articles and company information quickly.
             </p>
           </div>

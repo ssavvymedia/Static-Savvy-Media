@@ -5,6 +5,7 @@ import Button from '../components/common/Button.jsx'
 import { formatTwoColorTitle } from '../components/hero/HeroSection.jsx'
 import FAQSection from '../components/sections/FAQSection.jsx'
 import CTASection from '../components/sections/CTASection.jsx'
+import QuoteCTA from '../components/sections/QuoteCTA.jsx'
 import { ScrollReveal } from '../components/animations/ScrollReveal.jsx'
 import { setSeo } from '../utils/seo.js'
 import { faqPageSchema, breadcrumbListSchema } from '../utils/schema.js'
@@ -19,7 +20,8 @@ import '../styles/pages/seo-madurai.css'
  * content: { path, title, description, eyebrow, h1, intro, trust, phone, contactBlock,
  *            crumbs: [{ name, path }] (Home first, current page last),
  *            sections: [{ eyebrow, heading, subtitle, kind: 'cards'|'numbered'|'checks', items, after }],
- *            related: [{ name, path }], faqs, faqTitle, cta: { title, subtitle, label }, schema: [] }
+ *            related: [{ name, path }], faqs, faqTitle, cta: { title, subtitle, label }, schema: [],
+ *            quote?: QuoteCTA props ({ region, service, text }), shown instead of public prices }
  */
 export default function LocalServicePage({ content }) {
   const hasRun = useRef(false)
@@ -188,6 +190,8 @@ export default function LocalServicePage({ content }) {
           </div>
         </div>
       </section>
+
+      {content.quote && <QuoteCTA formHref="/contact/" {...content.quote} />}
 
       <FAQSection eyebrow="FAQ" title={content.faqTitle} faqs={content.faqs} />
 

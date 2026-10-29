@@ -6,49 +6,39 @@
  * - Static Savvy Media's real offices are Madurai (HQ), Thoothukudi and Rawang (Selangor, Malaysia).
  *   No city below claims a local office address unless it really has one (Selangor = Rawang office).
  * - No client names, results or statistics that cannot be verified. The only figures used are the
- *   ones already published site-wide (4.9★ from 106 Google reviews, founded 1 Oct 2021) and the
- *   published price list (Oct 2026).
+ *   ones already published site-wide (4.9★ from 106 Google reviews, founded 1 Oct 2021).
+ * - No prices on public pages (owner's instruction, 29 Oct 2026). Prices are shared only at proposal
+ *   time via the unlisted /p/ pages (src/data/masterPricing.js holds the amounts).
  */
 
-export const PRICE_TIERS = {
+/** Plan names and inclusions per region (no prices: see masterPricing.js for the private price list). */
+export const PLAN_TIERS = {
   india: {
-    currency: 'INR',
-    symbol: '₹',
-    pricingPath: '/pricing/india/',
     plans: [
-      { name: 'Google Business Profile', price: 6000, display: '₹6,000', features: ['Google Business Profile optimisation', '12 Google posts a month', 'Review reply support and photo updates', 'Monthly calls, directions and enquiries report'] },
-      { name: 'GBP + Website SEO', price: 12000, display: '₹12,000', popular: true, features: ['Everything in the GBP plan', 'On-page and technical SEO for your website', '4 SEO blog posts a month', 'Search Console and GA4 reporting'] },
-      { name: 'GBP + SEO + AEO + GEO', price: 20000, display: '₹20,000', features: ['Everything in GBP + Website SEO', 'Answer Engine Optimisation (FAQ, schema, answer-first pages)', 'Generative Engine Optimisation for ChatGPT, Perplexity and Google AI Overviews', 'AI-visibility checks in the monthly report'] },
+      { name: 'Google Business Profile', features: ['Google Business Profile optimisation', '12 Google posts a month', 'Review reply support and photo updates', 'Monthly calls, directions and enquiries report'] },
+      { name: 'GBP + Website SEO', popular: true, features: ['Everything in the GBP plan', 'On-page and technical SEO for your website', '4 SEO blog posts a month', 'Search Console and GA4 reporting'] },
+      { name: 'GBP + SEO + AEO + GEO', features: ['Everything in GBP + Website SEO', 'Answer Engine Optimisation (FAQ, schema, answer-first pages)', 'Generative Engine Optimisation for ChatGPT, Perplexity and Google AI Overviews', 'AI-visibility checks in the monthly report'] },
     ],
   },
   malaysia: {
-    currency: 'MYR',
-    symbol: 'RM',
-    pricingPath: '/pricing/malaysia/',
     plans: [
-      { name: 'Google Business Profile', price: 800, display: 'RM 800', features: ['Google Business Profile optimisation', '12 Google posts a month', 'Review reply support and photo updates', 'Monthly calls, directions and enquiries report'] },
-      { name: 'GBP + Website SEO', price: 1500, display: 'RM 1,500', popular: true, features: ['Everything in the GBP plan', 'On-page and technical SEO for google.com.my', '4 SEO blog posts a month (English or Bahasa Malaysia)', 'Search Console and GA4 reporting'] },
-      { name: 'GBP + SEO + AEO + GEO', price: 2000, display: 'RM 2,000', features: ['Everything in GBP + Website SEO', 'Answer Engine Optimisation (FAQ, schema, answer-first pages)', 'Generative Engine Optimisation for ChatGPT, Perplexity and Google AI Overviews', 'AI-visibility checks in the monthly report'] },
+      { name: 'Google Business Profile', features: ['Google Business Profile optimisation', '12 Google posts a month', 'Review reply support and photo updates', 'Monthly calls, directions and enquiries report'] },
+      { name: 'GBP + Website SEO', popular: true, features: ['Everything in the GBP plan', 'On-page and technical SEO for google.com.my', '4 SEO blog posts a month (English or Bahasa Malaysia)', 'Search Console and GA4 reporting'] },
+      { name: 'GBP + SEO + AEO + GEO', features: ['Everything in GBP + Website SEO', 'Answer Engine Optimisation (FAQ, schema, answer-first pages)', 'Generative Engine Optimisation for ChatGPT, Perplexity and Google AI Overviews', 'AI-visibility checks in the monthly report'] },
     ],
   },
   singapore: {
-    currency: 'SGD',
-    symbol: 'S$',
-    pricingPath: '/contact/',
     plans: [
-      { name: 'Google Business Profile', price: 500, display: 'SGD 500', features: ['Google Business Profile optimisation', '12 Google posts a month', 'Review reply support and photo updates', 'Monthly calls, directions and enquiries report'] },
-      { name: 'GBP + Website SEO', price: 1000, display: 'SGD 1,000', popular: true, features: ['Everything in the GBP plan', 'On-page and technical SEO for google.com.sg', '4 SEO blog posts a month', 'Search Console and GA4 reporting'] },
-      { name: 'GBP + SEO + AEO + GEO', price: 1500, display: 'SGD 1,500', features: ['Everything in GBP + Website SEO', 'Answer Engine Optimisation (FAQ, schema, answer-first pages)', 'Generative Engine Optimisation for ChatGPT, Perplexity and Google AI Overviews', 'AI-visibility checks in the monthly report'] },
+      { name: 'Google Business Profile', features: ['Google Business Profile optimisation', '12 Google posts a month', 'Review reply support and photo updates', 'Monthly calls, directions and enquiries report'] },
+      { name: 'GBP + Website SEO', popular: true, features: ['Everything in the GBP plan', 'On-page and technical SEO for google.com.sg', '4 SEO blog posts a month', 'Search Console and GA4 reporting'] },
+      { name: 'GBP + SEO + AEO + GEO', features: ['Everything in GBP + Website SEO', 'Answer Engine Optimisation (FAQ, schema, answer-first pages)', 'Generative Engine Optimisation for ChatGPT, Perplexity and Google AI Overviews', 'AI-visibility checks in the monthly report'] },
     ],
   },
   dubai: {
-    currency: 'AED',
-    symbol: 'AED',
-    pricingPath: '/contact/',
     plans: [
-      { name: 'Google Business Profile', price: 800, display: 'AED 800', features: ['Google Business Profile optimisation', '8 Google posts a month', 'Review reply support and photo updates', 'Monthly calls, directions and enquiries report'] },
-      { name: 'GBP + Website SEO', price: 2000, display: 'AED 2,000', popular: true, features: ['Everything in the GBP plan', 'On-page and technical SEO for your website', '4 SEO blog posts a month', 'Search Console and GA4 reporting'] },
-      { name: 'GBP + SEO + AEO + GEO', price: 3000, display: 'AED 3,000', features: ['Everything in GBP + Website SEO', 'Answer Engine Optimisation (FAQ, schema, answer-first pages)', 'Generative Engine Optimisation for ChatGPT, Perplexity and Google AI Overviews', 'AI-visibility checks in the monthly report'] },
+      { name: 'Google Business Profile', features: ['Google Business Profile optimisation', '8 Google posts a month', 'Review reply support and photo updates', 'Monthly calls, directions and enquiries report'] },
+      { name: 'GBP + Website SEO', popular: true, features: ['Everything in the GBP plan', 'On-page and technical SEO for your website', '4 SEO blog posts a month', 'Search Console and GA4 reporting'] },
+      { name: 'GBP + SEO + AEO + GEO', features: ['Everything in GBP + Website SEO', 'Answer Engine Optimisation (FAQ, schema, answer-first pages)', 'Generative Engine Optimisation for ChatGPT, Perplexity and Google AI Overviews', 'AI-visibility checks in the monthly report'] },
     ],
   },
 }
@@ -66,10 +56,10 @@ export const cityPages = [
     containedIn: 'Tamil Nadu',
     whatsapp: IN_WA,
     title: 'Digital Marketing Agency in Chennai | Static Savvy Media',
-    description: 'Digital marketing for Chennai businesses: SEO, Google Business Profile, Ads, websites and AI search. Plans from ₹6,000/month, run from our Madurai HQ. WhatsApp +91 99440 40345.',
+    description: 'Digital marketing for Chennai businesses: SEO, Google Business Profile, Ads, websites and AI search. Run from our Madurai HQ, custom quotes. WhatsApp +91 99440 40345.',
     eyebrow: 'Chennai · Served from our Madurai HQ',
     h1: 'Digital Marketing Agency for Chennai Businesses',
-    answer: 'Static Savvy Media runs SEO, Google Business Profile, Google and Meta ads, websites and AI search optimisation (GEO/AEO) for Chennai businesses. We do not have a Chennai office: the work is done by our team at our Madurai head office, with video calls, WhatsApp updates and in-person meetings in Chennai by appointment. Monthly plans start at ₹6,000 (Google Business Profile), ₹12,000 (GBP + website SEO) and ₹20,000 (GBP + SEO + AEO + GEO).',
+    answer: 'Static Savvy Media runs SEO, Google Business Profile, Google and Meta ads, websites and AI search optimisation (GEO/AEO) for Chennai businesses. We do not have a Chennai office: the work is done by our team at our Madurai head office, with video calls, WhatsApp updates and in-person meetings in Chennai by appointment. Every plan is quoted for your business after a free review of your current setup.',
     intro: [
       'Chennai is the most crowded digital market in Tamil Nadu. A broad phrase like “best clinic in Chennai” is contested by hundreds of businesses and by national aggregators, so a Chennai campaign is won locality by locality and service by service, not with one generic city page.',
       'That is how we plan Chennai work: one real Google Business Profile per staffed branch, pages that speak to the specific localities you actually serve, and search ads held to tight geo-targets so OMR budgets are not spent on Ambattur clicks.',
@@ -98,7 +88,7 @@ export const cityPages = [
     ],
     faqs: [
       { question: 'Do you have an office in Chennai?', answer: 'No. Our offices are in Madurai (head office), Thoothukudi and Rawang, Malaysia. Chennai clients are served by our Madurai team over video calls and WhatsApp, with in-person meetings in Chennai by appointment.' },
-      { question: 'How much does digital marketing cost for a Chennai business?', answer: 'Our monthly plans are ₹6,000 for Google Business Profile management (12 posts a month), ₹12,000 for GBP plus website SEO with 4 blog posts, and ₹20,000 for GBP, SEO, AEO and GEO. Ad spend, if you run ads, is paid separately to Google or Meta.' },
+      { question: 'How much does digital marketing cost for a Chennai business?', answer: 'It depends on the services and how much work your market needs. We offer three monthly plans: Google Business Profile management (12 posts a month), GBP plus website SEO with 4 blog posts a month, and GBP, SEO, AEO and GEO. Each is quoted after a free review of your business. Message us on WhatsApp at +91 99440 40345 or send the enquiry form for a custom quote. Ad spend, if you run ads, is paid separately to Google or Meta.' },
       { question: 'Can a Madurai-based agency rank a Chennai business?', answer: 'Yes. Rankings depend on your website, your Google Business Profile and your reviews, not on where the agency sits. What matters is local knowledge of Chennai localities and Tamil Nadu buyers, which our team has.' },
       { question: 'Should a business with several Chennai branches have several Google profiles?', answer: 'One profile per real, staffed location, each with its own address and phone. Creating profiles for areas where you have no premises breaks Google’s guidelines and risks suspension.' },
       { question: 'Is SEO worth it in a market as competitive as Chennai?', answer: 'Usually yes, if you target specific services and localities rather than only broad head terms. Narrow, high-intent searches are more achievable and tend to convert better.' },
@@ -123,10 +113,10 @@ export const cityPages = [
     containedIn: 'Tamil Nadu',
     whatsapp: IN_WA,
     title: 'Digital Marketing Agency in Coimbatore | Static Savvy Media',
-    description: 'SEO, Google Business Profile, Ads and B2B websites for Coimbatore manufacturers, clinics and retailers. Plans from ₹6,000/month, run from our Madurai HQ. WhatsApp +91 99440 40345.',
+    description: 'SEO, Google Business Profile, Ads and B2B websites for Coimbatore manufacturers, clinics and retailers. Run from our Madurai HQ, custom quotes. WhatsApp +91 99440 40345.',
     eyebrow: 'Coimbatore · Served from our Madurai HQ',
     h1: 'Digital Marketing for Coimbatore Manufacturers, Clinics and Retailers',
-    answer: 'Static Savvy Media helps Coimbatore businesses get enquiries from Google, Google Maps, LinkedIn and AI assistants, with a special focus on manufacturers who sell B2B and export. We have no Coimbatore office: our Madurai team runs the work remotely, with meetings and factory or product shoots in Coimbatore by appointment. Plans start at ₹6,000, ₹12,000 and ₹20,000 a month.',
+    answer: 'Static Savvy Media helps Coimbatore businesses get enquiries from Google, Google Maps, LinkedIn and AI assistants, with a special focus on manufacturers who sell B2B and export. We have no Coimbatore office: our Madurai team runs the work remotely, with meetings and factory or product shoots in Coimbatore by appointment. Every plan is quoted for your business after a free review.',
     intro: [
       'Coimbatore is an engineering city. Pumps and motors, wet grinders, textile machinery, foundries and precision job shops sell mostly through dealers and referrals, yet purchase managers in India and abroad now shortlist suppliers online before they ever call.',
       'For those businesses a website is a catalogue and a salesperson. We build product-range pages with real specifications, datasheets and application notes, then use SEO, LinkedIn and tightly targeted Google Ads to put them in front of buyers who search by model, rating and use case.',
@@ -156,7 +146,7 @@ export const cityPages = [
     faqs: [
       { question: 'Do you have an office in Coimbatore?', answer: 'No. We serve Coimbatore from our Madurai head office, about four hours away by road, with video calls, WhatsApp and visits by appointment for meetings, factory walk-throughs or product shoots.' },
       { question: 'Does SEO work for industrial manufacturers in Coimbatore?', answer: 'Yes, especially for specific product and application searches where competition is lower and buyer intent is high. It needs detailed product pages rather than generic blog content.' },
-      { question: 'What does a Coimbatore business pay per month?', answer: '₹6,000 for Google Business Profile management, ₹12,000 for GBP plus website SEO with 4 blogs a month, and ₹20,000 for GBP, SEO, AEO and GEO. Website builds and ad spend are quoted separately.' },
+      { question: 'What does a Coimbatore business pay per month?', answer: 'It depends on scope. Our monthly plans cover Google Business Profile management, GBP plus website SEO with 4 blogs a month, and GBP, SEO, AEO and GEO, and each is quoted after a free review. Message us on WhatsApp at +91 99440 40345 or send the enquiry form for a custom quote. Website builds and ad spend are quoted separately.' },
       { question: 'Can you help us get export enquiries?', answer: 'We can build and optimise English pages for the export markets and standards you actually serve, and track enquiries by source. We do not promise orders; we show which pages and campaigns bring qualified enquiries.' },
       { question: 'Is LinkedIn useful for a B2B manufacturer?', answer: 'Usually more than Instagram or Facebook. It reaches purchase managers, consultants and contractors. YouTube is useful for product demos and installation videos.' },
       { question: 'Will you write technical content correctly?', answer: 'We draft from your datasheets and a call with your engineers, then send every technical page for your approval before it goes live.' },
@@ -181,10 +171,10 @@ export const cityPages = [
     containedIn: 'Tamil Nadu',
     whatsapp: IN_WA,
     title: 'Digital Marketing Agency in Trichy | Static Savvy Media',
-    description: 'Local SEO, Google Business Profile, Ads and websites for Trichy (Tiruchirappalli) hospitals, colleges, retailers and fabricators. From ₹6,000/month. WhatsApp +91 99440 40345.',
+    description: 'Local SEO, Google Business Profile, Ads and websites for Trichy (Tiruchirappalli) hospitals, colleges, retailers and fabricators. Custom quotes. WhatsApp +91 99440 40345.',
     eyebrow: 'Trichy · A short drive from our Madurai HQ',
     h1: 'Digital Marketing Agency for Trichy (Tiruchirappalli) Businesses',
-    answer: 'Static Savvy Media is a Madurai-headquartered agency that runs Local SEO, Google Business Profile, Google and Meta ads, websites and AI search optimisation for Trichy businesses. Trichy is about two and a half hours from our Madurai office, so on-site meetings are practical; day-to-day work is done remotely. Plans start at ₹6,000 a month.',
+    answer: 'Static Savvy Media is a Madurai-headquartered agency that runs Local SEO, Google Business Profile, Google and Meta ads, websites and AI search optimisation for Trichy businesses. Trichy is about two and a half hours from our Madurai office, so on-site meetings are practical; day-to-day work is done remotely. Every plan is quoted for your business after a free review.',
     intro: [
       'Trichy serves the whole of central Tamil Nadu. Patients come from Karur, Pudukkottai, Perambalur and Ariyalur, students arrive from across the state, and pilgrims head to Srirangam, Samayapuram and the Rockfort. Many Trichy customers are searching from outside the city before they travel.',
       'So a Trichy campaign has to be visible to people in surrounding districts, not just to people already in Thillai Nagar. We plan search terms, Google Business Profile content and ad targeting around where your customers actually come from.',
@@ -215,7 +205,7 @@ export const cityPages = [
       { question: 'Do you have an office in Trichy?', answer: 'No. Our head office is in Madurai, roughly two and a half hours from Trichy by road. Most work is done remotely, and we visit Trichy clients for meetings or shoots when needed.' },
       { question: 'How can a Trichy hospital reach patients from nearby districts?', answer: 'With speciality and doctor pages, an optimised Google Business Profile, genuine reviews and search ads for specific treatments targeted at the surrounding districts.' },
       { question: 'When should Trichy colleges start admission marketing?', answer: 'Several months before applications open, so pages and rankings are ready when parents and students begin comparing.' },
-      { question: 'What are your prices for Trichy businesses?', answer: '₹6,000 a month for Google Business Profile management, ₹12,000 for GBP plus website SEO with 4 blogs, and ₹20,000 for GBP, SEO, AEO and GEO. Ad spend is separate.' },
+      { question: 'How much does digital marketing cost for a Trichy business?', answer: 'We quote every business individually after a free review. Plans cover Google Business Profile management, GBP plus website SEO with 4 blogs a month, and GBP, SEO, AEO and GEO. Message us on WhatsApp at +91 99440 40345 or send the enquiry form for a custom quote. Ad spend is separate.' },
       { question: 'Is a Google Business Profile enough for a Trichy shop?', answer: 'It is the most important starting point. A simple fast website, WhatsApp and Instagram help convert the people who find you on Maps.' },
       { question: 'Do you create content in Tamil?', answer: 'Yes. We write Tamil and English content and choose the language per audience.' },
       { question: 'How do I start?', answer: 'WhatsApp +91 99440 40345 or fill in the form on this page for a free review of your website and Google Business Profile.' },
@@ -238,10 +228,10 @@ export const cityPages = [
     containedIn: 'Tamil Nadu',
     whatsapp: IN_WA,
     title: 'Digital Marketing Agency in Salem | Static Savvy Media',
-    description: 'SEO, Google Maps, Ads and websites for Salem businesses: sago and food brands, steel and engineering, silk and handloom, clinics and retail. From ₹6,000/month. WhatsApp +91 99440 40345.',
+    description: 'SEO, Google Maps, Ads and websites for Salem businesses: sago and food brands, steel and engineering, silk and handloom, clinics and retail. Custom quotes. WhatsApp +91 99440 40345.',
     eyebrow: 'Salem · Served from our Madurai HQ',
     h1: 'Digital Marketing Agency for Salem Businesses',
-    answer: 'Static Savvy Media runs SEO, Google Business Profile, Google and Meta ads, websites and AI search optimisation for Salem businesses from our Madurai head office. We have no Salem office; work is managed remotely, with visits by appointment. Plans start at ₹6,000 (GBP), ₹12,000 (GBP + SEO) and ₹20,000 (GBP + SEO + AEO + GEO) a month.',
+    answer: 'Static Savvy Media runs SEO, Google Business Profile, Google and Meta ads, websites and AI search optimisation for Salem businesses from our Madurai head office. We have no Salem office; work is managed remotely, with visits by appointment. Every plan is quoted for your business after a free review.',
     intro: [
       'Salem’s economy is unusually varied: sago (javvarisi) and starch units, steel and engineering, silk and handloom weaving, mango trade, transport operators and the tourism that flows up to Yercaud. Many of these businesses already sell beyond the district through traders, and the opportunity is to reach buyers directly.',
       'For Salem we usually start with the Google Business Profile and a credible website, then add product or service pages aimed at the buyers outside Salem who are already searching for what you make.',
@@ -270,7 +260,7 @@ export const cityPages = [
     ],
     faqs: [
       { question: 'Do you have an office in Salem?', answer: 'No. We serve Salem from our Madurai head office with video calls, WhatsApp and on-site visits by appointment. Our other offices are in Thoothukudi and Rawang, Malaysia.' },
-      { question: 'What does digital marketing cost for a Salem business?', answer: '₹6,000 a month for Google Business Profile management (12 posts), ₹12,000 for GBP plus website SEO with 4 blogs a month, and ₹20,000 for GBP, SEO, AEO and GEO. Ad spend is paid separately.' },
+      { question: 'What does digital marketing cost for a Salem business?', answer: 'It depends on the services you need. Our monthly plans cover Google Business Profile management (12 posts), GBP plus website SEO with 4 blogs a month, and GBP, SEO, AEO and GEO, each quoted after a free review. Message us on WhatsApp at +91 99440 40345 or send the enquiry form for a custom quote. Ad spend is paid separately.' },
       { question: 'Can you help a sago or food unit get direct buyers?', answer: 'We can build product pages, optimise for the searches trade buyers use, and set up WhatsApp and enquiry tracking. Orders depend on your pricing and supply, but you will see exactly which pages bring enquiries.' },
       { question: 'Is SEO useful for a Salem textile or saree business?', answer: 'Yes, combined with good product photography and Instagram. Searches for specific weaves and sarees come from all over India.' },
       { question: 'Do you do websites as well as marketing?', answer: 'Yes. We design fast, mobile-first websites with clear WhatsApp and call buttons, and SEO built in from the start.' },
@@ -295,10 +285,10 @@ export const cityPages = [
     containedIn: 'Tamil Nadu',
     whatsapp: IN_WA,
     title: 'Digital Marketing Agency in Tirunelveli | Static Savvy Media',
-    description: 'SEO, Google Business Profile, e-commerce and ads for Tirunelveli sweets brands, Palayamkottai schools, clinics and retailers. Near our Thoothukudi office. From ₹6,000/month.',
+    description: 'SEO, Google Business Profile, e-commerce and ads for Tirunelveli sweets brands, Palayamkottai schools, clinics and retailers. Near our Thoothukudi office. Get a custom quote.',
     eyebrow: 'Tirunelveli · Near our Thoothukudi office',
     h1: 'Digital Marketing Agency for Tirunelveli and Palayamkottai Businesses',
-    answer: 'Static Savvy Media serves Tirunelveli from our nearby Thoothukudi office and our Madurai head office. We run Google Business Profile, SEO, e-commerce and social media, ads and AI search optimisation for local brands, schools, clinics and retailers, with on-site visits easy to arrange. Plans start at ₹6,000 a month.',
+    answer: 'Static Savvy Media serves Tirunelveli from our nearby Thoothukudi office and our Madurai head office. We run Google Business Profile, SEO, e-commerce and social media, ads and AI search optimisation for local brands, schools, clinics and retailers, with on-site visits easy to arrange. Every plan is quoted for your business after a free review.',
     intro: [
       'Tirunelveli has products that people outside the district already want, from its famous halwa and sweets to food products and handicrafts, and an education base in Palayamkottai that draws students from across southern Tamil Nadu.',
       'For many Tirunelveli businesses the real growth is beyond the district: customers in Chennai, Bengaluru and overseas who want to order. We help with both sides, being found on Google Maps locally and selling online to everyone else.',
@@ -329,7 +319,7 @@ export const cityPages = [
       { question: 'Do you have an office in Tirunelveli?', answer: 'No. Our nearest office is in Thoothukudi, and our head office is in Madurai. Both are within easy reach, so we can meet Tirunelveli clients in person when needed.' },
       { question: 'How can a Tirunelveli sweet shop sell online across India?', answer: 'With an e-commerce site or marketplace listings that clearly state shelf life and delivery, courier partners that suit the product, and promotion through Google, Instagram and WhatsApp.' },
       { question: 'Is local SEO useful for Tirunelveli businesses?', answer: 'Yes. Most local searches happen on Google Maps, and many local profiles are incomplete, so a well-kept profile can stand out.' },
-      { question: 'What do your plans cost?', answer: '₹6,000 a month for Google Business Profile management, ₹12,000 for GBP plus website SEO with 4 blogs a month, and ₹20,000 for GBP, SEO, AEO and GEO.' },
+      { question: 'What do your plans cost?', answer: 'Plans cover Google Business Profile management, GBP plus website SEO with 4 blogs a month, and GBP, SEO, AEO and GEO. Each is quoted for your business after a free review. Message us on WhatsApp at +91 99440 40345 or send the enquiry form for a custom quote.' },
       { question: 'Should we market in Tamil or English?', answer: 'Tamil usually works best for local and regional customers; use English alongside it for buyers outside Tamil Nadu.' },
       { question: 'Can you help schools in Palayamkottai with admissions?', answer: 'Yes: course and admission pages, parent FAQs, Google Business Profile and seasonal campaigns planned before applications open.' },
       { question: 'How do we start?', answer: 'WhatsApp +91 99440 40345 or use the form on this page for a free review.' },
@@ -352,10 +342,10 @@ export const cityPages = [
     containedIn: 'Tamil Nadu',
     whatsapp: IN_WA,
     title: 'Digital Marketing for Tiruppur Garment Exporters | Static Savvy Media',
-    description: 'B2B websites, SEO, LinkedIn and Google Ads for Tiruppur knitwear exporters, garment manufacturers and job-work units, plus local SEO for retailers. From ₹6,000/month.',
+    description: 'B2B websites, SEO, LinkedIn and Google Ads for Tiruppur knitwear exporters, garment manufacturers and job-work units, plus local SEO for retailers. Get a custom quote.',
     eyebrow: 'Tiruppur · Served from our Madurai HQ',
     h1: 'Digital Marketing for Tiruppur Knitwear Exporters and Garment Manufacturers',
-    answer: 'Static Savvy Media helps Tiruppur knitwear exporters, garment manufacturers and job-work units win buyer enquiries online with B2B websites, SEO, LinkedIn and Google Ads, and helps local retailers on Google Maps. We serve Tiruppur from our Madurai head office, remotely and with visits by appointment. Plans start at ₹6,000 a month.',
+    answer: 'Static Savvy Media helps Tiruppur knitwear exporters, garment manufacturers and job-work units win buyer enquiries online with B2B websites, SEO, LinkedIn and Google Ads, and helps local retailers on Google Maps. We serve Tiruppur from our Madurai head office, remotely and with visits by appointment. Every plan is quoted for your business after a free review.',
     intro: [
       'Tiruppur is India’s knitwear export hub. Exporters, private-label manufacturers and dyeing, printing and stitching job-work units deal with buyers in Europe, the US and across India, and those buyers increasingly start with a Google search, a website check and a LinkedIn profile before the first sample request.',
       'Our Tiruppur work is built for that buyer: capability pages that show product categories, monthly capacity, fabrics, processes and compliance certificates you actually hold, and a fast, credible enquiry path for sourcing teams in other time zones.',
@@ -386,7 +376,7 @@ export const cityPages = [
       { question: 'Do you have an office in Tiruppur?', answer: 'No. We serve Tiruppur from our Madurai head office with video calls and WhatsApp, and visit units for meetings or photography by appointment.' },
       { question: 'Can SEO bring export buyers to a Tiruppur manufacturer?', answer: 'It can bring qualified enquiries from sourcing teams who search for specific garment categories and capabilities. Conversion still depends on your samples, pricing and response time.' },
       { question: 'Should a Tiruppur exporter be on LinkedIn?', answer: 'Yes. Buyers and buying agents check LinkedIn to verify suppliers. A complete company page and active profiles add credibility.' },
-      { question: 'What do your plans cost?', answer: '₹6,000 a month for Google Business Profile management, ₹12,000 for GBP plus website SEO with 4 blogs a month, and ₹20,000 for GBP, SEO, AEO and GEO. Website builds and ad spend are separate.' },
+      { question: 'What do your plans cost?', answer: 'Plans cover Google Business Profile management, GBP plus website SEO with 4 blogs a month, and GBP, SEO, AEO and GEO. Each is quoted for your business after a free review. Message us on WhatsApp at +91 99440 40345 or send the enquiry form for a custom quote. Website builds and ad spend are separate.' },
       { question: 'Can you photograph our products and factory?', answer: 'Yes. We offer product photography and creative design, and corporate photo and video, planned on-site in Tiruppur.' },
       { question: 'Will you claim certifications or clients we do not have?', answer: 'No. We only publish certifications, capacities and buyer names you confirm in writing.' },
       { question: 'How do we start?', answer: 'WhatsApp +91 99440 40345 or use the form on this page. We start with a free review of your website, LinkedIn and Google presence.' },
@@ -410,10 +400,10 @@ export const cityPages = [
     whatsapp: MY_WA,
     office: 'malaysia',
     title: 'Digital Marketing Agency in Selangor | Static Savvy Media',
-    description: 'Selangor digital marketing from our Rawang office: SEO, Google Business Profile, Ads and websites for Petaling Jaya, Shah Alam, Subang Jaya and Klang. From RM 800/month.',
+    description: 'Selangor digital marketing from our Rawang office: SEO, Google Business Profile, Ads and websites for Petaling Jaya, Shah Alam, Subang Jaya and Klang. Custom quotes.',
     eyebrow: 'Selangor · Our Malaysia office is in Rawang',
     h1: 'Digital Marketing Agency in Selangor: Petaling Jaya, Shah Alam, Subang Jaya and Klang',
-    answer: 'Static Savvy Media’s Malaysia office is in Rawang, Selangor, so Selangor is home ground. We run SEO, Google Business Profile, Google and Meta ads, websites and AI search optimisation for businesses in Petaling Jaya, Shah Alam, Subang Jaya, Klang and the rest of the state, with meetings at our office or yours. Plans are RM 800, RM 1,500 and RM 2,000 a month.',
+    answer: 'Static Savvy Media’s Malaysia office is in Rawang, Selangor, so Selangor is home ground. We run SEO, Google Business Profile, Google and Meta ads, websites and AI search optimisation for businesses in Petaling Jaya, Shah Alam, Subang Jaya, Klang and the rest of the state, with meetings at our office or yours. Every plan is quoted for your business after a free review.',
     intro: [
       'Selangor is Malaysia’s most populous and industrialised state, and it behaves like several markets at once: manufacturing and logistics in Shah Alam and around Port Klang, dense retail and F&B in Petaling Jaya and Subang Jaya, private colleges and tech firms around Cyberjaya, and fast-growing townships in the north such as Rawang.',
       'Customers here search on google.com.my in English, Bahasa Malaysia and Chinese, check reviews, then start a WhatsApp chat. We plan pages, Google Business Profiles and ad targeting around the townships you actually serve, and language per channel rather than translating everything.',
@@ -443,7 +433,7 @@ export const cityPages = [
     faqs: [
       { question: 'Where is your Selangor office?', answer: 'NO.9, Jalan Anggun 2J, Taman Anggun 2, 48000 Rawang, Selangor, near AEON Mall Rawang. We are open Monday to Friday, 9 AM to 6 PM (MYT).' },
       { question: 'Do you serve Petaling Jaya, Shah Alam and Klang?', answer: 'Yes. We work with businesses across Selangor and meet clients in PJ, Shah Alam, Subang Jaya and Klang by appointment.' },
-      { question: 'How much does SEO cost in Selangor?', answer: 'Our plans are RM 800 a month for Google Business Profile management (12 posts), RM 1,500 for GBP plus website SEO with 4 blogs a month, and RM 2,000 for GBP, SEO, AEO and GEO. Ad spend is separate.' },
+      { question: 'How much does SEO cost in Selangor?', answer: 'It depends on how competitive your services and area are. Our monthly plans cover Google Business Profile management (12 posts), GBP plus website SEO with 4 blogs a month, and GBP, SEO, AEO and GEO, each quoted after a free review. Message us on WhatsApp at +60 12-453 7030 or send the enquiry form for a custom quote. Ad spend is separate.' },
       { question: 'Can you write in Bahasa Malaysia?', answer: 'Yes, we produce English and Bahasa Malaysia content and plan the language per channel and audience.' },
       { question: 'How do I contact your Malaysia team?', answer: 'Call or WhatsApp +60 12-453 7030, or use the form on this page.' },
       { question: 'Can my business use a grant for digital marketing?', answer: 'Some SMEs qualify for government digitalisation programmes. We can prepare documentation for eligible services, but the programme decides eligibility.' },
@@ -455,7 +445,6 @@ export const cityPages = [
       { to: '/locations/malaysia/', label: 'Our Malaysia office (Rawang)' },
       { to: '/locations/kuala-lumpur/', label: 'Digital marketing in Kuala Lumpur' },
       { to: '/services/local-seo/malaysia/', label: 'Local SEO in Malaysia' },
-      { to: '/pricing/malaysia/', label: 'Malaysia pricing' },
     ],
   },
 
@@ -468,10 +457,10 @@ export const cityPages = [
     containedIn: null,
     whatsapp: IN_WA,
     title: 'Digital Marketing Agency for Singapore SMEs | Static Savvy Media',
-    description: 'SEO, Google Business Profile, AI search (GEO/AEO) and websites for Singapore SMEs, run remotely by our Malaysia and India team. Plans SGD 500, 1,000 and 1,500/month.',
+    description: 'SEO, Google Business Profile, AI search (GEO/AEO) and websites for Singapore SMEs, run remotely by our Malaysia and India team. Get a custom quote.',
     eyebrow: 'Singapore · Remote service from Malaysia & India',
     h1: 'Digital Marketing for Singapore SMEs, Run Remotely by a Specialist Team',
-    answer: 'Static Savvy Media serves Singapore businesses remotely from our offices in Rawang, Malaysia (same time zone as Singapore) and Madurai, India. We run Google Business Profile, SEO, AI search optimisation (GEO/AEO), websites and ads for SMEs. We have no Singapore office. Plans are SGD 500, SGD 1,000 and SGD 1,500 a month.',
+    answer: 'Static Savvy Media serves Singapore businesses remotely from our offices in Rawang, Malaysia (same time zone as Singapore) and Madurai, India. We run Google Business Profile, SEO, AI search optimisation (GEO/AEO), websites and ads for SMEs. We have no Singapore office. Every plan is quoted for your business after a free review.',
     intro: [
       'Singapore SMEs face agency fees set for a high-cost city. Much of the work that drives enquiries, keeping a Google Business Profile complete and active, publishing useful service pages and making sure AI assistants describe you correctly, does not need to be done in Singapore.',
       'We run that work remotely with a team on Singapore time. You get video-call reviews, WhatsApp updates and reports from your own Google accounts, and you keep full ownership of your website, profiles and data.',
@@ -500,7 +489,7 @@ export const cityPages = [
     ],
     faqs: [
       { question: 'Do you have an office in Singapore?', answer: 'No. We serve Singapore remotely from our Malaysia office in Rawang, Selangor, and our head office in Madurai, India. Our Malaysia team works on the same time zone as Singapore.' },
-      { question: 'How much do your Singapore plans cost?', answer: 'SGD 500 a month for Google Business Profile management (12 posts), SGD 1,000 for GBP plus website SEO with 4 blogs a month, and SGD 1,500 for GBP, SEO, AEO and GEO. Ad spend, if any, is paid directly to the ad platform.' },
+      { question: 'How much do your Singapore plans cost?', answer: 'Our monthly plans cover Google Business Profile management (12 posts), GBP plus website SEO with 4 blogs a month, and GBP, SEO, AEO and GEO. Each is quoted for your business after a free review. Message us on WhatsApp at +91 99440 40345 or send the enquiry form for a custom quote. Ad spend, if any, is paid directly to the ad platform.' },
       { question: 'Can a remote agency do local SEO in Singapore?', answer: 'Yes. Local SEO depends on your Google Business Profile, website, reviews and citations, all of which are managed online. What we cannot do is visit you in person, so photos usually come from you or a local photographer.' },
       { question: 'Who owns the accounts and the website?', answer: 'You do. We work inside your Google Business Profile, Search Console, Analytics and ad accounts with access you grant, and you can remove it at any time.' },
       { question: 'Do you handle healthcare advertising rules?', answer: 'We write healthcare copy conservatively and avoid content the Singapore rules restrict, but you remain responsible for compliance and we recommend your own review before publishing.' },
@@ -525,13 +514,13 @@ export const cityPages = [
     containedIn: 'United Arab Emirates',
     whatsapp: IN_WA,
     title: 'Digital Marketing Agency for Dubai SMEs | Static Savvy Media',
-    description: 'Google Business Profile, SEO, AI search (GEO/AEO) and websites for Dubai SMEs, run remotely by our India team, 1.5 hours ahead of Dubai. Plans AED 800, 2,000 and 3,000/month.',
+    description: 'Google Business Profile, SEO, AI search (GEO/AEO) and websites for Dubai SMEs, run remotely by our India team, 1.5 hours ahead of Dubai. Get a custom quote.',
     eyebrow: 'Dubai · Remote service from India',
     h1: 'Digital Marketing for Dubai SMEs, Managed Remotely from India',
-    answer: 'Static Savvy Media serves Dubai businesses remotely from our head office in Madurai, India, which is only 1.5 hours ahead of Dubai. We run Google Business Profile, SEO, AI search optimisation (GEO/AEO), websites and ads for SMEs, with no Dubai office claimed. Plans are AED 800, AED 2,000 and AED 3,000 a month.',
+    answer: 'Static Savvy Media serves Dubai businesses remotely from our head office in Madurai, India, which is only 1.5 hours ahead of Dubai. We run Google Business Profile, SEO, AI search optimisation (GEO/AEO), websites and ads for SMEs, with no Dubai office claimed. Every plan is quoted for your business after a free review.',
     intro: [
       'Dubai is one of the most competitive local-search markets in the region: restaurants, clinics, brokers, trading companies and service businesses all fight for the same map results in Business Bay, Marina, JLT and Deira.',
-      'Many Dubai SMEs pay large retainers for work that is mostly done online. We offer a remote alternative: a specialist team on a near-identical working day, honest reporting from your own accounts, and clear monthly pricing in AED.',
+      'Many Dubai SMEs pay large retainers for work that is mostly done online. We offer a remote alternative: a specialist team on a near-identical working day, honest reporting from your own accounts, and a clear written monthly quote.',
     ],
     howWeServe: {
       mode: 'Fully remote, overlapping Dubai working hours',
@@ -557,7 +546,7 @@ export const cityPages = [
     ],
     faqs: [
       { question: 'Do you have an office in Dubai?', answer: 'No. We serve Dubai remotely from our head office in Madurai, India, with support from our Malaysia office. We do not claim a Dubai address on any listing.' },
-      { question: 'How much do your Dubai plans cost?', answer: 'AED 800 a month for Google Business Profile management (8 posts a month), AED 2,000 for GBP plus website SEO with 4 blogs a month, and AED 3,000 for GBP, SEO, AEO and GEO. Ad spend is separate.' },
+      { question: 'How much do your Dubai plans cost?', answer: 'Our monthly plans cover Google Business Profile management (8 posts a month), GBP plus website SEO with 4 blogs a month, and GBP, SEO, AEO and GEO. Each is quoted for your business after a free review. Message us on WhatsApp at +91 99440 40345 or send the enquiry form for a custom quote. Ad spend is separate.' },
       { question: 'How do you handle the time difference?', answer: 'India is only 1.5 hours ahead of Dubai, so most of our working day overlaps yours. Calls are scheduled in Dubai business hours.' },
       { question: 'Can you run healthcare ads in Dubai?', answer: 'Only for advertising you have the required approvals for. We write conservatively and plan around your approvals; compliance remains your responsibility.' },
       { question: 'Do you create Arabic content?', answer: 'Our standard work is in English. If you need Arabic pages, we agree upfront how they will be produced and reviewed by a native speaker before anything goes live.' },
@@ -583,10 +572,10 @@ export const cityPages = [
     whatsapp: MY_WA,
     office: 'malaysia',
     title: 'Digital Marketing & Ads Agency in Kuala Lumpur (KL) | Static Savvy Media',
-    description: 'Digital marketing and ads agency for Kuala Lumpur SMEs: SEO, Google Maps, Google Ads, social media and websites from our Selangor office. From RM 800/month. +60 12-453 7030.',
+    description: 'Digital marketing and ads agency for Kuala Lumpur SMEs: SEO, Google Maps, Google Ads, social media and websites from our Selangor office. Custom quotes: +60 12-453 7030.',
     eyebrow: 'Kuala Lumpur · Served from our Rawang, Selangor office',
     h1: 'Digital Marketing Agency in Kuala Lumpur for SMEs: SEO, Google Maps, Ads and Social Media',
-    answer: 'Static Savvy Media is a digital marketing agency serving Kuala Lumpur and the Klang Valley from our Malaysia office in Rawang, Selangor. We run SEO, Google Business Profile (Google Maps), Google Ads, social media, websites and AI search optimisation for KL businesses, quoted in MYR. SEO plans are RM 800, RM 1,500 and RM 2,000 a month, with no lock-in.',
+    answer: 'Static Savvy Media is a digital marketing agency serving Kuala Lumpur and the Klang Valley from our Malaysia office in Rawang, Selangor. We run SEO, Google Business Profile (Google Maps), Google Ads, social media, websites and AI search optimisation for KL businesses. Every plan is quoted for your business after a free review, with no lock-in.',
     intro: [
       'Customers in Kuala Lumpur compare options quickly: a Google search or a "near me" search on Maps, a look at your reviews, a scroll through your Instagram, then a WhatsApp message. We help KL businesses show up and make a good impression at each of those steps.',
       'KL is also several markets in one. Bangsar, Mont Kiara, Cheras, KLCC, Bukit Bintang and nearby Petaling Jaya each have their own competition, and the same customer may search in English, read reviews in Bahasa Malaysia and chat in Chinese or Tamil. We plan pages, Google Business Profiles, ad targeting and language per channel around the areas you actually serve.',
@@ -615,7 +604,7 @@ export const cityPages = [
     ],
     faqs: [
       { question: 'Do you have an office in Kuala Lumpur?', answer: 'Our Malaysia office is in Rawang, Selangor (NO.9, Jalan Anggun 2J, Taman Anggun 2, 48000 Rawang, near AEON Mall Rawang). We serve clients across Kuala Lumpur and the Klang Valley and meet in KL by appointment.' },
-      { question: 'How much does a digital marketing agency in KL cost?', answer: 'It depends on the services and how much work is included, and ad spend is usually paid separately. Our SEO plans are RM 800 a month for Google Business Profile management (12 posts), RM 1,500 for GBP plus website SEO with 4 blogs a month, and RM 2,000 for GBP, SEO, AEO and GEO. Websites and ads management are quoted separately.' },
+      { question: 'How much does a digital marketing agency in KL cost?', answer: 'It depends on the services and how much work is included, and ad spend is usually paid separately. Our SEO plans cover Google Business Profile management (12 posts), GBP plus website SEO with 4 blogs a month, and GBP, SEO, AEO and GEO, each quoted after a free review. Message us on WhatsApp at +60 12-453 7030 or send the enquiry form for a custom quote. Websites and ads management are quoted separately.' },
       { question: 'Which service should a KL small business start with?', answer: 'If customers find you on Google Maps or by searching "near me", start with your Google Business Profile and local SEO. If they compare options on websites, add SEO for your service pages. If you need leads quickly, run Google Ads with tracking while SEO builds. Our buyer’s checklist for choosing a digital marketing agency in Malaysia (linked below) explains how to decide.' },
       { question: 'How long does SEO take to work in Kuala Lumpur?', answer: 'Google Business Profile improvements can lift Maps visibility within weeks. Website rankings for competitive KL keywords usually take several months and build as content, reviews and links grow. Google Ads can bring enquiries within days of launch.' },
       { question: 'Do you run Google Ads (SEM) and social media for KL businesses?', answer: 'Yes. We manage Google Ads search and Performance Max campaigns and social media for Instagram, Facebook, TikTok and LinkedIn, with conversion tracking on calls, forms and WhatsApp.' },

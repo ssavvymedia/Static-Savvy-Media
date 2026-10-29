@@ -52,7 +52,7 @@ const FAQ_SECTIONS = [
     ],
   },
   {
-    title: 'About Our Services & Pricing',
+    title: 'About Our Services & Quotes',
     items: [
       {
         id: 'svc-01',
@@ -62,7 +62,7 @@ const FAQ_SECTIONS = [
       {
         id: 'svc-02',
         question: 'Are Malaysian clients billed in MYR?',
-        answer: 'Yes. Malaysian clients are invoiced in MYR at published MYR pricing. Indian clients are invoiced in INR. Payment is via bank transfer, we provide local banking details for both markets.',
+        answer: 'Yes. Malaysian clients are quoted and invoiced in MYR. Indian clients are invoiced in INR. Payment is via bank transfer, we provide local banking details for both markets.',
       },
       {
         id: 'svc-03',

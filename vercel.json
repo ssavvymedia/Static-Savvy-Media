@@ -22,26 +22,6 @@
   ],
   "redirects": [
     {
-      "source": "/pricing/india/social-media-marketing{/}?",
-      "destination": "/pricing/india/social-media/",
-      "statusCode": 301
-    },
-    {
-      "source": "/pricing/india/website-design-development{/}?",
-      "destination": "/pricing/india/website/",
-      "statusCode": 301
-    },
-    {
-      "source": "/pricing/malaysia/social-media-marketing{/}?",
-      "destination": "/pricing/malaysia/social-media/",
-      "statusCode": 301
-    },
-    {
-      "source": "/pricing/malaysia/website-design-development{/}?",
-      "destination": "/pricing/malaysia/website/",
-      "statusCode": 301
-    },
-    {
       "source": "/blog/seo{/}?",
       "destination": "/blog/seo-agency-madurai-complete-guide/",
       "statusCode": 301
@@ -318,7 +298,7 @@
     },
     {
       "source": "/post/local-seo-pricing-in-madurai-what-should-you-actually-pay-in-2026{/}?",
-      "destination": "/pricing/india/local-seo/",
+      "destination": "/services/local-seo/madurai/",
       "statusCode": 301
     },
     {
@@ -768,7 +748,7 @@
     },
     {
       "source": "/hi/pricing{/}?",
-      "destination": "/pricing/india/",
+      "destination": "/",
       "statusCode": 301
     },
     {
@@ -1088,7 +1068,7 @@
     },
     {
       "source": "/ta/pricing{/}?",
-      "destination": "/pricing/india/",
+      "destination": "/",
       "statusCode": 301
     },
     {
@@ -1417,6 +1397,106 @@
       "statusCode": 301
     },
     {
+      "source": "/pricing/india{/}?",
+      "destination": "/locations/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pricing/india/seo{/}?",
+      "destination": "/services/seo/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pricing/india/local-seo{/}?",
+      "destination": "/services/local-seo/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pricing/india/google-ads{/}?",
+      "destination": "/services/google-ads/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pricing/india/social-media{/}?",
+      "destination": "/services/social-media-marketing/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pricing/india/social-media-marketing{/}?",
+      "destination": "/services/social-media-marketing/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pricing/india/website{/}?",
+      "destination": "/services/website-design-development/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pricing/india/website-design-development{/}?",
+      "destination": "/services/website-design-development/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pricing/india/ai-services{/}?",
+      "destination": "/services/ai-business-automation/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pricing/india/photography-video{/}?",
+      "destination": "/services/corporate-photography-video/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pricing/malaysia{/}?",
+      "destination": "/locations/malaysia/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pricing/malaysia/seo{/}?",
+      "destination": "/services/seo/malaysia/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pricing/malaysia/local-seo{/}?",
+      "destination": "/services/local-seo/malaysia/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pricing/malaysia/google-ads{/}?",
+      "destination": "/services/google-ads/kuala-lumpur/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pricing/malaysia/social-media{/}?",
+      "destination": "/services/social-media-marketing/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pricing/malaysia/social-media-marketing{/}?",
+      "destination": "/services/social-media-marketing/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pricing/malaysia/website{/}?",
+      "destination": "/services/website-design-development/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pricing/malaysia/website-design-development{/}?",
+      "destination": "/services/website-design-development/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pricing/malaysia/ai-services{/}?",
+      "destination": "/services/ai-business-automation/malaysia/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pricing/malaysia/photography-video{/}?",
+      "destination": "/services/corporate-photography-video/",
+      "statusCode": 301
+    },
+    {
       "source": "/about",
       "destination": "/about/",
       "statusCode": 308
@@ -1694,86 +1774,6 @@
     {
       "source": "/p/singapore-xseszo",
       "destination": "/p/singapore-xseszo/",
-      "statusCode": 308
-    },
-    {
-      "source": "/pricing/india",
-      "destination": "/pricing/india/",
-      "statusCode": 308
-    },
-    {
-      "source": "/pricing/india/seo",
-      "destination": "/pricing/india/seo/",
-      "statusCode": 308
-    },
-    {
-      "source": "/pricing/india/local-seo",
-      "destination": "/pricing/india/local-seo/",
-      "statusCode": 308
-    },
-    {
-      "source": "/pricing/india/google-ads",
-      "destination": "/pricing/india/google-ads/",
-      "statusCode": 308
-    },
-    {
-      "source": "/pricing/india/social-media",
-      "destination": "/pricing/india/social-media/",
-      "statusCode": 308
-    },
-    {
-      "source": "/pricing/india/website",
-      "destination": "/pricing/india/website/",
-      "statusCode": 308
-    },
-    {
-      "source": "/pricing/india/ai-services",
-      "destination": "/pricing/india/ai-services/",
-      "statusCode": 308
-    },
-    {
-      "source": "/pricing/india/photography-video",
-      "destination": "/pricing/india/photography-video/",
-      "statusCode": 308
-    },
-    {
-      "source": "/pricing/malaysia",
-      "destination": "/pricing/malaysia/",
-      "statusCode": 308
-    },
-    {
-      "source": "/pricing/malaysia/seo",
-      "destination": "/pricing/malaysia/seo/",
-      "statusCode": 308
-    },
-    {
-      "source": "/pricing/malaysia/local-seo",
-      "destination": "/pricing/malaysia/local-seo/",
-      "statusCode": 308
-    },
-    {
-      "source": "/pricing/malaysia/google-ads",
-      "destination": "/pricing/malaysia/google-ads/",
-      "statusCode": 308
-    },
-    {
-      "source": "/pricing/malaysia/social-media",
-      "destination": "/pricing/malaysia/social-media/",
-      "statusCode": 308
-    },
-    {
-      "source": "/pricing/malaysia/website",
-      "destination": "/pricing/malaysia/website/",
-      "statusCode": 308
-    },
-    {
-      "source": "/pricing/malaysia/ai-services",
-      "destination": "/pricing/malaysia/ai-services/",
-      "statusCode": 308
-    },
-    {
-      "source": "/pricing/malaysia/photography-video",
-      "destination": "/pricing/malaysia/photography-video/",
       "statusCode": 308
     },
     {
@@ -2230,70 +2230,6 @@
     },
     {
       "source": "/p/singapore-xseszo/",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/pricing/india/",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/pricing/india/seo/",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/pricing/india/local-seo/",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/pricing/india/google-ads/",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/pricing/india/social-media/",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/pricing/india/website/",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/pricing/india/ai-services/",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/pricing/india/photography-video/",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/pricing/malaysia/",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/pricing/malaysia/seo/",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/pricing/malaysia/local-seo/",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/pricing/malaysia/google-ads/",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/pricing/malaysia/social-media/",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/pricing/malaysia/website/",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/pricing/malaysia/ai-services/",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/pricing/malaysia/photography-video/",
       "destination": "/index.html"
     },
     {

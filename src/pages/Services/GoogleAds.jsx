@@ -118,7 +118,7 @@ const FAQS = [
   {
     question: 'What is the minimum budget for Google Ads in India?',
     answer:
-      'For India (INR campaigns), a minimum monthly ad spend of ₹15,000–20,000 is needed to gather meaningful data. Below this, there are too few clicks to optimise effectively. For Malaysia (MYR campaigns), RM1,500–2,000 per month is a typical starting point. These are ad spend budgets, our management fee is separate.',
+      'You need enough monthly ad spend to gather meaningful data; below that, there are too few clicks to optimise effectively. The right starting budget depends on your market, sector and cost per click, so we recommend one after a free review of your account and competitors. Ad spend is paid directly to Google; our management fee is quoted separately.',
   },
   {
     question: 'How quickly does Google Ads start generating leads?',

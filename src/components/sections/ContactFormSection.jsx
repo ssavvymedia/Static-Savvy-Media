@@ -140,7 +140,7 @@ export default function ContactFormSection() {
   }
 
   return (
-    <section className="section section--alt contact-form-section">
+    <section id="enquiry" className="section section--alt contact-form-section">
       <div className="container">
         <ScrollReveal>
           <div className="contact-form-container glass-card">

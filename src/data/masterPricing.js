@@ -1,31 +1,25 @@
-import { PRICE_TIERS } from './cityPages.js'
+import { PLAN_TIERS } from './cityPages.js'
+import { PRICING_COUNTRIES, UNLISTED_PRICING_PATHS } from './pricingLinks.js'
 
 /**
  * Country pricing (unlisted, noindex pages under /p/): four services x four countries. Prices supplied by the owner on
  * 28 Oct 2026. Plain data only (also read by the build-time prerender for Offer schema).
- * SEO tier features reuse PRICE_TIERS (cityPages.js) so the city pages and this page never disagree.
+ * SEO tier names and features reuse PLAN_TIERS (cityPages.js) so the city pages and this page never
+ * disagree; the SEO amounts live only here (no prices on public pages, owner's instruction 29 Oct 2026).
  */
-export const PRICING_COUNTRIES = [
-  { key: 'india', label: 'India', flag: '🇮🇳', currency: 'INR', symbol: '₹', iso: 'IN', countryName: 'India', whatsapp: '+91 99440 40345' },
-  { key: 'malaysia', label: 'Malaysia', flag: '🇲🇾', currency: 'MYR', symbol: 'RM ', iso: 'MY', countryName: 'Malaysia', whatsapp: '+60 12-453 7030' },
-  { key: 'dubai', label: 'Dubai', flag: '🇦🇪', currency: 'AED', symbol: 'AED ', iso: 'AE', countryName: 'United Arab Emirates', whatsapp: '+91 99440 40345' },
-  { key: 'singapore', label: 'Singapore', flag: '🇸🇬', currency: 'SGD', symbol: 'SGD ', iso: 'SG', countryName: 'Singapore', whatsapp: '+91 99440 40345' },
-]
 
-/** Unlisted per-country pricing pages: noindex,nofollow, never linked, not in the sitemap or llms.txt. */
-export const UNLISTED_PRICING_PATHS = {
-  india: '/p/india-9xajei/',
-  malaysia: '/p/malaysia-2josdx/',
-  dubai: '/p/dubai-a8aokh/',
-  singapore: '/p/singapore-xseszo/',
-}
+/** Monthly SEO & GBP prices per country, in the order of PLAN_TIERS[country].plans. */
+const SEO_PRICES = { india: [6000, 12000, 20000], malaysia: [800, 1500, 2000], dubai: [800, 2000, 3000], singapore: [500, 1000, 1500] }
+/* PRICING_COUNTRIES and UNLISTED_PRICING_PATHS live in pricingLinks.js (no amounts) so the main bundle
+ * (seoConfig.js) can import them without pulling these prices in. */
+export { PRICING_COUNTRIES, UNLISTED_PRICING_PATHS }
 
 export function formatPrice(country, amount) {
   const c = PRICING_COUNTRIES.find((x) => x.key === country)
   return `${c.symbol}${amount.toLocaleString(country === 'india' ? 'en-IN' : 'en-US')}`
 }
 
-const seoPlans = (country) => PRICE_TIERS[country].plans.map((p) => ({ name: p.name, price: p.price, features: p.features }))
+const seoPlans = (country) => PLAN_TIERS[country].plans.map((p, i) => ({ name: p.name, price: SEO_PRICES[country][i], features: p.features }))
 
 const P = (india, malaysia, dubai, singapore) => ({ india, malaysia, dubai, singapore })
 

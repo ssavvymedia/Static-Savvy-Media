@@ -66,7 +66,7 @@ export const content = {
     { question: 'Which is the best digital marketing company in Madurai?', answer: 'There is no single best agency for every business. Web-design-led studios, ads specialists and SEO specialists each suit different goals. Shortlist two or three whose core work matches your goal, read their recent Google reviews and compare written proposals.' },
     { question: 'Is this list ranked?', answer: 'No. Companies are listed alphabetically. Static Savvy Media wrote this guide and is included in it, which is why we have not ranked anyone.' },
     { question: 'How were companies chosen?', answer: 'We included Madurai agencies that appear prominently in Google Maps and search results for digital marketing and SEO in Madurai in October 2026. If your agency should be added or a detail is out of date, message us and we will review it.' },
-    { question: 'How much does digital marketing cost in Madurai?', answer: 'It varies by service and scope. See our Madurai pricing guide for typical ranges and what affects price.' },
+    { question: 'How much does digital marketing cost in Madurai?', answer: 'It varies by service and scope. See our Madurai cost guide for typical market ranges and what affects cost, or ask us for a custom quote on WhatsApp at +91 99440 40345.' },
   ],
   cta: {
     title: 'Want a Second Opinion on Your Shortlist?',

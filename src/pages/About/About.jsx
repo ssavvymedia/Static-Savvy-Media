@@ -283,7 +283,7 @@ export default function About() {
                   The agency is headquartered in Madurai and serves businesses across Tamil Nadu, Thoothukudi and Malaysia. If you are a local business looking for a{' '}
                   <Link to="/">digital marketing company in Madurai</Link>, start with our{' '}
                   <Link to="/locations/madurai/">Madurai digital marketing agency page</Link>{' '}
-                  for services, pricing and our Kamarajar Salai office. Malaysian businesses can see our{' '}
+                  for services, quotes and our Kamarajar Salai office. Malaysian businesses can see our{' '}
                   <Link to="/locations/kuala-lumpur/">Kuala Lumpur digital marketing services</Link>.
                 </p>
                 <ul className="about-who-we-are__facts">

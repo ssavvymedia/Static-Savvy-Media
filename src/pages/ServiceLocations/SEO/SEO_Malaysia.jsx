@@ -162,7 +162,7 @@ const MALAYSIA_LINKS = [
   { name: 'Digital marketing agency in Kuala Lumpur', path: '/locations/kuala-lumpur/' },
   { name: 'SEO services in KL', path: '/services/seo/kuala-lumpur/' },
   { name: 'Local SEO and Google Maps in Malaysia', path: '/services/local-seo/malaysia/' },
-  { name: 'SEO pricing in Malaysia', path: '/pricing/malaysia/seo/' },
+  { name: 'How much SEO costs in Malaysia (guide)', path: '/blog/seo-cost-malaysia-price-guide/' },
 ]
 
 const PROCESS_STEPS = [
@@ -293,7 +293,7 @@ const FAQS = [
   {
     question: 'How much does SEO cost?',
     answer:
-      'SEO costs depend on the scope of work, competition and business objectives. We recommend starting with a consultation to understand your specific needs. Visit our pricing page for more details.',
+      'SEO costs depend on the scope of work, competition and business objectives. We recommend starting with a free consultation so we can understand your needs and send a custom quote.',
   },
   {
     question: 'Can SEO help Malaysian businesses?',
@@ -313,7 +313,7 @@ const FAQS = [
   {
     question: 'How much do SEO services cost in Malaysia?',
     answer:
-      'It depends on how many services and locations you want to rank for, how competitive they are and the current condition of your website. See our Malaysia SEO pricing page for details, or book a consultation and we will recommend a scope for your business.',
+      'It depends on how many services and locations you want to rank for, how competitive they are and the current condition of your website. Book a free consultation and we will recommend a scope and send a custom quote. Message us on WhatsApp at +60 12-453 7030 or send an enquiry for a custom quote.',
   },
   {
     question: 'What is the difference between SEO and Local SEO?',

@@ -29,7 +29,7 @@ const PAGE_TITLE =
   'SEO Company in Madurai | SEO Services & Agency | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
-  'SEO company in Madurai rated 4.9★ from 106 Google reviews. Technical, on-page and content SEO from ₹12,000/month that turns Google searches into enquiries.'
+  'SEO company in Madurai rated 4.9★ from 106 Google reviews. Technical, on-page and content SEO that turns Google searches into enquiries. Get a custom quote.'
 
 const HERO_EYEBROW = 'SEO · MADURAI'
 
@@ -342,12 +342,12 @@ const FAQS = [
   {
     question: 'How much does SEO cost in Madurai?',
     answer:
-      'Our SEO plans in India are ₹6,000 a month (Google Business Profile management with 12 posts), ₹12,000 a month (GBP + website SEO with 4 blogs) and ₹20,000 a month (GBP + website SEO + AEO + GEO), with no minimum contract term. Final pricing depends on scope, competition and how much content your site needs; full details are on our SEO pricing page for India.',
+      'It depends on scope, competition and how much content your site needs. We offer three monthly plans: Google Business Profile management with 12 posts, GBP plus website SEO with 4 blogs, and GBP plus website SEO, AEO and GEO, with no minimum contract term. Each is quoted after a free review of your website and Google Business Profile. Message us on WhatsApp at +91 99440 40345 or send an enquiry for a custom quote.',
   },
   {
     question: 'Who is the best SEO company in Madurai?',
     answer:
-      'The best SEO company in Madurai for you is the one that shows its process, publishes its prices, reports on enquiries rather than just rankings, and never promises guaranteed positions or sells bulk links. Static Savvy Media is a Madurai-based SEO company rated 4.9★ from 106 Google reviews; compare us on those criteria alongside other agencies before you decide.',
+      'The best SEO company in Madurai for you is the one that shows its process, gives you a clear written quote, reports on enquiries rather than just rankings, and never promises guaranteed positions or sells bulk links. Static Savvy Media is a Madurai-based SEO company rated 4.9★ from 106 Google reviews; compare us on those criteria alongside other agencies before you decide.',
   },
   {
     question: 'Can SEO help local businesses in Madurai?',
@@ -452,7 +452,7 @@ export default function SEO_Madurai() {
                   {GOOGLE_TRUST_LINE} · <Link to="/about/reviews/">Read our reviews</Link>
                 </p>
                 <p className="seo-mdu-hero__trust">
-                  SEO plans from ₹6,000/month, no lock-in. <Link to="/pricing/india/seo/">See SEO pricing</Link>
+                  Custom SEO quotes after a free review, no lock-in. <Link to="/contact/">Get a custom quote</Link>
                 </p>
                 <p className="seo-mdu-hero__trust">
                   Reviewed by <Link to="/about/deepan-kanz/">Deepan Kanz</Link>, founder · Last updated 25 October 2026
@@ -720,7 +720,7 @@ export default function SEO_Madurai() {
             ))}
           </div>
           <p className="section-heading__subtitle" style={{ marginTop: 'var(--space-lg)' }}>
-            Want to see costs first? Compare our <Link to="/blog/affordable-seo-company-madurai-pricing/">affordable SEO plans in Madurai</Link> or see <Link to="/pricing/india/seo/">SEO pricing in India</Link>,
+            Want to know what is included first? Read our guide to <Link to="/blog/affordable-seo-company-madurai-pricing/">affordable SEO plans in Madurai</Link> or <Link to="/contact/">ask for a custom quote</Link>,
             or read our guide to <Link to="/blog/seo-vs-google-ads-madurai/">SEO vs Google Ads for Madurai businesses</Link>.
             For a realistic month-by-month view, read <Link to="/blog/how-long-does-seo-take-madurai/">how long SEO takes for a Madurai business</Link>,
             and if you are still deciding, <Link to="/blog/is-seo-worth-it-small-business-madurai/">whether SEO is worth it for a small business in Madurai</Link>.

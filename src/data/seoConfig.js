@@ -1,6 +1,6 @@
 import { newBlogPosts } from "./newBlogPosts.js";
 import { cityPages } from "./cityPages.js";
-import { PRICING_COUNTRIES, UNLISTED_PRICING_PATHS } from "./masterPricing.js";
+import { PRICING_COUNTRIES, UNLISTED_PRICING_PATHS } from "./pricingLinks.js";
 import { sanityPostOverrides } from "./blogOverrides.js";
 import {
   SITE_NAME,
@@ -382,12 +382,12 @@ export const seoConfig = {
     seo: {
       title: "SEO Company in Madurai | SEO Services & Agency | Static Savvy Media",
       description:
-        "SEO company in Madurai rated 4.9★ from 106 Google reviews. Technical, on-page and content SEO from ₹12,000/month that turns Google searches into enquiries.",
+        "SEO company in Madurai rated 4.9★ from 106 Google reviews. Technical, on-page and content SEO that turns Google searches into enquiries. Get a custom quote.",
       canonical: `${BASE_URL}/services/seo/madurai`,
       focusKeyword: "SEO company in Madurai",
       ogTitle: "SEO Company in Madurai | SEO Services & Agency | Static Savvy Media",
       ogDescription:
-        "SEO company in Madurai rated 4.9★ from 106 Google reviews. Technical, on-page and content SEO from ₹12,000/month that turns Google searches into enquiries.",
+        "SEO company in Madurai rated 4.9★ from 106 Google reviews. Technical, on-page and content SEO that turns Google searches into enquiries. Get a custom quote.",
       ogImage: `${BASE_URL}/og/locations-01madurai.jpg`,
       schema: {
         "@context": "https://schema.org",
@@ -463,7 +463,7 @@ export const seoConfig = {
     seo: {
       title: "Web Design & Development Company in Madurai | Static Savvy Media",
       description:
-        "Web design company in Madurai since 2021: mobile-first, SEO-ready business, WordPress and e-commerce websites, landing pages from ₹15,000. Rated 4.9★ on Google.",
+        "Web design company in Madurai since 2021: mobile-first, SEO-ready business, WordPress and e-commerce websites and landing pages. Rated 4.9★ on Google.",
       canonical: `${BASE_URL}/services/website-design-development/madurai`,
       focusKeyword: "website development company in Madurai",
       ogTitle: "Web Design & Development Company in Madurai | Static Savvy Media",
@@ -672,7 +672,7 @@ export const seoConfig = {
       title:
         "Digital Marketing Company in Madurai | SEO, Ads & Social | Static Savvy Media",
       description:
-        "Madurai digital marketing agency at Kamarajar Salai since 2021, rated 4.9★ from 106 Google reviews. SEO from ₹6,000/month, Local SEO, Ads, social & websites. WhatsApp +91 99440 40345.",
+        "Madurai digital marketing agency at Kamarajar Salai since 2021, rated 4.9★ from 106 Google reviews. SEO, Local SEO, Ads, social & websites. WhatsApp +91 99440 40345.",
       canonical: `${BASE_URL}/locations/madurai`,
       focusKeyword: "digital marketing agency Madurai",
       ogTitle: "Digital Marketing Company in Madurai | Static Savvy Media",
@@ -968,472 +968,6 @@ export const seoConfig = {
     },
   },
 
-  // Pricing Pages
-  "/pricing/india": {
-    title: "Digital Marketing Packages & Pricing India | Static Savvy Media",
-    slug: "pricing/india",
-    seo: {
-      title: "Digital Marketing Packages & Pricing India | Static Savvy Media",
-      description:
-        "Transparent, result-driven digital marketing pricing plans for SEO, Local SEO, Google Ads, Social Media, and Web Design in India.",
-      canonical: `${BASE_URL}/pricing/india`,
-      focusKeyword: "digital marketing pricing India",
-      ogTitle:
-        "Digital Marketing Packages & Pricing India | Static Savvy Media",
-      ogDescription:
-        "Transparent digital marketing pricing plans for SEO, Google Ads, and Web Design in India.",
-      ogImage: `${BASE_URL}/og/pricing-pricingmain.jpg`,
-      schema: {
-        "@context": "https://schema.org",
-        "@type": "OfferCatalog",
-        name: "Digital Marketing Pricing India",
-      },
-      robots: "index,follow",
-    },
-  },
-  "/pricing/india/seo": {
-    title: "SEO Packages & Pricing India | Static Savvy Media",
-    slug: "pricing/india/seo",
-    seo: {
-      title: "SEO Packages & Pricing India | Static Savvy Media",
-      description:
-        "SEO pricing in India: GBP ₹6,000, GBP + Website SEO ₹12,000 and GBP + SEO + AEO + GEO ₹20,000 a month, no minimum contract. See what each plan includes.",
-      canonical: `${BASE_URL}/pricing/india/seo`,
-      focusKeyword: "SEO packages India pricing",
-      ogTitle: "SEO Packages & Pricing India | Static Savvy Media",
-      ogDescription: "SEO pricing in India: GBP ₹6,000, GBP + Website SEO ₹12,000 and GBP + SEO + AEO + GEO ₹20,000 a month, no minimum contract.",
-      ogImage: `${BASE_URL}/og/pricing-01seo.jpg`,
-      schema: {
-        "@context": "https://schema.org",
-        "@type": "OfferCatalog",
-        name: "SEO Packages India",
-        itemListElement: [
-          { "@type": "Offer", name: "Google Business Profile management (12 posts/month)", price: "6000", priceCurrency: "INR", priceSpecification: { "@type": "UnitPriceSpecification", price: "6000", priceCurrency: "INR", unitText: "MONTH" } },
-          { "@type": "Offer", name: "Google Business Profile + website SEO (4 blogs/month)", price: "12000", priceCurrency: "INR", priceSpecification: { "@type": "UnitPriceSpecification", price: "12000", priceCurrency: "INR", unitText: "MONTH" } },
-          { "@type": "Offer", name: "Google Business Profile + website SEO + AEO + GEO", price: "20000", priceCurrency: "INR", priceSpecification: { "@type": "UnitPriceSpecification", price: "20000", priceCurrency: "INR", unitText: "MONTH" } },
-        ],
-      },
-      robots: "index,follow",
-    },
-  },
-  "/pricing/india/local-seo": {
-    title: "Local SEO Pricing & Packages India | Static Savvy Media",
-    slug: "pricing/india/local-seo",
-    seo: {
-      title: "Local SEO Pricing & Packages India | Static Savvy Media",
-      description:
-        "Local SEO pricing in India: GBP ₹6,000, GBP + Website SEO ₹12,000 and GBP + SEO + AEO + GEO ₹20,000 a month, no minimum contract.",
-      canonical: `${BASE_URL}/pricing/india/local-seo`,
-      focusKeyword: "local SEO pricing India",
-      ogTitle: "Local SEO Pricing & Packages India | Static Savvy Media",
-      ogDescription:
-        "Local SEO pricing in India: GBP ₹6,000, GBP + Website SEO ₹12,000 and GBP + SEO + AEO + GEO ₹20,000 a month, no minimum contract.",
-      ogImage: `${BASE_URL}/og/pricing-02localseo.jpg`,
-      schema: {
-        "@context": "https://schema.org",
-        "@type": "OfferCatalog",
-        name: "Local SEO Packages India",
-        itemListElement: [
-          { "@type": "Offer", name: "Google Business Profile management (12 posts/month)", price: "6000", priceCurrency: "INR", priceSpecification: { "@type": "UnitPriceSpecification", price: "6000", priceCurrency: "INR", unitText: "MONTH" } },
-          { "@type": "Offer", name: "Google Business Profile + website SEO (4 blogs/month)", price: "12000", priceCurrency: "INR", priceSpecification: { "@type": "UnitPriceSpecification", price: "12000", priceCurrency: "INR", unitText: "MONTH" } },
-          { "@type": "Offer", name: "Google Business Profile + website SEO + AEO + GEO", price: "20000", priceCurrency: "INR", priceSpecification: { "@type": "UnitPriceSpecification", price: "20000", priceCurrency: "INR", unitText: "MONTH" } },
-        ],
-      },
-      robots: "index,follow",
-    },
-  },
-  "/pricing/india/google-ads": {
-    title: "Google Ads Management Pricing India | Static Savvy Media",
-    slug: "pricing/india/google-ads",
-    seo: {
-      title: "Google Ads Management Pricing India | Static Savvy Media",
-      description:
-        "Flexible Google Ads PPC management packages designed to maximize leads and return on ad spend for Indian businesses.",
-      canonical: `${BASE_URL}/pricing/india/google-ads`,
-      focusKeyword: "Google Ads pricing India",
-      ogTitle: "Google Ads Management Pricing India | Static Savvy Media",
-      ogDescription:
-        "Flexible Google Ads PPC management packages designed to maximize leads and ROI.",
-      ogImage: `${BASE_URL}/og/pricing-03googleads.jpg`,
-      schema: {
-        "@context": "https://schema.org",
-        "@type": "Offer",
-        name: "Google Ads Management Pricing India",
-      },
-      robots: "index,follow",
-    },
-  },
-  "/pricing/india/social-media": {
-    title: "Social Media Marketing Pricing India | Static Savvy Media",
-    slug: "pricing/india/social-media",
-    seo: {
-      title: "Social Media Marketing Pricing India | Static Savvy Media",
-      description:
-        "Monthly social media marketing and management plans for Instagram, Facebook, and LinkedIn in India.",
-      canonical: `${BASE_URL}/pricing/india/social-media`,
-      focusKeyword: "social media marketing pricing India",
-      ogTitle: "Social Media Marketing Pricing India | Static Savvy Media",
-      ogDescription:
-        "Monthly social media marketing and management plans for Instagram, Facebook, and LinkedIn.",
-      ogImage: `${BASE_URL}/og/pricing-04socialmedia.jpg`,
-      schema: {
-        "@context": "https://schema.org",
-        "@type": "Offer",
-        name: "Social Media Pricing India",
-      },
-      robots: "index,follow",
-    },
-  },
-  "/pricing/india/social-media-marketing": {
-    title: "Social Media Marketing Pricing India | Static Savvy Media",
-    slug: "pricing/india/social-media-marketing",
-    seo: {
-      title: "Social Media Marketing Pricing India | Static Savvy Media",
-      description:
-        "Monthly social media marketing and management plans for Instagram, Facebook, and LinkedIn in India.",
-      canonical: `${BASE_URL}/pricing/india/social-media-marketing`,
-      focusKeyword: "social media marketing pricing India",
-      ogTitle: "Social Media Marketing Pricing India | Static Savvy Media",
-      ogDescription:
-        "Monthly social media marketing and management plans for Instagram, Facebook, and LinkedIn.",
-      ogImage: `${BASE_URL}/og/pricing-04socialmedia.jpg`,
-      schema: {
-        "@context": "https://schema.org",
-        "@type": "Offer",
-        name: "Social Media Marketing Packages India",
-      },
-      robots: "index,follow",
-    },
-  },
-  "/pricing/india/website": {
-    title: "Website Design & Development Pricing India | Static Savvy Media",
-    slug: "pricing/india/website",
-    seo: {
-      title: "Website Design & Development Pricing India | Static Savvy Media",
-      description:
-        "Cost-effective website design and custom development pricing packages for businesses in India.",
-      canonical: `${BASE_URL}/pricing/india/website`,
-      focusKeyword: "website design development pricing India",
-      ogTitle:
-        "Website Design & Development Pricing India | Static Savvy Media",
-      ogDescription:
-        "Cost-effective website design and custom development pricing packages for businesses in India.",
-      ogImage: `${BASE_URL}/og/pricing-05websitedesign.jpg`,
-      schema: {
-        "@context": "https://schema.org",
-        "@type": "Offer",
-        name: "Website Design Pricing India",
-      },
-      robots: "index,follow",
-    },
-  },
-  "/pricing/india/website-design-development": {
-    title: "Website Design & Development Pricing India | Static Savvy Media",
-    slug: "pricing/india/website-design-development",
-    seo: {
-      title: "Website Design & Development Pricing India | Static Savvy Media",
-      description:
-        "Cost-effective website design and custom development pricing packages for businesses in India.",
-      canonical: `${BASE_URL}/pricing/india/website-design-development`,
-      focusKeyword: "website design development pricing India",
-      ogTitle:
-        "Website Design & Development Pricing India | Static Savvy Media",
-      ogDescription:
-        "Cost-effective website design and custom development pricing packages.",
-      ogImage: `${BASE_URL}/og/pricing-05websitedesign.jpg`,
-      schema: {
-        "@context": "https://schema.org",
-        "@type": "Offer",
-        name: "Website Packages India",
-      },
-      robots: "index,follow",
-    },
-  },
-  "/pricing/india/ai-services": {
-    title: "AI Business Automation Pricing India | Static Savvy Media",
-    slug: "pricing/india/ai-services",
-    seo: {
-      title: "AI Business Automation Pricing India | Static Savvy Media",
-      description:
-        "Transparent pricing for AI workflow automation, custom chatbot integration, and AI search optimization in India.",
-      canonical: `${BASE_URL}/pricing/india/ai-services`,
-      focusKeyword: "AI services pricing India",
-      ogTitle: "AI Business Automation Pricing India | Static Savvy Media",
-      ogDescription:
-        "Transparent pricing for AI workflow automation, custom chatbots, and AI search optimization.",
-      ogImage: `${BASE_URL}/og/pricing-06aisevices.jpg`,
-      schema: {
-        "@context": "https://schema.org",
-        "@type": "Offer",
-        name: "AI Services Pricing India",
-      },
-      robots: "index,follow",
-    },
-  },
-  "/pricing/india/photography-video": {
-    title:
-      "Corporate Photography & Video Production Pricing India | Static Savvy Media",
-    slug: "pricing/india/photography-video",
-    seo: {
-      title:
-        "Corporate Photography & Video Production Pricing India | Static Savvy Media",
-      description:
-        "Custom pricing packages for commercial brand shoots, product photography, and corporate video production in India.",
-      canonical: `${BASE_URL}/pricing/india/photography-video`,
-      focusKeyword: "photography video pricing India",
-      ogTitle:
-        "Corporate Photography & Video Pricing India | Static Savvy Media",
-      ogDescription:
-        "Custom pricing packages for commercial brand shoots and product photography.",
-      ogImage: `${BASE_URL}/og/pricing-07photograph.jpg`,
-      schema: {
-        "@context": "https://schema.org",
-        "@type": "Offer",
-        name: "Photography & Video Pricing India",
-      },
-      robots: "index,follow",
-    },
-  },
-
-  // Malaysia Pricing
-  "/pricing/malaysia": {
-    title:
-      "Digital Marketing Packages & Pricing Malaysia (MYR) | Static Savvy Media",
-    slug: "pricing/malaysia",
-    seo: {
-      title:
-        "Digital Marketing Packages & Pricing Malaysia (MYR) | Static Savvy Media",
-      description:
-        "Transparent digital marketing pricing packages in MYR for Malaysian SMEs seeking high-growth SEO, Ads, and AI automation.",
-      canonical: `${BASE_URL}/pricing/malaysia`,
-      focusKeyword: "digital marketing pricing Malaysia MYR",
-      ogTitle: "Digital Marketing Pricing Malaysia (MYR) | Static Savvy Media",
-      ogDescription:
-        "Transparent digital marketing pricing packages in MYR for Malaysian SMEs.",
-      ogImage: `${BASE_URL}/og/pricing-pricingmain.jpg`,
-      schema: {
-        "@context": "https://schema.org",
-        "@type": "OfferCatalog",
-        name: "Digital Marketing Pricing Malaysia",
-      },
-      robots: "index,follow",
-    },
-  },
-  "/pricing/malaysia/seo": {
-    title: "SEO Packages & Pricing Malaysia (2026) | From MYR 800/Month",
-    slug: "pricing/malaysia/seo",
-    seo: {
-      title: "SEO Packages & Pricing Malaysia (2026) | From MYR 800/Month",
-      description:
-        "Our SEO packages in Malaysia: GBP MYR 800, GBP + Website SEO MYR 1,500 and GBP + SEO + AEO + GEO MYR 2,000 a month, no minimum contract. See what each plan includes.",
-      canonical: `${BASE_URL}/pricing/malaysia/seo`,
-      focusKeyword: "SEO packages Malaysia pricing",
-      ogTitle: "SEO Packages & Pricing Malaysia (2026) | From MYR 800/Month",
-      ogDescription: "Our SEO packages in Malaysia: GBP MYR 800, GBP + Website SEO MYR 1,500 and GBP + SEO + AEO + GEO MYR 2,000 a month, no minimum contract. See what each plan includes.",
-      ogImage: `${BASE_URL}/og/pricing-01seo.jpg`,
-      schema: {
-        "@context": "https://schema.org",
-        "@type": "OfferCatalog",
-        name: "SEO Packages Malaysia",
-        itemListElement: [
-          { "@type": "Offer", name: "Google Business Profile management (12 posts/month)", price: "800", priceCurrency: "MYR", priceSpecification: { "@type": "UnitPriceSpecification", price: "800", priceCurrency: "MYR", unitText: "MONTH" } },
-          { "@type": "Offer", name: "Google Business Profile + website SEO (4 blogs/month)", price: "1500", priceCurrency: "MYR", priceSpecification: { "@type": "UnitPriceSpecification", price: "1500", priceCurrency: "MYR", unitText: "MONTH" } },
-          { "@type": "Offer", name: "Google Business Profile + website SEO + AEO + GEO", price: "2000", priceCurrency: "MYR", priceSpecification: { "@type": "UnitPriceSpecification", price: "2000", priceCurrency: "MYR", unitText: "MONTH" } },
-        ],
-      },
-      robots: "index,follow",
-    },
-  },
-  "/pricing/malaysia/local-seo": {
-    title: "Local SEO Pricing Malaysia (MYR) | Static Savvy Media",
-    slug: "pricing/malaysia/local-seo",
-    seo: {
-      title: "Local SEO Pricing Malaysia (MYR) | Static Savvy Media",
-      description:
-        "Local SEO pricing in Malaysia: GBP MYR 800, GBP + Website SEO MYR 1,500 and GBP + SEO + AEO + GEO MYR 2,000 a month, no minimum contract.",
-      canonical: `${BASE_URL}/pricing/malaysia/local-seo`,
-      focusKeyword: "local SEO pricing Malaysia",
-      ogTitle: "Local SEO Pricing Malaysia (MYR) | Static Savvy Media",
-      ogDescription:
-        "Local SEO pricing in Malaysia: GBP MYR 800, GBP + Website SEO MYR 1,500 and GBP + SEO + AEO + GEO MYR 2,000 a month, no minimum contract.",
-      ogImage: `${BASE_URL}/og/pricing-02localseo.jpg`,
-      schema: {
-        "@context": "https://schema.org",
-        "@type": "OfferCatalog",
-        name: "Local SEO Packages Malaysia",
-        itemListElement: [
-          { "@type": "Offer", name: "Google Business Profile management (12 posts/month)", price: "800", priceCurrency: "MYR", priceSpecification: { "@type": "UnitPriceSpecification", price: "800", priceCurrency: "MYR", unitText: "MONTH" } },
-          { "@type": "Offer", name: "Google Business Profile + website SEO (4 blogs/month)", price: "1500", priceCurrency: "MYR", priceSpecification: { "@type": "UnitPriceSpecification", price: "1500", priceCurrency: "MYR", unitText: "MONTH" } },
-          { "@type": "Offer", name: "Google Business Profile + website SEO + AEO + GEO", price: "2000", priceCurrency: "MYR", priceSpecification: { "@type": "UnitPriceSpecification", price: "2000", priceCurrency: "MYR", unitText: "MONTH" } },
-        ],
-      },
-      robots: "index,follow",
-    },
-  },
-  "/pricing/malaysia/google-ads": {
-    title: "Google Ads Pricing Malaysia (MYR) | Static Savvy Media",
-    slug: "pricing/malaysia/google-ads",
-    seo: {
-      title: "Google Ads Pricing Malaysia (MYR) | Static Savvy Media",
-      description:
-        "Performance-focused Google Ads management packages for Malaysian SMEs designed for maximum lead conversion.",
-      canonical: `${BASE_URL}/pricing/malaysia/google-ads`,
-      focusKeyword: "Google Ads pricing Malaysia",
-      ogTitle: "Google Ads Pricing Malaysia (MYR) | Static Savvy Media",
-      ogDescription:
-        "Performance-focused Google Ads management packages for Malaysian SMEs.",
-      ogImage: `${BASE_URL}/og/pricing-03googleads.jpg`,
-      schema: {
-        "@context": "https://schema.org",
-        "@type": "Offer",
-        name: "Google Ads Packages Malaysia",
-      },
-      robots: "index,follow",
-    },
-  },
-  "/pricing/malaysia/social-media": {
-    title: "Social Media Marketing Pricing Malaysia (MYR) | Static Savvy Media",
-    slug: "pricing/malaysia/social-media",
-    seo: {
-      title:
-        "Social Media Marketing Pricing Malaysia (MYR) | Static Savvy Media",
-      description:
-        "Social media growth and content creation packages for businesses in Kuala Lumpur, Selangor, and across Malaysia.",
-      canonical: `${BASE_URL}/pricing/malaysia/social-media`,
-      focusKeyword: "social media marketing pricing Malaysia",
-      ogTitle:
-        "Social Media Marketing Pricing Malaysia (MYR) | Static Savvy Media",
-      ogDescription:
-        "Social media growth and content creation packages for businesses in Malaysia.",
-      ogImage: `${BASE_URL}/og/pricing-04socialmedia.jpg`,
-      schema: {
-        "@context": "https://schema.org",
-        "@type": "Offer",
-        name: "Social Media Pricing Malaysia",
-      },
-      robots: "index,follow",
-    },
-  },
-  "/pricing/malaysia/social-media-marketing": {
-    title: "Social Media Marketing Pricing Malaysia (MYR) | Static Savvy Media",
-    slug: "pricing/malaysia/social-media-marketing",
-    seo: {
-      title:
-        "Social Media Marketing Pricing Malaysia (MYR) | Static Savvy Media",
-      description:
-        "Social media growth and content creation packages for businesses in Kuala Lumpur, Selangor, and across Malaysia.",
-      canonical: `${BASE_URL}/pricing/malaysia/social-media-marketing`,
-      focusKeyword: "social media marketing pricing Malaysia",
-      ogTitle:
-        "Social Media Marketing Pricing Malaysia (MYR) | Static Savvy Media",
-      ogDescription:
-        "Social media growth and content creation packages for businesses in Malaysia.",
-      ogImage: `${BASE_URL}/og/pricing-04socialmedia.jpg`,
-      schema: {
-        "@context": "https://schema.org",
-        "@type": "Offer",
-        name: "Social Media Packages Malaysia",
-      },
-      robots: "index,follow",
-    },
-  },
-  "/pricing/malaysia/website": {
-    title:
-      "Website Design & Development Pricing Malaysia (MYR) | Static Savvy Media",
-    slug: "pricing/malaysia/website",
-    seo: {
-      title:
-        "Website Design & Development Pricing Malaysia (MYR) | Static Savvy Media",
-      description:
-        "Modern, high-converting website design packages for Malaysian companies with mobile responsiveness and fast page speed.",
-      canonical: `${BASE_URL}/pricing/malaysia/website`,
-      focusKeyword: "website design development pricing Malaysia",
-      ogTitle:
-        "Website Design & Development Pricing Malaysia (MYR) | Static Savvy Media",
-      ogDescription:
-        "Modern, high-converting website design packages for Malaysian companies.",
-      ogImage: `${BASE_URL}/og/pricing-05websitedesign.jpg`,
-      schema: {
-        "@context": "https://schema.org",
-        "@type": "Offer",
-        name: "Website Pricing Malaysia",
-      },
-      robots: "index,follow",
-    },
-  },
-  "/pricing/malaysia/website-design-development": {
-    title:
-      "Website Design & Development Pricing Malaysia (MYR) | Static Savvy Media",
-    slug: "pricing/malaysia/website-design-development",
-    seo: {
-      title:
-        "Website Design & Development Pricing Malaysia (MYR) | Static Savvy Media",
-      description:
-        "Modern, high-converting website design packages for Malaysian companies with mobile responsiveness and fast page speed.",
-      canonical: `${BASE_URL}/pricing/malaysia/website-design-development`,
-      focusKeyword: "website design development pricing Malaysia",
-      ogTitle:
-        "Website Design & Development Pricing Malaysia (MYR) | Static Savvy Media",
-      ogDescription:
-        "Modern, high-converting website design packages for Malaysian companies.",
-      ogImage: `${BASE_URL}/og/pricing-05websitedesign.jpg`,
-      schema: {
-        "@context": "https://schema.org",
-        "@type": "Offer",
-        name: "Website Packages Malaysia",
-      },
-      robots: "index,follow",
-    },
-  },
-  "/pricing/malaysia/ai-services": {
-    title:
-      "AI Automation & GEO/AEO Pricing Malaysia (MYR) | Static Savvy Media",
-    slug: "pricing/malaysia/ai-services",
-    seo: {
-      title:
-        "AI Automation & GEO/AEO Pricing Malaysia (MYR) | Static Savvy Media",
-      description:
-        "AI business automation and AI search optimization pricing plans designed for Malaysian SMEs.",
-      canonical: `${BASE_URL}/pricing/malaysia/ai-services`,
-      focusKeyword: "AI services pricing Malaysia",
-      ogTitle:
-        "AI Automation & GEO/AEO Pricing Malaysia (MYR) | Static Savvy Media",
-      ogDescription:
-        "AI business automation and AI search optimization pricing plans designed for Malaysian SMEs.",
-      ogImage: `${BASE_URL}/og/pricing-06aisevices.jpg`,
-      schema: {
-        "@context": "https://schema.org",
-        "@type": "Offer",
-        name: "AI Services Pricing Malaysia",
-      },
-      robots: "index,follow",
-    },
-  },
-  "/pricing/malaysia/photography-video": {
-    title:
-      "Corporate Photography & Video Production Pricing Malaysia (MYR) | Static Savvy Media",
-    slug: "pricing/malaysia/photography-video",
-    seo: {
-      title:
-        "Corporate Photography & Video Production Pricing Malaysia (MYR) | Static Savvy Media",
-      description:
-        "Professional photography and commercial video production packages for brand campaigns in Malaysia.",
-      canonical: `${BASE_URL}/pricing/malaysia/photography-video`,
-      focusKeyword: "photography video pricing Malaysia",
-      ogTitle:
-        "Corporate Photography & Video Pricing Malaysia | Static Savvy Media",
-      ogDescription:
-        "Professional photography and commercial video production packages for brand campaigns in Malaysia.",
-      ogImage: `${BASE_URL}/og/pricing-07photograph.jpg`,
-      schema: {
-        "@context": "https://schema.org",
-        "@type": "Offer",
-        name: "Photography & Video Pricing Malaysia",
-      },
-      robots: "index,follow",
-    },
-  },
-
   // Case Studies
   "/case-studies": {
     title:
@@ -1583,12 +1117,12 @@ export const seoConfig = {
     seo: {
       title: "Frequently Asked Questions (FAQ) | Static Savvy Media",
       description:
-        "Find answers to common questions about our SEO, GEO/AEO, Google Ads, pricing, timelines, and contract terms.",
+        "Find answers to common questions about our SEO, GEO/AEO, Google Ads, quotes, timelines, and contract terms.",
       canonical: `${BASE_URL}/faq`,
       focusKeyword: "digital marketing FAQ",
       ogTitle: "Frequently Asked Questions (FAQ) | Static Savvy Media",
       ogDescription:
-        "Find answers to common questions about our SEO, GEO/AEO, Google Ads, pricing, and timelines.",
+        "Find answers to common questions about our SEO, GEO/AEO, Google Ads, quotes, and timelines.",
       ogImage: `${BASE_URL}/og/faq-faq.jpg`,
       schema: {
         "@context": "https://schema.org",
@@ -1645,7 +1179,7 @@ export const seoConfig = {
     seo: {
       title: "HTML Sitemap — All Pages & Navigation | Static Savvy Media",
       description:
-        "View the complete HTML sitemap for Static Savvy Media, listing all services, locations, industries, pricing, case studies, and blog posts.",
+        "View the complete HTML sitemap for Static Savvy Media, listing all services, locations, industries, case studies, and blog posts.",
       canonical: `${BASE_URL}/sitemap`,
       focusKeyword: "HTML sitemap Static Savvy Media",
       ogTitle: "HTML Sitemap | Static Savvy Media",
@@ -1874,7 +1408,7 @@ export const seoConfig = {
     seo: {
       title: "Google Ads Agency Kuala Lumpur | PPC Management KL | Static Savvy Media",
       description:
-        "Google Ads management for KL businesses: search, Performance Max & call campaigns built around enquiries and WhatsApp leads. Fees from MYR 550/month. Call +60 12-453 7030.",
+        "Google Ads management for KL businesses: search, Performance Max & call campaigns built around enquiries and WhatsApp leads. Get a custom quote: +60 12-453 7030.",
       canonical: `${BASE_URL}/services/google-ads/kuala-lumpur`,
       ogImage: `${BASE_URL}/og/services-google-ads-kuala-lumpur.jpg`,
       robots: "index,follow",
@@ -1886,7 +1420,7 @@ export const seoConfig = {
     seo: {
       title: "SEO Kuala Lumpur (KL): SEO Company for KL SMEs | Static Savvy Media",
       description:
-        "SEO in Kuala Lumpur for SMEs: rank on Google and Google Maps across KL & the Klang Valley. Technical, local and English/BM SEO from RM 800/month, no lock-in. Call +60 12-453 7030.",
+        "SEO in Kuala Lumpur for SMEs: rank on Google and Google Maps across KL & the Klang Valley. Technical, local and English/BM SEO, no lock-in. Call +60 12-453 7030.",
       canonical: `${BASE_URL}/services/seo/kuala-lumpur`,
       ogImage: `${BASE_URL}/og/services-seo-kuala-lumpur.jpg`,
       robots: "index,follow",

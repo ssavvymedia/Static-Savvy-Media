@@ -65,8 +65,6 @@ export const prerenderBodies = {
     related: [
       { name: 'All locations', path: '/locations/' },
       { name: 'Services', path: '/services/' },
-      { name: 'Pricing (India)', path: '/pricing/india/' },
-      { name: 'Pricing (Malaysia)', path: '/pricing/malaysia/' },
       { name: 'Contact', path: '/contact/' },
     ],
     faqs: HOME_FAQS,

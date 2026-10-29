@@ -80,7 +80,7 @@ const SECTIONS = [
     title: '6. Pricing, Fees and Payments',
     content: [
       'Pricing for services is provided in written quotations or proposals and may vary based on the scope of work, market and service type.',
-      'Indian clients are invoiced in INR. Malaysian clients are invoiced in MYR at published MYR pricing. Payment is via bank transfer, we provide local banking details for both markets.',
+      'Indian clients are invoiced in INR. Malaysian clients are invoiced in MYR. Payment is via bank transfer, we provide local banking details for both markets.',
       'Monthly retainer engagements are invoiced at the beginning of each month. Project-based engagements may be invoiced in milestones as defined in the service agreement.',
       'Late payments may result in suspension of services until payment is received.',
     ],

@@ -106,8 +106,8 @@ const COMPARISON = [
   },
   {
     factor: 'Cost per video',
-    traditional: '₹25,000–2,00,000+',
-    ai: '₹5,000–25,000',
+    traditional: 'Crew, studio, talent and editing days',
+    ai: 'Typically 30–60% of traditional cost, quoted per project',
   },
   {
     factor: 'Language versions',

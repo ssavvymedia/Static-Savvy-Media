@@ -23,7 +23,7 @@ export const MADURAI_FAQS = [
   {
     question: 'How much does digital marketing cost in Madurai?',
     answer:
-      'At Static Savvy Media, SEO plans for Madurai businesses are ₹6,000 a month (Google Business Profile management with 12 posts), ₹12,000 a month (GBP + website SEO with 4 blogs) and ₹20,000 a month (GBP + website SEO + AEO + GEO), with no minimum contract term. Ad spend for Google or Meta ads is paid separately to the platform. Full details are on our India pricing pages, and we can recommend the right plan after a free audit.',
+      'It depends on your goals and scope. At Static Savvy Media, SEO plans for Madurai businesses range from Google Business Profile management to full website SEO with AEO and GEO, with no minimum contract term, and each is quoted after a free audit. Ad spend for Google or Meta ads is paid separately to the platform. Message us on WhatsApp at +91 99440 40345 or send an enquiry for a custom quote.',
   },
   {
     question: 'How long does it take to see results from SEO in Madurai?',
@@ -33,7 +33,7 @@ export const MADURAI_FAQS = [
   {
     question: 'How do I choose the best digital marketing company in Madurai?',
     answer:
-      'Check four things: their own Google rating and reviews in Madurai, whether they show real pricing and work without long lock-in contracts, whether they report enquiries (calls, WhatsApp, forms) and not just traffic, and whether they can create Tamil and English content. Ask for a free audit before you sign so you can judge their thinking on your own business.',
+      'Check four things: their own Google rating and reviews in Madurai, whether they give a clear written quote and work without long lock-in contracts, whether they report enquiries (calls, WhatsApp, forms) and not just traffic, and whether they can create Tamil and English content. Ask for a free audit before you sign so you can judge their thinking on your own business.',
   },
   {
     question: 'Where is your Madurai office and since when have you been operating?',

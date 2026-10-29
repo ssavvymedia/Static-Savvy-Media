@@ -57,7 +57,7 @@ legacy_path,seen_as,hosts,gsc_clicks_90d,gsc_impressions_90d,action,target,confi
 /facebookmarketingservicesinmadurai,/facebookmarketingservicesinmadurai,www.ssm,0,20,redirect,/services/social-media-marketing/madurai/,high,old social / Meta ads / LinkedIn / YouTube marketing page -> Social Media Marketing service
 /blogs,/blogs,www.ssm,0,18,redirect,/blog/,high,old blog index / pagination -> Blog
 /cms-website-development-madurai,/cms-website-development-madurai,www (GSC only),0,18,redirect,/services/website-design-development/madurai/,high,old website / e-commerce / landing page service -> Website Design & Development
-/post/local-seo-pricing-in-madurai-what-should-you-actually-pay-in-2026,/post/local-seo-pricing-in-madurai-what-should-you-actually-pay-in-2026,www.ssm,0,15,redirect,/pricing/india/local-seo/,high,local SEO pricing -> Local SEO pricing (India)
+/post/local-seo-pricing-in-madurai-what-should-you-actually-pay-in-2026,/post/local-seo-pricing-in-madurai-what-should-you-actually-pay-in-2026,www.ssm,0,15,redirect,/services/local-seo/madurai/,high,local SEO pricing post -> Local SEO Madurai (public pricing pages removed 29 Oct 2026)
 /post/practical-ways-to-use-ai-for-sme-development,/post/practical-ways-to-use-ai-for-sme-development,www.ssm,0,15,redirect,/services/ai-business-automation/,medium,AI for SMEs / AI lead generation post -> AI Business Automation
 /post/blog-hostinger-best-web-hosting-company,/post/blog-hostinger-best-web-hosting-company,www (GSC only),0,14,404,,,off-topic / not offered / theme demo or shop page: leave 404
 /post/digital-marketing-for-madurai-textile-businesses-a-practical-guide,/post/digital-marketing-for-madurai-textile-businesses-a-practical-guide,www.ssm,0,12,redirect,/industries/textiles-madurai/,high,textile marketing -> Textiles Madurai industry page
@@ -170,7 +170,7 @@ legacy_path,seen_as,hosts,gsc_clicks_90d,gsc_impressions_90d,action,target,confi
 /hi/discover-your-digital-mastery-course-in-madurai,/hi/discover-your-digital-mastery-course-in-madurai,www.ssm,0,0,404,,,old /hi language version; off-topic / not offered / theme demo or shop page: leave 404
 /hi/ecommerce-solutions,/hi/ecommerce-solutions,www.ssm,0,0,redirect,/services/website-design-development/,medium,old /hi language version; UI/UX or e-commerce solution page -> Website Design & Development (no dedicated page)
 /hi/pay-per-click-advertising-in-madurai,/hi/pay-per-click-advertising-in-madurai,www.ssm,0,0,redirect,/services/google-ads/,high,old /hi language version; old Google Ads / PPC page -> Google Ads service (YouTube ads are run in Google Ads)
-/hi/pricing,/hi/pricing,www.ssm,0,0,redirect,/pricing/india/,high,old /hi language version -> live pricing page
+/hi/pricing,/hi/pricing,www.ssm,0,0,redirect,/,high,old /hi language version; public pricing pages removed -> home
 /hi/privacy-policy,/hi/privacy-policy,www.ssm,0,0,redirect,/privacy-policy/,high,old /hi language version -> live page
 /hi/product-page/i-m-a-product,/hi/product-page/i-m-a-product,www.ssm,0,0,404,,,old theme demo / shop page: leave 404
 /hi/product-page/i-m-a-product-1,/hi/product-page/i-m-a-product-1,www.ssm,0,0,404,,,old theme demo / shop page: leave 404
@@ -327,7 +327,7 @@ legacy_path,seen_as,hosts,gsc_clicks_90d,gsc_impressions_90d,action,target,confi
 /ta/discover-your-digital-mastery-course-in-madurai,/ta/discover-your-digital-mastery-course-in-madurai,www.ssm,0,0,404,,,old /ta language version; off-topic / not offered / theme demo or shop page: leave 404
 /ta/ecommerce-solutions,/ta/ecommerce-solutions,www.ssm,0,0,redirect,/services/website-design-development/,medium,old /ta language version; UI/UX or e-commerce solution page -> Website Design & Development (no dedicated page)
 /ta/pay-per-click-advertising-in-madurai,/ta/pay-per-click-advertising-in-madurai,www.ssm,0,0,redirect,/services/google-ads/,high,old /ta language version; old Google Ads / PPC page -> Google Ads service (YouTube ads are run in Google Ads)
-/ta/pricing,/ta/pricing,www.ssm,0,0,redirect,/pricing/india/,high,old /ta language version -> live pricing page
+/ta/pricing,/ta/pricing,www.ssm,0,0,redirect,/,high,old /ta language version; public pricing pages removed -> home
 /ta/privacy-policy,/ta/privacy-policy,www.ssm,0,0,redirect,/privacy-policy/,high,old /ta language version -> live page
 /ta/product-page/i-m-a-product,/ta/product-page/i-m-a-product,www.ssm,0,0,404,,,old theme demo / shop page: leave 404
 /ta/product-page/i-m-a-product-1,/ta/product-page/i-m-a-product-1,www.ssm,0,0,404,,,old theme demo / shop page: leave 404
@@ -453,3 +453,23 @@ legacy_path,seen_as,hosts,gsc_clicks_90d,gsc_impressions_90d,action,target,confi
 /tag/paid-ads,/tag/paid-ads/,ssm,0,0,redirect,/services/google-ads/,low,old WordPress tag archive with a clear topical match
 /tag/paid-advertising,/tag/paid-advertising/,ssm,0,0,redirect,/services/google-ads/,low,old WordPress tag archive with a clear topical match
 /tag/perplexity-ai,/tag/perplexity-ai/,ssm,0,0,redirect,/services/geo-aeo-ai-search/,low,old WordPress tag archive with a clear topical match
+/pricing/india,/pricing/india,www.ssm,0,0,redirect,/locations/madurai/,high,public pricing page removed 29 Oct 2026 (prices shared only at proposal time) -> closest service/location page
+/pricing/india/seo,/pricing/india/seo,www.ssm,0,0,redirect,/services/seo/madurai/,high,public pricing page removed 29 Oct 2026 (prices shared only at proposal time) -> closest service/location page
+/pricing/india/local-seo,/pricing/india/local-seo,www.ssm,0,0,redirect,/services/local-seo/madurai/,high,public pricing page removed 29 Oct 2026 (prices shared only at proposal time) -> closest service/location page
+/pricing/india/google-ads,/pricing/india/google-ads,www.ssm,0,0,redirect,/services/google-ads/,high,public pricing page removed 29 Oct 2026 (prices shared only at proposal time) -> closest service/location page
+/pricing/india/social-media,/pricing/india/social-media,www.ssm,0,0,redirect,/services/social-media-marketing/madurai/,high,public pricing page removed 29 Oct 2026 (prices shared only at proposal time) -> closest service/location page
+/pricing/india/social-media-marketing,/pricing/india/social-media-marketing,www.ssm,0,0,redirect,/services/social-media-marketing/madurai/,high,public pricing page removed 29 Oct 2026 (prices shared only at proposal time) -> closest service/location page
+/pricing/india/website,/pricing/india/website,www.ssm,0,0,redirect,/services/website-design-development/madurai/,high,public pricing page removed 29 Oct 2026 (prices shared only at proposal time) -> closest service/location page
+/pricing/india/website-design-development,/pricing/india/website-design-development,www.ssm,0,0,redirect,/services/website-design-development/madurai/,high,public pricing page removed 29 Oct 2026 (prices shared only at proposal time) -> closest service/location page
+/pricing/india/ai-services,/pricing/india/ai-services,www.ssm,0,0,redirect,/services/ai-business-automation/,high,public pricing page removed 29 Oct 2026 (prices shared only at proposal time) -> closest service/location page
+/pricing/india/photography-video,/pricing/india/photography-video,www.ssm,0,0,redirect,/services/corporate-photography-video/,high,public pricing page removed 29 Oct 2026 (prices shared only at proposal time) -> closest service/location page
+/pricing/malaysia,/pricing/malaysia,www.ssm,0,0,redirect,/locations/malaysia/,high,public pricing page removed 29 Oct 2026 (prices shared only at proposal time) -> closest service/location page
+/pricing/malaysia/seo,/pricing/malaysia/seo,www.ssm,0,0,redirect,/services/seo/malaysia/,high,public pricing page removed 29 Oct 2026 (prices shared only at proposal time) -> closest service/location page
+/pricing/malaysia/local-seo,/pricing/malaysia/local-seo,www.ssm,0,0,redirect,/services/local-seo/malaysia/,high,public pricing page removed 29 Oct 2026 (prices shared only at proposal time) -> closest service/location page
+/pricing/malaysia/google-ads,/pricing/malaysia/google-ads,www.ssm,0,0,redirect,/services/google-ads/kuala-lumpur/,high,public pricing page removed 29 Oct 2026 (prices shared only at proposal time) -> closest service/location page
+/pricing/malaysia/social-media,/pricing/malaysia/social-media,www.ssm,0,0,redirect,/services/social-media-marketing/,high,public pricing page removed 29 Oct 2026 (prices shared only at proposal time) -> closest service/location page
+/pricing/malaysia/social-media-marketing,/pricing/malaysia/social-media-marketing,www.ssm,0,0,redirect,/services/social-media-marketing/,high,public pricing page removed 29 Oct 2026 (prices shared only at proposal time) -> closest service/location page
+/pricing/malaysia/website,/pricing/malaysia/website,www.ssm,0,0,redirect,/services/website-design-development/,high,public pricing page removed 29 Oct 2026 (prices shared only at proposal time) -> closest service/location page
+/pricing/malaysia/website-design-development,/pricing/malaysia/website-design-development,www.ssm,0,0,redirect,/services/website-design-development/,high,public pricing page removed 29 Oct 2026 (prices shared only at proposal time) -> closest service/location page
+/pricing/malaysia/ai-services,/pricing/malaysia/ai-services,www.ssm,0,0,redirect,/services/ai-business-automation/malaysia/,high,public pricing page removed 29 Oct 2026 (prices shared only at proposal time) -> closest service/location page
+/pricing/malaysia/photography-video,/pricing/malaysia/photography-video,www.ssm,0,0,redirect,/services/corporate-photography-video/,high,public pricing page removed 29 Oct 2026 (prices shared only at proposal time) -> closest service/location page
