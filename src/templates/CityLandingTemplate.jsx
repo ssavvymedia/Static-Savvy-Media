@@ -96,7 +96,7 @@ export default function CityLandingTemplate({ city }) {
               <Button href="#city-enquiry" variant="ghost" size="lg">Get a free review</Button>
             </div>
             <ul className="city-trust" aria-label="Why businesses trust Static Savvy Media">
-              <li><a href={reviewsHref} target="_blank" rel="noopener noreferrer"><strong>4.9★</strong> from 100+ Google reviews</a></li>
+              <li><a href={reviewsHref} target="_blank" rel="noopener noreferrer"><strong>4.9★</strong> from 106 Google reviews</a></li>
               <li><strong>Since 2021</strong> founded 1 Oct 2021</li>
               <li><a href={SORTLIST_URL} target="_blank" rel="noopener noreferrer"><strong>Sortlist</strong> verified agency profile</a></li>
               <li><strong>3 offices</strong> Madurai · Thoothukudi · Rawang</li>
@@ -215,7 +215,7 @@ export default function CityLandingTemplate({ city }) {
             <p className="city-serve__label">Google reviews</p>
             <p className="city-reviews__score">4.9<span>/5</span></p>
             <p className="city-reviews__stars" aria-hidden="true">★★★★★</p>
-            <p>Rated 4.9 out of 5 from 100+ Google reviews on our Madurai Google Business Profile. Read every review, unedited, on Google.</p>
+            <p>Rated 4.9 out of 5 from 106 Google reviews on our Madurai Google Business Profile. Read every review, unedited, on Google.</p>
             <Button href={reviewsHref} variant="ghost" size="md" target="_blank" rel="noopener noreferrer">Read our Google reviews</Button>
           </div>
           <div className="city-card city-results">

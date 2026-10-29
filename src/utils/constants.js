@@ -15,7 +15,7 @@ export const SITE_URL = (
 ).replace(/\/+$/, "");
 export const SITE_TAGLINE = "Premium Digital Marketing Agency";
 export const SITE_DESCRIPTION =
-  "Digital marketing company in Madurai offering SEO, Local SEO, Google Ads and social media. Rated 4.9★ from 100+ Google reviews.";
+  "Digital marketing company in Madurai offering SEO, Local SEO, Google Ads and social media. Rated 4.9★ from 106 Google reviews.";
 export const CONTACT_PHONE = "";
 export const CONTACT_EMAIL = "";
 export const WHATSAPP_NUMBER = "+91 99440 40345";
@@ -26,8 +26,8 @@ export const WHATSAPP_MESSAGE =
 // when the profile changes. Visible text only: do NOT emit as AggregateRating/Review JSON-LD
 // (Google treats self-hosted first-party review markup as self-serving).
 export const GOOGLE_RATING = "4.9";
-export const GOOGLE_REVIEW_COUNT = "100+";
-export const GOOGLE_TRUST_LINE = `${GOOGLE_RATING}★ from ${GOOGLE_REVIEW_COUNT} Google reviews · Madurai office`;
+export const GOOGLE_REVIEW_COUNT = "106";
+export const GOOGLE_TRUST_LINE = `${GOOGLE_RATING}★ from ${GOOGLE_REVIEW_COUNT} Google reviews · Madurai HQ`;
 
 // Malaysia office (Rawang, Selangor). Owner-confirmed details: calls go to the Malaysian
 // number; WhatsApp stays on the Indian number (WHATSAPP_NUMBER). Keep visible text and

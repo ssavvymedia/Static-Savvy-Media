@@ -48,11 +48,11 @@ function FooterColumn({ title, links }) {
       </div>
       <div className={cx('site-footer__heading-line', `site-footer__heading-line--${title.toLowerCase()}`)} />
       <ul className="site-footer__links">
-        {links.map((link) => {
+        {links.flatMap((link) => (link.items ? [{ ...link, isGroup: true, label: link.title }, ...link.items] : [link])).map((link) => {
           const active = isActive(link.path)
           const exact = isExactActive(link.path)
           return (
-            <li key={link.slug || link.label}>
+            <li key={link.slug || link.label} className={cx(link.isGroup && 'site-footer__group')}>
               <Link
                 to={link.path}
                 className={cx(active && 'is-active')}
@@ -160,7 +160,7 @@ export default function Footer() {
               </a>
             </div>
 
-            <p>Digital marketing, SEO and web design for businesses in Madurai, Thoothukudi and Malaysia.</p>
+            <p>Digital marketing, SEO and web design from our Madurai HQ for businesses across India, Malaysia, Singapore and Dubai.</p>
           </div>
 
           <FooterColumn title="Services" links={FOOTER_LINKS.services} />
@@ -171,7 +171,7 @@ export default function Footer() {
 
         <div className="site-footer__bottom">
           <span suppressHydrationWarning>&copy; {new Date().getFullYear()} {SITE_NAME}. All rights reserved.</span>
-          <span>Madurai · Thoothukudi · Malaysia</span>
+          <span>Madurai (HQ) · Thoothukudi · Rawang, Malaysia</span>
         </div>
       </div>
     </footer>

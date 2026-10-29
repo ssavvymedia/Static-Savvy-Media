@@ -29,7 +29,7 @@ const PAGE_TITLE =
   'Local SEO Company in Madurai | Google Maps & GBP | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
-  'Local SEO services in Madurai to rank on Google Maps. GBP optimisation, citations & reviews from a team rated 4.9★ from 100+ Google reviews. WhatsApp us today.'
+  'Local SEO services in Madurai to rank on Google Maps. GBP optimisation, citations & reviews from a team rated 4.9★ from 106 Google reviews. WhatsApp us today.'
 
 const HERO_EYEBROW = 'LOCAL SEO · MADURAI'
 

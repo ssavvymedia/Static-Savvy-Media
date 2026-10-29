@@ -19,10 +19,10 @@ import deepanAboutImg from '../../assets/images/About/DeepanAbout.webp'
    CONTENT, Approved Static Savvy Media About Page Content
    ============================================================ */
 
-const PAGE_TITLE = 'About Static Savvy Media | Founded 2021 by Deepan Kanz'
+const PAGE_TITLE = 'About Static Savvy Media | Madurai Digital Marketing Agency Since 2021'
 
 const PAGE_DESCRIPTION =
-  'Static Savvy Media is an AI-first digital marketing agency founded on 1 October 2021 by Deepan Kanz. HQ in Madurai, with an office in Rawang, Malaysia. Our story, team and approach.'
+  'Meet the Madurai digital marketing agency founded by Deepan Kanz in 2021, rated 4.9★ from 106 Google reviews, with offices in Madurai, Thoothukudi and Rawang, Malaysia.'
 
 const SERVICES = [
   { number: '01', title: 'SEO', text: 'Search engine optimisation designed to improve organic visibility and long-term discoverability.', path: '/services/seo/madurai/' },
@@ -291,7 +291,7 @@ export default function About() {
                   <li><strong>Founder:</strong> <Link to="/about/deepan-kanz/">Deepan Kanz</Link></li>
                   <li><strong>Headquarters:</strong> Kamarajar Salai, Madurai, Tamil Nadu</li>
                   <li><strong>Malaysia office:</strong> Rawang, Selangor</li>
-                  <li><strong>Google rating (Madurai):</strong> 4.9★ from 100+ reviews</li>
+                  <li><strong>Google rating (Madurai):</strong> 4.9★ from 106 reviews</li>
                 </ul>
                 <div className="about-who-we-are__services">
                   <span className="about-who-we-are__chip">SEO</span>

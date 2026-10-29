@@ -25,10 +25,10 @@ import '../../../styles/pages/seo-malaysia.css'
    ============================================================ */
 
 const PAGE_TITLE =
-  'SEO Services Malaysia | SEO Agency for KL & Selangor | Static Savvy Media'
+  'SEO Malaysia: SEO Services & Agency for KL & Selangor | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
-  'SEO services in Malaysia from our Rawang, Selangor office: technical SEO, English and Bahasa Malaysia keyword research, on-page SEO and content for google.com.my. Call +60 12-453 7030.'
+  'SEO services in Malaysia from our Rawang, Selangor office: rank on google.com.my and Google Maps with technical, local and English/BM content SEO. No lock-in. Call +60 12-453 7030.'
 
 const HERO_EYEBROW = 'SEO · MALAYSIA'
 

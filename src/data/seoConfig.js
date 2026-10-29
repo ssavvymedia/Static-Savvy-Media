@@ -31,19 +31,19 @@ export const seoConfig = {
   ...Object.fromEntries(newBlogPosts.map((p) => [`/blog/${p.slug}`, { title: p.title, slug: `blog/${p.slug}`, seo: { title: p.title, description: p.description, canonical: `${BASE_URL}/blog/${p.slug}/`, ogTitle: p.title, ogDescription: p.description, ogImage: `${BASE_URL}/og/blog/${p.slug}.jpg`, robots: "index,follow" } }])),
   "/": {
     title:
-      "Digital Marketing Company in Madurai — SEO & Ads | Static Savvy Media",
+      "Digital Marketing Agency in Madurai, India & Malaysia | Static Savvy Media",
     slug: "",
     seo: {
       title:
-        "Digital Marketing Company in Madurai — SEO & Ads | Static Savvy Media",
+        "Digital Marketing Agency in Madurai, India & Malaysia | Static Savvy Media",
       description:
-        "Need a digital marketing company in Madurai? Rated 4.9★ from 100+ Google reviews. SEO, Local SEO, Google Ads & social media that bring enquiries. WhatsApp us today.",
+        "Madurai-headquartered digital marketing agency since 2021: SEO, Google Ads, social media & websites for India, Malaysia, Singapore & Dubai. 4.9★ from 106 reviews.",
       canonical: `${BASE_URL}/`,
-      focusKeyword: "digital marketing company in madurai",
+      focusKeyword: "digital marketing agency in madurai",
       ogTitle:
-        "Digital Marketing Company in Madurai — SEO & Ads | Static Savvy Media",
+        "Digital Marketing Agency in Madurai, India & Malaysia | Static Savvy Media",
       ogDescription:
-        "Need a digital marketing company in Madurai? Rated 4.9★ from 100+ Google reviews. SEO, Local SEO, Google Ads & social media that bring enquiries. WhatsApp us today.",
+        "Madurai-headquartered digital marketing agency since 2021: SEO, Google Ads, social media & websites for India, Malaysia, Singapore & Dubai. 4.9★ from 106 reviews.",
       ogImage: `${BASE_URL}/og/heroimage.jpg`,
       schema: {
         "@context": "https://schema.org",
@@ -55,17 +55,17 @@ export const seoConfig = {
     },
   },
   "/about": {
-    title: "About Static Savvy Media | Founded 2021 by Deepan Kanz",
+    title: "About Static Savvy Media | Madurai Digital Marketing Agency Since 2021",
     slug: "about",
     seo: {
-      title: "About Static Savvy Media | Founded 2021 by Deepan Kanz",
+      title: "About Static Savvy Media | Madurai Digital Marketing Agency Since 2021",
       description:
-        "Static Savvy Media is an AI-first digital marketing agency founded on 1 October 2021 by Deepan Kanz. HQ in Madurai, with an office in Rawang, Malaysia. Our story, team and approach.",
+        "Meet the Madurai digital marketing agency founded by Deepan Kanz in 2021, rated 4.9★ from 106 Google reviews, with offices in Madurai, Thoothukudi and Rawang, Malaysia.",
       canonical: `${BASE_URL}/about`,
       focusKeyword: "about static savvy media",
-      ogTitle: "About Static Savvy Media | Founded 2021 by Deepan Kanz",
+      ogTitle: "About Static Savvy Media | Madurai Digital Marketing Agency Since 2021",
       ogDescription:
-        "Static Savvy Media is an AI-first digital marketing agency founded on 1 October 2021 by Deepan Kanz. HQ in Madurai, with an office in Rawang, Malaysia. Our story, team and approach.",
+        "Meet the Madurai digital marketing agency founded by Deepan Kanz in 2021, rated 4.9★ from 106 Google reviews, with offices in Madurai, Thoothukudi and Rawang, Malaysia.",
       ogImage: `${BASE_URL}/og/about-about.jpg`,
       schema: {
         "@context": "https://schema.org",
@@ -382,12 +382,12 @@ export const seoConfig = {
     seo: {
       title: "SEO Company in Madurai | SEO Services & Agency | Static Savvy Media",
       description:
-        "SEO company in Madurai rated 4.9★ from 100+ Google reviews. Technical, on-page and content SEO from ₹12,000/month that turns Google searches into enquiries.",
+        "SEO company in Madurai rated 4.9★ from 106 Google reviews. Technical, on-page and content SEO from ₹12,000/month that turns Google searches into enquiries.",
       canonical: `${BASE_URL}/services/seo/madurai`,
       focusKeyword: "SEO company in Madurai",
       ogTitle: "SEO Company in Madurai | SEO Services & Agency | Static Savvy Media",
       ogDescription:
-        "SEO company in Madurai rated 4.9★ from 100+ Google reviews. Technical, on-page and content SEO from ₹12,000/month that turns Google searches into enquiries.",
+        "SEO company in Madurai rated 4.9★ from 106 Google reviews. Technical, on-page and content SEO from ₹12,000/month that turns Google searches into enquiries.",
       ogImage: `${BASE_URL}/og/locations-01madurai.jpg`,
       schema: {
         "@context": "https://schema.org",
@@ -432,17 +432,17 @@ export const seoConfig = {
   },
   "/services/seo/malaysia": {
     title:
-      "SEO Services Malaysia | SEO Agency for KL & Selangor | Static Savvy Media",
+      "SEO Malaysia: SEO Services & Agency for KL & Selangor | Static Savvy Media",
     slug: "services/seo/malaysia",
     seo: {
       title:
-        "SEO Services Malaysia | SEO Agency for KL & Selangor | Static Savvy Media",
+        "SEO Malaysia: SEO Services & Agency for KL & Selangor | Static Savvy Media",
       description:
-        "SEO services in Malaysia from our Rawang, Selangor office: technical SEO, English and Bahasa Malaysia keyword research, on-page SEO and content for google.com.my. Call +60 12-453 7030.",
+        "SEO services in Malaysia from our Rawang, Selangor office: rank on google.com.my and Google Maps with technical, local and English/BM content SEO. No lock-in. Call +60 12-453 7030.",
       canonical: `${BASE_URL}/services/seo/malaysia`,
       focusKeyword: "SEO Malaysia",
       ogTitle:
-        "SEO Services Malaysia | SEO Agency for KL & Selangor | Static Savvy Media",
+        "SEO Malaysia: SEO Services & Agency for KL & Selangor | Static Savvy Media",
       ogDescription:
         "SEO services in Malaysia for businesses seeking stronger Google visibility and organic search rankings.",
       ogImage: `${BASE_URL}/og/locations-02malaysia.jpg`,
@@ -486,13 +486,13 @@ export const seoConfig = {
     seo: {
       title: "Local SEO Company in Madurai | Google Maps & GBP | Static Savvy Media",
       description:
-        "Local SEO services in Madurai to rank on Google Maps. GBP optimisation, citations & reviews from a team rated 4.9★ from 100+ Google reviews. WhatsApp us today.",
+        "Local SEO services in Madurai to rank on Google Maps. GBP optimisation, citations & reviews from a team rated 4.9★ from 106 Google reviews. WhatsApp us today.",
       canonical: `${BASE_URL}/services/local-seo/madurai`,
       focusKeyword: "local SEO services Madurai",
       ogTitle:
         "Local SEO Company in Madurai | Google Maps & GBP | Static Savvy Media",
       ogDescription:
-        "Local SEO services in Madurai to rank on Google Maps. GBP optimisation, citations & reviews from a team rated 4.9★ from 100+ Google reviews. WhatsApp us today.",
+        "Local SEO services in Madurai to rank on Google Maps. GBP optimisation, citations & reviews from a team rated 4.9★ from 106 Google reviews. WhatsApp us today.",
       ogImage: `${BASE_URL}/og/locations-01madurai.jpg`,
       schema: {
         "@context": "https://schema.org",
@@ -666,16 +666,16 @@ export const seoConfig = {
   },
   "/locations/madurai": {
     title:
-      "Digital Marketing Agency Madurai — SEO, Ads & AI | Static Savvy Media",
+      "Digital Marketing Company in Madurai | SEO, Ads & Social | Static Savvy Media",
     slug: "locations/madurai",
     seo: {
       title:
-        "Digital Marketing Agency Madurai — SEO, Ads & AI | Static Savvy Media",
+        "Digital Marketing Company in Madurai | SEO, Ads & Social | Static Savvy Media",
       description:
-        "Madurai digital marketing agency at Kamarajar Salai since 2021, rated 4.9★ from 100+ Google reviews. SEO from ₹6,000/month, Local SEO, Ads, social & websites. WhatsApp +91 99440 40345.",
+        "Madurai digital marketing agency at Kamarajar Salai since 2021, rated 4.9★ from 106 Google reviews. SEO from ₹6,000/month, Local SEO, Ads, social & websites. WhatsApp +91 99440 40345.",
       canonical: `${BASE_URL}/locations/madurai`,
       focusKeyword: "digital marketing agency Madurai",
-      ogTitle: "Digital Marketing Agency Madurai | Static Savvy Media",
+      ogTitle: "Digital Marketing Company in Madurai | Static Savvy Media",
       ogDescription:
         "Headquartered in Madurai, Static Savvy Media delivers full-service SEO, GEO/AEO, and Google Ads.",
       ogImage: `${BASE_URL}/og/locations-01madurai.jpg`,
@@ -1881,12 +1881,12 @@ export const seoConfig = {
     },
   },
   "/services/seo/kuala-lumpur": {
-    title: "SEO Services KL | SEO Company in Kuala Lumpur | Static Savvy Media",
+    title: "SEO Kuala Lumpur (KL): SEO Company for KL SMEs | Static Savvy Media",
     slug: "services/seo/kuala-lumpur",
     seo: {
-      title: "SEO Services KL | SEO Company in Kuala Lumpur | Static Savvy Media",
+      title: "SEO Kuala Lumpur (KL): SEO Company for KL SMEs | Static Savvy Media",
       description:
-        "SEO services in Kuala Lumpur for SMEs: technical, local and English/BM content SEO for KL & Klang Valley. Monthly reports, no lock-in. Call +60 12-453 7030.",
+        "SEO in Kuala Lumpur for SMEs: rank on Google and Google Maps across KL & the Klang Valley. Technical, local and English/BM SEO from RM 800/month, no lock-in. Call +60 12-453 7030.",
       canonical: `${BASE_URL}/services/seo/kuala-lumpur`,
       ogImage: `${BASE_URL}/og/services-seo-kuala-lumpur.jpg`,
       robots: "index,follow",

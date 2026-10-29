@@ -242,3 +242,17 @@
   font-size: var(--fs-small);
   color: var(--color-text-muted);
 }
+
+/* Locations column: market sub-headings (India / Malaysia / Singapore & UAE) */
+.site-footer__links .site-footer__group {
+  margin-top: 0.35rem;
+}
+
+.site-footer__links .site-footer__group a {
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.site-footer__links .site-footer__group .site-footer__link-arrow {
+  display: none;
+}

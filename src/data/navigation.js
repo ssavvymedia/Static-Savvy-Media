@@ -1,5 +1,5 @@
 import { services } from "./services.js";
-import { locations } from "./locations.js";
+import { locations, locationGroups } from "./locations.js";
 import { industries } from "./industries.js";
 import {
   indiaPricingPlans,
@@ -25,7 +25,7 @@ export const pricingMenuSections = [
 export const NAV_LINKS = [
   { label: "Home", path: "/" },
   { label: "Services", path: "/services/", menu: services },
-  { label: "Locations", path: "/locations/", menu: locations },
+  { label: "Locations", path: "/locations/", menu: locationGroups },
   { label: "Industries", path: "/industries/", menu: industries },
   { label: "Case Studies", path: "/case-studies/" },
   { label: "About", path: "/about/" },
@@ -36,7 +36,7 @@ export const NAV_LINKS = [
 
 export const FOOTER_LINKS = {
   services,
-  locations,
+  locations: locationGroups,
   industries,
   company: [
     { label: "About", path: "/about/" },
@@ -74,6 +74,7 @@ export const BREADCRUMB_LABELS = {
   madurai: "Madurai",
   thoothukudi: "Thoothukudi",
   "tamil-nadu": "Tamil Nadu",
+  "kuala-lumpur": "Kuala Lumpur",
   chennai: "Chennai",
   coimbatore: "Coimbatore",
   trichy: "Trichy",
@@ -125,6 +126,7 @@ export function getBreadcrumbLabel(segment) {
 export {
   services,
   locations,
+  locationGroups,
   industries,
   pricingPlans,
   caseStudies,

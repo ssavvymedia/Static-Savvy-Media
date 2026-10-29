@@ -292,6 +292,49 @@
   color: inherit;
 }
 
+/* ---- Locations dropdown (grouped by market) ---- */
+.mega-menu--locations {
+  min-width: 560px;
+}
+
+.mega-menu__columns--locations {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.mega-menu__category-heading {
+  display: block;
+  margin: 0 0 0.5rem;
+  padding: 0 0.85rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-primary-400, var(--color-cyan));
+  white-space: nowrap;
+}
+
+.mega-menu__category-heading:hover,
+.mega-menu__category-heading.is-active {
+  color: var(--color-cyan);
+}
+
+.mega-menu--locations .mega-menu__list {
+  gap: 0.15rem;
+}
+
+.mega-menu--locations .mega-menu__link {
+  padding: 0.45rem 0.85rem;
+}
+
+.mega-menu__all-link {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0 0.85rem;
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--color-cyan);
+}
+
 /* ---- Mobile nav backdrop ---- */
 .mobile-nav-backdrop {
   position: fixed;

@@ -11,13 +11,13 @@ import {
 
 const PATH = '/services/seo/kuala-lumpur/'
 const DESCRIPTION =
-  'SEO services in Kuala Lumpur for SMEs: technical, local and English/BM content SEO for KL & Klang Valley. Monthly reports, no lock-in. Call +60 12-453 7030.'
+  'SEO in Kuala Lumpur for SMEs: rank on Google and Google Maps across KL & the Klang Valley. Technical, local and English/BM SEO from RM 800/month, no lock-in. Call +60 12-453 7030.'
 
 const content = {
   path: PATH,
   ogImage: '/og/services-seo-kuala-lumpur.jpg',
   image: { jpg: '/og/services-seo-kuala-lumpur.jpg', webp: '/og/services-seo-kuala-lumpur.webp', alt: 'SEO services in Kuala Lumpur for SMEs, Static Savvy Media Malaysia team' },
-  title: 'SEO Services KL | SEO Company in Kuala Lumpur | Static Savvy Media',
+  title: 'SEO Kuala Lumpur (KL): SEO Company for KL SMEs | Static Savvy Media',
   description: DESCRIPTION,
   eyebrow: 'SEO · KUALA LUMPUR',
   h1: 'SEO Services in Kuala Lumpur — For SMEs That Want Enquiries, Not Just Traffic',
@@ -125,7 +125,7 @@ const content = {
       items: [
         'A Malaysia office in Rawang, Selangor, with calls on +60 12-453 7030 during Malaysian business hours (Mon–Fri, 9 AM – 6 PM MYT).',
         'A larger SEO and content team at our Madurai headquarters, so work keeps moving across both time zones.',
-        'Rated 4.9★ from 100+ Google reviews on our Madurai office profile.',
+        'Rated 4.9★ from 106 Google reviews on our Madurai office profile.',
         'Published prices, monthly contracts and full account ownership for you.',
       ],
       after: <>Need ads as well? See our <Link to="/services/google-ads/kuala-lumpur/">Google Ads agency in Kuala Lumpur</Link> page, or our <Link to="/locations/kuala-lumpur/">digital marketing services in Kuala Lumpur</Link>.</>,

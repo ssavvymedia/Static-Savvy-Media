@@ -9,7 +9,6 @@
  * Plain data only (no JSX): this file is loaded by Node at build time.
  */
 import { HOME_FAQS } from './pages/homeFaqs.js'
-import { ORG_SAME_AS, GBP_MAPS } from './sameAs.js'
 import { content as ADS } from './pages/advertisingAgencyMadurai.js'
 import { content as TN } from './pages/tamilNadu.js'
 import { content as TOP } from './pages/topCompaniesMadurai.js'
@@ -17,47 +16,7 @@ import { content as TOP } from './pages/topCompaniesMadurai.js'
 const HOST = 'https://www.staticsavvymedia.com'
 const PHONE = '+91 99440 40345'
 
-const MADURAI_ADDRESS = {
-  '@type': 'PostalAddress',
-  streetAddress: '2nd Floor, 4/3, Srinivasa Perumal Koil St, Kamarajar Salai',
-  addressLocality: 'Madurai',
-  addressRegion: 'Tamil Nadu',
-  postalCode: '625009',
-  addressCountry: 'IN',
-}
-
-const ORG_ID = `${HOST}/#organization`
-const MADURAI_ID = `${HOST}/locations/madurai/#localbusiness`
-
-const maduraiBusiness = {
-  '@type': 'ProfessionalService',
-  '@id': MADURAI_ID,
-  name: 'Static Savvy Media',
-  url: `${HOST}/`,
-  telephone: PHONE,
-  address: MADURAI_ADDRESS,
-  hasMap: GBP_MAPS.madurai,
-  areaServed: [
-    { '@type': 'City', name: 'Madurai' },
-    { '@type': 'State', name: 'Tamil Nadu' },
-  ],
-  parentOrganization: { '@id': ORG_ID },
-  knowsAbout: ['Search engine optimization', 'Local SEO', 'Google Ads', 'Social media marketing', 'Website design', 'Generative engine optimization'],
-}
-
-const organization = {
-  '@type': 'Organization',
-  '@id': ORG_ID,
-  name: 'Static Savvy Media',
-  url: `${HOST}/`,
-  logo: `${HOST}/og/heroimage.jpg`,
-  telephone: PHONE,
-  email: 'info@staticsavvymedia.com',
-  foundingDate: '2021-10-01',
-  founder: { '@type': 'Person', name: 'Deepan Kanz', url: `${HOST}/about/deepan-kanz/` },
-  address: MADURAI_ADDRESS,
-  sameAs: ORG_SAME_AS,
-}
+import { organization, maduraiBusiness, MADURAI_ID, ORG_ID, homeSchemaGraph, HOME_H1_TEXT, HOME_INTRO, HOME_PROOF, HOME_MARKETS, HOME_MADURAI_LINKS } from './pages/homeContent.js'
 
 const faqPage = (faqs) => ({
   '@type': 'FAQPage',
@@ -88,33 +47,30 @@ function fromContent(c, extraNodes = []) {
 
 export const prerenderBodies = {
   '/': {
-    h1: 'Digital Marketing Company in Madurai: Get Found by Google. Get Cited by ChatGPT.',
-    intro: [
-      'Static Savvy Media is a Madurai digital marketing agency helping businesses stay visible across traditional search and AI-powered answer engines: SEO, Local SEO and Google Business Profile, Google Ads, social media marketing, website design and GEO/AEO.',
-      `Offices in Madurai, Thoothukudi and Rawang (Selangor, Malaysia). WhatsApp ${PHONE}.`,
-    ],
+    h1: HOME_H1_TEXT,
+    intro: [HOME_INTRO, HOME_PROOF.map((p) => `${p.value} ${p.label}`).join(' · ')],
     sections: [
       {
-        heading: 'Digital marketing services in Madurai',
-        items: [
-          { title: 'SEO Company in Madurai', link: { to: '/services/seo/madurai/', label: 'SEO services in Madurai' } },
-          { title: 'Local SEO & Google Business Profile', link: { to: '/services/local-seo/madurai/', label: 'Local SEO in Madurai' } },
-          { title: 'Advertising: Google & Meta Ads', link: { to: '/services/advertising-agency/madurai/', label: 'Advertising agency in Madurai' } },
-          { title: 'Social Media Marketing', link: { to: '/services/social-media-marketing/madurai/', label: 'Social media marketing company in Madurai' } },
-          { title: 'Website Design & Development', link: { to: '/services/website-design-development/madurai/', label: 'Website design in Madurai' } },
-          { title: 'GEO & AEO (AI search)', link: { to: '/services/geo-aeo-ai-search/madurai/', label: 'AI search optimisation in Madurai' } },
-        ],
+        heading: 'Where we work',
+        items: HOME_MARKETS.flatMap((m) => [
+          { title: `${m.country}:`, text: `${m.summary} ${m.contact}.`, link: { to: m.path, label: m.pathLabel } },
+          ...m.cities.filter((c) => c.path !== m.path).map((c) => ({ link: { to: c.path, label: `Digital marketing in ${c.name.replace(' (HQ)', '')}` } })),
+        ]),
+      },
+      {
+        heading: 'Madurai headquarters',
+        items: HOME_MADURAI_LINKS.map((l) => ({ link: { to: l.path, label: l.name } })),
       },
     ],
     related: [
-      { name: 'Digital Marketing Agency in Madurai', path: '/locations/madurai/' },
-      { name: 'Digital Marketing Agency in Tamil Nadu', path: '/locations/tamil-nadu/' },
-      { name: 'Top Digital Marketing Companies in Madurai (guide)', path: '/blog/top-digital-marketing-companies-in-madurai/' },
+      { name: 'All locations', path: '/locations/' },
+      { name: 'Services', path: '/services/' },
       { name: 'Pricing (India)', path: '/pricing/india/' },
+      { name: 'Pricing (Malaysia)', path: '/pricing/malaysia/' },
       { name: 'Contact', path: '/contact/' },
     ],
     faqs: HOME_FAQS,
-    schema: graph(organization, maduraiBusiness, { '@type': 'WebSite', name: 'Static Savvy Media', url: `${HOST}/`, publisher: { '@id': ORG_ID } }, faqPage(HOME_FAQS)),
+    schema: homeSchemaGraph,
   },
   /* /locations/madurai/ is server-rendered from its real component via src/data/ssrRoutes.js. */
   [ADS.path]: fromContent(ADS, [{ '@type': 'Service', name: 'Digital Advertising in Madurai', serviceType: 'Online advertising', provider: { '@id': MADURAI_ID }, areaServed: { '@type': 'City', name: 'Madurai' }, url: `${HOST}${ADS.path}` }, maduraiBusiness]),

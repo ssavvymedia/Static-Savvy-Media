@@ -6,7 +6,7 @@
  * - Static Savvy Media's real offices are Madurai (HQ), Thoothukudi and Rawang (Selangor, Malaysia).
  *   No city below claims a local office address unless it really has one (Selangor = Rawang office).
  * - No client names, results or statistics that cannot be verified. The only figures used are the
- *   ones already published site-wide (4.9★ from 100+ Google reviews, founded 1 Oct 2021) and the
+ *   ones already published site-wide (4.9★ from 106 Google reviews, founded 1 Oct 2021) and the
  *   published price list (Oct 2026).
  */
 
@@ -582,8 +582,8 @@ export const cityPages = [
     containedIn: 'Malaysia',
     whatsapp: MY_WA,
     office: 'malaysia',
-    title: 'Digital Marketing Agency in Kuala Lumpur (KL) | Static Savvy Media',
-    description: 'Digital marketing agency for Kuala Lumpur SMEs: SEO, Google Maps, Google Ads, social media and websites from our Rawang office. Plans from RM 800/month.',
+    title: 'Digital Marketing & Ads Agency in Kuala Lumpur (KL) | Static Savvy Media',
+    description: 'Digital marketing and ads agency for Kuala Lumpur SMEs: SEO, Google Maps, Google Ads, social media and websites from our Selangor office. From RM 800/month. +60 12-453 7030.',
     eyebrow: 'Kuala Lumpur · Served from our Rawang, Selangor office',
     h1: 'Digital Marketing Agency in Kuala Lumpur for SMEs: SEO, Google Maps, Ads and Social Media',
     answer: 'Static Savvy Media is a digital marketing agency serving Kuala Lumpur and the Klang Valley from our Malaysia office in Rawang, Selangor. We run SEO, Google Business Profile (Google Maps), Google Ads, social media, websites and AI search optimisation for KL businesses, quoted in MYR. SEO plans are RM 800, RM 1,500 and RM 2,000 a month, with no lock-in.',

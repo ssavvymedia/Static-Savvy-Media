@@ -29,7 +29,7 @@ const content = {
     facts: [
       { label: 'Madurai office', value: '2nd Floor, 4/3, Srinivasa Perumal Koil St, Kamarajar Salai, Madurai 625009 (visits by appointment)' },
       { label: 'Building websites since', value: '1 October 2021' },
-      { label: 'Google rating', value: '4.9★ from 100+ Google reviews' },
+      { label: 'Google rating', value: '4.9★ from 106 Google reviews' },
       { label: 'Website prices', value: 'Landing pages from ₹15,000, business websites from ₹45,000, e-commerce from ₹80,000', link: { to: '/pricing/india/website/', label: 'See website pricing' } },
       { label: 'Languages', value: 'Tamil and English' },
       { label: 'Phone / WhatsApp', value: '+91 99440 40345' },
@@ -130,7 +130,7 @@ const content = {
   faqTitle: 'Frequently Asked Questions, Website Development Madurai',
   faqs: [
     { question: 'How much does a website cost in Madurai?', answer: 'Our published guide prices are ₹15,000–25,000 for a landing page, ₹45,000–75,000 for a business website of up to 20 pages and ₹80,000–1,50,000 for an e-commerce website. The final price depends on the number of pages, features and content, and we send a written quote after a short discovery call.' },
-    { question: 'What is the best web design company in Madurai for a small business?', answer: 'Choose a Madurai web design company that shows its prices, builds mobile-first, sets up SEO basics (titles, schema, sitemap, Search Console) before launch, adds WhatsApp and call buttons, and gives you full ownership of your domain and website. Static Savvy Media does all of these from its Madurai office and is rated 4.9★ from 100+ Google reviews.' },
+    { question: 'What is the best web design company in Madurai for a small business?', answer: 'Choose a Madurai web design company that shows its prices, builds mobile-first, sets up SEO basics (titles, schema, sitemap, Search Console) before launch, adds WhatsApp and call buttons, and gives you full ownership of your domain and website. Static Savvy Media does all of these from its Madurai office and is rated 4.9★ from 106 Google reviews.' },
     { question: 'What is the difference between web design and website development?', answer: 'Web design is the layout, look and content plan of each page. Website development is the build: code or CMS, speed, forms, payments, tracking and security. We handle both, so the design you approve is the site that goes live.' },
     { question: 'How long does it take to build a website?', answer: 'A small business website usually takes a few weeks from approved content to launch. E-commerce and custom builds take longer. We share a timeline before starting.' },
     { question: 'Will my website be SEO-friendly?', answer: 'Yes. Titles, meta descriptions, headings, schema markup, sitemap, speed and Search Console are set up before launch, so the site is ready to rank.' },

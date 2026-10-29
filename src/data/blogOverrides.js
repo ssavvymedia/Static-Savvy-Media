@@ -27,6 +27,17 @@ export const sanityPostOverrides = {
       label: 'SEO services in Madurai',
     },
   },
+  'what-is-geo-generative-engine-optimization-in-digital-marketing': {
+    title: 'What Is GEO in Digital Marketing? Generative Engine Optimization Explained',
+    seoTitle: 'What Is GEO in Digital Marketing? Generative Engine Optimization (2026)',
+    seoDescription:
+      'GEO (generative engine optimization) gets your brand cited in ChatGPT, Gemini, Perplexity and Google AI Overviews. What it is, how it differs from SEO and AEO, and how to start.',
+    callout: {
+      text: 'Want a team to do GEO and AEO for your business? See our',
+      to: '/services/geo-aeo-ai-search/',
+      label: 'GEO & AI search optimisation',
+    },
+  },
 }
 
 export function applySanityOverride(post) {

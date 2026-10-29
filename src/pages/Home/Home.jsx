@@ -1,40 +1,34 @@
-import { useEffect, useRef } from 'react'
+import { useEffect } from 'react'
 import { HOME_FAQS } from '../../data/pages/homeFaqs.js'
 import HomeTemplate from '../../templates/HomeTemplate.jsx'
 import WhatsAppIcon from '../../components/common/WhatsAppIcon.jsx'
+import CountrySuggestion from '../../components/common/CountrySuggestion.jsx'
 import { setSeo } from '../../utils/seo.js'
-import { organizationSchema, webSiteSchema, faqPageSchema } from '../../utils/schema.js'
+import { getSeoForPath } from '../../data/seoConfig.js'
+import { homeSchemaGraph, HOME_H1, HOME_INTRO, HOME_MARKETS, HOME_PROOF } from '../../data/pages/homeContent.js'
 import { buildWhatsAppLink } from '../../utils/helpers.js'
 import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, SITE_URL, GOOGLE_TRUST_LINE } from '../../utils/constants.js'
 
-import maduraiImage from '../../assets/images/locations/madurai.webp'
-import thoothukudiImage from '../../assets/images/locations/thoothukudi.webp'
-import malaysiaImage from '../../assets/images/locations/malaysia.webp'
-
-const PAGE_TITLE =
-  'Digital Marketing Company in Madurai — SEO & Ads | Static Savvy Media'
-
-const PAGE_DESCRIPTION =
-  'Need a digital marketing company in Madurai? Rated 4.9★ from 100+ Google reviews. SEO, Local SEO, Google Ads & social media that bring enquiries. WhatsApp us today.'
+/* Title/description live in seoConfig['/'] (also baked into the raw HTML at build time). */
+const HOME_SEO = getSeoForPath('/').seo
 
 const HERO = {
-  eyebrow: 'Premium Digital Marketing Agency',
+  eyebrow: 'Madurai HQ · India · Malaysia · Singapore · Dubai',
   title: (
     <>
-      Digital Marketing Company in Madurai: Get Found by Google.{' '}
-      <span className="text-gradient">Get Cited by ChatGPT.</span>
+      {HOME_H1.lead}{' '}
+      <span className="text-gradient">{HOME_H1.markets}</span>
     </>
   ),
   trust: GOOGLE_TRUST_LINE,
-  intro:
-    'Your next client is not just searching Google. They are asking ChatGPT. They are querying Perplexity. They are using AI-powered voice search. Static Savvy Media is a Madurai digital marketing agency built for this new reality, helping your business stay visible across traditional search and AI-powered answer engines.',
+  intro: HOME_INTRO,
 }
 
 const SERVICES = [
   {
     slug: 'seo',
     name: 'Search Engine Optimization (SEO)',
-    path: '/services/seo/madurai/',
+    path: '/services/seo/',
     summary:
       'Technical SEO, keyword strategy, content development, and link building that drives consistent organic traffic growth month on month.',
     monogram: (
@@ -63,9 +57,9 @@ const SERVICES = [
   {
     slug: 'local-seo',
     name: 'Local SEO & Google Business Profile',
-    path: '/services/local-seo/madurai/',
+    path: '/services/local-seo/',
     summary:
-      'Rank in Google Maps and local search for every city where your clients are looking, Madurai, Thoothukudi, and beyond.',
+      'Rank in Google Maps and local search in every city where your clients are looking, from Madurai and Chennai to Kuala Lumpur, Singapore and Dubai.',
     monogram: (
       <div className="premium-icon-container premium-icon-container--cyan">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -94,7 +88,7 @@ const SERVICES = [
   {
     slug: 'social-media-marketing',
     name: 'Social Media Marketing',
-    path: '/services/social-media-marketing/madurai/',
+    path: '/services/social-media-marketing/',
     summary:
       'Instagram, Facebook, and LinkedIn content and ad management that builds brand equity and drives qualified leads.',
     monogram: (
@@ -110,7 +104,7 @@ const SERVICES = [
   {
     slug: 'website-design-development',
     name: 'Website Design & Development',
-    path: '/services/website-design-development/madurai/',
+    path: '/services/website-design-development/',
     summary:
       'SEO-ready, Core Web Vitals-optimised websites built to convert. Next.js or WordPress chosen for your project, not ours.',
     monogram: (
@@ -186,51 +180,6 @@ const SERVICES = [
   },
 ]
 
-const MARKETS = [
-  {
-    slug: 'madurai',
-    name: (
-      <>
-        <div className="location-card__image-wrapper">
-          <img src={maduraiImage} width={800} height={800} loading="lazy" decoding="async" alt="Madurai cityscape landmark" />
-        </div>
-        <span className="location-card__title-text">Madurai, Tamil Nadu</span>
-      </>
-    ),
-    path: '/locations/madurai/',
-    summary:
-      'Our headquarters. Deep local knowledge across textiles, education, healthcare, hospitality, and retail.',
-  },
-  {
-    slug: 'thoothukudi',
-    name: (
-      <>
-        <div className="location-card__image-wrapper">
-          <img src={thoothukudiImage} width={800} height={800} loading="lazy" decoding="async" alt="Thoothukudi harbour coastal scenery" />
-        </div>
-        <span className="location-card__title-text">Thoothukudi (Tuticorin), Tamil Nadu</span>
-      </>
-    ),
-    path: '/locations/thoothukudi/',
-    summary:
-      "Serving the port city's industrial, marine, and manufacturing businesses with B2B and B2C digital marketing.",
-  },
-  {
-    slug: 'malaysia',
-    name: (
-      <>
-        <div className="location-card__image-wrapper">
-          <img src={malaysiaImage} width={800} height={800} loading="lazy" decoding="async" alt="Selangor Malaysia cityscape skyline" />
-        </div>
-        <span className="location-card__title-text">Rawang & Selangor, Malaysia</span>
-      </>
-    ),
-    path: '/locations/malaysia/',
-    summary:
-      'SME-focused digital marketing with grant-aware strategies. We help Malaysian businesses leverage MDEC and SMECorp digital transformation programmes.',
-  },
-]
-
 const WHY_CHOOSE = [
   {
     title: 'GEO & AEO First',
@@ -278,7 +227,7 @@ const WHY_CHOOSE = [
   {
     title: 'Local Market Depth',
     description:
-      'We understand the Madurai textile economy, the Thoothukudi port corridor, and the Malaysian SME grant landscape, because we operate in all three.',
+      'Offices in Madurai, Thoothukudi and Rawang (Selangor), and city-specific playbooks for Tamil Nadu, Malaysia, Singapore and Dubai, so campaigns fit how each market actually buys.',
     icon: (
       <div className="premium-icon-container premium-icon-container--orange">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -304,39 +253,16 @@ const CTA = {
 }
 
 export default function Home() {
-  const jsonLdRef = useRef([])
 
   useEffect(() => {
+    // One JSON-LD graph (Organization with areaServed + Madurai HQ + WebSite + FAQPage), identical to
+    // the one baked into the raw HTML; setSeo() writes it to script#json-ld-schema (no duplicates).
     setSeo({
-      title: PAGE_TITLE,
-      description: PAGE_DESCRIPTION,
+      ...HOME_SEO,
       canonical: `${SITE_URL}/`,
       ogType: 'website',
+      schema: homeSchemaGraph,
     })
-
-    const faqEntities = FAQS.map((faq) => ({
-      '@type': 'Question',
-      name: faq.question,
-      acceptedAnswer: { '@type': 'Answer', text: faq.answer },
-    }))
-
-    const scripts = [
-      organizationSchema({ name: 'Static Savvy Media' }),
-      webSiteSchema({ name: 'Static Savvy Media' }),
-      faqPageSchema({ faqs: faqEntities }),
-    ].map((data) => {
-      const script = document.createElement('script')
-      script.type = 'application/ld+json'
-      script.text = JSON.stringify(data)
-      document.head.appendChild(script)
-      return script
-    })
-    jsonLdRef.current = scripts
-
-    return () => {
-      jsonLdRef.current.forEach((script) => script.remove())
-      jsonLdRef.current = []
-    }
   }, [])
 
   const whatsappHref = buildWhatsAppLink(WHATSAPP_NUMBER, WHATSAPP_MESSAGE)
@@ -645,12 +571,14 @@ export default function Home() {
       <HomeTemplate
         hero={HERO}
         services={SERVICES}
-        markets={MARKETS}
+        markets={HOME_MARKETS}
+        proof={HOME_PROOF}
         whyChoose={WHY_CHOOSE}
         faqs={FAQS}
         cta={CTA}
         whatsappHref={whatsappHref}
       />
+      <CountrySuggestion />
     </>
   )
 }
