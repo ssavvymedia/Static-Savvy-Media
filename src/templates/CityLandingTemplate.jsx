@@ -158,6 +158,7 @@ export default function CityLandingTemplate({ city }) {
                 <span className="city-num">{String(i + 1).padStart(2, '0')}</span>
                 <h3>{p.title}</h3>
                 <p>{p.text}</p>
+                {p.link && <Link to={p.link.to} className="city-priorities__link">{p.link.label} →</Link>}
               </li>
             ))}
           </ol>

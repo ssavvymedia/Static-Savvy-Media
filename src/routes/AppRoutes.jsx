@@ -40,7 +40,6 @@ import Locations from '../pages/Locations/Locations.jsx'
 import Madurai from '../pages/Locations/Madurai.jsx'
 import Thoothukudi from '../pages/Locations/Thoothukudi.jsx'
 import Malaysia from '../pages/Locations/Malaysia.jsx'
-import KualaLumpur from '../pages/Locations/KualaLumpur.jsx'
 import CityLanding from '../pages/Locations/CityLanding.jsx'
 
 import Industries from '../pages/Industries/Industries.jsx'
@@ -174,7 +173,7 @@ export default function AppRoutes() {
         <Route path="/locations/madurai" element={<Madurai />} />
         <Route path="/locations/thoothukudi" element={<Thoothukudi />} />
         <Route path="/locations/malaysia" element={<Malaysia />} />
-        <Route path="/locations/kuala-lumpur" element={<KualaLumpur />} />
+        <Route path="/locations/kuala-lumpur" element={<CityLanding slug="kuala-lumpur" />} />
         <Route path="/locations/tamil-nadu" element={<TamilNadu />} />
         <Route path="/locations/chennai" element={<CityLanding slug="chennai" />} />
         <Route path="/locations/coimbatore" element={<CityLanding slug="coimbatore" />} />

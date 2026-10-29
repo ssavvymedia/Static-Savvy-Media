@@ -16,8 +16,12 @@ import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, SITE_URL } from '../../utils/constan
 
 const PAGE_TITLE = 'What Is Answer Engine Optimization (AEO)? How to Get Your Business into AI Answers'
 
+const SEO_TITLE = 'Answer Engine Optimization (AEO): What It Is and How to Do It'
+
 const PAGE_DESCRIPTION =
-  'Answer Engine Optimization (AEO) gets your business into Google AI Overviews, featured snippets, and voice search answers. Complete guide with practical implementation steps.'
+  'Answer engine optimization (AEO, or optimisation) gets your business cited in Google AI Overviews, ChatGPT and voice answers. Steps, examples and a checklist.'
+
+const UPDATED = '29 October 2026'
 
 const AUTHOR = 'Deepan Kanz'
 const AUTHOR_ROLE = 'Founder & AI Search Specialist'
@@ -25,6 +29,29 @@ const READING_TIME = 'Approx. 9–12 min'
 
 const INTRODUCTION =
   'When someone searches a question on Google and the AI Overview box appears at the top citing a specific source, that is AEO (Answer Engine Optimization) at work. The business whose content was extracted and cited did not necessarily rank #1 in the blue links. They had content that Google’s AI could extract as a clean, direct answer to the query. This guide explains exactly how that happens and how to make it happen for your business.'
+
+/* Answer-first summary shown right under the hero (AI- and snippet-friendly). */
+const QUICK_ANSWER = 'Answer engine optimization (AEO), also spelled answer engine optimisation, is the practice of structuring your content so that answer engines, such as Google AI Overviews, featured snippets, voice assistants, ChatGPT and Perplexity, can find it, trust it and quote it as the direct answer to a question, ideally naming and linking your business.'
+
+const AEO_OUTCOMES = [
+  { title: 'Retrieved', text: 'Your page is crawlable, indexed and relevant enough to be pulled in when an answer engine looks for sources.' },
+  { title: 'Trusted', text: 'Clear facts, real expertise and consistent business details make your page a safe source to quote.' },
+  { title: 'Cited', text: 'The answer uses your wording, names your brand and, where the engine shows sources, links to your page.' },
+]
+
+/* Before/after rewrite showing the answer-first pattern on a typical service page. */
+const AEO_EXAMPLE = {
+  question: 'How much does a website cost for a small business?',
+  before: 'We are a passionate team of designers who have built many beautiful websites. Every project is unique and we love working with clients, so please contact us to discuss your requirements and we will be happy to help.',
+  after: 'A small business website usually costs a one-time fee that depends on the number of pages, features such as booking or e-commerce, and who writes the content. Our Starter plan covers a simple brochure site; larger or custom builds are quoted after a short call. Below: what each price level includes and what adds cost.',
+}
+
+const MEASURE_STEPS = [
+  { number: '01', title: 'Track question queries in Search Console', text: 'Filter Google Search Console queries containing what, how, why, cost, best and near me. Rising impressions on question queries show your answer-first sections are being picked up.' },
+  { number: '02', title: 'Run the same prompts every month', text: 'Ask Google (AI Overview), ChatGPT, Perplexity and Gemini the 10 to 20 questions your customers ask. Record whether your brand is named, described correctly and linked.' },
+  { number: '03', title: 'Check featured snippets and People Also Ask', text: 'Note which of your target questions show a featured snippet or People Also Ask box, and whose page is used. These are the easiest AEO wins to measure.' },
+  { number: '04', title: 'Watch branded search and enquiries', text: 'Being cited in answers tends to show up later as more branded searches, direct visits, calls and WhatsApp enquiries. Track them in Analytics and your Google Business Profile.' },
+]
 
 const AEO_TARGETS = [
   'Google AI Overviews',
@@ -139,9 +166,34 @@ const FAQS = [
     question: 'Does AEO replace SEO?',
     answer: 'No. AEO should complement SEO. A strong modern search strategy can combine SEO, AEO, GEO, technical SEO, content strategy, and entity building.',
   },
+  {
+    question: 'What is an answer engine?',
+    answer: 'An answer engine is a search or AI system that replies with a written answer instead of only a list of links. Examples include Google AI Overviews and featured snippets, voice assistants, ChatGPT, Perplexity and Gemini.',
+  },
+  {
+    question: 'What is the difference between AEO and GEO?',
+    answer: 'AEO focuses on winning the answer to specific questions, in featured snippets, AI Overviews, voice and AI chat. GEO (generative engine optimization) is broader: it works on how generative AI systems understand and describe your brand overall, through entity clarity, consistent business facts and mentions on other credible sites.',
+  },
+  {
+    question: 'Is it answer engine optimization or optimisation?',
+    answer: 'Both are correct. Optimization is the US spelling and optimisation is the UK, Indian and Malaysian spelling. They describe the same practice.',
+  },
+  {
+    question: 'How long does AEO take to show results?',
+    answer: 'Featured snippet and People Also Ask changes can appear within weeks of Google recrawling an improved page. Being named consistently in AI answers usually takes months, because it also depends on your overall authority and mentions elsewhere. Nobody can guarantee a citation.',
+  },
+  {
+    question: 'How do I measure AEO?',
+    answer: 'Track impressions for question queries in Google Search Console, run the same customer questions in Google AI Overviews, ChatGPT and Perplexity each month and record whether your brand is named and linked, and watch branded searches and enquiries over time.',
+  },
+  {
+    question: 'How much does AEO cost with Static Savvy Media?',
+    answer: 'AEO and GEO are included in our top monthly plan, together with Google Business Profile management and website SEO: ₹20,000 a month in India and RM 2,000 a month in Malaysia, with no lock-in.',
+  },
 ]
 
 const TOC_ITEMS = [
+  { id: 'quick-answer', label: 'AEO in One Paragraph' },
   { id: 'what-is-aeo', label: 'What Is AEO?' },
   { id: 'aeo-seo', label: 'Why AEO Is Inseparable from SEO' },
   { id: 'how-aeo-works', label: 'How AEO Works' },
@@ -153,6 +205,8 @@ const TOC_ITEMS = [
   { id: 'voice-search', label: 'AEO and Voice Search' },
   { id: 'ai-overviews', label: 'AEO and Google AI Overviews' },
   { id: 'chatgpt-perplexity', label: 'AEO and ChatGPT / Perplexity' },
+  { id: 'aeo-example', label: 'AEO Example: Before and After' },
+  { id: 'measure-aeo', label: 'How to Measure AEO' },
   { id: 'common-mistakes', label: 'Common AEO Mistakes' },
   { id: 'content-template', label: 'Practical AEO Template' },
   { id: 'aeo-checklist', label: 'AEO Checklist' },
@@ -170,7 +224,7 @@ export default function WhatIsAEO() {
 
   useEffect(() => {
     setSeo({
-      title: `${PAGE_TITLE} | Static Savvy Media`,
+      title: SEO_TITLE,
       description: PAGE_DESCRIPTION,
       canonical: `${SITE_URL}/blog/what-is-answer-engine-optimization/`,
       ogType: 'article',
@@ -192,6 +246,8 @@ export default function WhatIsAEO() {
         url: SITE_URL,
       },
       url: `${SITE_URL}/blog/what-is-answer-engine-optimization/`,
+      datePublished: '2026-08-01',
+      dateModified: '2026-10-29',
       mainEntityOfPage: `${SITE_URL}/blog/what-is-answer-engine-optimization/`,
     })
 
@@ -258,6 +314,7 @@ export default function WhatIsAEO() {
                 </span>
                 <span className="aeo-hero__meta-item">Static Savvy Media</span>
                 <span className="aeo-hero__meta-item">{READING_TIME}</span>
+                <span className="aeo-hero__meta-item">Updated {UPDATED}</span>
               </div>
               <p className="aeo-hero__intro">{INTRODUCTION}</p>
             </div>
@@ -286,6 +343,21 @@ export default function WhatIsAEO() {
         <div className="container">
           <div className="aeo-article">
             <div className="aeo-article__body">
+
+              {/* 00 Quick answer */}
+              <h2 id="quick-answer">Answer Engine Optimization in One Paragraph</h2>
+              <div className="aeo-template aeo-quick">
+                <p className="aeo-quick__answer">{QUICK_ANSWER}</p>
+                <div className="aeo-quick__outcomes">
+                  {AEO_OUTCOMES.map((o, i) => (
+                    <div key={o.title} className="aeo-quick__outcome">
+                      <span className="aeo-quick__step">{i + 1}</span>
+                      <h3 className="aeo-quick__title">{o.title}</h3>
+                      <p className="aeo-quick__text">{o.text}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
 
               {/* 01 What Is AEO */}
               <h2 id="what-is-aeo">What Is AEO (Answer Engine Optimization)?</h2>
@@ -415,6 +487,37 @@ export default function WhatIsAEO() {
               <h2 id="chatgpt-perplexity">AEO and ChatGPT / Perplexity</h2>
               <p>AI assistants and answer engines can use web information and other sources to generate responses, depending on the product, query, browsing state, and available sources.</p>
               <p>The role of clear entity information, consistent business information, useful content, authoritative references, structured answers, and topical expertise all contribute to how your business information appears across AI-driven discovery systems. These practices can improve the clarity and discoverability of your information.</p>
+
+              {/* 11b Example */}
+              <h2 id="aeo-example">AEO Example: Rewriting a Section Answer-First</h2>
+              <p>The quickest AEO win is usually rewriting the opening of a section so the first two sentences answer the question directly. Here is the same section before and after, for the question &ldquo;{AEO_EXAMPLE.question}&rdquo;</p>
+              <div className="aeo-example">
+                <div className="aeo-example__card aeo-example__card--before">
+                  <span className="aeo-example__label">Before: hard to quote</span>
+                  <p>{AEO_EXAMPLE.before}</p>
+                </div>
+                <div className="aeo-example__card aeo-example__card--after">
+                  <span className="aeo-example__label">After: answer-first</span>
+                  <p>{AEO_EXAMPLE.after}</p>
+                </div>
+              </div>
+              <p>The &ldquo;after&rdquo; version answers in the first sentence, names what changes the price and promises the detail that follows. An answer engine can lift that first sentence as a complete answer, and a visitor knows straight away they are in the right place. Pair it with a matching FAQ and accurate schema, as on our <Link to="/blog/affordable-seo-company-madurai-pricing/">SEO pricing guide for Madurai</Link>.</p>
+
+              {/* 11c Measure */}
+              <h2 id="measure-aeo">How to Measure AEO</h2>
+              <p>There is no single &ldquo;AEO ranking&rdquo; report, so measure the signals you can see. This is the routine we use for our own site and for clients:</p>
+              <div className="aeo-steps">
+                {MEASURE_STEPS.map((step) => (
+                  <div key={step.number} className="aeo-step">
+                    <div className="aeo-step__number">{step.number}</div>
+                    <div className="aeo-step__content">
+                      <h3 className="aeo-step__title">{step.title}</h3>
+                      <p className="aeo-step__text">{step.text}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <p>Want this done for you? AEO and GEO are part of our <Link to="/services/geo-aeo-ai-search/">GEO and AEO (AI search optimisation) service</Link>, available in India from our Madurai head office and in Malaysia from our Rawang office.</p>
 
               {/* 12 Common Mistakes */}
               <h2 id="common-mistakes">Common AEO Mistakes</h2>

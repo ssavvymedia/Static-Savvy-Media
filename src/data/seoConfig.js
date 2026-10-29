@@ -1771,19 +1771,19 @@ export const seoConfig = {
   },
   "/blog/what-is-answer-engine-optimization": {
     title:
-      "What is Answer Engine Optimization (AEO)? | Static Savvy Media Blog",
+      "Answer Engine Optimization (AEO): What It Is and How to Do It",
     slug: "blog/what-is-answer-engine-optimization",
     seo: {
       title:
-        "What is Answer Engine Optimization (AEO)? | Static Savvy Media Blog",
+        "Answer Engine Optimization (AEO): What It Is and How to Do It",
       description:
-        "Understand Answer Engine Optimization (AEO) and how to structure your content to get featured in direct AI answer snippets.",
-      canonical: `${BASE_URL}/blog/what-is-answer-engine-optimization`,
-      focusKeyword: "what is Answer Engine Optimization",
+        "Answer engine optimization (AEO, or optimisation) gets your business cited in Google AI Overviews, ChatGPT and voice answers. Steps, examples and a checklist.",
+      canonical: `${BASE_URL}/blog/what-is-answer-engine-optimization/`,
+      focusKeyword: "answer engine optimization",
       ogTitle:
-        "What is Answer Engine Optimization (AEO)? | Static Savvy Media Blog",
+        "Answer Engine Optimization (AEO): What It Is and How to Do It",
       ogDescription:
-        "Understand Answer Engine Optimization (AEO) and how to get featured in direct AI answer snippets.",
+        "Answer engine optimization (AEO, or optimisation) gets your business cited in Google AI Overviews, ChatGPT and voice answers. Steps, examples and a checklist.",
       ogImage: `${BASE_URL}/og/blog/what-is-answer-engine-optimization.jpg`,
       schema: {
         "@context": "https://schema.org",
@@ -1868,18 +1868,6 @@ export const seoConfig = {
   },
   // Pages below set their own SEO in the page file; these entries mirror those values so the
   // prerendered HTML (scripts/seo/prerender-heads.mjs) carries the same title and description.
-  "/locations/kuala-lumpur": {
-    title: "Digital Marketing Agency in Kuala Lumpur | Static Savvy Media",
-    slug: "locations/kuala-lumpur",
-    seo: {
-      title: "Digital Marketing Agency in Kuala Lumpur | Static Savvy Media",
-      description:
-        "Digital marketing agency for Kuala Lumpur businesses: SEO, Google Ads, social media, websites and AI automation, from our Rawang, Selangor office.",
-      canonical: `${BASE_URL}/locations/kuala-lumpur`,
-      ogImage: `${BASE_URL}/og/locations-02malaysia.jpg`,
-      robots: "index,follow",
-    },
-  },
   "/services/google-ads/kuala-lumpur": {
     title: "Google Ads Agency Kuala Lumpur | PPC Management KL | Static Savvy Media",
     slug: "services/google-ads/kuala-lumpur",

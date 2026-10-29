@@ -572,6 +572,68 @@ export const cityPages = [
       { to: '/services/website-design-development/', label: 'Website design & development' },
     ],
   },
+  /* ============================== KUALA LUMPUR ============================== */
+  /* Migrated 29 Oct 2026 from the older LocalServicePage version (src/pages/Locations/KualaLumpur.jsx). */
+  {
+    slug: 'kuala-lumpur',
+    name: 'Kuala Lumpur',
+    region: 'malaysia',
+    areaType: 'City',
+    containedIn: 'Malaysia',
+    whatsapp: MY_WA,
+    office: 'malaysia',
+    title: 'Digital Marketing Agency in Kuala Lumpur (KL) | Static Savvy Media',
+    description: 'Digital marketing agency for Kuala Lumpur SMEs: SEO, Google Maps, Google Ads, social media and websites from our Rawang office. Plans from RM 800/month.',
+    eyebrow: 'Kuala Lumpur · Served from our Rawang, Selangor office',
+    h1: 'Digital Marketing Agency in Kuala Lumpur for SMEs: SEO, Google Maps, Ads and Social Media',
+    answer: 'Static Savvy Media is a digital marketing agency serving Kuala Lumpur and the Klang Valley from our Malaysia office in Rawang, Selangor. We run SEO, Google Business Profile (Google Maps), Google Ads, social media, websites and AI search optimisation for KL businesses, quoted in MYR. SEO plans are RM 800, RM 1,500 and RM 2,000 a month, with no lock-in.',
+    intro: [
+      'Customers in Kuala Lumpur compare options quickly: a Google search or a "near me" search on Maps, a look at your reviews, a scroll through your Instagram, then a WhatsApp message. We help KL businesses show up and make a good impression at each of those steps.',
+      'KL is also several markets in one. Bangsar, Mont Kiara, Cheras, KLCC, Bukit Bintang and nearby Petaling Jaya each have their own competition, and the same customer may search in English, read reviews in Bahasa Malaysia and chat in Chinese or Tamil. We plan pages, Google Business Profiles, ad targeting and language per channel around the areas you actually serve.',
+    ],
+    howWeServe: {
+      mode: 'Malaysia office in Rawang, Selangor, serving all of KL',
+      points: [
+        'Meet us at NO.9, Jalan Anggun 2J, Taman Anggun 2, 48000 Rawang (near AEON Mall Rawang), Mon–Fri, 9 AM–6 PM (MYT)',
+        'Or we meet you in Kuala Lumpur by appointment; most work runs on WhatsApp and video calls',
+        'Quotes and invoices in MYR, Malaysian working hours, Malaysian phone line +60 12-453 7030',
+        'Monthly reports from your own Google and Meta accounts',
+      ],
+    },
+    industries: [
+      { title: 'F&B, retail and beauty', text: 'Neighbourhood competition in Bangsar, Mont Kiara and Bukit Bintang is intense. A complete Google Business Profile per outlet, fresh photos, review replies and Instagram or TikTok content timed to Hari Raya, Chinese New Year and Deepavali drive footfall.' },
+      { title: 'Clinics, dental and wellness', text: 'Patients compare reviews and credentials before booking. We keep healthcare copy and ads factual and within Malaysian advertising rules for medical services, and track bookings from calls and WhatsApp.' },
+      { title: 'Property, interior design and renovation', text: 'High-value enquiries start on Google and Instagram. Project pages with real photos, Google Ads on narrow service-plus-area searches and lead tracking show which channel brings serious buyers.' },
+      { title: 'Professional and B2B services', text: 'Accountants, law firms, consultants and B2B suppliers in KL need answer-first service pages and GEO so they are cited when buyers ask ChatGPT or Google AI Overviews for recommendations.' },
+    ],
+    areas: ['KLCC', 'Bukit Bintang', 'Bangsar', 'Mont Kiara', 'Cheras', 'Kepong', 'Setapak', 'Wangsa Maju', 'Sri Hartamas', 'Brickfields', 'Bukit Jalil', 'Petaling Jaya'],
+    priorities: [
+      { title: 'Get found on Google Maps in KL', text: 'Most "near me" searches are decided in the map pack. We fix categories, service areas, photos and the reviews routine on your Google Business Profile first. ', link: { to: '/services/local-seo/malaysia/', label: 'Local SEO and Google Maps in Malaysia' } },
+      { title: 'Rank on google.com.my for your services', text: 'Service and area pages written for how KL customers search, in English and Bahasa Malaysia, with technical SEO done properly. ', link: { to: '/services/seo/kuala-lumpur/', label: 'SEO services in Kuala Lumpur' } },
+      { title: 'Leads now with tracked Google Ads', text: 'Search and Performance Max campaigns tightly targeted around your outlets, with call, form and WhatsApp tracking from day one. ', link: { to: '/services/google-ads/kuala-lumpur/', label: 'Google Ads agency in Kuala Lumpur' } },
+      { title: 'Grant-aware planning', text: 'Some Malaysian SMEs can offset digital spend through government digitalisation programmes. We can prepare documentation for eligible services; eligibility is decided by the programme, not by us.' },
+    ],
+    faqs: [
+      { question: 'Do you have an office in Kuala Lumpur?', answer: 'Our Malaysia office is in Rawang, Selangor (NO.9, Jalan Anggun 2J, Taman Anggun 2, 48000 Rawang, near AEON Mall Rawang). We serve clients across Kuala Lumpur and the Klang Valley and meet in KL by appointment.' },
+      { question: 'How much does a digital marketing agency in KL cost?', answer: 'It depends on the services and how much work is included, and ad spend is usually paid separately. Our SEO plans are RM 800 a month for Google Business Profile management (12 posts), RM 1,500 for GBP plus website SEO with 4 blogs a month, and RM 2,000 for GBP, SEO, AEO and GEO. Websites and ads management are quoted separately.' },
+      { question: 'Which service should a KL small business start with?', answer: 'If customers find you on Google Maps or by searching "near me", start with your Google Business Profile and local SEO. If they compare options on websites, add SEO for your service pages. If you need leads quickly, run Google Ads with tracking while SEO builds. Our buyer’s checklist for choosing a digital marketing agency in Malaysia (linked below) explains how to decide.' },
+      { question: 'How long does SEO take to work in Kuala Lumpur?', answer: 'Google Business Profile improvements can lift Maps visibility within weeks. Website rankings for competitive KL keywords usually take several months and build as content, reviews and links grow. Google Ads can bring enquiries within days of launch.' },
+      { question: 'Do you run Google Ads (SEM) and social media for KL businesses?', answer: 'Yes. We manage Google Ads search and Performance Max campaigns and social media for Instagram, Facebook, TikTok and LinkedIn, with conversion tracking on calls, forms and WhatsApp.' },
+      { question: 'Can you create content in Bahasa Malaysia?', answer: 'Yes. We produce English and Bahasa Malaysia content and plan the language per channel and audience instead of translating everything.' },
+      { question: 'Do you lock clients into long contracts?', answer: 'No. Our plans are monthly with no lock-in, and your Google Business Profile, Search Console, Analytics and ad accounts stay in your name.' },
+      { question: 'How can I contact your Malaysia team?', answer: 'Call or WhatsApp +60 12-453 7030 (Mon–Fri, 9 AM–6 PM MYT), or use the form on this page for a free review.' },
+    ],
+    related: [
+      { to: '/services/seo/kuala-lumpur/', label: 'SEO services in Kuala Lumpur' },
+      { to: '/services/google-ads/kuala-lumpur/', label: 'Google Ads agency in Kuala Lumpur' },
+      { to: '/services/local-seo/malaysia/', label: 'Local SEO & Google Maps in Malaysia' },
+      { to: '/locations/selangor/', label: 'Digital marketing in Selangor' },
+      { to: '/locations/malaysia/', label: 'Our Malaysia office (Rawang)' },
+      { to: '/blog/how-to-choose-digital-marketing-agency-malaysia/', label: 'Guide: how to choose a digital marketing agency in Malaysia' },
+      { to: '/blog/seo-cost-malaysia-price-guide/', label: 'Guide: how much SEO costs in Malaysia' },
+      { to: '/industries/smes-malaysia-grant-eligible/', label: 'Digital marketing for Malaysian SMEs (grant-eligible)' },
+    ],
+  },
 ]
 
 export function getCityPage(slug) {
