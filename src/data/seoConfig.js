@@ -22,8 +22,8 @@ export const seoConfig = {
   // Unlisted per-country pricing pages: noindex,nofollow (also X-Robots-Tag in vercel.json).
   ...Object.fromEntries(PRICING_COUNTRIES.map((c) => {
     const path = UNLISTED_PRICING_PATHS[c.key];
-    const title = `${c.label} Pricing | Static Savvy Media`;
-    const description = `Static Savvy Media prices for ${c.label} in ${c.currency}: SEO & Google Business Profile, website development, social media marketing and lead generation.`;
+    const title = `${c.label} Plans & Pricing (${c.currency}) | Static Savvy Media`;
+    const description = `Your Static Savvy Media proposal for ${c.label}: SEO & Google Business Profile, websites, social media and lead generation plans in ${c.currency}. No lock-in, 4.9★ from 106 Google reviews.`;
     return [path.replace(/\/$/, ""), { title, slug: path.replace(/^\/|\/$/g, ""), seo: { title, description, canonical: `${BASE_URL}${path}`, ogTitle: title, ogDescription: description, robots: "noindex,nofollow" } }];
   })),
   ...Object.fromEntries(cityPages.map((c) => [`/locations/${c.slug}`, { title: c.title, slug: `locations/${c.slug}`, seo: { title: c.title, description: c.description, canonical: `${BASE_URL}/locations/${c.slug}/`, ogTitle: c.title, ogDescription: c.description, robots: "index,follow" } }])),

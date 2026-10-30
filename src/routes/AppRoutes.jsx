@@ -56,6 +56,7 @@ import SMEsMalaysia from '../pages/Industries/SMEsMalaysia.jsx'
 import RealEstateBuilders from '../pages/Industries/RealEstateBuilders.jsx'
 
 import CountryPricing from '../pages/Pricing/CountryPricingRoute.jsx'
+import FunnelLayout from '../layouts/FunnelLayout.jsx'
 
 import CaseStudies from '../pages/CaseStudies/CaseStudies.jsx'
 import Client1 from '../pages/CaseStudies/Client1.jsx'
@@ -86,6 +87,14 @@ export default function AppRoutes() {
     <Routes>
       <Route element={<LandingLayout />}>
         <Route path="/" element={<Home />} />
+      </Route>
+
+      {/* Unlisted per-country pricing landing pages: focused funnel layout, no site nav. */}
+      <Route element={<FunnelLayout />}>
+        <Route path="/p/india-9xajei" element={<CountryPricing country="india" />} />
+        <Route path="/p/malaysia-2josdx" element={<CountryPricing country="malaysia" />} />
+        <Route path="/p/dubai-a8aokh" element={<CountryPricing country="dubai" />} />
+        <Route path="/p/singapore-xseszo" element={<CountryPricing country="singapore" />} />
       </Route>
 
       <Route element={<ContentLayout />}>
@@ -216,10 +225,7 @@ export default function AppRoutes() {
         {/* No public pricing pages: /pricing/ and every /pricing/* page 301 to a service, location or
             the home page (scripts/seo/legacy-redirects.csv). Prices are shared only at proposal time via
             these unlisted per-country pages (noindex,nofollow; never linked; not in sitemap). Paths: masterPricing.js */}
-        <Route path="/p/india-9xajei" element={<CountryPricing country="india" />} />
-        <Route path="/p/malaysia-2josdx" element={<CountryPricing country="malaysia" />} />
-        <Route path="/p/dubai-a8aokh" element={<CountryPricing country="dubai" />} />
-        <Route path="/p/singapore-xseszo" element={<CountryPricing country="singapore" />} />
+        {/* The /p/ routes sit in FunnelLayout (above), outside the site chrome. */}
 
         <Route path="/case-studies" element={<CaseStudies />} />
         <Route path="/case-studies/client-1" element={<Client1 />} />
