@@ -11,20 +11,20 @@ import {
 
 const PATH = '/services/seo/kuala-lumpur/'
 const DESCRIPTION =
-  'SEO in Kuala Lumpur for SMEs: rank on Google and Google Maps across KL & the Klang Valley. Technical, local and English/BM SEO, no lock-in. Call +60 12-453 7030.'
+  'SEO agency in Kuala Lumpur for SMEs: SEO services that rank you on google.com.my and Google Maps across KL, in English and BM. Free review, no lock-in. +60 12-453 7030.'
 
 const content = {
   path: PATH,
   ogImage: '/og/services-seo-kuala-lumpur.jpg',
   image: { jpg: '/og/services-seo-kuala-lumpur.jpg', webp: '/og/services-seo-kuala-lumpur.webp', alt: 'SEO services in Kuala Lumpur for SMEs, Static Savvy Media Malaysia team' },
-  title: 'SEO Kuala Lumpur (KL): SEO Company for KL SMEs | Static Savvy Media',
+  title: 'SEO Agency Kuala Lumpur: SEO Services & Company in KL | Static Savvy Media',
   description: DESCRIPTION,
   eyebrow: 'SEO · KUALA LUMPUR',
-  h1: 'SEO Services in Kuala Lumpur — For SMEs That Want Enquiries, Not Just Traffic',
+  h1: 'SEO Agency in Kuala Lumpur: SEO Services for KL SMEs That Want Enquiries',
   intro: [
-    'In short: Static Savvy Media provides SEO services in Kuala Lumpur for small and mid-sized businesses. We fix technical issues, build English and Bahasa Malaysia pages around how KL customers search, align your Google Business Profile, and report on calls, WhatsApp chats and form enquiries every month, with no lock-in contract.',
+    'In short: Static Savvy Media is an SEO agency for Kuala Lumpur businesses. We provide SEO services in KL for small and mid-sized businesses. We fix technical issues, build English and Bahasa Malaysia pages around how KL customers search, align your Google Business Profile, and report on calls, WhatsApp chats and form enquiries every month, with no lock-in contract.',
     'Kuala Lumpur is one of the most competitive search markets in Southeast Asia. Your customers might search in English, Bahasa Malaysia or Chinese, on google.com.my, often from a phone and often with "near me" or a neighbourhood name attached. We build SEO that reflects how KL actually searches.',
-    'We work with Kuala Lumpur and Klang Valley businesses from our Malaysia office in Rawang, Selangor, just north of the city, with calls on a Malaysian number during Malaysian business hours. Strategy is led by our founder, Deepan Kanz. Page reviewed and updated 25 October 2026.',
+    'We work with Kuala Lumpur and Klang Valley businesses from our Malaysia office in Rawang, Selangor, just north of the city, with calls on a Malaysian number during Malaysian business hours. Strategy is led by our founder, Deepan Kanz. Page reviewed and updated 30 October 2026.',
   ],
   phone: { href: MALAYSIA_OFFICE.phoneHref, display: MALAYSIA_OFFICE.phoneDisplay },
   crumbs: [
@@ -109,6 +109,21 @@ const content = {
       after: <>For a custom quote, WhatsApp <a href="https://wa.me/60124537030">+60 12-453 7030</a> or <Link to="/contact/">send an enquiry</Link>. For what agencies typically charge, read <Link to="/blog/seo-cost-malaysia-price-guide/">how much SEO costs in Malaysia</Link>.</>,
     },
     {
+      eyebrow: 'Choosing an agency',
+      heading: 'How to Choose an SEO Company in Kuala Lumpur',
+      subtitle: 'Six checks we suggest before you sign with any KL SEO agency, including us.',
+      kind: 'checks',
+      items: [
+        'Ask to see real Search Console or GA4 screenshots from a past client, not just a ranking report.',
+        'Check that they research google.com.my terms in English and Bahasa Malaysia, not global keyword data.',
+        'Ask how they earn links. Any offer of hundreds of links a month usually means bought links or private blog networks.',
+        'Confirm you keep ownership of your website, Google Business Profile, Search Console and analytics accounts.',
+        'Prefer monthly contracts. A long lock-in protects the agency, not you.',
+        'Make sure reports track calls, WhatsApp chats and form enquiries, not only traffic.',
+      ],
+      after: <>For the full checklist, read <Link to="/blog/how-to-choose-digital-marketing-agency-malaysia/">how to choose a digital marketing agency in Malaysia</Link>.</>,
+    },
+    {
       eyebrow: 'AI Search',
       heading: 'SEO and AI Answers (GEO & AEO) in Malaysia',
       kind: 'cards',
@@ -149,6 +164,10 @@ const content = {
     { question: 'Do you have an office in Malaysia?', answer: `Yes. Our Malaysia office is at ${MALAYSIA_OFFICE.streetAddress}, ${MALAYSIA_OFFICE.postalCode} ${MALAYSIA_OFFICE.addressLocality}, ${MALAYSIA_OFFICE.addressRegion} (${MALAYSIA_OFFICE.landmark}), north of Kuala Lumpur. Meetings can be in person or online.` },
     { question: 'Do you buy backlinks?', answer: 'No. Links are earned through Malaysian directories, associations, suppliers, PR and useful content. Bought links and private blog networks can lead to Google penalties.' },
     { question: 'Is SEO in Malaysia different from SEO in India?', answer: 'The principles are the same, but the market is not. Malaysian searches use google.com.my, mix several languages, and local directories and media differ. That is why our KL pages, keywords and outreach are planned separately.' },
+    { question: 'What does an SEO agency in KL do each month?', answer: 'Each month we fix technical issues, improve or add service and area pages, publish content that answers customer questions, keep your Google Business Profile active, earn relevant Malaysian links, and send a plain-language report from your Search Console and GA4.' },
+    { question: 'Which is the best SEO company in Kuala Lumpur?', answer: 'The best SEO company for you is the one that shows real Search Console results, researches google.com.my in your customers\' languages, earns links rather than buying them, lets you keep ownership of every account, and works month to month. Use those checks to compare any KL agency, including us.' },
+    { question: 'Do you offer SEO consulting in Kuala Lumpur?', answer: 'Yes. If you have an in-house team, we can run a one-off SEO audit and strategy session, then advise your team monthly instead of doing all the work ourselves.' },
+    { question: 'Can you help my business show up for "SEO near me" style searches in KL?', answer: 'Yes. "Near me" searches are mostly decided by Google Maps, so we optimise your Google Business Profile, reviews routine and local citations alongside area pages on your website.' },
     { question: 'How do I contact your Malaysia team?', answer: `Call ${MALAYSIA_OFFICE.phoneDisplay} (${MALAYSIA_OFFICE.hoursDisplay}) or WhatsApp ${MALAYSIA_OFFICE.whatsappDisplay}.` },
   ],
   cta: {

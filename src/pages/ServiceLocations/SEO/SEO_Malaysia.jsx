@@ -25,7 +25,7 @@ import '../../../styles/pages/seo-malaysia.css'
    ============================================================ */
 
 const PAGE_TITLE =
-  'SEO Malaysia: SEO Services & Agency for KL & Selangor | Static Savvy Media'
+  'SEO Services Malaysia: SEO Company for Malaysian SMEs | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
   'SEO services in Malaysia from our Rawang, Selangor office: rank on google.com.my and Google Maps with technical, local and English/BM content SEO. No lock-in. Call +60 12-453 7030.'
@@ -33,10 +33,10 @@ const PAGE_DESCRIPTION =
 const HERO_EYEBROW = 'SEO · MALAYSIA'
 
 const HERO_TITLE =
-  'SEO Services in Malaysia, SEO Agency for Kuala Lumpur & Selangor Businesses'
+  'SEO Services in Malaysia, SEO Company for SMEs Across the Country'
 
 const HERO_PARAGRAPH =
-  'Static Savvy Media is an SEO agency with an office in Rawang, Selangor, serving businesses across Kuala Lumpur, the Klang Valley and the rest of Malaysia. Get your Malaysian business in front of the right customers when they are actively searching for your products and services. Static Savvy Media combines technical SEO, keyword strategy, on-page optimization, content development, internal linking, schema and performance measurement to build sustainable organic search visibility.'
+  'Static Savvy Media is an SEO company with a Malaysia office in Rawang, Selangor, serving SMEs nationwide, from the Klang Valley to Penang, Johor Bahru and Ipoh. (Based in Kuala Lumpur? See our dedicated SEO services in Kuala Lumpur page.) Get your Malaysian business in front of the right customers when they are actively searching for your products and services. Static Savvy Media combines technical SEO, keyword strategy, on-page optimization, content development, internal linking, schema and performance measurement to build sustainable organic search visibility.'
 
 const SEO_SERVICES = [
   {
@@ -160,7 +160,7 @@ const MALAYSIA_SEARCH_FACTORS = [
 const MALAYSIA_LINKS = [
   { name: 'Digital marketing agency in Malaysia', path: '/locations/malaysia/' },
   { name: 'Digital marketing agency in Kuala Lumpur', path: '/locations/kuala-lumpur/' },
-  { name: 'SEO services in KL', path: '/services/seo/kuala-lumpur/' },
+  { name: 'SEO agency in Kuala Lumpur (KL)', path: '/services/seo/kuala-lumpur/' },
   { name: 'Local SEO and Google Maps in Malaysia', path: '/services/local-seo/malaysia/' },
   { name: 'How much SEO costs in Malaysia (guide)', path: '/blog/seo-cost-malaysia-price-guide/' },
 ]

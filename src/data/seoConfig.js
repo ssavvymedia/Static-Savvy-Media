@@ -432,17 +432,17 @@ export const seoConfig = {
   },
   "/services/seo/malaysia": {
     title:
-      "SEO Malaysia: SEO Services & Agency for KL & Selangor | Static Savvy Media",
+      "SEO Services Malaysia: SEO Company for Malaysian SMEs | Static Savvy Media",
     slug: "services/seo/malaysia",
     seo: {
       title:
-        "SEO Malaysia: SEO Services & Agency for KL & Selangor | Static Savvy Media",
+        "SEO Services Malaysia: SEO Company for Malaysian SMEs | Static Savvy Media",
       description:
         "SEO services in Malaysia from our Rawang, Selangor office: rank on google.com.my and Google Maps with technical, local and English/BM content SEO. No lock-in. Call +60 12-453 7030.",
       canonical: `${BASE_URL}/services/seo/malaysia`,
       focusKeyword: "SEO Malaysia",
       ogTitle:
-        "SEO Malaysia: SEO Services & Agency for KL & Selangor | Static Savvy Media",
+        "SEO Services Malaysia: SEO Company for Malaysian SMEs | Static Savvy Media",
       ogDescription:
         "SEO services in Malaysia for businesses seeking stronger Google visibility and organic search rankings.",
       ogImage: `${BASE_URL}/og/locations-02malaysia.jpg`,
@@ -1415,12 +1415,12 @@ export const seoConfig = {
     },
   },
   "/services/seo/kuala-lumpur": {
-    title: "SEO Kuala Lumpur (KL): SEO Company for KL SMEs | Static Savvy Media",
+    title: "SEO Agency Kuala Lumpur: SEO Services & Company in KL | Static Savvy Media",
     slug: "services/seo/kuala-lumpur",
     seo: {
-      title: "SEO Kuala Lumpur (KL): SEO Company for KL SMEs | Static Savvy Media",
+      title: "SEO Agency Kuala Lumpur: SEO Services & Company in KL | Static Savvy Media",
       description:
-        "SEO in Kuala Lumpur for SMEs: rank on Google and Google Maps across KL & the Klang Valley. Technical, local and English/BM SEO, no lock-in. Call +60 12-453 7030.",
+        "SEO agency in Kuala Lumpur for SMEs: SEO services that rank you on google.com.my and Google Maps across KL, in English and BM. Free review, no lock-in. +60 12-453 7030.",
       canonical: `${BASE_URL}/services/seo/kuala-lumpur`,
       ogImage: `${BASE_URL}/og/services-seo-kuala-lumpur.jpg`,
       robots: "index,follow",
