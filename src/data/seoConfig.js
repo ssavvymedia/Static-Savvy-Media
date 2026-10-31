@@ -30,7 +30,7 @@ export const seoConfig = {
   // Private client portfolio: noindex,nofollow (also X-Robots-Tag in vercel.json), shared only on request.
   [PORTFOLIO_PATH.replace(/\/$/, "")]: (() => {
     const title = "Client Portfolio: Brands We've Grown | Static Savvy Media";
-    const description = "Google Business Profile, SEO and digital marketing clients of Static Savvy Media across Tamil Nadu, with real ratings and dated ranking snapshots. 4.9★ from 106 Google reviews.";
+    const description = "Google Business Profile, SEO and digital marketing clients of Static Savvy Media across Tamil Nadu and Kerala, with real ratings and dated ranking snapshots. 4.9★ from 106 Google reviews.";
     return { title, slug: PORTFOLIO_PATH.replace(/^\/|\/$/g, ""), seo: { title, description, canonical: `${BASE_URL}${PORTFOLIO_PATH}`, ogTitle: title, ogDescription: description, robots: "noindex,nofollow" } };
   })(),
   ...Object.fromEntries(cityPages.map((c) => [`/locations/${c.slug}`, { title: c.title, slug: `locations/${c.slug}`, seo: { title: c.title, description: c.description, canonical: `${BASE_URL}/locations/${c.slug}/`, ogTitle: c.title, ogDescription: c.description, robots: "index,follow" } }])),

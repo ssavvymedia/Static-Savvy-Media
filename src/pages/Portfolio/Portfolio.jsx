@@ -154,7 +154,7 @@ export default function Portfolio() {
           <p className="lp-eyebrow">Client portfolio · shared privately</p>
           <h1 id="pf-h1" className="lp-hero__title">Brands we&rsquo;ve grown</h1>
           <p className="lp-hero__lead pf-hero__lead">
-            {total} businesses across Tamil Nadu trust us with their Google Business Profile, SEO and digital marketing,
+            {total} businesses across Tamil Nadu and Kerala trust us with their Google Business Profile, SEO and digital marketing,
             from hardware stores and clinics to bridal studios and MEP contractors. Every rating, review count and ranking
             below is real and dated. No made-up numbers.
           </p>

@@ -129,6 +129,9 @@ export const MORE_BRANDS = [
   { name: 'Kaniyan Books / Kaniyan IAS Academy', industry: 'edu', label: 'Education', url: 'https://www.kaniyanbooks.in/', linkLabel: 'Website' },
   { name: 'K Media Photography', industry: 'photo', label: 'Photography' },
   { name: 'OSD Photography', industry: 'photo', label: 'Photography' },
+  { name: 'Christ Holidays and Travels Pvt Ltd', industry: 'travel', label: 'Travel agency · Salem', url: 'https://christholidaystravels.com/', linkLabel: 'Website' },
+  { name: '32 Sparkles Dental Clinic', industry: 'health', label: 'Dental clinic · Kochi', url: 'https://32sparklesdental.com/', linkLabel: 'Website' },
+  { name: 'NAS Catering College', industry: 'edu', label: 'Catering & hotel management college · Madurai', url: 'https://www.nascollegemadurai.com/', linkLabel: 'Website' },
 ]
 
 /** How the GBP work runs month to month (matches the work logged in the client reports above). */
