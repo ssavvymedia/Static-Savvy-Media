@@ -15,7 +15,6 @@ import {
 import { LANDING_COPY, SOLUTION, PROCESS, TRUST_FACTS, TERMS } from './landingCopy.js'
 import founderImg from '../../assets/images/About/DeepanFounder.webp'
 import logoImg from '../../assets/images/logo/SSMLOGO.webp'
-import '../../styles/pages/pricing-master.css'
 
 const ORG_ID = `${SITE_URL}/#organization`
 const EMAIL = 'info@staticsavvymedia.com'

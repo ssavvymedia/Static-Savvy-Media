@@ -89,6 +89,13 @@ const routes = vercel.rewrites.filter((r) => r.destination === '/index.html').ma
 
 let withMeta = 0
 let withBody = 0
+/* The unlisted /p/ price pages hydrate only after their lazy CountryPricing chunk (which holds the
+ * prices) has loaded (main.jsx). Modulepreload it on those routes only, so it downloads in parallel
+ * with the main bundle instead of after it. Public pages never reference the chunk. */
+const pricingChunks = readdirSync(join(DIST, 'assets')).filter((f) => /^CountryPricing-[\w-]+\.js$/.test(f))
+if (pricingChunks.length !== 1) throw new Error(`prerender-heads: expected 1 CountryPricing-*.js chunk, found ${pricingChunks.length}`)
+const PRICING_PRELOAD = `  <link rel="modulepreload" crossorigin href="/assets/${pricingChunks[0]}">\n  </head>`
+
 for (const route of routes) {
   if (!route.startsWith('/') || !route.endsWith('/') || route.includes(':') || route.includes('(')) {
     throw new Error(`prerender-heads: unexpected rewrite source ${route}`)
@@ -139,6 +146,7 @@ for (const route of routes) {
     const ld = JSON.stringify(ssrBody.schema).replace(/</g, '\\u003c')
     html = html.replace('</head>', `  <script type="application/ld+json" id="json-ld-schema">${ld}</script>\n  </head>`)
   }
+  if (route.startsWith('/p/')) html = html.replace('</head>', PRICING_PRELOAD)
   if (ssrError && !body) html = html.replace('<div id="root"></div>', `<!-- ssr-bodies failed: ${ssrError} --><div id="root"></div>`)
   const outDir = join(DIST, route)
   mkdirSync(outDir, { recursive: true })
