@@ -16,6 +16,7 @@ export const INDUSTRIES = [
   { key: 'travel', label: 'Travel & tourism' },
   { key: 'auto', label: 'Automotive' },
   { key: 'edu', label: 'Education & media' },
+  { key: 'security', label: 'Security systems' },
 ]
 
 /** Section A: Google Business Profile & SEO clients (detailed cards). */
@@ -132,6 +133,7 @@ export const MORE_BRANDS = [
   { name: 'Christ Holidays and Travels Pvt Ltd', industry: 'travel', label: 'Travel agency · Salem', url: 'https://christholidaystravels.com/', linkLabel: 'Website' },
   { name: '32 Sparkles Dental Clinic', industry: 'health', label: 'Dental clinic · Kochi', url: 'https://32sparklesdental.com/', linkLabel: 'Website' },
   { name: 'NAS Catering College', industry: 'edu', label: 'Catering & hotel management college · Madurai', url: 'https://www.nascollegemadurai.com/', linkLabel: 'Website' },
+  { name: '3D Security Solutions', industry: 'security', label: 'CCTV & security systems · Madurai', url: 'https://www.3dsecuritysolutions.com/', linkLabel: 'Website' },
 ]
 
 /** How the GBP work runs month to month (matches the work logged in the client reports above). */
