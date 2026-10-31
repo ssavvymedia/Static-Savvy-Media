@@ -1497,6 +1497,31 @@
       "statusCode": 301
     },
     {
+      "source": "/p/india-9xajei",
+      "destination": "/p/india-9xajei/",
+      "statusCode": 308
+    },
+    {
+      "source": "/p/malaysia-2josdx",
+      "destination": "/p/malaysia-2josdx/",
+      "statusCode": 308
+    },
+    {
+      "source": "/p/dubai-a8aokh",
+      "destination": "/p/dubai-a8aokh/",
+      "statusCode": 308
+    },
+    {
+      "source": "/p/singapore-xseszo",
+      "destination": "/p/singapore-xseszo/",
+      "statusCode": 308
+    },
+    {
+      "source": "/p/portfolio-6g3sak",
+      "destination": "/p/portfolio-6g3sak/",
+      "statusCode": 308
+    },
+    {
       "source": "/about",
       "destination": "/about/",
       "statusCode": 308
@@ -1757,26 +1782,6 @@
       "statusCode": 308
     },
     {
-      "source": "/p/india-9xajei",
-      "destination": "/p/india-9xajei/",
-      "statusCode": 308
-    },
-    {
-      "source": "/p/malaysia-2josdx",
-      "destination": "/p/malaysia-2josdx/",
-      "statusCode": 308
-    },
-    {
-      "source": "/p/dubai-a8aokh",
-      "destination": "/p/dubai-a8aokh/",
-      "statusCode": 308
-    },
-    {
-      "source": "/p/singapore-xseszo",
-      "destination": "/p/singapore-xseszo/",
-      "statusCode": 308
-    },
-    {
       "source": "/case-studies",
       "destination": "/case-studies/",
       "statusCode": 308
@@ -2009,6 +2014,26 @@
   ],
   "rewrites": [
     {
+      "source": "/p/india-9xajei/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/p/malaysia-2josdx/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/p/dubai-a8aokh/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/p/singapore-xseszo/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/p/portfolio-6g3sak/",
+      "destination": "/index.html"
+    },
+    {
       "source": "/about/",
       "destination": "/index.html"
     },
@@ -2214,22 +2239,6 @@
     },
     {
       "source": "/industries/real-estate-builders/",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/p/india-9xajei/",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/p/malaysia-2josdx/",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/p/dubai-a8aokh/",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/p/singapore-xseszo/",
       "destination": "/index.html"
     },
     {

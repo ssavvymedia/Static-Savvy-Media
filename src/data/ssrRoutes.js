@@ -1,5 +1,6 @@
 import { cityPages } from './cityPages.js'
 import { pricingServiceNodes, PRICING_COUNTRIES, UNLISTED_PRICING_PATHS } from './masterPricing.js'
+import { PORTFOLIO_PATH } from './portfolioLinks.js'
 
 /**
  * Routes whose real page component is server-rendered at build time (scripts/seo/prerender-heads.mjs)
@@ -88,6 +89,8 @@ export const ssrRoutes = [
   {'route': '/blog/local-seo-thoothukudi-businesses/', 'module': '/src/pages/Blog/LocalSEOThoothukudi.jsx', 'kind': 'article', 'office': 'madurai', 'published': '2026-08-25'},
   /* Unlisted per-country pricing pages (noindex,nofollow): prices server-rendered for direct loads. */
   ...PRICING_COUNTRIES.map((c) => ({ route: UNLISTED_PRICING_PATHS[c.key], module: '/src/pages/Pricing/CountryPricing.jsx', props: { country: c.key }, kind: 'page', pageType: 'WebPage', office: 'org', noCrumbs: true, extraNodes: pricingServiceNodes('https://www.staticsavvymedia.com', 'https://www.staticsavvymedia.com/#organization', c.key) })),
+  /* Private client portfolio (noindex,nofollow): WebPage + Organization only, no review schema. */
+  { route: PORTFOLIO_PATH, module: '/src/pages/Portfolio/Portfolio.jsx', kind: 'page', pageType: 'WebPage', office: 'org', noCrumbs: true },
   /* City landing pages (src/data/cityPages.js). office 'org' = provider is the Organization, so no
    * LocalBusiness node with an address in another city is emitted; Selangor uses the real Rawang office. */
   ...cityPages.map((c) => ({

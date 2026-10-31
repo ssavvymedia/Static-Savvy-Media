@@ -5,6 +5,8 @@ import SEO from '../utils/seo.js'
  * downloaded and run, so the prerendered page painted unstyled (giant logo, raw text) for ~2 s on
  * mobile networks before snapping into place. Prices stay in the lazy JS chunk. */
 import '../styles/pages/pricing-master.css'
+/* Same reason for the private portfolio page's styles (class names only). */
+import '../styles/pages/portfolio.css'
 
 /**
  * Distraction-free layout for the unlisted /p/ pricing landing pages: no site nav, footer links,

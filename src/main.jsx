@@ -31,7 +31,12 @@ const root = document.getElementById('root')
 const path = window.location.pathname.endsWith('/') ? window.location.pathname : `${window.location.pathname}/`
 if (root.dataset.ssr && root.dataset.ssr === path) {
   /* Unlisted /p/ price pages load their (price) chunk first so hydration matches the server HTML. */
-  if (path.startsWith('/p/')) {
+  if (path.startsWith('/p/portfolio-')) {
+    import('./pages/Portfolio/portfolioLoader.js')
+      .then((m) => m.preloadPortfolio())
+      .catch(() => {})
+      .then(() => hydrateRoot(root, app))
+  } else if (path.startsWith('/p/')) {
     import('./pages/Pricing/countryPricingLoader.js')
       .then((m) => m.preloadCountryPricing())
       .catch(() => {})

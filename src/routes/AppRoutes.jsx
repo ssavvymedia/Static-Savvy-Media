@@ -57,6 +57,7 @@ import RealEstateBuilders from '../pages/Industries/RealEstateBuilders.jsx'
 
 import CountryPricing from '../pages/Pricing/CountryPricingRoute.jsx'
 import FunnelLayout from '../layouts/FunnelLayout.jsx'
+import PortfolioRoute from '../pages/Portfolio/PortfolioRoute.jsx'
 
 import CaseStudies from '../pages/CaseStudies/CaseStudies.jsx'
 import Client1 from '../pages/CaseStudies/Client1.jsx'
@@ -95,6 +96,8 @@ export default function AppRoutes() {
         <Route path="/p/malaysia-2josdx" element={<CountryPricing country="malaysia" />} />
         <Route path="/p/dubai-a8aokh" element={<CountryPricing country="dubai" />} />
         <Route path="/p/singapore-xseszo" element={<CountryPricing country="singapore" />} />
+        {/* Private client portfolio, shared only on request (noindex,nofollow, never linked). */}
+        <Route path="/p/portfolio-6g3sak" element={<PortfolioRoute />} />
       </Route>
 
       <Route element={<ContentLayout />}>

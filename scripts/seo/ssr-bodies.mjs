@@ -63,6 +63,7 @@ export async function ssrBodies(root, distAssets) {
     /* The unlisted /p/ price pages are code-split (prices kept out of the main bundle): load that chunk
      * first so the full-app render includes the page, matching the client, which preloads before hydrating. */
     await (await vite.ssrLoadModule('/src/pages/Pricing/countryPricingLoader.js')).preloadCountryPricing()
+    await (await vite.ssrLoadModule('/src/pages/Portfolio/portfolioLoader.js')).preloadPortfolio()
     /* Full-app render: must match what the client renders on its first pass (hydrateRoot). */
     const renderApp = (route) => fixAssets(renderToString(React.createElement(MemoryRouter, { initialEntries: [route] }, React.createElement(App))), distAssets)
     try { out.set('/', { app: renderApp('/') }) } catch (e) { console.warn(`ssr-bodies: home app render skipped: ${String(e?.message || e).slice(0, 300)}`) }

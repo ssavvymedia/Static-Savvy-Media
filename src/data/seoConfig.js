@@ -1,6 +1,7 @@
 import { newBlogPosts } from "./newBlogPosts.js";
 import { cityPages } from "./cityPages.js";
 import { PRICING_COUNTRIES, UNLISTED_PRICING_PATHS } from "./pricingLinks.js";
+import { PORTFOLIO_PATH } from "./portfolioLinks.js";
 import { sanityPostOverrides } from "./blogOverrides.js";
 import {
   SITE_NAME,
@@ -26,6 +27,12 @@ export const seoConfig = {
     const description = `Your Static Savvy Media proposal for ${c.label}: SEO & Google Business Profile, websites, social media and lead generation plans in ${c.currency}. No lock-in, 4.9★ from 106 Google reviews.`;
     return [path.replace(/\/$/, ""), { title, slug: path.replace(/^\/|\/$/g, ""), seo: { title, description, canonical: `${BASE_URL}${path}`, ogTitle: title, ogDescription: description, robots: "noindex,nofollow" } }];
   })),
+  // Private client portfolio: noindex,nofollow (also X-Robots-Tag in vercel.json), shared only on request.
+  [PORTFOLIO_PATH.replace(/\/$/, "")]: (() => {
+    const title = "Client Portfolio: Brands We've Grown | Static Savvy Media";
+    const description = "Google Business Profile, SEO and digital marketing clients of Static Savvy Media across Tamil Nadu, with real ratings and dated ranking snapshots. 4.9★ from 106 Google reviews.";
+    return { title, slug: PORTFOLIO_PATH.replace(/^\/|\/$/g, ""), seo: { title, description, canonical: `${BASE_URL}${PORTFOLIO_PATH}`, ogTitle: title, ogDescription: description, robots: "noindex,nofollow" } };
+  })(),
   ...Object.fromEntries(cityPages.map((c) => [`/locations/${c.slug}`, { title: c.title, slug: `locations/${c.slug}`, seo: { title: c.title, description: c.description, canonical: `${BASE_URL}/locations/${c.slug}/`, ogTitle: c.title, ogDescription: c.description, robots: "index,follow" } }])),
   ...Object.fromEntries(Object.entries(sanityPostOverrides).map(([slug, o]) => [`/blog/${slug}`, { title: o.seoTitle, slug: `blog/${slug}`, seo: { title: o.seoTitle, description: o.seoDescription, canonical: `${BASE_URL}/blog/${slug}/`, ogTitle: o.seoTitle, ogDescription: o.seoDescription, robots: "index,follow" } }])),
   ...Object.fromEntries(newBlogPosts.map((p) => [`/blog/${p.slug}`, { title: p.title, slug: `blog/${p.slug}`, seo: { title: p.title, description: p.description, canonical: `${BASE_URL}/blog/${p.slug}/`, ogTitle: p.title, ogDescription: p.description, ogImage: `${BASE_URL}/og/blog/${p.slug}.jpg`, robots: "index,follow" } }])),
