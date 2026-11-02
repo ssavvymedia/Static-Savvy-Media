@@ -25,6 +25,7 @@
  */
 import { readFileSync, writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
+import { execFileSync } from 'node:child_process'
 import { fileURLToPath } from 'node:url'
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..')
@@ -180,6 +181,22 @@ if (CHECK) {
   process.exit(0)
 }
 
+/* ---------- lastmod for static routes ----------
+ * lastmod = date of the last git commit that touched the route's page component (uncommitted
+ * edits count as today). Only real content changes move it, so Google can trust it. */
+const appRoutes = read('src/routes/AppRoutes.jsx')
+const importFile = Object.fromEntries([...appRoutes.matchAll(/import\s+(\w+)\s+from\s+['"](\.\.\/[^'"]+)['"]/g)].map((m) => [m[1], join('src', m[2].replace(/^\.\.\//, ''))]))
+const routeFile = Object.fromEntries([...appRoutes.matchAll(/path="([^"]+)"\s+element=\{<(\w+)/g)].map((m) => [m[1], importFile[m[2]]]))
+const git = (args) => { try { return execFileSync('git', args, { cwd: ROOT, encoding: 'utf8' }).trim() } catch { return '' } }
+const today = new Date().toISOString().slice(0, 10)
+const lastmodCache = {}
+const routeLastmod = (p) => {
+  const f = routeFile[p]
+  if (!f) return ''
+  if (!(f in lastmodCache)) lastmodCache[f] = git(['status', '--porcelain', '--', f]) ? today : git(['log', '-1', '--format=%cs', '--', f])
+  return lastmodCache[f]
+}
+
 /* ---------- sitemap.xml ---------- */
 const rule = (p) => SITEMAP_RULES.find(([re]) => re.test(p)) || fail(`no sitemap rule for ${p}`)
 const entry = (p, lastmod) => {
@@ -192,7 +209,7 @@ for (const p of pages.filter((x) => !UNLISTED(x))) {
   const g = p === '/' ? '/' : p.split('/')[1]
   if (group !== null && g !== group) lines.push('')
   group = g
-  lines.push(entry(p))
+  lines.push(entry(p, routeLastmod(p)))
   if (p === pages.filter((x) => x.startsWith('/blog')).at(-1) && blogPosts.length) {
     lines.push('  <!-- Sanity CMS posts (rendered by /blog/:slug); lastmod = Sanity _updatedAt -->')
     for (const b of blogPosts) lines.push(entry(b.path, b.lastmod))
