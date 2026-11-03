@@ -1,19 +1,24 @@
 /**
- * SSM Diwali 2026 lead intake: Google Apps Script web app bound to the "SSM Diwali 2026 Leads" sheet.
- * The website never calls this directly: POST /api/diwali-lead (Vercel) forwards each validated lead
- * here with a shared secret, so the URL and secret stay server-side.
+ * SSM Diwali 2026 "Digital Surprise" lead intake, v2: Google Apps Script web app bound to the
+ * "SSM Diwali 2026 Leads" sheet. The website never calls this directly: POST /api/diwali-lead (Vercel)
+ * forwards each validated wish here with a shared secret, so the URL and secret stay server-side.
  *
- * Deploy: in the sheet, Extensions > Apps Script > paste this file > set SHARED_SECRET below (or as a
- * Script property) > Deploy > New deployment > Web app (Execute as: Me, Who has access: Anyone) >
- * put the /exec URL in Vercel env DIWALI_APPS_SCRIPT_URL and the same secret in DIWALI_SHARED_SECRET.
+ * NOT YET DEPLOYED (as of 3 Nov 2026 the live web app still runs v1, which keeps one row per phone and
+ * answers DUPLICATE for a repeat sender; /api/diwali-lead handles both). To upgrade: open the sheet >
+ * Extensions > Apps Script > replace Code.gs with this file > Deploy > Manage deployments > edit the
+ * existing web app deployment > Version: New version > Deploy (the /exec URL stays the same, so no
+ * Vercel change is needed). Then add headers I1:M1 below to the Leads tab.
  *
- * Columns: Timestamp IST | Name | Phone | Business | Service | Source/UTM | User agent | Status
+ * Columns: Timestamp IST | Name (sender) | Phone | Business (To: recipient) | Service | Source/UTM |
+ *          User agent | Status (New / repeat) | Recipient | Firecracker | Language | Message | Wish ID
+ * Every wish is a row; a phone already in the sheet is marked 'repeat' (never rejected).
  */
 var SHARED_SECRET = ''; // or Script property SHARED_SECRET (preferred)
 var SHEET_NAME = 'Leads';
 var START_MS = Date.UTC(2026, 10, 2, 18, 30, 0);       // 3 Nov 2026 00:00:00 IST
 var END_MS = Date.UTC(2026, 10, 9, 18, 29, 59, 999);   // 9 Nov 2026 23:59:59 IST
-var SERVICES = ['SEO', 'Local SEO / GBP', 'Website Development', 'Social Media Marketing', 'Google Ads / Lead Generation', 'Branding', 'Other'];
+var CRACKERS = ['ssm', 'flowerpot', 'chakri', 'rocket', 'sparkler'];
+var HEADERS_V2 = ['Recipient', 'Firecracker', 'Language', 'Message', 'Wish ID'];
 
 function json_(obj) {
   return ContentService.createTextOutput(JSON.stringify(obj)).setMimeType(ContentService.MimeType.JSON);
@@ -44,7 +49,7 @@ function istNow_() {
 }
 
 function doGet() {
-  return json_({ ok: true, service: 'ssm-diwali-2026-leads' });
+  return json_({ ok: true, service: 'ssm-diwali-2026-leads', v: 2 });
 }
 
 function doPost(e) {
@@ -58,25 +63,28 @@ function doPost(e) {
   if (now < START_MS) return json_({ ok: false, code: 'CAMPAIGN_NOT_STARTED' });
   if (now > END_MS) return json_({ ok: false, code: 'CAMPAIGN_ENDED' });
 
-  var name = clean_(body.name, 80), business = clean_(body.business, 120), service = clean_(body.service, 60);
-  var phone = phone_(body.phone);
-  if (name.length < 2 || business.length < 2 || !phone || SERVICES.indexOf(service) === -1) return json_({ ok: false, code: 'VALIDATION' });
+  var sender = clean_(body.sender || body.name, 80), recipient = clean_(body.recipient, 60);
+  var cracker = clean_(body.cracker, 20), lang = body.lang === 'ta' ? 'ta' : 'en';
+  var message = clean_(body.message, 200), phone = phone_(body.phone);
+  if (sender.length < 2 || recipient.length < 2 || !phone || CRACKERS.indexOf(cracker) === -1 || message.length < 2) return json_({ ok: false, code: 'VALIDATION' });
 
   var lock = LockService.getScriptLock();
   if (!lock.tryLock(10000)) return json_({ ok: false, code: 'BUSY' });
   try {
     var ss = SpreadsheetApp.getActiveSpreadsheet();
     var sh = ss.getSheetByName(SHEET_NAME) || ss.getSheets()[0];
-    var last = sh.getLastRow();
+    if (!sh.getRange(1, 9).getDisplayValue()) sh.getRange(1, 9, 1, HEADERS_V2.length).setValues([HEADERS_V2]);
+    var last = sh.getLastRow(), repeat = false;
     if (last >= 2) {
       var phones = sh.getRange(2, 3, last - 1, 1).getDisplayValues();
       for (var i = 0; i < phones.length; i++) {
-        if (phone_(phones[i][0]) === phone) return json_({ ok: false, code: 'DUPLICATE' });
+        if (phone_(phones[i][0]) === phone) { repeat = true; break; }
       }
     }
-    var row = [istNow_(), name, phone, business, service, clean_(body.source, 300), clean_(body.ua, 300), 'New'];
+    var row = [istNow_(), sender, phone, 'To: ' + recipient, 'Wish', clean_(body.source, 300), clean_(body.userAgent, 300), repeat ? 'repeat' : 'New',
+      recipient, cracker, lang === 'ta' ? 'Tamil' : 'English', message, clean_(body.wishId, 20)];
     sh.getRange(last + 1, 1, 1, row.length).setNumberFormat('@').setValues([row]);
-    return json_({ ok: true, row: last + 1 });
+    return json_({ ok: true, row: last + 1, repeat: repeat });
   } finally {
     lock.releaseLock();
   }

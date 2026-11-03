@@ -164,6 +164,7 @@ const DIWALI_CSP = [
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data: blob: https:",
   "font-src 'self' data:",
+  "media-src 'self' blob: data:",
   "connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.clarity.ms https://*.doubleclick.net https://*.google.com https://www.facebook.com",
   "frame-src https://www.googletagmanager.com https://*.doubleclick.net https://www.facebook.com",
   "object-src 'none'",

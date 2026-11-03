@@ -1093,24 +1093,24 @@ export const seoConfig = {
     },
   },
 
-  // Diwali 2026 campaign (3-9 Nov 2026 IST). Indexable, not in the main nav. No prices.
+  // Diwali 2026 Digital Surprise (3-9 Nov 2026 IST): create a firecracker wish, share on WhatsApp. No prices.
   "/diwali-2026": {
-    title: "Diwali 2026 Offer: Free Growth Audit | Static Savvy Media",
+    title: "A Diwali surprise for you ✨ | Static Savvy Media",
     slug: "diwali-2026",
     seo: {
-      title: "Diwali 2026 Offer: Free Growth Audit | Static Savvy Media",
+      title: "A Diwali surprise for you ✨ | Static Savvy Media",
       description:
-        "Light up your business this Deepavali. Claim a free Diwali Growth Audit plus free Google Business Profile optimisation setup from Static Savvy Media, Madurai. 3 to 9 Nov 2026.",
+        "Create a Diwali digital surprise: pick a firecracker, write your wish in English or Tamil, light it and share it on WhatsApp or as a video. Free from Static Savvy Media, Madurai.",
       canonical: `${BASE_URL}/diwali-2026`,
-      focusKeyword: "Diwali offer digital marketing Madurai",
-      ogTitle: "Diwali 2026: Free Growth Audit + GBP setup | Static Savvy Media",
+      focusKeyword: "Diwali wishes surprise WhatsApp",
+      ogTitle: "A Diwali surprise for you ✨",
       ogDescription:
-        "Light five diyas, unlock your Diwali gift: a free Growth Audit and free Google Business Profile optimisation setup. Enquire by 9 Nov 2026.",
-      ogImage: `${BASE_URL}/og/diwali-2026.jpg`,
+        "Someone lit a firecracker for you. Open it, light the fuse and see your Diwali wish. Then create your own surprise.",
+      ogImage: `${BASE_URL}/og/diwali-2026-surprise.jpg`,
       schema: {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        name: "Static Savvy Media Diwali 2026 offer",
+        name: "Diwali Digital Surprise by Static Savvy Media",
       },
       robots: "index,follow",
     },

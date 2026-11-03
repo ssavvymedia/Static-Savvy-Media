@@ -13,17 +13,12 @@ export const DIWALI_WHATSAPP_DISPLAY = '+91 99440 40345'
 export const DIWALI_WHATSAPP_E164 = '919944040345'
 export const DIWALI_TEL = '+919944040345'
 
-export const DIWALI_SERVICES = [
-  'SEO',
-  'Local SEO / GBP',
-  'Website Development',
-  'Social Media Marketing',
-  'Google Ads / Lead Generation',
-  'Branding',
-  'Other',
-]
+export const LIMITS = { name: [2, 24], message: [2, 180], utm: 300, ua: 300 }
 
-export const LIMITS = { name: [2, 80], business: [2, 120], utm: 300, ua: 300 }
+/** Firecrackers a sender can pick (ids are part of the shared link, so never rename one). */
+export const CRACKER_IDS = ['ssm', 'flowerpot', 'chakri', 'rocket', 'sparkler']
+/** Greeting languages. */
+export const WISH_LANGS = ['en', 'ta']
 
 /** 'upcoming' | 'active' | 'ended' for a timestamp (ms). */
 export function campaignPhase(now = Date.now()) {
@@ -54,22 +49,36 @@ export function normalizePhone(raw) {
 }
 
 // eslint-disable-next-line no-control-regex -- strip control characters on purpose
-const clean = (v) => (typeof v === 'string' ? v.replace(/[\u0000-\u001f\u007f<>]/g, ' ').replace(/\s+/g, ' ').trim() : '')
+const CTRL = /[\u0000-\u001f\u007f-\u009f\u200b\u2028\u2029<>]/g
 
-/** Validates a lead. Returns { ok: true, lead } or { ok: false, errors: { field: message } }. */
-export function validateLead(input = {}) {
+/** Strips control characters and angle brackets, collapses whitespace, clips to `max` code points. */
+export function cleanText(v, max = 200) {
+  if (typeof v !== 'string') return ''
+  return [...v.replace(CTRL, ' ').replace(/\s+/g, ' ').trim()].slice(0, max).join('').trim()
+}
+
+/**
+ * Validates a Diwali wish (the lead). Returns { ok: true, wish } or { ok: false, errors: { field: message } }.
+ * Fields: sender (From), phone (sender's, required), recipient (To), cracker, lang, message.
+ */
+export function validateWish(input = {}) {
   const errors = {}
-  const name = clean(input.name)
-  const business = clean(input.business)
-  const service = clean(input.service)
-  const phone = normalizePhone(typeof input.phone === 'string' ? input.phone : '')
-  if (name.length < LIMITS.name[0] || name.length > LIMITS.name[1]) errors.name = 'Please enter your name (2 to 80 characters).'
-  else if (!/\p{L}/u.test(name)) errors.name = 'Please enter a valid name.'
+  const raw = (k) => (typeof input[k] === 'string' ? input[k] : '')
+  const sender = cleanText(raw('sender'), 60)
+  const recipient = cleanText(raw('recipient'), 60)
+  const message = cleanText(raw('message'), 400)
+  const phone = normalizePhone(raw('phone'))
+  const cracker = CRACKER_IDS.includes(input.cracker) ? input.cracker : ''
+  const lang = WISH_LANGS.includes(input.lang) ? input.lang : ''
+  const [nMin, nMax] = LIMITS.name
+  if ([...recipient].length < nMin || [...recipient].length > nMax || !/\p{L}/u.test(recipient)) errors.recipient = `Please enter their name (${nMin} to ${nMax} characters).`
+  if ([...sender].length < nMin || [...sender].length > nMax || !/\p{L}/u.test(sender)) errors.sender = `Please enter your name (${nMin} to ${nMax} characters).`
   if (!phone) errors.phone = 'Please enter a valid mobile number (10-digit Indian, or +country code).'
-  if (business.length < LIMITS.business[0] || business.length > LIMITS.business[1]) errors.business = 'Please enter your business name (2 to 120 characters).'
-  if (!DIWALI_SERVICES.includes(service)) errors.service = 'Please choose a service.'
+  if ([...message].length < LIMITS.message[0] || [...message].length > LIMITS.message[1]) errors.message = `Please write a message (up to ${LIMITS.message[1]} characters) or pick a ready-made wish.`
+  if (!cracker) errors.cracker = 'Please choose a firecracker.'
+  if (!lang) errors.lang = 'Please choose a language.'
   if (Object.keys(errors).length) return { ok: false, errors }
-  return { ok: true, lead: { name, phone, business, service } }
+  return { ok: true, wish: { sender, phone, recipient, cracker, lang, message } }
 }
 
 /** Formats a timestamp as "2026-11-03 11:05:09 IST". */
