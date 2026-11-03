@@ -63,6 +63,7 @@ const SITEMAP_RULES = [
   [/^\/faq$/, 'monthly', '0.5'],
   [/^\/(privacy-policy|terms)$/, 'yearly', '0.3'],
   [/^\/sitemap$/, 'monthly', '0.3'],
+  [/^\/diwali-2026$/, 'daily', '0.6'],
 ]
 
 function parseCsv(text) {
@@ -157,12 +158,38 @@ for (const b of blogSlugPaths) redirects.push({ source: b, destination: slash(b)
 /* Unlisted pages (/p/...): served, but noindex,nofollow via header and never in the sitemap. */
 const UNLISTED = (p) => p.startsWith('/p/')
 
+const DIWALI_CSP = [
+  "default-src 'self'",
+  "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://*.google-analytics.com https://*.googletagmanager.com https://www.clarity.ms https://*.clarity.ms https://*.doubleclick.net https://connect.facebook.net https://*.google.com",
+  "style-src 'self' 'unsafe-inline'",
+  "img-src 'self' data: blob: https:",
+  "font-src 'self' data:",
+  "connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.clarity.ms https://*.doubleclick.net https://*.google.com https://www.facebook.com",
+  "frame-src https://www.googletagmanager.com https://*.doubleclick.net https://www.facebook.com",
+  "object-src 'none'",
+  "base-uri 'self'",
+  "form-action 'self'",
+  "frame-ancestors 'none'",
+  'upgrade-insecure-requests',
+].join('; ')
+const DIWALI_SECURITY_HEADERS = [
+  { key: 'Content-Security-Policy', value: DIWALI_CSP },
+  { key: 'X-Frame-Options', value: 'DENY' },
+  { key: 'X-Content-Type-Options', value: 'nosniff' },
+  { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+  { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=(), payment=()' },
+]
+
 const vercel = {
   $schema: 'https://openapi.vercel.sh/vercel.json',
   headers: [
     /* Vite's content-hashed build files never change under the same name: cache them for a year. */
     { source: '/assets/(.*)', headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }] },
     { source: '/p/(.*)', headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }] },
+    /* Diwali 2026 campaign page + lead API: strict framing/object/base rules. Scripts stay
+     * 'unsafe-inline' + https: because the shell's inline GTM/Clarity loaders and GTM-managed tags need it. */
+    { source: '/diwali-2026{/}?', headers: DIWALI_SECURITY_HEADERS },
+    { source: '/api/diwali-lead', headers: [{ key: 'X-Content-Type-Options', value: 'nosniff' }, { key: 'Cache-Control', value: 'no-store' }, { key: 'X-Robots-Tag', value: 'noindex' }] },
   ],
   redirects,
   // Only real routes are rewritten to the SPA shell. Static files (assets, sitemap.xml,

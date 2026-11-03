@@ -91,6 +91,8 @@ export const ssrRoutes = [
   ...PRICING_COUNTRIES.map((c) => ({ route: UNLISTED_PRICING_PATHS[c.key], module: '/src/pages/Pricing/CountryPricing.jsx', props: { country: c.key }, kind: 'page', pageType: 'WebPage', office: 'org', noCrumbs: true, extraNodes: pricingServiceNodes('https://www.staticsavvymedia.com', 'https://www.staticsavvymedia.com/#organization', c.key) })),
   /* Private client portfolio (noindex,nofollow): WebPage + Organization only, no review schema. */
   { route: PORTFOLIO_PATH, module: '/src/pages/Portfolio/Portfolio.jsx', kind: 'page', pageType: 'WebPage', office: 'org', noCrumbs: true },
+  /* Diwali 2026 campaign page: WebPage + Organization, no breadcrumb trail. */
+  { route: '/diwali-2026/', module: '/src/pages/Diwali/Diwali2026.jsx', kind: 'page', pageType: 'WebPage', office: 'org', noCrumbs: true },
   /* City landing pages (src/data/cityPages.js). office 'org' = provider is the Organization, so no
    * LocalBusiness node with an address in another city is emitted; Selangor uses the real Rawang office. */
   ...cityPages.map((c) => ({

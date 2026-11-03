@@ -58,6 +58,7 @@ import RealEstateBuilders from '../pages/Industries/RealEstateBuilders.jsx'
 import CountryPricing from '../pages/Pricing/CountryPricingRoute.jsx'
 import FunnelLayout from '../layouts/FunnelLayout.jsx'
 import PortfolioRoute from '../pages/Portfolio/PortfolioRoute.jsx'
+import Diwali2026 from '../pages/Diwali/Diwali2026.jsx'
 
 import CaseStudies from '../pages/CaseStudies/CaseStudies.jsx'
 import Client1 from '../pages/CaseStudies/Client1.jsx'
@@ -98,6 +99,8 @@ export default function AppRoutes() {
         <Route path="/p/singapore-xseszo" element={<CountryPricing country="singapore" />} />
         {/* Private client portfolio, shared only on request (noindex,nofollow, never linked). */}
         <Route path="/p/portfolio-6g3sak" element={<PortfolioRoute />} />
+        {/* Diwali 2026 campaign (3-9 Nov 2026 IST): indexable, kept out of the main nav. */}
+        <Route path="/diwali-2026" element={<Diwali2026 />} />
       </Route>
 
       <Route element={<ContentLayout />}>

@@ -18,6 +18,48 @@
           "value": "noindex, nofollow"
         }
       ]
+    },
+    {
+      "source": "/diwali-2026{/}?",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://*.google-analytics.com https://*.googletagmanager.com https://www.clarity.ms https://*.clarity.ms https://*.doubleclick.net https://connect.facebook.net https://*.google.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https:; font-src 'self' data:; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.clarity.ms https://*.doubleclick.net https://*.google.com https://www.facebook.com; frame-src https://www.googletagmanager.com https://*.doubleclick.net https://www.facebook.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=(), payment=()"
+        }
+      ]
+    },
+    {
+      "source": "/api/diwali-lead",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        },
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex"
+        }
+      ]
     }
   ],
   "redirects": [
@@ -1497,6 +1539,11 @@
       "statusCode": 301
     },
     {
+      "source": "/diwali{/}?",
+      "destination": "/diwali-2026/",
+      "statusCode": 301
+    },
+    {
       "source": "/p/india-9xajei",
       "destination": "/p/india-9xajei/",
       "statusCode": 308
@@ -1519,6 +1566,11 @@
     {
       "source": "/p/portfolio-6g3sak",
       "destination": "/p/portfolio-6g3sak/",
+      "statusCode": 308
+    },
+    {
+      "source": "/diwali-2026",
+      "destination": "/diwali-2026/",
       "statusCode": 308
     },
     {
@@ -2031,6 +2083,10 @@
     },
     {
       "source": "/p/portfolio-6g3sak/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/diwali-2026/",
       "destination": "/index.html"
     },
     {

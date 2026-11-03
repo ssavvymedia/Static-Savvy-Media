@@ -1093,6 +1093,29 @@ export const seoConfig = {
     },
   },
 
+  // Diwali 2026 campaign (3-9 Nov 2026 IST). Indexable, not in the main nav. No prices.
+  "/diwali-2026": {
+    title: "Diwali 2026 Offer: Free Growth Audit | Static Savvy Media",
+    slug: "diwali-2026",
+    seo: {
+      title: "Diwali 2026 Offer: Free Growth Audit | Static Savvy Media",
+      description:
+        "Light up your business this Deepavali. Claim a free Diwali Growth Audit plus free Google Business Profile optimisation setup from Static Savvy Media, Madurai. 3 to 9 Nov 2026.",
+      canonical: `${BASE_URL}/diwali-2026`,
+      focusKeyword: "Diwali offer digital marketing Madurai",
+      ogTitle: "Diwali 2026: Free Growth Audit + GBP setup | Static Savvy Media",
+      ogDescription:
+        "Light five diyas, unlock your Diwali gift: a free Growth Audit and free Google Business Profile optimisation setup. Enquire by 9 Nov 2026.",
+      ogImage: `${BASE_URL}/og/diwali-2026.jpg`,
+      schema: {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: "Static Savvy Media Diwali 2026 offer",
+      },
+      robots: "index,follow",
+    },
+  },
+
   // Utility Pages
   "/contact": {
     title:
