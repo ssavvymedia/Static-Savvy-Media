@@ -191,6 +191,10 @@ export default function AppRoutes() {
         <Route path="/locations/selangor" element={<CityLanding slug="selangor" />} />
         <Route path="/locations/singapore" element={<CityLanding slug="singapore" />} />
         <Route path="/locations/dubai" element={<CityLanding slug="dubai" />} />
+        <Route path="/locations/dindigul" element={<CityLanding slug="dindigul" />} />
+        <Route path="/locations/sivakasi" element={<CityLanding slug="sivakasi" />} />
+        <Route path="/locations/shah-alam" element={<CityLanding slug="shah-alam" />} />
+        <Route path="/locations/petaling-jaya" element={<CityLanding slug="petaling-jaya" />} />
         <Route path="/services/advertising-agency/madurai" element={<AdvertisingAgency_Madurai />} />
 
         <Route path="/industries" element={<Industries />} />
@@ -276,6 +280,7 @@ export default function AppRoutes() {
         <Route path="/blog/seo-cost-malaysia-price-guide" element={<StaticBlogPost />} />
         <Route path="/blog/affordable-seo-company-madurai-pricing" element={<StaticBlogPost />} />
         <Route path="/blog/how-long-does-seo-take-madurai" element={<StaticBlogPost />} />
+        <Route path="/blog/gbp-not-showing-on-google-maps-causes-fixes" element={<StaticBlogPost />} />
         <Route path="/blog/is-seo-worth-it-small-business-madurai" element={<StaticBlogPost />} />
         <Route path="/blog/rawang-local-seo-google-business-profile" element={<StaticBlogPost />} />
         <Route path="/blog/seo-services-selangor-shah-alam-petaling-jaya" element={<StaticBlogPost />} />

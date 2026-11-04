@@ -218,7 +218,16 @@ const routeFile = Object.fromEntries([...appRoutes.matchAll(/path="([^"]+)"\s+el
 const git = (args) => { try { return execFileSync('git', args, { cwd: ROOT, encoding: 'utf8' }).trim() } catch { return '' } }
 const today = new Date().toISOString().slice(0, 10)
 const lastmodCache = {}
+/* Data-driven pages share one component, so their own date fields win when set:
+ * city pages use `updated` (src/data/cityPages.js), hard-coded posts use `modified || published`. */
+const { cityPages } = await import('../../src/data/cityPages.js')
+const { newBlogPosts } = await import('../../src/data/newBlogPosts.js')
+const dataLastmod = Object.fromEntries([
+  ...cityPages.filter((c) => c.updated).map((c) => [`/locations/${c.slug}`, c.updated]),
+  ...newBlogPosts.filter((b) => b.modified || b.published).map((b) => [`/blog/${b.slug}`, b.modified || b.published]),
+])
 const routeLastmod = (p) => {
+  if (dataLastmod[p]) return dataLastmod[p]
   const f = routeFile[p]
   if (!f) return ''
   if (!(f in lastmodCache)) lastmodCache[f] = git(['status', '--porcelain', '--', f]) ? today : git(['log', '-1', '--format=%cs', '--', f])

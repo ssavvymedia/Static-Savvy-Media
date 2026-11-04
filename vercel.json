@@ -1784,6 +1784,26 @@
       "statusCode": 308
     },
     {
+      "source": "/locations/dindigul",
+      "destination": "/locations/dindigul/",
+      "statusCode": 308
+    },
+    {
+      "source": "/locations/sivakasi",
+      "destination": "/locations/sivakasi/",
+      "statusCode": 308
+    },
+    {
+      "source": "/locations/shah-alam",
+      "destination": "/locations/shah-alam/",
+      "statusCode": 308
+    },
+    {
+      "source": "/locations/petaling-jaya",
+      "destination": "/locations/petaling-jaya/",
+      "statusCode": 308
+    },
+    {
       "source": "/services/advertising-agency/madurai",
       "destination": "/services/advertising-agency/madurai/",
       "statusCode": 308
@@ -1951,6 +1971,11 @@
     {
       "source": "/blog/how-long-does-seo-take-madurai",
       "destination": "/blog/how-long-does-seo-take-madurai/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog/gbp-not-showing-on-google-maps-causes-fixes",
+      "destination": "/blog/gbp-not-showing-on-google-maps-causes-fixes/",
       "statusCode": 308
     },
     {
@@ -2258,6 +2283,22 @@
       "destination": "/index.html"
     },
     {
+      "source": "/locations/dindigul/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/locations/sivakasi/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/locations/shah-alam/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/locations/petaling-jaya/",
+      "destination": "/index.html"
+    },
+    {
       "source": "/services/advertising-agency/madurai/",
       "destination": "/index.html"
     },
@@ -2391,6 +2432,10 @@
     },
     {
       "source": "/blog/how-long-does-seo-take-madurai/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/gbp-not-showing-on-google-maps-causes-fixes/",
       "destination": "/index.html"
     },
     {

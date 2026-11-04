@@ -51,6 +51,8 @@ export const HOME_MARKETS = [
       { name: 'Tirunelveli', path: '/locations/tirunelveli/' },
       { name: 'Tiruppur', path: '/locations/tiruppur/' },
       { name: 'Thoothukudi', path: '/locations/thoothukudi/' },
+      { name: 'Dindigul', path: '/locations/dindigul/' },
+      { name: 'Sivakasi', path: '/locations/sivakasi/' },
     ],
   },
   {
@@ -64,6 +66,8 @@ export const HOME_MARKETS = [
     cities: [
       { name: 'Kuala Lumpur', path: '/locations/kuala-lumpur/' },
       { name: 'Selangor', path: '/locations/selangor/' },
+      { name: 'Shah Alam', path: '/locations/shah-alam/' },
+      { name: 'Petaling Jaya', path: '/locations/petaling-jaya/' },
     ],
   },
   {

@@ -175,6 +175,46 @@ const LOCATIONS = [
     path: '/locations/dubai/',
     icon: 'malaysia',
   },
+  {
+    number: '14',
+    name: 'Dindigul',
+    badge: 'Near Madurai HQ',
+    description:
+      'Google Maps clean-up for local trade, and product pages for Dindigul lock, leather and mill businesses selling to buyers in other states.',
+    services: ['GBP & local SEO', 'Product pages', 'Seasonal campaigns'],
+    path: '/locations/dindigul/',
+    icon: 'pin',
+  },
+  {
+    number: '15',
+    name: 'Sivakasi',
+    badge: 'Remote · Madurai HQ',
+    description:
+      'Catalogue websites and B2B search visibility for Sivakasi printers, packaging units and allied manufacturers, planned ahead of booking seasons.',
+    services: ['B2B websites', 'Product SEO', 'Policy-safe promotion'],
+    path: '/locations/sivakasi/',
+    icon: 'pin',
+  },
+  {
+    number: '16',
+    name: 'Shah Alam',
+    badge: 'Rawang office',
+    description:
+      'B2B pages for Shah Alam manufacturers and Maps work for neighbourhood clinics, workshops and F&B. Quotes in MYR.',
+    services: ['SEO & GBP', 'B2B lead pages', 'Bahasa Malaysia content'],
+    path: '/locations/shah-alam/',
+    icon: 'malaysia',
+  },
+  {
+    number: '17',
+    name: 'Petaling Jaya',
+    badge: 'Rawang office',
+    description:
+      'Neighbourhood map-pack, Google Ads and social media for PJ cafes, clinics, offices and home services. Quotes in MYR.',
+    services: ['GBP & local SEO', 'Google Ads', 'Social media'],
+    path: '/locations/petaling-jaya/',
+    icon: 'malaysia',
+  },
 ]
 
 const FAQS = [

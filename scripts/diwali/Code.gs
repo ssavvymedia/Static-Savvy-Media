@@ -3,11 +3,10 @@
  * "SSM Diwali 2026 Leads" sheet. The website never calls this directly: POST /api/diwali-lead (Vercel)
  * forwards each validated wish here with a shared secret, so the URL and secret stay server-side.
  *
- * NOT YET DEPLOYED (as of 3 Nov 2026 the live web app still runs v1, which keeps one row per phone and
- * answers DUPLICATE for a repeat sender; /api/diwali-lead handles both). To upgrade: open the sheet >
- * Extensions > Apps Script > replace Code.gs with this file > Deploy > Manage deployments > edit the
- * existing web app deployment > Version: New version > Deploy (the /exec URL stays the same, so no
- * Vercel change is needed). Then add headers I1:M1 below to the Leads tab.
+ * DEPLOYED as v2 (live web app runs this version; the /exec URL is unchanged from v1, so no Vercel
+ * change was needed). To ship a future change: open the sheet > Extensions > Apps Script > replace
+ * Code.gs > Deploy > Manage deployments > edit the existing web app deployment > Version: New version
+ * > Deploy. Leads tab headers I1:M1 are listed below.
  *
  * Columns: Timestamp IST | Name (sender) | Phone | Business (To: recipient) | Service | Source/UTM |
  *          User agent | Status (New / repeat) | Recipient | Firecracker | Language | Message | Wish ID

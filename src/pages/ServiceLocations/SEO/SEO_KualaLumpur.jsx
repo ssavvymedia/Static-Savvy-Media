@@ -24,7 +24,7 @@ const content = {
   intro: [
     'In short: Static Savvy Media is an SEO agency for Kuala Lumpur businesses. We provide SEO services in KL for small and mid-sized businesses. We fix technical issues, build English and Bahasa Malaysia pages around how KL customers search, align your Google Business Profile, and report on calls, WhatsApp chats and form enquiries every month, with no lock-in contract.',
     'Kuala Lumpur is one of the most competitive search markets in Southeast Asia. Your customers might search in English, Bahasa Malaysia or Chinese, on google.com.my, often from a phone and often with "near me" or a neighbourhood name attached. We build SEO that reflects how KL actually searches.',
-    'We work with Kuala Lumpur and Klang Valley businesses from our Malaysia office in Rawang, Selangor, just north of the city, with calls on a Malaysian number during Malaysian business hours. Strategy is led by our founder, Deepan Kanz. Page reviewed and updated 30 October 2026.',
+    'We work with Kuala Lumpur and Klang Valley businesses from our Malaysia office in Rawang, Selangor, just north of the city, with calls on a Malaysian number during Malaysian business hours. Strategy is led by our founder, Deepan Kanz. Page reviewed and updated 4 November 2026.',
   ],
   phone: { href: MALAYSIA_OFFICE.phoneHref, display: MALAYSIA_OFFICE.phoneDisplay },
   crumbs: [
@@ -134,6 +134,31 @@ const content = {
       ],
     },
     {
+      eyebrow: 'Google Maps in KL',
+      heading: 'Google Maps SEO in a Dense City: What Changes in KL',
+      subtitle: 'In KL, the map pack can change every few hundred metres. These are the issues we see most often on Klang Valley profiles.',
+      kind: 'cards',
+      items: [
+        { title: 'Proximity is tight', text: 'A searcher in Bangsar and one in Mont Kiara often see different map results for the same term. We record rankings from several points around each outlet instead of trusting one screenshot.' },
+        { title: 'Mall and tower addresses', text: 'Outlets inside malls or office towers often get a wrong pin or a missing unit number. Fixing the pin, unit and entrance photos is a common quick win.' },
+        { title: 'Multi-outlet brands', text: 'Each staffed outlet needs its own profile and its own location page on your site. Shared phone numbers and copied descriptions weaken all of them.' },
+        { title: 'Reviews in several languages', text: 'KL customers leave reviews in English, Bahasa Malaysia and Chinese. Replying in the reviewer’s language, politely and consistently, helps both customers and the profile.' },
+      ],
+      after: <>If your profile is missing from Maps altogether, read <Link to="/blog/gbp-not-showing-on-google-maps-causes-fixes/">GBP not showing on Google Maps: causes and fixes</Link>.</>,
+    },
+    {
+      eyebrow: 'What we report',
+      heading: 'What a Monthly KL SEO Report Shows',
+      kind: 'checks',
+      items: [
+        'Clicks, impressions and average position on google.com.my from your own Search Console, split by English and Bahasa Malaysia pages',
+        'Google Business Profile calls, direction requests and website clicks per outlet',
+        'Map-pack position checks from several points around each outlet, repeated the same way every month',
+        'Enquiries from forms, calls and WhatsApp where tracking is set up, and what we will work on next month',
+      ],
+      after: <>We publish only results clients allow us to share, and we never quote rankings we cannot show you in your own accounts.</>,
+    },
+    {
       eyebrow: 'Why us',
       heading: 'Why a Madurai-and-Rawang Agency for SEO in KL?',
       kind: 'checks',
@@ -154,6 +179,9 @@ const content = {
     { name: 'Local SEO Malaysia', path: '/services/local-seo/malaysia/' },
     { name: 'Google Business Profile optimisation in Malaysia', path: '/blog/google-business-profile-optimisation-malaysia/' },
     { name: 'Malaysia Office', path: '/locations/malaysia/' },
+    { name: 'Digital Marketing in Petaling Jaya', path: '/locations/petaling-jaya/' },
+    { name: 'Digital Marketing in Shah Alam', path: '/locations/shah-alam/' },
+    { name: 'Our headquarters in Madurai', path: '/locations/madurai/' },
   ],
   faqTitle: 'Frequently Asked Questions, SEO Services in Kuala Lumpur',
   quote: { region: 'malaysia', service: 'SEO in Kuala Lumpur' },
@@ -168,6 +196,8 @@ const content = {
     { question: 'Which is the best SEO company in Kuala Lumpur?', answer: 'The best SEO company for you is the one that shows real Search Console results, researches google.com.my in your customers\' languages, earns links rather than buying them, lets you keep ownership of every account, and works month to month. Use those checks to compare any KL agency, including us.' },
     { question: 'Do you offer SEO consulting in Kuala Lumpur?', answer: 'Yes. If you have an in-house team, we can run a one-off SEO audit and strategy session, then advise your team monthly instead of doing all the work ourselves.' },
     { question: 'Can you help my business show up for "SEO near me" style searches in KL?', answer: 'Yes. "Near me" searches are mostly decided by Google Maps, so we optimise your Google Business Profile, reviews routine and local citations alongside area pages on your website.' },
+    { question: 'Why does my KL business show on Google Maps in one area but not another?', answer: 'Distance from the searcher is one of Google’s main local ranking factors, and in a dense city like KL the results can change within a few hundred metres. We strengthen relevance and prominence (categories, content, reviews, citations) and build pages for the areas you genuinely serve.' },
+    { question: 'Do you also serve Petaling Jaya and Shah Alam?', answer: 'Yes. The same Rawang team serves the whole Klang Valley, including Petaling Jaya, Shah Alam, Subang Jaya and Klang.' },
     { question: 'How do I contact your Malaysia team?', answer: `Call ${MALAYSIA_OFFICE.phoneDisplay} (${MALAYSIA_OFFICE.hoursDisplay}) or WhatsApp ${MALAYSIA_OFFICE.whatsappDisplay}.` },
   ],
   cta: {

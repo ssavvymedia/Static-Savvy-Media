@@ -18,6 +18,8 @@ export const locationGroups = [
       { slug: 'tirunelveli', name: 'Tirunelveli', path: '/locations/tirunelveli/' },
       { slug: 'tiruppur', name: 'Tiruppur', path: '/locations/tiruppur/' },
       { slug: 'thoothukudi', name: 'Thoothukudi', path: '/locations/thoothukudi/' },
+      { slug: 'dindigul', name: 'Dindigul', path: '/locations/dindigul/' },
+      { slug: 'sivakasi', name: 'Sivakasi', path: '/locations/sivakasi/' },
     ],
   },
   {
@@ -26,6 +28,8 @@ export const locationGroups = [
     items: [
       { slug: 'kuala-lumpur', name: 'Kuala Lumpur', path: '/locations/kuala-lumpur/' },
       { slug: 'selangor', name: 'Selangor (Rawang office)', path: '/locations/selangor/' },
+      { slug: 'shah-alam', name: 'Shah Alam', path: '/locations/shah-alam/' },
+      { slug: 'petaling-jaya', name: 'Petaling Jaya', path: '/locations/petaling-jaya/' },
     ],
   },
   {

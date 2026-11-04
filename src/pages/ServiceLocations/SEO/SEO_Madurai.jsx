@@ -19,6 +19,9 @@ import {
   SITE_URL,
   GOOGLE_TRUST_LINE,
 } from '../../../utils/constants.js'
+import GoogleReviewsSection from '../../../components/sections/GoogleReviewsSection.jsx'
+import { pickReviews, GBP_REVIEW_SUMMARY } from '../../../data/googleReviews.js'
+import { GBP_MAPS } from '../../../data/sameAs.js'
 import '../../../styles/pages/seo-madurai.css'
 
 /* ============================================================
@@ -278,6 +281,9 @@ const RELATED_SERVICES = [
   { name: 'Website Design & Development', path: '/services/website-design-development/' },
   { name: 'Social Media Marketing Madurai', path: '/services/social-media-marketing/madurai/' },
   { name: 'AI Business Automation', path: '/services/ai-business-automation/' },
+  { name: 'Guide: GBP not showing on Google Maps', path: '/blog/gbp-not-showing-on-google-maps-causes-fixes/' },
+  { name: 'Guide: How long SEO takes in Madurai', path: '/blog/how-long-does-seo-take-madurai/' },
+  { name: 'Guide: Hiring for SEO in Madurai', path: '/blog/seo-agency-madurai-complete-guide/' },
 ]
 
 const LOCATION_PAGES = [
@@ -301,6 +307,45 @@ const LOCATION_PAGES = [
     path: '/services/seo/kuala-lumpur/',
     current: false,
   },
+]
+
+
+/* Added 4 Nov 2026: Google Maps depth for "seo services in madurai" (map-pack visibility). */
+const MAPS_FACTORS = [
+  {
+    number: '01',
+    title: 'Relevance: the right categories and services',
+    text: 'Google matches the search to your primary and secondary categories, services list and website content. A Madurai clinic listed only as "Doctor", or a textile wholesaler listed as "Store", often misses the searches it actually wants.',
+  },
+  {
+    number: '02',
+    title: 'Distance: where the searcher is standing',
+    text: 'A search on Kamarajar Salai and the same search in Anna Nagar or Mattuthavani can show different businesses. Nobody can control distance, so we strengthen the other two factors and build area pages for the parts of Madurai you genuinely serve.',
+  },
+  {
+    number: '03',
+    title: 'Prominence: reviews, links and mentions',
+    text: 'Steady, genuine reviews with replies, consistent name, address and phone across Indian directories, and local links (associations, suppliers, Madurai media) all add up. We never buy or write reviews.',
+  },
+  {
+    number: '04',
+    title: 'Website signals that back up the profile',
+    text: 'A fast mobile site with a page per service, the same NAP as the profile, LocalBusiness schema and Madurai-specific FAQs gives Google a reason to trust the listing.',
+  },
+]
+
+const RANK_DROP_CHECKS = [
+  'Profile edits or category changes that triggered a re-verification or a temporary drop',
+  'A new competitor with more recent reviews or a closer location to your target customers',
+  'Duplicate listings for the same business, or an old listing at a previous address',
+  'Inconsistent phone numbers or addresses across Justdial, IndiaMART and other directories',
+  'Website pages that no longer match the services and categories on the profile',
+  'Google algorithm and spam updates (we check dates against your Search Console and GBP insights)',
+]
+
+const MADURAI_AREAS = [
+  'Anna Nagar', 'K.K. Nagar', 'Kamarajar Salai', 'Simmakkal', 'Goripalayam', 'Tallakulam', 'Mattuthavani',
+  'Thirunagar', 'Bypass Road', 'Avaniyapuram', 'Thiruparankundram', 'Kalavasal', 'Sellur', 'Vilangudi',
 ]
 
 const FAQS = [
@@ -363,6 +408,26 @@ const FAQS = [
     question: 'Do you provide monthly SEO reporting?',
     answer:
       'Yes. Performance is measured using actual Google Search Console and GA4 data where tracking is available. Reports include organic clicks, impressions, average position, indexed pages and other relevant metrics.',
+  },
+  {
+    question: 'Why did my business drop on Google Maps in Madurai?',
+    answer:
+      'Map rankings move for several reasons: a new competitor nearby, fewer recent reviews than competitors, a profile edit that triggered re-verification, duplicate listings, or inconsistent details across directories. Rankings also differ by where the searcher is, so one check from one spot is not the full picture. We audit these causes and fix what is within Google’s guidelines.',
+  },
+  {
+    question: 'How do you check Google Maps rankings across Madurai?',
+    answer:
+      'We record rankings for your priority searches from several points across Madurai (for example the city centre, Anna Nagar and Mattuthavani) at the start, then repeat the same checks every month, alongside calls, direction requests and website clicks from your Google Business Profile insights.',
+  },
+  {
+    question: 'Do you need access to my Google Business Profile?',
+    answer:
+      'Yes, as a manager, not an owner. The profile stays in your name, and you can remove our access at any time. The same applies to Search Console and GA4.',
+  },
+  {
+    question: 'Can you help if my Google Business Profile is suspended or not showing?',
+    answer:
+      'Usually. We check verification status, guideline issues, duplicates and pin location, then prepare a reinstatement request with genuine documents if needed. Our guide on why a GBP is not showing on Google Maps lists the common causes and fixes.',
   },
 ]
 
@@ -455,7 +520,7 @@ export default function SEO_Madurai() {
                   Custom SEO quotes after a free review, no lock-in. <Link to="/contact/">Get a custom quote</Link>
                 </p>
                 <p className="seo-mdu-hero__trust">
-                  Reviewed by <Link to="/about/deepan-kanz/">Deepan Kanz</Link>, founder · Last updated 25 October 2026
+                  Reviewed by <Link to="/about/deepan-kanz/">Deepan Kanz</Link>, founder · Last updated 4 November 2026
                 </p>
               </ScrollReveal>
             </div>
@@ -847,6 +912,143 @@ export default function SEO_Madurai() {
           </div>
         </div>
       </section>
+
+      {/* ---- Google Maps ranking factors (added 4 Nov 2026) ---- */}
+      <section className="section seo-mdu-why-us-section" id="google-maps-madurai">
+        <div className="container">
+          <ScrollReveal>
+            <div className="section-heading section-heading--left">
+              <span className="section-heading__eyebrow">Google Maps</span>
+              <h2 className="section-heading__title">How Google Decides Who Shows on Maps in Madurai</h2>
+              <p className="section-heading__subtitle">
+                Google says local results are based mainly on relevance, distance and prominence. SEO
+                services in Madurai should work on all of them, together with your website.
+              </p>
+            </div>
+          </ScrollReveal>
+          <div className="seo-mdu-why-us-grid">
+            {MAPS_FACTORS.map((item, i) => (
+              <ScrollReveal key={item.number} delay={i * 80}>
+                <div className="seo-mdu-why-us-card glass-card">
+                  <span className="seo-mdu-why-us-card__number">{item.number}</span>
+                  <h3 className="seo-mdu-why-us-card__title">{item.title}</h3>
+                  <p className="seo-mdu-why-us-card__text">{item.text}</p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ---- Ranking drop checklist ---- */}
+      <section className="section seo-mdu-measurement-section">
+        <div className="container">
+          <ScrollReveal>
+            <div className="section-heading section-heading--left">
+              <span className="section-heading__eyebrow">Diagnosis</span>
+              <h2 className="section-heading__title">Dropped in the Madurai Map Results? What We Check First</h2>
+              <p className="section-heading__subtitle">
+                A slide of a few positions is common and usually has a findable cause. This is the order we
+                check things in before changing anything on your profile.
+              </p>
+            </div>
+          </ScrollReveal>
+          <div className="seo-mdu-measurement-grid">
+            {RANK_DROP_CHECKS.map((item, i) => (
+              <ScrollReveal key={item} delay={i * 60}>
+                <div className="seo-mdu-measurement-item glass-card">
+                  <span className="seo-mdu-measurement-item__check" aria-hidden="true">✓</span>
+                  <p className="seo-mdu-measurement-item__text">{item}</p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+          <p style={{ marginTop: 'var(--space-md)' }}>
+            Profile not showing at all? Read{' '}
+            <Link to="/blog/gbp-not-showing-on-google-maps-causes-fixes/">GBP not showing on Google Maps: causes and fixes</Link>,
+            or see our <Link to="/services/local-seo/madurai/">local SEO and Google Business Profile service in Madurai</Link>.
+          </p>
+        </div>
+      </section>
+
+      {/* ---- Areas ---- */}
+      <section className="section">
+        <div className="container">
+          <ScrollReveal>
+            <div className="section-heading section-heading--left">
+              <span className="section-heading__eyebrow">Areas</span>
+              <h2 className="section-heading__title">SEO for Every Part of Madurai</h2>
+              <p className="section-heading__subtitle">
+                We work from our head office on Kamarajar Salai and plan pages and service areas only for the
+                localities a business really serves. Areas we regularly plan for include:
+              </p>
+            </div>
+          </ScrollReveal>
+          <ul className="seo-mdu-related-links" aria-label="Madurai localities">
+            {MADURAI_AREAS.map((a) => (
+              <li key={a} className="seo-mdu-related-link" style={{ listStyle: 'none' }}>{a}</li>
+            ))}
+          </ul>
+          <p style={{ marginTop: 'var(--space-md)' }}>
+            Our Madurai head office also supports businesses in nearby{' '}
+            <Link to="/locations/dindigul/">Dindigul</Link>, <Link to="/locations/sivakasi/">Sivakasi</Link>,{' '}
+            <Link to="/locations/tirunelveli/">Tirunelveli</Link> and <Link to="/locations/thoothukudi/">Thoothukudi</Link>.
+            See all <Link to="/locations/madurai/">digital marketing services at our Madurai HQ</Link>.
+          </p>
+        </div>
+      </section>
+
+      {/* ---- Checked local proof (facts only, each with its source and date) ---- */}
+      <section className="section seo-mdu-measurement-section" id="local-proof">
+        <div className="container">
+          <ScrollReveal>
+            <div className="section-heading section-heading--left">
+              <span className="section-heading__eyebrow">Checked local proof</span>
+              <h2 className="section-heading__title">What You Can Verify About Us in Madurai</h2>
+              <p className="section-heading__subtitle">
+                Only facts you can check yourself, with the source and the date we checked. No invented
+                results, no ranking promises.
+              </p>
+            </div>
+          </ScrollReveal>
+          <div className="seo-mdu-measurement-grid">
+            <div className="seo-mdu-measurement-item glass-card">
+              <span className="seo-mdu-measurement-item__check" aria-hidden="true">✓</span>
+              <p className="seo-mdu-measurement-item__text">
+                Rated {GBP_REVIEW_SUMMARY.rating}★ from {GBP_REVIEW_SUMMARY.count} reviews on our Madurai Google Business
+                Profile (copied 28 Oct 2026). <a href={GBP_MAPS.madurai} target="_blank" rel="noopener noreferrer">Read them on Google</a>.
+              </p>
+            </div>
+            <div className="seo-mdu-measurement-item glass-card">
+              <span className="seo-mdu-measurement-item__check" aria-hidden="true">✓</span>
+              <p className="seo-mdu-measurement-item__text">
+                Head office: 2nd Floor, 4/3, Srinivasa Perumal Koil St, Kamarajar Salai, Madurai 625009. Founded 1 October 2021
+                by <Link to="/about/deepan-kanz/">Deepan Kanz</Link>.
+              </p>
+            </div>
+            <div className="seo-mdu-measurement-item glass-card">
+              <span className="seo-mdu-measurement-item__check" aria-hidden="true">✓</span>
+              <p className="seo-mdu-measurement-item__text">
+                Our own site averaged position 9.6 on Google for “digital marketing company in madurai” (Google Search
+                Console, 28 Apr–26 Oct 2026).
+              </p>
+            </div>
+            <div className="seo-mdu-measurement-item glass-card">
+              <span className="seo-mdu-measurement-item__check" aria-hidden="true">✓</span>
+              <p className="seo-mdu-measurement-item__text">
+                Client results are shown only with the client’s permission. On a call we share anonymised Search Console
+                and Google Business Profile reports; see the <Link to="/case-studies/">case studies</Link> for the format.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <GoogleReviewsSection
+        reviews={pickReviews(0, 3)}
+        title="What Madurai clients say on Google"
+        subtitle="Copied word for word from our Madurai Google Business Profile. Read every review, unedited, on Google."
+      />
 
       {/* ---- Related Services ---- */}
       <section className="section seo-mdu-related-section">
