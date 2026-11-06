@@ -13,17 +13,20 @@ import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, SITE_URL } from '../../utils/constan
    CONTENT, Approved Static Savvy Media SEO Agency Guide
    ============================================================ */
 
-const PAGE_TITLE = 'How to Choose an SEO Agency in Madurai, Complete 2026 Guide'
+const PAGE_TITLE = 'How to Choose an SEO Agency in Madurai (2026 Checklist)'
 
 const PAGE_DESCRIPTION =
-  'Learn how to choose an SEO agency in Madurai, what a good agency should deliver, red flags to avoid, what SEO costs, what questions to ask, and why GEO & AEO matter in 2026.'
+  'How to choose an SEO agency in Madurai: what good SEO work includes, red flags, questions to ask, typical Madurai market cost ranges, local SEO vs website SEO, and how GEO & AEO fit in 2026.'
 
 const AUTHOR = 'Deepan Kanz'
 const AUTHOR_ROLE = 'Founder & AI Search Specialist'
 const READING_TIME = 'Approx. 8–10 min read'
 
 const INTRODUCTION =
-  'The Madurai digital marketing landscape has changed dramatically. There are more agencies, more SEO claims, more packages, and more confusion. This guide helps businesses understand what a capable SEO agency should actually deliver, what warning signs to look for, what questions to ask, and how SEO is changing with GEO and AEO.'
+  'Madurai has more SEO and digital marketing agencies than ever — and more conflicting claims. This guide shows business owners how to choose an SEO agency in Madurai using deliverables, red flags, questions to ask, typical market cost ranges, and a practical 90-day roadmap. It also covers local SEO (Google Business Profile / Maps) versus website SEO, and how GEO and AEO fit modern search in 2026.'
+
+const QUICK_ANSWER =
+  'To choose an SEO agency in Madurai, shortlist providers that show a written technical audit process, Google Search Console–based reporting, clear monthly deliverables, and no guaranteed #1 rankings. Prefer agencies that explain local SEO (Google Business Profile and Maps) separately from website SEO, that let you own your accounts, and that can describe how they measure AI-search (GEO/AEO) visibility without promising ChatGPT placements. Typical Madurai market ranges we checked in late 2026 run about ₹8,000–₹40,000 per month depending on scope — then compare written proposals, not slogans.'
 
 const DELIVER_CARDS = [
   {
@@ -100,6 +103,16 @@ const RED_FLAGS = [
     title: 'Vanity Metrics Only',
     text: 'Followers, impressions without context, traffic without conversion context, and keyword counts without business relevance tell an incomplete story.',
   },
+  {
+    number: '08',
+    title: 'Hidden Fees After a Low Headline Price',
+    text: 'A low monthly number that later adds separate charges for content, technical work, reporting tools or "premium" keywords is a common complaint on Indian SEO forums. Ask for a written breakdown of what is included every month before you sign.',
+  },
+  {
+    number: '09',
+    title: 'GEO Sold as a Completely Different Magic Product',
+    text: 'GEO and AEO matter, but treating them as a secret discipline unrelated to solid SEO is a sales pattern Reddit marketers flag. Ask how the agency measures AI citations and entity signals on your site — not for a ChatGPT ranking guarantee.',
+  },
 ]
 
 const QUESTIONS = [
@@ -137,6 +150,16 @@ const QUESTIONS = [
     number: '07',
     question: 'What happens during the first 90 days?',
     answer: 'The agency should have clear early-stage priorities: audit, baseline, technical fixes, and initial optimisations.',
+  },
+  {
+    number: '08',
+    question: 'Who owns the Google Business Profile, Search Console and ad accounts?',
+    answer: 'Your business should own every core account. The agency gets access. If the agency insists on owning the profile or domain, walk away.',
+  },
+  {
+    number: '09',
+    question: 'How do you separate local SEO (Maps) from website SEO?',
+    answer: 'For Madurai businesses, Maps and Google Business Profile work often drives calls first. Website SEO builds broader organic demand. A clear plan should say what happens on each track each month.',
   },
 ]
 
@@ -232,31 +255,53 @@ const CHECKLIST = [
 const FAQS = [
   {
     question: 'How do I choose the best SEO agency in Madurai?',
-    answer: 'There is no universally "best" agency. Choose based on relevant experience, technical competence, transparent reporting, clear strategy, business understanding, communication, and measurable outcomes.',
+    answer: 'There is no single best agency for every business. Shortlist two or three whose core work matches your goal (Maps leads vs website SEO vs ads), read recent Google reviews, ask for a written monthly deliverables list, and compare Search Console–based reporting — not ranking guarantees.',
+  },
+  {
+    question: 'What should an SEO company in Madurai deliver each month?',
+    answer: 'At minimum: progress against a written plan, technical or on-page work completed, content or Google Business Profile activity as scoped, and a report that ties Search Console impressions, clicks and queries to enquiries or calls. Vanity keyword counts alone are not enough.',
   },
   {
     question: 'How much does SEO cost in Madurai?',
-    answer: 'Indicative range: ₹8,000–₹40,000+ per month depending on scope and competition. Pricing varies based on website size, competition, industry, number of target locations, technical complexity, content requirements, and reporting needs.',
+    answer: 'When we checked published Madurai SEO packages in late October 2026, typical market ranges ran about ₹8,000–₹40,000+ per month depending on scope and competition. These are market rates, not Static Savvy Media prices — we quote after a free review. Compare what is included (GBP posts, pages, technical work, reporting) more than the headline number.',
   },
   {
-    question: 'How long does SEO take to work?',
-    answer: 'SEO is cumulative and timelines vary by website, competition, authority, industry, and implementation speed. Avoid agencies that guarantee specific timelines. Discuss factors such as competition, website authority, technical health, content quality, and search demand.',
+    question: 'How long does SEO take to work in Madurai?',
+    answer: 'Timelines vary by competition, site health and how fast fixes ship. Many local businesses see early Maps and query movement within a few months when Google Business Profile and technical issues are fixed; competitive head terms take longer. Avoid anyone who guarantees page 1 in a fixed number of days.',
   },
   {
     question: 'Should I choose an SEO agency that guarantees #1 rankings?',
-    answer: 'No. Specific ranking guarantees are unreliable. A professional agency should focus on process, visibility, qualified traffic, conversions, and long-term search performance.',
+    answer: 'No. Nobody controls Google. Treat #1 guarantees as a red flag. Ask for process, baselines, Search Console access and conversion tracking instead.',
   },
   {
-    question: 'Does Static Savvy Media offer GEO and AEO?',
-    answer: 'Yes. GEO and AEO are part of Static Savvy Media\'s modern search visibility offering, covering AI search, Google AI Overviews, ChatGPT, Perplexity, and answer engines.',
+    question: 'Is local SEO different from website SEO for a Madurai business?',
+    answer: 'Yes. Local SEO focuses on Google Business Profile, Maps pack visibility, reviews and local citations. Website SEO focuses on pages, technical health, content and links. Most Madurai service businesses need both; your proposal should say what happens on each track.',
+  },
+  {
+    question: 'Should I hire an SEO agency or a freelancer?',
+    answer: 'A specialist freelancer can work well for a narrow scope if they show relevant proof and you stay involved. An agency usually covers technical, content, local and reporting under one process. Choose based on who will actually do the work, how they report, and whether you keep ownership of accounts — not the logo size.',
+  },
+  {
+    question: 'How should an agency measure AI search / GEO visibility?',
+    answer: 'Ask how they track brand mentions or citations in AI answers, how they strengthen entity and topical signals on your site, and what success looks like beyond traffic. Be cautious of anyone who guarantees ChatGPT or AI Overview placements.',
+  },
+  {
+    question: 'Who should own my Google Business Profile and website accounts?',
+    answer: 'You should. The agency needs editor or manager access. Keep the domain, Search Console, Analytics, Business Profile and ad accounts in your business name.',
+  },
+  {
+    question: 'Does Static Savvy Media offer GEO and AEO with SEO in Madurai?',
+    answer: 'Yes. Our Madurai HQ team runs website SEO and local SEO alongside GEO and AEO so content is easier for Google AI Overviews, ChatGPT and Perplexity to understand and cite. See our SEO services in Madurai page for the service scope, then request a free review.',
   },
 ]
 
 const TOC_ITEMS = [
+  { id: 'quick-answer', label: 'Quick Answer' },
   { id: 'what-agency-delivers', label: 'What a Good SEO Agency Delivers' },
   { id: 'red-flags', label: 'Red Flags' },
   { id: 'questions-to-ask', label: 'Questions to Ask' },
   { id: 'seo-cost', label: 'SEO Cost in Madurai' },
+  { id: 'local-vs-website', label: 'Local SEO vs Website SEO' },
   { id: 'first-90-days', label: 'First 90 Days' },
   { id: 'geo-aeo', label: 'GEO & AEO' },
   { id: 'comparing-agencies', label: 'Comparing Agencies' },
@@ -298,6 +343,8 @@ export default function SEO() {
       },
       url: `${SITE_URL}/blog/seo-agency-madurai-complete-guide/`,
       mainEntityOfPage: `${SITE_URL}/blog/seo-agency-madurai-complete-guide/`,
+      datePublished: '2026-08-15',
+      dateModified: '2026-11-06',
     })
 
     const breadcrumbs = breadcrumbListSchema({
@@ -356,7 +403,7 @@ export default function SEO() {
               <span className="seo-guide-hero__badge">SEO GUIDE</span>
               <h1 className="hero__title">
                 How to Choose an SEO Agency in Madurai{' '}
-                <span className="text-gradient">,  Complete 2026 Guide</span>
+                <span className="text-gradient">— 2026 Checklist</span>
               </h1>
               <div className="seo-guide-hero__meta">
                 <span className="seo-guide-hero__meta-item">
@@ -398,11 +445,21 @@ export default function SEO() {
           <div className="seo-guide-article">
             <div className="seo-guide-article__body">
 
+              {/* ---- Quick answer (AEO) ---- */}
+              <h2 id="quick-answer">How to Choose an SEO Agency in Madurai — Short Answer</h2>
+              <div className="seo-guide-intro glass-card" style={{ padding: '1.25rem 1.5rem', marginBottom: '1.5rem' }}>
+                <p>{QUICK_ANSWER}</p>
+                <p style={{ marginTop: '0.75rem', marginBottom: 0 }}>
+                  Next: use the deliverables list, red flags and checklist below, then compare written proposals. For Madurai SEO execution details, see our{' '}
+                  <Link to="/services/seo/madurai/">SEO services in Madurai</Link> (HQ) page.
+                </p>
+              </div>
+
               {/* ---- Introduction ---- */}
               <div className="seo-guide-intro">
                 <p>The Madurai digital marketing landscape has changed dramatically. More agencies, more claims, more confusion. This guide cuts through it.</p>
                 <p>Businesses in Madurai now have many choices when selecting an SEO agency. The problem is not finding an agency. The problem is identifying whether the agency actually understands SEO, can explain its methodology, uses measurable data, understands technical SEO, understands search intent, can demonstrate reporting, understands local search, understands modern AI search, and understands GEO and AEO.</p>
-                <p>A business should evaluate an SEO agency based on process, transparency, technical competence, reporting, and business outcomes rather than promises alone.</p>
+                <p>Evaluate an SEO agency on process, transparency, technical competence, reporting and business outcomes — not promises alone. Prefer providers that link local Maps work to a clear website SEO plan and that keep Madurai (your market) as the priority, not a generic India package.</p>
               </div>
 
               {/* ---- Section 01: What Does a Good SEO Agency Deliver ---- */}
@@ -476,7 +533,8 @@ export default function SEO() {
               {/* ---- Section 04: SEO Cost ---- */}
               <h2 id="seo-cost">What Does SEO Cost in Madurai?</h2>
               <p>
-                An indicative pricing range for SEO in Madurai is approximately <strong>₹8,000–₹40,000 per month</strong> depending on scope. Pricing depends on website size, competition, industry, number of target locations, number of pages, technical complexity, content requirements, link acquisition, local SEO requirements, GEO/AEO requirements, and reporting requirements.
+                When we checked published Madurai SEO packages on 28 October 2026, an indicative market range was approximately <strong>₹8,000–₹40,000 per month</strong> depending on scope. These are general market ranges, not Static Savvy Media prices. Pricing depends on website size, competition, industry, number of target locations, technical complexity, content needs, local SEO / GEO-AEO scope and reporting. See our{' '}
+                <Link to="/blog/affordable-seo-company-madurai-pricing/">affordable SEO company in Madurai pricing guide</Link> for what tends to be included at each level.
               </p>
 
               <div className="seo-guide-pricing-grid">
@@ -496,6 +554,21 @@ export default function SEO() {
                   <p>Be cautious with sub-₹5,000 SEO packages when the scope promises technical SEO, content, backlinks, reporting, local SEO and continuous optimisation. At that price, the scope may be too limited to support meaningful work.</p>
                 </div>
               </ScrollReveal>
+
+              {/* ---- Local SEO vs website SEO ---- */}
+              <h2 id="local-vs-website">Local SEO vs Website SEO for Madurai Businesses</h2>
+              <p>
+                Many Madurai owners search for an &ldquo;SEO company&rdquo; when they mainly need more Google Maps calls. Others need category pages that rank beyond the city. Ask every agency to split the plan:
+              </p>
+              <ul>
+                <li><strong>Local SEO / Google Business Profile:</strong> categories, services, photos, posts, review replies, NAP consistency and Maps-pack tracking for Madurai (and Thoothukudi or other branches if you have them).</li>
+                <li><strong>Website SEO:</strong> technical health, on-page work, service and location pages, internal links, content that answers real search questions, and Search Console monitoring.</li>
+              </ul>
+              <p>
+                Static Savvy Media&rsquo;s Madurai HQ pages are built as the deepest hub for Tamil Nadu work — start from{' '}
+                <Link to="/services/seo/madurai/">SEO in Madurai</Link> and{' '}
+                <Link to="/services/local-seo/madurai/">Local SEO in Madurai</Link>, then branch to other cities only when needed.
+              </p>
 
               {/* ---- Section 05: First 90 Days ---- */}
               <h2 id="first-90-days">What Should You Expect in the First 90 Days?</h2>
@@ -578,7 +651,10 @@ export default function SEO() {
               {/* ---- Section 08: Why Static Savvy Media ---- */}
               <h2 id="why-ssm">What Makes Static Savvy Media Different?</h2>
               <p>
-                Static Savvy Media is a Madurai-based digital marketing agency with GEO and AEO as a core specialization. We combine traditional SEO with modern AI search visibility.
+                Static Savvy Media is headquartered in Madurai (Kamarajar Salai) with additional offices in Thoothukudi and Rawang, Malaysia. GEO and AEO sit alongside traditional SEO and local SEO — not as a bolt-on slogan. We quote after a free review, keep plans monthly with no lock-in sales pitch, and keep your accounts in your name. Explore{' '}
+                <Link to="/services/seo/madurai/">SEO services from our Madurai HQ</Link>,{' '}
+                <Link to="/locations/madurai/">the Madurai agency page</Link>, or the{' '}
+                <Link to="/blog/affordable-seo-company-madurai-pricing/">Madurai SEO cost guide</Link> for market ranges and plan shapes.
               </p>
 
               <div className="seo-guide-services-grid">

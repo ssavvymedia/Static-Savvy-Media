@@ -1359,28 +1359,30 @@ export const seoConfig = {
   },
   "/blog/seo-agency-madurai-complete-guide": {
     title:
-      "Hiring for SEO in Madurai? 2026 Checklist, Red Flags & Questions to Ask",
+      "How to Choose an SEO Agency in Madurai (2026 Checklist)",
     slug: "blog/seo-agency-madurai-complete-guide",
     seo: {
       title:
-        "Hiring for SEO in Madurai? 2026 Checklist, Red Flags & Questions to Ask",
+        "How to Choose an SEO Agency in Madurai (2026 Checklist)",
       description:
-        "A buyer’s checklist for Madurai business owners comparing SEO providers: what good SEO work includes, red flags, questions to ask, typical costs and GEO/AEO.",
-      canonical: `${BASE_URL}/blog/seo-agency-madurai-complete-guide`,
-      focusKeyword: "how to choose an SEO provider in Madurai",
+        "How to choose an SEO agency in Madurai: deliverables, red flags, questions to ask, typical market cost ranges, local SEO vs website SEO, and GEO & AEO in 2026.",
+      canonical: `${BASE_URL}/blog/seo-agency-madurai-complete-guide/`,
+      focusKeyword: "seo agency in madurai",
       ogTitle:
-        "Hiring for SEO in Madurai? 2026 Checklist, Red Flags & Questions to Ask",
+        "How to Choose an SEO Agency in Madurai (2026 Checklist)",
       ogDescription:
-        "A buyer’s checklist for Madurai business owners comparing SEO providers.",
+        "Madurai buyer checklist: what good SEO includes, red flags, cost ranges, local vs website SEO, and GEO/AEO questions to ask.",
       ogImage: `${BASE_URL}/og/blog/seo-agency-madurai-complete-guide.jpg`,
       schema: {
         "@context": "https://schema.org",
         "@type": "Article",
-        headline: "Hiring for SEO in Madurai? The 2026 Buyer’s Checklist",
+        headline: "How to Choose an SEO Agency in Madurai (2026 Checklist)",
+        dateModified: "2026-11-06",
       },
       robots: "index,follow",
     },
   },
+
   "/blog/digital-marketing-malaysia-sme-grant-guide": {
     title:
       "Digital Marketing Malaysia: SME Grant Eligibility & Strategy Guide | Static Savvy Media Blog",
