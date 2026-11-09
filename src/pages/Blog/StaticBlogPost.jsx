@@ -103,7 +103,7 @@ export default function StaticBlogPost() {
             <p className="blog-post-header__description"><Rich text={post.intro} /></p>
             {post.disclosure && <p className="blog-post-disclosure"><strong>Disclosure:</strong> {post.disclosure}</p>}
             <div className="blog-post-header__meta">
-              <span className="blog-post-header__meta-item">Deepan Kanz, Static Savvy Media</span>
+              <span className="blog-post-header__meta-item"><Link to="/about/deepan-kanz/">Deepan Kanz</Link>, Static Savvy Media</span>
               <span className="blog-post-header__meta-item">{post.publishedLabel || '24 October 2026'}</span>
               <span className="blog-post-header__meta-item">{post.locationLabel || (myRegion ? 'Rawang, Selangor, Malaysia' : 'Madurai, Tamil Nadu (HQ)')}</span>
             </div>

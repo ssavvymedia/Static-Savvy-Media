@@ -284,6 +284,282 @@ export const newBlogPosts = [
   },
   /* ============================== MALAYSIA ============================== */
   {
+    "slug": "small-business-marketing-company-malaysia",
+    "region": "malaysia",
+    "category": "Malaysia",
+    "published": "2026-11-09",
+    "publishedLabel": "9 November 2026",
+    "title": "Small Business Marketing Company in Malaysia: 90-Day Guide | Static Savvy Media",
+    "h1": "Hiring a Small Business Marketing Company in Malaysia: What to Expect in the First 90 Days",
+    "description": "What a small business marketing company in Malaysia should do in the first 90 days: Google profile, website, WhatsApp, bilingual SEO and honest reports.",
+    "imageAlt": "Small business marketing company in Malaysia: a 90-day plan for SMEs in Kuala Lumpur, Selangor and Rawang, Static Savvy Media",
+    "intro": "Short answer: a good small business marketing company in Malaysia starts by fixing what customers see first: your Google Business Profile, your website on a phone and how fast you reply on WhatsApp. It then builds search visibility in English and Bahasa Malaysia and reports results from accounts you own. In the first 90 days, expect an audit, a short written plan, the foundations fixed and early signals such as more profile views and enquiries. Do not expect guaranteed rankings or instant sales. Written by [Deepan Kanz](/about/deepan-kanz/), founder of Static Savvy Media, with our Malaysia team in Rawang, Selangor.",
+    "body": [
+      {
+        "h2": "What digital marketing services does a small business actually need?",
+        "id": "services",
+        "p": [
+          "Most SMEs in the Klang Valley and beyond do not need every channel at once. They need the few that match how their customers buy. Start with the free or low-cost basics, prove they bring enquiries, then add paid channels."
+        ],
+        "table": {
+          "caption": "Digital marketing services for small businesses in Malaysia: what each is for",
+          "head": [
+            "Service",
+            "Best for",
+            "Start here if"
+          ],
+          "rows": [
+            [
+              "[Google Business Profile and local SEO](/services/local-seo/malaysia/)",
+              "Clinics, workshops, F&B outlets, tuition centres, home services",
+              "Customers find you on Google Maps or search \"near me\""
+            ],
+            [
+              "[Website SEO](/services/seo/malaysia/)",
+              "B2B suppliers, property and renovation firms, professional services",
+              "Customers compare options on Google before calling"
+            ],
+            [
+              "Social media (Facebook, Instagram, TikTok, LinkedIn)",
+              "Consumer brands, F&B, beauty, events; LinkedIn for B2B",
+              "Your product sells on looks, offers or community"
+            ],
+            [
+              "[WhatsApp and automation](/services/ai-business-automation/malaysia/)",
+              "Any business where enquiries end on WhatsApp",
+              "Leads go cold because replies are slow"
+            ],
+            [
+              "Google Ads and Meta ads",
+              "Launches, promotions, urgent high-intent services",
+              "The basics are fixed and you can track enquiries"
+            ],
+            [
+              "AI search visibility (GEO/AEO)",
+              "Businesses people ask ChatGPT, Gemini or AI Overviews about",
+              "Your service pages and FAQs are thin or unclear"
+            ]
+          ],
+          "note": "A small business marketing company should help you choose, not sell you everything."
+        }
+      },
+      {
+        "h2": "The first 90 days: a realistic plan",
+        "id": "90-day-plan",
+        "h3": [
+          {
+            "t": "Days 1 to 30: audit and foundations",
+            "p": "Review your Google Business Profile (categories, hours, photos, services, reviews, map pin). Test the website on a phone: speed, clarity, WhatsApp and call buttons, forms and a privacy notice for personal data you collect under Malaysia's Personal Data Protection Act (PDPA). Check that your business name, address and phone are identical on Google, Facebook and Malaysian directories. Set up or verify Google Search Console and Google Analytics in your company's name, with enquiry tracking. Agree goals in plain terms, such as more calls from Rawang and Selayang or more quote requests from Shah Alam."
+          },
+          {
+            "t": "Days 31 to 60: build",
+            "p": "Write or improve one page per main service, in English and Bahasa Malaysia where your customers use both (written separately, not machine-translated). Start a steady posting rhythm on your Google profile and main social channel. Ask every customer for an honest review, with no incentives. Add an FAQ answering the questions your team hears most, which also gives AI assistants clear answers to quote."
+          },
+          {
+            "t": "Days 61 to 90: measure and adjust",
+            "p": "Compare profile views, calls, website clicks and enquiries with the starting point. Check which searches you now appear for in Search Console and focus on those close to page one. Drop what is not working and put more effort where enquiries actually came from. By day 90 you should see movement in the signals you can measure and have a written plan for the next quarter."
+          }
+        ]
+      },
+      {
+        "h2": "Who should actually do the work?",
+        "id": "who-does-the-work",
+        "p": [
+          "The person who pitches is often not the person who does the work. Before you sign, ask who will handle your account week to week, whether you can meet them, how many other accounts they carry, what is done in-house and what is outsourced, and who checks the Bahasa Malaysia or Chinese copy. A short, honest answer here tells you more than a polished proposal."
+        ]
+      },
+      {
+        "h2": "Questions to ask before you sign",
+        "id": "questions",
+        "table": {
+          "caption": "Questions to ask a small business marketing company in Malaysia",
+          "head": [
+            "Question",
+            "Good answer",
+            "Warning sign"
+          ],
+          "rows": [
+            [
+              "Who owns the accounts?",
+              "Your business owns the Google profile, website, domain, Search Console and ad accounts",
+              "The agency keeps ownership"
+            ],
+            [
+              "How do you report?",
+              "Monthly, from your own Search Console and analytics, with enquiries tracked",
+              "Screenshots of rankings only"
+            ],
+            [
+              "What happens in month one?",
+              "An audit and a written plan with priorities",
+              "Straight into posting with no review"
+            ],
+            [
+              "Can you guarantee page one?",
+              "No, but here is what we will do and how we will measure it",
+              "Yes, guaranteed"
+            ],
+            [
+              "Which languages do you write in?",
+              "English and Bahasa Malaysia, planned per page",
+              "Machine translation of English pages"
+            ],
+            [
+              "Is ad spend separate from the fee?",
+              "Yes, ad spend is paid to Google or Meta and shown separately",
+              "One combined number"
+            ],
+            [
+              "Is there a lock-in?",
+              "A clear minimum term and notice period",
+              "Long contracts with auto-renewal and no exit"
+            ]
+          ]
+        },
+        "after": [
+          "For a longer checklist, read our [Malaysian SME buyer's checklist for digital marketing agencies](/blog/how-to-choose-digital-marketing-agency-malaysia/)."
+        ]
+      },
+      {
+        "h2": "What you should get back if you leave",
+        "id": "exit",
+        "p": [
+          "A fair agreement says what happens on the last day. You should keep your domain, website files, content and images you paid for, and admin access to your Google Business Profile, Search Console, Analytics, Meta Business and Google Ads accounts. The agency should remove its own access only after handover, and delete or return customer data it holds, in line with the PDPA. Ask for this in writing before you start, not when you want to leave."
+        ]
+      },
+      {
+        "h2": "How to compare costs without being misled",
+        "id": "cost",
+        "p": [
+          "Prices depend on the number of channels, languages and locations. Monthly retainers are common for SEO and social media, while websites are usually quoted per project. Headline prices are only comparable when the scope is the same, so check:"
+        ],
+        "list": [
+          "Minimum term: month-to-month, or a fixed 6 or 12 months?",
+          "Setup fee: included, or charged separately?",
+          "What one month buys: how many pages optimised, articles written, and keywords or AI prompts tracked",
+          "Ad spend: is the price for management only, with ad spend paid to Google or Meta on top?",
+          "Reporting: from your own Google accounts, or screenshots from the agency's tools?"
+        ],
+        "after": [
+          "For typical market ranges, see our [SEO cost in Malaysia guide](/blog/seo-cost-malaysia-price-guide/). If you are looking at government digitalisation support, read our [SME grant guide](/blog/digital-marketing-malaysia-sme-grant-guide/) and check eligibility with the official programme before you budget around it. For a written quote in MYR for your business, WhatsApp our Malaysia line +60 12-453 7030."
+        ]
+      },
+      {
+        "h2": "Where small businesses waste money",
+        "id": "waste",
+        "list": [
+          "Chasing followers instead of enquiries. Likes are easy to buy and hard to bank.",
+          "One website page for everything. Google and AI tools cannot match a vague page to specific searches.",
+          "Ignoring Google reviews. In local searches, reviews influence both ranking and the customer's choice.",
+          "Paying for ads before fixing the basics. If your website hides the WhatsApp button, ads only send more people to a page that loses them.",
+          "Fake or incentivised reviews. They break Google's rules and can get a profile restricted."
+        ]
+      },
+      {
+        "h2": "Local search outside central KL: Rawang, Selayang, Kepong, Sungai Buloh",
+        "id": "klang-valley",
+        "p": [
+          "A business in Rawang, Selayang, Kepong, Sungai Buloh or Kuang competes for different searches than a firm in Bangsar or KLCC. Customers search \"near me\" or add the town name, and Google Maps favours businesses close to the searcher. For these SMEs the first 90 days usually focus on:"
+        ],
+        "list": [
+          "a complete Google Business Profile with the right primary category and a service area that matches where you actually go",
+          "one website page for each main service, naming the towns you serve",
+          "reviews requested from every customer, in English, Bahasa Malaysia or Chinese as the customer prefers",
+          "consistent listings on the directories Malaysian buyers and AI assistants read"
+        ],
+        "after": [
+          "See our guides to [local SEO in Rawang](/blog/rawang-local-seo-google-business-profile/) and [SEO in Selangor](/blog/seo-services-selangor-shah-alam-petaling-jaya/), or our [Selangor page](/locations/selangor/)."
+        ]
+      },
+      {
+        "h2": "Check an agency before you sign",
+        "id": "verify",
+        "p": [
+          "Look the agency up on Google Maps and read the newest reviews, not only the star rating. If it lists itself on Clutch, DesignRush or Sortlist, open the profile and check whether reviews are verified and recent. Ask for a redacted monthly report in the format you would receive, and one client you can call."
+        ]
+      },
+      {
+        "h2": "How Static Savvy Media works with Malaysian SMEs",
+        "id": "ssm",
+        "p": [
+          "Static Savvy Media is headquartered in [Madurai, India](/locations/madurai/), and has its Malaysia office in Rawang, Selangor, near AEON Mall Rawang. We work with businesses across Selangor, Kuala Lumpur and the rest of Malaysia, in person or online, on SEO, local SEO, AI search optimisation, website design, social media and WhatsApp automation, with content in English and Bahasa Malaysia and reports from your own accounts. Read more on our [Malaysia page](/locations/malaysia/) or our [Kuala Lumpur page](/locations/kuala-lumpur/)."
+        ],
+        "cta": {
+          "to": "/contact/",
+          "label": "Ask for a free 90-day plan review"
+        }
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What does a small business marketing company in Malaysia do?",
+        "a": "It helps an SME get found and chosen online: Google Business Profile and local SEO, website SEO, social media, WhatsApp follow-up, ads and AI search visibility. A good one picks the few channels that match how your customers buy, fixes the basics first and reports enquiries from accounts you own."
+      },
+      {
+        "q": "How long before digital marketing brings results for a small business in Malaysia?",
+        "a": "Fixes to your Google profile, website and WhatsApp replies can improve enquiries within weeks. Search rankings for competitive terms usually take several months. Any timeline should be tied to measurable signals, not promises."
+      },
+      {
+        "q": "Do I need a marketing company, or can I do it myself?",
+        "a": "Many owners handle the basics themselves: profile updates, review requests and regular posts. An agency helps when you need technical SEO, a website rebuild, bilingual content or the time to do it consistently."
+      },
+      {
+        "q": "Should my website be in English or Bahasa Malaysia?",
+        "a": "Use the languages your customers search in. Many Malaysian SMEs need both, written separately for each page rather than machine-translated."
+      },
+      {
+        "q": "Does AI search change what a small business should do?",
+        "a": "It raises the value of the basics: clear service pages, honest FAQs, consistent business details and genuine reviews. Those help Google Search, Google Maps and AI assistants such as ChatGPT and Gemini at the same time."
+      },
+      {
+        "q": "How much does digital marketing cost for a small business in Malaysia?",
+        "a": "It depends on channels, languages, locations and contract terms. Compare quotes like for like on minimum term, setup fee, monthly deliverables and whether ad spend is included. Our SEO cost in Malaysia guide explains typical market ranges."
+      },
+      {
+        "q": "Can a Rawang or Selangor business rank across Kuala Lumpur?",
+        "a": "On Google Maps, distance matters, so a Rawang business will mostly appear for searchers nearby. Ordinary search and AI answers are less tied to distance, so good service pages can reach buyers across the Klang Valley."
+      },
+      {
+        "q": "What should I get back if I stop working with an agency?",
+        "a": "Your domain, website files, paid-for content and images, and admin access to your Google Business Profile, Search Console, Analytics and ad accounts. Customer data the agency holds should be returned or deleted in line with the PDPA."
+      },
+      {
+        "q": "Are there government grants for SME digital marketing in Malaysia?",
+        "a": "Programmes change, so check current terms on the official MDEC and SME Corp websites before you budget around a grant. Our SME grant guide explains how to check eligibility."
+      }
+    ],
+    "related": [
+      {
+        "to": "/locations/malaysia/",
+        "label": "Digital marketing in Malaysia (Rawang office)"
+      },
+      {
+        "to": "/locations/kuala-lumpur/",
+        "label": "Digital marketing in Kuala Lumpur"
+      },
+      {
+        "to": "/services/local-seo/malaysia/",
+        "label": "Local SEO & Google Business Profile in Malaysia"
+      },
+      {
+        "to": "/services/seo/malaysia/",
+        "label": "SEO services in Malaysia"
+      },
+      {
+        "to": "/services/ai-business-automation/malaysia/",
+        "label": "AI & WhatsApp automation in Malaysia"
+      },
+      {
+        "to": "/blog/how-to-choose-digital-marketing-agency-malaysia/",
+        "label": "Malaysian SME agency buyer's checklist"
+      },
+      {
+        "to": "/locations/madurai/",
+        "label": "Our Madurai head office"
+      }
+    ]
+  },
+  {
     slug: 'seo-cost-malaysia-price-guide',
     region: 'malaysia',
     category: 'Malaysia',
