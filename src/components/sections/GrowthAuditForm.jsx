@@ -1,10 +1,10 @@
-import { useId, useRef, useState } from 'react'
-import ReCAPTCHAModule from 'react-google-recaptcha'
+import { lazy, Suspense, useId, useRef, useState } from 'react'
 import { track, getAttribution } from '../../utils/track.js'
 import { AUDIT_INDUSTRIES, AUDIT_CITIES, BUDGETS } from '../../data/auditOptions.js'
 
-// CJS interop: Node (build-time SSR) hands back the module object.
-const ReCAPTCHA = ReCAPTCHAModule?.default ?? ReCAPTCHAModule
+/* reCAPTCHA (and Google's script) loads only after the visitor first touches the form, so pages with
+ * a form pay no reCAPTCHA cost on load. CJS interop: the module may come back as { default }. */
+const ReCAPTCHA = lazy(() => import('react-google-recaptcha').then((m) => ({ default: m.default?.default ?? m.default ?? m })))
 const RECAPTCHA_SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY || ''
 const ENDPOINT = '/api/submit-contact'
 
@@ -18,10 +18,12 @@ const EMPTY = { business: '', siteUrl: '', industry: '', budget: '', city: '', n
  * Honeypot field "website" + optional reCAPTCHA, hidden UTM/source fields, consent required.
  * Fires audit_form_submit + generate_lead on a confirmed success only.
  */
-export default function GrowthAuditForm({ formId = 'growth_audit', defaultCity = '', compact = false }) {
+export default function GrowthAuditForm({ formId = 'growth_audit', defaultCity = '', defaultIndustry = '', compact = false }) {
   const uid = useId()
   const id = (k) => `${uid}-${k}`
-  const [data, setData] = useState({ ...EMPTY, city: defaultCity })
+  const [data, setData] = useState({ ...EMPTY, city: defaultCity, industry: defaultIndustry })
+  const [armed, setArmed] = useState(false)
+  const arm = () => { if (!armed) setArmed(true) }
   const [consent, setConsent] = useState(false)
   const [status, setStatus] = useState('idle') // idle | sending | success | error
   const [error, setError] = useState('')
@@ -109,7 +111,7 @@ export default function GrowthAuditForm({ formId = 'growth_audit', defaultCity =
   const aria = (k) => (fieldErrors[k] ? { 'aria-invalid': true, 'aria-describedby': id(`${k}-err`) } : {})
 
   return (
-    <form className={`audit-form${compact ? ' audit-form--compact' : ''}`} onSubmit={onSubmit} noValidate={false} aria-label="Request a free growth audit">
+    <form className={`audit-form${compact ? ' audit-form--compact' : ''}`} onSubmit={onSubmit} onFocusCapture={arm} onPointerDownCapture={arm} noValidate={false} aria-label="Request a free growth audit">
       <input type="text" name="website" value={data.website} onChange={onChange} tabIndex={-1} autoComplete="off" aria-hidden="true" className="audit-form__hp" />
       <div className="audit-form__field">
         <label htmlFor={id('business')}>Business name</label>
@@ -170,9 +172,11 @@ export default function GrowthAuditForm({ formId = 'growth_audit', defaultCity =
         <span>I agree to be contacted about my audit by phone, WhatsApp or email.</span>
       </label>
       {err('consent')}
-      {RECAPTCHA_SITE_KEY && (
+      {RECAPTCHA_SITE_KEY && armed && (
         <div className="audit-form__field--full">
-          <ReCAPTCHA ref={recaptchaRef} sitekey={RECAPTCHA_SITE_KEY} onChange={setToken} onExpired={() => setToken(null)} theme="dark" />
+          <Suspense fallback={null}>
+            <ReCAPTCHA ref={recaptchaRef} sitekey={RECAPTCHA_SITE_KEY} onChange={setToken} onExpired={() => setToken(null)} theme="dark" />
+          </Suspense>
         </div>
       )}
       {status === 'error' && error && <p className="audit-form__error" role="alert">{error}</p>}

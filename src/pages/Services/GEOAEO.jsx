@@ -6,7 +6,7 @@ import HeroSection from '../../components/hero/HeroSection.jsx'
 import ProcessSection from '../../components/sections/ProcessSection.jsx'
 import FAQSection from '../../components/sections/FAQSection.jsx'
 import CTASection from '../../components/sections/CTASection.jsx'
-import ContactFormSection from '../../components/sections/ContactFormSection.jsx'
+import { AuditBlock } from '../../components/v2/V2Blocks.jsx'
 import WhatsAppIcon from '../../components/common/WhatsAppIcon.jsx'
 import { ScrollReveal } from '../../components/animations/ScrollReveal.jsx'
 import { setSeo } from '../../utils/seo.js'
@@ -784,7 +784,7 @@ export default function GEOAEO() {
         primaryLabel={CTA.label}
         primaryHref={whatsappHref}
       />
-      <ContactFormSection />
+      <AuditBlock formId="growth_audit_service_geo_aeo" defaultCity="" />
     </div>
   )
 }

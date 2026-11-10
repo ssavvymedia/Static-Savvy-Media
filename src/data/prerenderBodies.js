@@ -9,45 +9,10 @@
  * Plain data only (no JSX): this file is loaded by Node at build time.
  */
 import { HOME_FAQS } from './pages/homeFaqs.js'
-import { content as ADS } from './pages/advertisingAgencyMadurai.js'
-import { content as TN } from './pages/tamilNadu.js'
 
-const HOST = 'https://www.staticsavvymedia.com'
 const PHONE = '+91 99440 40345'
 
-import { organization, maduraiBusiness, MADURAI_ID, ORG_ID, homeSchemaGraph, HOME_H1_TEXT, HOME_INTRO, HOME_PROOF, HOME_MARKETS, HOME_MADURAI_LINKS } from './pages/homeContent.js'
-
-const faqPage = (faqs) => ({
-  '@type': 'FAQPage',
-  mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.question, acceptedAnswer: { '@type': 'Answer', text: f.answer } })),
-})
-
-const crumbs = (list) => ({
-  '@type': 'BreadcrumbList',
-  itemListElement: list.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: `${HOST}${c.path}` })),
-})
-
-const graph = (...nodes) => ({ '@context': 'https://schema.org', '@graph': nodes })
-
-/* Convert a LocalServicePage content object into a prerender body. */
-function fromContent(c, extraNodes = []) {
-  return {
-    h1: c.h1,
-    intro: c.intro,
-    sections: c.sections.map((s) => ({
-      heading: s.heading,
-      items:
-        s.kind === 'table'
-          ? s.table.rows.map((r) => ({ title: r[0], text: r.slice(1).join(' · ') }))
-          : s.kind === 'text'
-            ? s.paragraphs.map((p) => ({ text: p }))
-            : s.items.map((it) => (typeof it === 'string' ? { text: it } : { title: it.title, text: it.text, link: it.link })),
-    })),
-    related: c.related,
-    faqs: c.faqs,
-    schema: graph(...extraNodes, faqPage(c.faqs), crumbs(c.crumbs)),
-  }
-}
+import { homeSchemaGraph, HOME_H1_TEXT, HOME_INTRO, HOME_PROOF, HOME_MARKETS, HOME_MADURAI_LINKS } from './pages/homeContent.js'
 
 export const prerenderBodies = {
   '/': {
@@ -75,8 +40,6 @@ export const prerenderBodies = {
     schema: homeSchemaGraph,
   },
   /* /locations/madurai/ is server-rendered from its real component via src/data/ssrRoutes.js. */
-  [ADS.path]: fromContent(ADS, [{ '@type': 'Service', name: 'Digital Advertising in Madurai', serviceType: 'Online advertising', provider: { '@id': MADURAI_ID }, areaServed: { '@type': 'City', name: 'Madurai' }, url: `${HOST}${ADS.path}` }, maduraiBusiness]),
-  [TN.path]: fromContent(TN, [{ '@type': 'Service', name: 'Digital Marketing in Tamil Nadu', serviceType: 'Digital marketing', provider: { '@id': ORG_ID }, areaServed: { '@type': 'State', name: 'Tamil Nadu' }, url: `${HOST}${TN.path}` }, organization]),
 }
 
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')

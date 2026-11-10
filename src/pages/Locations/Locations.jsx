@@ -6,7 +6,7 @@ import HeroSection from '../../components/hero/HeroSection.jsx'
 import SectionHeading from '../../components/common/SectionHeading.jsx'
 import FAQSection from '../../components/sections/FAQSection.jsx'
 import CTASection from '../../components/sections/CTASection.jsx'
-import ContactFormSection from '../../components/sections/ContactFormSection.jsx'
+import { AuditBlock } from '../../components/v2/V2Blocks.jsx'
 import { ScrollReveal } from '../../components/animations/ScrollReveal.jsx'
 import { setSeo } from '../../utils/seo.js'
 import { breadcrumbListSchema, faqPageSchema } from '../../utils/schema.js'
@@ -503,7 +503,7 @@ export default function Locations() {
         secondaryLabel="Explore Our Services"
         secondaryTo="/services/"
       />
-      <ContactFormSection />
+      <AuditBlock formId="growth_audit_locations" defaultCity="" />
     </div>
   )
 }

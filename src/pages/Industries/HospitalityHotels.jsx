@@ -4,7 +4,7 @@ import Breadcrumbs from '../../components/common/Breadcrumbs.jsx'
 import Button from '../../components/common/Button.jsx'
 import HeroSection from '../../components/hero/HeroSection.jsx'
 import CTASection from '../../components/sections/CTASection.jsx'
-import ContactFormSection from '../../components/sections/ContactFormSection.jsx'
+import { AuditBlock } from '../../components/v2/V2Blocks.jsx'
 import { ScrollReveal } from '../../components/animations/ScrollReveal.jsx'
 import { setSeo } from '../../utils/seo.js'
 import {
@@ -808,7 +808,7 @@ export default function HospitalityHotels() {
         secondaryLabel="Explore All Industries"
         secondaryTo="/industries/"
       />
-      <ContactFormSection />
+      <AuditBlock formId="growth_audit_industry_hospitality" defaultCity="" defaultIndustry="Hospitality & Travel" />
     </div>
   )
 }

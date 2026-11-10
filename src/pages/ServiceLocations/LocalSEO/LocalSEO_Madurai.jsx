@@ -20,6 +20,7 @@ import {
   GOOGLE_TRUST_LINE,
 } from '../../../utils/constants.js'
 import '../../../styles/pages/local-seo-madurai.css'
+import { AuditBlock } from '../../../components/v2/V2Blocks.jsx'
 
 /* ============================================================
    CONTENT, Local SEO Madurai
@@ -708,6 +709,8 @@ export default function LocalSEO_Madurai() {
       />
 
       {/* ---- Final CTA ---- */}
+      <AuditBlock formId="growth_audit_local_seo_madurai" defaultCity="Madurai" />
+
       <CTASection
         title={CTA.title}
         subtitle={CTA.subtitle}

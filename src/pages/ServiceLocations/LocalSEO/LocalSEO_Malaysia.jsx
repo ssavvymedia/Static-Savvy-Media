@@ -19,6 +19,7 @@ import {
   SITE_URL,
 } from '../../../utils/constants.js'
 import '../../../styles/pages/local-seo-malaysia.css'
+import { AuditBlock } from '../../../components/v2/V2Blocks.jsx'
 
 /* ============================================================
    CONTENT, Local SEO Malaysia
@@ -739,6 +740,8 @@ export default function LocalSEO_Malaysia() {
       />
 
       {/* ---- Final CTA ---- */}
+      <AuditBlock formId="growth_audit_local_seo_malaysia" defaultCity="Other Malaysia" />
+
       <CTASection
         title={CTA.title}
         subtitle={CTA.subtitle}

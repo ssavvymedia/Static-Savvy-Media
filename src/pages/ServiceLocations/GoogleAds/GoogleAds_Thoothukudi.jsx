@@ -20,6 +20,7 @@ import {
 } from '../../../utils/constants.js'
 import '../../../styles/pages/google-ads-thoothukudi.css'
 import heroImage from '../../../assets/images/GoogleAds/GoogleAds.webp'
+import { AuditBlock } from '../../../components/v2/V2Blocks.jsx'
 
 /* ============================================================
    CONTENT, Google Ads Thoothukudi
@@ -568,6 +569,8 @@ export default function GoogleAds_Thoothukudi() {
       />
 
       {/* ---- Final CTA ---- */}
+      <AuditBlock formId="growth_audit_google_ads_thoothukudi" defaultCity="Thoothukudi" />
+
       <CTASection
         title={CTA.title}
         subtitle={CTA.subtitle}

@@ -6,6 +6,7 @@ import { formatTwoColorTitle } from '../components/hero/HeroSection.jsx'
 import FAQSection from '../components/sections/FAQSection.jsx'
 import CTASection from '../components/sections/CTASection.jsx'
 import QuoteCTA from '../components/sections/QuoteCTA.jsx'
+import { auditCityFor } from '../data/auditOptions.js'
 import { AuditBlock } from '../components/v2/V2Blocks.jsx'
 import { ScrollReveal } from '../components/animations/ScrollReveal.jsx'
 import { setSeo } from '../utils/seo.js'
@@ -24,6 +25,12 @@ import '../styles/pages/seo-madurai.css'
  *            related: [{ name, path }], faqs, faqTitle, cta: { title, subtitle, label }, schema: [],
  *            quote?: QuoteCTA props ({ region, service, text }), shown instead of public prices }
  */
+/* Last path segment as a city name (e.g. /services/seo/kuala-lumpur/ -> "Kuala Lumpur"). */
+const cityFromPath = (path = '') => {
+  const seg = path.split('/').filter(Boolean).pop() || ''
+  return seg.split('-').map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')
+}
+
 export default function LocalServicePage({ content }) {
   const hasRun = useRef(false)
   const url = `${SITE_URL}${content.path}`
@@ -188,7 +195,14 @@ export default function LocalServicePage({ content }) {
 
       {content.contactBlock}
 
-      {content.auditForm && <AuditBlock {...content.auditForm} />}
+      {/* Every LocalServicePage gets the Growth Audit form; content.auditForm overrides the defaults. */}
+      {content.auditForm !== false && (
+        <AuditBlock
+          formId={`growth_audit_${content.path.replace(/^\/|\/$/g, '').replace(/[^a-z0-9]+/gi, '_')}`}
+          defaultCity={auditCityFor(cityFromPath(content.path))}
+          {...(content.auditForm || {})}
+        />
+      )}
 
       <section className="section seo-mdu-related-section">
         <div className="container">

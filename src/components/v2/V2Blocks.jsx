@@ -18,9 +18,11 @@ const Svg = ({ d, children }) => (
 )
 export const Ico = ({ children, d }) => <span className="hv2-ico"><Svg d={d}>{children}</Svg></span>
 
-export function AuditBlock({ formId, defaultCity = 'Madurai', id = 'audit', eyebrow = 'Free for qualified businesses', title = 'Get your Business Growth Audit.', lead, cover = true }) {
+export function AuditBlock({ formId, defaultCity = 'Madurai', defaultIndustry = '', id = 'audit', eyebrow = 'Free for qualified businesses', title = 'Get your Business Growth Audit.', lead, cover = true, anchors = true }) {
   return (
     <section className="hv2 hv2-section" data-section={formId} aria-labelledby={`${id}-title`}>
+      {/* #enquiry / #form: targets of older "Send an enquiry" links (QuoteCTA, city pages) that pointed at the contact form. */}
+      {anchors && <span id="enquiry" className="scroll-anchor" aria-hidden="true" />}
       <div className="hv2-wrap">
         <div className={`hv2-audit${cover ? '' : ' hv2-audit--single'}`} id={id}>
           {cover && (
@@ -45,7 +47,7 @@ export function AuditBlock({ formId, defaultCity = 'Madurai', id = 'audit', eyeb
               {lead ||
                 'A review of your website, Google visibility, AI search presence and competitors, with a tailored action plan. Prepared by our Madurai team, not an automated score.'}
             </p>
-            <GrowthAuditForm formId={formId} defaultCity={defaultCity} />
+            <GrowthAuditForm formId={formId} defaultCity={defaultCity} defaultIndustry={defaultIndustry} />
           </div>
         </div>
       </div>

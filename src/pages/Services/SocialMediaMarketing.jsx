@@ -5,7 +5,7 @@ import Button from "../../components/common/Button.jsx";
 import HeroSection from "../../components/hero/HeroSection.jsx";
 import FAQSection from "../../components/sections/FAQSection.jsx";
 import CTASection from "../../components/sections/CTASection.jsx";
-import ContactFormSection from "../../components/sections/ContactFormSection.jsx";
+import { AuditBlock } from '../../components/v2/V2Blocks.jsx'
 import { ScrollReveal } from "../../components/animations/ScrollReveal.jsx";
 import { setSeo } from "../../utils/seo.js";
 import {
@@ -769,7 +769,7 @@ export default function SocialMediaMarketing() {
         primaryLabel={CTA.label}
         primaryHref={whatsappHref}
       />
-      <ContactFormSection />
+      <AuditBlock formId="growth_audit_service_smm" defaultCity="" />
     </div>
   );
 }

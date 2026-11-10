@@ -19,6 +19,7 @@ import {
   SITE_URL,
 } from '../../../utils/constants.js'
 import '../../../styles/pages/seo-thoothukudi.css'
+import { AuditBlock } from '../../../components/v2/V2Blocks.jsx'
 
 /* ============================================================
    CONTENT, SEO Thoothukudi
@@ -760,6 +761,8 @@ export default function SEO_Thoothukudi() {
       />
 
       {/* ---- Final CTA ---- */}
+      <AuditBlock formId="growth_audit_seo_thoothukudi" defaultCity="Thoothukudi" />
+
       <CTASection
         title={CTA.title}
         subtitle={CTA.subtitle}

@@ -157,6 +157,7 @@ export const content = {
   ],
   auditForm: {
     formId: 'growth_audit_top_companies_madurai',
+    defaultCity: 'Madurai',
     eyebrow: 'Second opinion',
     title: 'Comparing agencies? Get a free Growth Audit first.',
     lead: 'Bring your shortlist. We review your website, Google Business Profile, AI search presence and competitors, and tell you honestly what to fix first, whoever you hire.',

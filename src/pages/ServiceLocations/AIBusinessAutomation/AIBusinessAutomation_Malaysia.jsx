@@ -21,6 +21,7 @@ import {
 } from '../../../utils/constants.js'
 import '../../../styles/pages/ai-business-automation-malaysia.css'
 import heroImage from '../../../assets/images/AIBusinessAutomation/AIBusinessAutomation.webp'
+import { AuditBlock } from '../../../components/v2/V2Blocks.jsx'
 
 /* ============================================================
    CONTENT, AI Business Automation Malaysia
@@ -533,6 +534,8 @@ export default function AIBusinessAutomation_Malaysia() {
       </section>
 
       {/* CTA */}
+      <AuditBlock formId="growth_audit_ai_automation_malaysia" defaultCity="Other Malaysia" />
+
       <CTASection title={CTA.title} />
     </div>
   )

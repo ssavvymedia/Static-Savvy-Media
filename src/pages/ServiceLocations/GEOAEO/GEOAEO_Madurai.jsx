@@ -19,6 +19,7 @@ import {
 } from '../../../utils/constants.js'
 import '../../../styles/pages/geo-aeo-madurai.css'
 import heroImage from '../../../assets/images/GEOAEO/GEOAEO.webp'
+import { AuditBlock } from '../../../components/v2/V2Blocks.jsx'
 
 /* ============================================================
    CONTENT, GEO & AEO Madurai
@@ -670,6 +671,8 @@ export default function GEOAEO_Madurai() {
       </section>
 
       {/* CTA */}
+      <AuditBlock formId="growth_audit_geo_aeo_madurai" defaultCity="Madurai" />
+
       <CTASection title={CTA.title} subtitle={CTA.subtitle} />
     </div>
   )
