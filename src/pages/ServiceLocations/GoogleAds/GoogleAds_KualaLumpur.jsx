@@ -17,7 +17,7 @@ const content = {
   path: PATH,
   ogImage: '/og/services-google-ads-kuala-lumpur.jpg',
   image: { jpg: '/og/services-google-ads-kuala-lumpur.jpg', webp: '/og/services-google-ads-kuala-lumpur.webp', alt: 'Google Ads agency in Kuala Lumpur, PPC management by Static Savvy Media Malaysia' },
-  title: 'Google Ads Agency Kuala Lumpur | PPC Management KL | Static Savvy Media',
+  title: 'Google Ads Agency Kuala Lumpur (PPC) | Static Savvy Media',
   description: DESCRIPTION,
   eyebrow: 'GOOGLE ADS · KUALA LUMPUR',
   h1: 'Google Ads Agency in Kuala Lumpur — For Leads You Can Track',

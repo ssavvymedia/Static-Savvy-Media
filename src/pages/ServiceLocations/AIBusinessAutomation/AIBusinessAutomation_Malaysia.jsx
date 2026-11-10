@@ -28,7 +28,7 @@ import { AuditBlock } from '../../../components/v2/V2Blocks.jsx'
    ============================================================ */
 
 const PAGE_TITLE =
-  'AI Business Automation Malaysia, SME Grant-Eligible Digital Services | Static Savvy Media'
+  'AI Business Automation Malaysia for SMEs | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
   "AI business automation for Malaysian SMEs, WhatsApp workflows, lead automation, customer service, reporting and document processing. Explore grant-eligible digital transformation options with Static Savvy Media."

@@ -26,7 +26,7 @@ import { AuditBlock } from '../../../components/v2/V2Blocks.jsx'
    ============================================================ */
 
 const PAGE_TITLE =
-  'Local SEO Malaysia, Google Maps Ranking for Selangor & Rawang Businesses | Static Savvy Media'
+  'Local SEO Malaysia: Google Maps for SMEs | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
   'Local SEO Malaysia for businesses targeting Selangor and Rawang. Google Business Profile, Google Maps visibility, citations, reviews, NAP consistency and local landing pages.'

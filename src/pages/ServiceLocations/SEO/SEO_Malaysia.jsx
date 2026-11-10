@@ -27,7 +27,7 @@ import '../../../styles/pages/seo-malaysia.css'
    ============================================================ */
 
 const PAGE_TITLE =
-  'SEO Company Malaysia: Nationwide SEO Services for SMEs | Static Savvy Media'
+  'SEO Company Malaysia: SEO Services for SMEs | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
   'Nationwide SEO company in Malaysia for SMEs, from KL and Selangor to Penang and Johor Bahru: technical, content and AI-search SEO on google.com.my. No lock-in. +60 12-453 7030.'
@@ -289,19 +289,14 @@ const FAQS = [
       'SEO helps businesses connect with people who are actively searching for their products or services. By improving search visibility, businesses can attract relevant traffic, generate qualified enquiries and build sustainable organic growth.',
   },
   {
-    question: 'What does an SEO agency do?',
+    question: 'What does an SEO company in Malaysia do?',
     answer:
-      'An SEO agency helps businesses improve their organic search visibility through technical SEO, keyword research, on-page optimization, content development, internal linking, schema implementation and performance measurement.',
+      'An SEO company improves how often your website appears on google.com.my for the searches your customers use. For Malaysian SMEs that means keyword research in English and Bahasa Malaysia, technical fixes, service and location pages, Google Business Profile work, links from relevant Malaysian sites and monthly reporting from your own Search Console and Analytics.',
   },
   {
     question: 'How long does SEO take?',
     answer:
       'Timelines vary based on competition, domain authority, technical condition, content quality, search demand, industry and existing visibility. Some improvements may be visible within weeks, while competitive keywords may take several months of consistent effort.',
-  },
-  {
-    question: 'How much does SEO cost?',
-    answer:
-      'SEO costs depend on the scope of work, competition and business objectives. We recommend starting with a free consultation so we can understand your needs and send a custom quote.',
   },
   {
     question: 'Can SEO help Malaysian businesses?',
@@ -323,9 +318,9 @@ const FAQS = [
     answer: MY_COST_ANSWER,
   },
   {
-    question: 'What is the difference between SEO and Local SEO?',
+    question: 'Do Malaysian SMEs need SEO or local SEO?',
     answer:
-      'Traditional SEO targets broader organic search visibility. Local SEO specifically targets location-based search intent and Google Maps/local search results. For businesses targeting local customers, both approaches are recommended.',
+      'Most need both, weighted by how customers buy. If customers visit you or you serve a set area, such as a clinic in Petaling Jaya or a workshop in Rawang, local SEO and your Google Business Profile come first. If you sell across Malaysia or online, website SEO on google.com.my matters more. We usually start with whichever brings enquiries fastest and add the other once the basics are in place.',
   },
   {
     question: 'Which is the best SEO company in Malaysia?',

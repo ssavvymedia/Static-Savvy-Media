@@ -23,7 +23,7 @@ import '../../styles/pages/textiles-madurai.css'
 import textileHeroImg from '../../assets/images/Industries/05textile.webp'
 
 const PAGE_TITLE =
-  'Digital Marketing for Textile & Garment Businesses in Madurai | Static Savvy Media'
+  'Textile Digital Marketing in Madurai | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
   "SEO, e-commerce, product photography, and social media for Madurai's textile industry. Sarees, dress materials, and fabric exporters."

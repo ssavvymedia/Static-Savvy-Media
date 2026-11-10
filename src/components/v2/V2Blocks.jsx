@@ -46,6 +46,7 @@ export function AuditBlock({ formId, defaultCity = 'Madurai', defaultIndustry = 
             <p className="hv2-lead" style={{ marginTop: 12 }}>
               {lead ||
                 'A review of your website, Google visibility, AI search presence and competitors, with a tailored action plan. Prepared by our Madurai team, not an automated score.'}
+              {formId !== 'growth_audit_landing' && <>{' '}<Link className="hv2-link" to="/growth-audit/">What the audit covers</Link></>}
             </p>
             <GrowthAuditForm formId={formId} defaultCity={defaultCity} defaultIndustry={defaultIndustry} />
           </div>

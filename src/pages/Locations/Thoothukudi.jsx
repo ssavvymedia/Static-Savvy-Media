@@ -27,7 +27,7 @@ import thoothukudiHeroImg from '../../assets/images/locations/03thoothukudi.webp
    ============================================================ */
 
 const PAGE_TITLE =
-  'Digital Marketing in Thoothukudi (Tuticorin), SEO, Ads & More | Static Savvy Media'
+  'Digital Marketing in Thoothukudi (Tuticorin) | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
   "Static Savvy Media serves Thoothukudi businesses with SEO, Local SEO, Google Ads, and social media marketing. Port city specialists, industrial, marine, manufacturing, and retail. WhatsApp: +91 99440 40345."

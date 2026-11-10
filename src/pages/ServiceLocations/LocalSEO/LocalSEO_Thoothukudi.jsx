@@ -26,7 +26,7 @@ import { AuditBlock } from '../../../components/v2/V2Blocks.jsx'
    ============================================================ */
 
 const PAGE_TITLE =
-  'Local SEO Thoothukudi, GBP & Maps Ranking for Tuticorin Businesses | Static Savvy Media'
+  'Local SEO Thoothukudi: Google Maps & GBP | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
   'Local SEO in Thoothukudi for Tuticorin businesses. Improve Google Business Profile, Google Maps visibility, local citations, reviews, NAP consistency and location-specific search presence.'
@@ -237,12 +237,12 @@ const LOCATION_PAGES = [
 
 const FAQS = [
   {
-    question: 'What is the difference between SEO and Local SEO?',
+    question: 'Does my Thoothukudi business need SEO or Local SEO?',
     answer:
-      'Standard SEO targets any search query regardless of location. Local SEO specifically targets queries with local intent, "near me," "in Thoothukudi", and focuses on the Google Maps pack (the three-business box above traditional results for local queries). Most local businesses need both, but Local SEO is usually the higher priority for brick-and-mortar and service-area businesses.',
+      'Shops, clinics, restaurants and service businesses that serve Thoothukudi customers should start with Local SEO, because most of their enquiries come from Google Maps. Port, logistics, salt and seafood exporters selling to buyers outside the city usually need website SEO first, built around the products and services those buyers search for. We recommend the starting point after reviewing your business in the free audit.',
   },
   {
-    question: 'How long does it take to rank in Google Maps?',
+    question: 'How long does it take to rank in Google Maps in Thoothukudi?',
     answer:
       'For low-competition local queries, GBP optimization may produce visible movement within 4–8 weeks. For competitive categories in larger cities, 3–6 months of consistent effort may be expected before reaching the top 3. Timelines vary based on competition, business category, existing authority, GBP quality, citations, reviews and local search demand.',
   },
@@ -262,9 +262,9 @@ const FAQS = [
       'The strategy depends on the business\'s actual service area, physical location and eligibility for local search features. Businesses that serve specific areas or have physical locations can benefit from local SEO regardless of their exact position within Thoothukudi.',
   },
   {
-    question: 'Does Local SEO work with Google Maps?',
+    question: 'Will Local SEO help my Thoothukudi business show on Google Maps?',
     answer:
-      'Yes. Local SEO directly impacts your visibility in Google Maps and the local pack. Google Business Profile optimization, citations, reviews and local content all contribute to how your business appears in Google Maps results.',
+      'Yes, if your Google Business Profile is verified and accurate. Local SEO improves how often you appear in the Maps pack for searches around Thoothukudi, from the harbour and SIPCOT areas to the town centre, by fixing categories, service areas, photos and reviews and adding consistent citations. We cannot guarantee a specific position, but we report Maps views, calls and direction requests monthly.',
   },
 ]
 

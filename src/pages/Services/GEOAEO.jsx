@@ -30,7 +30,7 @@ import geoAeoHeroImg from '../../assets/images/services/02GEOAEO.webp'
    ============================================================ */
 
 const PAGE_TITLE =
-  'GEO & AEO Optimization India, Get Cited by ChatGPT, Perplexity & Google AI | Static Savvy Media'
+  'GEO & AEO Services: Get Cited by AI Search | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
   "GEO and AEO services from Madurai. We structure your online presence so ChatGPT, Perplexity and Google AI Overviews can understand, trust and cite your business."

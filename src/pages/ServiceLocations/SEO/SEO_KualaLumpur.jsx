@@ -18,7 +18,7 @@ const content = {
   path: PATH,
   ogImage: '/og/services-seo-kuala-lumpur.jpg',
   image: { jpg: '/og/services-seo-kuala-lumpur.jpg', webp: '/og/services-seo-kuala-lumpur.webp', alt: 'SEO services in Kuala Lumpur for SMEs, Static Savvy Media Malaysia team' },
-  title: 'SEO Agency Kuala Lumpur: SEO Services & Company in KL | Static Savvy Media',
+  title: 'SEO Agency Kuala Lumpur: SEO Services in KL | Static Savvy Media',
   description: DESCRIPTION,
   eyebrow: 'SEO · KUALA LUMPUR',
   h1: 'SEO Agency in Kuala Lumpur: SEO Services for KL SMEs That Want Enquiries',
@@ -216,7 +216,7 @@ const content = {
     { question: 'Can you help my business show up for "SEO near me" style searches in KL?', answer: 'Yes. "Near me" searches are mostly decided by Google Maps, so we optimise your Google Business Profile, reviews routine and local citations alongside area pages on your website.' },
     { question: 'Why does my KL business show on Google Maps in one area but not another?', answer: 'Distance from the searcher is one of Google’s main local ranking factors, and in a dense city like KL the results can change within a few hundred metres. We strengthen relevance and prominence (categories, content, reviews, citations) and build pages for the areas you genuinely serve.' },
     { question: 'Do you also serve Petaling Jaya and Shah Alam?', answer: 'Yes. The same Rawang team serves the whole Klang Valley, including Petaling Jaya, Shah Alam, Subang Jaya and Klang.' },
-    { question: 'How do I contact your Malaysia team?', answer: `Call ${MALAYSIA_OFFICE.phoneDisplay} (${MALAYSIA_OFFICE.hoursDisplay}) or WhatsApp ${MALAYSIA_OFFICE.whatsappDisplay}.` },
+    { question: 'How do I contact your SEO team for Kuala Lumpur?', answer: `Call ${MALAYSIA_OFFICE.phoneDisplay} (${MALAYSIA_OFFICE.hoursDisplay}) or WhatsApp ${MALAYSIA_OFFICE.whatsappDisplay}.` },
   ],
   cta: {
     title: 'Want More Customers From Google in Kuala Lumpur?',

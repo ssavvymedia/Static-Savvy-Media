@@ -28,7 +28,7 @@ import smmHeroImg from "../../assets/images/services/05socialmediamarketing.webp
    ============================================================ */
 
 const PAGE_TITLE =
-  "Social Media Marketing Services — Madurai, Tamil Nadu & Malaysia | Static Savvy Media";
+  "Social Media Marketing Services | Static Savvy Media";
 
 const PAGE_DESCRIPTION =
   "Social media marketing services for businesses in Tamil Nadu and Malaysia: Instagram, Facebook, YouTube and LinkedIn content plus Meta ads. Rated 4.9★ on Google.";

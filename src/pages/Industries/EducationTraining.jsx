@@ -29,7 +29,7 @@ import educationHeroImg from '../../assets/images/Industries/03education.webp'
    ============================================================ */
 
 const PAGE_TITLE =
-  'Digital Marketing for Schools, Colleges & Training Institutes | Static Savvy Media'
+  'Digital Marketing for Schools & Colleges | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
   'Admissions-focused digital marketing for educational institutions in Tamil Nadu and Malaysia. SEO, Google Ads, social media, and AI search visibility.'

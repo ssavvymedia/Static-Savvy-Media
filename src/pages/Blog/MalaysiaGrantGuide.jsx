@@ -264,7 +264,7 @@ export default function MalaysiaGrantGuide() {
 
   useEffect(() => {
     setSeo({
-      title: `${PAGE_TITLE} | Static Savvy Media`,
+      title: 'MDEC & SMECorp Grants for Digital Marketing: 2026 Guide',
       description: PAGE_DESCRIPTION,
       canonical: `${SITE_URL}/blog/digital-marketing-malaysia-sme-grant-guide/`,
       ogType: 'article',

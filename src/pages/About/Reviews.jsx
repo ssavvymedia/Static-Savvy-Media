@@ -17,7 +17,7 @@ import { GOOGLE_REVIEWS, GBP_REVIEW_SUMMARY } from '../../data/googleReviews.js'
    CONTENT, Approved Static Savvy Media Reviews Page Content
    ============================================================ */
 
-const PAGE_TITLE = 'Client Reviews, Static Savvy Media Madurai, Thoothukudi & Malaysia'
+const PAGE_TITLE = 'Client Reviews | Static Savvy Media Madurai & Malaysia'
 
 const PAGE_DESCRIPTION =
   'Read client reviews of Static Savvy Media across Madurai, Thoothukudi and Malaysia. Explore real feedback and ratings from our Google Business Profiles.'

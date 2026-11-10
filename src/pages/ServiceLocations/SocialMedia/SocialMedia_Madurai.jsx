@@ -128,8 +128,8 @@ const content = {
       answer: 'It depends on who your customers are. Instagram tends to work better for visual, younger-audience businesses like fashion, salons and cafes. Facebook still reaches families, parents and business owners well. Most businesses do best with both, sharing content but running different ads.',
     },
     {
-      question: 'Do you create content in Tamil?',
-      answer: 'Yes. We write captions and on-screen text in Tamil, English or a mix, depending on how your customers speak and search.',
+      question: 'Do you create social media content in Tamil for Madurai audiences?',
+      answer: 'Yes. We write captions, reels scripts and on-screen text in Tamil, English or a mix, depending on how your Madurai customers speak and what performs on your page. Festival and local-event content, such as Chithirai festival or Pongal posts, is planned in Tamil, while offers and product details often go out in both languages.',
     },
     {
       question: 'Do you also run Facebook and Instagram ads?',
@@ -141,11 +141,11 @@ const content = {
     },
     {
       question: 'Will I own my pages and content?',
-      answer: 'Yes. Your Facebook page, Instagram account, ad account and the content we create for you remain yours.',
+      answer: 'Yes. Your Facebook page, Instagram account, Meta ad account and every photo, video and caption we create for you remain your property. We work with admin or partner access that you grant and can remove at any time, and we hand over the original files if you ask.',
     },
     {
       question: 'Can you shoot photos and videos at our shop in Madurai?',
-      answer: 'Yes. Our team is in Madurai, so on-site shoots for products, interiors, staff and events can be scheduled as part of your plan.',
+      answer: 'Yes. Our team is based in Madurai, so on-site shoots for products, interiors, staff, events and customer testimonials can be scheduled as part of your plan. We plan each shoot around the content calendar, so one visit usually produces several weeks of posts and reels.',
     },
   ],
   cta: {

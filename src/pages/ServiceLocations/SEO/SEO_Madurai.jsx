@@ -29,7 +29,7 @@ import { AnswerFirst, AuditBlock, MarketRangeTable, REVIEW_PROOF } from '../../.
    ============================================================ */
 
 const PAGE_TITLE =
-  'SEO Company in Madurai | SEO Services & Agency | Static Savvy Media'
+  'SEO Company in Madurai | SEO Services | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
   'SEO company in Madurai rated 4.9★ from 106 Google reviews. Technical, on-page and content SEO that turns Google searches into enquiries. Get a custom quote.'
@@ -380,7 +380,7 @@ const FAQS = [
       'An SEO agency in Madurai improves how often your business appears in Google for the searches your customers use. An SEO agency in Madurai helps businesses improve their organic search visibility through technical SEO, keyword research, on-page optimization, content development, internal linking, schema implementation and performance measurement. The goal is to connect businesses with people actively searching for their products or services.',
   },
   {
-    question: 'How long does SEO take to show results?',
+    question: 'How long does SEO take to work for a Madurai business?',
     answer:
       'Most Madurai businesses see early movement in 1 to 3 months and steadier enquiries in 4 to 6 months; competitive city-wide terms can take 6 to 12 months. Technical and Google Business Profile fixes can show within weeks. Our guide "How long does SEO take for a Madurai business?" has the month-by-month timeline.',
   },

@@ -381,7 +381,7 @@ export default function Contact() {
 
   useEffect(() => {
     setSeo({
-      title: 'Contact Static Savvy Media, WhatsApp, Madurai · Thoothukudi · Malaysia',
+      title: 'Contact Static Savvy Media | Madurai, Thoothukudi & Malaysia',
       description: 'Contact Static Savvy Media for SEO, GEO/AEO, Local SEO, Google Ads, websites, social media, AI automation and creative services. WhatsApp us at +91 99440 40345.',
       canonical: `${SITE_URL}/contact/`,
       ogType: 'website',

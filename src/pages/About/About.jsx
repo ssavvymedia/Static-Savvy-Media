@@ -19,7 +19,7 @@ import deepanAboutImg from '../../assets/images/About/DeepanAbout.webp'
    CONTENT, Approved Static Savvy Media About Page Content
    ============================================================ */
 
-const PAGE_TITLE = 'About Static Savvy Media | Madurai Digital Marketing Agency Since 2021'
+const PAGE_TITLE = 'About Static Savvy Media | Madurai Digital Marketing Since 2021'
 
 const PAGE_DESCRIPTION =
   'Meet the Madurai digital marketing agency founded by Deepan Kanz in 2021, rated 4.9★ from 106 Google reviews, with offices in Madurai, Thoothukudi and Rawang, Malaysia.'
@@ -143,11 +143,11 @@ const FAQS = [
   },
   {
     question: 'Does Static Savvy Media work with businesses outside Tamil Nadu?',
-    answer: 'Yes. The agency works with businesses across India and Southeast Asia and has an active presence in Tamil Nadu and Malaysia.',
+    answer: 'Yes. Our head office is in Madurai and we have an office in Rawang, Selangor, so we work with businesses across Tamil Nadu and Malaysia, and remotely with clients elsewhere in India, in Singapore and in Dubai. The same team, process and monthly reporting apply wherever you are.',
   },
   {
     question: 'How do I get started?',
-    answer: 'The fastest way is WhatsApp. Message +91 99440 40345 for an initial conversation about your digital marketing strategy.',
+    answer: 'Send the free Growth Audit form or message us on WhatsApp at +91 99440 40345. We reply within 1 working day, review your website, Google Business Profile and competitors, and then suggest where to start, with no obligation to sign up.',
   },
 ]
 

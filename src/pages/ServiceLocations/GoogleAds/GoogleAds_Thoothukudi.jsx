@@ -27,7 +27,7 @@ import { AuditBlock } from '../../../components/v2/V2Blocks.jsx'
    ============================================================ */
 
 const PAGE_TITLE =
-  'Google Ads Agency Thoothukudi, PPC for Port, Marine & Industrial Sectors | Static Savvy Media'
+  'Google Ads Agency Thoothukudi (PPC) | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
   'Google Ads management in Thoothukudi for industrial, marine, manufacturing, B2B and local businesses. Search, Display, Performance Max, Shopping and remarketing campaigns with conversion tracking.'

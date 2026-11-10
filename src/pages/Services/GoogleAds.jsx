@@ -29,7 +29,7 @@ import googleAdsHeroImg from '../../assets/images/services/04GoogleAds.webp'
    ============================================================ */
 
 const PAGE_TITLE =
-  'Google Ads Management, Results-Driven PPC for Madurai, Tamil Nadu & Malaysia | Static Savvy Media'
+  'Google Ads Management (PPC) | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
   'Expert Google Ads management for Tamil Nadu and Malaysia businesses. Search, display, shopping, and remarketing campaigns, every rupee and ringgit tracked to real outcomes.'

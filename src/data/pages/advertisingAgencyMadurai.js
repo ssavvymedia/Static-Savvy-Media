@@ -7,7 +7,7 @@ export const DESCRIPTION =
 export const content = {
   path: PATH,
   ogImage: '/og/locations-01madurai.jpg',
-  title: 'Advertising Agency in Madurai | Google & Meta Ads | Static Savvy Media',
+  title: 'Advertising Agency Madurai: Google, Meta Ads | Static Savvy Media',
   description: DESCRIPTION,
   eyebrow: 'ADVERTISING · MADURAI',
   h1: 'Advertising Agency in Madurai for Google, Meta and YouTube Ads',
@@ -70,8 +70,8 @@ export const content = {
   faqs: [
     { question: 'Are you a traditional advertising agency?', answer: 'No. We are a digital advertising agency. We run Google, YouTube, Facebook and Instagram ads and the tracking behind them. We do not sell outdoor, print, radio or TV media.' },
     { question: 'How much should a Madurai business spend on ads?', answer: 'It depends on your category and goal. We usually start with a modest test budget, measure cost per enquiry, and only recommend increasing spend once a campaign is paying back. Ad spend is paid directly to Google or Meta from your own account, separate from our management fee.' },
-    { question: 'Do you run ads in Tamil?', answer: 'Yes. We write ad copy and creative in Tamil, English or a mix, depending on how your customers search and speak.' },
-    { question: 'Will I own the ad accounts?', answer: 'Yes. Campaigns run in ad accounts owned by your business, and you keep full access to the accounts, data and creative.' },
+    { question: 'Do you run ads in Tamil?', answer: 'Yes. We write ad copy and creative in Tamil, English or Tanglish, depending on how your customers in Madurai search and speak. Search ads often work best in English because that is how many people type into Google, while Facebook, Instagram and YouTube ads often perform better in Tamil. We test both and keep what brings enquiries.' },
+    { question: 'Will I own the ad accounts?', answer: 'Yes. Campaigns run in Google Ads and Meta ad accounts owned by your business, and the ad spend is billed directly to you by Google and Meta. You keep full admin access to the accounts, conversion data, audiences and creative, so nothing is lost if you ever change agency.' },
     { question: 'How quickly do ads bring enquiries?', answer: 'Search ads can start bringing calls within days of launch once tracking is in place. Most campaigns need a few weeks of data before they are properly optimised. We do not guarantee a fixed number of leads.' },
   ],
   cta: {

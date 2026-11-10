@@ -28,7 +28,7 @@ import localSeoHeroImg from '../../assets/images/services/03LOCALSEO.webp'
    ============================================================ */
 
 const PAGE_TITLE =
-  'Local SEO Services, Google Maps & GBP Optimization | Static Savvy Media'
+  'Local SEO Services & Google Business Profile | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
   'Rank in Google Maps and local search for your city. GBP optimization, citation building, review management, and local content for Madurai, Thoothukudi, and Malaysia businesses.'

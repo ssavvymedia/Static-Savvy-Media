@@ -23,7 +23,7 @@ import '../../styles/pages/retail-ecommerce.css'
 import retailHeroImg from '../../assets/images/Industries/01retail.webp'
 
 const PAGE_TITLE =
-  'Digital Marketing for Retail & E-Commerce Businesses | Static Savvy Media'
+  'Digital Marketing for Retail & E-Commerce | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
   'SEO, Google Shopping, social media, and product photography for retail and e-commerce businesses in Tamil Nadu and Malaysia.'

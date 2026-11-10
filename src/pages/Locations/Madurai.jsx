@@ -28,7 +28,7 @@ import maduraiHeroImg from '../../assets/images/locations/01Madurai.webp'
    ============================================================ */
 
 const PAGE_TITLE =
-  'Digital Marketing Agency in Madurai, SEO, GEO/AEO & More | Static Savvy Media'
+  'Digital Marketing Company in Madurai | Static Savvy Media HQ'
 
 const PAGE_DESCRIPTION =
   'Madurai digital marketing agency at Kamarajar Salai since 2021, rated 4.9★ from 106 Google reviews. SEO, Local SEO, Ads, social & websites. Custom quotes: WhatsApp +91 99440 40345.'
@@ -296,7 +296,7 @@ export default function Madurai() {
       <HeroSection
         layout="two-column"
         eyebrow={HERO_EYEBROW}
-        title="Digital Marketing Agency in Madurai, Static Savvy Media HQ"
+        title="Static Savvy Media HQ in Madurai – SEO, AI Search & Digital Marketing"
         subtitle={HERO_SUBTITLE}
         actions={
           <>

@@ -23,7 +23,7 @@ import '../../styles/pages/hospitality-hotels.css'
 import hospitalityHeroImg from '../../assets/images/Industries/04hospital.webp'
 
 const PAGE_TITLE =
-  'Digital Marketing for Hotels & Hospitality Businesses | Madurai & Tamil Nadu | Static Savvy Media'
+  'Digital Marketing for Hotels & Hospitality | Static Savvy Media'
 const PAGE_DESCRIPTION =
   'Drive bookings, reviews, and visibility for hotels, restaurants, and hospitality businesses in Madurai and Tamil Nadu.'
 const HERO_TITLE =

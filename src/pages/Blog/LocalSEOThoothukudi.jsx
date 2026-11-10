@@ -247,7 +247,7 @@ export default function LocalSEOThoothukudi() {
 
   useEffect(() => {
     setSeo({
-      title: `${PAGE_TITLE} | Static Savvy Media`,
+      title: 'Local SEO for Thoothukudi Businesses: 2026 Growth Guide',
       description: PAGE_DESCRIPTION,
       canonical: `${SITE_URL}/blog/local-seo-thoothukudi-businesses/`,
       ogType: 'article',

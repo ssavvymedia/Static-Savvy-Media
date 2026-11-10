@@ -28,7 +28,7 @@ import aiBusinessHeroImg from '../../assets/images/services/07AIBusiness.webp'
    ============================================================ */
 
 const PAGE_TITLE =
-  'AI Business Automation, Workflows, Chatbots & Process Automation | Static Savvy Media'
+  'AI Business Automation & Chatbots | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
   "Automate repetitive workflows, deploy AI chatbots, and integrate intelligent tools. Static Savvy Media's AI business automation service for Indian and Malaysian SMEs."

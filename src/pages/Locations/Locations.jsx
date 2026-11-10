@@ -20,7 +20,7 @@ import '../../styles/pages/locations-hub.css'
 import locationHeroImg from '../../assets/images/locations/Locationmain.webp'
 
 const PAGE_TITLE =
-  'Our Locations, Madurai, Thoothukudi & Malaysia | Static Savvy Media'
+  'Locations: Madurai HQ, Thoothukudi, Malaysia | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
   'Static Savvy Media offices in Madurai, Thoothukudi, and Rawang, Selangor (Malaysia). Premium digital marketing, SEO, GEO/AEO, Google Ads, and AI automation, for businesses across Tamil Nadu and Malaysia.'
@@ -229,6 +229,11 @@ const LOCATIONS = [
 
 const FAQS = [
   {
+    question: 'Which office should I contact?',
+    answer:
+      'For businesses in India, contact our Madurai head office on WhatsApp at +91 99440 40345; the same team covers Thoothukudi and the rest of Tamil Nadu. For Malaysia, call our Rawang office on +60 12-453 7030 or WhatsApp +91 99440 40345. You can also send the free Growth Audit form on any page and we route it to the right team.',
+  },
+  {
     question: 'Where are Static Savvy Media offices located?',
     answer:
       'We have offices in Madurai (headquarters), Thoothukudi, and Rawang, Selangor (Malaysia). Our Madurai office is our primary base, and we serve clients across Tamil Nadu and Malaysia from there.',
@@ -236,17 +241,7 @@ const FAQS = [
   {
     question: 'Do you serve clients outside your office locations?',
     answer:
-      'Yes. We work with clients across India, Singapore, and Southeast Asia. Our digital marketing services are delivered remotely with in-person meetings available by appointment.',
-  },
-  {
-    question: 'Can Malaysian SMEs use government grants to fund your services?',
-    answer:
-      'Yes. Several of our digital marketing services are eligible for MDEC and SMECorp grant funding. We help qualifying Malaysian clients navigate the application process. Contact us on WhatsApp for details specific to your business.',
-  },
-  {
-    question: 'Do you have a physical office in Thoothukudi?',
-    answer:
-      'Our primary office is in Madurai. We serve Thoothukudi clients remotely with in-person meetings available by appointment.',
+      'Yes. Besides Madurai, Thoothukudi and Rawang, we work with businesses across Tamil Nadu (Chennai, Coimbatore, Trichy, Tirunelveli, Salem and more), elsewhere in India, across Malaysia, and in Singapore and Dubai. Most SEO, Google Maps, ads and website work is delivered remotely by video call and WhatsApp, with in-person meetings by appointment where we have an office.',
   },
 ]
 

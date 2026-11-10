@@ -27,7 +27,7 @@ import { AuditBlock } from '../../../components/v2/V2Blocks.jsx'
    ============================================================ */
 
 const PAGE_TITLE =
-  'Local SEO Company in Madurai | Google Maps & GBP | Static Savvy Media'
+  'Local SEO Company in Madurai: Google Maps | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
   'Local SEO services in Madurai to rank on Google Maps. GBP optimisation, citations & reviews from a team rated 4.9★ from 106 Google reviews. WhatsApp us today.'
@@ -244,12 +244,12 @@ const LOCATION_PAGES = [
 
 const FAQS = [
   {
-    question: 'What is the difference between SEO and Local SEO?',
+    question: 'Does my Madurai business need SEO or Local SEO?',
     answer:
-      'Standard SEO targets any search query regardless of location. Local SEO specifically targets queries with local intent, "near me," "in Madurai", and focuses on the Google Maps pack (the three-business box above traditional results for local queries). Most local businesses need both, but Local SEO is usually the higher priority for brick-and-mortar and service-area businesses.',
+      'If customers come to you or you serve set areas of Madurai, such as a clinic in Anna Nagar, a shop on Town Hall Road or a service business covering KK Nagar and Bypass Road, start with Local SEO: your Google Business Profile, reviews and area pages decide most of your calls. If you sell across Tamil Nadu, India or online, website SEO matters more. Many Madurai businesses need both, and we tell you which to start with after the free audit.',
   },
   {
-    question: 'How long does it take to rank in Google Maps?',
+    question: 'How long does it take to rank in Google Maps in Madurai?',
     answer:
       'Timelines vary based on competition, business category, existing authority, GBP quality, citations, reviews and local search demand. For low-competition local queries, GBP optimization alone can produce visible movement within 4–8 weeks. For competitive categories, expect 3–6 months of consistent effort.',
   },
@@ -264,9 +264,9 @@ const FAQS = [
       'Yes. Establishing accurate business information, relevant local content, GBP setup and review processes can help build local visibility over time. New businesses should focus on complete GBP setup, consistent NAP information and building initial reviews.',
   },
   {
-    question: 'Does Local SEO work with Google Maps?',
+    question: 'Will Local SEO get my Madurai shop into the Google Maps top 3?',
     answer:
-      'Yes. Local SEO directly impacts your visibility in Google Maps and the local pack. Google Business Profile optimization, citations, reviews and local content all contribute to how your business appears in Google Maps results.',
+      'No agency can guarantee a top-3 Maps position, and you should be wary of any that does. What Local SEO does is improve the three things Google ranks on: relevance (categories, services and keywords on your profile), distance (your pin and service areas across Madurai) and prominence (reviews, photos, citations and links). We report your Maps visibility across Madurai areas monthly so you can see the change.',
   },
 ]
 

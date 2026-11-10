@@ -19,7 +19,7 @@ import blogHeroImg from '../../assets/images/Blog/Blog.webp'
    CONTENT, Approved Static Savvy Media Blog Hub Content
    ============================================================ */
 
-const PAGE_TITLE = 'Digital Marketing Blog, SEO, GEO, AEO & AI Search Insights | Static Savvy Media'
+const PAGE_TITLE = 'Digital Marketing Blog: SEO & AI Search | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
   "Explore Static Savvy Media's digital marketing insights on SEO, GEO, AEO, AI search, Local SEO and digital growth across Tamil Nadu and Malaysia."

@@ -26,7 +26,7 @@ import { AuditBlock } from '../../../components/v2/V2Blocks.jsx'
    ============================================================ */
 
 const PAGE_TITLE =
-  'SEO Services in Thoothukudi, Search Engine Optimization | Static Savvy Media'
+  'SEO Services in Thoothukudi | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
   'SEO services in Thoothukudi focused on technical SEO, keyword strategy, on-page optimization, content development and stronger organic search visibility.'
@@ -236,9 +236,9 @@ const LOCATION_PAGES = [
 
 const FAQS = [
   {
-    question: 'What does an SEO agency do?',
+    question: 'What does an SEO agency in Thoothukudi do?',
     answer:
-      'An SEO agency helps businesses improve their organic search visibility through technical SEO, keyword research, on-page optimization, content development, internal linking, schema implementation and performance measurement.',
+      'An SEO agency helps your website show up when people in and around Thoothukudi search for what you sell. For port, logistics, salt, seafood and retail businesses that means researching local and B2B search terms, fixing technical issues, writing service and product pages, building your Google Business Profile and reporting rankings and enquiries monthly from your own Google accounts.',
   },
   {
     question: 'How can SEO help a Thoothukudi business?',
@@ -246,14 +246,14 @@ const FAQS = [
       'SEO helps Thoothukudi businesses become more discoverable when customers actively search for relevant products and services. By improving search visibility, businesses can attract relevant traffic and generate qualified enquiries.',
   },
   {
-    question: 'How long does SEO take to show results?',
+    question: 'How long does SEO take for a Thoothukudi business?',
     answer:
       'Timelines vary based on competition, domain authority, technical condition, content quality, search demand, industry and existing visibility. Some improvements may be visible within weeks, while competitive keywords may take several months of consistent effort.',
   },
   {
-    question: 'How much does SEO cost?',
+    question: 'How much does SEO cost in Thoothukudi?',
     answer:
-      'SEO costs depend on the scope of work, competition and business objectives. We quote every plan after a free consultation on your specific needs. Message us on WhatsApp at +91 99440 40345 or send an enquiry for a custom quote.',
+      'It depends on how many services and areas you want to rank for, how competitive they are and how much content and technical work your site needs. We quote after a free review of your website and competitors, so the plan matches your business rather than a fixed package. Message us on WhatsApp at +91 99440 40345 or send the audit form for a quote.',
   },
   {
     question: 'Can SEO and Local SEO work together?',

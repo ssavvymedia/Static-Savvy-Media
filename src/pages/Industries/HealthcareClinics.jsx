@@ -28,7 +28,7 @@ import healthcareHeroImg from '../../assets/images/Industries/02healthcare.webp'
    ============================================================ */
 
 const PAGE_TITLE =
-  'Digital Marketing for Healthcare & Clinics | Tamil Nadu & Malaysia | Static Savvy Media'
+  'Digital Marketing for Healthcare & Clinics | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
   'Local SEO, Google Ads, and AI search visibility for hospitals, clinics, and healthcare practices in Tamil Nadu and Malaysia.'

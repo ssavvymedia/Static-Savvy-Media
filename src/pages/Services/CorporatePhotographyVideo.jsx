@@ -29,7 +29,7 @@ import corporateHeroImg from '../../assets/images/services/09corporate.webp'
    ============================================================ */
 
 const PAGE_TITLE =
-  'Corporate Photography & Video Production in Madurai & Tamil Nadu | Static Savvy Media'
+  'Corporate Photography & Video in Madurai | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
   'Professional corporate photography and video production in Madurai. Team headshots, office photography, brand videos, and event coverage for Tamil Nadu and Malaysia businesses.'

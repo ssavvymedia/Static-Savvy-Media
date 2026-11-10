@@ -29,7 +29,7 @@ import websiteHeroImg from '../../assets/images/services/06website.webp'
    ============================================================ */
 
 const PAGE_TITLE =
-  'Website Design & Development Services | India & Malaysia | Static Savvy Media'
+  'Website Design & Development Services | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
   'Custom website design and development in Madurai. SEO-ready, Core Web Vitals optimised, mobile-first. WordPress and Next.js builds that rank, load fast, and convert visitors into WhatsApp enquiries.'

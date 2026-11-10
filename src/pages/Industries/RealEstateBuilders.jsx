@@ -27,7 +27,7 @@ import realEstateHeroImg from '../../assets/images/Industries/08realestate.webp'
    ============================================================ */
 
 const PAGE_TITLE =
-  'Digital Marketing for Real Estate & Property Developers in Tamil Nadu | Static Savvy Media'
+  'Real Estate Digital Marketing, Tamil Nadu | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
   'Generate property enquiries with SEO, Google Ads, Facebook lead generation, and virtual tour content. Real estate digital marketing for Tamil Nadu builders and developers.'

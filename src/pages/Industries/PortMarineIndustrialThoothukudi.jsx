@@ -27,7 +27,7 @@ import portHeroImg from '../../assets/images/Industries/06port.webp'
    ============================================================ */
 
 const PAGE_TITLE =
-  'Digital Marketing for Port, Marine & Industrial Businesses in Thoothukudi | Static Savvy Media'
+  'Port & Industrial Marketing, Thoothukudi | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
   'B2B digital marketing for shipping, logistics, chemical manufacturing, and marine businesses in Thoothukudi. SEO, LinkedIn, Google Ads.'

@@ -31,7 +31,7 @@ import malaysiaHeroImg from '../../assets/images/locations/02malaysia.webp'
    ============================================================ */
 
 const PAGE_TITLE =
-  'Digital Marketing Agency Malaysia | Rawang, Selangor Office | Static Savvy Media'
+  'Digital Marketing Agency Malaysia (Rawang) | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
   "Digital marketing agency for Malaysian SMEs with an office in Rawang, Selangor: SEO, Google Maps, AI search, Google Ads, social and websites. Call +60 12-453 7030."
@@ -199,7 +199,7 @@ const FAQS = [
       'Static Savvy Media is headquartered in Madurai, India, where it was founded in 2021, and has a Malaysia office in Rawang, Selangor, with a Malaysian phone line and MYR invoicing. Our Madurai team is rated 4.9★ from 106 Google reviews (November 2026).',
   },
   {
-    question: 'Do you guarantee first-page rankings?',
+    question: 'Do you guarantee first-page rankings on google.com.my?',
     answer:
       'No. Nobody controls Google’s rankings, and agencies that guarantee page one often rely on risky shortcuts. We agree the pages, profiles and campaigns we will work on, and report calls, WhatsApp chats, form enquiries and rankings from your own accounts every month.',
   },

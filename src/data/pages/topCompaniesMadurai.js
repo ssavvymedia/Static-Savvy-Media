@@ -30,7 +30,7 @@ export const COMPANIES = [
 export const content = {
   path: PATH,
   ogImage: '/og/locations-01madurai.jpg',
-  title: 'Digital Marketing Companies in Madurai Compared (2026): Services, Focus & Ratings',
+  title: 'Digital Marketing Companies in Madurai Compared (2026)',
   description: DESCRIPTION,
   eyebrow: 'GUIDE · UPDATED 10 NOVEMBER 2026',
   h1: 'Digital Marketing Companies in Madurai Compared: A 2026 Guide',
@@ -169,7 +169,7 @@ export const content = {
     { question: 'Is Static Savvy Media a good digital marketing company in Madurai?', answer: 'Static Savvy Media is a Madurai agency at Kamarajar Salai, founded in 2021, rated 4.9★ from 106 Google reviews (9 November 2026). It is strongest in SEO, Local SEO and Google Business Profile, and AI search (GEO/AEO). We wrote this guide, so compare us on the same criteria as everyone else.' },
     { question: 'Is this list ranked?', answer: 'No. Companies are listed alphabetically. Static Savvy Media wrote this guide and is included in it, which is why we have not ranked anyone.' },
     { question: 'How were companies chosen?', answer: 'We included Madurai agencies that appear prominently in Google Maps and web search results for digital marketing and SEO in Madurai in October and November 2026. If your agency should be added or a detail is out of date, message us and we will review it.' },
-    { question: 'How much does digital marketing cost in Madurai?', answer: 'Typical market ranges in 2026 are about ₹5,000–₹10,000 a month for Local SEO and Google Business Profile, ₹12,000–₹25,000 for SEO with AEO, ₹8,000–₹20,000 for ads management (ad spend separate) and ₹10,000–₹35,000 one-time for a website. These are market ranges, not one agency’s prices; see our Madurai cost guide.' },
+    { question: 'What do digital marketing companies in Madurai charge?', answer: 'Typical market ranges in 2026 are about ₹5,000–₹10,000 a month for Local SEO and Google Business Profile, ₹12,000–₹25,000 for SEO with AEO, ₹8,000–₹20,000 for ads management (ad spend separate) and ₹10,000–₹35,000 one-time for a website. These are market ranges, not one agency’s prices; see our Madurai cost guide.' },
     { question: 'Should I choose a Madurai agency or one from Chennai or Bengaluru?', answer: 'A Madurai agency knows local search behaviour, Tamil content and the Google Maps competition in your area, and you can meet in person. A larger-city agency may suit national campaigns. What matters most is proof of work for businesses like yours.' },
     { question: 'What should a digital marketing contract in Madurai include?', answer: 'The monthly deliverables, what ad spend is separate, the reporting you will get, who owns the accounts (it should be you), the minimum term and notice period. Avoid contracts that promise guaranteed No. 1 rankings.' },
   ],

@@ -30,7 +30,7 @@ import productHeroImg from '../../assets/images/services/10product.webp'
    ============================================================ */
 
 const PAGE_TITLE =
-  'Product Photography & Creative Design, E-Commerce & Brand Visuals | Static Savvy Media Madurai'
+  'Product Photography & Creative Design | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
   'E-commerce-ready product photography and creative graphic design in Madurai. Studio photography, lifestyle shots, and brand design for Tamil Nadu and Malaysia businesses.'

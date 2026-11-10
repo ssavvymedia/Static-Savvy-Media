@@ -226,7 +226,7 @@ const FAQS = [
     answer: 'Look for an agency with a clear SEO process, technical SEO capability, real Google Search Console reporting, transparent communication, search-intent-based content strategy, relevant local experience, and a clear roadmap for measuring business outcomes.',
   },
   {
-    question: 'How much does SEO cost in Madurai?',
+    question: 'What should I budget for an SEO agency in Madurai?',
     answer: 'Indicative SEO pricing can range from around ₹8,000 to ₹40,000+ per month depending on scope, competition, website complexity, content requirements and technical work. Pricing varies by agency and business requirements.',
   },
   {

@@ -263,7 +263,7 @@ const FAQS = [
     answer: 'At minimum: progress against a written plan, technical or on-page work completed, content or Google Business Profile activity as scoped, and a report that ties Search Console impressions, clicks and queries to enquiries or calls. Vanity keyword counts alone are not enough.',
   },
   {
-    question: 'How much does SEO cost in Madurai?',
+    question: 'What should I budget for an SEO agency in Madurai?',
     answer: 'When we checked published Madurai SEO packages in late October 2026, typical market ranges ran about ₹8,000–₹40,000+ per month depending on scope and competition. These are market rates, not Static Savvy Media prices — we quote after a free review. Compare what is included (GBP posts, pages, technical work, reporting) more than the headline number.',
   },
   {
@@ -321,7 +321,7 @@ export default function SEO() {
 
   useEffect(() => {
     setSeo({
-      title: `${PAGE_TITLE} | Static Savvy Media`,
+      title: PAGE_TITLE,
       description: PAGE_DESCRIPTION,
       canonical: `${SITE_URL}/blog/seo-agency-madurai-complete-guide/`,
       ogType: 'article',

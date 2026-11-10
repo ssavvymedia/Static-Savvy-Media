@@ -7,7 +7,7 @@
 export const sanityPostOverrides = {
   'seo-audit-services-madurai': {
     title: 'SEO Audit in Madurai: What a Website & Local SEO Audit Checks',
-    seoTitle: 'SEO Audit in Madurai: What a Website & Local SEO Audit Checks (2026)',
+    seoTitle: 'SEO Audit in Madurai: What a Website & Local SEO Audit Checks',
     seoDescription:
       'What a proper SEO audit for a Madurai business covers: technical, content, local SEO and Google Business Profile, competitors and AI-search visibility, and what you get at the end.',
     callout: {
@@ -18,7 +18,7 @@ export const sanityPostOverrides = {
   },
   'how-to-choose-the-right-digital-marketing-agency-in-madurai': {
     title: 'How to Choose a Digital Marketing Agency in Madurai: 10 Questions to Ask',
-    seoTitle: 'How to Choose a Digital Marketing Agency in Madurai: 10 Questions to Ask',
+    seoTitle: 'How to Choose a Digital Marketing Agency in Madurai',
     seoDescription:
       'Questions to ask any Madurai digital marketing agency before you sign: services, reporting, ownership of accounts, pricing and proof. A practical checklist for local business owners.',
     callout: {
@@ -29,7 +29,7 @@ export const sanityPostOverrides = {
   },
   'what-is-geo-generative-engine-optimization-in-digital-marketing': {
     title: 'What Is GEO in Digital Marketing? Generative Engine Optimization Explained',
-    seoTitle: 'What Is GEO in Digital Marketing? Generative Engine Optimization (2026)',
+    seoTitle: 'What Is GEO in Digital Marketing? (2026 Guide)',
     seoDescription:
       'GEO (generative engine optimization) gets your brand cited in ChatGPT, Gemini, Perplexity and Google AI Overviews. What it is, how it differs from SEO and AEO, and how to start.',
     callout: {
