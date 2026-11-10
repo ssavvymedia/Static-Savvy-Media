@@ -145,7 +145,7 @@ export async function ssrBodies(root, distAssets) {
       }
       /* Founder Person node: profile page (mainEntity), and any page that shows the founder block or byline. */
       if (r.pageType === 'ProfilePage') nodes[0].mainEntity = { '@id': founderId(HOST) }
-      if (!nodes.includes(person) && (r.pageType === 'ProfilePage' || /hv2-founder|city-founder|author-box/.test(html))) nodes.push(person)
+      if (!nodes.includes(person) && (r.pageType === 'ProfilePage' || /hv2-founder|city-founder|author-box--founder/.test(html))) nodes.push(person)
       if (faqs.length) nodes.push({ '@type': 'FAQPage', mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) })
       let app = null
       try { app = renderApp(r.route) } catch (e) { console.warn(`ssr-bodies: ${r.route} full-app render failed, shipping page body only: ${String(e?.message || e).slice(0, 200)}`) }

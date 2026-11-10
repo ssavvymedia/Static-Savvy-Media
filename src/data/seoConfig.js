@@ -764,16 +764,38 @@ export const seoConfig = {
   },
 
   // Industry Hub & Pages
+  "/solutions": {
+    title: "Growth Solutions: SEO, AI Search & Google Ads | Static Savvy Media",
+    slug: "solutions",
+    seo: {
+      title: "Growth Solutions: SEO, AI Search & Google Ads | Static Savvy Media",
+      description:
+        "Five growth solutions from Static Savvy Media, Madurai: SEO & content, AI search (GEO/AEO), Local SEO & Google Business Profile, Google Ads and website development, for India and Malaysia.",
+      canonical: `${BASE_URL}/solutions`,
+      focusKeyword: "digital marketing growth solutions",
+      ogTitle: "Growth Solutions: SEO, AI Search & Google Ads | Static Savvy Media",
+      ogDescription:
+        "Five growth solutions from Static Savvy Media, Madurai: SEO & content, AI search (GEO/AEO), Local SEO & Google Business Profile, Google Ads and website development, for India and Malaysia.",
+      ogImage: `${BASE_URL}/og/industries-industriesmain.jpg`,
+      schema: {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        name: "Growth Solutions: SEO, AI Search & Google Ads | Static Savvy Media",
+        url: `${BASE_URL}/solutions`,
+      },
+      robots: "index,follow",
+    },
+  },
   "/industries": {
-    title: "Industry Digital Marketing Solutions | Static Savvy Media",
+    title: "Digital Marketing by Industry | Static Savvy Media",
     slug: "industries",
     seo: {
-      title: "Industry Digital Marketing Solutions | Static Savvy Media",
+      title: "Digital Marketing by Industry | Static Savvy Media",
       description:
-        "Tailored digital marketing solutions for Retail, Healthcare, Education, Hospitality, Textiles, Port & Maritime, SMEs, and Real Estate.",
+        "Industry-focused digital marketing from our Madurai HQ for healthcare, real estate, manufacturing & B2B, education, hospitality, retail, textiles, port & industrial and Malaysian SMEs.",
       canonical: `${BASE_URL}/industries`,
       focusKeyword: "industry digital marketing",
-      ogTitle: "Industry Digital Marketing Solutions | Static Savvy Media",
+      ogTitle: "Digital Marketing by Industry | Static Savvy Media",
       ogDescription:
         "Tailored digital marketing solutions for Retail, Healthcare, Education, Textiles, and Real Estate.",
       ogImage: `${BASE_URL}/og/industries-industriesmain.jpg`,
@@ -782,6 +804,28 @@ export const seoConfig = {
         "@type": "Organization",
         name: SITE_NAME,
         url: `${BASE_URL}/industries`,
+      },
+      robots: "index,follow",
+    },
+  },
+  "/industries/manufacturing-b2b": {
+    title: "Manufacturing & B2B Digital Marketing | Static Savvy Media",
+    slug: "industries/manufacturing-b2b",
+    seo: {
+      title: "Manufacturing & B2B Digital Marketing | Static Savvy Media",
+      description:
+        "B2B SEO, Google Ads, AI search and websites for manufacturers, exporters and industrial suppliers in Madurai, Tamil Nadu and Malaysia. Get a free Growth Audit from our Madurai HQ.",
+      canonical: `${BASE_URL}/industries/manufacturing-b2b`,
+      focusKeyword: "digital marketing for manufacturing companies",
+      ogTitle: "Manufacturing & B2B Digital Marketing | Static Savvy Media",
+      ogDescription:
+        "B2B SEO, Google Ads, AI search and websites for manufacturers, exporters and industrial suppliers in Madurai, Tamil Nadu and Malaysia. Get a free Growth Audit from our Madurai HQ.",
+      ogImage: `${BASE_URL}/og/industries-06port.jpg`,
+      schema: {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: "Manufacturing & B2B Digital Marketing | Static Savvy Media",
+        url: `${BASE_URL}/industries/manufacturing-b2b`,
       },
       robots: "index,follow",
     },

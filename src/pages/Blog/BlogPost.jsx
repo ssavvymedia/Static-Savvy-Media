@@ -1,4 +1,5 @@
-import { useState, useEffect, useMemo } from 'react'
+import { useState, useEffect, useMemo, useContext } from 'react'
+import { BlogAuthorContext } from '../../context/BlogAuthorContext.js'
 import { Link, useParams } from 'react-router-dom'
 import { applySanityOverride } from '../../data/blogOverrides.js'
 import { PortableText } from '@portabletext/react'
@@ -103,6 +104,12 @@ export default function BlogPost() {
     return () => { live = false }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [slug])
+
+  /* Tell BlogLayout who the CMS credits, so the author box matches (company vs founder). */
+  const reportAuthor = useContext(BlogAuthorContext)
+  useEffect(() => {
+    if (reportAuthor && post) reportAuthor({ slug: cleanSlug(post.slug), author: post.author || null })
+  }, [post, reportAuthor])
 
   const readingTime = useMemo(() => estimateReadingTime(post?.body), [post])
   const publishedLabel = useMemo(() => formatDate(post?.publishedAt), [post])

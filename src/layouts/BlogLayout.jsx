@@ -1,4 +1,6 @@
+import { useState } from 'react'
 import { useLocation } from 'react-router-dom'
+import { BlogAuthorContext } from '../context/BlogAuthorContext.js'
 import MainLayout from './MainLayout.jsx'
 import AuthorBox from '../components/blog/AuthorBox.jsx'
 import { AuditBlock } from '../components/v2/V2Blocks.jsx'
@@ -21,10 +23,19 @@ function cityForSlug(slug) {
 }
 
 /* Blog routes: every post (not the /blog/ index) ends with the Growth Audit form and the founder's author box. */
+/* CMS author of the current post: build-time / hydration preload first, then whatever BlogPost reports. */
+function preloadAuthor(slug) {
+  const g = typeof window !== 'undefined' ? window : globalThis
+  const p = g.__SSM_POST__
+  return p && String(p.slug || '').replace(/^\/+|\/+$/g, '') === slug ? p.author || null : null
+}
+
 export default function BlogLayout() {
   const { pathname } = useLocation()
   const m = pathname.match(/^\/blog\/([^/]+)\/?$/)
   const path = m ? `/blog/${m[1]}/` : ''
+  const [reported, setReported] = useState({ slug: null, author: null })
+  const author = m ? (reported.slug === m[1] ? reported.author : preloadAuthor(m[1])) : null
   const after = m ? (
     <>
       {!HAS_OWN_AUDIT.has(path) && (
@@ -37,8 +48,12 @@ export default function BlogLayout() {
           cover={false}
         />
       )}
-      <AuthorBox />
+      <AuthorBox org={author === 'Static Savvy Media'} />
     </>
   ) : null
-  return <MainLayout className="layout--blog" afterOutlet={after} />
+  return (
+    <BlogAuthorContext.Provider value={setReported}>
+      <MainLayout className="layout--blog" afterOutlet={after} />
+    </BlogAuthorContext.Provider>
+  )
 }

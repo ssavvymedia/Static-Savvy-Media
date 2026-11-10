@@ -16,7 +16,7 @@ export const RESOURCE_LINKS = [
 export const NAV_LINKS = [
   { label: "Home", path: "/" },
   { label: "Industries", path: "/industries/", menu: industries },
-  { label: "Growth Solutions", path: "/services/", menu: services },
+  { label: "Growth Solutions", path: "/solutions/", menu: services },
   { label: "Case Studies", path: "/case-studies/" },
   { label: "Locations", path: "/locations/", menu: locationGroups },
   { label: "Resources", path: "/blog/", menu: RESOURCE_LINKS },
@@ -82,6 +82,8 @@ export const BREADCRUMB_LABELS = {
   "top-digital-marketing-companies-in-madurai": "Top Digital Marketing Companies in Madurai",
   malaysia: "Malaysia",
   industries: "Industries",
+  solutions: "Growth Solutions",
+  "manufacturing-b2b": "Manufacturing & B2B",
   "retail-ecommerce": "Retail & E-Commerce",
   "healthcare-clinics": "Healthcare & Clinics",
   "education-training": "Education & Training",

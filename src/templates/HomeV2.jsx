@@ -23,7 +23,7 @@ const P = {
 const INDUSTRIES = [
   { name: 'Healthcare & Medical', to: '/industries/healthcare-clinics/', img: IndHealthcare, alt: 'Bright modern clinic reception', d: 'M12 21s-7-4.5-9-9.5C1.8 8 4 4.5 7.5 4.5c2 0 3.4 1.1 4.5 2.6 1.1-1.5 2.5-2.6 4.5-2.6C20 4.5 22.2 8 21 11.5 19 16.5 12 21 12 21zM12 9v5M9.5 11.5h5' },
   { name: 'Real Estate & Construction', to: '/industries/real-estate-builders/', img: IndRealEstate, alt: 'Modern apartment building at golden hour', d: 'M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6' },
-  { name: 'Textiles & Manufacturing', to: '/industries/textiles-madurai/', img: IndManufacturing, alt: 'Modern manufacturing facility with fabric rolls', d: 'M3 21V10l6 4V10l6 4V6l6 3v12zM7 17h2M12 17h2M17 17h2' },
+  { name: 'Manufacturing & B2B', to: '/industries/manufacturing-b2b/', img: IndManufacturing, alt: 'Modern manufacturing facility with fabric rolls', d: 'M3 21V10l6 4V10l6 4V6l6 3v12zM7 17h2M12 17h2M17 17h2' },
   { name: 'Education & Training', to: '/industries/education-training/', img: IndEducation, alt: 'Students walking on a modern campus', d: 'M2 9l10-5 10 5-10 5zM6 11v5c3 2.5 9 2.5 12 0v-5M22 9v6' },
   { name: 'Hospitality & Travel', to: '/industries/hospitality-hotels/', img: IndHospitality, alt: 'Tropical resort pool at dusk', d: 'M3 18c2 0 2-1.5 4.5-1.5S10 18 12 18s2-1.5 4.5-1.5S19 18 21 18M12 14V7M12 7c-1-2.5-4-3-6-2 1.8.4 3.5 1.5 4 3M12 7c1-2.5 4-3 6-2-1.8.4-3.5 1.5-4 3' },
 ]
@@ -144,7 +144,7 @@ export default function HomeV2({ whatsappHref }) {
                 <span className="hv2-eyebrow">Our growth solutions</span>
                 <h2 className="hv2-h2">Integrated digital growth solutions.</h2>
                 <p className="hv2-lead" style={{ marginTop: 14 }}>A results-driven approach to improve visibility, generate qualified leads and grow your business.</p>
-                <p style={{ marginTop: 24 }}><Link className="hv2-link" to="/services/">Explore all solutions <span className="hv2-arrow" aria-hidden="true">→</span></Link></p>
+                <p style={{ marginTop: 24 }}><Link className="hv2-link" to="/solutions/">Explore all solutions <span className="hv2-arrow" aria-hidden="true">→</span></Link></p>
               </div>
               <div>
                 <div className="hv2-tiles">

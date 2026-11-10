@@ -193,3 +193,25 @@ export function CardGrid({ eyebrow, heading, intro, items, section = 'cards', co
     </section>
   )
 }
+
+/** Photo cards (homepage industries style) for hub pages. items: { name, to, img, alt, d?, text? } */
+export function PhotoCards({ eyebrow, heading, intro, items, section = 'photo-cards', cols = 5 }) {
+  return (
+    <section className="hv2 hv2-section hv2-section--flush" data-section={section} style={{ paddingTop: 'clamp(40px,5vw,64px)' }}>
+      <div className="hv2-wrap">
+        {eyebrow && <span className="hv2-eyebrow">{eyebrow}</span>}
+        {heading && <h2 className="hv2-h2">{heading}</h2>}
+        {intro && <p className="hv2-lead" style={{ margin: '12px 0 0' }}>{intro}</p>}
+        <div className={`hv2-ind hv2-ind--${cols}`} style={{ marginTop: 28 }}>
+          {items.map((i) => (
+            <Link className="hv2-card" to={i.to} key={i.to}>
+              <div className="hv2-ph"><img loading="lazy" decoding="async" src={i.img} width={640} height={480} alt={i.alt} /></div>
+              <div className="hv2-body">{i.d && <Ico d={i.d} />}<h3>{i.name}</h3><span className="hv2-arrow" aria-hidden="true">→</span></div>
+              {i.text && <p className="hv2-card__text">{i.text}</p>}
+            </Link>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}

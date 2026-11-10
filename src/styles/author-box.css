@@ -9,3 +9,4 @@
 .author-box__links { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 0; font-size: 14px; }
 .author-box__links a { color: var(--color-accent-ink, var(--color-purple)); font-weight: 600; }
 @media (max-width: 560px) { .author-box__inner { grid-template-columns: 64px 1fr; gap: 14px; padding: 18px; } .author-box__img { width: 64px; height: 64px; } }
+.author-box__img--logo { object-fit: contain; background: #fff; padding: 10px; }

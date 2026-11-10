@@ -9,7 +9,7 @@ import IndustriesMenu from "./IndustriesMenu.jsx";
 import ResourcesMenu from "./ResourcesMenu.jsx";
 
 const MENU_COMPONENTS = {
-  "/services/": ServicesMenu,
+  "/solutions/": ServicesMenu,
   "/locations/": LocationsMenu,
   "/industries/": IndustriesMenu,
   "/blog/": ResourcesMenu,

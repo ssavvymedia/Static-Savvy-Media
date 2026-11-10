@@ -1,12 +1,34 @@
 import { Link } from 'react-router-dom'
 import founderImg from '../../assets/images/About/DeepanFounder.webp'
+import logoImg from '../../assets/images/logo/SSMLOGO.webp'
 import { FOUNDER } from '../../data/founder.js'
 import '../../styles/author-box.css'
 
-/** "Written by" box shown on every blog post (rendered by BlogLayout). */
-export default function AuthorBox() {
+/** Author box shown on every blog post (rendered by BlogLayout).
+ *  `org`: the post is credited to "Static Savvy Media" in the CMS, so show the company, not the founder. */
+export default function AuthorBox({ org = false }) {
+  if (org) {
+    return (
+      <aside className="author-box author-box--org" aria-label="About the author" data-section="author-box">
+        <div className="author-box__inner">
+          <img src={logoImg} width={96} height={96} loading="lazy" decoding="async" alt="Static Savvy Media logo" className="author-box__img author-box__img--logo" />
+          <div>
+            <p className="author-box__eyebrow">Written by</p>
+            <p className="author-box__name">
+              <Link to="/about/">Static Savvy Media team</Link>
+              <span>Digital marketing agency, Madurai HQ</span>
+            </p>
+            <p className="author-box__bio">Written by the Static Savvy Media team, the digital marketing agency headquartered in Madurai, Tamil Nadu since 2021, with an office in Rawang, Malaysia. We work on SEO, Google Maps, AI search, ads and websites for small and mid-sized businesses.</p>
+            <p className="author-box__links">
+              <Link to="/about/">About Static Savvy Media</Link>
+            </p>
+          </div>
+        </div>
+      </aside>
+    )
+  }
   return (
-    <aside className="author-box" aria-label="About the author" data-section="author-box">
+    <aside className="author-box author-box--founder" aria-label="About the author" data-section="author-box">
       <div className="author-box__inner">
         <img src={founderImg} width={740} height={941} loading="lazy" decoding="async" alt={`${FOUNDER.name}, ${FOUNDER.role} at Static Savvy Media`} className="author-box__img" />
         <div>

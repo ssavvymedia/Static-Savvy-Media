@@ -11,6 +11,7 @@ export const industries = [
   { slug: 'textiles-madurai', name: 'Textiles (Madurai)', path: '/industries/textiles-madurai/' },
   { slug: 'port-marine-industrial-thoothukudi', name: 'Port, Marine & Industrial (Thoothukudi)', path: '/industries/port-marine-industrial-thoothukudi/' },
   { slug: 'smes-malaysia-grant-eligible', name: 'SMEs (Malaysia, Grant Eligible)', path: '/industries/smes-malaysia-grant-eligible/' },
+  { slug: 'manufacturing-b2b', name: 'Manufacturing & B2B', path: '/industries/manufacturing-b2b/' },
   { slug: 'real-estate-builders', name: 'Real Estate & Builders', path: '/industries/real-estate-builders/' },
 ]
 

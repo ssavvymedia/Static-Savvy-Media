@@ -1828,6 +1828,16 @@
       "statusCode": 308
     },
     {
+      "source": "/industries/manufacturing-b2b",
+      "destination": "/industries/manufacturing-b2b/",
+      "statusCode": 308
+    },
+    {
+      "source": "/solutions",
+      "destination": "/solutions/",
+      "statusCode": 308
+    },
+    {
       "source": "/industries/retail-ecommerce",
       "destination": "/industries/retail-ecommerce/",
       "statusCode": 308
@@ -2327,6 +2337,14 @@
     },
     {
       "source": "/industries/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/industries/manufacturing-b2b/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/solutions/",
       "destination": "/index.html"
     },
     {
