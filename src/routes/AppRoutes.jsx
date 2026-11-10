@@ -4,7 +4,7 @@ import LandingLayout from '../layouts/LandingLayout.jsx'
 import ContentLayout from '../layouts/ContentLayout.jsx'
 import BlogLayout from '../layouts/BlogLayout.jsx'
 
-import Home from '../pages/Home/Home.jsx'
+const Home = lazyPage('src/pages/Home/Home.jsx', () => import('../pages/Home/Home.jsx'))
 
 const About = lazyPage('src/pages/About/About.jsx', () => import('../pages/About/About.jsx'))
 const Founder = lazyPage('src/pages/About/Founder.jsx', () => import('../pages/About/Founder.jsx'))

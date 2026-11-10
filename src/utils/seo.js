@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 /* seoConfig (~90 KB of route data) loads on demand: prerendered HTML already carries each route's head. */
 let seoConfigPromise = null
+let seoNavigated = false
 export const loadSeoConfig = () => (seoConfigPromise ||= import('../data/seoConfig.js'))
 import { SITE_NAME, SITE_URL, SITE_DESCRIPTION } from './constants.js'
 
@@ -146,11 +147,13 @@ export function useRouteSEO(customPath) {
       })
     }
     })
-    /* First load: the HTML head is already right, so wait for idle; client navigations update at once. */
-    if (document.readyState !== 'complete') {
-      const ric = window.requestIdleCallback || ((f) => setTimeout(f, 1500))
-      window.addEventListener('load', () => ric(run), { once: true })
-    } else run()
+    /* First load of a prerendered route: the HTML head (title, meta, canonical, JSON-LD) is already
+     * this route's, so skip loading seoConfig at all; client-side navigations load it on demand. */
+    const root = document.getElementById('root')
+    const here = window.location.pathname.endsWith('/') ? window.location.pathname : `${window.location.pathname}/`
+    if (!seoNavigated && root?.dataset.ssr === here) { seoNavigated = true; return () => { live = false } }
+    seoNavigated = true
+    run()
     return () => { live = false }
   }, [path])
 }
