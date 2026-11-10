@@ -149,8 +149,8 @@ export function AnswerFirst({ eyebrow = 'Quick answer', heading, text, facts = [
   )
 }
 
-/** Market-range table (general Madurai market ranges, never our prices). */
-export function MarketRangeTable({ eyebrow = 'Cost', heading, intro, rows, note, link }) {
+/** Market-range table (general market ranges, never our prices). */
+export function MarketRangeTable({ eyebrow = 'Cost', heading, intro, rows, note, link, colLabel = 'Typical Madurai market range' }) {
   return (
     <section className="hv2 hv2-section hv2-section--flush" data-section="market-ranges" style={{ paddingTop: 'clamp(40px,5vw,64px)' }}>
       <div className="hv2-wrap">
@@ -159,12 +159,34 @@ export function MarketRangeTable({ eyebrow = 'Cost', heading, intro, rows, note,
         {intro && <p className="hv2-lead" style={{ margin: '12px 0 24px' }}>{intro}</p>}
         <div className="hv2-table-wrap">
           <table className="hv2-table">
-            <thead><tr><th scope="col">What you buy</th><th scope="col">Typical Madurai market range</th><th scope="col">What drives the price</th></tr></thead>
+            <thead><tr><th scope="col">What you buy</th><th scope="col">{colLabel}</th><th scope="col">What drives the price</th></tr></thead>
             <tbody>{rows.map((r) => <tr key={r[0]}><td>{r[0]}</td><td>{r[1]}</td><td>{r[2]}</td></tr>)}</tbody>
           </table>
         </div>
         {note && <p className="hv2-fine" style={{ marginTop: 12 }}>{note}</p>}
         {link && <p style={{ marginTop: 14 }}><Link className="hv2-link" to={link.to}>{link.label} <span className="hv2-arrow" aria-hidden="true">→</span></Link></p>}
+      </div>
+    </section>
+  )
+}
+
+/** Simple card grid (title, text, optional link) for hub pages. */
+export function CardGrid({ eyebrow, heading, intro, items, section = 'cards', cols = 3 }) {
+  return (
+    <section className="hv2 hv2-section hv2-section--flush" data-section={section} style={{ paddingTop: 'clamp(40px,5vw,64px)' }}>
+      <div className="hv2-wrap">
+        {eyebrow && <span className="hv2-eyebrow">{eyebrow}</span>}
+        <h2 className="hv2-h2">{heading}</h2>
+        {intro && <p className="hv2-lead" style={{ margin: '12px 0 0' }}>{intro}</p>}
+        <ul className={`hv2-cards hv2-cards--${cols}`}>
+          {items.map((it) => (
+            <li key={it.title} className="hv2-cardx">
+              <h3>{it.link ? <Link to={it.link}>{it.title}</Link> : it.title}</h3>
+              <p>{it.text}</p>
+              {it.link && <Link className="hv2-link" to={it.link} aria-hidden="true" tabIndex={-1}>{it.linkLabel || 'Learn more'} <span className="hv2-arrow">→</span></Link>}
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   )

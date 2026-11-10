@@ -1783,6 +1783,11 @@
       "statusCode": 308
     },
     {
+      "source": "/locations/rawang",
+      "destination": "/locations/rawang/",
+      "statusCode": 308
+    },
+    {
       "source": "/locations/singapore",
       "destination": "/locations/singapore/",
       "statusCode": 308
@@ -2286,6 +2291,10 @@
     },
     {
       "source": "/locations/selangor/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/locations/rawang/",
       "destination": "/index.html"
     },
     {

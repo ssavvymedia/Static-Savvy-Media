@@ -1,41 +1,13 @@
 import { useId, useRef, useState } from 'react'
 import ReCAPTCHAModule from 'react-google-recaptcha'
 import { track, getAttribution } from '../../utils/track.js'
+import { AUDIT_INDUSTRIES, AUDIT_CITIES, BUDGETS } from '../../data/auditOptions.js'
 
 // CJS interop: Node (build-time SSR) hands back the module object.
 const ReCAPTCHA = ReCAPTCHAModule?.default ?? ReCAPTCHAModule
 const RECAPTCHA_SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY || ''
 const ENDPOINT = '/api/submit-contact'
 
-const AUDIT_INDUSTRIES = [
-  'Healthcare & Medical',
-  'Real Estate & Construction',
-  'Textiles & Manufacturing',
-  'Education & Training',
-  'Hospitality & Travel',
-  'Retail & E-commerce',
-  'Professional Services',
-  'Other',
-]
-
-const AUDIT_CITIES = [
-  { value: 'Madurai', market: 'IN' },
-  { value: 'Thoothukudi', market: 'IN' },
-  { value: 'Other Tamil Nadu', market: 'IN' },
-  { value: 'Other India', market: 'IN' },
-  { value: 'Kuala Lumpur / Selangor (Malaysia)', market: 'MY' },
-  { value: 'Other Malaysia', market: 'MY' },
-  { value: 'Singapore', market: 'INTL' },
-  { value: 'Dubai / UAE', market: 'INTL' },
-  { value: 'Other country', market: 'INTL' },
-]
-
-/* The visitor's own monthly marketing budget (helps us prepare). These are not our fees. */
-const BUDGETS = {
-  IN: ['Below ₹10,000 / month', '₹10,000 – ₹20,000 / month', '₹20,000 – ₹35,000 / month', '₹35,000 – ₹60,000 / month', '₹60,000+ / month'],
-  MY: ['Below RM1,000 / month', 'RM1,000 – RM2,500 / month', 'RM2,500 – RM5,000 / month', 'RM5,000 – RM10,000 / month', 'RM10,000+ / month'],
-  INTL: ['Below US$500 / month', 'US$500 – US$1,500 / month', 'US$1,500 – US$3,000 / month', 'US$3,000+ / month'],
-}
 const NOT_SURE = 'Not sure yet'
 
 const EMPTY = { business: '', siteUrl: '', industry: '', budget: '', city: '', name: '', phone: '', email: '', message: '', website: '' }

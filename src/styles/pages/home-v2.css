@@ -332,3 +332,14 @@
 .hv2-tile { padding: 20px 12px; }
 .hv2-tile h3 { font-size: 14.5px; }
 .hv2-card h3 { font-size: 15px; }
+
+/* Hub card grid (CardGrid) */
+.hv2-cards { list-style: none; padding: 0; margin: 28px 0 0; display: grid; gap: 16px; }
+.hv2-cards--3 { grid-template-columns: repeat(3, 1fr); }
+.hv2-cards--2 { grid-template-columns: repeat(2, 1fr); }
+.hv2-cardx { padding: 22px; border-radius: 18px; background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 10px; }
+.hv2-cardx h3 { font: 700 17px/1.3 var(--font-display); color: var(--heading); }
+.hv2-cardx h3 a { color: inherit; }
+.hv2-cardx p { color: var(--muted); font-size: 14.5px; line-height: 1.6; flex: 1; }
+@media (max-width: 1024px) { .hv2-cards--3 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .hv2-cards--3, .hv2-cards--2 { grid-template-columns: 1fr; } }

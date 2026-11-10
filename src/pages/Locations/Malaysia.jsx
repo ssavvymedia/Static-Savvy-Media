@@ -5,7 +5,7 @@ import Button from '../../components/common/Button.jsx'
 import HeroSection from '../../components/hero/HeroSection.jsx'
 import FAQSection from '../../components/sections/FAQSection.jsx'
 import CTASection from '../../components/sections/CTASection.jsx'
-import ContactFormSection from '../../components/sections/ContactFormSection.jsx'
+import { AnswerFirst, AuditBlock, MarketRangeTable, FounderBlock, ReviewsCarousel, CardGrid } from '../../components/v2/V2Blocks.jsx'
 import { ScrollReveal } from '../../components/animations/ScrollReveal.jsx'
 import { setSeo } from '../../utils/seo.js'
 import {
@@ -22,6 +22,7 @@ import {
   MALAYSIA_POSTAL_ADDRESS,
   MALAYSIA_OPENING_HOURS_SPEC,
 } from '../../utils/constants.js'
+import { myRangeTable, MY_COST_ANSWER } from '../../data/malaysiaMarketRanges.js'
 import '../../styles/pages/malaysia.css'
 import malaysiaHeroImg from '../../assets/images/locations/02malaysia.webp'
 
@@ -30,15 +31,38 @@ import malaysiaHeroImg from '../../assets/images/locations/02malaysia.webp'
    ============================================================ */
 
 const PAGE_TITLE =
-  'Digital Marketing Agency Malaysia, Rawang, Selangor | Grant-Eligible | Static Savvy Media'
+  'Digital Marketing Agency Malaysia | Rawang, Selangor Office | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
-  "Static Savvy Media’s Malaysia office in Rawang, Selangor. SEO, GEO/AEO, Google Ads, and AI automation for Malaysian SMEs. MDEC and SMECorp grant-eligible digital marketing services."
+  "Digital marketing agency for Malaysian SMEs with an office in Rawang, Selangor: SEO, Google Maps, AI search, Google Ads, social and websites. Call +60 12-453 7030."
 
-const HERO_EYEBROW = 'Malaysia • Grant-Eligible Digital Marketing'
+const HERO_EYEBROW = 'Malaysia • Office in Rawang, Selangor'
 
 const HERO_SUBTITLE =
-  'Malaysia’s digital economy is one of Southeast Asia’s fastest growing, and the Malaysian government has invested significantly in helping SMEs digitize through grant programmes. If you are a Malaysian SME and have not yet used MDEC, SMECorp, or other digital transformation grants to fund your digital marketing investment, you are leaving money on the table. Static Savvy Media operates from Rawang, Selangor, helping Malaysian businesses grow digitally while maximising available government grants.'
+  'Static Savvy Media’s Malaysia office is in Rawang, Selangor. Our team helps Malaysian SMEs get found on google.com.my, Google Maps and AI assistants, and turn that visibility into calls, WhatsApp chats and enquiries. We work in English and Bahasa Malaysia, quote in MYR and report from your own Google accounts. Where a government digitalisation programme fits your business, we help you prepare for it, without promising approval.'
+
+const MY_ANSWER =
+  'Static Savvy Media is a digital marketing agency with a Malaysia office in Rawang, Selangor (NO.9, Jalan Anggun 2J, Taman Anggun 2, near AEON Mall Rawang). We run SEO, Google Maps, AI search (GEO/AEO), Google and Meta ads, social media and websites for SMEs in Kuala Lumpur, Selangor and nationwide. Call +60 12-453 7030 or WhatsApp +91 99440 40345.'
+
+const MY_FACTS = ['Office: Rawang, Selangor', 'Call +60 12-453 7030', 'WhatsApp +91 99440 40345', 'Mon–Fri 9 AM–6 PM (MYT)', 'HQ: Madurai, India (since 2021)']
+
+const MY_CITIES = [
+  { title: 'Rawang (our office)', text: 'Our Malaysia office town. Google Maps, local SEO and websites for Rawang, Bandar Country Homes, Bukit Sentosa, Kundang, Kuang and Serendah businesses.', link: '/locations/rawang/', linkLabel: 'Rawang office page' },
+  { title: 'Kuala Lumpur', text: 'SEO, Google Maps and Google Ads for KL SMEs, planned by area: KLCC, Bangsar, Mont Kiara, Cheras, Kepong and more. Meetings in KL by appointment.', link: '/locations/kuala-lumpur/', linkLabel: 'Kuala Lumpur page' },
+  { title: 'Selangor', text: 'Our home state. Township-level SEO, Google Business Profiles and ad targeting across Petaling Jaya, Shah Alam, Subang Jaya, Klang and Puchong.', link: '/locations/selangor/', linkLabel: 'Selangor page' },
+  { title: 'Shah Alam', text: 'B2B pages for manufacturers in the industrial zones, plus Bahasa Malaysia-first local SEO for clinics, tuition centres and F&B in the residential sections.', link: '/locations/shah-alam/', linkLabel: 'Shah Alam page' },
+  { title: 'Petaling Jaya', text: 'Dense retail, F&B, clinics and professional services in PJ compete on reviews and map rankings. We plan a profile and page per outlet.', link: '/locations/petaling-jaya/', linkLabel: 'Petaling Jaya page' },
+  { title: 'Nationwide (Penang, Johor Bahru, Ipoh and beyond)', text: 'Website SEO, AI search and Google Ads work anywhere in Malaysia. Outside the Klang Valley we work by video call and WhatsApp, with the same team and reporting.', link: '/services/seo/malaysia/', linkLabel: 'SEO company in Malaysia' },
+]
+
+const MY_HOW = [
+  { title: 'Search behaviour in three languages', text: 'Malaysian customers search on google.com.my mostly in English, read and write reviews in Bahasa Malaysia, and often chat in Chinese or Tamil. We plan language per channel instead of translating everything, and every Bahasa Malaysia text is written or reviewed by a person.' },
+  { title: 'Google Maps decides local buying', text: 'For clinics, F&B, tuition, workshops and home services, most enquiries come from the map pack. We fix your Google Business Profile first: categories, service area, pin, photos, hours and a steady reviews routine.' },
+  { title: 'WhatsApp is the enquiry channel', text: 'Most Malaysian customers would rather send a WhatsApp message than fill a form. Every page and ad we build starts a WhatsApp chat in one tap, with tracking so you can see which source each enquiry came from.' },
+  { title: 'AI assistants are the new shortlist', text: 'Buyers now ask ChatGPT, Perplexity and Google AI Overviews which agency, clinic or supplier to use. Answer-first pages, FAQs, schema and consistent business details across Malaysian directories help you get cited.' },
+  { title: 'MYR quotes, Malaysian hours, your accounts', text: 'Quotes and invoices are in MYR, calls are on a Malaysian number during Malaysian working hours, and your Google Business Profile, Search Console, Analytics and ad accounts stay in your business name.' },
+  { title: 'Backed by our Madurai HQ', text: 'Static Savvy Media was founded in Madurai, India, in 2021. Our Malaysia clients get the same specialists in SEO, AI search and Google Ads that serve our head-office market, rated 4.9★ from 106 Google reviews (November 2026).' },
+]
 
 const GRANTS = [
   {
@@ -51,7 +75,7 @@ const GRANTS = [
   {
     number: '02',
     title: 'SMECorp, SME Digitalisation Initiative',
-    text: 'Government matching grants for SME digital adoption. Digital marketing services from registered vendors may be eligible for 50% matching grants up to RM5,000 per company.',
+    text: 'Government matching-grant programmes for SME digital adoption. Some digital marketing services from registered vendors may qualify; the matching rate, cap and cycle are set by the programme, so check the current terms.',
     icon: 'finance',
     color: 'icon-badge--blue',
   },
@@ -149,12 +173,47 @@ const FAQS = [
     answer:
       'Yes. We help businesses set up and optimize their presence on Lazada and Shopee Malaysia, product listing optimization, product photography formatted for platform requirements, and Shopee/Lazada ad management. This is typically paired with our product photography service for best results.',
   },
+  {
+    question: 'Where is your Malaysia office?',
+    answer:
+      'NO.9, Jalan Anggun 2J, Taman Anggun 2, 48000 Rawang, Selangor, near AEON Mall Rawang. The office is open Monday to Friday, 9 AM to 6 PM (MYT), and visits are by appointment.',
+  },
+  {
+    question: 'How do I contact your Malaysia team?',
+    answer:
+      'Call +60 12-453 7030 or WhatsApp +91 99440 40345, or use the audit form on this page. We reply within one business day.',
+  },
+  {
+    question: 'Which Malaysian cities do you serve?',
+    answer:
+      'Rawang, Kuala Lumpur and the rest of Selangor (Petaling Jaya, Shah Alam, Subang Jaya, Klang, Puchong) in person, and SMEs anywhere in Malaysia, including Penang, Johor Bahru and Ipoh, by video call and WhatsApp.',
+  },
+  {
+    question: 'How much does digital marketing or SEO cost in Malaysia?',
+    answer:
+      MY_COST_ANSWER,
+  },
+  {
+    question: 'Is Static Savvy Media a Malaysian company?',
+    answer:
+      'Static Savvy Media is headquartered in Madurai, India, where it was founded in 2021, and has a Malaysia office in Rawang, Selangor, with a Malaysian phone line and MYR invoicing. Our Madurai team is rated 4.9★ from 106 Google reviews (November 2026).',
+  },
+  {
+    question: 'Do you guarantee first-page rankings?',
+    answer:
+      'No. Nobody controls Google’s rankings, and agencies that guarantee page one often rely on risky shortcuts. We agree the pages, profiles and campaigns we will work on, and report calls, WhatsApp chats, form enquiries and rankings from your own accounts every month.',
+  },
+  {
+    question: 'Do you lock clients into long contracts?',
+    answer:
+      'No. Plans are monthly with no lock-in, and your Google Business Profile, Search Console, Analytics and ad accounts stay in your business name.',
+  },
 ]
 
 const RELATED_SERVICES = [
-  { name: 'SEO in Kuala Lumpur', path: '/services/seo/kuala-lumpur/' },
+  { name: 'SEO agency in Kuala Lumpur', path: '/services/seo/kuala-lumpur/' },
   { name: 'Digital Marketing in Kuala Lumpur', path: '/locations/kuala-lumpur/' },
-  { name: 'SEO Malaysia', path: '/services/seo/malaysia/' },
+  { name: 'SEO company in Malaysia', path: '/services/seo/malaysia/' },
   { name: 'Local SEO Malaysia', path: '/services/local-seo/malaysia/' },
   { name: 'GEO & AEO, AI Search', path: '/services/geo-aeo-ai-search/' },
   { name: 'Google Ads', path: '/services/google-ads/' },
@@ -165,8 +224,12 @@ const RELATED_SERVICES = [
 ]
 
 const OTHER_LOCATIONS = [
+  { name: 'Rawang (our Malaysia office)', path: '/locations/rawang/' },
   { name: 'Kuala Lumpur', path: '/locations/kuala-lumpur/' },
-  { name: 'Madurai', path: '/locations/madurai/' },
+  { name: 'Selangor', path: '/locations/selangor/' },
+  { name: 'Shah Alam', path: '/locations/shah-alam/' },
+  { name: 'Petaling Jaya', path: '/locations/petaling-jaya/' },
+  { name: 'Madurai HQ (India)', path: '/locations/madurai/' },
   { name: 'Thoothukudi', path: '/locations/thoothukudi/' },
   { name: 'All Locations', path: '/locations/' },
 ]
@@ -244,7 +307,7 @@ export default function Malaysia() {
       <HeroSection
         layout="two-column"
         eyebrow={HERO_EYEBROW}
-        title="Digital Marketing Agency Malaysia, Rawang, Selangor | Grant-Eligible Services for Malaysian SMEs"
+        title="Digital Marketing Agency in Malaysia: Rawang Office Serving SMEs Nationwide"
         subtitle={HERO_SUBTITLE}
         actions={
           <>
@@ -279,6 +342,12 @@ export default function Malaysia() {
           />
         </div>
       </HeroSection>
+
+      <AnswerFirst eyebrow="Malaysia office · Quick answer" heading="Where is Static Savvy Media in Malaysia, and what do you do?" text={MY_ANSWER} facts={MY_FACTS} />
+
+      <CardGrid section="my-cities" eyebrow="Where we work" heading="Malaysian cities we serve" intro="In person across the Klang Valley from our Rawang office, and nationwide by video call and WhatsApp." items={MY_CITIES} />
+
+      <CardGrid section="my-how" eyebrow="How we work" heading="How we market Malaysian businesses" intro="What we have learned running search, Maps and ads for Malaysian SMEs, and how it shapes every plan." items={MY_HOW} />
 
       {/* ---- Government Grants ---- */}
       <section className="section malaysia-grants">
@@ -450,6 +519,8 @@ export default function Malaysia() {
         </div>
       </section>
 
+      <MarketRangeTable {...myRangeTable('What SEO costs in Malaysia (market ranges)')} />
+
       {/* ---- Malaysia Office ---- */}
       <section className="section malaysia-office">
         <div className="container">
@@ -521,6 +592,10 @@ export default function Malaysia() {
         </div>
       </section>
 
+      <FounderBlock heading="Meet the founder behind our Malaysia office." text="Deepan Kanz founded Static Savvy Media in Madurai, India, in 2021 and leads strategy for our Malaysia office in Rawang, which serves Selangor and Kuala Lumpur. He specialises in SEO, Local SEO and AI search (GEO and AEO) and reviews every new Malaysian client’s plan himself." />
+
+      <ReviewsCarousel grid limit={3} eyebrow="Google reviews" title="What our clients say on Google." />
+
       {/* ---- Related Content ---- */}
       <section className="section malaysia-related section--alt">
         <div className="container">
@@ -588,12 +663,17 @@ export default function Malaysia() {
 
       {/* ---- Final CTA ---- */}
       <CTASection
-        title="Grow your Malaysian business, with digital marketing you may be able to fund through government grants."
-        subtitle=""
+        title="Grow your Malaysian business with search, Maps and AI visibility."
+        subtitle="Call +60 12-453 7030 or WhatsApp +91 99440 40345 for a free review. Ask us whether a government digitalisation programme could apply to your business."
         primaryLabel="WhatsApp for Malaysia Services & Grants"
         primaryHref={whatsappHref}
       />
-      <ContactFormSection />
+      <AuditBlock
+        formId="growth_audit_malaysia"
+        defaultCity="Other Malaysia"
+        title="Get a free Growth Audit for your Malaysian business."
+        lead="A review of your website, Google Business Profile, AI search presence and competitors on google.com.my, with a plan of what to fix first. Prepared by our team, not an automated score."
+      />
     </div>
   )
 }

@@ -509,7 +509,7 @@ export default function AIBusinessAutomation_Malaysia() {
             <li><Link to="/contact/" className="related-content__link">Get a custom quote for AI automation (WhatsApp +91 99440 40345 or call +60 12-453 7030)</Link></li>
             <li><Link to="/blog/digital-marketing-malaysia-sme-grant-guide/" className="related-content__link">Malaysia SME digital grant guide</Link></li>
             <li><Link to="/industries/smes-malaysia-grant-eligible/" className="related-content__link">Digital marketing for grant-eligible Malaysian SMEs</Link></li>
-            <li><Link to="/services/seo/malaysia/" className="related-content__link">SEO services in Malaysia</Link></li>
+            <li><Link to="/services/seo/malaysia/" className="related-content__link">SEO company in Malaysia</Link></li>
             <li><Link to="/locations/malaysia/" className="related-content__link">Static Savvy Media Malaysia (Rawang)</Link></li>
           </ul>
         </div>

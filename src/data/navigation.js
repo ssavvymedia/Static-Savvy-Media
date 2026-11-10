@@ -64,6 +64,7 @@ export const BREADCRUMB_LABELS = {
   thoothukudi: "Thoothukudi",
   "tamil-nadu": "Tamil Nadu",
   "kuala-lumpur": "Kuala Lumpur",
+  rawang: "Rawang",
   chennai: "Chennai",
   coimbatore: "Coimbatore",
   trichy: "Trichy",

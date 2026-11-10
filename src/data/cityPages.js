@@ -12,6 +12,8 @@
  */
 
 /** Plan names and inclusions per region (no prices: see masterPricing.js for the private price list). */
+import { myRangeTable, MY_COST_ANSWER } from './malaysiaMarketRanges.js'
+
 export const PLAN_TIERS = {
   india: {
     plans: [
@@ -433,10 +435,11 @@ export const cityPages = [
       { title: 'WhatsApp-first enquiries', text: 'Every page and ad starts a WhatsApp conversation in one tap, with tracking so you know which source it came from.' },
       { title: 'Grant-aware planning', text: 'Some Malaysian SMEs can offset digital spend through government programmes. We can prepare documentation for eligible services; eligibility is decided by the programme.' },
     ],
+    marketRanges: myRangeTable('What SEO costs in Selangor (market ranges)'),
     faqs: [
       { question: 'Where is your Selangor office?', answer: 'NO.9, Jalan Anggun 2J, Taman Anggun 2, 48000 Rawang, Selangor, near AEON Mall Rawang. We are open Monday to Friday, 9 AM to 6 PM (MYT).' },
       { question: 'Do you serve Petaling Jaya, Shah Alam and Klang?', answer: 'Yes. We work with businesses across Selangor and meet clients in PJ, Shah Alam, Subang Jaya and Klang by appointment.' },
-      { question: 'How much does SEO cost in Selangor?', answer: 'It depends on how competitive your services and area are. Our monthly plans cover Google Business Profile management (12 posts), GBP plus website SEO with 4 blogs a month, and GBP, SEO, AEO and GEO, each quoted after a free review. Message us on WhatsApp at +91 99440 40345, call +60 12-453 7030, or send the enquiry form for a custom quote. Ad spend is separate.' },
+      { question: 'How much does SEO cost in Selangor?', answer: MY_COST_ANSWER },
       { question: 'Can you write in Bahasa Malaysia?', answer: 'Yes, we produce English and Bahasa Malaysia content and plan the language per channel and audience.' },
       { question: 'How do I contact your Malaysia team?', answer: 'Call +60 12-453 7030 or WhatsApp +91 99440 40345, or use the form on this page.' },
       { question: 'Can my business use a grant for digital marketing?', answer: 'Some SMEs qualify for government digitalisation programmes. We can prepare documentation for eligible services, but the programme decides eligibility.' },
@@ -448,6 +451,83 @@ export const cityPages = [
       { to: '/locations/malaysia/', label: 'Our Malaysia office (Rawang)' },
       { to: '/locations/kuala-lumpur/', label: 'Digital marketing in Kuala Lumpur' },
       { to: '/services/local-seo/malaysia/', label: 'Local SEO in Malaysia' },
+      { to: '/locations/rawang/', label: 'Our Malaysia office in Rawang' },
+      { to: '/locations/madurai/', label: 'Our headquarters in Madurai, India' },
+      { to: '/blog/seo-cost-malaysia-price-guide/', label: 'Guide: how much SEO costs in Malaysia' },
+    ],
+  },
+
+  /* ================================ RAWANG (office city) ================================ */
+  /* Added 10 Nov 2026 (PR-G). Our real Malaysia office. Cost figures are market ranges from
+   * /blog/seo-cost-malaysia-price-guide/ (Oct 2026), never our prices. */
+  {
+    slug: 'rawang',
+    updated: '2026-11-10',
+    name: 'Rawang',
+    region: 'malaysia',
+    areaType: 'City',
+    containedIn: 'Malaysia',
+    whatsapp: MY_WA,
+    phone: MY_PHONE,
+    office: 'malaysia',
+    auditCity: 'Rawang',
+    title: 'Digital Marketing Agency in Rawang, Selangor | Static Savvy Media Office',
+    description: 'Our Malaysia office is in Rawang (Taman Anggun, near AEON Mall Rawang). SEO, Google Maps, Google Ads, social media and websites for Rawang businesses. Call +60 12-453 7030.',
+    eyebrow: 'Rawang · Our Malaysia office',
+    h1: 'Digital Marketing Agency in Rawang, Selangor: Our Malaysia Office',
+    answer: 'Static Savvy Media’s Malaysia office is in Rawang, at NO.9, Jalan Anggun 2J, Taman Anggun 2, 48000 Rawang, near AEON Mall Rawang. From here our team runs SEO, Google Business Profile (Google Maps), Google and Meta ads, social media and websites for Rawang businesses. Call +60 12-453 7030 or WhatsApp +91 99440 40345.',
+    intro: [
+      'Rawang is one of the fastest-growing townships in northern Selangor. New housing areas such as Bandar Country Homes, Bandar Tasik Puteri and Bukit Sentosa sit next to the older town centre, an industrial belt and the corridor towards Kuang, Serendah and Kundang. Families moving in search Google Maps for clinics, tuition, food, car services and home renovation, and they choose from the first three results.',
+      'That is why Rawang marketing starts on Google Maps. A complete, accurate Google Business Profile, steady reviews and a page per service on your website decide who gets the call. For factories and suppliers around Rawang, the buyers are elsewhere in the Klang Valley, so the plan is different: product and capability pages in English, LinkedIn and tightly targeted Google Ads.',
+      'Rawang is our own office town, so we see the local search results every day. This is the same team that serves Kuala Lumpur and the rest of Selangor, and it is backed by our head office in Madurai, India, where the company was founded in 2021.',
+    ],
+    howWeServe: {
+      mode: 'Local office in Rawang, Selangor',
+      points: [
+        'Office: NO.9, Jalan Anggun 2J, Taman Anggun 2, 48000 Rawang, Selangor (near AEON Mall Rawang)',
+        'Hours: Mon–Fri, 9 AM–6 PM (MYT); visits by appointment',
+        'Call +60 12-453 7030 · WhatsApp +91 99440 40345',
+        'Quotes and invoices in MYR; monthly reports from your own Google and Meta accounts',
+      ],
+    },
+    industries: [
+      { title: 'Clinics, dental and wellness', text: 'New families in Rawang’s townships look for a nearby clinic, dentist or physiotherapist on Google Maps and read reviews first. We keep healthcare copy factual and within Malaysian advertising rules for medical services.' },
+      { title: 'Tuition, kindergartens and enrichment', text: 'Parents compare reviews, fees pages and location. Clear course pages, a complete profile per branch and Bahasa Malaysia content for parent audiences bring enquiries.' },
+      { title: 'Food, retail and services', text: 'Restaurants, cafés, car workshops and salons compete street by street. Accurate categories, fresh photos, review replies and posts timed to Hari Raya, Chinese New Year and Deepavali drive footfall.' },
+      { title: 'Property, renovation and home services', text: 'Homeowners in new Rawang developments search for renovation, interior design, air-conditioning and solar. Project pages with real photos and Google Ads on service-plus-area searches bring serious leads.' },
+      { title: 'Manufacturing and suppliers', text: 'Factories and suppliers around Rawang sell B2B to buyers across the Klang Valley. Capability pages, certifications you hold and LinkedIn reach procurement teams.' },
+    ],
+    areas: ['Rawang town centre', 'Taman Anggun', 'Bandar Country Homes', 'Bandar Tasik Puteri', 'Bukit Sentosa', 'Bukit Beruntung', 'Kundang', 'Kuang', 'Serendah', 'Batang Kali', 'Selayang', 'Sungai Buloh', 'Kepong'],
+    priorities: [
+      { title: 'Win the Rawang map pack', text: 'Most “near me” searches in Rawang are decided on Google Maps. We fix your categories, service area, photos, hours and the reviews routine first. ', link: { to: '/blog/rawang-local-seo-google-business-profile/', label: 'Guide: Rawang local SEO' } },
+      { title: 'A website page per service', text: 'One page per service you sell, written for how Rawang customers search in English and Bahasa Malaysia, so Google and AI assistants can match and cite you. ', link: { to: '/services/seo/malaysia/', label: 'SEO company in Malaysia' } },
+      { title: 'Reach beyond Rawang', text: 'If you also serve Sungai Buloh, Kepong, Selayang or Kuala Lumpur, we plan pages and ad radiuses per area so they do not compete with each other. ', link: { to: '/services/seo/kuala-lumpur/', label: 'SEO agency in Kuala Lumpur' } },
+      { title: 'Grant-aware planning', text: 'Some Malaysian SMEs can offset digital spend through government digitalisation programmes. We can prepare documentation for eligible services; the programme decides eligibility.' },
+    ],
+    marketRanges: myRangeTable('What SEO costs in Rawang and Selangor (market ranges)'),
+    faqs: [
+      { question: 'Do you have an office in Rawang?', answer: 'Yes. Our Malaysia office is at NO.9, Jalan Anggun 2J, Taman Anggun 2, 48000 Rawang, Selangor, near AEON Mall Rawang. It is open Monday to Friday, 9 AM to 6 PM (MYT), and visits are by appointment.' },
+      { question: 'How do I contact your Rawang team?', answer: 'Call +60 12-453 7030 or WhatsApp +91 99440 40345, or use the audit form on this page. We reply within one business day.' },
+      { question: 'How much does SEO cost in Rawang?', answer: 'Malaysian market ranges are roughly RM500 to RM1,500 a month for starter or local SEO, RM1,500 to RM5,000 for growth SEO, and RM5,000 or more for competitive or national campaigns (our Malaysia SEO cost guide, October 2026). These are market ranges, not our prices: we quote each Rawang business after a free review, with no lock-in.' },
+      { question: 'Why is my Rawang business not showing on Google Maps?', answer: 'Common causes are an unverified or suspended profile, a wrong map pin, a duplicate listing, a weak primary category, few recent reviews, or simply distance from the searcher. We audit your profile and fix what Google’s guidelines allow.' },
+      { question: 'Which areas around Rawang do you serve?', answer: 'Rawang town, Taman Anggun, Bandar Country Homes, Bandar Tasik Puteri, Bukit Sentosa, Bukit Beruntung, Kundang, Kuang, Serendah, Batang Kali, Selayang, Sungai Buloh and Kepong, plus the rest of Selangor and Kuala Lumpur.' },
+      { question: 'Can you write content in Bahasa Malaysia?', answer: 'Yes. We produce English and Bahasa Malaysia content and plan the language per channel, for example English service pages with Bahasa Malaysia posts and review replies where your customers use it.' },
+      { question: 'Can my Rawang business use a government grant for digital marketing?', answer: 'Some Malaysian SMEs qualify for government digitalisation programmes. We can prepare documentation for eligible services, but the programme decides eligibility and amounts, so check the official terms before you budget around a grant.' },
+      { question: 'Do you lock clients into long contracts?', answer: 'No. Plans are monthly with no lock-in, and your Google Business Profile, Search Console, Analytics and ad accounts stay in your business name.' },
+      { question: 'Is Static Savvy Media a Malaysian company?', answer: 'Static Savvy Media is headquartered in Madurai, India, founded in 2021, with a Malaysia office in Rawang that serves Selangor and Kuala Lumpur. Our Madurai team is rated 4.9★ from 106 Google reviews (November 2026).' },
+    ],
+    related: [
+      { to: '/locations/malaysia/', label: 'Digital marketing agency in Malaysia' },
+      { to: '/locations/selangor/', label: 'Digital marketing in Selangor' },
+      { to: '/locations/kuala-lumpur/', label: 'Digital marketing in Kuala Lumpur' },
+      { to: '/services/seo/kuala-lumpur/', label: 'SEO agency in Kuala Lumpur' },
+      { to: '/services/seo/malaysia/', label: 'SEO company in Malaysia' },
+      { to: '/services/local-seo/malaysia/', label: 'Local SEO & Google Maps in Malaysia' },
+      { to: '/locations/shah-alam/', label: 'Digital marketing in Shah Alam' },
+      { to: '/locations/petaling-jaya/', label: 'Digital marketing in Petaling Jaya' },
+      { to: '/blog/rawang-local-seo-google-business-profile/', label: 'Guide: Rawang local SEO and Google Business Profile' },
+      { to: '/blog/seo-cost-malaysia-price-guide/', label: 'Guide: how much SEO costs in Malaysia' },
+      { to: '/locations/madurai/', label: 'Our headquarters in Madurai, India' },
     ],
   },
 
@@ -605,15 +685,16 @@ export const cityPages = [
     areas: ['KLCC', 'Bukit Bintang', 'Bangsar', 'Mont Kiara', 'Cheras', 'Kepong', 'Setapak', 'Wangsa Maju', 'Sri Hartamas', 'Brickfields', 'Bukit Jalil', 'Petaling Jaya'],
     priorities: [
       { title: 'Get found on Google Maps in KL', text: 'Most "near me" searches are decided in the map pack. We fix categories, service areas, photos and the reviews routine on your Google Business Profile first. ', link: { to: '/services/local-seo/malaysia/', label: 'Local SEO and Google Maps in Malaysia' } },
-      { title: 'Rank on google.com.my for your services', text: 'Service and area pages written for how KL customers search, in English and Bahasa Malaysia, with technical SEO done properly. ', link: { to: '/services/seo/kuala-lumpur/', label: 'SEO services in Kuala Lumpur' } },
+      { title: 'Rank on google.com.my for your services', text: 'Service and area pages written for how KL customers search, in English and Bahasa Malaysia, with technical SEO done properly. ', link: { to: '/services/seo/kuala-lumpur/', label: 'SEO agency in Kuala Lumpur' } },
       { title: 'Leads now with tracked Google Ads', text: 'Search and Performance Max campaigns tightly targeted around your outlets, with call, form and WhatsApp tracking from day one. ', link: { to: '/services/google-ads/kuala-lumpur/', label: 'Google Ads agency in Kuala Lumpur' } },
       { title: 'Grant-aware planning', text: 'Some Malaysian SMEs can offset digital spend through government digitalisation programmes. We can prepare documentation for eligible services; eligibility is decided by the programme, not by us.' },
     ],
+    marketRanges: myRangeTable('What SEO costs in Kuala Lumpur (market ranges)'),
     faqs: [
       { question: 'Why is my KL outlet not showing on Google Maps?', answer: 'Common causes are an unverified or suspended profile, a wrong pin inside a mall or tower, a duplicate listing, or a weak category. Distance from the searcher also matters a lot in KL. We audit the profile and fix what Google’s guidelines allow.' },
       { question: 'Do you cover Petaling Jaya and Shah Alam too?', answer: 'Yes. The same Rawang team serves the whole Klang Valley. See our Petaling Jaya and Shah Alam pages for local details.' },
       { question: 'Do you have an office in Kuala Lumpur?', answer: 'Our Malaysia office is in Rawang, Selangor (NO.9, Jalan Anggun 2J, Taman Anggun 2, 48000 Rawang, near AEON Mall Rawang). We serve clients across Kuala Lumpur and the Klang Valley and meet in KL by appointment.' },
-      { question: 'How much does a digital marketing agency in KL cost?', answer: 'It depends on the services and how much work is included, and ad spend is usually paid separately. Our SEO plans cover Google Business Profile management (12 posts), GBP plus website SEO with 4 blogs a month, and GBP, SEO, AEO and GEO, each quoted after a free review. Message us on WhatsApp at +91 99440 40345, call +60 12-453 7030, or send the enquiry form for a custom quote. Websites and ads management are quoted separately.' },
+      { question: 'How much does a digital marketing agency in KL cost?', answer: MY_COST_ANSWER },
       { question: 'Which service should a KL small business start with?', answer: 'If customers find you on Google Maps or by searching "near me", start with your Google Business Profile and local SEO. If they compare options on websites, add SEO for your service pages. If you need leads quickly, run Google Ads with tracking while SEO builds. Our buyer’s checklist for choosing a digital marketing agency in Malaysia (linked below) explains how to decide.' },
       { question: 'How long does SEO take to work in Kuala Lumpur?', answer: 'Google Business Profile improvements can lift Maps visibility within weeks. Website rankings for competitive KL keywords usually take several months and build as content, reviews and links grow. Google Ads can bring enquiries within days of launch.' },
       { question: 'Do you run Google Ads (SEM) and social media for KL businesses?', answer: 'Yes. We manage Google Ads search and Performance Max campaigns and social media for Instagram, Facebook, TikTok and LinkedIn, with conversion tracking on calls, forms and WhatsApp.' },
@@ -622,7 +703,7 @@ export const cityPages = [
       { question: 'How can I contact your Malaysia team?', answer: 'Call +60 12-453 7030 or WhatsApp +91 99440 40345 (Mon–Fri, 9 AM–6 PM MYT), or use the form on this page for a free review.' },
     ],
     related: [
-      { to: '/services/seo/kuala-lumpur/', label: 'SEO services in Kuala Lumpur' },
+      { to: '/services/seo/kuala-lumpur/', label: 'SEO agency in Kuala Lumpur' },
       { to: '/services/google-ads/kuala-lumpur/', label: 'Google Ads agency in Kuala Lumpur' },
       { to: '/services/local-seo/malaysia/', label: 'Local SEO & Google Maps in Malaysia' },
       { to: '/locations/selangor/', label: 'Digital marketing in Selangor' },
@@ -634,6 +715,7 @@ export const cityPages = [
       { to: '/blog/how-to-choose-digital-marketing-agency-malaysia/', label: 'Guide: how to choose a digital marketing agency in Malaysia' },
       { to: '/blog/seo-cost-malaysia-price-guide/', label: 'Guide: how much SEO costs in Malaysia' },
       { to: '/industries/smes-malaysia-grant-eligible/', label: 'Digital marketing for Malaysian SMEs (grant-eligible)' },
+      { to: '/locations/rawang/', label: 'Our Malaysia office in Rawang' },
     ],
   },
   /* ================================ DINDIGUL ================================ */
@@ -783,9 +865,10 @@ export const cityPages = [
       { title: 'B2B pages for industrial buyers', text: 'Product, capacity and certification pages written for procurement teams, with enquiry tracking on forms and WhatsApp.' },
       { title: 'Bahasa Malaysia where it matters', text: 'We research Bahasa Malaysia search terms separately instead of translating English pages word for word.' },
     ],
+    marketRanges: myRangeTable('What SEO costs in Shah Alam (market ranges)'),
     faqs: [
       { question: 'Do you have an office in Shah Alam?', answer: 'No. Our Malaysia office is in Rawang, Selangor, and we meet Shah Alam clients by appointment. Static Savvy Media is headquartered in Madurai, India.' },
-      { question: 'How much does digital marketing cost in Shah Alam?', answer: 'It depends on services, competition and languages. We quote in MYR after a free review. Call +60 12-453 7030 or WhatsApp +91 99440 40345 for a custom quote. Ad spend is paid directly to Google or Meta.' },
+      { question: 'How much does digital marketing cost in Shah Alam?', answer: MY_COST_ANSWER },
       { question: 'Can you help an industrial company in Shah Alam get B2B leads?', answer: 'Yes, through capability pages, search campaigns on specific product terms and LinkedIn. We track enquiries by source; we do not promise lead numbers.' },
       { question: 'Do you write content in Bahasa Malaysia?', answer: 'Yes. We plan English and Bahasa Malaysia content per audience and channel.' },
       { question: 'Can my SME use a grant for digital marketing?', answer: 'Some Malaysian SMEs qualify for government digitalisation programmes. We can prepare documentation for eligible services, but the programme decides eligibility.' },
@@ -795,8 +878,10 @@ export const cityPages = [
       { to: '/locations/malaysia/', label: 'Our Malaysia office (Rawang)' },
       { to: '/locations/selangor/', label: 'Digital marketing in Selangor' },
       { to: '/locations/petaling-jaya/', label: 'Digital marketing in Petaling Jaya' },
-      { to: '/services/seo/malaysia/', label: 'SEO services in Malaysia' },
+      { to: '/services/seo/malaysia/', label: 'SEO company in Malaysia' },
       { to: '/blog/seo-services-selangor-shah-alam-petaling-jaya/', label: 'Guide: SEO in Selangor' },
+      { to: '/locations/rawang/', label: 'Our Malaysia office in Rawang' },
+      { to: '/blog/seo-cost-malaysia-price-guide/', label: 'Guide: how much SEO costs in Malaysia' },
     ],
   },
   /* ============================== PETALING JAYA ============================== */
@@ -839,9 +924,10 @@ export const cityPages = [
       { title: 'Ads on tight radiuses', text: 'Search campaigns limited to the area around your outlet, with call, form and WhatsApp tracking from day one.', link: { to: '/services/google-ads/kuala-lumpur/', label: 'Google Ads in the Klang Valley' } },
       { title: 'Keep PJ and KL pages separate', text: 'If you serve both PJ and Kuala Lumpur, we plan the pages so they do not compete with each other in search.' },
     ],
+    marketRanges: myRangeTable('What SEO costs in Petaling Jaya (market ranges)'),
     faqs: [
       { question: 'Do you have an office in Petaling Jaya?', answer: 'No. Our Malaysia office is in Rawang, Selangor, and we meet PJ clients by appointment. The company is headquartered in Madurai, India.' },
-      { question: 'How much does digital marketing cost for a PJ business?', answer: 'It depends on services and competition in your neighbourhood. We quote in MYR after a free review. Call +60 12-453 7030 or WhatsApp +91 99440 40345. Ad spend is paid directly to Google or Meta.' },
+      { question: 'How much does digital marketing cost for a PJ business?', answer: MY_COST_ANSWER },
       { question: 'Why is my PJ cafe not showing on Google Maps?', answer: 'Common causes are an unverified or suspended profile, a wrong pin, a duplicate listing or a weak category choice. Distance from the searcher also matters a lot in a dense area like PJ. We audit and fix what Google’s guidelines allow.' },
       { question: 'Do you handle both Petaling Jaya and Kuala Lumpur?', answer: 'Yes. The same Rawang team serves the whole Klang Valley. See our Kuala Lumpur page for KL-specific details.' },
       { question: 'Do you do social media for PJ businesses?', answer: 'Yes: Instagram, Facebook, TikTok and LinkedIn, in English, Bahasa Malaysia or Chinese where your audience needs it.' },
@@ -851,8 +937,10 @@ export const cityPages = [
       { to: '/locations/malaysia/', label: 'Our Malaysia office (Rawang)' },
       { to: '/locations/kuala-lumpur/', label: 'Digital marketing in Kuala Lumpur' },
       { to: '/locations/shah-alam/', label: 'Digital marketing in Shah Alam' },
-      { to: '/services/seo/kuala-lumpur/', label: 'SEO services in Kuala Lumpur' },
+      { to: '/services/seo/kuala-lumpur/', label: 'SEO agency in Kuala Lumpur' },
       { to: '/blog/gbp-not-showing-on-google-maps-causes-fixes/', label: 'Guide: GBP not showing on Google Maps' },
+      { to: '/locations/rawang/', label: 'Our Malaysia office in Rawang' },
+      { to: '/blog/seo-cost-malaysia-price-guide/', label: 'Guide: how much SEO costs in Malaysia' },
     ],
   },
 ]

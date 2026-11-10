@@ -78,7 +78,7 @@ const SERVICES_USED = [
 ]
 
 const RELATED_SERVICES = [
-  { name: 'SEO Malaysia', path: '/services/seo/malaysia/' },
+  { name: 'SEO company in Malaysia', path: '/services/seo/malaysia/' },
   { name: 'Local SEO Malaysia', path: '/services/local-seo/malaysia/' },
   { name: 'Google Ads Malaysia', path: '/services/google-ads/' },
   { name: 'GEO/AEO Malaysia', path: '/services/geo-aeo-ai-search/' },

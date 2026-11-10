@@ -65,7 +65,7 @@ const content = {
       kind: 'cards',
       items: [
         { title: 'Google Ads', text: 'Visible as soon as campaigns are approved and tracking is live. You pay per click, and leads stop when the budget stops. Best for new services, seasonal offers and fast feedback on what sells.' },
-        { title: 'SEO', text: 'Slower to build, usually months, but clicks are not paid for one by one and visibility compounds. Best for services you will sell for years.', link: { to: '/services/seo/kuala-lumpur/', label: 'SEO services in KL' } },
+        { title: 'SEO', text: 'Slower to build, usually months, but clicks are not paid for one by one and visibility compounds. Best for services you will sell for years.', link: { to: '/services/seo/kuala-lumpur/', label: 'SEO agency in Kuala Lumpur' } },
         { title: 'Both together', text: 'Many KL SMEs run ads for immediate enquiries while SEO grows, then shift budget as organic rankings improve. Search-term data from ads also shows which keywords are worth targeting with SEO.' },
       ],
     },
@@ -118,7 +118,7 @@ const content = {
   contactBlock: <MalaysiaContactBlock heading="Talk to Our Malaysia Team About Google Ads in KL" />,
   related: [
     { name: 'Google Ads management', path: '/services/google-ads/' },
-    { name: 'SEO Services in Kuala Lumpur', path: '/services/seo/kuala-lumpur/' },
+    { name: 'SEO agency in Kuala Lumpur', path: '/services/seo/kuala-lumpur/' },
     { name: 'Google Ads Services', path: '/services/google-ads/' },
     { name: 'Digital Marketing in Kuala Lumpur', path: '/locations/kuala-lumpur/' },
     { name: 'How to choose a digital marketing agency in Malaysia', path: '/blog/how-to-choose-digital-marketing-agency-malaysia/' },

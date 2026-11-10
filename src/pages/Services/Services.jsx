@@ -26,9 +26,9 @@ const LOCATION_SERVICE_LINKS = [
   { name: 'GEO & AEO in Madurai', path: '/services/geo-aeo-ai-search/madurai/' },
   { name: 'SEO in Thoothukudi', path: '/services/seo/thoothukudi/' },
   { name: 'Google Ads in Thoothukudi', path: '/services/google-ads/thoothukudi/' },
-  { name: 'SEO in Kuala Lumpur', path: '/services/seo/kuala-lumpur/' },
+  { name: 'SEO agency in Kuala Lumpur', path: '/services/seo/kuala-lumpur/' },
   { name: 'Digital Marketing in Kuala Lumpur', path: '/locations/kuala-lumpur/' },
-  { name: 'SEO in Malaysia', path: '/services/seo/malaysia/' },
+  { name: 'SEO company in Malaysia', path: '/services/seo/malaysia/' },
 ]
 
 const INTRO =

@@ -439,17 +439,17 @@ export const seoConfig = {
   },
   "/services/seo/malaysia": {
     title:
-      "SEO Services Malaysia: SEO Company for Malaysian SMEs | Static Savvy Media",
+      "SEO Company Malaysia: Nationwide SEO Services for SMEs | Static Savvy Media",
     slug: "services/seo/malaysia",
     seo: {
       title:
-        "SEO Services Malaysia: SEO Company for Malaysian SMEs | Static Savvy Media",
+        "SEO Company Malaysia: Nationwide SEO Services for SMEs | Static Savvy Media",
       description:
-        "SEO services in Malaysia from our Rawang, Selangor office: rank on google.com.my and Google Maps with technical, local and English/BM content SEO. No lock-in. Call +60 12-453 7030.",
+        "Nationwide SEO company in Malaysia for SMEs, from KL and Selangor to Penang and Johor Bahru: technical, content and AI-search SEO on google.com.my. No lock-in. +60 12-453 7030.",
       canonical: `${BASE_URL}/services/seo/malaysia`,
       focusKeyword: "SEO Malaysia",
       ogTitle:
-        "SEO Services Malaysia: SEO Company for Malaysian SMEs | Static Savvy Media",
+        "SEO Company Malaysia: Nationwide SEO Services for SMEs | Static Savvy Media",
       ogDescription:
         "SEO services in Malaysia for businesses seeking stronger Google visibility and organic search rankings.",
       ogImage: `${BASE_URL}/og/locations-02malaysia.jpg`,
@@ -734,13 +734,13 @@ export const seoConfig = {
   },
   "/locations/malaysia": {
     title:
-      "Digital Marketing Agency Malaysia — Rawang, Selangor | Static Savvy Media",
+      "Digital Marketing Agency Malaysia | Rawang, Selangor Office | Static Savvy Media",
     slug: "locations/malaysia",
     seo: {
       title:
-        "Digital Marketing Agency Malaysia — Rawang, Selangor | Static Savvy Media",
+        "Digital Marketing Agency Malaysia | Rawang, Selangor Office | Static Savvy Media",
       description:
-        "Digital marketing company in Malaysia with an office in Rawang, Selangor. SEO, Local SEO, Google Ads, social media and websites for SMEs in Kuala Lumpur and the Klang Valley.",
+        "Digital marketing agency for Malaysian SMEs with an office in Rawang, Selangor: SEO, Google Maps, AI search, Google Ads, social and websites. Call +60 12-453 7030.",
       canonical: `${BASE_URL}/locations/malaysia`,
       focusKeyword: "digital marketing agency Malaysia",
       ogTitle: "Digital Marketing Agency Malaysia | Static Savvy Media",

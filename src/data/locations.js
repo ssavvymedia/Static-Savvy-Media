@@ -27,7 +27,8 @@ export const locationGroups = [
     path: '/locations/malaysia/',
     items: [
       { slug: 'kuala-lumpur', name: 'Kuala Lumpur', path: '/locations/kuala-lumpur/' },
-      { slug: 'selangor', name: 'Selangor (Rawang office)', path: '/locations/selangor/' },
+      { slug: 'rawang', name: 'Rawang (Malaysia office)', path: '/locations/rawang/' },
+      { slug: 'selangor', name: 'Selangor', path: '/locations/selangor/' },
       { slug: 'shah-alam', name: 'Shah Alam', path: '/locations/shah-alam/' },
       { slug: 'petaling-jaya', name: 'Petaling Jaya', path: '/locations/petaling-jaya/' },
     ],

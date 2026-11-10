@@ -77,6 +77,16 @@ const LOCATIONS = [
   },
   {
     number: '04',
+    name: 'Rawang',
+    badge: 'Malaysia office',
+    description:
+      'Our Malaysia office at Taman Anggun, near AEON Mall Rawang: Google Maps, local SEO, Google Ads and websites for Rawang, Bandar Country Homes, Bukit Sentosa, Kuang and Serendah businesses.',
+    services: ['Google Maps & Local SEO', 'SEO & AI search', 'Google Ads & Social Media'],
+    path: '/locations/rawang/',
+    icon: 'malaysia',
+  },
+  {
+    number: '05',
     name: 'Kuala Lumpur',
     badge: 'Klang Valley',
     description:
@@ -86,7 +96,7 @@ const LOCATIONS = [
     icon: 'malaysia',
   },
   {
-    number: '05',
+    number: '06',
     name: 'Chennai',
     badge: 'Remote · Madurai HQ',
     description:
@@ -96,7 +106,7 @@ const LOCATIONS = [
     icon: 'pin',
   },
   {
-    number: '06',
+    number: '07',
     name: 'Coimbatore',
     badge: 'Remote · Madurai HQ',
     description:
@@ -106,7 +116,7 @@ const LOCATIONS = [
     icon: 'pin',
   },
   {
-    number: '07',
+    number: '08',
     name: 'Trichy',
     badge: 'Near Madurai HQ',
     description:
@@ -116,7 +126,7 @@ const LOCATIONS = [
     icon: 'pin',
   },
   {
-    number: '08',
+    number: '09',
     name: 'Salem',
     badge: 'Remote · Madurai HQ',
     description:
@@ -126,7 +136,7 @@ const LOCATIONS = [
     icon: 'pin',
   },
   {
-    number: '09',
+    number: '10',
     name: 'Tirunelveli',
     badge: 'Near Thoothukudi office',
     description:
@@ -136,7 +146,7 @@ const LOCATIONS = [
     icon: 'pin',
   },
   {
-    number: '10',
+    number: '11',
     name: 'Tiruppur',
     badge: 'Remote · Madurai HQ',
     description:
@@ -146,7 +156,7 @@ const LOCATIONS = [
     icon: 'pin',
   },
   {
-    number: '11',
+    number: '12',
     name: 'Selangor',
     badge: 'Rawang office',
     description:
@@ -156,7 +166,7 @@ const LOCATIONS = [
     icon: 'malaysia',
   },
   {
-    number: '12',
+    number: '13',
     name: 'Singapore',
     badge: 'Remote · MY & IN',
     description:
@@ -166,7 +176,7 @@ const LOCATIONS = [
     icon: 'malaysia',
   },
   {
-    number: '13',
+    number: '14',
     name: 'Dubai',
     badge: 'Remote · India',
     description:
@@ -176,7 +186,7 @@ const LOCATIONS = [
     icon: 'malaysia',
   },
   {
-    number: '14',
+    number: '15',
     name: 'Dindigul',
     badge: 'Near Madurai HQ',
     description:
@@ -186,7 +196,7 @@ const LOCATIONS = [
     icon: 'pin',
   },
   {
-    number: '15',
+    number: '16',
     name: 'Sivakasi',
     badge: 'Remote · Madurai HQ',
     description:
@@ -196,7 +206,7 @@ const LOCATIONS = [
     icon: 'pin',
   },
   {
-    number: '16',
+    number: '17',
     name: 'Shah Alam',
     badge: 'Rawang office',
     description:
@@ -206,7 +216,7 @@ const LOCATIONS = [
     icon: 'malaysia',
   },
   {
-    number: '17',
+    number: '18',
     name: 'Petaling Jaya',
     badge: 'Rawang office',
     description:

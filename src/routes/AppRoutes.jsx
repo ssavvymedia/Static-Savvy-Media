@@ -190,6 +190,7 @@ export default function AppRoutes() {
         <Route path="/locations/tirunelveli" element={<CityLanding slug="tirunelveli" />} />
         <Route path="/locations/tiruppur" element={<CityLanding slug="tiruppur" />} />
         <Route path="/locations/selangor" element={<CityLanding slug="selangor" />} />
+        <Route path="/locations/rawang" element={<CityLanding slug="rawang" />} />
         <Route path="/locations/singapore" element={<CityLanding slug="singapore" />} />
         <Route path="/locations/dubai" element={<CityLanding slug="dubai" />} />
         <Route path="/locations/dindigul" element={<CityLanding slug="dindigul" />} />

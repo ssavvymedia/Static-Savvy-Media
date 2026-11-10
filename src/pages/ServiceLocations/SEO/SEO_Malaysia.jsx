@@ -18,6 +18,8 @@ import {
   WHATSAPP_MESSAGE,
   SITE_URL,
 } from '../../../utils/constants.js'
+import { AnswerFirst, AuditBlock, MarketRangeTable } from '../../../components/v2/V2Blocks.jsx'
+import { myRangeTable, MY_COST_ANSWER } from '../../../data/malaysiaMarketRanges.js'
 import '../../../styles/pages/seo-malaysia.css'
 
 /* ============================================================
@@ -25,15 +27,18 @@ import '../../../styles/pages/seo-malaysia.css'
    ============================================================ */
 
 const PAGE_TITLE =
-  'SEO Services Malaysia: SEO Company for Malaysian SMEs | Static Savvy Media'
+  'SEO Company Malaysia: Nationwide SEO Services for SMEs | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
-  'SEO services in Malaysia from our Rawang, Selangor office: rank on google.com.my and Google Maps with technical, local and English/BM content SEO. No lock-in. Call +60 12-453 7030.'
+  'Nationwide SEO company in Malaysia for SMEs, from KL and Selangor to Penang and Johor Bahru: technical, content and AI-search SEO on google.com.my. No lock-in. +60 12-453 7030.'
 
 const HERO_EYEBROW = 'SEO · MALAYSIA'
 
 const HERO_TITLE =
-  'SEO Services in Malaysia, SEO Company for SMEs Across the Country'
+  'SEO Company in Malaysia, Nationwide SEO Services for SMEs'
+
+const SEO_MY_ANSWER =
+  'Static Savvy Media is an SEO company serving SMEs across Malaysia, from Kuala Lumpur and Selangor to Penang, Johor Bahru and Ipoh, with a Malaysia office in Rawang, Selangor. We fix technical SEO, write English and Bahasa Malaysia pages for google.com.my, and make you citable in AI search. Quoted in MYR, no lock-in.'
 
 const HERO_PARAGRAPH =
   'Static Savvy Media is an SEO company with a Malaysia office in Rawang, Selangor, serving SMEs nationwide, from the Klang Valley to Penang, Johor Bahru and Ipoh. (Based in Kuala Lumpur? See our dedicated SEO services in Kuala Lumpur page.) Get your Malaysian business in front of the right customers when they are actively searching for your products and services. Static Savvy Media combines technical SEO, keyword strategy, on-page optimization, content development, internal linking, schema and performance measurement to build sustainable organic search visibility.'
@@ -163,6 +168,9 @@ const MALAYSIA_LINKS = [
   { name: 'SEO agency in Kuala Lumpur (KL)', path: '/services/seo/kuala-lumpur/' },
   { name: 'Local SEO and Google Maps in Malaysia', path: '/services/local-seo/malaysia/' },
   { name: 'How much SEO costs in Malaysia (guide)', path: '/blog/seo-cost-malaysia-price-guide/' },
+  { name: 'Our Malaysia office in Rawang', path: '/locations/rawang/' },
+  { name: 'Digital marketing in Selangor', path: '/locations/selangor/' },
+  { name: 'Our headquarters in Madurai, India', path: '/locations/madurai/' },
 ]
 
 const PROCESS_STEPS = [
@@ -312,13 +320,22 @@ const FAQS = [
   },
   {
     question: 'How much do SEO services cost in Malaysia?',
-    answer:
-      'It depends on how many services and locations you want to rank for, how competitive they are and the current condition of your website. Book a free consultation and we will recommend a scope and send a custom quote. Message us on WhatsApp at +91 99440 40345 (or call +60 12-453 7030) or send an enquiry for a custom quote.',
+    answer: MY_COST_ANSWER,
   },
   {
     question: 'What is the difference between SEO and Local SEO?',
     answer:
       'Traditional SEO targets broader organic search visibility. Local SEO specifically targets location-based search intent and Google Maps/local search results. For businesses targeting local customers, both approaches are recommended.',
+  },
+  {
+    question: 'Which is the best SEO company in Malaysia?',
+    answer:
+      'There is no single best SEO company for every business, and we do not rank ourselves number one. Shortlist two or three agencies whose focus matches your goal, then compare them on Search Console results they can show, whether they research google.com.my in your customers’ languages, earn links rather than buy them, keep every account in your name and work month to month.',
+  },
+  {
+    question: 'Are you based in Kuala Lumpur?',
+    answer:
+      'Our Malaysia office is in Rawang, Selangor, north of Kuala Lumpur, and we serve KL businesses in person by appointment. If you are in KL, see our dedicated SEO agency in Kuala Lumpur page for KL-specific details.',
   },
   {
     question: 'How is SEO measured?',
@@ -402,8 +419,8 @@ export default function SEO_Malaysia() {
               </ScrollReveal>
               <ScrollReveal delay={240}>
                 <div className="seo-mys-hero__actions">
-                  <Button href={whatsappHref} variant="primary" size="lg">
-                    Get an SEO Consultation
+                  <Button href="#audit" variant="primary" size="lg">
+                    Get a Free SEO Audit
                   </Button>
                   <Button to="/services/seo/" variant="outline" size="lg">
                     Explore SEO Services
@@ -414,6 +431,8 @@ export default function SEO_Malaysia() {
           </div>
         </div>
       </section>
+
+      <AnswerFirst eyebrow="SEO Malaysia · Quick answer" heading="What does an SEO company in Malaysia do for an SME?" text={SEO_MY_ANSWER} facts={['Nationwide, office in Rawang', 'English & Bahasa Malaysia', 'Call +60 12-453 7030', 'WhatsApp +91 99440 40345']} />
 
       {/* ---- SEO for Malaysian Businesses ---- */}
       <section className="section">
@@ -844,6 +863,16 @@ export default function SEO_Malaysia() {
           </div>
         </div>
       </section>
+
+      <MarketRangeTable {...myRangeTable('What SEO costs in Malaysia (market ranges)')} />
+
+      <AuditBlock
+        formId="growth_audit_seo_malaysia"
+        defaultCity="Other Malaysia"
+        eyebrow="Free SEO audit · Malaysia"
+        title="Get a free SEO audit for your Malaysian business."
+        lead="We review your website, Google Business Profile, AI search presence and competitors on google.com.my, then send what to fix first. Prepared by our team, not an automated score."
+      />
 
       {/* ---- FAQ ---- */}
       <FAQSection

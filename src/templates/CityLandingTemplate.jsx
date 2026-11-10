@@ -6,7 +6,8 @@ import SectionHeading from '../components/common/SectionHeading.jsx'
 import ServicesGrid from '../components/sections/ServicesGrid.jsx'
 import FAQSection from '../components/sections/FAQSection.jsx'
 import CTASection from '../components/sections/CTASection.jsx'
-import ContactFormSection from '../components/sections/ContactFormSection.jsx'
+import { AuditBlock, MarketRangeTable } from '../components/v2/V2Blocks.jsx'
+import { auditCityFor } from '../data/auditOptions.js'
 import { ScrollReveal } from '../components/animations/ScrollReveal.jsx'
 import { setSeo } from '../utils/seo.js'
 import { faqPageSchema, breadcrumbListSchema } from '../utils/schema.js'
@@ -202,6 +203,9 @@ export default function CityLandingTemplate({ city }) {
         </div>
       </section>
 
+      {/* ---------------- MARKET RANGES (general market figures, never our prices) ---------------- */}
+      {city.marketRanges && <MarketRangeTable eyebrow="Cost" {...city.marketRanges} />}
+
       {/* ---------------- RESULTS + REVIEWS ---------------- */}
       <section className="section section--alt city-proof">
         <div className="container city-proof__grid">
@@ -275,7 +279,12 @@ export default function CityLandingTemplate({ city }) {
 
       {/* ---------------- ENQUIRY FORM ---------------- */}
       <div id="city-enquiry" className="city-enquiry-anchor">
-        <ContactFormSection />
+        <AuditBlock
+          formId={`growth_audit_city_${city.slug.replace(/-/g, '_')}`}
+          defaultCity={city.auditCity || auditCityFor(city.name, city.region)}
+          title={`Get a free Growth Audit for your ${city.name} business.`}
+          lead={`A review of your website, Google Business Profile, AI search presence and ${city.name} competitors, with a plan of what to fix first. Prepared by our team, not an automated score.`}
+        />
       </div>
     </div>
   )
