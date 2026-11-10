@@ -113,7 +113,7 @@ export default function Client2() {
   const jsonLdRef = useRef([])
 
   useEffect(() => {
-    setSeo({ title: META_TITLE, description: META_DESC, canonical: `${SITE_URL}/case-studies/client-2/`, ogType: 'article' })
+    setSeo({ title: META_TITLE, description: META_DESC, canonical: `${SITE_URL}/case-studies/client-2/`, ogType: 'article', robots: 'noindex,follow' })
     const breadcrumbs = breadcrumbListSchema({ items: [
       { name: 'Home', item: `${SITE_URL}/` },
       { name: 'Case Studies', item: `${SITE_URL}/case-studies/` },

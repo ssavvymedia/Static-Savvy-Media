@@ -149,6 +149,11 @@ for (const route of routes) {
     html = setTag(html, /<div id="root"><\/div>/, rootHtml(ssrBody, route), 'root', route)
     const ld = JSON.stringify(ssrBody.schema).replace(/</g, '\\u003c')
     html = html.replace('</head>', `  <script type="application/ld+json" id="json-ld-schema">${ld}</script>\n  </head>`)
+    /* Sanity posts: the post data the server render used, so BlogPost.jsx hydrates without refetching. */
+    if (ssrBody.preload) {
+      const data = JSON.stringify(ssrBody.preload).replace(/</g, '\\u003c').replace(/\u2028/g, '\\u2028').replace(/\u2029/g, '\\u2029')
+      html = html.replace('</head>', `  <script>window.__SSM_POST__=${data}</script>\n  </head>`)
+    }
   }
   if (route.startsWith('/p/portfolio-')) html = html.replace('</head>', PORTFOLIO_PRELOAD)
   else if (route.startsWith('/p/')) html = html.replace('</head>', PRICING_PRELOAD)

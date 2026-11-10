@@ -17,7 +17,7 @@ export const SITE_TAGLINE = "Premium Digital Marketing Agency";
 export const SITE_DESCRIPTION =
   "Digital marketing company in Madurai offering SEO, Local SEO, Google Ads and social media. Rated 4.9★ from 106 Google reviews.";
 export const CONTACT_PHONE = "";
-export const CONTACT_EMAIL = "";
+export const CONTACT_EMAIL = "info@staticsavvymedia.com";
 export const WHATSAPP_NUMBER = "+91 99440 40345";
 export const WHATSAPP_MESSAGE =
   "Hi Static Savvy Media, I would like to know more about your services.";

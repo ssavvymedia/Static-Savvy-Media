@@ -1021,7 +1021,7 @@ export const seoConfig = {
         "@type": "Article",
         headline: "Case Study 1: B2B Industrial Growth",
       },
-      robots: "index,follow",
+      robots: "noindex,follow" /* placeholder until a real, approved case study is published */,
     },
   },
   "/case-studies/client-2": {
@@ -1042,7 +1042,7 @@ export const seoConfig = {
         "@type": "Article",
         headline: "Case Study 2: GEO/AEO + SEO Approach",
       },
-      robots: "index,follow",
+      robots: "noindex,follow" /* placeholder until a real, approved case study is published */,
     },
   },
   "/case-studies/client-3": {
@@ -1066,7 +1066,7 @@ export const seoConfig = {
         "@type": "Article",
         headline: "Case Study 3: E-Commerce Sales Scaling",
       },
-      robots: "index,follow",
+      robots: "noindex,follow" /* placeholder until a real, approved case study is published */,
     },
   },
   "/case-studies/client-4": {
@@ -1089,7 +1089,7 @@ export const seoConfig = {
         "@type": "Article",
         headline: "Case Study 4: AI Search Citation Growth",
       },
-      robots: "index,follow",
+      robots: "noindex,follow" /* placeholder until a real, approved case study is published */,
     },
   },
 

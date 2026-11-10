@@ -165,10 +165,13 @@ export default function CaseStudies() {
                   {!study.verified && (
                     <span className="cs-card__status">Case Study Coming Soon</span>
                   )}
-                  <Link to={study.slug} className="cs-card__cta" aria-label={'View ' + study.title}>
-                    View Case Study
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-                  </Link>
+                  {/* Placeholder studies are noindex and not linked until real, approved results are published. */}
+                  {study.verified && (
+                    <Link to={study.slug} className="cs-card__cta" aria-label={'View ' + study.title}>
+                      View Case Study
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                    </Link>
+                  )}
                 </article>
               </ScrollReveal>
             ))}

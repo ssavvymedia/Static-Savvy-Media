@@ -20,6 +20,15 @@
       ]
     },
     {
+      "source": "/case-studies/client-(\\d+){/}?",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, follow"
+        }
+      ]
+    },
+    {
       "source": "/diwali-2026{/}?",
       "headers": [
         {

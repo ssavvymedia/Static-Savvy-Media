@@ -209,7 +209,7 @@ export default function CityLandingTemplate({ city }) {
             <p className="city-serve__label">Google reviews</p>
             <p className="city-reviews__score">4.9<span>/5</span></p>
             <p className="city-reviews__stars" aria-hidden="true">★★★★★</p>
-            <p>Rated 4.9 out of 5 from 106 Google reviews on our Madurai Google Business Profile. Read every review, unedited, on Google.</p>
+            <p>Rated 4.9★ from 106 Google reviews on our Madurai Google Business Profile. Read every review, unedited, on Google.</p>
             <Button href={reviewsHref} variant="ghost" size="md" target="_blank" rel="noopener noreferrer">Read our Google reviews</Button>
           </div>
           <div className="city-card city-results">

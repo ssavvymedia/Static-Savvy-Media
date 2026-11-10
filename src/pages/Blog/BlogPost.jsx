@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo, useRef } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { applySanityOverride } from '../../data/blogOverrides.js'
 import { PortableText } from '@portabletext/react'
@@ -7,7 +7,7 @@ import CTASection from '../../components/sections/CTASection.jsx'
 import { ScrollReveal } from '../../components/animations/ScrollReveal.jsx'
 import { sanityClient, urlFor } from '../../utils/sanityClient.js'
 import { setSeo } from '../../utils/seo.js'
-import { breadcrumbListSchema } from '../../utils/schema.js'
+import { blogPostSchema, BLOG_POST_FIELDS } from '../../utils/blogPostSchema.js'
 import { buildWhatsAppLink, cleanSlug } from '../../utils/helpers.js'
 import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, SITE_URL } from '../../utils/constants.js'
 
@@ -61,6 +61,7 @@ function formatDate(dateString) {
       year: 'numeric',
       month: 'long',
       day: 'numeric',
+      timeZone: 'UTC', // same label on the build server and in the browser (hydration)
     })
   } catch {
     return null
@@ -70,28 +71,37 @@ function formatDate(dateString) {
 /* ============================================================
    COMPONENT
    ============================================================ */
+/* Build-time prerender (scripts/seo/ssr-bodies.mjs) embeds the post as window.__SSM_POST__ so the
+ * server HTML (H1, body, FAQs) hydrates in place without a second fetch or a loading flash. */
+function preloadedPost(slug) {
+  const g = typeof window !== 'undefined' ? window : globalThis
+  const p = g.__SSM_POST__
+  return p && cleanSlug(p.slug) === cleanSlug(slug) ? applySanityOverride(p) : undefined
+}
+
 export default function BlogPost() {
   const { slug } = useParams()
-  const [post, setPost] = useState(undefined) // undefined = loading, null = not found
-  const jsonLdRef = useRef([])
+  const [post, setPost] = useState(() => preloadedPost(slug)) // undefined = loading, null = not found
 
   useEffect(() => {
+    if (post && cleanSlug(post.slug) === cleanSlug(slug)) return undefined
+    let live = true
     setPost(undefined)
     sanityClient
       .fetch(
         // Also match a slug saved with a stray leading slash in Sanity ("/my-post"), so the post
         // still renders at /blog/my-post/. The content itself should still be fixed in Sanity.
-        `*[_type == "post" && slug.current in [$slug, "/" + $slug]][0]{
-          title, "slug": slug.current, category, description, author, mainImage, body, publishedAt, seoTitle, seoDescription
-        }`,
+        `*[_type == "post" && slug.current in [$slug, "/" + $slug]][0]{ ${BLOG_POST_FIELDS} }`,
         { slug: cleanSlug(slug) },
       )
-      .then((data) => setPost(data ? applySanityOverride(data) : null))
+      .then((data) => live && setPost(data ? applySanityOverride(data) : null))
       .catch((err) => {
         console.error('Sanity fetch failed:', err)
-        setPost(null)
+        if (live) setPost(null)
       })
     window.scrollTo(0, 0)
+    return () => { live = false }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [slug])
 
   const readingTime = useMemo(() => estimateReadingTime(post?.body), [post])
@@ -119,41 +129,10 @@ export default function BlogPost() {
       canonical: `${pageUrl}/`,
       ogType: 'article',
       ogImage: post.mainImage ? urlFor(post.mainImage).width(1200).height(630).fit('crop').url() : undefined,
+      // Same graph the build prerenders into the raw HTML (BlogPosting + Breadcrumb + FAQPage).
+      schema: blogPostSchema(post, post.mainImage ? urlFor(post.mainImage).width(1200).url() : undefined),
     })
-
-    const breadcrumbs = breadcrumbListSchema({
-      items: [
-        { name: 'Home', item: `${SITE_URL}/` },
-        { name: 'Blog', item: `${SITE_URL}/blog/` },
-        { name: post.title, item: `${pageUrl}/` },
-      ],
-    })
-
-    const articleSchema = {
-      '@context': 'https://schema.org',
-      '@type': 'BlogPosting',
-      headline: post.title,
-      description: post.description || '',
-      image: post.mainImage ? urlFor(post.mainImage).width(1200).url() : undefined,
-      author: { '@type': 'Person', name: post.author || 'Static Savvy Media' },
-      datePublished: post.publishedAt,
-      mainEntityOfPage: `${pageUrl}/`,
-      publisher: { '@type': 'Organization', name: 'Static Savvy Media', url: SITE_URL },
-    }
-
-    const scripts = [breadcrumbs, articleSchema].map((data) => {
-      const script = document.createElement('script')
-      script.type = 'application/ld+json'
-      script.text = JSON.stringify(data)
-      document.head.appendChild(script)
-      return script
-    })
-    jsonLdRef.current = scripts
-
-    return () => {
-      jsonLdRef.current.forEach((s) => s.remove())
-      jsonLdRef.current = []
-    }
+    return undefined
   }, [post, pageUrl])
 
   /* ---- Loading skeleton ---- */

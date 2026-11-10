@@ -15,6 +15,8 @@ const HOST = 'https://www.staticsavvymedia.com'
 const PHONE = '+91 99440 40345'
 const ORG_ID = `${HOST}/#organization`
 const EMAIL = 'info@staticsavvymedia.com'
+const SANITY_PROJECT = process.env.VITE_SANITY_PROJECT_ID || 'o6wiaocb'
+const SANITY_DATASET = process.env.VITE_SANITY_DATASET || 'production'
 const decode = (s) => s.replace(/<br\s*\/?>/g, ' ').replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/&#x27;|&#39;/g, "'").replace(/&quot;/g, '"').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ').trim()
 
 /* Text of every element whose class list has a token ending in `suffix` (React output is well-formed,
@@ -135,6 +137,38 @@ export async function ssrBodies(root, distAssets) {
      } catch (e) {
       console.warn(`ssr-bodies: skipped ${r.route} (ships as plain shell): ${String(e?.message || e).slice(0, 300)}`)
      }
+    }
+    /* Sanity CMS posts (/blog/:slug): fetch each published post at build time and server-render the
+     * real BlogPost page with it, so the raw HTML carries the H1, full body, FAQs and JSON-LD.
+     * `preload` ships as window.__SSM_POST__ so the client hydrates the same markup without refetching.
+     * A failed fetch only drops the bodies (posts then ship as the plain shell, as before). */
+    try {
+      const { BLOG_POST_FIELDS, blogPostSchema, bodyWordCount } = await vite.ssrLoadModule('/src/utils/blogPostSchema.js')
+      const { urlFor } = await vite.ssrLoadModule('/src/utils/sanityClient.js')
+      const { applySanityOverride } = await vite.ssrLoadModule('/src/data/blogOverrides.js')
+      const q = `*[_type == "post" && defined(slug.current) && !(_id in path("drafts.**"))]{ ${BLOG_POST_FIELDS} }`
+      const res = await fetch(`https://${SANITY_PROJECT}.apicdn.sanity.io/v2024-01-01/data/query/${SANITY_DATASET}?query=${encodeURIComponent(q)}`, { signal: AbortSignal.timeout(20000) })
+      if (!res.ok) throw new Error(`Sanity HTTP ${res.status}`)
+      for (const raw of (await res.json()).result || []) {
+        const slug = String(raw.slug || '').trim().replace(/^\/+|\/+$/g, '')
+        if (!slug || !raw.title) continue
+        const route = `/blog/${slug}/`
+        try {
+          globalThis.__SSM_POST__ = raw
+          const app = renderApp(route)
+          const h1 = app.match(/<h1[^>]*>([\s\S]*?)<\/h1>/)
+          if (!h1 || /not found/i.test(h1[1])) throw new Error('no post <h1> rendered')
+          const post = applySanityOverride(raw)
+          const schema = blogPostSchema(post, post.mainImage ? urlFor(post.mainImage).width(1200).url() : undefined)
+          out.set(route, { app, html: '', schema, preload: raw, h1: decode(h1[1]), words: bodyWordCount(raw.body) })
+        } catch (e) {
+          console.warn(`ssr-bodies: Sanity post ${route} skipped (ships as plain shell): ${String(e?.message || e).slice(0, 200)}`)
+        } finally {
+          delete globalThis.__SSM_POST__
+        }
+      }
+    } catch (e) {
+      console.warn(`ssr-bodies: Sanity posts not prerendered: ${String(e?.message || e).slice(0, 200)}`)
     }
   } finally {
     await vite.close()

@@ -56,10 +56,6 @@ const SITEMAP_SECTIONS = [
     title: 'Case Studies',
     links: [
       { label: 'Case Studies', path: '/case-studies' },
-      { label: 'Client 1', path: '/case-studies/client-1' },
-      { label: 'Client 2', path: '/case-studies/client-2' },
-      { label: 'Client 3', path: '/case-studies/client-3' },
-      { label: 'Client 4', path: '/case-studies/client-4' },
     ],
   },
   {

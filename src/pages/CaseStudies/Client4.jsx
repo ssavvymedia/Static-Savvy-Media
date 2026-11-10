@@ -134,7 +134,7 @@ export default function Client4() {
   }
 
   useEffect(() => {
-    setSeo({ title: META_TITLE, description: META_DESC, canonical: SITE_URL + '/case-studies/client-4/' })
+    setSeo({ title: META_TITLE, description: META_DESC, canonical: SITE_URL + '/case-studies/client-4/', robots: 'noindex,follow' })
     const schemas = [breadcrumbListSchema(breadcrumbs), articleSchema]
     schemas.forEach(s => {
       const el = document.createElement('script')
