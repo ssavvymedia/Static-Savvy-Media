@@ -31,7 +31,7 @@ const PAGE_TITLE =
   "Social Media Marketing Services | Static Savvy Media";
 
 const PAGE_DESCRIPTION =
-  "Social media marketing services for businesses in Tamil Nadu and Malaysia: Instagram, Facebook, YouTube and LinkedIn content plus Meta ads. Rated 4.9★ on Google.";
+  "Social media marketing services for businesses in Tamil Nadu and Malaysia: Instagram, Facebook, YouTube and LinkedIn content plus Meta ads.";
 
 const HERO_SUBTITLE =
   "Social media done right is not about posting every day and hoping something goes viral. It is a deliberate, data-driven practice of building brand awareness, demonstrating expertise, and creating consistent touchpoints that turn cold audiences into warm enquiries, and warm enquiries into WhatsApp conversations that convert.";

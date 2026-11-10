@@ -9,7 +9,7 @@ import '../../styles/pages/growth-audit.css'
 
 /* /growth-audit/: landing page for the free Business Growth Audit (leads go by email via the shared form). */
 const PAGE_TITLE = 'Free Business Growth Audit | Static Savvy Media, Madurai'
-const PAGE_DESCRIPTION = 'Request a free Business Growth Audit: website & SEO health, Google Business Profile, AI search presence, competitors and a prioritised 90-day plan, prepared by our Madurai team.'
+const PAGE_DESCRIPTION = 'Request a free Business Growth Audit: website & SEO health, Google Business Profile, AI search presence, competitors and a prioritised 90-day plan.'
 
 const COVERS = [
   { title: 'Website & SEO health', text: 'Speed, mobile usability, indexing, titles, internal links and whether each service and city has a page that can rank.' },

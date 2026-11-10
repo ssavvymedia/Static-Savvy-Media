@@ -32,7 +32,7 @@ const PAGE_TITLE =
   'Corporate Photography & Video in Madurai | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
-  'Professional corporate photography and video production in Madurai. Team headshots, office photography, brand videos, and event coverage for Tamil Nadu and Malaysia businesses.'
+  'Professional corporate photography and video production in Madurai. Team headshots, office photography, brand videos, and event coverage for Tamil Nadu.'
 
 const HERO_TITLE =
   'Corporate Photography & Video, Visuals That Build Trust Before a Word Is Read'

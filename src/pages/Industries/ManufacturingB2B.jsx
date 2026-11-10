@@ -12,7 +12,7 @@ import heroImg from '../../assets/images/home/ind-manufacturing.webp'
 
 /* /industries/manufacturing-b2b/: digital marketing for manufacturers, exporters and B2B suppliers. */
 const PAGE_TITLE = 'Manufacturing & B2B Digital Marketing | Static Savvy Media'
-const PAGE_DESCRIPTION = 'B2B SEO, Google Ads, AI search and websites for manufacturers, exporters and industrial suppliers in Madurai, Tamil Nadu and Malaysia. Get a free Growth Audit from our Madurai HQ.'
+const PAGE_DESCRIPTION = 'B2B SEO, Google Ads, AI search and websites for manufacturers, exporters and industrial suppliers in Madurai, Tamil Nadu and Malaysia.'
 const WA_MSG = 'Hi Static Savvy Media, I run a manufacturing / B2B business and would like a Growth Audit.'
 
 const ANSWER = 'Static Savvy Media runs B2B digital marketing for manufacturers, exporters and industrial suppliers from its Madurai HQ, with offices in Thoothukudi and Rawang, Malaysia. We build product and capability pages that rank for the specifications buyers search, run Google Ads for high-intent enquiry terms, make your company easy for AI assistants to cite, and track every call, WhatsApp chat and RFQ back to its source.'

@@ -34,7 +34,7 @@ const PAGE_TITLE =
   'Digital Marketing Agency Malaysia (Rawang) | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
-  "Digital marketing agency for Malaysian SMEs with an office in Rawang, Selangor: SEO, Google Maps, AI search, Google Ads, social and websites. Call +60 12-453 7030."
+  "Digital marketing agency for Malaysian SMEs with an office in Rawang, Selangor: SEO, Google Maps, AI search, Google Ads, social and websites."
 
 const HERO_EYEBROW = 'Malaysia • Office in Rawang, Selangor'
 

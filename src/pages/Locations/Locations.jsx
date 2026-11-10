@@ -23,7 +23,7 @@ const PAGE_TITLE =
   'Locations: Madurai HQ, Thoothukudi, Malaysia | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
-  'Static Savvy Media offices in Madurai, Thoothukudi, and Rawang, Selangor (Malaysia). Premium digital marketing, SEO, GEO/AEO, Google Ads, and AI automation, for businesses across Tamil Nadu and Malaysia.'
+  'Static Savvy Media offices in Madurai, Thoothukudi, and Rawang, Selangor (Malaysia). Premium digital marketing, SEO, GEO/AEO, Google Ads, and AI automation.'
 
 const HERO_SUBTITLE =
   'We are genuinely local. Tamil-speaking team. Offices in Madurai, Thoothukudi, and Rawang. We understand the markets we serve from the inside.'
@@ -52,7 +52,7 @@ const LOCATIONS = [
     badge: 'Remote',
     description:
       'Fishing & Marine: From mechanized fishing boats to seafood export businesses, Thoothukudi’s marine sector is increasingly reaching buyers and suppliers online. We help marine businesses build the digital presence needed to access modern B2B and B2C channels.',
-    note: 'Our primary office is in Madurai. We serve Thoothukudi clients remotely with in-person meetings available by appointment.',
+    note: 'Our Thoothukudi office (90, Peria Kadai St, Matha Koil) serves local businesses, backed by our Madurai head office. Meetings at the office or at your premises by appointment.',
     services: [
       'Port & Marine Digital Marketing',
       'Industrial B2B Visibility',
@@ -462,8 +462,8 @@ export default function Locations() {
                 </span>
                 <h3 className="lh-presence__title">Regional Reach</h3>
                 <p className="lh-presence__text">
-                  Serving Thoothukudi clients remotely with in-person meetings available by
-                  appointment. Deep knowledge of the port city's industrial and marine sectors.
+                  Our Thoothukudi office serves local businesses, with meetings at the office or
+                  at your premises. Deep knowledge of the port city's industrial and marine sectors.
                 </p>
               </div>
             </ScrollReveal>

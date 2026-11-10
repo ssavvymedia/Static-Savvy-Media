@@ -30,7 +30,7 @@ const PAGE_TITLE =
   'Digital Marketing in Thoothukudi (Tuticorin) | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
-  "Static Savvy Media serves Thoothukudi businesses with SEO, Local SEO, Google Ads, and social media marketing. Port city specialists, industrial, marine, manufacturing, and retail. WhatsApp: +91 99440 40345."
+  "Static Savvy Media serves Thoothukudi businesses with SEO, Local SEO, Google Ads, and social media marketing."
 
 const HERO_EYEBROW = 'Thoothukudi • Tuticorin • Port City'
 
@@ -118,13 +118,13 @@ const INDUSTRIES = [
 ]
 
 const OFFICE_NOTE =
-  'Our primary office is in Madurai. We serve Thoothukudi clients remotely with in-person meetings available by appointment. For most digital marketing work, remote delivery is as effective as in-person, and we have not had a Thoothukudi client who found the arrangement limiting.'
+  'Our Thoothukudi office (90, Peria Kadai St, Matha Koil) serves local businesses, backed by our Madurai head office. Meetings at the office or at your premises by appointment.'
 
 const FAQS = [
   {
     question: 'Do you have a physical office in Thoothukudi?',
     answer:
-      'Our primary office is in Madurai. We serve Thoothukudi clients remotely with in-person meetings available by appointment. For most digital marketing work, remote delivery is as effective as in-person, and we have not had a Thoothukudi client who found the arrangement limiting.',
+      'Yes. Our Thoothukudi office is at 90, Peria Kadai St, Matha Koil, Thoothukudi 628001, one of our three offices alongside the Madurai head office and Rawang, Malaysia. The local team serves Thoothukudi businesses, with meetings at the office or at your premises by appointment. Call or WhatsApp +91 99440 40345.',
   },
   {
     question: 'Can you help B2B industrial businesses generate leads online?',

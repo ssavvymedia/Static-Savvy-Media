@@ -18,7 +18,7 @@ export const newBlogPosts = [
     publishedLabel: '4 November 2026',
     title: 'GBP Not Showing on Google Maps? Causes & Fixes (Madurai)',
     h1: 'GBP Not Showing on Google Maps: Causes and Fixes',
-    description: 'Google Business Profile not showing on Google Maps? The common causes (verification, suspension, wrong pin, duplicates, categories, distance) and step-by-step fixes for Madurai and local businesses.',
+    description: 'Google Business Profile not showing on Google Maps? The common causes (verification, suspension, wrong pin, duplicates, categories, distance).',
     imageAlt: 'Google Business Profile not showing on Google Maps: causes and fixes for Madurai businesses, Static Savvy Media',
     intro: 'Short answer: if your Google Business Profile (GBP) is not showing on Google Maps, it is usually one of six things: the profile is not verified, it has been suspended or is under review, the map pin or address is wrong, there is a duplicate listing, the category does not match what people search, or it is showing but ranking too low to be seen from where the customer is searching. Search your exact business name first. If it does not appear even then, it is a visibility problem with the profile itself; if it appears for the name but not for searches like "dentist near me", it is a ranking problem. This guide walks Madurai and other local businesses through each cause and the fix.',
     body: [
@@ -57,7 +57,7 @@ export const newBlogPosts = [
     publishedLabel: '28 October 2026',
     title: 'Affordable SEO in Madurai: 2026 Costs & What You Get',
     h1: 'Affordable SEO Company in Madurai: What SEO Costs in 2026 and What You Get',
-    description: 'Affordable SEO in Madurai: typical market rates, what each type of plan should include, red flags and how to get a custom quote. Monthly plans, no lock-in. WhatsApp +91 99440 40345.',
+    description: 'Affordable SEO in Madurai: typical market rates, what each type of plan should include, red flags and how to get a custom quote. Monthly plans, no lock-in.',
     imageAlt: 'Affordable SEO company in Madurai 2026: what SEO costs and what you get, Static Savvy Media',
     intro: 'Short answer: an affordable SEO company in Madurai should give you a written list of monthly work, reports that show calls and WhatsApp enquiries, and no long lock-in, at a price a local business can keep paying for several months. At Static Savvy Media, our Madurai head office (Kamarajar Salai, since 1 October 2021) offers three types of monthly plan for Indian businesses: Google Business Profile management, Google Business Profile + website SEO, and Google Business Profile + website SEO + AEO + GEO (AI search). Each is quoted after a free review of your business. This guide explains what each plan includes, what the Madurai market typically charges, and how to tell cheap SEO from affordable SEO.',
     body: [
@@ -96,7 +96,7 @@ export const newBlogPosts = [
     publishedLabel: '25 October 2026',
     title: 'How Long Does SEO Take in Madurai? 2026 Timeline',
     h1: 'How Long Does SEO Take for a Madurai Business?',
-    description: 'Most Madurai businesses see local SEO movement in 1–3 months and steadier enquiries in 4–6 months. Here is the month-by-month timeline and what speeds it up or slows it down.',
+    description: 'Most Madurai businesses see local SEO movement in 1–3 months and steadier enquiries in 4–6 months. Here is the month-by-month timeline.',
     imageAlt: 'How long SEO takes for a Madurai business, month-by-month timeline, Static Savvy Media',
     intro: 'Short answer: for most Madurai businesses, SEO shows early movement in 1 to 3 months (technical fixes, Google Business Profile and low-competition local searches), steadier enquiries in 4 to 6 months, and competitive city-wide or Tamil Nadu-wide terms in 6 to 12 months. A brand-new website, a crowded industry or thin content pushes that out; a clean, established site with good reviews brings it in.',
     body: [
@@ -148,7 +148,7 @@ export const newBlogPosts = [
     publishedLabel: '25 October 2026',
     title: 'Is SEO Worth It for Small Businesses in Madurai?',
     h1: 'Is SEO Worth It for a Small Business in Madurai?',
-    description: 'SEO is worth it for most Madurai businesses that people search for locally: shops, clinics, schools, textiles. When it pays back, when it does not, and how to measure it.',
+    description: 'SEO is worth it for most Madurai businesses that people search for locally: shops, clinics, schools, textiles.',
     imageAlt: 'Is SEO worth it for a small business in Madurai, ROI guide, Static Savvy Media',
     intro: 'Short answer: yes, if people in and around Madurai already search Google for what you sell. Clinics, hardware and retail shops, schools and coaching centres, hotels and B2B textile suppliers usually get a steady flow of enquiries from SEO that keeps coming after the work is done. It is not worth it if nobody searches for your service, or if you need sales this week; then start elsewhere.',
     body: [
@@ -195,7 +195,7 @@ export const newBlogPosts = [
     category: 'Madurai',
     title: 'Facebook, Instagram & Google Ads in Madurai: A Guide',
     h1: 'Facebook, Instagram and Google Ads in Madurai: How Local Businesses Should Run Paid Ads',
-    description: 'How Madurai businesses can plan Meta (Facebook, Instagram) and Google Ads: targeting, budgets, WhatsApp leads, tracking and when to hire a PPC agency in Madurai.',
+    description: 'How Madurai businesses can plan Meta (Facebook, Instagram) and Google Ads: targeting, budgets, WhatsApp leads, tracking.',
     imageAlt: 'Facebook, Instagram and Google Ads planning for Madurai businesses, Static Savvy Media',
     intro: 'Paid ads are the fastest way for a Madurai business to get in front of buyers this week, but they are also the fastest way to spend money without enquiries. This guide, written from our Madurai head office, explains how to choose between Meta ads (Facebook and Instagram) and Google Ads, how to target Madurai properly, and what a good PPC agency in Madurai should hand over to you every month.',
     body: [
@@ -227,7 +227,7 @@ export const newBlogPosts = [
     category: 'Madurai',
     title: 'WhatsApp Marketing for Madurai Businesses | Static Savvy Media',
     h1: 'WhatsApp Marketing for Madurai Businesses: Turn Chats Into Customers',
-    description: 'A practical guide to WhatsApp marketing in Madurai: WhatsApp Business app vs API, catalogues, broadcast lists, click-to-WhatsApp ads and staying within WhatsApp rules.',
+    description: 'A practical guide to WhatsApp marketing in Madurai: WhatsApp Business app vs API, catalogues, broadcast lists, click-to-WhatsApp ads.',
     imageAlt: 'WhatsApp marketing for Madurai businesses guide, Static Savvy Media',
     intro: 'In Madurai, many customers would rather send a WhatsApp message than fill a form or call. That makes WhatsApp one of the most important sales channels for local shops, clinics, builders and service businesses. Here is how to use it properly, without getting your number blocked.',
     body: [
@@ -258,7 +258,7 @@ export const newBlogPosts = [
     category: 'Madurai',
     title: 'Website Design Company in Madurai: Checklist Before Hiring',
     h1: 'Hiring a Website Design Company in Madurai? Use This Checklist First',
-    description: 'What to check before hiring a website design or development company in Madurai: ownership, speed, mobile, SEO structure, WhatsApp leads, content and maintenance.',
+    description: 'What to check before hiring a website design or development company in Madurai: ownership, speed, mobile, SEO structure, WhatsApp leads, content.',
     imageAlt: 'Checklist for hiring a website design company in Madurai, Static Savvy Media',
     intro: 'Many Madurai businesses pay for a website once, then discover it is slow, hard to update, invisible on Google, or held hostage by a developer who controls the domain. This checklist covers the questions to settle before you sign with any web design company in Madurai, ours included.',
     body: [
@@ -567,7 +567,7 @@ export const newBlogPosts = [
     publishedLabel: '25 October 2026',
     title: 'SEO Cost in Malaysia: What Agencies Charge in 2026',
     h1: 'How Much Does SEO Cost in Malaysia? A 2026 Price Guide for KL and Selangor SMEs',
-    description: 'SEO in Malaysia usually costs RM500 to RM5,000 a month for SMEs. See what each price level includes, what drives cost in KL and Selangor, and red flags in cheap quotes.',
+    description: 'SEO cost in Malaysia for SMEs: typical market ranges, what each level of service includes and what drives cost in KL and Selangor.',
     imageAlt: 'SEO cost in Malaysia 2026 price guide for Kuala Lumpur and Selangor SMEs, Static Savvy Media',
     intro: 'Short answer: most Malaysian SMEs pay somewhere between RM500 and RM5,000 a month for SEO, and competitive national or e-commerce campaigns can run well above RM10,000. Where you land depends on how many keywords and locations you target, how competitive your industry is in Kuala Lumpur and Selangor, and how much content and technical work your website needs. This guide, written by our Malaysia team in Rawang, breaks down what you get at each price level and how to judge a quote.',
     body: [
@@ -658,7 +658,7 @@ export const newBlogPosts = [
     category: 'Malaysia',
     title: 'Rawang Local SEO: Get Found on Google Maps in Rawang, Selangor',
     h1: 'Local SEO in Rawang: How Rawang Businesses Get Found on Google Maps',
-    description: 'A local SEO guide for businesses in Rawang, Selangor: Google Business Profile, Bandar Country Homes and Bukit Beruntung searches, reviews, citations and local pages.',
+    description: 'A local SEO guide for businesses in Rawang, Selangor: Google Business Profile, Bandar Country Homes and Bukit Beruntung searches, reviews, citations.',
     imageAlt: 'Local SEO and Google Maps guide for Rawang, Selangor businesses, Static Savvy Media',
     intro: 'Rawang has grown from a town on the old trunk road into a busy residential and commercial hub in Gombak district, with families moving into areas such as Bandar Country Homes, Rawang Perdana, Bandar Tasik Puteri and nearby Bukit Beruntung and Serendah. When those residents need a clinic, tuition centre, workshop or contractor, they search Google Maps. Our Malaysia team is based in Rawang, and this is how we approach local SEO here.',
     body: [
@@ -690,7 +690,7 @@ export const newBlogPosts = [
     category: 'Malaysia',
     title: 'SEO Services in Selangor: Shah Alam, PJ, Klang & Rawang',
     h1: 'SEO Services in Selangor: How Businesses in Shah Alam, Petaling Jaya, Klang and Rawang Win on Google',
-    description: 'How SEO works for Selangor businesses in Shah Alam, Petaling Jaya, Subang Jaya, Klang and Rawang: location pages, map pack, B2B industrial searches and choosing an SEO partner.',
+    description: 'How SEO works for Selangor businesses in Shah Alam, Petaling Jaya, Subang Jaya, Klang and Rawang: location pages, map pack, B2B industrial searches.',
     imageAlt: 'SEO services for Selangor businesses in Shah Alam, Petaling Jaya, Klang and Rawang, Static Savvy Media',
     intro: 'Selangor is not one market. A clinic in Petaling Jaya, a factory supplier in Shah Alam, a logistics firm near Port Klang and a renovation contractor in Rawang compete for completely different searches. This guide explains how to plan SEO across Selangor without creating thin copy-paste city pages.',
     body: [
@@ -723,7 +723,7 @@ export const newBlogPosts = [
     category: 'Malaysia',
     title: 'Google Business Profile Optimisation Malaysia: 2026 Guide',
     h1: 'Google Business Profile Optimisation in Malaysia: A Step-by-Step Guide for SMEs',
-    description: 'How Malaysian SMEs can optimise a Google Business Profile: verification, categories, multilingual descriptions, photos, reviews, posts and avoiding suspension.',
+    description: 'How Malaysian SMEs can optimise a Google Business Profile: verification, categories, multilingual descriptions, photos, reviews, posts.',
     imageAlt: 'Google Business Profile optimisation guide for Malaysian SMEs, Static Savvy Media',
     intro: 'For many Malaysian SMEs, the Google Business Profile (formerly Google My Business) brings more calls and direction requests than the website. It is free, but most profiles are half-finished. This guide walks through the settings that matter, in the order we fix them for clients in Kuala Lumpur, Selangor and beyond.',
     body: [
@@ -753,7 +753,7 @@ export const newBlogPosts = [
     category: 'Malaysia',
     title: 'Social Media Marketing in Malaysia for SMEs: Platforms & Ads',
     h1: 'Social Media Marketing in Malaysia: A Practical Plan for SMEs',
-    description: 'How Malaysian SMEs can plan social media marketing on Facebook, Instagram, TikTok, WhatsApp and Xiaohongshu: audiences, multilingual content, festive calendar, ads and measurement.',
+    description: 'How Malaysian SMEs can plan social media marketing on Facebook, Instagram, TikTok, WhatsApp and Xiaohongshu: audiences, multilingual content.',
     imageAlt: 'Social media marketing plan for Malaysian SMEs, Static Savvy Media',
     intro: 'Malaysians spend a lot of time on social media, but posting every day is not a strategy. This guide helps SMEs in Kuala Lumpur, Selangor and across Malaysia choose the right platforms, plan content for a multilingual audience and turn followers into enquiries.',
     body: [
@@ -790,7 +790,7 @@ export const newBlogPosts = [
     category: 'Digital Marketing',
     title: 'Digital Marketing for Chennai Businesses: How to Compete',
     h1: 'Digital Marketing for Chennai Businesses: How to Stand Out in a Crowded Market',
-    description: 'How Chennai businesses can win with digital marketing: neighbourhood-level local SEO, niche B2B content, Tamil and English, ads discipline, and working with a Tamil Nadu agency from Madurai.',
+    description: 'How Chennai businesses can win with digital marketing: neighbourhood-level local SEO, niche B2B content, Tamil and English, and disciplined ads.',
     imageAlt: 'Digital marketing strategy for Chennai businesses, Static Savvy Media',
     intro: 'Chennai is Tamil Nadu’s most competitive digital market. Every service category has dozens of businesses fighting for the same Google results and ad slots. Broad keywords like "best clinic in Chennai" are expensive and hard to win. The businesses that grow usually go narrower and more local. Here is how we approach Chennai from our Madurai head office.',
     body: [
@@ -820,7 +820,7 @@ export const newBlogPosts = [
     category: 'Digital Marketing',
     title: 'Digital Marketing for Coimbatore Manufacturers & B2B',
     h1: 'Digital Marketing for Coimbatore Manufacturers: Getting B2B and Export Enquiries Online',
-    description: 'How Coimbatore manufacturers (pumps, motors, textiles machinery, foundries, engineering) can use SEO, product pages, LinkedIn and Google Ads to win B2B and export enquiries.',
+    description: 'How Coimbatore manufacturers (pumps, motors, foundries, engineering) can use SEO, product pages, LinkedIn and Google Ads to win B2B buyers.',
     imageAlt: 'B2B digital marketing for Coimbatore manufacturers, Static Savvy Media',
     intro: 'Coimbatore is known for pumps and motors, textile mills and machinery, foundries, engineering workshops and wet grinders. Much of this business still runs on dealer networks and referrals, but buyers in India and abroad now shortlist suppliers online first. This guide explains how Coimbatore manufacturers can make digital marketing produce real B2B enquiries.',
     body: [
@@ -849,7 +849,7 @@ export const newBlogPosts = [
     category: 'Digital Marketing',
     title: 'Digital Marketing in Trichy: Hospitals, Education & Retail',
     h1: 'Digital Marketing in Trichy: Local SEO and Lead Generation for Hospitals, Colleges and Retail',
-    description: 'How Trichy (Tiruchirappalli) businesses can grow with local SEO, Google Business Profile and targeted ads: hospitals, colleges and coaching centres, retail, and temple tourism.',
+    description: 'How Trichy (Tiruchirappalli) businesses can grow with local SEO, Google Business Profile and targeted ads: hospitals, colleges and coaching centres, retail.',
     imageAlt: 'Local SEO and digital marketing for Trichy businesses, Static Savvy Media',
     intro: 'Tiruchirappalli draws people from across central Tamil Nadu for education, healthcare, shopping and pilgrimage to Srirangam and Rockfort. That means many Trichy customers are searching from outside the city before they travel. Here is how Trichy businesses can capture those searches.',
     body: [
@@ -878,7 +878,7 @@ export const newBlogPosts = [
     category: 'Digital Marketing',
     title: 'Digital Marketing in Tirunelveli: Sell Beyond the District Online',
     h1: 'Digital Marketing in Tirunelveli: How Local Brands Can Sell Beyond the District',
-    description: 'How Tirunelveli businesses (sweets and food brands, Palayamkottai schools and colleges, clinics, retail) can use local SEO, e-commerce, social media and WhatsApp to grow.',
+    description: 'How Tirunelveli businesses (sweets and food brands, Palayamkottai schools and colleges, clinics, retail) can use local SEO, e-commerce, social media.',
     imageAlt: 'Digital marketing for Tirunelveli businesses, Static Savvy Media',
     intro: 'Tirunelveli has products people outside the district already want, from its famous halwa and sweets to local food products and handicrafts, plus a strong education base in Palayamkottai. The opportunity for many Tirunelveli businesses is not only local customers but buyers in Chennai, Bengaluru and abroad. Here is how to approach it.',
     body: [
@@ -912,7 +912,7 @@ export const newBlogPosts = [
     publishedLabel: '28 October 2026',
     title: 'Best Web Hosting for Small Business, India & Malaysia (2026)',
     h1: 'Best Web Hosting Companies for Small Businesses in India and Malaysia: Top 5 Compared (2026)',
-    description: 'Top 5 web hosting companies for small businesses in India and Malaysia, compared on starting price, renewal price, uptime guarantee, support and best use. Prices checked 28 Oct 2026.',
+    description: 'Top 5 web hosting companies for small businesses in India and Malaysia, compared on starting price, renewal price, uptime guarantee, support and best use.',
     imageAlt: 'Best web hosting for small business in India and Malaysia 2026: top 5 hosts compared on price, renewal, uptime and support',
     disclosure: 'Provider buttons on this page may become affiliate links. If you buy through one, Static Savvy Media may earn a commission at no extra cost to you. It never changes our ranking or the prices we show.',
     intro: 'Short answer: for most small businesses, Hostinger has the lowest entry price in both India and Malaysia, MilesWeb is the best Indian option if you want the renewal price to stay the same, Exabytes suits Malaysian businesses that want a Malaysian data centre and WhatsApp support, SiteGround is the easiest managed WordPress option, and Cloudways is for growing or WooCommerce sites that need their own server. Every price below was read from the provider\'s own website on 28 October 2026.',
@@ -1002,7 +1002,7 @@ export const newBlogPosts = [
     publishedLabel: '28 October 2026',
     title: 'Top Agentic AI Tools for Small Business Marketing (2026)',
     h1: 'Top Agentic AI Tools for Small Business Marketing in 2026: 5 Tools Compared',
-    description: 'Five agentic AI tools for small business marketing compared: Zapier Agents, n8n, Make, Lindy and HubSpot Breeze. Free plans, prices, best uses and safe setup. Checked 28 Oct 2026.',
+    description: 'Five agentic AI tools for small business marketing compared: Zapier Agents, n8n, Make, Lindy and HubSpot Breeze. Free plans, prices, best uses and safe setup.',
     imageAlt: 'Top agentic AI tools for small business marketing 2026: Zapier Agents, n8n, Make, Lindy and HubSpot Breeze compared',
     disclosure: 'Tool buttons on this page may become affiliate links. If you sign up through one, Static Savvy Media may earn a commission at no extra cost to you. It never changes our picks or the prices we show.',
     intro: 'Short answer: an agentic AI tool is software that can take a goal, decide the steps and act in your apps, such as replying to a new lead, updating your CRM and booking a call. For most small businesses, Zapier Agents is the easiest start, n8n is the cheapest at scale if you can self-host, Make suits visual multi-step workflows, Lindy works as an AI assistant for inbox and meetings, and HubSpot Breeze makes sense if you already use HubSpot. Prices below were read from each official page on 28 October 2026.',

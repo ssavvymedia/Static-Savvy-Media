@@ -18,7 +18,7 @@ import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, SITE_URL } from '../../utils/constan
 const PAGE_TITLE = 'Local SEO for Thoothukudi Businesses, Port City Growth Guide 2026'
 
 const PAGE_DESCRIPTION =
-  'Local SEO strategies for businesses in Thoothukudi, improving Google Maps visibility, Google Business Profile performance, local search rankings, and digital discovery across the port city.'
+  'Local SEO strategies for businesses in Thoothukudi, improving Google Maps visibility, Google Business Profile performance, local search rankings.'
 
 const AUTHOR = 'Deepan Kanz'
 const AUTHOR_ROLE = 'Founder & AI Search Specialist'

@@ -33,7 +33,7 @@ const PAGE_TITLE =
   'GEO & AEO Services: Get Cited by AI Search | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
-  "GEO and AEO services from Madurai. We structure your online presence so ChatGPT, Perplexity and Google AI Overviews can understand, trust and cite your business."
+  "GEO and AEO services from Madurai: we structure your online presence so ChatGPT, Perplexity and Google AI Overviews can understand and cite you."
 
 const HERO_SUBTITLE =
   'When someone asks ChatGPT "Which digital marketing agency should I hire in Madurai?", your business either appears in the answer, or it doesn’t. Traditional SEO determines what shows in the blue links. GEO and AEO determine what shows in the AI’s response itself. We offer AI search optimisation (GEO and AEO) alongside SEO, so you can be visible in both.'

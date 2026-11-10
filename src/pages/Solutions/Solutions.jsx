@@ -8,7 +8,7 @@ import { SITE_URL } from '../../utils/constants.js'
 
 /* /solutions/: the five growth solutions, each linking the existing service and service×city pages. */
 const PAGE_TITLE = 'Growth Solutions: SEO, AI Search & Ads | Static Savvy Media'
-const PAGE_DESCRIPTION = 'Five growth solutions from Static Savvy Media, Madurai: SEO & content, AI search (GEO/AEO), Local SEO & Google Business Profile, Google Ads and website development, for India and Malaysia.'
+const PAGE_DESCRIPTION = 'Five growth solutions from Static Savvy Media, Madurai: SEO & content, AI search (GEO/AEO), Local SEO & Google Business Profile, Google Ads.'
 
 const SOLUTIONS = [
   {

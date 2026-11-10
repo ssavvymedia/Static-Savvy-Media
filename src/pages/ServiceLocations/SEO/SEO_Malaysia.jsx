@@ -30,7 +30,7 @@ const PAGE_TITLE =
   'SEO Company Malaysia: SEO Services for SMEs | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
-  'Nationwide SEO company in Malaysia for SMEs, from KL and Selangor to Penang and Johor Bahru: technical, content and AI-search SEO on google.com.my. No lock-in. +60 12-453 7030.'
+  'Nationwide SEO company in Malaysia for SMEs, from KL and Selangor to Penang and Johor Bahru: technical, content and AI-search SEO on google.com.my.'
 
 const HERO_EYEBROW = 'SEO · MALAYSIA'
 

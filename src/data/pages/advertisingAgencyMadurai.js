@@ -2,7 +2,7 @@
 // to write crawlable HTML into the route's raw HTML).
 export const PATH = '/services/advertising-agency/madurai/'
 export const DESCRIPTION =
-  'Advertising agency in Madurai for Google Ads, Meta (Facebook & Instagram) ads, YouTube ads and WhatsApp lead campaigns, with conversion tracking. WhatsApp +91 99440 40345.'
+  'Advertising agency in Madurai for Google Ads, Meta (Facebook & Instagram) ads, YouTube ads and WhatsApp lead campaigns, with conversion tracking.'
 
 export const content = {
   path: PATH,

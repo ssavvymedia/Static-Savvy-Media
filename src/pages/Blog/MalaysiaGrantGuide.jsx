@@ -17,7 +17,7 @@ import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, SITE_URL } from '../../utils/constan
 const PAGE_TITLE = 'Using MDEC & SMECorp Grants for Digital Marketing in Malaysia, 2026 Guide'
 
 const PAGE_DESCRIPTION =
-  'A practical guide to MDEC and SMECorp digitalisation grants for Malaysian SMEs, including eligible digital marketing services, application steps, common mistakes, and how Static Savvy Media can help.'
+  'A practical guide to MDEC and SMECorp digitalisation grants for Malaysian SMEs, including eligible digital marketing services, application steps.'
 
 const AUTHOR = 'Deepan Kanz'
 const AUTHOR_ROLE = 'Founder & AI Search Specialist'

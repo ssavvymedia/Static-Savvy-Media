@@ -33,7 +33,7 @@ const PAGE_TITLE =
   'Product Photography & Creative Design | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
-  'E-commerce-ready product photography and creative graphic design in Madurai. Studio photography, lifestyle shots, and brand design for Tamil Nadu and Malaysia businesses.'
+  'E-commerce-ready product photography and creative graphic design in Madurai. Studio photography, lifestyle shots, and brand design for Tamil Nadu.'
 
 const HERO_TITLE =
   'Product Photography & Creative Design, Visuals That Sell'

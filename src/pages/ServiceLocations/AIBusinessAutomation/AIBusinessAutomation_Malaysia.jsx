@@ -31,7 +31,7 @@ const PAGE_TITLE =
   'AI Business Automation Malaysia for SMEs | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
-  "AI business automation for Malaysian SMEs, WhatsApp workflows, lead automation, customer service, reporting and document processing. Explore grant-eligible digital transformation options with Static Savvy Media."
+  "AI business automation for Malaysian SMEs, WhatsApp workflows, lead automation, customer service, reporting and document processing."
 
 const HERO_EYEBROW = 'AI BUSINESS AUTOMATION · MALAYSIA'
 
@@ -209,7 +209,7 @@ export default function AIBusinessAutomation_Malaysia() {
     const service = serviceSchema({
       name: 'AI Business Automation Malaysia',
       description:
-        'AI business automation services for Malaysian SMEs, including lead capture, WhatsApp automation, customer service workflows, content workflows, reporting automation and document/data processing.',
+        'AI business automation services for Malaysian SMEs, including lead capture, WhatsApp automation, customer service workflows, content workflows.',
       url: `${SITE_URL}/services/ai-business-automation/malaysia/`,
       areaServed: 'Malaysia',
     })

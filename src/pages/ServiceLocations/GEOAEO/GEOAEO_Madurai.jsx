@@ -29,7 +29,7 @@ const PAGE_TITLE =
   'GEO & AEO Services in Madurai: AI Search | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
-  "Get your Madurai business discovered and cited across ChatGPT, Google AI Overviews, Perplexity and other AI search engines with Static Savvy Media's GEO & AEO services."
+  "Get your Madurai business discovered and cited across ChatGPT, Google AI Overviews, Perplexity and other AI search engines."
 
 const HERO_EYEBROW = 'GEO & AEO, MADURAI'
 

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { AuditBlock, ReviewsCarousel, FounderBlock, Ico, REVIEW_PROOF } from '../components/v2/V2Blocks.jsx'
+import ClientWork from '../components/v2/ClientWork.jsx'
 import { HOME_H1, HOME_INTRO, HOME_MARKETS, HOME_MADURAI_LINKS } from '../data/pages/homeContent.js'
 import { HOME_FAQS } from '../data/pages/homeFaqs.js'
 import { GBP_REVIEW_SUMMARY } from '../data/googleReviews.js'
@@ -30,7 +31,7 @@ const INDUSTRIES = [
 
 const SOLUTIONS = [
   { name: 'SEO & Content Growth', to: '/services/seo/', text: 'Technical SEO and content that compounds.', d: 'M11 4a7 7 0 100 14 7 7 0 000-14zM20 20l-4-4M8 11h6M11 8v6' },
-  { name: 'AI Search (GEO / AEO)', to: '/services/geo-aeo-ai-search/', text: 'Get cited in ChatGPT, Perplexity & AI Overviews.', d: 'M12 3l2 5 5 2-5 2-2 5-2-5-5-2 5-2zM19 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z' },
+  { name: 'AI Search (GEO/AEO)', to: '/services/geo-aeo-ai-search/', text: 'Get cited in ChatGPT, Perplexity & AI Overviews.', d: 'M12 3l2 5 5 2-5 2-2 5-2-5-5-2 5-2zM19 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z' },
   { name: 'Local SEO & GBP', to: '/services/local-seo/', text: 'Rank in Google Maps in every city you serve.', d: P.pin },
   { name: 'Google Ads (PPC)', to: '/services/google-ads/', text: 'Campaigns tracked to real enquiries.', d: 'M3 11l15-6v14L3 13zM7 13v5a2 2 0 004 0v-4' },
   { name: 'Website Development', to: '/services/website-design-development/', text: 'Fast, mobile-first sites built to convert.', d: 'M8 8l-4 4 4 4M16 8l4 4-4 4M14 5l-4 14' },
@@ -162,28 +163,8 @@ export default function HomeV2({ whatsappHref }) {
         </div>
       </section>
 
-      {/* Case study placeholder (verified results only) */}
-      <section className="hv2-section hv2-section--flush" data-section="case-study" style={{ paddingTop: 'clamp(64px,8vw,112px)' }}>
-        <div className="hv2-wrap">
-          <div className="hv2-case">
-            <div className="hv2-txt">
-              <span className="hv2-eyebrow">Featured case study</span>
-              <h2 className="hv2-h2">Case study coming soon.</h2>
-              <p className="hv2-lead" style={{ marginTop: 14 }}>We only publish verified results: the baseline, the work done, the timeframe and the measured outcome, with the client&apos;s permission.</p>
-              <dl className="hv2-metrics">
-                <div className="hv2-metric"><dt>Baseline</dt><dd>Verified data only</dd></div>
-                <div className="hv2-metric"><dt>Timeframe</dt><dd>Verified data only</dd></div>
-                <div className="hv2-metric"><dt>Outcome</dt><dd>Verified data only</dd></div>
-              </dl>
-              <Link className="hv2-btn hv2-btn--ghost" to="/case-studies/">View case studies <span className="hv2-arrow" aria-hidden="true">→</span></Link>
-            </div>
-            <div className="hv2-ph">
-              <img src={IndHealthcare} alt="" aria-hidden="true" loading="lazy" decoding="async" width={640} height={480} />
-              <div className="hv2-soon"><span className="hv2-tag">Placeholder</span><b>Verified results only</b><span>Awaiting client data &amp; permission</span></div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Client work (real portfolio data only; replaces the case-study placeholder) */}
+      <ClientWork />
 
       {/* Process */}
       <section className="hv2-section" data-section="process">

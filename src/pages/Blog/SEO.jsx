@@ -17,7 +17,7 @@ import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, SITE_URL } from '../../utils/constan
 const PAGE_TITLE = 'How to Choose an SEO Agency in Madurai (2026 Checklist)'
 
 const PAGE_DESCRIPTION =
-  'How to choose an SEO agency in Madurai: what good SEO work includes, red flags, questions to ask, typical Madurai market cost ranges, local SEO vs website SEO, and how GEO & AEO fit in 2026.'
+  'How to choose an SEO agency in Madurai: what good SEO work includes, red flags, questions to ask, typical Madurai market cost ranges.'
 
 const AUTHOR = 'Deepan Kanz'
 const AUTHOR_ROLE = 'Founder & AI Search Specialist'

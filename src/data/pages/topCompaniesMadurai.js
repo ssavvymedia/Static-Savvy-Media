@@ -6,7 +6,7 @@
 export const PATH = '/blog/top-digital-marketing-companies-in-madurai/'
 export const UPDATED = '2026-11-10'
 export const DESCRIPTION =
-  'Madurai digital marketing companies compared (Nov 2026): services, focus, office areas and dated Google ratings for 14 agencies, plus how to choose and typical costs.'
+  'Madurai digital marketing companies compared (Nov 2026): services, focus, office areas and dated Google ratings for 14 agencies, plus how to choose.'
 
 const R = (rating, count, date = '2 Nov 2026') => `Google: ${rating} from ${count} reviews (${date})`
 

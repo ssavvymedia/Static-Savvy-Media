@@ -1,7 +1,7 @@
 // Content for /locations/tamil-nadu/ (plain data, also used by the prerender step).
 export const PATH = '/locations/tamil-nadu/'
 export const DESCRIPTION =
-  'Digital marketing agency in Tamil Nadu with offices in Madurai and Thoothukudi: SEO, Local SEO, Google Ads, social media and AI search for businesses across the state.'
+  'Digital marketing agency in Tamil Nadu with offices in Madurai and Thoothukudi: SEO, Local SEO, Google Ads, social media and AI search.'
 
 export const content = {
   path: PATH,

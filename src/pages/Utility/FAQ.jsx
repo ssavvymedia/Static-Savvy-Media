@@ -114,7 +114,7 @@ export default function FAQ() {
   useEffect(() => {
     setSeo({
       title: 'FAQs: Digital Marketing, SEO & AI Search | Static Savvy Media',
-      description: 'Answers to the most common questions about GEO, AEO, SEO, local digital marketing, and working with Static Savvy Media. Tamil Nadu and Malaysia’s AI search agency.',
+      description: 'Answers to the most common questions about GEO, AEO, SEO, local digital marketing, and working with Static Savvy Media.',
       canonical: `${SITE_URL}/faq/`,
       ogType: 'website',
     })

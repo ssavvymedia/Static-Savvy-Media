@@ -31,7 +31,7 @@ const PAGE_TITLE =
   'AI Business Automation & Chatbots | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
-  "Automate repetitive workflows, deploy AI chatbots, and integrate intelligent tools. Static Savvy Media's AI business automation service for Indian and Malaysian SMEs."
+  "AI business automation from Static Savvy Media, Madurai: automate repetitive workflows, deploy AI chatbots and connect the tools you already use."
 
 const HERO_TITLE =
   'AI Business Automation, Streamline Operations, Scale Without Headcount'

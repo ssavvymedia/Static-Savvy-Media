@@ -31,7 +31,7 @@ const PAGE_TITLE =
   'Local SEO Services & Google Business Profile | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
-  'Rank in Google Maps and local search for your city. GBP optimization, citation building, review management, and local content for Madurai, Thoothukudi, and Malaysia businesses.'
+  'Rank in Google Maps and local search for your city. GBP optimization, citation building, review management, and local content for Madurai, Thoothukudi.'
 
 const HERO_SUBTITLE =
   'When someone in Madurai searches "digital marketing agency near me," Google shows a map with three businesses. If yours is not one of them, that client goes to a competitor, regardless of how good your service is. Local SEO makes sure your business appears in that map, in that moment, for the queries your clients are actually typing.'

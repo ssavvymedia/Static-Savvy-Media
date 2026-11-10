@@ -29,7 +29,7 @@ const PAGE_TITLE =
   'Local SEO Malaysia: Google Maps for SMEs | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
-  'Local SEO Malaysia for businesses targeting Selangor and Rawang. Google Business Profile, Google Maps visibility, citations, reviews, NAP consistency and local landing pages.'
+  'Local SEO Malaysia for businesses targeting Selangor and Rawang. Google Business Profile, Google Maps visibility, citations, reviews, NAP consistency.'
 
 const HERO_EYEBROW = 'LOCAL SEO · MALAYSIA'
 

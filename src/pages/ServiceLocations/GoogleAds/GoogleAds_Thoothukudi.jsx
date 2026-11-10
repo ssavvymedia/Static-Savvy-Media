@@ -30,7 +30,7 @@ const PAGE_TITLE =
   'Google Ads Agency Thoothukudi (PPC) | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
-  'Google Ads management in Thoothukudi for industrial, marine, manufacturing, B2B and local businesses. Search, Display, Performance Max, Shopping and remarketing campaigns with conversion tracking.'
+  'Google Ads management in Thoothukudi for industrial, marine, manufacturing, B2B and local businesses.'
 
 const HERO_EYEBROW = 'GOOGLE ADS · THOOTHUKUDI'
 

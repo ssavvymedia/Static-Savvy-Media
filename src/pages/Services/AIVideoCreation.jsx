@@ -32,7 +32,7 @@ const PAGE_TITLE =
   'AI Video Creation for Marketing | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
-  'AI-generated marketing videos for Tamil Nadu and Malaysia businesses. Product demos, explainers, social media reels, and ad creative, produced fast at 30–60% of traditional production cost.'
+  'AI-generated marketing videos for Tamil Nadu and Malaysia businesses. Product demos, explainers, social media reels, and ad creative.'
 
 const HERO_TITLE =
   'AI Video Creation, Marketing-Grade Videos Without the Production Cost'

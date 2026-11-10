@@ -119,7 +119,7 @@ export default function GrowthAuditForm({ formId = 'growth_audit', defaultCity =
         {err('business')}
       </div>
       <div className="audit-form__field">
-        <label htmlFor={id('siteUrl')}>Website or Google Business Profile <small>(optional)</small></label>
+        <label htmlFor={id('siteUrl')}>Website or GBP link <small>(optional)</small></label>
         <input id={id('siteUrl')} name="siteUrl" value={data.siteUrl} onChange={onChange} placeholder="https://" inputMode="url" maxLength={300} />
       </div>
       <div className="audit-form__field">
@@ -139,7 +139,7 @@ export default function GrowthAuditForm({ formId = 'growth_audit', defaultCity =
         {err('city')}
       </div>
       <div className="audit-form__field">
-        <label htmlFor={id('budget')}>Your monthly marketing budget</label>
+        <label htmlFor={id('budget')}>Monthly marketing budget</label>
         <select id={id('budget')} name="budget" value={data.budget} onChange={onChange} required {...aria('budget')}>
           <option value="">Select a range</option>
           {budgets.map((o) => <option key={o} value={o}>{o}</option>)}
@@ -162,16 +162,11 @@ export default function GrowthAuditForm({ formId = 'growth_audit', defaultCity =
         {err('email')}
       </div>
       {!compact && (
-        <div className="audit-form__field audit-form__field--full">
-          <label htmlFor={id('message')}>What do you want more of? <small>(optional)</small></label>
+        <div className="audit-form__field">
+          <label htmlFor={id('message')}>Main goal <small>(optional)</small></label>
           <input id={id('message')} name="message" value={data.message} onChange={onChange} placeholder="e.g. more patient calls from Google Maps" maxLength={500} />
         </div>
       )}
-      <label className="audit-form__consent">
-        <input type="checkbox" checked={consent} onChange={(e) => setConsent(e.target.checked)} required {...aria('consent')} />
-        <span>I agree to be contacted about my audit by phone, WhatsApp or email.</span>
-      </label>
-      {err('consent')}
       {RECAPTCHA_SITE_KEY && armed && (
         <div className="audit-form__field--full">
           <Suspense fallback={null}>
@@ -180,10 +175,17 @@ export default function GrowthAuditForm({ formId = 'growth_audit', defaultCity =
         </div>
       )}
       {status === 'error' && error && <p className="audit-form__error" role="alert">{error}</p>}
-      <button type="submit" className="hv2-btn hv2-btn--primary audit-form__submit" disabled={status === 'sending'}>
-        {status === 'sending' ? 'Sending…' : 'Request my free growth audit'} <span className="hv2-arrow" aria-hidden="true">→</span>
-      </button>
-      <p className="audit-form__fine">Budget ranges help us prepare; they are not our fees. We reply within one business day. No spam, no lock-in.</p>
+      <div className="audit-form__actions">
+        <label className="audit-form__consent">
+          <input type="checkbox" checked={consent} onChange={(e) => setConsent(e.target.checked)} required {...aria('consent')} />
+          <span>I agree to be contacted about my audit by phone, WhatsApp or email.</span>
+        </label>
+        <button type="submit" className="hv2-btn hv2-btn--primary audit-form__submit" disabled={status === 'sending'}>
+          {status === 'sending' ? 'Sending…' : 'Request my free growth audit'} <span className="hv2-arrow" aria-hidden="true">→</span>
+        </button>
+      </div>
+      {err('consent')}
+      <p className="audit-form__fine">Budget ranges are not our fees. Reply within one business day. No spam.</p>
     </form>
   )
 }

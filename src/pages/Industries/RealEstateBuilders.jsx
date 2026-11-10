@@ -30,7 +30,7 @@ const PAGE_TITLE =
   'Real Estate Digital Marketing, Tamil Nadu | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
-  'Generate property enquiries with SEO, Google Ads, Facebook lead generation, and virtual tour content. Real estate digital marketing for Tamil Nadu builders and developers.'
+  'Generate property enquiries with SEO, Google Ads, Facebook lead generation, and virtual tour content.'
 
 const HERO_TITLE =
   'Digital Marketing for Real Estate & Property Developers, Generate Quality Enquiries Online'

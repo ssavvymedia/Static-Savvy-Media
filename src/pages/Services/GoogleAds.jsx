@@ -32,7 +32,7 @@ const PAGE_TITLE =
   'Google Ads Management (PPC) | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
-  'Expert Google Ads management for Tamil Nadu and Malaysia businesses. Search, display, shopping, and remarketing campaigns, every rupee and ringgit tracked to real outcomes.'
+  'Google Ads management for Tamil Nadu and Malaysia businesses: search, display, shopping and remarketing campaigns tracked to real enquiries.'
 
 const HERO_SUBTITLE =
   'Google Ads is the fastest path to qualified visibility. While SEO builds long-term organic rankings, Google Ads puts your business in front of high-intent buyers today. The critical difference between a Google Ads campaign that makes money and one that burns it is precise audience targeting, quality score management, and conversion-focused landing pages. That is what we build.'

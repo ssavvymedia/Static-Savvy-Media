@@ -11,7 +11,7 @@ import {
 
 const PATH = '/services/google-ads/kuala-lumpur/'
 const DESCRIPTION =
-  'Google Ads management for KL businesses: search, Performance Max & call campaigns built around enquiries and WhatsApp leads. Get a custom quote: +60 12-453 7030.'
+  'Google Ads management for KL businesses: search, Performance Max & call campaigns built around enquiries and WhatsApp leads.'
 
 const content = {
   path: PATH,

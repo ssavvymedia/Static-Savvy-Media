@@ -16,7 +16,7 @@ import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, SITE_URL } from '../../utils/constan
 const PAGE_TITLE = 'Local Marketing for Tamil Nadu & Malaysia'
 
 const PAGE_DESCRIPTION =
-  'Local marketing strategies for businesses in Madurai, Thoothukudi, and Malaysia, combining SEO, Google Business Profile, social media, paid ads, and AI search visibility.'
+  'Local marketing strategies for businesses in Madurai, Thoothukudi, and Malaysia, combining SEO, Google Business Profile, social media, paid ads.'
 
 const READING_TIME = 'Estimated reading time: approximately 2–3 min'
 

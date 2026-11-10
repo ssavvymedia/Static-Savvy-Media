@@ -22,7 +22,7 @@ import deepanAboutImg from '../../assets/images/About/DeepanAbout.webp'
 const PAGE_TITLE = 'About Static Savvy Media | Madurai Digital Marketing Since 2021'
 
 const PAGE_DESCRIPTION =
-  'Meet the Madurai digital marketing agency founded by Deepan Kanz in 2021, rated 4.9★ from 106 Google reviews, with offices in Madurai, Thoothukudi and Rawang, Malaysia.'
+  'Meet the Madurai digital marketing agency founded by Deepan Kanz in 2021, rated 4.9★ from 106 Google reviews, with offices in Madurai, Thoothukudi and Rawang.'
 
 const SERVICES = [
   { number: '01', title: 'SEO', text: 'Search engine optimisation designed to improve organic visibility and long-term discoverability.', path: '/services/seo/madurai/' },

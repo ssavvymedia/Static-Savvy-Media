@@ -12,7 +12,7 @@ import { MY_SEO_RANGES, MY_RANGES_INTRO, MY_RANGES_NOTE, MY_COST_ANSWER } from '
 
 const PATH = '/services/seo/kuala-lumpur/'
 const DESCRIPTION =
-  'SEO agency in Kuala Lumpur for SMEs: SEO services that rank you on google.com.my and Google Maps across KL, in English and BM. Free review, no lock-in. +60 12-453 7030.'
+  'SEO agency in Kuala Lumpur for SMEs: SEO services that rank you on google.com.my and Google Maps across KL, in English and BM. Free review, no lock-in.'
 
 const content = {
   path: PATH,

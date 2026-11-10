@@ -32,7 +32,7 @@ const PAGE_TITLE =
   'Website Design & Development Services | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
-  'Custom website design and development in Madurai. SEO-ready, Core Web Vitals optimised, mobile-first. WordPress and Next.js builds that rank, load fast, and convert visitors into WhatsApp enquiries.'
+  'Custom website design and development in Madurai: SEO-ready, fast, mobile-first sites with WhatsApp and enquiry forms built in.'
 
 const HERO_SUBTITLE =
   'A website that looks good but does not rank, load fast, or convert is an expensive brochure. We build websites with three non-negotiable outcomes: ranking in search, loading fast on 4G mobile, and converting visitors into WhatsApp enquiries. Everything else is secondary.'

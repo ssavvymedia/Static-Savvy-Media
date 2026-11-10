@@ -13,7 +13,7 @@ import IndHospitality from '../../assets/images/home/ind-hospitality.webp'
 
 /* Industries hub (v2 design): photo cards for every sector page, then how marketing differs by industry. */
 const PAGE_TITLE = 'Digital Marketing by Industry | Static Savvy Media'
-const PAGE_DESCRIPTION = 'Industry-focused digital marketing from our Madurai HQ for healthcare, real estate, manufacturing & B2B, education, hospitality, retail, textiles, port & industrial and Malaysian SMEs.'
+const PAGE_DESCRIPTION = 'Industry-focused digital marketing from our Madurai HQ for healthcare, real estate, manufacturing & B2B, education, hospitality, retail, textiles.'
 
 const FEATURED = [
   { name: 'Healthcare & Medical', to: '/industries/healthcare-clinics/', img: IndHealthcare, alt: 'Bright modern clinic reception', text: 'Help patients find your clinic on Google Maps and AI search, trust your doctors and book.', d: 'M12 21s-7-4.5-9-9.5C1.8 8 4 4.5 7.5 4.5c2 0 3.4 1.1 4.5 2.6 1.1-1.5 2.5-2.6 4.5-2.6C20 4.5 22.2 8 21 11.5 19 16.5 12 21 12 21zM12 9v5M9.5 11.5h5' },

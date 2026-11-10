@@ -12,7 +12,7 @@ import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, SITE_URL } from '../../utils/constan
 const PAGE_TITLE = 'Hiring for SEO in Madurai? 2026 Checklist, Red Flags & Questions to Ask'
 
 const PAGE_DESCRIPTION =
-  'A buyer’s checklist for Madurai business owners comparing SEO providers: what good SEO work includes, red flags, questions to ask before signing, typical costs and why GEO & AEO matter in 2026.'
+  'A buyer’s checklist for Madurai business owners comparing SEO providers: what good SEO work includes, red flags, questions to ask before signing.'
 
 const AUTHOR = 'Deepan Kanz'
 const AUTHOR_ROLE = 'Founder & AI Search Specialist'

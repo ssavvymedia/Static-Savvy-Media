@@ -30,7 +30,7 @@ export const seoConfig = {
   // Private client portfolio: noindex,nofollow (also X-Robots-Tag in vercel.json), shared only on request.
   [PORTFOLIO_PATH.replace(/\/$/, "")]: (() => {
     const title = "Client Portfolio: Brands We've Grown | Static Savvy Media";
-    const description = "Google Business Profile, SEO and digital marketing clients of Static Savvy Media across Tamil Nadu and Kerala, with real ratings and dated ranking snapshots. 4.9★ from 106 Google reviews.";
+    const description = "Google Business Profile, SEO and digital marketing clients of Static Savvy Media across Tamil Nadu and Kerala, with real ratings and dated ranking snapshots.";
     return { title, slug: PORTFOLIO_PATH.replace(/^\/|\/$/g, ""), seo: { title, description, canonical: `${BASE_URL}${PORTFOLIO_PATH}`, ogTitle: title, ogDescription: description, robots: "noindex,nofollow" } };
   })(),
   ...Object.fromEntries(cityPages.map((c) => [`/locations/${c.slug}`, { title: c.title, slug: `locations/${c.slug}`, seo: { title: c.title, description: c.description, canonical: `${BASE_URL}/locations/${c.slug}/`, ogTitle: c.title, ogDescription: c.description, robots: "index,follow" } }])),
@@ -44,13 +44,13 @@ export const seoConfig = {
       title:
         "Digital Marketing Agency in Madurai & Malaysia | Static Savvy Media",
       description:
-        "Madurai-headquartered digital marketing agency since 2021: SEO, Google Ads, social media & websites for India, Malaysia, Singapore & Dubai. 4.9★ from 106 reviews.",
+        "Madurai-headquartered digital marketing agency since 2021: SEO, Google Ads, social media & websites for India, Malaysia, Singapore & Dubai.",
       canonical: `${BASE_URL}/`,
       focusKeyword: "digital marketing agency in madurai",
       ogTitle:
         "Digital Marketing Agency in Madurai & Malaysia | Static Savvy Media",
       ogDescription:
-        "Madurai-headquartered digital marketing agency since 2021: SEO, Google Ads, social media & websites for India, Malaysia, Singapore & Dubai. 4.9★ from 106 reviews.",
+        "Madurai-headquartered digital marketing agency since 2021: SEO, Google Ads, social media & websites for India, Malaysia, Singapore & Dubai.",
       ogImage: `${BASE_URL}/og/heroimage.jpg`,
       schema: {
         "@context": "https://schema.org",
@@ -67,12 +67,12 @@ export const seoConfig = {
     seo: {
       title: "About Static Savvy Media | Madurai Digital Marketing Since 2021",
       description:
-        "Meet the Madurai digital marketing agency founded by Deepan Kanz in 2021, rated 4.9★ from 106 Google reviews, with offices in Madurai, Thoothukudi and Rawang, Malaysia.",
+        "Meet the Madurai digital marketing agency founded by Deepan Kanz in 2021, rated 4.9★ from 106 Google reviews, with offices in Madurai, Thoothukudi and Rawang.",
       canonical: `${BASE_URL}/about`,
       focusKeyword: "about static savvy media",
       ogTitle: "About Static Savvy Media | Madurai Digital Marketing Since 2021",
       ogDescription:
-        "Meet the Madurai digital marketing agency founded by Deepan Kanz in 2021, rated 4.9★ from 106 Google reviews, with offices in Madurai, Thoothukudi and Rawang, Malaysia.",
+        "Meet the Madurai digital marketing agency founded by Deepan Kanz in 2021, rated 4.9★ from 106 Google reviews, with offices in Madurai, Thoothukudi and Rawang.",
       ogImage: `${BASE_URL}/og/about-about.jpg`,
       schema: {
         "@context": "https://schema.org",
@@ -258,13 +258,13 @@ export const seoConfig = {
       title:
         "Social Media Marketing Services | Static Savvy Media",
       description:
-        "Social media marketing services for businesses in Tamil Nadu and Malaysia: Instagram, Facebook, YouTube and LinkedIn content plus Meta ads. Rated 4.9★ on Google.",
+        "Social media marketing services for businesses in Tamil Nadu and Malaysia: Instagram, Facebook, YouTube and LinkedIn content plus Meta ads.",
       canonical: `${BASE_URL}/services/social-media-marketing`,
       focusKeyword: "social media marketing madurai",
       ogTitle:
         "Social Media Marketing Services | Static Savvy Media",
       ogDescription:
-        "Social media marketing services for businesses in Tamil Nadu and Malaysia: Instagram, Facebook, YouTube and LinkedIn content plus Meta ads. Rated 4.9★ on Google.",
+        "Social media marketing services for businesses in Tamil Nadu and Malaysia: Instagram, Facebook, YouTube and LinkedIn content plus Meta ads.",
       ogImage: `${BASE_URL}/og/services-05socialmediamarketing.jpg`,
       schema: {
         "@context": "https://schema.org",
@@ -449,7 +449,7 @@ export const seoConfig = {
       title:
         "SEO Company Malaysia: SEO Services for SMEs | Static Savvy Media",
       description:
-        "Nationwide SEO company in Malaysia for SMEs, from KL and Selangor to Penang and Johor Bahru: technical, content and AI-search SEO on google.com.my. No lock-in. +60 12-453 7030.",
+        "Nationwide SEO company in Malaysia for SMEs, from KL and Selangor to Penang and Johor Bahru: technical, content and AI-search SEO on google.com.my.",
       canonical: `${BASE_URL}/services/seo/malaysia`,
       focusKeyword: "SEO Malaysia",
       ogTitle:
@@ -683,7 +683,7 @@ export const seoConfig = {
       title:
         "Digital Marketing Company in Madurai | Static Savvy Media HQ",
       description:
-        "Madurai digital marketing agency at Kamarajar Salai since 2021, rated 4.9★ from 106 Google reviews. SEO, Local SEO, Ads, social & websites. WhatsApp +91 99440 40345.",
+        "Madurai digital marketing agency at Kamarajar Salai since 2021, rated 4.9★ from 106 Google reviews. SEO, Local SEO, Ads, social & websites.",
       canonical: `${BASE_URL}/locations/madurai`,
       focusKeyword: "digital marketing agency Madurai",
       ogTitle: "Digital Marketing Company in Madurai | Static Savvy Media",
@@ -744,7 +744,7 @@ export const seoConfig = {
       title:
         "Digital Marketing Agency Malaysia (Rawang) | Static Savvy Media",
       description:
-        "Digital marketing agency for Malaysian SMEs with an office in Rawang, Selangor: SEO, Google Maps, AI search, Google Ads, social and websites. Call +60 12-453 7030.",
+        "Digital marketing agency for Malaysian SMEs with an office in Rawang, Selangor: SEO, Google Maps, AI search, Google Ads, social and websites.",
       canonical: `${BASE_URL}/locations/malaysia`,
       focusKeyword: "digital marketing agency Malaysia",
       ogTitle: "Digital Marketing Agency Malaysia | Static Savvy Media",
@@ -770,12 +770,12 @@ export const seoConfig = {
     seo: {
       title: "Free Business Growth Audit | Static Savvy Media, Madurai",
       description:
-        "Request a free Business Growth Audit: website & SEO health, Google Business Profile, AI search presence, competitors and a prioritised 90-day plan, prepared by our Madurai team.",
+        "Request a free Business Growth Audit: website & SEO health, Google Business Profile, AI search presence, competitors and a prioritised 90-day plan.",
       canonical: `${BASE_URL}/growth-audit`,
       focusKeyword: "free growth audit",
       ogTitle: "Free Business Growth Audit | Static Savvy Media, Madurai",
       ogDescription:
-        "Request a free Business Growth Audit: website & SEO health, Google Business Profile, AI search presence, competitors and a prioritised 90-day plan, prepared by our Madurai team.",
+        "Request a free Business Growth Audit: website & SEO health, Google Business Profile, AI search presence, competitors and a prioritised 90-day plan.",
       ogImage: `${BASE_URL}/og/industries-industriesmain.jpg`,
       schema: {
         "@context": "https://schema.org",
@@ -792,12 +792,12 @@ export const seoConfig = {
     seo: {
       title: "Growth Solutions: SEO, AI Search & Ads | Static Savvy Media",
       description:
-        "Five growth solutions from Static Savvy Media, Madurai: SEO & content, AI search (GEO/AEO), Local SEO & Google Business Profile, Google Ads and website development, for India and Malaysia.",
+        "Five growth solutions from Static Savvy Media, Madurai: SEO & content, AI search (GEO/AEO), Local SEO & Google Business Profile, Google Ads.",
       canonical: `${BASE_URL}/solutions`,
       focusKeyword: "digital marketing growth solutions",
       ogTitle: "Growth Solutions: SEO, AI Search & Ads | Static Savvy Media",
       ogDescription:
-        "Five growth solutions from Static Savvy Media, Madurai: SEO & content, AI search (GEO/AEO), Local SEO & Google Business Profile, Google Ads and website development, for India and Malaysia.",
+        "Five growth solutions from Static Savvy Media, Madurai: SEO & content, AI search (GEO/AEO), Local SEO & Google Business Profile, Google Ads.",
       ogImage: `${BASE_URL}/og/industries-industriesmain.jpg`,
       schema: {
         "@context": "https://schema.org",
@@ -814,7 +814,7 @@ export const seoConfig = {
     seo: {
       title: "Digital Marketing by Industry | Static Savvy Media",
       description:
-        "Industry-focused digital marketing from our Madurai HQ for healthcare, real estate, manufacturing & B2B, education, hospitality, retail, textiles, port & industrial and Malaysian SMEs.",
+        "Industry-focused digital marketing from our Madurai HQ for healthcare, real estate, manufacturing & B2B, education, hospitality, retail, textiles.",
       canonical: `${BASE_URL}/industries`,
       focusKeyword: "industry digital marketing",
       ogTitle: "Digital Marketing by Industry | Static Savvy Media",
@@ -836,12 +836,12 @@ export const seoConfig = {
     seo: {
       title: "Manufacturing & B2B Digital Marketing | Static Savvy Media",
       description:
-        "B2B SEO, Google Ads, AI search and websites for manufacturers, exporters and industrial suppliers in Madurai, Tamil Nadu and Malaysia. Get a free Growth Audit from our Madurai HQ.",
+        "B2B SEO, Google Ads, AI search and websites for manufacturers, exporters and industrial suppliers in Madurai, Tamil Nadu and Malaysia.",
       canonical: `${BASE_URL}/industries/manufacturing-b2b`,
       focusKeyword: "digital marketing for manufacturing companies",
       ogTitle: "Manufacturing & B2B Digital Marketing | Static Savvy Media",
       ogDescription:
-        "B2B SEO, Google Ads, AI search and websites for manufacturers, exporters and industrial suppliers in Madurai, Tamil Nadu and Malaysia. Get a free Growth Audit from our Madurai HQ.",
+        "B2B SEO, Google Ads, AI search and websites for manufacturers, exporters and industrial suppliers in Madurai, Tamil Nadu and Malaysia.",
       ogImage: `${BASE_URL}/og/industries-06port.jpg`,
       schema: {
         "@context": "https://schema.org",
@@ -1048,19 +1048,19 @@ export const seoConfig = {
   // Case Studies
   "/case-studies": {
     title:
-      "Client Results & Case Studies | Static Savvy Media",
+      "Client Work & Case Studies | Static Savvy Media",
     slug: "case-studies",
     seo: {
       title:
-        "Client Results & Case Studies | Static Savvy Media",
+        "Client Work & Case Studies | Static Savvy Media",
       description:
-        "Discover how Static Savvy Media delivered measurable organic growth, lead generation, and ROI across diverse industries.",
+        "Client work by Static Savvy Media: real SEO and Google Business Profile clients in Madurai and Coimbatore, the work we did and their Google ratings.",
       canonical: `${BASE_URL}/case-studies`,
       focusKeyword: "digital marketing case studies",
       ogTitle:
-        "Client Results & Case Studies | Static Savvy Media",
+        "Client Work & Case Studies | Static Savvy Media",
       ogDescription:
-        "Discover how Static Savvy Media delivered measurable organic growth and ROI.",
+        "Real SEO and Google Business Profile client work by Static Savvy Media, with Google ratings.",
       ogImage: `${BASE_URL}/og/casestudies-casestudiesmain.jpg`,
       schema: {
         "@context": "https://schema.org",
@@ -1170,7 +1170,7 @@ export const seoConfig = {
     seo: {
       title: "A Diwali surprise for you ✨ | Static Savvy Media",
       description:
-        "Create a Diwali digital surprise: pick a firecracker, write your wish in English or Tamil, light it and share it on WhatsApp or as a video. Free from Static Savvy Media, Madurai.",
+        "Create a Diwali digital surprise: pick a firecracker, write your wish in English or Tamil, light it and share it on WhatsApp or as a video.",
       canonical: `${BASE_URL}/diwali-2026`,
       focusKeyword: "Diwali wishes surprise WhatsApp",
       ogTitle: "A Diwali surprise for you ✨",
@@ -1435,7 +1435,7 @@ export const seoConfig = {
       title:
         "How to Choose an SEO Agency in Madurai (2026 Checklist)",
       description:
-        "How to choose an SEO agency in Madurai: deliverables, red flags, questions to ask, typical market cost ranges, local SEO vs website SEO, and GEO & AEO in 2026.",
+        "How to choose an SEO agency in Madurai: deliverables, red flags, questions to ask, typical market cost ranges, local SEO vs website SEO.",
       canonical: `${BASE_URL}/blog/seo-agency-madurai-complete-guide/`,
       focusKeyword: "seo agency in madurai",
       ogTitle:
@@ -1510,7 +1510,7 @@ export const seoConfig = {
     seo: {
       title: "Google Ads Agency Kuala Lumpur (PPC) | Static Savvy Media",
       description:
-        "Google Ads management for KL businesses: search, Performance Max & call campaigns built around enquiries and WhatsApp leads. Get a custom quote: +60 12-453 7030.",
+        "Google Ads management for KL businesses: search, Performance Max & call campaigns built around enquiries and WhatsApp leads.",
       canonical: `${BASE_URL}/services/google-ads/kuala-lumpur`,
       ogImage: `${BASE_URL}/og/services-google-ads-kuala-lumpur.jpg`,
       robots: "index,follow",
@@ -1522,7 +1522,7 @@ export const seoConfig = {
     seo: {
       title: "SEO Agency Kuala Lumpur: SEO Services in KL | Static Savvy Media",
       description:
-        "SEO agency in Kuala Lumpur for SMEs: SEO services that rank you on google.com.my and Google Maps across KL, in English and BM. Free review, no lock-in. +60 12-453 7030.",
+        "SEO agency in Kuala Lumpur for SMEs: SEO services that rank you on google.com.my and Google Maps across KL, in English and BM. Free review, no lock-in.",
       canonical: `${BASE_URL}/services/seo/kuala-lumpur`,
       ogImage: `${BASE_URL}/og/services-seo-kuala-lumpur.jpg`,
       robots: "index,follow",
@@ -1546,7 +1546,7 @@ export const seoConfig = {
     seo: {
       title: "Advertising Agency Madurai: Google, Meta Ads | Static Savvy Media",
       description:
-        "Advertising agency in Madurai for Google Ads, Meta (Facebook & Instagram) ads, YouTube ads and WhatsApp lead campaigns, with conversion tracking. WhatsApp +91 99440 40345.",
+        "Advertising agency in Madurai for Google Ads, Meta (Facebook & Instagram) ads, YouTube ads and WhatsApp lead campaigns, with conversion tracking.",
       canonical: `${BASE_URL}/services/advertising-agency/madurai`,
       ogImage: `${BASE_URL}/og/locations-01madurai.jpg`,
       robots: "index,follow",
@@ -1558,7 +1558,7 @@ export const seoConfig = {
     seo: {
       title: "Digital Marketing Agency in Tamil Nadu | Static Savvy Media",
       description:
-        "Digital marketing agency in Tamil Nadu with offices in Madurai and Thoothukudi: SEO, Local SEO, Google Ads, social media and AI search for businesses across the state.",
+        "Digital marketing agency in Tamil Nadu with offices in Madurai and Thoothukudi: SEO, Local SEO, Google Ads, social media and AI search.",
       canonical: `${BASE_URL}/locations/tamil-nadu`,
       ogImage: `${BASE_URL}/og/locations-01madurai.jpg`,
       robots: "index,follow",
@@ -1570,7 +1570,7 @@ export const seoConfig = {
     seo: {
       title: "Digital Marketing Companies in Madurai Compared (2026)",
       description:
-        "Madurai digital marketing companies compared (Nov 2026): services, focus, office areas and dated Google ratings for 14 agencies, plus how to choose and typical costs.",
+        "Madurai digital marketing companies compared (Nov 2026): services, focus, office areas and dated Google ratings for 14 agencies, plus how to choose.",
       canonical: `${BASE_URL}/blog/top-digital-marketing-companies-in-madurai`,
       ogImage: `${BASE_URL}/og/blog/top-digital-marketing-companies-in-madurai.jpg`,
       robots: "index,follow",

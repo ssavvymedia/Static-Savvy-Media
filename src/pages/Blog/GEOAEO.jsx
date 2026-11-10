@@ -18,7 +18,7 @@ import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, SITE_URL } from '../../utils/constan
 const PAGE_TITLE = 'What Is Generative Engine Optimization (GEO)? 2026 Guide'
 
 const PAGE_DESCRIPTION =
-  'Generative Engine Optimization (GEO) is the practice of getting your business cited by ChatGPT, Perplexity, and Google AI. This complete guide explains what it is, how it works, and how to get started.'
+  'Generative Engine Optimization (GEO) is the practice of getting your business cited by ChatGPT, Perplexity, and Google AI.'
 
 const AUTHOR = 'Deepan Kanz'
 const AUTHOR_ROLE = 'Founder & AI Search Specialist'

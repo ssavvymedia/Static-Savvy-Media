@@ -29,7 +29,7 @@ const PAGE_TITLE =
   'Local SEO Thoothukudi: Google Maps & GBP | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
-  'Local SEO in Thoothukudi for Tuticorin businesses. Improve Google Business Profile, Google Maps visibility, local citations, reviews, NAP consistency and location-specific search presence.'
+  'Local SEO in Thoothukudi for Tuticorin businesses. Improve Google Business Profile, Google Maps visibility, local citations, reviews, NAP consistency.'
 
 const HERO_EYEBROW = 'LOCAL SEO · THOOTHUKUDI'
 
