@@ -1,14 +1,13 @@
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import Breadcrumbs from '../../components/common/Breadcrumbs.jsx'
-import Button from '../../components/common/Button.jsx'
-import HeroSection from '../../components/hero/HeroSection.jsx'
-import SectionHeading from '../../components/common/SectionHeading.jsx'
+import FAQSection from '../../components/sections/FAQSection.jsx'
 import CTASection from '../../components/sections/CTASection.jsx'
 import ContactFormSection from '../../components/sections/ContactFormSection.jsx'
-import { ScrollReveal } from '../../components/animations/ScrollReveal.jsx'
+import '../../styles/pages/home-v2.css'
+import '../../styles/pages/founder-v2.css'
 import { setSeo } from '../../utils/seo.js'
-import { personSchema, faqPageSchema, breadcrumbListSchema } from '../../utils/schema.js'
+import { personSchema, breadcrumbListSchema } from '../../utils/schema.js'
 import { buildWhatsAppLink } from '../../utils/helpers.js'
 import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, SITE_URL } from '../../utils/constants.js'
 import deepanFounderImg from '../../assets/images/About/DeepanFounder.webp'
@@ -23,65 +22,50 @@ const PAGE_TITLE = 'Deepan Kanz, Founder & AI Search Specialist | Static Savvy M
 const PAGE_DESCRIPTION =
   'Meet Deepan Kanz, Founder & AI Search Specialist at Static Savvy Media. Learn about his GEO, AEO, SEO and AI business automation expertise and methodology.'
 
-const SPECIALISATIONS = [
-  {
-    number: '01',
-    title: 'Generative Engine Optimization (GEO)',
-    text: 'Entity building and AI citation strategy.',
-    iconClass: 'founder-spec-card__icon--purple',
-    icon: '⚙',
-  },
-  {
-    number: '02',
-    title: 'Answer Engine Optimization (AEO)',
-    text: 'FAQ schema, structured content, and voice search optimization.',
-    iconClass: 'founder-spec-card__icon--cyan',
-    icon: '❓',
-  },
-  {
-    number: '03',
-    title: 'Local SEO',
-    text: 'Google Business Profile and Google Maps ranking for Tamil Nadu and Malaysia markets.',
-    iconClass: 'founder-spec-card__icon--pink',
-    icon: '📍',
-  },
-  {
-    number: '04',
-    title: 'Technical SEO',
-    text: 'Schema markup, Core Web Vitals, site architecture.',
-    iconClass: 'founder-spec-card__icon--blue',
-    icon: '💻',
-  },
-  {
-    number: '05',
-    title: 'AI Business Automation',
-    text: 'Workflow tools and WhatsApp Business API integration.',
-    iconClass: 'founder-spec-card__icon--purple',
-    icon: '🤖',
-  },
+const LEADS = [
+  { title: 'AI Search (GEO & AEO)', text: 'Entity building, answer-structured content and AI citation strategy for ChatGPT, Gemini and Google AI Overviews.', to: '/services/geo-aeo-ai-search/' },
+  { title: 'SEO & Technical SEO', text: 'Schema markup, Core Web Vitals, site architecture and content that compounds.', to: '/services/seo/' },
+  { title: 'Local SEO & Google Business Profile', text: 'Google Business Profile and Google Maps ranking for Tamil Nadu and Malaysia markets.', to: '/services/local-seo/' },
+  { title: 'AI Business Automation', text: 'Workflow tools and WhatsApp Business API integration.', to: '/services/ai-business-automation/' },
 ]
 
-const APPROACH_STEPS = [
-  { number: '01', title: 'Understand', text: 'Study how AI engines discover and understand businesses.' },
-  { number: '02', title: 'Test', text: 'Build and test GEO/AEO methodologies in real business contexts.' },
-  { number: '03', title: 'Learn', text: 'Study what makes AI engines cite certain businesses and ignore others.' },
-  { number: '04', title: 'Build', text: 'Develop entity-building and answer-structured content systems.' },
+const ROLES = [
+  { k: 'Role', v: 'Founder, Static Savvy Media' },
+  { k: 'Founded', v: '1 October 2021, Madurai' },
+  { k: 'Leads', v: 'SEO, Local SEO and AI search (GEO/AEO) strategy' },
+  { k: 'Markets', v: 'Tamil Nadu (Madurai, Thoothukudi) and Malaysia (Rawang, Selangor)' },
+  { k: 'Client plans', v: 'Reviews every new client’s plan himself' },
+  { k: 'Writes', v: 'The Static Savvy Media blog and guides' },
 ]
 
-const EXPERTISE_TAGS = [
-  { label: 'SEO', active: false },
-  { label: 'Paid Search', active: false },
-  { label: 'Social Media', active: false },
-  { label: 'Content Strategy', active: false },
-  { label: 'GEO', active: true },
-  { label: 'AEO', active: true },
-  { label: 'Technical SEO', active: true },
-  { label: 'AI Automation', active: true },
+const ARTICLES = [
+  { to: '/blog/how-to-rank-in-ai-search/', t: 'How to Make Your Business Visible in ChatGPT, Gemini & Google AI Search' },
+  { to: '/blog/what-is-generative-engine-optimization/', t: 'What Is Generative Engine Optimization (GEO)?' },
+  { to: '/blog/what-is-answer-engine-optimization/', t: 'What Is Answer Engine Optimization (AEO)?' },
+  { to: '/blog/seo-agency-madurai-complete-guide/', t: 'How to Choose an SEO Agency in Madurai' },
+  { to: '/blog/how-long-does-seo-take-madurai/', t: 'How Long Does SEO Take for a Madurai Business?' },
+  { to: '/blog/gbp-not-showing-on-google-maps-causes-fixes/', t: 'GBP Not Showing on Google Maps: Causes and Fixes' },
+  { to: '/blog/google-business-profile-optimisation-malaysia/', t: 'Google Business Profile Optimisation in Malaysia: A Step-by-Step Guide for SMEs' },
+  { to: '/blog/how-to-choose-digital-marketing-agency-malaysia/', t: 'How to Choose a Digital Marketing Agency in Malaysia' },
+  { to: '/blog/seo-vs-google-ads-madurai/', t: 'SEO vs Google Ads: Which Is Better for Madurai Businesses?' },
 ]
 
-/* ============================================================
-   COMPONENT
-   ============================================================ */
+const SOCIAL = [
+  { name: 'LinkedIn', handle: 'Deepan Kanz', href: 'https://www.linkedin.com/in/deepankanz/' },
+  { name: 'Instagram', handle: '@deepankanz', href: 'https://www.instagram.com/deepankanz' },
+  { name: 'Facebook', handle: '@deepankanz', href: 'https://www.facebook.com/deepankanz' },
+  { name: 'X (Twitter)', handle: '@deepankanz', href: 'https://x.com/deepankanz' },
+  { name: 'YouTube', handle: '@Deepankanz', href: 'https://www.youtube.com/@Deepankanz' },
+  { name: 'Pinterest', handle: '@Deepankanz', href: 'https://in.pinterest.com/Deepankanz/' },
+  { name: 'Medium', handle: '@deepankanz', href: 'https://medium.com/@deepankanz' },
+]
+
+const FAQS = [
+  { question: 'Who is Deepan Kanz?', answer: 'Deepan Kanz is the founder of Static Savvy Media, a digital marketing agency headquartered in Madurai, India, with an office in Thoothukudi and a team in Rawang, Malaysia. He leads SEO, Local SEO and AI search (GEO and AEO) strategy for clients.' },
+  { question: 'When did Deepan Kanz start Static Savvy Media?', answer: 'He founded Static Savvy Media in Madurai on 1 October 2021.' },
+  { question: 'What does Deepan Kanz specialise in?', answer: 'Generative Engine Optimization (GEO), Answer Engine Optimization (AEO), Local SEO and Google Business Profile, technical SEO and AI business automation, for businesses in Tamil Nadu and Malaysia.' },
+  { question: 'Can I speak to Deepan directly?', answer: 'Yes. Deepan handles first conversations about GEO/AEO or SEO strategy personally for new clients. Call or WhatsApp +91 99440 40345, or connect on LinkedIn.' },
+]
 
 export default function Founder() {
   const jsonLdRef = useRef([])
@@ -163,614 +147,90 @@ export default function Founder() {
   const whatsappHref = buildWhatsAppLink(WHATSAPP_NUMBER, WHATSAPP_MESSAGE)
 
   return (
-    <div className="about-template">
+    <div className="about-template founder-v2">
       <Breadcrumbs />
 
-      {/* ============================================================
-          HERO, Split Screen
-          ============================================================ */}
-      <section className="section">
-        <div className="container">
-          <div className="founder-hero">
-            <div className="founder-hero__visual">
-              <div className="founder-hero__portrait">
-                <img src={deepanFounderImg} width={740} height={941} fetchPriority="high" alt="Deepan Kanz - Founder & AI Search Specialist" className="founder-hero__portrait-img" />
-                <div className="founder-hero__portrait-glow" aria-hidden="true" />
-              </div>
-            </div>
-            <div className="founder-hero__content">
-              <span className="eyebrow">FOUNDER &amp; AI SEARCH SPECIALIST</span>
-              <h1 className="hero__title">
-                Deepan Kanz , {' '}
-                <span className="text-gradient">Founder &amp; AI Search Specialist</span>
-              </h1>
-              <p className="hero__subtitle">
-                Building digital marketing that works in the era of AI search.
-              </p>
-              <div className="founder-hero__badges">
-                <span className="founder-hero__badge founder-hero__badge--purple">GEO</span>
-                <span className="founder-hero__badge founder-hero__badge--pink">AEO</span>
-                <span className="founder-hero__badge founder-hero__badge--cyan">SEO</span>
-                <span className="founder-hero__badge founder-hero__badge--blue">AI Search</span>
-                <span className="founder-hero__badge founder-hero__badge--purple">Digital Marketing</span>
-              </div>
-              <div className="founder-hero__actions">
-                <Button href={whatsappHref} variant="primary" size="lg" target="_blank" rel="noopener noreferrer">
-                  WhatsApp Deepan Directly
-                </Button>
-                <Button href="https://www.linkedin.com/in/deepankanz/" variant="ghost" size="lg" target="_blank" rel="noopener noreferrer">
-                  Connect on LinkedIn
-                </Button>
-              </div>
+      <section className="hv2 fv2-hero" aria-labelledby="fv2-title">
+        <div className="hv2-wrap fv2-hero__grid">
+          <div>
+            <span className="hv2-eyebrow">Founder &amp; AI Search Specialist</span>
+            <h1 id="fv2-title">Deepan Kanz, <span className="hv2-grad">Founder &amp; AI Search Specialist</span></h1>
+            <p className="hv2-lead fv2-bio">{FOUNDER.bio}</p>
+            <ul className="fv2-chips" aria-label="Focus areas">
+              {['GEO', 'AEO', 'SEO', 'Local SEO', 'AI Search'].map((t) => <li key={t}>{t}</li>)}
+            </ul>
+            <div className="fv2-actions">
+              <a className="hv2-btn hv2-btn--primary" href={whatsappHref} target="_blank" rel="noopener noreferrer">WhatsApp Deepan directly</a>
+              <a className="hv2-btn hv2-btn--ghost" href="https://www.linkedin.com/in/deepankanz/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
             </div>
           </div>
+          <figure className="fv2-photo">
+            <img src={deepanFounderImg} width={740} height={941} fetchPriority="high" alt="Deepan Kanz - Founder & AI Search Specialist" />
+            <figcaption><b>Deepan Kanz</b><span>Founder, Static Savvy Media · Madurai</span></figcaption>
+          </figure>
         </div>
       </section>
 
-      {/* ============================================================
-          FOUNDER INTRODUCTION
-          ============================================================ */}
-      <section className="section section--alt">
-        <div className="container">
-          <ScrollReveal>
-            <div className="founder-editorial">
-              <div className="founder-editorial__content">
-                <SectionHeading
-                  eyebrow="Founder"
-                  title="The Founder Behind Static Savvy Media"
-                  align="left"
-                />
-                <p>
-                  Deepan Kanz founded Static Savvy Media with a single focus: building digital marketing that works in the era of <span className="founder-editorial__highlight">AI Search</span>.
-                </p>
-                <p>
-                  He specialises in Generative Engine Optimization (<span className="founder-editorial__highlight">GEO</span>) and Answer Engine Optimization (<span className="founder-editorial__highlight--cyan">AEO</span>), and the person behind Static Savvy Media&apos;s <span className="founder-editorial__highlight--pink">GEO/AEO</span> methodology.
-                </p>
-                <p>
-                  His work in <span className="founder-editorial__highlight">Digital Marketing</span> is focused on making businesses visible across traditional search and the rapidly growing world of AI search.
-                </p>
-              </div>
-              <div className="founder-editorial__visual">
-                <div className="founder-editorial__card">
-                  <div className="founder-editorial__card-label">Core Focus Areas</div>
-                  <div className="founder-editorial__card-grid">
-                    <div className="founder-editorial__card-node founder-editorial__card-node--purple">GEO</div>
-                    <div className="founder-editorial__card-node founder-editorial__card-node--cyan">AEO</div>
-                    <div className="founder-editorial__card-node founder-editorial__card-node--pink">SEO</div>
-                    <div className="founder-editorial__card-node founder-editorial__card-node--blue">AI Search</div>
-                  </div>
-                </div>
-              </div>
+      <section className="hv2 hv2-section fv2-sec" aria-labelledby="fv2-roles">
+        <div className="hv2-wrap fv2-two">
+          <div>
+            <span className="hv2-eyebrow">Background</span>
+            <h2 className="hv2-h2" id="fv2-roles">The founder behind Static Savvy Media.</h2>
+            <div className="fv2-prose">
+              <p>Deepan Kanz founded Static Savvy Media with a single focus: building digital marketing that works in the era of AI search. His background in digital marketing spans SEO, paid search, social media and content strategy.</p>
+              <p>His focus shifted in 2024, when AI search engines moved from experimental to mainstream. He spent that year building and testing GEO and AEO methodologies across Static Savvy Media’s client base, studying what made AI engines cite certain businesses and ignore others.</p>
+              <p>The entity-building and answer-structured content approaches he developed now form the core of our <Link to="/services/geo-aeo-ai-search/">GEO &amp; AEO service</Link>, alongside <Link to="/services/seo/">SEO</Link> and <Link to="/services/local-seo/">Local SEO</Link> from our <Link to="/locations/madurai/">Madurai head office</Link>.</p>
             </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* ============================================================
-          BACKGROUND & EXPERTISE
-          ============================================================ */}
-      <section className="section">
-        <div className="container">
-          <SectionHeading
-            eyebrow="Background"
-            title="Background & Expertise"
-          />
-          <ScrollReveal>
-            <div className="founder-background">
-              <p>
-                Deepan&apos;s background in digital marketing spans SEO, paid search, social media, and content strategy.
-              </p>
-              <p>
-                His focus shifted significantly in 2024 when AI search engines moved from experimental to mainstream.
-              </p>
-              <p>
-                He recognized that the fundamental mechanics of online discovery were shifting, and that agencies still building 2019-era SEO strategies were going to leave their clients behind.
-              </p>
-              <p>
-                He spent 2024 building and testing GEO and AEO methodologies across Static Savvy Media&apos;s client base, studying what made AI engines cite certain businesses and ignore others, and developing the entity-building and answer-structured content approaches that form the core of Static Savvy Media&apos;s offering today.
-              </p>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* ============================================================
-          THE SHIFT TO AI SEARCH
-          ============================================================ */}
-      <section className="section section--alt">
-        <div className="container">
-          <SectionHeading
-            eyebrow="The Shift"
-            title="From Traditional Search to AI Search"
-          />
-          <ScrollReveal>
-            <div className="founder-timeline">
-              <div className="founder-timeline__step">
-                <div className="founder-timeline__dot founder-timeline__dot--start">S</div>
-                <div className="founder-timeline__text">Traditional SEO</div>
-              </div>
-              <div className="founder-timeline__connector" />
-              <div className="founder-timeline__step">
-                <div className="founder-timeline__dot founder-timeline__dot--mid">24</div>
-                <div className="founder-timeline__text founder-timeline__text--muted">2024</div>
-              </div>
-              <div className="founder-timeline__connector" />
-              <div className="founder-timeline__step">
-                <div className="founder-timeline__dot founder-timeline__dot--active">AI</div>
-                <div className="founder-timeline__text">AI Search Becomes Mainstream</div>
-              </div>
-              <div className="founder-timeline__connector" />
-              <div className="founder-timeline__step">
-                <div className="founder-timeline__dot founder-timeline__dot--active">G</div>
-                <div className="founder-timeline__text">GEO, Generative Engine Optimization</div>
-              </div>
-              <div className="founder-timeline__connector" />
-              <div className="founder-timeline__step">
-                <div className="founder-timeline__dot founder-timeline__dot--active">A</div>
-                <div className="founder-timeline__text">AEO, Answer Engine Optimization</div>
-              </div>
-              <div className="founder-timeline__connector" />
-              <div className="founder-timeline__step">
-                <div className="founder-timeline__dot founder-timeline__dot--end">V</div>
-                <div className="founder-timeline__text">AI Search Visibility</div>
-              </div>
-            </div>
-          </ScrollReveal>
-          <ScrollReveal delay={100}>
-            <div style={{ textAlign: 'center', marginTop: '2rem', maxWidth: '700px', marginInline: 'auto' }}>
-              <p style={{ color: 'var(--color-text-muted)', lineHeight: 1.7 }}>
-                His focus shifted significantly in 2024 when AI search engines moved from experimental to mainstream. He recognized that the fundamental mechanics of online discovery were shifting.
-              </p>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* ============================================================
-          THE PROBLEM DEEPAN IDENTIFIED
-          ============================================================ */}
-      <section className="section">
-        <div className="container">
-          <SectionHeading
-            eyebrow="The Shift"
-            title="The Digital Discovery Landscape Is Changing"
-            subtitle="Agencies still building 2019-era SEO strategies risk leaving their clients behind as people increasingly discover businesses through AI-generated answers and conversational search."
-          />
-          <div className="founder-comparison">
-            <ScrollReveal delay={0}>
-              <div className="founder-comparison__card">
-                <span className="founder-comparison__label founder-comparison__label--old">Old Model</span>
-                <div className="founder-comparison__flow">
-                  <div className="founder-comparison__step">
-                    <div className="founder-comparison__step-icon founder-comparison__step-icon--old">K</div>
-                    Keywords
-                  </div>
-                  <div className="founder-comparison__arrow" aria-hidden="true">↓</div>
-                  <div className="founder-comparison__step">
-                    <div className="founder-comparison__step-icon founder-comparison__step-icon--old">R</div>
-                    Rankings
-                  </div>
-                  <div className="founder-comparison__arrow" aria-hidden="true">↓</div>
-                  <div className="founder-comparison__step">
-                    <div className="founder-comparison__step-icon founder-comparison__step-icon--old">T</div>
-                    Website Traffic
-                  </div>
-                </div>
-              </div>
-            </ScrollReveal>
-            <ScrollReveal delay={100}>
-              <div className="founder-comparison__card">
-                <span className="founder-comparison__label founder-comparison__label--new">New Model</span>
-                <div className="founder-comparison__flow">
-                  <div className="founder-comparison__step">
-                    <div className="founder-comparison__step-icon founder-comparison__step-icon--new">E</div>
-                    Entity
-                  </div>
-                  <div className="founder-comparison__arrow" aria-hidden="true">↓</div>
-                  <div className="founder-comparison__step">
-                    <div className="founder-comparison__step-icon founder-comparison__step-icon--new">A</div>
-                    Authority
-                  </div>
-                  <div className="founder-comparison__arrow" aria-hidden="true">↓</div>
-                  <div className="founder-comparison__step">
-                    <div className="founder-comparison__step-icon founder-comparison__step-icon--new">S</div>
-                    Structured Answers
-                  </div>
-                  <div className="founder-comparison__arrow" aria-hidden="true">↓</div>
-                  <div className="founder-comparison__step">
-                    <div className="founder-comparison__step-icon founder-comparison__step-icon--new">C</div>
-                    AI Citations
-                  </div>
-                  <div className="founder-comparison__arrow" aria-hidden="true">↓</div>
-                  <div className="founder-comparison__step">
-                    <div className="founder-comparison__step-icon founder-comparison__step-icon--new">D</div>
-                    Discovery
-                  </div>
-                  <div className="founder-comparison__arrow" aria-hidden="true">↓</div>
-                  <div className="founder-comparison__step">
-                    <div className="founder-comparison__step-icon founder-comparison__step-icon--new">Q</div>
-                    Enquiry
-                  </div>
-                </div>
-              </div>
-            </ScrollReveal>
           </div>
+          <dl className="fv2-roles">
+            {ROLES.map((r) => <div key={r.k}><dt>{r.k}</dt><dd>{r.v}</dd></div>)}
+          </dl>
         </div>
       </section>
 
-      {/* ============================================================
-          GEO / AEO METHODOLOGY
-          ============================================================ */}
-      <section className="section section--alt">
-        <div className="container">
-          <SectionHeading
-            eyebrow="Methodology"
-            title="Building the GEO & AEO Methodology"
-          />
-          <ScrollReveal>
-            <div className="founder-methodology">
-              <div className="founder-methodology__flow">
-                <div className="founder-methodology__step">
-                  <div className="founder-methodology__step-number">B</div>
-                  <div className="founder-methodology__step-title">Business</div>
-                </div>
-                <div className="founder-methodology__arrow" aria-hidden="true">↓</div>
-                <div className="founder-methodology__step">
-                  <div className="founder-methodology__step-number">E</div>
-                  <div className="founder-methodology__step-title">Entity</div>
-                </div>
-                <div className="founder-methodology__arrow" aria-hidden="true">↓</div>
-                <div className="founder-methodology__step">
-                  <div className="founder-methodology__step-number">C</div>
-                  <div className="founder-methodology__step-title">Content</div>
-                </div>
-                <div className="founder-methodology__arrow" aria-hidden="true">↓</div>
-                <div className="founder-methodology__step">
-                  <div className="founder-methodology__step-number">S</div>
-                  <div className="founder-methodology__step-title">Structure</div>
-                </div>
-                <div className="founder-methodology__arrow" aria-hidden="true">↓</div>
-                <div className="founder-methodology__step">
-                  <div className="founder-methodology__step-number">A</div>
-                  <div className="founder-methodology__step-title">Authority</div>
-                </div>
-                <div className="founder-methodology__arrow" aria-hidden="true">↓</div>
-                <div className="founder-methodology__step">
-                  <div className="founder-methodology__step-number">AC</div>
-                  <div className="founder-methodology__step-title">AI Citation</div>
-                </div>
-              </div>
-            </div>
-          </ScrollReveal>
-          <ScrollReveal delay={100}>
-            <div className="founder-methodology__content">
-              <p>
-                Deepan spent 2024 building and testing GEO and AEO methodologies across Static Savvy Media&apos;s client base.
-              </p>
-              <p>The work focused on studying:</p>
-              <ul className="founder-methodology__list">
-                <li>What makes AI engines cite certain businesses?</li>
-                <li>Why are some businesses ignored?</li>
-                <li>How can businesses become more discoverable inside AI-generated answers?</li>
-                <li>How can entity-building and answer-structured content improve digital visibility?</li>
-              </ul>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* ============================================================
-          AREAS OF SPECIALIZATION
-          ============================================================ */}
-      <section className="section">
-        <div className="container">
-          <SectionHeading
-            eyebrow="Specialization"
-            title="Areas of Specialization"
-          />
-          <div className="founder-spec-grid">
-            {SPECIALISATIONS.map((spec, index) => (
-              <ScrollReveal key={spec.number} delay={index * 60}>
-                <div className="founder-spec-card">
-                  <div className={`founder-spec-card__icon ${spec.iconClass}`}>{spec.icon}</div>
-                  <h3 className="founder-spec-card__title">{spec.title}</h3>
-                  <p className="founder-spec-card__text">{spec.text}</p>
-                </div>
-              </ScrollReveal>
+      <section className="hv2 hv2-section fv2-sec fv2-sec--alt" aria-labelledby="fv2-leads">
+        <div className="hv2-wrap">
+          <span className="hv2-eyebrow">What he leads</span>
+          <h2 className="hv2-h2" id="fv2-leads">Areas Deepan leads at Static Savvy Media.</h2>
+          <ul className="fv2-cards">
+            {LEADS.map((l) => (
+              <li key={l.to}><Link to={l.to}><h3>{l.title}</h3><p>{l.text}</p><span className="hv2-link">Learn more <span className="hv2-arrow" aria-hidden="true">→</span></span></Link></li>
             ))}
+          </ul>
+          <p className="fv2-more">See how this work runs for clients on our <Link to="/about/">About page</Link>, <Link to="/case-studies/">client work</Link> and <Link to="/growth-audit/">free growth audit</Link>.</p>
+        </div>
+      </section>
+
+      <section className="hv2 hv2-section fv2-sec" aria-labelledby="fv2-articles">
+        <div className="hv2-wrap fv2-two fv2-two--even">
+          <div>
+            <span className="hv2-eyebrow">Articles</span>
+            <h2 className="hv2-h2" id="fv2-articles">Guides written by Deepan.</h2>
+            <ul className="fv2-articles">
+              {ARTICLES.map((a) => <li key={a.to}><Link to={a.to}>{a.t}</Link></li>)}
+            </ul>
+            <p className="fv2-more"><Link className="hv2-link" to="/blog/">All articles on the blog <span className="hv2-arrow" aria-hidden="true">→</span></Link></p>
+          </div>
+          <div>
+            <span className="hv2-eyebrow">Connect</span>
+            <h2 className="hv2-h2">Connect with Deepan.</h2>
+            <ul className="fv2-social">
+              {SOCIAL.map((s) => <li key={s.href}><a href={s.href} target="_blank" rel="noopener noreferrer me"><b>{s.name}</b><span>{s.handle}</span><span aria-hidden="true">↗</span></a></li>)}
+            </ul>
           </div>
         </div>
       </section>
 
-      {/* ============================================================
-          EXPERTISE ECOSYSTEM
-          ============================================================ */}
-      <section className="section section--alt">
-        <div className="container">
-          <SectionHeading
-            eyebrow="Expertise"
-            title="Expertise Ecosystem"
-            subtitle="Interconnected areas of expertise working as one system."
-          />
-          <ScrollReveal>
-            <div className="founder-ecosystem">
-              <div className="founder-ecosystem__ring">
-                <div className="founder-ecosystem__node">GEO</div>
-                <div className="founder-ecosystem__node">AEO</div>
-                <div className="founder-ecosystem__node">SEO</div>
-              </div>
-              <div className="founder-ecosystem__arrows" aria-hidden="true">
-                <span>↓</span>
-                <span>↓</span>
-                <span>↓</span>
-              </div>
-              <div className="founder-ecosystem__center">Deepan Kanz</div>
-              <div className="founder-ecosystem__arrows" aria-hidden="true">
-                <span>↓</span>
-                <span>↓</span>
-              </div>
-              <div className="founder-ecosystem__ring">
-                <div className="founder-ecosystem__node">Local SEO</div>
-                <div className="founder-ecosystem__node">Technical SEO</div>
-                <div className="founder-ecosystem__node">AI Automation</div>
-              </div>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
+      <FAQSection eyebrow="FAQ" title="About Deepan Kanz" faqs={FAQS} />
 
-      {/* ============================================================
-          PERSONAL APPROACH
-          ============================================================ */}
-      <section className="section">
-        <div className="container">
-          <SectionHeading
-            eyebrow="Approach"
-            title="A Practical Approach to AI Search"
-          />
-          <div className="founder-approach-grid">
-            {APPROACH_STEPS.map((step, index) => (
-              <ScrollReveal key={step.number} delay={index * 80}>
-                <div className="founder-approach-card">
-                  <div className="founder-approach-card__number">{step.number}</div>
-                  <div>
-                    <div className="founder-approach-card__title">{step.title}</div>
-                    <div className="founder-approach-card__text">{step.text}</div>
-                  </div>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ============================================================
-          WHY GEO & AEO MATTER
-          ============================================================ */}
-      <section className="section section--alt">
-        <div className="container">
-          <SectionHeading
-            eyebrow="GEO & AEO"
-            title="Why AI Search Visibility Matters"
-            subtitle="Search is no longer limited to traditional search engine result pages. Businesses increasingly need to understand how AI systems discover, interpret and cite information."
-          />
-          <div className="founder-geo-aeo-grid">
-            <ScrollReveal delay={0}>
-              <div className="founder-geo-aeo-card">
-                <span className="founder-geo-aeo-card__label founder-geo-aeo-card__label--geo">GEO</span>
-                <h3 className="founder-geo-aeo-card__title">Generative Engine Optimization</h3>
-                <ul className="founder-geo-aeo-card__list">
-                  <li>Entity building</li>
-                  <li>AI citation strategy</li>
-                </ul>
-              </div>
-            </ScrollReveal>
-            <ScrollReveal delay={80}>
-              <div className="founder-geo-aeo-card">
-                <span className="founder-geo-aeo-card__label founder-geo-aeo-card__label--aeo">AEO</span>
-                <h3 className="founder-geo-aeo-card__title">Answer Engine Optimization</h3>
-                <ul className="founder-geo-aeo-card__list">
-                  <li>FAQ schema</li>
-                  <li>Structured content</li>
-                  <li>Voice search optimization</li>
-                </ul>
-              </div>
-            </ScrollReveal>
-          </div>
-        </div>
-      </section>
-
-      {/* ============================================================
-          CORE EXPERTISE
-          ============================================================ */}
-      <section className="section">
-        <div className="container">
-          <SectionHeading
-            eyebrow="Expertise"
-            title="Core Expertise"
-          />
-          <ScrollReveal>
-            <div className="founder-expertise-strip">
-              {EXPERTISE_TAGS.map((tag) => (
-                <div
-                  key={tag.label}
-                  className={`founder-expertise-strip__item ${tag.active ? 'founder-expertise-strip__item--active' : ''}`}
-                >
-                  {tag.label}
-                </div>
-              ))}
-            </div>
-            <p style={{ textAlign: 'center', color: 'var(--color-text-muted)', maxWidth: '700px', marginInline: 'auto', lineHeight: 1.7 }}>
-              Deepan&apos;s background in digital marketing spans SEO, paid search, social media, and content strategy, with his current focus on GEO, AEO and AI search visibility.
-            </p>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* ============================================================
-          CONNECT WITH DEEPAN
-          ============================================================ */}
-      <section className="section section--alt">
-        <div className="container">
-          <SectionHeading
-            eyebrow="Connect"
-            title="Connect With Deepan"
-          />
-          <div className="founder-connect-grid">
-            {/* 1. Instagram */}
-            <ScrollReveal delay={0}>
-              <div className="founder-connect-card">
-                <div className="founder-connect-card__icon founder-connect-card__icon--instagram">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
-                  </svg>
-                </div>
-                <div className="founder-connect-card__label">Instagram</div>
-                <div className="founder-connect-card__value">@deepankanz</div>
-                <Button href="https://www.instagram.com/deepankanz" variant="ghost" size="sm" target="_blank" rel="noopener noreferrer">
-                  Follow on Instagram
-                </Button>
-              </div>
-            </ScrollReveal>
-
-            {/* 2. Facebook */}
-            <ScrollReveal delay={60}>
-              <div className="founder-connect-card">
-                <div className="founder-connect-card__icon founder-connect-card__icon--facebook">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                  </svg>
-                </div>
-                <div className="founder-connect-card__label">Facebook</div>
-                <div className="founder-connect-card__value">@deepankanz</div>
-                <Button href="https://www.facebook.com/deepankanz" variant="ghost" size="sm" target="_blank" rel="noopener noreferrer">
-                  Follow on Facebook
-                </Button>
-              </div>
-            </ScrollReveal>
-
-            {/* 3. LinkedIn */}
-            <ScrollReveal delay={120}>
-              <div className="founder-connect-card">
-                <div className="founder-connect-card__icon founder-connect-card__icon--linkedin">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-                    <rect width="4" height="12" x="2" y="9" />
-                    <circle cx="4" cy="4" r="2" />
-                  </svg>
-                </div>
-                <div className="founder-connect-card__label">LinkedIn</div>
-                <div className="founder-connect-card__value">Deepan Kanz</div>
-                <Button href="https://www.linkedin.com/in/deepankanz/" variant="ghost" size="sm" target="_blank" rel="noopener noreferrer">
-                  Connect on LinkedIn
-                </Button>
-              </div>
-            </ScrollReveal>
-
-            {/* 4. X / Twitter */}
-            <ScrollReveal delay={180}>
-              <div className="founder-connect-card">
-                <div className="founder-connect-card__icon founder-connect-card__icon--x">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                  </svg>
-                </div>
-                <div className="founder-connect-card__label">X (Twitter)</div>
-                <div className="founder-connect-card__value">@deepankanz</div>
-                <Button href="https://x.com/deepankanz" variant="ghost" size="sm" target="_blank" rel="noopener noreferrer">
-                  Follow on X
-                </Button>
-              </div>
-            </ScrollReveal>
-
-            {/* 5. YouTube */}
-            <ScrollReveal delay={240}>
-              <div className="founder-connect-card">
-                <div className="founder-connect-card__icon founder-connect-card__icon--youtube">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                  </svg>
-                </div>
-                <div className="founder-connect-card__label">YouTube</div>
-                <div className="founder-connect-card__value">@Deepankanz</div>
-                <Button href="https://www.youtube.com/@Deepankanz" variant="ghost" size="sm" target="_blank" rel="noopener noreferrer">
-                  Subscribe on YouTube
-                </Button>
-              </div>
-            </ScrollReveal>
-
-            {/* 6. Pinterest */}
-            <ScrollReveal delay={300}>
-              <div className="founder-connect-card">
-                <div className="founder-connect-card__icon founder-connect-card__icon--pinterest">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345c-.091.379-.293 1.194-.333 1.361-.053.225-.174.271-.401.165-1.495-.696-2.43-2.878-2.43-4.632 0-3.774 2.744-7.24 7.906-7.24 4.15 0 7.377 2.957 7.377 6.912 0 4.123-2.599 7.44-6.207 7.44-1.212 0-2.352-.63-2.743-1.377l-.747 2.848c-.27 1.033-1.002 2.327-1.492 3.115C9.845 23.856 10.908 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/>
-                  </svg>
-                </div>
-                <div className="founder-connect-card__label">Pinterest</div>
-                <div className="founder-connect-card__value">@Deepankanz</div>
-                <Button href="https://in.pinterest.com/Deepankanz/" variant="ghost" size="sm" target="_blank" rel="noopener noreferrer">
-                  Follow on Pinterest
-                </Button>
-              </div>
-            </ScrollReveal>
-
-            {/* 7. Medium */}
-            <ScrollReveal delay={360}>
-              <div className="founder-connect-card">
-                <div className="founder-connect-card__icon founder-connect-card__icon--medium">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path d="M13.54 12a6.8 6.8 0 0 1-6.77 6.82A6.8 6.8 0 0 1 0 12a6.8 6.8 0 0 1 6.77-6.82A6.8 6.8 0 0 1 13.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42c1.87 0 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/>
-                  </svg>
-                </div>
-                <div className="founder-connect-card__label">Medium</div>
-                <div className="founder-connect-card__value">@deepankanz</div>
-                <Button href="https://medium.com/@deepankanz" variant="ghost" size="sm" target="_blank" rel="noopener noreferrer">
-                  Read on Medium
-                </Button>
-              </div>
-            </ScrollReveal>
-          </div>
-        </div>
-      </section>
-
-      {/* ============================================================
-          DIRECT CONSULTATION CTA
-          ============================================================ */}
-      <section className="section">
-        <div className="container">
-          <ScrollReveal>
-            <div className="founder-cta-panel glass-card gradient-border">
-              <SectionHeading
-                eyebrow="Consultation"
-                title="Talk Directly With Deepan About Your Digital Marketing Strategy."
-              />
-              <p className="founder-cta-panel__subtitle">
-                For first conversations about GEO/AEO or SEO strategy, Deepan handles these personally for new clients.
-              </p>
-              <div className="hero__actions">
-                <Button href={whatsappHref} variant="primary" size="lg" target="_blank" rel="noopener noreferrer">
-                  WhatsApp Deepan Directly
-                </Button>
-              </div>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* ============================================================
-          FINAL CTA
-          ============================================================ */}
       <CTASection
-        eyebrow="About Static Savvy Media"
-        title="Learn More About Static Savvy Media"
-        subtitle="Explore our services, markets and approach to digital marketing in the AI era."
-        primaryLabel="Visit About Page"
-        primaryTo="/about/"
-        secondaryLabel="View All Services"
-        secondaryTo="/services/"
+        eyebrow="Consultation"
+        title="Talk directly with Deepan about your digital marketing strategy."
+        subtitle="For first conversations about GEO/AEO or SEO strategy, Deepan handles these personally for new clients."
+        primaryLabel="WhatsApp Deepan Directly"
+        primaryHref={whatsappHref}
+        secondaryLabel="Learn more about Static Savvy Media"
+        secondaryTo="/about/"
       />
       <ContactFormSection />
     </div>

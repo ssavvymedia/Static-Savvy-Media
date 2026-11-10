@@ -141,22 +141,22 @@ export default function HomeV2({ whatsappHref }) {
         <div className="hv2-wrap">
           <div className="hv2-band dark-zone">
             <div className="hv2-band-grid">
-              <div>
-                <span className="hv2-eyebrow">Our growth solutions</span>
-                <h2 className="hv2-h2">Integrated digital growth solutions.</h2>
-                <p className="hv2-lead" style={{ marginTop: 14 }}>A results-driven approach to improve visibility, generate qualified leads and grow your business.</p>
-                <p style={{ marginTop: 24 }}><Link className="hv2-link" to="/solutions/">Explore all solutions <span className="hv2-arrow" aria-hidden="true">→</span></Link></p>
-              </div>
-              <div>
-                <div className="hv2-tiles">
-                  {SOLUTIONS.map((s) => (
-                    <Link className="hv2-tile" to={s.to} key={s.to}><Ico d={s.d} /><h3>{s.name}</h3><p>{s.text}</p></Link>
-                  ))}
+              <div className="hv2-band-head">
+                <div>
+                  <span className="hv2-eyebrow">Our growth solutions</span>
+                  <h2 className="hv2-h2">Integrated digital growth solutions.</h2>
+                  <p className="hv2-lead">A results-driven approach to improve visibility, generate qualified leads and grow your business.</p>
                 </div>
-                <p className="hv2-more">
-                  <span style={{ color: '#b3bad6' }}>Also:</span>
-                  {MORE_SERVICES.map((m) => <Link key={m.to} to={m.to}>{m.name}</Link>)}
-                </p>
+                <Link className="hv2-link" to="/solutions/">Explore all solutions <span className="hv2-arrow" aria-hidden="true">→</span></Link>
+              </div>
+              <div className="hv2-tiles">
+                {SOLUTIONS.map((s) => (
+                  <Link className="hv2-tile" to={s.to} key={s.to}><Ico d={s.d} /><h3>{s.name}</h3><p>{s.text}</p></Link>
+                ))}
+              </div>
+              <div className="hv2-more">
+                <span className="hv2-more__label">Also:</span>
+                <ul>{MORE_SERVICES.map((m) => <li key={m.to}><Link to={m.to}>{m.name}</Link></li>)}</ul>
               </div>
             </div>
           </div>

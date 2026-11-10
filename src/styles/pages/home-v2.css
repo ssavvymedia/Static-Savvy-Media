@@ -512,3 +512,34 @@
   .hv2-tile h3 { font-size: 13px; }
   .hv2-more { margin-top: 18px; }
 }
+/* Solutions band v3: heading row, full-width tiles (titles on one line at 1366+), separate "Also" row. */
+.hv2-band .hv2-band-grid { display: block; }
+.hv2-band-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 12px 32px; flex-wrap: wrap; margin-bottom: 20px; }
+.hv2-band-head .hv2-lead { margin-top: 6px !important; max-width: 70ch; }
+.hv2-band-head .hv2-link { white-space: nowrap; }
+.hv2-band .hv2-tiles { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; align-items: stretch; }
+.hv2-band .hv2-tile { height: 100%; padding: 16px 12px; }
+.hv2-band .hv2-tile h3 { font-size: 14.5px; white-space: nowrap; }
+.hv2-band .hv2-more { margin-top: 20px; display: flex; align-items: center; gap: 10px; flex-wrap: nowrap; }
+.hv2-band .hv2-more__label { color: #b3bad6; font-size: 13px; font-weight: 600; flex: none; margin: 0; }
+.hv2-band .hv2-more ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.hv2-band .hv2-more a { display: inline-block; white-space: nowrap; }
+@media (max-width: 1280px) { .hv2-band .hv2-tile h3 { white-space: normal; text-wrap: balance; } }
+@media (max-width: 1024px) { .hv2-band .hv2-tiles { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 640px) {
+  .hv2-band .hv2-tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .hv2-band .hv2-tile { padding: 12px 10px; }
+  .hv2-band .hv2-tile h3 { font-size: 13px; }
+  .hv2-band .hv2-more { flex-direction: column; align-items: flex-start; }
+  .hv2-band-head { margin-bottom: 14px; }
+}
+/* Industry cards at 390: long titles ("Construction") clipped by the arrow; drop the arrow and let titles wrap. */
+@media (max-width: 640px) {
+  .hv2-card .hv2-body { gap: 8px; padding: 12px 10px; }
+  .hv2-card h3 { min-width: 0; font-size: 13.5px; hyphens: auto; }
+  .hv2-card .hv2-body > .hv2-arrow { display: none; }
+}
+/* Same content edge as .container (1320 incl. gutters) and tighter hero top under breadcrumbs. */
+.hv2-wrap { max-width: 1320px; }
+.hv2-hero { padding-top: clamp(20px, 3vw, 40px); }
+.founder-v2 .fv2-hero { padding-top: clamp(16px, 2.5vw, 32px); }

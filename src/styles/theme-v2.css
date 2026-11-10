@@ -194,3 +194,18 @@
 :root[data-theme='light'] .ga-landing-card__link {
   color: #c2410c;
 }
+
+/* ---- Sticky transparent header (Header.jsx adds .site-header--scrolled after 8px of scroll or when the mobile menu is open) ---- */
+.site-header { position: sticky; top: 0; background: transparent; border-bottom: 1px solid transparent; box-shadow: none; backdrop-filter: none; -webkit-backdrop-filter: none; transition: background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, backdrop-filter 0.25s ease; }
+.site-header.site-header--scrolled { background: rgba(8, 10, 24, 0.72); border-bottom-color: rgba(255, 255, 255, 0.08); box-shadow: 0 8px 24px -16px rgba(0, 0, 0, 0.6); backdrop-filter: saturate(140%) blur(16px); -webkit-backdrop-filter: saturate(140%) blur(16px); }
+:root[data-theme='light'] .site-header.site-header--scrolled { background: rgba(255, 255, 255, 0.78); border-bottom-color: rgba(15, 23, 42, 0.08); box-shadow: 0 8px 24px -18px rgba(15, 23, 42, 0.35); }
+body.menu-open .site-header { background: var(--color-bg); }
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .site-header.site-header--scrolled { background: rgba(8, 10, 24, 0.95); }
+  :root[data-theme='light'] .site-header.site-header--scrolled { background: rgba(255, 255, 255, 0.96); }
+}
+
+/* Light theme: red accent text (#ef4444) is 3.5:1 on white; use a darker red for AA. */
+:root[data-theme='light'] { --color-red: #b91c1c; }
+:root[data-theme='light'] .ret-product-page__action--cart { color: #fff; }
+span.ret-product-page__action.ret-product-page__action--cart { color: #fff; background: #047857; }

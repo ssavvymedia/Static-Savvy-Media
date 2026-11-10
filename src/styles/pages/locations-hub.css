@@ -377,3 +377,7 @@
     transition: none;
   }
 }
+/* Intro follows the hero's left alignment and container (PR-M). */
+.lh-intro { text-align: left; }
+@media (min-width: 1440px) { .locations-hub .lh-intro { max-width: 1320px; } }
+.lh-intro__text { margin: 0; max-width: 72ch; }

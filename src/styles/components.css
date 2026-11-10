@@ -1477,3 +1477,60 @@
   color: var(--color-text-muted);
   text-align: inherit;
 }
+
+/* ---- CTA band (CTASection, shared by ~60 pages) ---- */
+.cta-section .cta-section__panel { box-sizing: border-box; width: 100%; padding: 48px clamp(24px, 5vw, 56px); text-align: center; border-radius: 24px; box-shadow: var(--shadow-card); transform: none; }
+.cta-section .cta-section__head { margin: 0 auto; max-width: 760px; display: flex; flex-direction: column; align-items: center; gap: 12px; }
+.cta-section .cta-section__eyebrow { display: inline-block; margin: 0; }
+.cta-section .cta-section__title { margin: 0 !important; font-size: clamp(1.5rem, 3vw, 2.25rem); line-height: 1.2; text-wrap: balance; }
+.cta-section .cta-section__sub { margin: 0 auto !important; max-width: 62ch; }
+.cta-section .cta-section__actions { margin-top: 28px; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 14px; }
+.cta-section .cta-section__actions .btn { margin: 0; min-height: 50px; padding: 0.85rem 1.9rem; border-radius: 9999px; font-size: 1rem; white-space: nowrap; }
+.cta-section .cta-section__actions .cta-section__btn--outline { background: transparent; border: 1.5px solid color-mix(in srgb, var(--color-violet, #8b5cf6) 65%, var(--color-border)); color: var(--color-heading, var(--color-text)); box-shadow: none; backdrop-filter: none; }
+.cta-section .cta-section__actions .cta-section__btn--outline:hover { background: color-mix(in srgb, var(--color-violet, #8b5cf6) 12%, transparent); box-shadow: none; }
+@media (max-width: 640px) {
+  .cta-section .cta-section__panel { padding: 28px 18px; border-radius: 18px; }
+  .cta-section .cta-section__actions { flex-direction: column; align-items: stretch; gap: 10px; margin-top: 22px; }
+  .cta-section .cta-section__actions .btn { width: 100%; white-space: normal; text-align: center; }
+}
+
+/* ---- Page top / hero alignment (PR-M): same container as breadcrumbs, clear space under the sticky header ---- */
+.breadcrumbs { padding-block: 1rem 0.5rem; }
+.hero.hero--two-column { padding-top: clamp(1.25rem, 3vw, 2.5rem); }
+.hero--two-column .eyebrow { margin-bottom: 0.9rem; }
+@media (min-width: 1440px) { .hero__inner--two-column { max-width: 1320px; } }
+@media (min-width: 1025px) {
+  .hero--two-column .hero__title { font-size: clamp(2.25rem, 3.4vw, 3.4rem); line-height: 1.1; text-wrap: balance; }
+  .hero__inner--two-column { grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: clamp(2rem, 4vw, 4rem); }
+  .hero__visual-side .hero__image { width: 100%; max-height: 520px; object-fit: cover; }
+}
+@media (max-width: 1024px) { .hero--two-column .hero__title { text-wrap: balance; } }
+
+/* ---- Buttons never escape their panels on small screens (all CTA/panel/card variants) ---- */
+@media (max-width: 640px) {
+  .btn { white-space: normal; max-width: 100%; text-align: center; line-height: 1.3; }
+  :is(.quote-cta__actions, .sm-grant-cta__card, .aba-grant__card, .geo-location-cta__card, .ga-location-cta__card, .faq-hub-cta) .btn { width: 100%; }
+}
+/* One top spacing for every hero after the breadcrumbs (beats page-scoped `.x-page .hero { padding }`). */
+body .hero.hero { padding-top: clamp(1.5rem, 3vw, 2.5rem); }
+
+/* ---- One content edge on every route (breadcrumbs, heroes, v2 blocks) ---- */
+.container .container { padding-inline: 0; max-width: none; }
+@media (min-width: 1440px) {
+  .container:not([class*="container--"]), .hero__inner, .hero__inner--two-column { max-width: 1320px !important; }
+  .container .container { max-width: none !important; }
+}
+/* ---- H1 scale: fits 2–3 lines on desktop, never giant on mobile ---- */
+@media (min-width: 1025px) {
+  main h1 { font-size: clamp(2.25rem, 3.3vw, 3.25rem) !important; line-height: 1.1 !important; text-wrap: balance; }
+}
+@media (max-width: 640px) {
+  main h1 { font-size: clamp(1.75rem, 7.6vw, 2.25rem) !important; line-height: 1.15 !important; text-wrap: balance; }
+}
+/* ---- Breadcrumb row + first section: consistent space below the sticky header on every route ---- */
+nav.container[aria-label="Breadcrumb"] { padding-block: 14px 6px; }
+nav[aria-label="Breadcrumb"] + :is(section, .hero, .hv2) { padding-top: clamp(1.25rem, 3vw, 2.5rem) !important; }
+nav[aria-label="Breadcrumb"] + div > section:first-child { padding-top: clamp(1.25rem, 3vw, 2.5rem) !important; }
+section:has(> .container > nav[aria-label="Breadcrumb"]) + section,
+section:has(> nav[aria-label="Breadcrumb"]) + section { padding-top: clamp(1.25rem, 3vw, 2.5rem) !important; }
+.hero--two-column .hero__subtitle { margin-top: 1rem; }

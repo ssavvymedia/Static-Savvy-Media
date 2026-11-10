@@ -19,6 +19,17 @@ export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const hydrated = useHydrated()
   const whatsappHref = buildWhatsAppLink(WHATSAPP_NUMBER, WHATSAPP_MESSAGE)
+  const [scrolled, setScrolled] = useState(false)
+
+  /* Transparent at the top of the page, translucent blurred bar once the page scrolls (no layout shift: the bar stays sticky). */
+  useEffect(() => {
+    let raf = 0
+    const read = () => { raf = 0; setScrolled(window.scrollY > 8) }
+    const onScroll = () => { if (!raf) raf = requestAnimationFrame(read) }
+    read()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => { window.removeEventListener('scroll', onScroll); if (raf) cancelAnimationFrame(raf) }
+  }, [])
 
   useEffect(() => {
     if (mobileOpen) {
@@ -32,7 +43,7 @@ export default function Header() {
   }, [mobileOpen])
 
   return (
-    <header className="site-header">
+    <header className={cx('site-header', (scrolled || mobileOpen) && 'site-header--scrolled')}>
       <div className="site-header__inner">
         <Link to="/" className="site-header__logo" aria-label="Static Savvy Media, home">
           <span className="site-header__logo-plate">
