@@ -497,7 +497,7 @@ export default function Malaysia() {
                   </h3>
                   <p className="malaysia-service-card__text">{service.text}</p>
                   <Link to={service.path} className="malaysia-service-card__link">
-                    Learn more
+                    Learn more<span className="sr-only"> about {service.title}</span>
                     <svg
                       width="14"
                       height="14"

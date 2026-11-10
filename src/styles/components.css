@@ -1518,6 +1518,8 @@ body .hero.hero { padding-top: clamp(1.5rem, 3vw, 2.5rem); }
 .container .container { padding-inline: 0; max-width: none; }
 @media (min-width: 1440px) {
   .container:not([class*="container--"]), .hero__inner, .hero__inner--two-column { max-width: 1320px !important; }
+  .hero > .hero__inner { margin-inline: auto; }
+  .about-template > .hero > .hero__inner { padding-inline: var(--gutter); }
   .container .container { max-width: none !important; }
 }
 /* ---- H1 scale: fits 2–3 lines on desktop, never giant on mobile ---- */
@@ -1534,3 +1536,12 @@ nav[aria-label="Breadcrumb"] + div > section:first-child { padding-top: clamp(1.
 section:has(> .container > nav[aria-label="Breadcrumb"]) + section,
 section:has(> nav[aria-label="Breadcrumb"]) + section { padding-top: clamp(1.25rem, 3vw, 2.5rem) !important; }
 .hero--two-column .hero__subtitle { margin-top: 1rem; }
+
+/* ---- a11y: screen-reader-only text ---- */
+.sr-only { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+
+/* ---- a11y: small violet labels need 4.5:1 on the dark backgrounds ---- */
+html:not([data-theme="light"]) .section-heading__eyebrow,
+html:not([data-theme="light"]) .madurai-related__group-title,
+html:not([data-theme="light"]) .blog-post-header__category,
+html:not([data-theme="light"]) .contact-hero__badge { color: #a78bfa; }

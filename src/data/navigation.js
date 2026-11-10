@@ -21,6 +21,7 @@ export const NAV_LINKS = [
   { label: "Locations", path: "/locations/", menu: locationGroups },
   { label: "Resources", path: "/blog/", menu: RESOURCE_LINKS },
   { label: "About", path: "/about/" },
+  { label: "Contact", path: "/contact/" },
 ];
 
 export const FOOTER_LINKS = {

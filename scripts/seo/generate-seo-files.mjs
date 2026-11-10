@@ -190,6 +190,10 @@ const vercel = {
   headers: [
     /* Vite's content-hashed build files never change under the same name: cache them for a year. */
     { source: '/assets/(.*)', headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }] },
+    /* Public images and OG images: stable names, cache 30 days; fonts are immutable. */
+    { source: '/images/(.*)', headers: [{ key: 'Cache-Control', value: 'public, max-age=2592000, stale-while-revalidate=86400' }] },
+    { source: '/og/(.*)', headers: [{ key: 'Cache-Control', value: 'public, max-age=2592000, stale-while-revalidate=86400' }] },
+    { source: '/fonts/(.*)', headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }] },
     { source: '/p/(.*)', headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }] },
     { source: '/case-studies/client-(\\d+){/}?', headers: [{ key: 'X-Robots-Tag', value: 'noindex, follow' }] },
     /* Diwali 2026 campaign page + lead API: strict framing/object/base rules. Scripts stay

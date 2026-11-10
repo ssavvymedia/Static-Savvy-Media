@@ -44,7 +44,7 @@ function FooterColumn({ title, links }) {
     <div className="site-footer__column">
       <div className="site-footer__heading-wrap">
         {icon && <span className={cx('site-footer__heading-badge', themeClass)}>{icon}</span>}
-        <h4 className="site-footer__heading">{title}</h4>
+        <p className="site-footer__heading" role="heading" aria-level="2">{title}</p>
       </div>
       <div className={cx('site-footer__heading-line', `site-footer__heading-line--${title.toLowerCase()}`)} />
       <ul className="site-footer__links">

@@ -66,6 +66,10 @@ export default defineConfig(({ mode }) => {
             stdio: 'inherit',
             env: process.env,
           })
+          execFileSync(process.execPath, [fileURLToPath(new URL('./scripts/seo/critical-css.mjs', import.meta.url))], {
+            stdio: 'inherit',
+            env: process.env,
+          })
         },
       },
     ],

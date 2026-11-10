@@ -8,7 +8,7 @@ import { cx } from '../../utils/helpers.js'
 import { buildWhatsAppLink } from '../../utils/helpers.js'
 import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE } from '../../utils/constants.js'
 
-import logoImg from '../../assets/images/logo/SSMLOGO.webp'
+import logoImg from '../../assets/images/logo/SSMLOGO-300.webp'
 
 /* false during the server render and the hydration pass, true afterwards: the mobile-nav portal
  * (into document.body) is not part of the prerendered HTML, so it mounts right after hydration. */

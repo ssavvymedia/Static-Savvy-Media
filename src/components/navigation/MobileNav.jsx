@@ -5,7 +5,7 @@ import { useActiveRoute } from '../../hooks/useActiveRoute.js'
 import Button from '../common/Button.jsx'
 import ThemeToggle from '../common/ThemeToggle.jsx'
 import { cx } from '../../utils/helpers.js'
-import logoImg from '../../assets/images/logo/SSMLOGO.webp'
+import logoImg from '../../assets/images/logo/SSMLOGO-300.webp'
 
 const MOBILE_NAV_LINKS = NAV_LINKS
 
@@ -137,7 +137,7 @@ export default function MobileNav({ open = false, onClose, className = '' }) {
         onClick={onClose}
         aria-hidden="true"
       />
-      <div className={cx('mobile-nav', open && 'is-open', className)} aria-hidden={!open}>
+      <div className={cx('mobile-nav', open && 'is-open', className)} aria-hidden={!open} inert={!open ? true : undefined}>
         <div className="mobile-nav__header">
           <Link to="/" className="site-header__logo" onClick={onClose} aria-label="Static Savvy Media, home">
             <img src={logoImg} width={480} height={320} alt="Static Savvy Media" className="site-header__logo-img" />

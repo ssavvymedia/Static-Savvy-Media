@@ -5,11 +5,17 @@ import { HOME_H1, HOME_INTRO, HOME_MARKETS, HOME_MADURAI_LINKS } from '../data/p
 import { HOME_FAQS } from '../data/pages/homeFaqs.js'
 import { GBP_REVIEW_SUMMARY } from '../data/googleReviews.js'
 import HeroLaptop from '../assets/images/home/hero-laptop.webp'
+import HeroLaptopSm from '../assets/images/home/hero-laptop-640.webp'
 import IndHealthcare from '../assets/images/home/ind-healthcare.webp'
+import IndHealthcareSm from '../assets/images/home/ind-healthcare-400.webp'
 import IndRealEstate from '../assets/images/home/ind-realestate.webp'
+import IndRealEstateSm from '../assets/images/home/ind-realestate-400.webp'
 import IndManufacturing from '../assets/images/home/ind-manufacturing.webp'
+import IndManufacturingSm from '../assets/images/home/ind-manufacturing-400.webp'
 import IndEducation from '../assets/images/home/ind-education.webp'
+import IndEducationSm from '../assets/images/home/ind-education-400.webp'
 import IndHospitality from '../assets/images/home/ind-hospitality.webp'
+import IndHospitalitySm from '../assets/images/home/ind-hospitality-400.webp'
 
 const P = {
   search: 'M11 4a7 7 0 100 14 7 7 0 000-14zM20 20l-4-4',
@@ -22,11 +28,11 @@ const P = {
 }
 
 const INDUSTRIES = [
-  { name: 'Healthcare & Medical', to: '/industries/healthcare-clinics/', img: IndHealthcare, alt: 'Bright modern clinic reception', d: 'M12 21s-7-4.5-9-9.5C1.8 8 4 4.5 7.5 4.5c2 0 3.4 1.1 4.5 2.6 1.1-1.5 2.5-2.6 4.5-2.6C20 4.5 22.2 8 21 11.5 19 16.5 12 21 12 21zM12 9v5M9.5 11.5h5' },
-  { name: 'Real Estate & Construction', to: '/industries/real-estate-builders/', img: IndRealEstate, alt: 'Modern apartment building at golden hour', d: 'M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6' },
-  { name: 'Manufacturing & B2B', to: '/industries/manufacturing-b2b/', img: IndManufacturing, alt: 'Modern manufacturing facility with fabric rolls', d: 'M3 21V10l6 4V10l6 4V6l6 3v12zM7 17h2M12 17h2M17 17h2' },
-  { name: 'Education & Training', to: '/industries/education-training/', img: IndEducation, alt: 'Students walking on a modern campus', d: 'M2 9l10-5 10 5-10 5zM6 11v5c3 2.5 9 2.5 12 0v-5M22 9v6' },
-  { name: 'Hospitality & Travel', to: '/industries/hospitality-hotels/', img: IndHospitality, alt: 'Tropical resort pool at dusk', d: 'M3 18c2 0 2-1.5 4.5-1.5S10 18 12 18s2-1.5 4.5-1.5S19 18 21 18M12 14V7M12 7c-1-2.5-4-3-6-2 1.8.4 3.5 1.5 4 3M12 7c1-2.5 4-3 6-2-1.8.4-3.5 1.5-4 3' },
+  { name: 'Healthcare & Medical', to: '/industries/healthcare-clinics/', img: IndHealthcare, imgSm: IndHealthcareSm, alt: 'Bright modern clinic reception', d: 'M12 21s-7-4.5-9-9.5C1.8 8 4 4.5 7.5 4.5c2 0 3.4 1.1 4.5 2.6 1.1-1.5 2.5-2.6 4.5-2.6C20 4.5 22.2 8 21 11.5 19 16.5 12 21 12 21zM12 9v5M9.5 11.5h5' },
+  { name: 'Real Estate & Construction', to: '/industries/real-estate-builders/', img: IndRealEstate, imgSm: IndRealEstateSm, alt: 'Modern apartment building at golden hour', d: 'M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6' },
+  { name: 'Manufacturing & B2B', to: '/industries/manufacturing-b2b/', img: IndManufacturing, imgSm: IndManufacturingSm, alt: 'Modern manufacturing facility with fabric rolls', d: 'M3 21V10l6 4V10l6 4V6l6 3v12zM7 17h2M12 17h2M17 17h2' },
+  { name: 'Education & Training', to: '/industries/education-training/', img: IndEducation, imgSm: IndEducationSm, alt: 'Students walking on a modern campus', d: 'M2 9l10-5 10 5-10 5zM6 11v5c3 2.5 9 2.5 12 0v-5M22 9v6' },
+  { name: 'Hospitality & Travel', to: '/industries/hospitality-hotels/', img: IndHospitality, imgSm: IndHospitalitySm, alt: 'Tropical resort pool at dusk', d: 'M3 18c2 0 2-1.5 4.5-1.5S10 18 12 18s2-1.5 4.5-1.5S19 18 21 18M12 14V7M12 7c-1-2.5-4-3-6-2 1.8.4 3.5 1.5 4 3M12 7c1-2.5 4-3 6-2-1.8.4-3.5 1.5-4 3' },
 ]
 
 const SOLUTIONS = [
@@ -92,7 +98,7 @@ export default function HomeV2({ whatsappHref }) {
           </div>
           <div className="hv2-visual">
             <div className="hv2-frame">
-              <img src={HeroLaptop} width={1280} height={720} fetchPriority="high" alt="Laptop showing a glowing growth dashboard on a dark desk (illustrative)" />
+              <img src={HeroLaptop} srcSet={`${HeroLaptopSm} 640w, ${HeroLaptop} 1280w`} sizes="(max-width: 900px) 92vw, 600px" width={1280} height={720} fetchPriority="high" decoding="async" alt="Laptop showing a glowing growth dashboard on a dark desk (illustrative)" />
             </div>
             <span className="hv2-tag">Illustrative</span>
             <div className="hv2-chip hv2-chip--1"><Ico d={P.trend} /><span>Organic visibility<small>Tracked monthly</small></span></div>
@@ -128,7 +134,7 @@ export default function HomeV2({ whatsappHref }) {
           <div className="hv2-ind">
             {INDUSTRIES.map((i) => (
               <Link className="hv2-card" to={i.to} key={i.to}>
-                <div className="hv2-ph"><img loading="lazy" decoding="async" src={i.img} width={640} height={480} alt={i.alt} /></div>
+                <div className="hv2-ph"><img loading="lazy" decoding="async" src={i.img} srcSet={i.imgSm ? `${i.imgSm} 400w, ${i.img} 640w` : undefined} sizes="(max-width: 900px) 46vw, 260px" width={640} height={480} alt={i.alt} /></div>
                 <div className="hv2-body"><Ico d={i.d} /><h3>{i.name}</h3><span className="hv2-arrow" aria-hidden="true">→</span></div>
               </Link>
             ))}
@@ -196,7 +202,7 @@ export default function HomeV2({ whatsappHref }) {
             <div className="hv2-dash-top"><b>Monthly growth report</b><span className="hv2-tag">Illustrative · demo layout</span></div>
             <div className="hv2-dash-grid">
               <div className="hv2-panel"><span>Organic visibility trend</span>
-                <svg className="hv2-trend" viewBox="0 0 300 140" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="hv2g1" x1="0" x2="1"><stop offset="0" stopColor="#a855f7" /><stop offset=".55" stopColor="#5b6cf9" /><stop offset="1" stopColor="#22d3ee" /></linearGradient><linearGradient id="hv2g2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#5b6cf9" stopOpacity=".3" /><stop offset="1" stopColor="#5b6cf9" stopOpacity="0" /></linearGradient></defs><path d="M0 120 C40 115 60 105 90 100 S140 88 170 80 220 60 250 48 300 25 300 25 V140 H0Z" fill="url(#hv2g2)" /><path d="M0 120 C40 115 60 105 90 100 S140 88 170 80 220 60 250 48 300 25" fill="none" stroke="url(#hv2g1)" strokeWidth="3" strokeLinecap="round" /></svg>
+                <svg className="hv2-trend" viewBox="0 0 300 140" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="hv2g1" x1="0" x2="1"><stop offset="0" stopColor="#a855f7" /><stop offset=".55" stopColor="#5b6cf9" /><stop offset="1" stopColor="#22d3ee" /></linearGradient><linearGradient id="hv2g2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#5b6cf9" stopOpacity=".3" /><stop offset="1" stopColor="#5b6cf9" stopOpacity="0" /></linearGradient></defs><path d="M0 120 C40 115 60 105 90 100 S140 88 170 80 220 60 250 48 300 25 300 25 V140 H0Z" fill="url(#hv2g2)" /><path d="M0 120 C40 115 60 105 90 100 S140 88 170 80 220 60 250 48 300 25 300 25" fill="none" stroke="url(#hv2g1)" strokeWidth="3" strokeLinecap="round" /></svg>
               </div>
               <div className="hv2-panel"><span>Lead sources</span>
                 <div className="hv2-donut"><svg width="120" height="120" viewBox="0 0 42 42" aria-hidden="true"><circle cx="21" cy="21" r="15.9" fill="none" stroke="var(--line)" strokeWidth="5" /><circle cx="21" cy="21" r="15.9" fill="none" stroke="#a855f7" strokeWidth="5" strokeDasharray="40 60" strokeDashoffset="25" /><circle cx="21" cy="21" r="15.9" fill="none" stroke="#5b6cf9" strokeWidth="5" strokeDasharray="30 70" strokeDashoffset="-15" /><circle cx="21" cy="21" r="15.9" fill="none" stroke="#22d3ee" strokeWidth="5" strokeDasharray="20 80" strokeDashoffset="-45" /></svg></div>

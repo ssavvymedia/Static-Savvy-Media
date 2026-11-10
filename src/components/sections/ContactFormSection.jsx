@@ -1,9 +1,10 @@
-import { useRef, useState } from 'react'
-import ReCAPTCHAModule from 'react-google-recaptcha'
-import { ScrollReveal } from '../animations/ScrollReveal.jsx'
+import { lazy, Suspense, useRef, useState } from 'react'
+import { buildWhatsAppLink } from '../../utils/helpers.js'
+import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, MALAYSIA_OFFICE, CONTACT_EMAIL } from '../../utils/constants.js'
+import '../../styles/contact-form-v2.css'
 
-// CJS interop: Node (build-time SSR in scripts/seo/ssr-bodies.mjs) hands back the module object.
-const ReCAPTCHA = ReCAPTCHAModule?.default ?? ReCAPTCHAModule
+// reCAPTCHA loads only after the visitor starts the form (focus/tap), not on page load.
+const ReCAPTCHA = lazy(() => import('react-google-recaptcha').then((m) => ({ default: m.default?.default ?? m.default ?? m })))
 
 const RECAPTCHA_SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY || ''
 
@@ -54,6 +55,9 @@ export default function ContactFormSection() {
   const [recaptchaToken, setRecaptchaToken] = useState(null)
   const [recaptchaError, setRecaptchaError] = useState(null)
   const recaptchaRef = useRef(null)
+  const [armed, setArmed] = useState(false)
+  const arm = () => { if (!armed) setArmed(true) }
+  const waHref = buildWhatsAppLink(WHATSAPP_NUMBER, WHATSAPP_MESSAGE)
 
   const handleInputChange = (e) => {
     const { name, value } = e.target
@@ -140,180 +144,79 @@ export default function ContactFormSection() {
   }
 
   return (
-    <section id="enquiry" className="section section--alt contact-form-section">
-      {/* #form: target of the header "Get a Growth Audit" button until the Growth Audit page ships (PR-F). */}
+    <section id="enquiry" className="section contact-form-section cf2" aria-labelledby="cf2-title">
+      {/* #form: older "Send an enquiry" links. */}
       <span id="form" className="scroll-anchor" aria-hidden="true" />
       <div className="container">
-        <ScrollReveal>
-          <div className="contact-form-container glass-card">
-            <div className="contact-form-header">
-              <span className="contact-form-badge">GET IN TOUCH</span>
-              <h2 className="contact-form-title">Let's Start a Conversation</h2>
-              <p className="contact-form-subtitle">
-                Tell us about your digital requirements, and we'll help identify the right strategy for your growth.
-              </p>
+        <div className="cf2-panel">
+          <div className="cf2-intro">
+            <span className="cf2-badge">Get in touch</span>
+            <h2 className="cf2-title" id="cf2-title">Let&apos;s start a conversation.</h2>
+            <p className="cf2-sub">Tell us what you need. Our Madurai team replies within one business day.</p>
+            <ul className="cf2-points">
+              <li>Reply within one business day (Mon–Sat)</li>
+              <li>Tamil &amp; English team, Madurai HQ</li>
+              <li>Monthly plans, no lock-in</li>
+            </ul>
+            <div className="cf2-direct">
+              <a href={waHref} target="_blank" rel="noopener noreferrer" data-track="whatsapp_form_side">WhatsApp {WHATSAPP_NUMBER}</a>
+              <a href={MALAYSIA_OFFICE.phoneHref}>Malaysia call {MALAYSIA_OFFICE.phoneDisplay}</a>
+              <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
             </div>
+          </div>
 
-            {formSubmitted ? (
-              <div className="contact-form-success">
-                <div className="success-icon-wrapper">
-                  <svg
-                    width="40"
-                    height="40"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
+          {formSubmitted ? (
+            <div className="contact-form-success cf2-success" role="status" aria-live="polite">
+              <span className="cf2-tick" aria-hidden="true">✓</span>
+              <h3 className="success-title">Thank you!</h3>
+              <p className="success-message">Your request has been received. Our team will review your details and get back to you shortly.</p>
+              <button type="button" className="success-reset-btn cf2-reset" onClick={handleResetForm}>Send another message</button>
+            </div>
+          ) : (
+            <form className="contact-form-element cf2-form" onSubmit={handleSubmit} onFocusCapture={arm} onPointerDownCapture={arm} aria-label="Contact form">
+              <input type="text" name="website" value={formData.website} onChange={handleInputChange} tabIndex={-1} autoComplete="off" aria-hidden="true" className="contact-form-honeypot" style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', opacity: 0 }} />
+              <div className="cf2-field">
+                <label htmlFor="form-name">Name</label>
+                <input type="text" id="form-name" name="name" value={formData.name} onChange={handleInputChange} autoComplete="name" required />
+              </div>
+              <div className="cf2-field">
+                <label htmlFor="form-email">Email</label>
+                <input type="email" id="form-email" name="email" value={formData.email} onChange={handleInputChange} autoComplete="email" required />
+              </div>
+              <div className="cf2-field">
+                <label htmlFor="form-phone">Phone / WhatsApp</label>
+                <input type="tel" id="form-phone" name="phone" value={formData.phone} onChange={handleInputChange} autoComplete="tel" placeholder="+91 98765 43210" required />
+              </div>
+              <div className="cf2-field">
+                <label htmlFor="form-service">Service needed</label>
+                <select id="form-service" name="service" value={formData.service} onChange={handleInputChange} required>
+                  <option value="" disabled hidden>Select a service</option>
+                  {SERVICES.map((s) => <option key={s} value={s}>{s}</option>)}
+                </select>
+              </div>
+              <div className="cf2-field cf2-field--full">
+                <label htmlFor="form-message">Message</label>
+                <textarea id="form-message" name="message" value={formData.message} onChange={handleInputChange} rows="3" placeholder="Your goals, website, city…" required></textarea>
+              </div>
+              {(recaptchaError || submitError) && (
+                <div className="cf2-field--full contact-form-submit-error" role="alert">{recaptchaError || submitError}</div>
+              )}
+              <div className="cf2-actions">
+                <div className="cf2-captcha">
+                  {RECAPTCHA_SITE_KEY && armed && (
+                    <Suspense fallback={null}>
+                      <ReCAPTCHA ref={recaptchaRef} sitekey={RECAPTCHA_SITE_KEY} onChange={handleRecaptchaChange} onExpired={handleRecaptchaExpired} theme="dark" className="contact-form-recaptcha" />
+                    </Suspense>
+                  )}
+                  {RECAPTCHA_SITE_KEY && !armed && <span className="cf2-captcha-note">Spam check appears when you start typing.</span>}
                 </div>
-                <h3 className="success-title">Thank You!</h3>
-                <p className="success-message">
-                  Your request has been received. Our team will review your details and get back to you shortly.
-                </p>
-                <button
-                  className="success-reset-btn"
-                  onClick={handleResetForm}
-                >
-                  Send Another Message
+                <button type="submit" className="contact-form-submit-btn cf2-submit" disabled={isSubmitting || (RECAPTCHA_SITE_KEY && !recaptchaToken)}>
+                  {isSubmitting ? 'Sending…' : 'Send message'} <span aria-hidden="true">→</span>
                 </button>
               </div>
-            ) : (
-              <form className="contact-form-element" onSubmit={handleSubmit}>
-                <input
-                  type="text"
-                  name="website"
-                  value={formData.website}
-                  onChange={handleInputChange}
-                  tabIndex={-1}
-                  autoComplete="off"
-                  aria-hidden="true"
-                  className="contact-form-honeypot"
-                  style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', opacity: 0 }}
-                />
-                <div className="contact-form-grid">
-                  <div className="form-group">
-                    <label htmlFor="form-name">Name</label>
-                    <input
-                      type="text"
-                      id="form-name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      placeholder="John Doe"
-                      required
-                    />
-                  </div>
-                  <div className="form-group">
-                    <label htmlFor="form-email">Email Address</label>
-                    <input
-                      type="email"
-                      id="form-email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      placeholder="john@example.com"
-                      required
-                    />
-                  </div>
-                  <div className="form-group">
-                    <label htmlFor="form-phone">Phone / WhatsApp</label>
-                    <input
-                      type="tel"
-                      id="form-phone"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleInputChange}
-                      placeholder="+91 99440 40345"
-                      required
-                    />
-                  </div>
-                  <div className="form-group">
-                    <label htmlFor="form-service">Service Needed</label>
-                    <select
-                      id="form-service"
-                      name="service"
-                      value={formData.service}
-                      onChange={handleInputChange}
-                      required
-                    >
-                      <option value="" disabled hidden>
-                        Select a Service
-                      </option>
-                      {SERVICES.map((s) => (
-                        <option key={s} value={s}>
-                          {s}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                </div>
-                <div className="form-group form-group--full">
-                  <label htmlFor="form-message">Message / Project Details</label>
-                  <textarea
-                    id="form-message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    rows="5"
-                    placeholder="Tell us about your project, goals, or any specific requirements..."
-                    required
-                  ></textarea>
-                </div>
-
-                {RECAPTCHA_SITE_KEY && (
-                  <div className="contact-form-recaptcha-card">
-                    <div className="contact-form-recaptcha-wrapper">
-                      <ReCAPTCHA
-                        ref={recaptchaRef}
-                        sitekey={RECAPTCHA_SITE_KEY}
-                        onChange={handleRecaptchaChange}
-                        onExpired={handleRecaptchaExpired}
-                        theme="dark"
-                        className="contact-form-recaptcha"
-                      />
-                    </div>
-                    {recaptchaError && (
-                      <div className="recaptcha-error-message" role="alert">
-                        {recaptchaError}
-                      </div>
-                    )}
-                  </div>
-                )}
-
-                {submitError && (
-                  <div className="contact-form-submit-error" role="alert">
-                    {submitError}
-                  </div>
-                )}
-
-                <button
-                  type="submit"
-                  className="contact-form-submit-btn"
-                  disabled={isSubmitting || (RECAPTCHA_SITE_KEY && !recaptchaToken)}
-                >
-                  {isSubmitting ? 'Sending...' : 'Send Message'}
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <line x1="22" y1="2" x2="11" y2="13"></line>
-                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                  </svg>
-                </button>
-              </form>
-            )}
-          </div>
-        </ScrollReveal>
+            </form>
+          )}
+        </div>
       </div>
     </section>
   )
