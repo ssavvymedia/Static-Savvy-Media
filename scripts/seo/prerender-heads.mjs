@@ -11,7 +11,7 @@
  *
  * Runs at the end of `vite build` (plugin in vite.config.js). Fails the build if a route can't be written.
  */
-import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 'node:fs'
+import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync, rmSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { createServer } from 'vite'
@@ -26,8 +26,25 @@ const esc = (s) =>
 
 /* #root for a server-rendered route: the full app markup (hydrated) or, failing that, the page body. */
 const rootHtml = (r, route) => r.app
-  ? `<div id="root" data-ssr="${esc(route.endsWith('/') ? route : `${route}/`)}">${r.app}</div>`
+  ? `<div id="root" data-ssr="${esc(route.endsWith('/') ? route : `${route}/`)}"${r.pages?.length ? ` data-page="${esc(r.pages.join(','))}"` : ''}>${r.app}</div>`
   : `<div id="root">${r.html}</div>`
+
+/* Vite build manifest (vite.config.js build.manifest): page module id -> chunk + its static imports,
+ * so each prerendered route preloads its own page chunk in parallel with the main bundle. */
+const MANIFEST_PATH = join(DIST, '.vite', 'manifest.json')
+const manifest = existsSync(MANIFEST_PATH) ? JSON.parse(readFileSync(MANIFEST_PATH, 'utf8')) : {}
+function chunkPreloads(ids = []) {
+  const files = new Set()
+  const visit = (key) => {
+    const m = manifest[key]
+    if (!m || m.isEntry) return
+    if (files.has(m.file)) return
+    files.add(m.file)
+    for (const k of m.imports || []) visit(k)
+  }
+  for (const id of ids) visit(id)
+  return [...files].filter((f) => f.endsWith('.js')).map((f) => `  <link rel="modulepreload" crossorigin href="/${f}">\n`).join('')
+}
 
 function setTag(html, re, replacement, label, route) {
   if (!re.test(html)) throw new Error(`prerender-heads: ${label} tag not found in dist/index.html (route ${route})`)
@@ -147,6 +164,7 @@ for (const route of routes) {
   if (ssrBody) {
     withBody++
     html = setTag(html, /<div id="root"><\/div>/, rootHtml(ssrBody, route), 'root', route)
+    if (ssrBody.app && ssrBody.pages?.length) html = html.replace('</head>', `${chunkPreloads(ssrBody.pages)}  </head>`)
     const ld = JSON.stringify(ssrBody.schema).replace(/</g, '\\u003c')
     html = html.replace('</head>', `  <script type="application/ld+json" id="json-ld-schema">${ld}</script>\n  </head>`)
     /* Sanity posts: the post data the server render used, so BlogPost.jsx hydrates without refetching. */
@@ -170,7 +188,10 @@ if (prerenderBodies['/']) {
   let home = setTag(shell, /<div id="root"><\/div>/, homeApp?.app ? rootHtml(homeApp, '/') : `<div id="root">${renderBodyHtml(prerenderBodies['/'])}</div>`, 'root', '/')
   const ld = JSON.stringify(prerenderBodies['/'].schema).replace(/</g, '\\u003c')
   home = home.replace('</head>', `  <script type="application/ld+json" id="json-ld-schema">${ld}</script>\n  </head>`)
+  if (homeApp?.app && homeApp.pages?.length) home = home.replace('</head>', `${chunkPreloads(homeApp.pages)}  </head>`)
   writeFileSync(join(DIST, 'index.html'), home)
   withBody++
 }
+/* The manifest is a build artefact only: keep it out of the deployed site. */
+if (existsSync(MANIFEST_PATH)) rmSync(join(DIST, '.vite'), { recursive: true, force: true })
 console.log(`prerender-heads: wrote ${routes.length} route shells (${withMeta} with their own title/description, ${withBody} with crawlable body + JSON-LD).`)

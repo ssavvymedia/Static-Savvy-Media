@@ -4,7 +4,7 @@
   top: 0;
   z-index: 10000;
   min-height: var(--header-height);
-  background: rgba(7, 11, 24, 0.72);
+  background: rgba(var(--base-rgb), 0.72);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--color-border);
 }
@@ -62,7 +62,7 @@
 
 .site-header__actions .btn--primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 0 30px rgba(139, 92, 246, 0.65), 0 6px 20px rgba(236, 72, 153, 0.4);
+  box-shadow: 0 0 30px rgba(139, 92, 246, 0.65), 0 6px 20px rgba(91,108,249, 0.4);
 }
 
 /* WhatsApp contact block */
@@ -226,7 +226,7 @@
   left: 0;
   min-width: 280px;
   padding: 1rem;
-  background: rgba(11, 17, 36, 0.98);
+  background: rgba(var(--base-rgb), 0.98);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   backdrop-filter: blur(20px);
@@ -361,7 +361,7 @@
   z-index: 11000;
   display: flex;
   flex-direction: column;
-  background: rgba(7, 11, 24, 0.98);
+  background: rgba(var(--base-rgb), 0.98);
   padding: 1.25rem clamp(1rem, 4vw, 1.5rem) 2rem;
   overflow-y: auto;
   transform: translateX(100%);

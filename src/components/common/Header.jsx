@@ -1,12 +1,12 @@
 import { useState, useEffect, useSyncExternalStore } from 'react'
 import { createPortal } from 'react-dom'
 import { Link } from 'react-router-dom'
-import WhatsAppIcon from './WhatsAppIcon.jsx'
+import ThemeToggle from './ThemeToggle.jsx'
 import DesktopNav from '../navigation/DesktopNav.jsx'
 import MobileNav from '../navigation/MobileNav.jsx'
 import { cx } from '../../utils/helpers.js'
 import { buildWhatsAppLink } from '../../utils/helpers.js'
-import { WHATSAPP_NUMBER } from '../../utils/constants.js'
+import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE } from '../../utils/constants.js'
 
 import logoImg from '../../assets/images/logo/SSMLOGO.webp'
 
@@ -18,7 +18,7 @@ const useHydrated = () => useSyncExternalStore(noopSubscribe, () => true, () => 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const hydrated = useHydrated()
-  const whatsappHref = buildWhatsAppLink(WHATSAPP_NUMBER)
+  const whatsappHref = buildWhatsAppLink(WHATSAPP_NUMBER, WHATSAPP_MESSAGE)
 
   useEffect(() => {
     if (mobileOpen) {
@@ -35,44 +35,22 @@ export default function Header() {
     <header className="site-header">
       <div className="site-header__inner">
         <Link to="/" className="site-header__logo" aria-label="Static Savvy Media, home">
-          <img src={logoImg} width={480} height={320} alt="Static Savvy Media" className="site-header__logo-img" />
+          <span className="site-header__logo-plate">
+            <img src={logoImg} width={480} height={320} alt="Static Savvy Media" className="site-header__logo-img" />
+          </span>
+          <span className="site-header__brand">
+            <span className="site-header__brand-name">Static Savvy Media</span>
+            <span className="site-header__brand-tag">AI Search · SEO · Lead Generation</span>
+          </span>
         </Link>
 
         <DesktopNav />
 
         <div className="site-header__actions">
-          <div
-            className="site-header__whatsapp"
-            onClick={(e) => {
-              if (!e.target.closest('.site-header__whatsapp-phone')) {
-                window.open(whatsappHref, '_blank', 'noopener,noreferrer')
-              }
-            }}
-            role="button"
-            tabIndex={0}
-            onKeyDown={(e) => {
-              if (e.key === 'Enter' || e.key === ' ') {
-                if (!e.target.closest('.site-header__whatsapp-phone')) {
-                  window.open(whatsappHref, '_blank', 'noopener,noreferrer')
-                }
-              }
-            }}
-            aria-label="Chat on WhatsApp"
-          >
-            <span className="site-header__whatsapp-icon">
-              <WhatsAppIcon size="100%" />
-            </span>
-            <div className="site-header__whatsapp-content">
-              <span className="site-header__whatsapp-label">WhatsApp Now!</span>
-              <a
-                href="tel:+919944040345"
-                className="site-header__whatsapp-phone"
-                onClick={(e) => e.stopPropagation()}
-              >
-                +91 99440 40345
-              </a>
-            </div>
-          </div>
+          <ThemeToggle />
+          {/* Book a Consultation: WhatsApp for now; Growth Audit form lands with PR-F (contact form until then). */}
+          <a href={whatsappHref} target="_blank" rel="noopener noreferrer" className="site-header__cta site-header__cta--ghost">Book a Consultation</a>
+          <Link to="/contact/#form" className="site-header__cta site-header__cta--primary">Get a Growth Audit</Link>
           <button
             type="button"
             className="site-header__toggle"

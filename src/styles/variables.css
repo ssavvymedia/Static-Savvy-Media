@@ -1,24 +1,96 @@
+/* ============================================================
+   Design tokens (v2). Dark is the default theme; light is opt-in via
+   <html data-theme="light"> (set before first paint by the inline script in
+   index.html, persisted in localStorage "ssm-theme").
+   Brand gradient: purple -> royal blue -> cyan (no pink).
+   Theme-aware channels used by component CSS:
+     --ink-rgb     foreground tint (white on dark, navy on light) for rgba(var(--ink-rgb), a)
+     --base-rgb    panel/overlay base (deep navy on dark, white on light)
+     --shadow-rgb / --shadow-k   shadow colour and strength
+   ============================================================ */
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/inter-latin-wght.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+20B9, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Manrope';
+  src: url('/fonts/manrope-latin-wght.woff2') format('woff2');
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+20B9, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* Metric-matched fallbacks keep layout shift low while the web fonts swap in. */
+@font-face {
+  font-family: 'Inter Fallback';
+  src: local('Arial');
+  ascent-override: 90.44%;
+  descent-override: 22.52%;
+  line-gap-override: 0%;
+  size-adjust: 107.12%;
+}
+@font-face {
+  font-family: 'Manrope Fallback';
+  src: local('Arial');
+  ascent-override: 102.66%;
+  descent-override: 28.88%;
+  line-gap-override: 0%;
+  size-adjust: 104.03%;
+}
+
 :root {
-  /* ---- Color Tokens ---- */
-  --color-bg: #070b18;
-  --color-bg-secondary: #0b1124;
-  --color-surface: #111a33;
-  --color-surface-glass: rgba(17, 26, 51, 0.55);
+  color-scheme: dark;
+
+  /* ---- Surfaces ---- */
+  --color-bg: #060a17;
+  --color-bg-secondary: #0a1024;
+  --color-surface: #0e1630;
+  --color-surface-2: #121c3c;
+  --color-surface-glass: rgba(20, 28, 60, 0.55);
+
+  /* ---- Text ---- */
+  --color-heading: #f8fafc;
+  --color-text: #e2e8f0;
+  --color-text-muted: #9aa6bd;
+  --color-on-brand: #ffffff;
+
+  /* ---- Brand ---- */
   --color-purple: #a855f7;
   --color-violet: #8b5cf6;
-  --color-pink: #ec4899;
+  --color-royal: #6d84ff;
+  --color-pink: #6d84ff; /* legacy alias: pink retired, maps to royal blue */
   --color-blue: #3b82f6;
   --color-cyan: #22d3ee;
-  --color-text: #f1f5f9;
-  --color-text-muted: #94a3b8;
+  --color-accent-ink: #c4b5fd;
+  --color-success: #4ade80;
+  --color-star: #fbbf24;
+  --color-danger: #f87171;
+  --color-focus: #22d3ee;
+
+  /* ---- Lines ---- */
   --color-border: rgba(148, 163, 184, 0.16);
+  --color-border-strong: rgba(148, 163, 184, 0.28);
+
+  /* ---- Theme channels ---- */
+  --ink-rgb: 255, 255, 255;
+  --base-rgb: 7, 11, 24;
+  --shadow-rgb: 2, 6, 23;
+  --shadow-k: 1;
+  --logo-plate: transparent;
 
   /* ---- Gradients ---- */
-  --gradient-primary: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
-  --gradient-neon: linear-gradient(135deg, #22d3ee 0%, #3b82f6 50%, #a855f7 100%);
+  --gradient-primary: linear-gradient(100deg, #8b3cf7 0%, #5b4cf0 55%, #2f6bf2 100%);
+  --gradient-neon: linear-gradient(100deg, #a855f7 0%, #5b6cf9 55%, #22d3ee 100%);
+  --gradient-brand: var(--gradient-neon);
+  --gradient-wash: radial-gradient(55% 70% at 80% 20%, rgba(109, 132, 255, 0.22), transparent 65%), radial-gradient(45% 60% at 0% 0%, rgba(168, 85, 247, 0.18), transparent 70%);
 
   /* ---- Shadows ---- */
-  --shadow-glow: 0 0 24px rgba(139, 92, 246, 0.45);
+  --shadow-glow: 0 0 0 1px rgba(167, 139, 250, 0.16), 0 30px 80px -30px rgba(91, 108, 249, 0.55);
   --shadow-card: 0 10px 30px rgba(2, 6, 23, 0.45);
   --shadow-lift: 0 20px 50px rgba(2, 6, 23, 0.6);
 
@@ -29,8 +101,8 @@
   --radius-xl: 28px;
 
   /* ---- Typography ---- */
-  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-  --font-display: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-sans: 'Inter', 'Inter Fallback', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Manrope', 'Manrope Fallback', 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   --fs-hero: clamp(2.5rem, 6vw, 4.5rem);
   --fs-h2: clamp(1.75rem, 4vw, 2.75rem);
   --fs-h3: 1.35rem;
@@ -48,4 +120,61 @@
   /* ---- Motion ---- */
   --transition: 0.3s ease;
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
+
+  --color-bg: #faf8f5;
+  --color-bg-secondary: #f3f0fb;
+  --color-surface: #ffffff;
+  --color-surface-2: #f7f5fe;
+  --color-surface-glass: rgba(255, 255, 255, 0.78);
+
+  --color-heading: #0b1033;
+  --color-text: #2a3150;
+  --color-text-muted: #565e78;
+
+  --color-purple: #6d28d9;
+  --color-violet: #6d28d9;
+  --color-royal: #3446d4;
+  --color-pink: #3446d4;
+  --color-blue: #1d4ed8;
+  --color-cyan: #0e7490;
+  --color-accent-ink: #5b21b6;
+  --color-success: #15803d;
+  --color-star: #b45309;
+  --color-danger: #b91c1c;
+  --color-focus: #4f46e5;
+
+  --color-border: rgba(30, 27, 75, 0.1);
+  --color-border-strong: rgba(30, 27, 75, 0.18);
+
+  --ink-rgb: 30, 27, 75;
+  --base-rgb: 255, 255, 255;
+  --shadow-rgb: 30, 27, 75;
+  --shadow-k: 0.35;
+  --logo-plate: #0b1033;
+
+  --gradient-neon: linear-gradient(100deg, #7c3aed 0%, #3b4fd8 55%, #0891b2 100%);
+  --gradient-wash: radial-gradient(55% 70% at 80% 20%, rgba(109, 132, 255, 0.16), transparent 65%), radial-gradient(45% 60% at 0% 0%, rgba(168, 85, 247, 0.12), transparent 70%);
+
+  --shadow-glow: 0 1px 2px rgba(30, 27, 75, 0.06), 0 28px 60px -30px rgba(59, 79, 216, 0.35);
+  --shadow-card: 0 1px 2px rgba(30, 27, 75, 0.05), 0 16px 36px -22px rgba(30, 27, 75, 0.22);
+  --shadow-lift: 0 2px 4px rgba(30, 27, 75, 0.06), 0 24px 48px -24px rgba(30, 27, 75, 0.28);
+}
+
+/* Sections that stay dark in both themes (e.g. the final CTA band). */
+.dark-zone {
+  --color-bg: #0b0f2a;
+  --color-surface: #141a40;
+  --color-heading: #ffffff;
+  --color-text: #dfe3f3;
+  --color-text-muted: #b3bad6;
+  --color-purple: #c4b5fd;
+  --color-cyan: #67e8f9;
+  --color-border: rgba(255, 255, 255, 0.12);
+  --ink-rgb: 255, 255, 255;
+  --base-rgb: 7, 11, 24;
+  --logo-plate: transparent;
 }

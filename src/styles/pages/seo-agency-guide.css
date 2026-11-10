@@ -131,7 +131,7 @@
 }
 
 .seo-guide-hero__visual-step--result {
-  background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(236, 72, 153, 0.2));
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(91,108,249, 0.2));
   color: var(--color-text);
   border: 1px solid var(--color-violet);
 }
@@ -331,14 +331,14 @@
   position: absolute;
   top: 1rem;
   right: 1rem;
-  color: #f59e0b;
+  color: var(--color-star);
   opacity: 0.5;
 }
 
 .seo-guide-redflag-card__number {
   font-size: 0.65rem;
   font-weight: 800;
-  color: #f59e0b;
+  color: var(--color-star);
   margin-bottom: 0.5rem;
 }
 
@@ -438,7 +438,7 @@
 }
 
 .seo-guide-pricing-card--pink:hover {
-  border-color: rgba(236, 72, 153, 0.35);
+  border-color: rgba(91,108,249, 0.35);
 }
 
 .seo-guide-pricing-card__tier {
@@ -476,7 +476,7 @@
 
 .seo-guide-pricing-warning p {
   font-size: 0.85rem;
-  color: #f59e0b;
+  color: var(--color-star);
   font-weight: 600;
   margin-bottom: 0;
 }
@@ -510,7 +510,7 @@
 }
 
 .seo-guide-timeline-card--pink:hover {
-  border-color: rgba(236, 72, 153, 0.35);
+  border-color: rgba(91,108,249, 0.35);
 }
 
 .seo-guide-timeline-card__month {
@@ -585,7 +585,7 @@
 
 .seo-guide-geo-aeo-card--gradient {
   border: 1px solid var(--color-violet);
-  background: linear-gradient(135deg, rgba(139, 92, 246, 0.08), rgba(236, 72, 153, 0.08));
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.08), rgba(91,108,249, 0.08));
 }
 
 .seo-guide-geo-aeo-card__step {
@@ -686,7 +686,7 @@
 }
 
 .seo-guide-comparison__cell--strong {
-  color: #22c55e;
+  color: var(--color-success);
 }
 
 /* ---- Services Grid ---- */
@@ -774,7 +774,7 @@
   min-width: 24px;
   border-radius: 6px;
   background: rgba(34, 197, 94, 0.12);
-  color: #22c55e;
+  color: var(--color-success);
 }
 
 .seo-guide-checklist__text {

@@ -15,7 +15,7 @@
   background:
     radial-gradient(55% 45% at 12% 12%, rgba(139, 92, 246, 0.15), transparent 60%),
     radial-gradient(45% 40% at 88% 20%, rgba(34, 211, 238, 0.12), transparent 60%),
-    radial-gradient(40% 40% at 50% 100%, rgba(236, 72, 153, 0.09), transparent 55%);
+    radial-gradient(40% 40% at 50% 100%, rgba(91,108,249, 0.09), transparent 55%);
 }
 
 .service-template .hero::before {
@@ -60,12 +60,12 @@
   min-height: 280px;
   text-align: left;
   background:
-    linear-gradient(180deg, rgba(17, 26, 51, 0.72), rgba(7, 11, 24, 0.85)),
+    linear-gradient(180deg, rgba(var(--base-rgb), 0.72), rgba(var(--base-rgb), 0.85)),
     var(--color-surface-glass);
   border-radius: var(--radius-xl);
   border: 1px solid var(--color-border);
   box-shadow:
-    0 30px 60px rgba(2, 6, 23, 0.55),
+    0 30px 60px rgba(var(--shadow-rgb), calc(0.55 * var(--shadow-k))),
     var(--shadow-glow);
 }
 
@@ -123,7 +123,7 @@
       transparent 10px 20px,
       rgba(34, 211, 238, 0.5) 20px 30px,
       transparent 30px 40px,
-      rgba(236, 72, 153, 0.5) 40px 50px,
+      rgba(91,108,249, 0.5) 40px 50px,
       transparent 50px 60px
     ) bottom / 100% 100% no-repeat;
   position: relative;
@@ -300,7 +300,7 @@
 .process-section__item:nth-child(3n) .process-section__number {
   border-color: var(--color-pink);
   color: var(--color-pink);
-  box-shadow: 0 0 20px rgba(236, 72, 153, 0.25);
+  box-shadow: 0 0 20px rgba(91,108,249, 0.25);
 }
 
 .process-section__content {

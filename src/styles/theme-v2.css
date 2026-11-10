@@ -1,0 +1,196 @@
+/* ============================================================
+   v2 header, footer and theme toggle (PR-B). Loaded after responsive.css.
+   ============================================================ */
+
+/* ---- Header ---- */
+.site-header {
+  background: rgba(var(--base-rgb), 0.78);
+}
+.site-header__inner {
+  max-width: 1440px;
+  justify-content: space-between;
+  gap: clamp(0.75rem, 1.4vw, 1.5rem);
+}
+.site-header__logo {
+  gap: 0.6rem;
+}
+.site-header__logo-plate,
+.site-footer__logo-plate {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--logo-plate);
+  border-radius: 10px;
+}
+:root[data-theme='light'] .site-header__logo-plate { padding: 2px 6px; }
+:root[data-theme='light'] .site-footer__logo-plate { padding: 6px 10px; }
+.site-header__logo-img {
+  width: 92px;
+  height: auto;
+}
+.site-header__brand {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+.site-header__brand-name {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1rem;
+  color: var(--color-heading);
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+.site-header__brand-tag {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+.desktop-nav__list { gap: 0.1rem; }
+.desktop-nav__link { padding: 0.5rem 0.6rem; }
+.desktop-nav__link.is-active { box-shadow: inset 0 -2px 0 0 var(--color-royal); }
+
+.site-header__actions { gap: 0.6rem; }
+.site-header__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 0.55rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 999px;
+  white-space: nowrap;
+  transition: transform var(--transition), box-shadow var(--transition), background var(--transition), border-color var(--transition);
+}
+.site-header__cta--ghost {
+  color: var(--color-heading);
+  border: 1px solid var(--color-border-strong);
+  background: transparent;
+}
+.site-header__cta--ghost:hover { border-color: var(--color-royal); background: rgba(var(--ink-rgb), 0.04); }
+.site-header__cta--primary {
+  color: var(--color-on-brand);
+  background: var(--gradient-primary);
+  box-shadow: 0 10px 24px -12px rgba(91, 108, 249, 0.7);
+}
+.site-header__cta--primary:hover { transform: translateY(-1px); box-shadow: 0 14px 30px -12px rgba(91, 108, 249, 0.85); }
+
+/* ---- Theme toggle ---- */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 999px;
+  border: 1px solid var(--color-border-strong);
+  background: transparent;
+  color: var(--color-heading);
+  cursor: pointer;
+  transition: background var(--transition), border-color var(--transition);
+}
+.theme-toggle:hover { background: rgba(var(--ink-rgb), 0.06); border-color: var(--color-royal); }
+.theme-toggle:focus-visible, .site-header__cta:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
+.theme-toggle__sun { display: none; }
+:root[data-theme='light'] .theme-toggle__sun { display: block; }
+:root[data-theme='light'] .theme-toggle__moon { display: none; }
+
+/* ---- Header breakpoints (7 nav items + 2 CTAs) ---- */
+@media (max-width: 1720px) { .site-header__brand-tag { display: none; } }
+@media (max-width: 1600px) { .site-header__brand { display: none; } }
+@media (max-width: 1320px) { .site-header__cta--ghost { display: none; } }
+@media (max-width: 1140px) {
+  .desktop-nav { display: none !important; }
+  .site-header__toggle { display: flex !important; }
+  .site-header__brand { display: flex; }
+}
+@media (max-width: 640px) {
+  .site-header__brand { display: none; }
+  .site-header__cta--primary { padding: 0.5rem 0.85rem; font-size: 0.78rem; min-height: 38px; }
+}
+@media (max-width: 380px) {
+  .site-header__cta--primary { display: none; }
+}
+
+/* Scroll target for /contact/#form (clears the sticky header). */
+.scroll-anchor {
+  display: block;
+  position: relative;
+  top: calc(-1 * var(--header-height) - 12px);
+  visibility: hidden;
+}
+
+/* ---- Footer v2 ---- */
+.site-footer__offices {
+  font-style: normal;
+  display: grid;
+  gap: 0.6rem;
+  margin: 1rem 0;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+.site-footer__offices p { color: var(--color-text-muted); margin: 0; }
+.site-footer__offices strong { color: var(--color-heading); font-weight: 700; }
+.site-footer__contact a { color: var(--color-heading); }
+
+/* ---- Light theme polish for shared surfaces ---- */
+:root[data-theme='light'] body { background-color: var(--color-bg); }
+:root[data-theme='light'] .glass-card,
+:root[data-theme='light'] .card {
+  box-shadow: var(--shadow-card);
+}
+.mobile-nav__cta { display: flex; align-items: center; gap: 0.75rem; }
+.mobile-nav__cta .btn { flex: 1; }
+
+/* Logo has white lettering: sit it on a navy plate in light mode wherever it appears. */
+:root[data-theme='light'] .lp-top__logo img,
+:root[data-theme='light'] .mobile-nav__header .site-header__logo-img,
+:root[data-theme='light'] .pf-top__logo img {
+  background: var(--logo-plate);
+  border-radius: 8px;
+  padding: 2px 6px;
+}
+/* Light theme: page-scoped accent colours darkened for contrast on light surfaces. */
+:root[data-theme='light'] {
+  --c4-primary: #1d4ed8;
+  --c4-accent: #0e7490;
+  --c4-text: #334155;
+  --c4-heading: #0b1033;
+  --c4-amber: #b45309;
+}
+:root[data-theme='light'] .edu-page {
+  --edu-gold: #b45309;
+}
+:root[data-theme='light'] .pm-page {
+  --pm-cyan: #0e7490;
+  --pm-blue: #1d4ed8;
+  --pm-purple: #6d28d9;
+}
+:root[data-theme='light'] .ppcd-page {
+  --ppcd-gold: #b45309;
+}
+:root[data-theme='light'] .re-page {
+  --re-gold: #8a6a1c;
+  --re-blue: #0369a1;
+  --re-purple: #6d28d9;
+}
+:root[data-theme='light'] .ret-page {
+  --ret-green: #047857;
+}
+:root[data-theme='light'] .sm-page {
+  --sm-blue: #0369a1;
+  --sm-cyan: #0e7490;
+  --sm-purple: #6d28d9;
+}
+:root[data-theme='light'] .tm-page {
+  --tm-magenta: #9d174d;
+  --tm-amber: #8a6a1c;
+}
+:root[data-theme='light'] .ga-location-cta__badge,
+:root[data-theme='light'] .ga-location-cta__link,
+:root[data-theme='light'] .ga-landing-card__link {
+  color: #c2410c;
+}

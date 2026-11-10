@@ -6,11 +6,13 @@ import { cx } from "../../utils/helpers.js";
 import ServicesMenu from "./ServicesMenu.jsx";
 import LocationsMenu from "./LocationsMenu.jsx";
 import IndustriesMenu from "./IndustriesMenu.jsx";
+import ResourcesMenu from "./ResourcesMenu.jsx";
 
 const MENU_COMPONENTS = {
   "/services/": ServicesMenu,
   "/locations/": LocationsMenu,
   "/industries/": IndustriesMenu,
+  "/blog/": ResourcesMenu,
 };
 
 export default function DesktopNav() {

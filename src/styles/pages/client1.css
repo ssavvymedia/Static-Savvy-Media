@@ -47,7 +47,7 @@
 .cs1-hero-visual__dashboard {
   padding: 16px;
   border-radius: var(--radius-lg);
-  background: rgba(17, 26, 51, 0.6);
+  background: rgba(var(--base-rgb), 0.6);
   border: 1px solid var(--color-border);
   backdrop-filter: blur(10px);
   display: flex;
@@ -61,11 +61,11 @@
   gap: 8px;
   padding: 10px 14px;
   border-radius: var(--radius);
-  background: rgba(15, 23, 42, 0.8);
+  background: rgba(var(--base-rgb), 0.8);
   border: 1px solid rgba(16, 185, 129, 0.25);
 }
 
-.cs1-hero-visual__search-bar svg { color: #10b981; flex-shrink: 0; }
+.cs1-hero-visual__search-bar svg { color: var(--color-success); flex-shrink: 0; }
 
 .cs1-hero-visual__search-line {
   flex: 1;
@@ -84,7 +84,7 @@
   position: relative;
   height: 100px;
   border-radius: var(--radius);
-  background: rgba(15, 23, 42, 0.6);
+  background: rgba(var(--base-rgb), 0.6);
   border: 1px solid rgba(16, 185, 129, 0.15);
   overflow: hidden;
 }
@@ -129,15 +129,15 @@
   font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.03em;
-  background: rgba(15, 23, 42, 0.8);
+  background: rgba(var(--base-rgb), 0.8);
   border: 1px solid rgba(16, 185, 129, 0.25);
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(var(--ink-rgb), 0.8);
 }
 
 .cs1-hero-visual__kw--accent {
   background: rgba(16, 185, 129, 0.15);
   border-color: rgba(16, 185, 129, 0.4);
-  color: #10b981;
+  color: var(--color-success);
 }
 
 /* ---- Summary ---- */
@@ -202,7 +202,7 @@
 .cs1-approach__num {
   font-size: 0.75rem;
   font-weight: 700;
-  color: #10b981;
+  color: var(--color-success);
   letter-spacing: 0.05em;
 }
 .cs1-approach__title {
@@ -245,10 +245,10 @@
 .cs1-strategy__node-num {
   font-size: 0.7rem;
   font-weight: 700;
-  color: #10b981;
+  color: var(--color-success);
   letter-spacing: 0.05em;
 }
-.cs1-strategy__node--local .cs1-strategy__node-num { color: #22d3ee; }
+.cs1-strategy__node--local .cs1-strategy__node-num { color: var(--color-cyan); }
 .cs1-strategy__node-label {
   font-size: 0.85rem;
   font-weight: 600;
@@ -291,7 +291,7 @@
 .cs1-results__value {
   font-size: 1rem;
   font-weight: 700;
-  color: #10b981;
+  color: var(--color-success);
 }
 
 /* ---- Timeline ---- */
@@ -320,7 +320,7 @@
 .cs1-timeline__num {
   font-size: 0.7rem;
   font-weight: 700;
-  color: #10b981;
+  color: var(--color-success);
   letter-spacing: 0.05em;
 }
 .cs1-timeline__label {
@@ -360,7 +360,7 @@
 }
 .cs1-changed__status {
   font-size: 0.75rem;
-  color: #10b981;
+  color: var(--color-success);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -383,7 +383,7 @@
 .cs1-takeaway__num {
   font-size: 0.75rem;
   font-weight: 700;
-  color: #10b981;
+  color: var(--color-success);
   flex-shrink: 0;
   padding-top: 2px;
 }
@@ -444,7 +444,7 @@
   gap: 6px;
   font-size: 0.8rem;
   font-weight: 600;
-  color: #10b981;
+  color: var(--color-success);
   margin-top: auto;
 }
 
@@ -474,7 +474,7 @@
 .cs1-methodology__num {
   font-size: 0.7rem;
   font-weight: 700;
-  color: #10b981;
+  color: var(--color-success);
 }
 .cs1-methodology__label {
   font-size: 0.85rem;
@@ -519,7 +519,7 @@
   gap: 6px;
   font-size: 0.8rem;
   font-weight: 600;
-  color: #10b981;
+  color: var(--color-success);
 }
 
 /* ---- Responsive ---- */

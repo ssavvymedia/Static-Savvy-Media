@@ -538,8 +538,8 @@ export default function AIBusinessAutomation() {
           box-shadow: 0 0 18px rgba(249, 115, 22, 0.45) !important;
         }
         .aba-page .aba-automations__grid > *:nth-child(6) .aba-automation-card__icon {
-          background: linear-gradient(135deg, #ec4899, #db2777) !important;
-          box-shadow: 0 0 18px rgba(236, 72, 153, 0.45) !important;
+          background: linear-gradient(135deg, #5b6cf9, #4f46e5) !important;
+          box-shadow: 0 0 18px rgba(91,108,249, 0.45) !important;
         }
       `}</style>
 

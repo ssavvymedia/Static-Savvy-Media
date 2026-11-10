@@ -2,11 +2,24 @@ import { useEffect, useRef } from 'react'
 import { useLocation } from 'react-router-dom'
 
 export default function ScrollToTop() {
-  const { pathname } = useLocation()
+  const { pathname, hash } = useLocation()
   const isFirstLoad = useRef(true)
+  const lastPath = useRef(pathname)
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'instant' })
+    // In-page targets such as /contact/#form: scroll to the element once the new page has rendered.
+    if (hash) {
+      const id = decodeURIComponent(hash.slice(1))
+      let tries = 0
+      const seek = () => {
+        const el = document.getElementById(id)
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        else if (tries++ < 20) setTimeout(seek, 100)
+      }
+      seek()
+    } else {
+      window.scrollTo({ top: 0, behavior: 'instant' })
+    }
 
     // GTM/GA4 only auto-fires a pageview on the initial document load.
     // React Router changes the URL client-side without a full reload, so
@@ -17,6 +30,9 @@ export default function ScrollToTop() {
       isFirstLoad.current = false
       return
     }
+    // A hash-only change on the same page is not a new pageview.
+    if (lastPath.current === pathname) return
+    lastPath.current = pathname
 
     window.dataLayer = window.dataLayer || []
     window.dataLayer.push({
@@ -25,7 +41,7 @@ export default function ScrollToTop() {
       page_location: window.location.href,
       page_title: document.title,
     })
-  }, [pathname])
+  }, [pathname, hash])
 
   return null
 }

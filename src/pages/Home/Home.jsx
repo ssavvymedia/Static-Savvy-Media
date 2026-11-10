@@ -324,8 +324,8 @@ export default function Home() {
         }
 
         .premium-icon-container--pink {
-          background: linear-gradient(135deg, #ec4899, #db2777) !important;
-          box-shadow: 0 0 15px rgba(236, 72, 153, 0.35) !important;
+          background: linear-gradient(135deg, #5b6cf9, #4f46e5) !important;
+          box-shadow: 0 0 15px rgba(91,108,249, 0.35) !important;
         }
 
         .premium-icon-container--orange {
@@ -379,7 +379,7 @@ export default function Home() {
         .home-template .location-card__title-text {
           font-size: 1.15rem !important;
           font-weight: 700 !important;
-          color: #fff !important;
+          color: var(--color-heading) !important;
         }
 
         .home-template .location-card__image-wrapper {
@@ -497,10 +497,10 @@ export default function Home() {
         .home-template .cta-section__panel {
           position: relative !important;
           z-index: 2 !important;
-          background: linear-gradient(135deg, rgba(30, 27, 75, 0.45) 0%, rgba(15, 23, 42, 0.6) 100%) !important;
+          background: linear-gradient(135deg, rgba(var(--base-rgb), 0.45) 0%, rgba(var(--base-rgb), 0.6) 100%) !important;
           backdrop-filter: blur(16px) !important;
           border: 1px solid rgba(139, 92, 246, 0.25) !important;
-          box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), 0 0 25px rgba(139, 92, 246, 0.15) !important;
+          box-shadow: 0 10px 40px rgba(var(--shadow-rgb), calc(0.5 * var(--shadow-k))), 0 0 25px rgba(139, 92, 246, 0.15) !important;
           padding: 4.5rem 3rem !important;
           border-radius: 24px !important;
           max-width: 950px !important;
@@ -513,14 +513,14 @@ export default function Home() {
           letter-spacing: -0.02em !important;
           margin-bottom: 1rem !important;
           line-height: 1.25 !important;
-          background: linear-gradient(135deg, #ffffff 60%, #cbd5e1 100%) !important;
+          background: linear-gradient(135deg, var(--color-heading) 60%, var(--color-accent-ink) 100%) !important;
           -webkit-background-clip: text !important;
           -webkit-text-fill-color: transparent !important;
         }
 
         .home-template .cta-section .section-heading__subtitle {
           font-size: 1.125rem !important;
-          color: #94a3b8 !important;
+          color: var(--color-text-muted) !important;
           max-width: 600px !important;
           margin: 0 auto 2.5rem auto !important;
         }
@@ -543,19 +543,19 @@ export default function Home() {
         }
 
         .home-template .cta-section .btn--primary {
-          background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%) !important;
+          background: linear-gradient(135deg, #8b5cf6 0%, #5b6cf9 100%) !important;
           border: none !important;
           color: #ffffff !important;
           border-radius: 9999px !important;
-          box-shadow: 0 4px 25px rgba(139, 92, 246, 0.45), 0 0 15px rgba(236, 72, 153, 0.3) !important;
+          box-shadow: 0 4px 25px rgba(139, 92, 246, 0.45), 0 0 15px rgba(91,108,249, 0.3) !important;
         }
 
         .home-template .cta-section .btn--primary:hover {
-          background: linear-gradient(135deg, #7c3aed 0%, #db2777 100%) !important;
+          background: linear-gradient(135deg, #7c3aed 0%, #4f46e5 100%) !important;
           border: none !important;
           color: #ffffff !important;
           transform: translateY(-2px) scale(1.02) !important;
-          box-shadow: 0 8px 32px rgba(236, 72, 153, 0.65), 0 0 22px rgba(139, 92, 246, 0.5) !important;
+          box-shadow: 0 8px 32px rgba(91,108,249, 0.65), 0 0 22px rgba(139, 92, 246, 0.5) !important;
         }
 
         @media (max-width: 768px) {

@@ -14,7 +14,7 @@
   background:
     radial-gradient(60% 50% at 15% 10%, rgba(139, 92, 246, 0.16), transparent 60%),
     radial-gradient(50% 45% at 85% 25%, rgba(34, 211, 238, 0.12), transparent 60%),
-    radial-gradient(40% 40% at 50% 100%, rgba(236, 72, 153, 0.1), transparent 55%);
+    radial-gradient(40% 40% at 50% 100%, rgba(91,108,249, 0.1), transparent 55%);
 }
 
 .hero::before {
@@ -226,7 +226,7 @@
 .why-choose {
   position: relative;
   background:
-    radial-gradient(50% 60% at 10% 0%, rgba(236, 72, 153, 0.1), transparent 60%),
+    radial-gradient(50% 60% at 10% 0%, rgba(91,108,249, 0.1), transparent 60%),
     radial-gradient(50% 60% at 90% 100%, rgba(59, 130, 246, 0.12), transparent 60%);
 }
 
@@ -319,7 +319,7 @@
 .home-proof {
   padding-block: 1.25rem;
   border-block: 1px solid var(--color-border);
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(var(--ink-rgb), 0.02);
 }
 
 .home-proof__list {
@@ -485,7 +485,7 @@
   max-width: min(92vw, 520px);
   padding: 0.7rem 0.75rem 0.7rem 1rem;
   transform: translateX(-50%);
-  background: rgba(11, 17, 36, 0.97);
+  background: rgba(var(--base-rgb), 0.97);
   border: 1px solid var(--color-border);
   border-radius: 999px;
   box-shadow: var(--shadow-lift);

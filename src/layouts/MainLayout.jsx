@@ -1,3 +1,4 @@
+import { Suspense } from 'react'
 import { Outlet } from 'react-router-dom'
 import Header from '../components/common/Header.jsx'
 import Footer from '../components/common/Footer.jsx'
@@ -12,7 +13,10 @@ export default function MainLayout({ className = '' }) {
       <SEO />
       <Header />
       <main className="site__main">
-        <Outlet />
+        {/* Route chunks (src/routes/lazyPage.js): server HTML stays until the page chunk loads. */}
+        <Suspense fallback={null}>
+          <Outlet />
+        </Suspense>
       </main>
       <Footer />
       <WhatsAppButton />

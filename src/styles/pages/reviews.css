@@ -76,7 +76,7 @@
 }
 
 .reviews-hero-dashboard__star {
-  color: #fbbf24;
+  color: var(--color-star);
 }
 
 .reviews-hero-dashboard__star--empty {
@@ -100,7 +100,7 @@
 }
 
 .reviews-hero-dashboard__mini-stars {
-  color: #fbbf24;
+  color: var(--color-star);
   font-size: 0.7rem;
   white-space: nowrap;
 }
@@ -131,8 +131,8 @@
 }
 
 .reviews-hero-dashboard__tag--pink {
-  background: rgba(236, 72, 153, 0.1);
-  border-color: rgba(236, 72, 153, 0.15);
+  background: rgba(91,108,249, 0.1);
+  border-color: rgba(91,108,249, 0.15);
   color: var(--color-pink);
 }
 
@@ -336,7 +336,7 @@
 }
 
 .reviews-location-card__icon--pink {
-  background: rgba(236, 72, 153, 0.12);
+  background: rgba(91,108,249, 0.12);
   color: var(--color-pink);
 }
 
@@ -354,7 +354,7 @@
 
 .reviews-location-card__rating {
   font-size: 0.85rem;
-  color: #fbbf24;
+  color: var(--color-star);
   font-weight: 700;
 }
 
@@ -403,7 +403,7 @@
   display: flex;
   gap: 0.15rem;
   font-size: 0.9rem;
-  color: #fbbf24;
+  color: var(--color-star);
 }
 
 .review-card__source {
@@ -618,7 +618,7 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto 1rem;
-  background: rgba(236, 72, 153, 0.1);
+  background: rgba(91,108,249, 0.1);
   font-size: 1.3rem;
   color: var(--color-pink);
 }

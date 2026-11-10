@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { NAV_LINKS } from '../../data/navigation.js'
 import { useActiveRoute } from '../../hooks/useActiveRoute.js'
 import Button from '../common/Button.jsx'
+import ThemeToggle from '../common/ThemeToggle.jsx'
 import { cx } from '../../utils/helpers.js'
 import logoImg from '../../assets/images/logo/SSMLOGO.webp'
 
@@ -157,9 +158,10 @@ export default function MobileNav({ open = false, onClose, className = '' }) {
         </nav>
 
         <div className="mobile-nav__cta">
-          <Button to="/contact/" variant="primary" size="lg" onClick={onClose}>
-            Get Started
+          <Button to="/contact/#form" variant="primary" size="lg" onClick={onClose}>
+            Get a Growth Audit
           </Button>
+          <ThemeToggle className="mobile-nav__theme" />
         </div>
       </div>
     </>

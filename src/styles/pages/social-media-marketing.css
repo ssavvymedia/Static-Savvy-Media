@@ -14,12 +14,12 @@
 .smm-hero-visual__card {
   padding: clamp(1.5rem, 2.5vw, 2rem);
   background:
-    linear-gradient(180deg, rgba(17, 26, 51, 0.72), rgba(7, 11, 24, 0.85)),
+    linear-gradient(180deg, rgba(var(--base-rgb), 0.72), rgba(var(--base-rgb), 0.85)),
     var(--color-surface-glass);
   border-radius: var(--radius-xl);
   border: 1px solid var(--color-border);
   box-shadow:
-    0 30px 60px rgba(2, 6, 23, 0.55),
+    0 30px 60px rgba(var(--shadow-rgb), calc(0.55 * var(--shadow-k))),
     var(--shadow-glow);
 }
 
@@ -37,7 +37,7 @@
   gap: 0.4rem;
   padding: 0.75rem 0.5rem;
   border-radius: var(--radius-md);
-  background: rgba(15, 23, 42, 0.6);
+  background: rgba(var(--base-rgb), 0.6);
   border: 1px solid var(--color-border);
   font-size: 0.7rem;
   font-weight: 600;
@@ -47,23 +47,23 @@
 }
 
 .smm-hero-visual__platform--instagram {
-  border-color: rgba(236, 72, 153, 0.3);
-  color: #ec4899;
+  border-color: rgba(91,108,249, 0.3);
+  color: #5b6cf9;
 }
 
 .smm-hero-visual__platform--facebook {
   border-color: rgba(59, 130, 246, 0.3);
-  color: #3b82f6;
+  color: var(--color-blue);
 }
 
 .smm-hero-visual__platform--linkedin {
   border-color: rgba(34, 211, 238, 0.3);
-  color: #22d3ee;
+  color: var(--color-cyan);
 }
 
 .smm-hero-visual__platform--youtube {
   border-color: rgba(239, 68, 68, 0.3);
-  color: #ef4444;
+  color: var(--color-danger);
 }
 
 .smm-hero-visual__platform:hover {
@@ -89,7 +89,7 @@
 .smm-hero-visual__funnel-step {
   padding: 0.4rem 0.75rem;
   border-radius: var(--radius-sm);
-  background: rgba(15, 23, 42, 0.5);
+  background: rgba(var(--base-rgb), 0.5);
   border: 1px solid var(--color-border);
   font-size: 0.7rem;
   font-weight: 600;
@@ -154,8 +154,8 @@
 }
 
 .smm-platform-card--instagram:hover {
-  border-color: rgba(236, 72, 153, 0.5);
-  box-shadow: 0 0 24px rgba(236, 72, 153, 0.35);
+  border-color: rgba(91,108,249, 0.5);
+  box-shadow: 0 0 24px rgba(91,108,249, 0.35);
 }
 
 .smm-platform-card--facebook:hover {
@@ -198,7 +198,7 @@
 }
 
 .smm-platform-card--instagram .smm-platform-card__badge {
-  background: linear-gradient(135deg, #ec4899, #a855f7);
+  background: linear-gradient(135deg, #5b6cf9, #a855f7);
 }
 
 .smm-platform-card--facebook .smm-platform-card__badge {
@@ -210,7 +210,7 @@
 }
 
 .smm-platform-card--youtube .smm-platform-card__badge {
-  background: linear-gradient(135deg, #ef4444, #ec4899);
+  background: linear-gradient(135deg, #ef4444, #5b6cf9);
 }
 
 .smm-platform-card:hover .smm-platform-card__badge {
@@ -228,27 +228,27 @@
 }
 
 .smm-platform-card--instagram .smm-platform-card__icon {
-  background: rgba(236, 72, 153, 0.12);
-  border: 1px solid rgba(236, 72, 153, 0.25);
-  color: #ec4899;
+  background: rgba(91,108,249, 0.12);
+  border: 1px solid rgba(91,108,249, 0.25);
+  color: #5b6cf9;
 }
 
 .smm-platform-card--facebook .smm-platform-card__icon {
   background: rgba(59, 130, 246, 0.12);
   border: 1px solid rgba(59, 130, 246, 0.25);
-  color: #3b82f6;
+  color: var(--color-blue);
 }
 
 .smm-platform-card--linkedin .smm-platform-card__icon {
   background: rgba(34, 211, 238, 0.12);
   border: 1px solid rgba(34, 211, 238, 0.25);
-  color: #22d3ee;
+  color: var(--color-cyan);
 }
 
 .smm-platform-card--youtube .smm-platform-card__icon {
   background: rgba(239, 68, 68, 0.12);
   border: 1px solid rgba(239, 68, 68, 0.25);
-  color: #ef4444;
+  color: var(--color-danger);
 }
 
 .smm-platform-card__title {
@@ -265,7 +265,7 @@
 .smm-platform-card__visual {
   margin-top: auto;
   padding: 1rem;
-  background: rgba(15, 23, 42, 0.5);
+  background: rgba(var(--base-rgb), 0.5);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   min-height: 70px;
@@ -282,8 +282,8 @@
   width: 50px;
   height: 60px;
   border-radius: var(--radius-sm);
-  background: linear-gradient(135deg, rgba(236, 72, 153, 0.2), rgba(168, 85, 247, 0.15));
-  border: 1px solid rgba(236, 72, 153, 0.25);
+  background: linear-gradient(135deg, rgba(91,108,249, 0.2), rgba(168, 85, 247, 0.15));
+  border: 1px solid rgba(91,108,249, 0.25);
 }
 
 .smm-visual-instagram__stories {
@@ -295,7 +295,7 @@
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #ec4899, #a855f7);
+  background: linear-gradient(135deg, #5b6cf9, #a855f7);
   opacity: 0.5;
 }
 
@@ -303,8 +303,8 @@
   flex: 1;
   height: 40px;
   border-radius: var(--radius-sm);
-  background: linear-gradient(135deg, rgba(236, 72, 153, 0.12), rgba(168, 85, 247, 0.08));
-  border: 1px solid rgba(236, 72, 153, 0.2);
+  background: linear-gradient(135deg, rgba(91,108,249, 0.12), rgba(168, 85, 247, 0.08));
+  border: 1px solid rgba(91,108,249, 0.2);
 }
 
 /* Facebook Visual */
@@ -369,7 +369,7 @@
   width: 56px;
   height: 36px;
   border-radius: var(--radius-sm);
-  background: linear-gradient(135deg, rgba(239, 68, 68, 0.2), rgba(236, 72, 153, 0.15));
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.2), rgba(91,108,249, 0.15));
   border: 1px solid rgba(239, 68, 68, 0.25);
   position: relative;
 }
@@ -517,8 +517,8 @@
 }
 
 .smm-included-card:nth-child(3) .smm-included-card__icon {
-  background: rgba(236, 72, 153, 0.1);
-  border-color: rgba(236, 72, 153, 0.2);
+  background: rgba(91,108,249, 0.1);
+  border-color: rgba(91,108,249, 0.2);
   color: var(--color-pink);
 }
 
@@ -541,8 +541,8 @@
 }
 
 .smm-included-card:nth-child(7) .smm-included-card__icon {
-  background: rgba(236, 72, 153, 0.1);
-  border-color: rgba(236, 72, 153, 0.2);
+  background: rgba(91,108,249, 0.1);
+  border-color: rgba(91,108,249, 0.2);
   color: var(--color-pink);
 }
 

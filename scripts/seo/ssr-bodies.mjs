@@ -67,8 +67,18 @@ export async function ssrBodies(root, distAssets) {
     await (await vite.ssrLoadModule('/src/pages/Pricing/countryPricingLoader.js')).preloadCountryPricing()
     await (await vite.ssrLoadModule('/src/pages/Portfolio/portfolioLoader.js')).preloadPortfolio()
     /* Full-app render: must match what the client renders on its first pass (hydrateRoot). */
-    const renderApp = (route) => fixAssets(renderToString(React.createElement(MemoryRouter, { initialEntries: [route] }, React.createElement(App))), distAssets)
-    try { out.set('/', { app: renderApp('/') }) } catch (e) { console.warn(`ssr-bodies: home app render skipped: ${String(e?.message || e).slice(0, 300)}`) }
+    /* Route pages are code-split (src/routes/lazyPage.js): resolve every page chunk first so the
+     * full-app render is synchronous, and record which page modules each route rendered. */
+    const { preloadAllPages, renderedPageModules } = await vite.ssrLoadModule('/src/routes/lazyPage.js')
+    await preloadAllPages()
+    let lastPages = []
+    const renderApp = (route) => {
+      renderedPageModules.clear()
+      const html = fixAssets(renderToString(React.createElement(MemoryRouter, { initialEntries: [route] }, React.createElement(App))), distAssets)
+      lastPages = [...renderedPageModules]
+      return html
+    }
+    try { out.set('/', { app: renderApp('/'), pages: lastPages }) } catch (e) { console.warn(`ssr-bodies: home app render skipped: ${String(e?.message || e).slice(0, 300)}`) }
     const madurai = {
       '@type': 'ProfessionalService', '@id': `${HOST}/locations/madurai/#localbusiness`, name: 'Static Savvy Media', url: `${HOST}/locations/madurai/`, telephone: PHONE,
       address: { '@type': 'PostalAddress', streetAddress: '2nd Floor, 4/3, Srinivasa Perumal Koil St, Kamarajar Salai', addressLocality: 'Madurai', addressRegion: 'Tamil Nadu', postalCode: '625009', addressCountry: 'IN' },
@@ -133,7 +143,7 @@ export async function ssrBodies(root, distAssets) {
       if (faqs.length) nodes.push({ '@type': 'FAQPage', mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) })
       let app = null
       try { app = renderApp(r.route) } catch (e) { console.warn(`ssr-bodies: ${r.route} full-app render failed, shipping page body only: ${String(e?.message || e).slice(0, 200)}`) }
-      out.set(r.route, { html: `<main data-prerender="ssr">${html}</main>`, app, schema: { '@context': 'https://schema.org', '@graph': nodes }, h1: decode(h1[1]), faqCount: faqs.length })
+      out.set(r.route, { html: `<main data-prerender="ssr">${html}</main>`, app, pages: app ? lastPages : [], schema: { '@context': 'https://schema.org', '@graph': nodes }, h1: decode(h1[1]), faqCount: faqs.length })
      } catch (e) {
       console.warn(`ssr-bodies: skipped ${r.route} (ships as plain shell): ${String(e?.message || e).slice(0, 300)}`)
      }
@@ -160,7 +170,7 @@ export async function ssrBodies(root, distAssets) {
           if (!h1 || /not found/i.test(h1[1])) throw new Error('no post <h1> rendered')
           const post = applySanityOverride(raw)
           const schema = blogPostSchema(post, post.mainImage ? urlFor(post.mainImage).width(1200).url() : undefined)
-          out.set(route, { app, html: '', schema, preload: raw, h1: decode(h1[1]), words: bodyWordCount(raw.body) })
+          out.set(route, { app, pages: lastPages, html: '', schema, preload: raw, h1: decode(h1[1]), words: bodyWordCount(raw.body) })
         } catch (e) {
           console.warn(`ssr-bodies: Sanity post ${route} skipped (ships as plain shell): ${String(e?.message || e).slice(0, 200)}`)
         } finally {

@@ -447,7 +447,7 @@ export default function Contact() {
           display: inline-block;
           font-size: 0.725rem;
           font-weight: 800;
-          color: #a855f7;
+          color: var(--color-purple);
           letter-spacing: 0.15em;
           text-transform: uppercase;
           padding: 0.4rem 1.1rem;
@@ -494,7 +494,7 @@ export default function Contact() {
         .process-step-custom__number {
           font-size: 0.85rem;
           font-weight: 800;
-          color: #f472b6;
+          color: #818cf8;
           opacity: 0.8;
           font-family: var(--font-mono, monospace);
         }
@@ -502,7 +502,7 @@ export default function Contact() {
         .process-step-custom__title {
           font-size: 1.15rem;
           font-weight: 800;
-          color: #ffffff;
+          color: var(--color-heading);
           margin: 0;
           white-space: nowrap;
         }
@@ -510,7 +510,7 @@ export default function Contact() {
         .process-step-custom__line {
           flex-grow: 1;
           height: 0px;
-          border-top: 1.5px dashed rgba(255, 255, 255, 0.15);
+          border-top: 1.5px dashed rgba(var(--ink-rgb), 0.15);
           margin-left: 0.75rem;
           margin-right: -1rem;
           position: relative;
@@ -524,23 +524,23 @@ export default function Contact() {
           top: -3.5px;
           width: 6px;
           height: 6px;
-          border-top: 1.5px solid rgba(255, 255, 255, 0.35);
-          border-right: 1.5px solid rgba(255, 255, 255, 0.35);
+          border-top: 1.5px solid rgba(var(--ink-rgb), 0.35);
+          border-right: 1.5px solid rgba(var(--ink-rgb), 0.35);
           transform: rotate(45deg);
         }
 
         .process-step-custom__text {
           font-size: 0.85rem;
-          color: rgba(255, 255, 255, 0.6);
+          color: rgba(var(--ink-rgb), 0.6);
           line-height: 1.6;
           margin: 0;
         }
 
         /* ---- Custom CTA Card ---- */
         .cta-card-custom {
-          background: linear-gradient(135deg, rgba(9, 6, 36, 0.95), rgba(30, 9, 64, 0.95));
+          background: linear-gradient(135deg, rgba(var(--base-rgb), 0.95), rgba(var(--base-rgb), 0.95));
           border: 1px solid rgba(139, 92, 246, 0.28);
-          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.65), 0 0 35px rgba(139, 92, 246, 0.18);
+          box-shadow: 0 20px 50px rgba(var(--shadow-rgb), calc(0.65 * var(--shadow-k))), 0 0 35px rgba(139, 92, 246, 0.18);
           border-radius: 20px;
           padding: 3rem 2.5rem;
           display: grid;
@@ -636,8 +636,8 @@ export default function Contact() {
           align-items: center;
           justify-content: center;
           gap: 0.6rem;
-          background: rgba(255, 255, 255, 0.03);
-          border: 1px solid rgba(255, 255, 255, 0.12);
+          background: rgba(var(--ink-rgb), 0.03);
+          border: 1px solid rgba(var(--ink-rgb), 0.12);
           color: rgba(255, 255, 255, 0.85);
           font-size: 0.9rem;
           font-weight: 700;
@@ -649,8 +649,8 @@ export default function Contact() {
         }
 
         .cta-card-custom__btn-phone:hover {
-          background: rgba(255, 255, 255, 0.08);
-          border-color: rgba(255, 255, 255, 0.28);
+          background: rgba(var(--ink-rgb), 0.08);
+          border-color: rgba(var(--ink-rgb), 0.28);
           color: #ffffff;
           transform: translateY(-1px);
         }
@@ -775,9 +775,9 @@ export default function Contact() {
           max-width: 800px;
           margin: 0 auto;
           padding: 3.5rem 3rem;
-          background: linear-gradient(135deg, rgba(11, 17, 36, 0.7), rgba(22, 14, 51, 0.75));
+          background: linear-gradient(135deg, rgba(var(--base-rgb), 0.7), rgba(var(--base-rgb), 0.75));
           border: 1px solid rgba(139, 92, 246, 0.25);
-          box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 40px rgba(139, 92, 246, 0.15);
+          box-shadow: 0 25px 60px rgba(var(--shadow-rgb), calc(0.8 * var(--shadow-k))), 0 0 40px rgba(139, 92, 246, 0.15);
           border-radius: 24px;
           position: relative;
           overflow: hidden;
@@ -803,7 +803,7 @@ export default function Contact() {
           left: -20%;
           width: 350px;
           height: 350px;
-          background: radial-gradient(circle, rgba(236, 72, 153, 0.12) 0%, transparent 70%);
+          background: radial-gradient(circle, rgba(91,108,249, 0.12) 0%, transparent 70%);
           pointer-events: none;
           z-index: 1;
         }
@@ -819,7 +819,7 @@ export default function Contact() {
           display: inline-block;
           font-size: 0.75rem;
           font-weight: 800;
-          color: #22d3ee;
+          color: var(--color-cyan);
           letter-spacing: 0.15em;
           text-transform: uppercase;
           padding: 0.4rem 1.1rem;
@@ -835,14 +835,14 @@ export default function Contact() {
           font-weight: 800;
           color: #ffffff;
           margin: 0 0 0.75rem;
-          background: linear-gradient(135deg, #ffffff 30%, #e2e8f0 70%, rgba(139, 92, 246, 0.8) 100%);
+          background: linear-gradient(135deg, var(--color-heading) 30%, var(--color-accent-ink) 70%, rgba(139, 92, 246, 0.8) 100%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
         }
 
         .contact-form-subtitle {
           font-size: 0.95rem;
-          color: rgba(255, 255, 255, 0.65);
+          color: rgba(var(--ink-rgb), 0.65);
           max-width: 520px;
           margin: 0 auto;
           line-height: 1.6;
@@ -876,7 +876,7 @@ export default function Contact() {
         .form-group label {
           font-size: 0.85rem;
           font-weight: 700;
-          color: rgba(255, 255, 255, 0.85);
+          color: rgba(var(--ink-rgb), 0.85);
           letter-spacing: 0.02em;
         }
 
@@ -884,21 +884,21 @@ export default function Contact() {
         .form-group select,
         .form-group textarea {
           width: 100%;
-          background: rgba(7, 11, 24, 0.6);
-          border: 1px solid rgba(255, 255, 255, 0.1);
+          background: rgba(var(--base-rgb), 0.6);
+          border: 1px solid rgba(var(--ink-rgb), 0.1);
           border-radius: 12px;
           padding: 0.9rem 1.1rem;
-          color: #ffffff;
+          color: var(--color-heading);
           font-size: 0.95rem;
           font-family: inherit;
           transition: all 0.3s ease;
-          box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+          box-shadow: inset 0 2px 4px rgba(var(--shadow-rgb), calc(0.2 * var(--shadow-k)));
         }
 
         /* Fix select styling dropdown arrow */
         .form-group select {
           appearance: none;
-          background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,0.5)' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+          background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgba(255, 255, 255, 0.5)' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
           background-repeat: no-repeat;
           background-position: right 1.1rem center;
           background-size: 1.1rem;
@@ -907,8 +907,8 @@ export default function Contact() {
 
         /* Styling option colors inside dropdown */
         .form-group select option {
-          background-color: #0b1124;
-          color: #ffffff;
+          background-color: var(--color-bg-secondary);
+          color: var(--color-heading);
         }
 
         /* Hover and focus states */
@@ -916,7 +916,7 @@ export default function Contact() {
         .form-group select:hover,
         .form-group textarea:hover {
           border-color: rgba(139, 92, 246, 0.4);
-          background: rgba(7, 11, 24, 0.7);
+          background: rgba(var(--base-rgb), 0.7);
         }
 
         .form-group input:focus,
@@ -924,13 +924,13 @@ export default function Contact() {
         .form-group textarea:focus {
           outline: none;
           border-color: #8b5cf6;
-          background: rgba(7, 11, 24, 0.85);
-          box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2), inset 0 2px 4px rgba(0, 0, 0, 0.1);
+          background: rgba(var(--base-rgb), 0.85);
+          box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2), inset 0 2px 4px rgba(var(--shadow-rgb), calc(0.1 * var(--shadow-k)));
         }
 
         .form-group input::placeholder,
         .form-group textarea::placeholder {
-          color: rgba(255, 255, 255, 0.35);
+          color: rgba(var(--ink-rgb), 0.35);
         }
 
         /* Prominent Submit Button */
@@ -939,7 +939,7 @@ export default function Contact() {
           align-items: center;
           justify-content: center;
           gap: 0.75rem;
-          background: linear-gradient(135deg, #8b5cf6 0%, #db2777 50%, #ec4899 100%);
+          background: linear-gradient(135deg, #8b5cf6 0%, #4f46e5 50%, #5b6cf9 100%);
           background-size: 200% auto;
           color: #ffffff;
           border: none;
@@ -949,7 +949,7 @@ export default function Contact() {
           font-weight: 700;
           cursor: pointer;
           transition: all 0.3s ease;
-          box-shadow: 0 5px 20px rgba(139, 92, 246, 0.35), 0 0 30px rgba(236, 72, 153, 0.15);
+          box-shadow: 0 5px 20px rgba(139, 92, 246, 0.35), 0 0 30px rgba(91,108,249, 0.15);
           align-self: center;
           margin-top: 1rem;
           width: 100%;
@@ -959,7 +959,7 @@ export default function Contact() {
         .contact-form-submit-btn:hover {
           background-position: right center;
           transform: translateY(-2px);
-          box-shadow: 0 8px 25px rgba(139, 92, 246, 0.55), 0 0 40px rgba(236, 72, 153, 0.25);
+          box-shadow: 0 8px 25px rgba(139, 92, 246, 0.55), 0 0 40px rgba(91,108,249, 0.25);
         }
 
         .contact-form-submit-btn:active {
@@ -1002,7 +1002,7 @@ export default function Contact() {
           display: flex;
           align-items: center;
           justify-content: center;
-          color: #22d3ee;
+          color: var(--color-cyan);
           margin-bottom: 1.5rem;
           box-shadow: 0 0 30px rgba(34, 211, 238, 0.25);
         }
@@ -1010,21 +1010,21 @@ export default function Contact() {
         .success-title {
           font-size: 1.75rem;
           font-weight: 800;
-          color: #ffffff;
+          color: var(--color-heading);
           margin: 0 0 0.75rem;
         }
 
         .success-message {
           font-size: 1rem;
-          color: rgba(255, 255, 255, 0.7);
+          color: rgba(var(--ink-rgb), 0.7);
           max-width: 450px;
           line-height: 1.6;
           margin-bottom: 2rem;
         }
 
         .success-reset-btn {
-          background: rgba(255, 255, 255, 0.05);
-          border: 1px solid rgba(255, 255, 255, 0.15);
+          background: rgba(var(--ink-rgb), 0.05);
+          border: 1px solid rgba(var(--ink-rgb), 0.15);
           color: rgba(255, 255, 255, 0.85);
           padding: 0.8rem 1.8rem;
           border-radius: 99px;
@@ -1035,8 +1035,8 @@ export default function Contact() {
         }
 
         .success-reset-btn:hover {
-          background: rgba(255, 255, 255, 0.1);
-          border-color: rgba(255, 255, 255, 0.3);
+          background: rgba(var(--ink-rgb), 0.1);
+          border-color: rgba(var(--ink-rgb), 0.3);
           color: #ffffff;
           transform: translateY(-1px);
         }

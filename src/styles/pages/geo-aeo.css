@@ -14,12 +14,12 @@
 .geo-aeo-hero-visual__card {
   padding: clamp(1.5rem, 2.5vw, 2rem);
   background:
-    linear-gradient(180deg, rgba(17, 26, 51, 0.72), rgba(7, 11, 24, 0.85)),
+    linear-gradient(180deg, rgba(var(--base-rgb), 0.72), rgba(var(--base-rgb), 0.85)),
     var(--color-surface-glass);
   border-radius: var(--radius-xl);
   border: 1px solid var(--color-border);
   box-shadow:
-    0 30px 60px rgba(2, 6, 23, 0.55),
+    0 30px 60px rgba(var(--shadow-rgb), calc(0.55 * var(--shadow-k))),
     var(--shadow-glow);
 }
 
@@ -28,7 +28,7 @@
   align-items: center;
   gap: 0.75rem;
   padding: 0.85rem 1.25rem;
-  background: rgba(15, 23, 42, 0.8);
+  background: rgba(var(--base-rgb), 0.8);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   margin-bottom: 1.25rem;
@@ -117,7 +117,7 @@
   bottom: 16px;
   right: 8px;
   background: var(--color-pink);
-  box-shadow: 0 0 12px rgba(236, 72, 153, 0.6);
+  box-shadow: 0 0 12px rgba(91,108,249, 0.6);
   animation: nodePulse 3s ease-in-out infinite 1s;
 }
 
@@ -157,7 +157,7 @@
   right: 16px;
   width: 36px;
   transform: rotate(10deg);
-  background: linear-gradient(90deg, transparent, rgba(236, 72, 153, 0.4), transparent);
+  background: linear-gradient(90deg, transparent, rgba(91,108,249, 0.4), transparent);
 }
 
 @keyframes nodePulse {
@@ -353,7 +353,7 @@
 
 .geo-aeo-signal-card:nth-child(3) .geo-aeo-signal-card__icon {
   background: linear-gradient(135deg, var(--color-pink), var(--color-violet));
-  box-shadow: 0 0 20px rgba(236, 72, 153, 0.35);
+  box-shadow: 0 0 20px rgba(91,108,249, 0.35);
 }
 
 .geo-aeo-signal-card:nth-child(4) .geo-aeo-signal-card__icon {

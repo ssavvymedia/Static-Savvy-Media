@@ -1,4 +1,4 @@
-import StaticBlogPost from "../pages/Blog/StaticBlogPost.jsx";
+import { lazyPage } from './lazyPage.js'
 import { Routes, Route } from 'react-router-dom'
 import LandingLayout from '../layouts/LandingLayout.jsx'
 import ContentLayout from '../layouts/ContentLayout.jsx'
@@ -6,83 +6,84 @@ import BlogLayout from '../layouts/BlogLayout.jsx'
 
 import Home from '../pages/Home/Home.jsx'
 
-import About from '../pages/About/About.jsx'
-import Founder from '../pages/About/Founder.jsx'
-import Reviews from '../pages/About/Reviews.jsx'
+const About = lazyPage('src/pages/About/About.jsx', () => import('../pages/About/About.jsx'))
+const Founder = lazyPage('src/pages/About/Founder.jsx', () => import('../pages/About/Founder.jsx'))
+const Reviews = lazyPage('src/pages/About/Reviews.jsx', () => import('../pages/About/Reviews.jsx'))
 
-import Services from '../pages/Services/Services.jsx'
-import SEO from '../pages/Services/SEO.jsx'
-import GEOAEO from '../pages/Services/GEOAEO.jsx'
-import LocalSEO from '../pages/Services/LocalSEO.jsx'
-import GoogleAds from '../pages/Services/GoogleAds.jsx'
-import SocialMediaMarketing from '../pages/Services/SocialMediaMarketing.jsx'
-import WebsiteDesignDevelopment from '../pages/Services/WebsiteDesignDevelopment.jsx'
-import AIBusinessAutomation from '../pages/Services/AIBusinessAutomation.jsx'
-import CorporatePhotographyVideo from '../pages/Services/CorporatePhotographyVideo.jsx'
-import AIVideoCreation from '../pages/Services/AIVideoCreation.jsx'
-import ProductPhotographyCreativeDesign from '../pages/Services/ProductPhotographyCreativeDesign.jsx'
+const Services = lazyPage('src/pages/Services/Services.jsx', () => import('../pages/Services/Services.jsx'))
+const SEO = lazyPage('src/pages/Services/SEO.jsx', () => import('../pages/Services/SEO.jsx'))
+const GEOAEO = lazyPage('src/pages/Services/GEOAEO.jsx', () => import('../pages/Services/GEOAEO.jsx'))
+const LocalSEO = lazyPage('src/pages/Services/LocalSEO.jsx', () => import('../pages/Services/LocalSEO.jsx'))
+const GoogleAds = lazyPage('src/pages/Services/GoogleAds.jsx', () => import('../pages/Services/GoogleAds.jsx'))
+const SocialMediaMarketing = lazyPage('src/pages/Services/SocialMediaMarketing.jsx', () => import('../pages/Services/SocialMediaMarketing.jsx'))
+const WebsiteDesignDevelopment = lazyPage('src/pages/Services/WebsiteDesignDevelopment.jsx', () => import('../pages/Services/WebsiteDesignDevelopment.jsx'))
+const AIBusinessAutomation = lazyPage('src/pages/Services/AIBusinessAutomation.jsx', () => import('../pages/Services/AIBusinessAutomation.jsx'))
+const CorporatePhotographyVideo = lazyPage('src/pages/Services/CorporatePhotographyVideo.jsx', () => import('../pages/Services/CorporatePhotographyVideo.jsx'))
+const AIVideoCreation = lazyPage('src/pages/Services/AIVideoCreation.jsx', () => import('../pages/Services/AIVideoCreation.jsx'))
+const ProductPhotographyCreativeDesign = lazyPage('src/pages/Services/ProductPhotographyCreativeDesign.jsx', () => import('../pages/Services/ProductPhotographyCreativeDesign.jsx'))
 
-import SEO_Madurai from '../pages/ServiceLocations/SEO/SEO_Madurai.jsx'
-import SEO_Thoothukudi from '../pages/ServiceLocations/SEO/SEO_Thoothukudi.jsx'
-import SEO_Malaysia from '../pages/ServiceLocations/SEO/SEO_Malaysia.jsx'
-import SEO_KualaLumpur from '../pages/ServiceLocations/SEO/SEO_KualaLumpur.jsx'
-import GoogleAds_KualaLumpur from '../pages/ServiceLocations/GoogleAds/GoogleAds_KualaLumpur.jsx'
-import SocialMedia_Madurai from '../pages/ServiceLocations/SocialMedia/SocialMedia_Madurai.jsx'
-import WebsiteDevelopment_Madurai from '../pages/ServiceLocations/WebsiteDevelopment/WebsiteDevelopment_Madurai.jsx'
-import LocalSEO_Madurai from '../pages/ServiceLocations/LocalSEO/LocalSEO_Madurai.jsx'
-import LocalSEO_Thoothukudi from '../pages/ServiceLocations/LocalSEO/LocalSEO_Thoothukudi.jsx'
-import LocalSEO_Malaysia from '../pages/ServiceLocations/LocalSEO/LocalSEO_Malaysia.jsx'
-import GEOAEO_Madurai from '../pages/ServiceLocations/GEOAEO/GEOAEO_Madurai.jsx'
-import GoogleAds_Thoothukudi from '../pages/ServiceLocations/GoogleAds/GoogleAds_Thoothukudi.jsx'
-import AIBusinessAutomation_Malaysia from '../pages/ServiceLocations/AIBusinessAutomation/AIBusinessAutomation_Malaysia.jsx'
+const SEO_Madurai = lazyPage('src/pages/ServiceLocations/SEO/SEO_Madurai.jsx', () => import('../pages/ServiceLocations/SEO/SEO_Madurai.jsx'))
+const SEO_Thoothukudi = lazyPage('src/pages/ServiceLocations/SEO/SEO_Thoothukudi.jsx', () => import('../pages/ServiceLocations/SEO/SEO_Thoothukudi.jsx'))
+const SEO_Malaysia = lazyPage('src/pages/ServiceLocations/SEO/SEO_Malaysia.jsx', () => import('../pages/ServiceLocations/SEO/SEO_Malaysia.jsx'))
+const SEO_KualaLumpur = lazyPage('src/pages/ServiceLocations/SEO/SEO_KualaLumpur.jsx', () => import('../pages/ServiceLocations/SEO/SEO_KualaLumpur.jsx'))
+const GoogleAds_KualaLumpur = lazyPage('src/pages/ServiceLocations/GoogleAds/GoogleAds_KualaLumpur.jsx', () => import('../pages/ServiceLocations/GoogleAds/GoogleAds_KualaLumpur.jsx'))
+const SocialMedia_Madurai = lazyPage('src/pages/ServiceLocations/SocialMedia/SocialMedia_Madurai.jsx', () => import('../pages/ServiceLocations/SocialMedia/SocialMedia_Madurai.jsx'))
+const WebsiteDevelopment_Madurai = lazyPage('src/pages/ServiceLocations/WebsiteDevelopment/WebsiteDevelopment_Madurai.jsx', () => import('../pages/ServiceLocations/WebsiteDevelopment/WebsiteDevelopment_Madurai.jsx'))
+const LocalSEO_Madurai = lazyPage('src/pages/ServiceLocations/LocalSEO/LocalSEO_Madurai.jsx', () => import('../pages/ServiceLocations/LocalSEO/LocalSEO_Madurai.jsx'))
+const LocalSEO_Thoothukudi = lazyPage('src/pages/ServiceLocations/LocalSEO/LocalSEO_Thoothukudi.jsx', () => import('../pages/ServiceLocations/LocalSEO/LocalSEO_Thoothukudi.jsx'))
+const LocalSEO_Malaysia = lazyPage('src/pages/ServiceLocations/LocalSEO/LocalSEO_Malaysia.jsx', () => import('../pages/ServiceLocations/LocalSEO/LocalSEO_Malaysia.jsx'))
+const GEOAEO_Madurai = lazyPage('src/pages/ServiceLocations/GEOAEO/GEOAEO_Madurai.jsx', () => import('../pages/ServiceLocations/GEOAEO/GEOAEO_Madurai.jsx'))
+const GoogleAds_Thoothukudi = lazyPage('src/pages/ServiceLocations/GoogleAds/GoogleAds_Thoothukudi.jsx', () => import('../pages/ServiceLocations/GoogleAds/GoogleAds_Thoothukudi.jsx'))
+const AIBusinessAutomation_Malaysia = lazyPage('src/pages/ServiceLocations/AIBusinessAutomation/AIBusinessAutomation_Malaysia.jsx', () => import('../pages/ServiceLocations/AIBusinessAutomation/AIBusinessAutomation_Malaysia.jsx'))
 
-import Locations from '../pages/Locations/Locations.jsx'
-import Madurai from '../pages/Locations/Madurai.jsx'
-import Thoothukudi from '../pages/Locations/Thoothukudi.jsx'
-import Malaysia from '../pages/Locations/Malaysia.jsx'
-import CityLanding from '../pages/Locations/CityLanding.jsx'
+const Locations = lazyPage('src/pages/Locations/Locations.jsx', () => import('../pages/Locations/Locations.jsx'))
+const Madurai = lazyPage('src/pages/Locations/Madurai.jsx', () => import('../pages/Locations/Madurai.jsx'))
+const Thoothukudi = lazyPage('src/pages/Locations/Thoothukudi.jsx', () => import('../pages/Locations/Thoothukudi.jsx'))
+const Malaysia = lazyPage('src/pages/Locations/Malaysia.jsx', () => import('../pages/Locations/Malaysia.jsx'))
+const CityLanding = lazyPage('src/pages/Locations/CityLanding.jsx', () => import('../pages/Locations/CityLanding.jsx'))
 
-import Industries from '../pages/Industries/Industries.jsx'
-import RetailEcommerce from '../pages/Industries/RetailEcommerce.jsx'
-import HealthcareClinics from '../pages/Industries/HealthcareClinics.jsx'
-import EducationTraining from '../pages/Industries/EducationTraining.jsx'
-import HospitalityHotels from '../pages/Industries/HospitalityHotels.jsx'
-import TextilesMadurai from '../pages/Industries/TextilesMadurai.jsx'
-import AdvertisingAgency_Madurai from '../pages/ServiceLocations/Advertising/AdvertisingAgency_Madurai.jsx'
-import TamilNadu from '../pages/Locations/TamilNadu.jsx'
-import TopCompaniesMadurai from '../pages/Blog/TopCompaniesMadurai.jsx'
-import PortMarineIndustrialThoothukudi from '../pages/Industries/PortMarineIndustrialThoothukudi.jsx'
-import SMEsMalaysia from '../pages/Industries/SMEsMalaysia.jsx'
-import RealEstateBuilders from '../pages/Industries/RealEstateBuilders.jsx'
+const Industries = lazyPage('src/pages/Industries/Industries.jsx', () => import('../pages/Industries/Industries.jsx'))
+const RetailEcommerce = lazyPage('src/pages/Industries/RetailEcommerce.jsx', () => import('../pages/Industries/RetailEcommerce.jsx'))
+const HealthcareClinics = lazyPage('src/pages/Industries/HealthcareClinics.jsx', () => import('../pages/Industries/HealthcareClinics.jsx'))
+const EducationTraining = lazyPage('src/pages/Industries/EducationTraining.jsx', () => import('../pages/Industries/EducationTraining.jsx'))
+const HospitalityHotels = lazyPage('src/pages/Industries/HospitalityHotels.jsx', () => import('../pages/Industries/HospitalityHotels.jsx'))
+const TextilesMadurai = lazyPage('src/pages/Industries/TextilesMadurai.jsx', () => import('../pages/Industries/TextilesMadurai.jsx'))
+const AdvertisingAgency_Madurai = lazyPage('src/pages/ServiceLocations/Advertising/AdvertisingAgency_Madurai.jsx', () => import('../pages/ServiceLocations/Advertising/AdvertisingAgency_Madurai.jsx'))
+const TamilNadu = lazyPage('src/pages/Locations/TamilNadu.jsx', () => import('../pages/Locations/TamilNadu.jsx'))
+const TopCompaniesMadurai = lazyPage('src/pages/Blog/TopCompaniesMadurai.jsx', () => import('../pages/Blog/TopCompaniesMadurai.jsx'))
+const PortMarineIndustrialThoothukudi = lazyPage('src/pages/Industries/PortMarineIndustrialThoothukudi.jsx', () => import('../pages/Industries/PortMarineIndustrialThoothukudi.jsx'))
+const SMEsMalaysia = lazyPage('src/pages/Industries/SMEsMalaysia.jsx', () => import('../pages/Industries/SMEsMalaysia.jsx'))
+const RealEstateBuilders = lazyPage('src/pages/Industries/RealEstateBuilders.jsx', () => import('../pages/Industries/RealEstateBuilders.jsx'))
 
 import CountryPricing from '../pages/Pricing/CountryPricingRoute.jsx'
 import FunnelLayout from '../layouts/FunnelLayout.jsx'
 import PortfolioRoute from '../pages/Portfolio/PortfolioRoute.jsx'
-import Diwali2026 from '../pages/Diwali/Diwali2026.jsx'
+const Diwali2026 = lazyPage('src/pages/Diwali/Diwali2026.jsx', () => import('../pages/Diwali/Diwali2026.jsx'))
 
-import CaseStudies from '../pages/CaseStudies/CaseStudies.jsx'
-import Client1 from '../pages/CaseStudies/Client1.jsx'
-import Client2 from '../pages/CaseStudies/Client2.jsx'
-import Client3 from '../pages/CaseStudies/Client3.jsx'
-import Client4 from '../pages/CaseStudies/Client4.jsx'
+const CaseStudies = lazyPage('src/pages/CaseStudies/CaseStudies.jsx', () => import('../pages/CaseStudies/CaseStudies.jsx'))
+const Client1 = lazyPage('src/pages/CaseStudies/Client1.jsx', () => import('../pages/CaseStudies/Client1.jsx'))
+const Client2 = lazyPage('src/pages/CaseStudies/Client2.jsx', () => import('../pages/CaseStudies/Client2.jsx'))
+const Client3 = lazyPage('src/pages/CaseStudies/Client3.jsx', () => import('../pages/CaseStudies/Client3.jsx'))
+const Client4 = lazyPage('src/pages/CaseStudies/Client4.jsx', () => import('../pages/CaseStudies/Client4.jsx'))
 
-import Blog from '../pages/Blog/Blog.jsx'
-import BlogPost from '../pages/Blog/BlogPost.jsx'
-import BlogSEO from '../pages/Blog/SEO.jsx'
-import BlogGEOAEO from '../pages/Blog/GEOAEO.jsx'
-import BlogLocalMarketing from '../pages/Blog/LocalMarketing.jsx'
-import WhatIsGEO from '../pages/Blog/WhatIsGEO.jsx'
-import WhatIsAEO from '../pages/Blog/WhatIsAEO.jsx'
-import SEOAgencyMaduraiGuide from '../pages/Blog/SEO.jsx'
-import MalaysiaGrantGuide from '../pages/Blog/MalaysiaGrantGuide.jsx'
-import LocalSEOThoothukudi from '../pages/Blog/LocalSEOThoothukudi.jsx'
+const Blog = lazyPage('src/pages/Blog/Blog.jsx', () => import('../pages/Blog/Blog.jsx'))
+const BlogPost = lazyPage('src/pages/Blog/BlogPost.jsx', () => import('../pages/Blog/BlogPost.jsx'))
+const BlogSEO = lazyPage('src/pages/Blog/SEO.jsx', () => import('../pages/Blog/SEO.jsx'))
+const BlogGEOAEO = lazyPage('src/pages/Blog/GEOAEO.jsx', () => import('../pages/Blog/GEOAEO.jsx'))
+const BlogLocalMarketing = lazyPage('src/pages/Blog/LocalMarketing.jsx', () => import('../pages/Blog/LocalMarketing.jsx'))
+const WhatIsGEO = lazyPage('src/pages/Blog/WhatIsGEO.jsx', () => import('../pages/Blog/WhatIsGEO.jsx'))
+const WhatIsAEO = lazyPage('src/pages/Blog/WhatIsAEO.jsx', () => import('../pages/Blog/WhatIsAEO.jsx'))
+const SEOAgencyMaduraiGuide = lazyPage('src/pages/Blog/SEO.jsx', () => import('../pages/Blog/SEO.jsx'))
+const MalaysiaGrantGuide = lazyPage('src/pages/Blog/MalaysiaGrantGuide.jsx', () => import('../pages/Blog/MalaysiaGrantGuide.jsx'))
+const LocalSEOThoothukudi = lazyPage('src/pages/Blog/LocalSEOThoothukudi.jsx', () => import('../pages/Blog/LocalSEOThoothukudi.jsx'))
 
-import Contact from '../pages/Utility/Contact.jsx'
-import FAQ from '../pages/Utility/FAQ.jsx'
-import PrivacyPolicy from '../pages/Utility/PrivacyPolicy.jsx'
-import Terms from '../pages/Utility/Terms.jsx'
-import Sitemap from '../pages/Utility/Sitemap.jsx'
+const Contact = lazyPage('src/pages/Utility/Contact.jsx', () => import('../pages/Utility/Contact.jsx'))
+const FAQ = lazyPage('src/pages/Utility/FAQ.jsx', () => import('../pages/Utility/FAQ.jsx'))
+const PrivacyPolicy = lazyPage('src/pages/Utility/PrivacyPolicy.jsx', () => import('../pages/Utility/PrivacyPolicy.jsx'))
+const Terms = lazyPage('src/pages/Utility/Terms.jsx', () => import('../pages/Utility/Terms.jsx'))
+const Sitemap = lazyPage('src/pages/Utility/Sitemap.jsx', () => import('../pages/Utility/Sitemap.jsx'))
 import NotFound from '../pages/Utility/NotFound.jsx'
+const StaticBlogPost = lazyPage('src/pages/Blog/StaticBlogPost.jsx', () => import('../pages/Blog/StaticBlogPost.jsx'))
 
 export default function AppRoutes() {
   return (

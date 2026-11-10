@@ -255,8 +255,8 @@ export default function SocialMediaMarketing() {
       <style>{`
         /* --- Platforms We Manage Icons --- */
         .social-media-marketing .smm-platforms__grid > *:nth-child(1) .smm-platform-card__icon {
-          background: linear-gradient(135deg, #ec4899, #db2777) !important;
-          box-shadow: 0 0 18px rgba(236, 72, 153, 0.45) !important;
+          background: linear-gradient(135deg, #5b6cf9, #4f46e5) !important;
+          box-shadow: 0 0 18px rgba(91,108,249, 0.45) !important;
         }
         .social-media-marketing .smm-platforms__grid > *:nth-child(2) .smm-platform-card__icon {
           background: linear-gradient(135deg, #3b82f6, #1d4ed8) !important;
@@ -277,8 +277,8 @@ export default function SocialMediaMarketing() {
           box-shadow: 0 0 18px rgba(168, 85, 247, 0.45) !important;
         }
         .social-media-marketing .smm-included__grid > *:nth-child(2) .smm-included-card__icon {
-          background: linear-gradient(135deg, #ec4899, #db2777) !important;
-          box-shadow: 0 0 18px rgba(236, 72, 153, 0.45) !important;
+          background: linear-gradient(135deg, #5b6cf9, #4f46e5) !important;
+          box-shadow: 0 0 18px rgba(91,108,249, 0.45) !important;
         }
         .social-media-marketing .smm-included__grid > *:nth-child(3) .smm-included-card__icon {
           background: linear-gradient(135deg, #3b82f6, #1d4ed8) !important;

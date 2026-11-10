@@ -4,16 +4,23 @@ import { industries } from "./industries.js";
 import { caseStudies } from "./caseStudies.js";
 import { blogCategories, blogPosts } from "./blog.js";
 
+/* Resources dropdown (v2 header). */
+export const RESOURCE_LINKS = [
+  { slug: "blog", name: "Blog & Guides", path: "/blog/" },
+  { slug: "faq", name: "FAQ", path: "/faq/" },
+  { slug: "reviews", name: "Google Reviews", path: "/about/reviews/" },
+  { slug: "contact", name: "Contact", path: "/contact/" },
+];
+
+/* v2 header: Industries, Growth Solutions (services), Locations (Madurai HQ first), Resources. */
 export const NAV_LINKS = [
   { label: "Home", path: "/" },
-  { label: "Services", path: "/services/", menu: services },
-  { label: "Locations", path: "/locations/", menu: locationGroups },
   { label: "Industries", path: "/industries/", menu: industries },
+  { label: "Growth Solutions", path: "/services/", menu: services },
   { label: "Case Studies", path: "/case-studies/" },
+  { label: "Locations", path: "/locations/", menu: locationGroups },
+  { label: "Resources", path: "/blog/", menu: RESOURCE_LINKS },
   { label: "About", path: "/about/" },
-  { label: "Blog", path: "/blog/" },
-  { label: "FAQ", path: "/faq/" },
-  { label: "Contact", path: "/contact/" },
 ];
 
 export const FOOTER_LINKS = {

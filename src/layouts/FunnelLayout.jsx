@@ -1,3 +1,4 @@
+import { Suspense } from 'react'
 import { Outlet } from 'react-router-dom'
 import SEO from '../utils/seo.js'
 /* The /p/ page styles ship in the main stylesheet (16 kB, class names only, no prices), not in the
@@ -18,7 +19,10 @@ export default function FunnelLayout() {
     <div className="site layout--funnel">
       <SEO />
       <main className="site__main">
-        <Outlet />
+        {/* Route chunks (src/routes/lazyPage.js): server HTML stays until the page chunk loads. */}
+        <Suspense fallback={null}>
+          <Outlet />
+        </Suspense>
       </main>
     </div>
   )

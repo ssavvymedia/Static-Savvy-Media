@@ -98,7 +98,7 @@
 
 .local-marketing-hero__visual-step--maps {
   background: rgba(34, 197, 94, 0.15);
-  color: #22c55e;
+  color: var(--color-success);
 }
 
 .local-marketing-hero__visual-step--ai {
@@ -107,7 +107,7 @@
 }
 
 .local-marketing-hero__visual-step--business {
-  background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(236, 72, 153, 0.2));
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(91,108,249, 0.2));
   color: var(--color-pink);
 }
 
@@ -178,7 +178,7 @@
 }
 
 .local-marketing-service-card__number--pink {
-  background: rgba(236, 72, 153, 0.15);
+  background: rgba(91,108,249, 0.15);
   color: var(--color-pink);
 }
 
@@ -189,7 +189,7 @@
 
 .local-marketing-service-card__number--blue {
   background: rgba(59, 130, 246, 0.15);
-  color: #3b82f6;
+  color: var(--color-blue);
 }
 
 .local-marketing-service-card__icon {
@@ -212,7 +212,7 @@
 }
 
 .local-marketing-service-card__icon--pink {
-  background: rgba(236, 72, 153, 0.1);
+  background: rgba(91,108,249, 0.1);
   color: var(--color-pink);
 }
 
@@ -223,7 +223,7 @@
 
 .local-marketing-service-card__icon--blue {
   background: rgba(59, 130, 246, 0.1);
-  color: #3b82f6;
+  color: var(--color-blue);
 }
 
 .local-marketing-service-card__title {
@@ -388,7 +388,7 @@
 }
 
 .local-marketing-matters__flow-step--active {
-  background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(236, 72, 153, 0.2));
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(91,108,249, 0.2));
   border-color: var(--color-violet);
   color: var(--color-text);
 }

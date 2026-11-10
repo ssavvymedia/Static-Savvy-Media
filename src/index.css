@@ -6,6 +6,7 @@
 @import './styles/footer.css';
 @import './styles/animations.css';
 @import './styles/responsive.css';
+@import './styles/theme-v2.css';
 @import './styles/pages/industries-hub.css';
 @import './styles/pages/healthcare-clinics.css';
 @import './styles/pages/hospitality-hotels.css';

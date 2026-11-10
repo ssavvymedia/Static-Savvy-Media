@@ -403,7 +403,7 @@
   gap: 0.5rem;
   padding: 1.25rem 1rem;
   border-radius: var(--radius-lg);
-  background: rgba(7, 11, 24, 0.6);
+  background: rgba(var(--base-rgb), 0.6);
   border: 1px solid var(--color-border);
   text-align: left;
   height: 100%;
@@ -493,7 +493,7 @@
   gap: 0.65rem;
   padding: 1.25rem 1rem;
   border-radius: var(--radius-lg);
-  background: rgba(7, 11, 24, 0.6);
+  background: rgba(var(--base-rgb), 0.6);
   border: 1px solid var(--color-border);
   transition: transform var(--transition), border-color var(--transition);
 }
@@ -575,7 +575,7 @@
   gap: 0.45rem;
   padding: 0.55rem 1.1rem;
   border-radius: 999px;
-  background: rgba(7, 11, 24, 0.75);
+  background: rgba(var(--base-rgb), 0.75);
   border: 1px solid rgba(212, 168, 67, 0.3);
   font-size: var(--fs-small);
   font-weight: 600;
@@ -600,7 +600,7 @@
   margin-inline: auto;
   padding: clamp(1.75rem, 3vw, 2.5rem);
   border-radius: var(--radius-xl);
-  background: rgba(7, 11, 24, 0.7);
+  background: rgba(var(--base-rgb), 0.7);
   border: 1px solid rgba(194, 24, 91, 0.28);
   display: grid;
   grid-template-columns: 280px 1fr;
@@ -648,7 +648,7 @@
   flex: 1;
   height: 40px;
   border-radius: var(--radius-sm);
-  background: rgba(17, 26, 51, 0.6);
+  background: rgba(var(--base-rgb), 0.6);
   border: 1px solid var(--color-border);
   display: flex;
   align-items: center;
@@ -719,7 +719,7 @@
 
 .tm-ecommerce__action--whatsapp {
   border-color: rgba(74, 222, 128, 0.4);
-  color: #4ade80;
+  color: var(--color-success);
 }
 
 .tm-ecommerce__categories {
@@ -733,7 +733,7 @@
 .tm-ecommerce__category-chip {
   padding: 0.55rem 1.1rem;
   border-radius: 999px;
-  background: rgba(7, 11, 24, 0.75);
+  background: rgba(var(--base-rgb), 0.75);
   border: 1px solid rgba(194, 24, 91, 0.3);
   font-size: var(--fs-small);
   font-weight: 700;
@@ -968,7 +968,7 @@
   gap: 0.75rem;
   padding: 1rem 1.25rem;
   border-radius: var(--radius-lg);
-  background: rgba(7, 11, 24, 0.6);
+  background: rgba(var(--base-rgb), 0.6);
   border: 1px solid var(--color-border);
   font-size: 0.85rem;
   font-weight: 700;
@@ -1176,7 +1176,7 @@
   gap: 0.5rem;
   padding: 0.55rem 0.85rem;
   border-radius: var(--radius-md);
-  background: rgba(7, 11, 24, 0.6);
+  background: rgba(var(--base-rgb), 0.6);
   border: 1px solid var(--color-border);
   font-size: 0.82rem;
   font-weight: 600;
@@ -1290,7 +1290,7 @@
   gap: 0.6rem;
   padding: 1.25rem 1rem;
   border-radius: var(--radius-lg);
-  background: rgba(7, 11, 24, 0.6);
+  background: rgba(var(--base-rgb), 0.6);
   border: 1px solid var(--color-border);
   text-align: center;
 }
@@ -1332,7 +1332,7 @@
 .tm-local__mockup {
   padding: 1.5rem;
   border-radius: var(--radius-lg);
-  background: rgba(7, 11, 24, 0.7);
+  background: rgba(var(--base-rgb), 0.7);
   border: 1px solid rgba(194, 24, 91, 0.3);
 }
 
@@ -1342,7 +1342,7 @@
   gap: 1rem;
   margin-bottom: 1.25rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(var(--ink-rgb), 0.08);
 }
 
 .tm-local__title-box {
@@ -1395,13 +1395,13 @@
   border-radius: var(--radius-md);
   font-size: 0.8rem;
   font-weight: 700;
-  background: rgba(17, 26, 51, 0.6);
+  background: rgba(var(--base-rgb), 0.6);
   border: 1px solid var(--color-border);
   color: var(--color-text);
 }
 
 .tm-local__products {
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid rgba(var(--ink-rgb), 0.08);
   padding-top: 1rem;
 }
 
@@ -1422,7 +1422,7 @@
 .tm-local__product {
   padding: 0.35rem 0.75rem;
   border-radius: 999px;
-  background: rgba(7, 11, 24, 0.6);
+  background: rgba(var(--base-rgb), 0.6);
   border: 1px solid var(--color-border);
   font-size: 0.75rem;
   font-weight: 600;
@@ -1521,7 +1521,7 @@
   gap: 0.85rem;
   margin-bottom: 1.25rem;
   padding-bottom: 0.85rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(var(--ink-rgb), 0.08);
 }
 
 .tm-story__panel-title {
@@ -1543,7 +1543,7 @@
   gap: 0.45rem;
   padding: 0.5rem 0.9rem;
   border-radius: 999px;
-  background: rgba(7, 11, 24, 0.6);
+  background: rgba(var(--base-rgb), 0.6);
   border: 1px solid var(--color-border);
   font-size: 0.8rem;
   font-weight: 600;
@@ -1705,7 +1705,7 @@
 .tm-faq__item--open .tm-faq__chevron {
   transform: rotate(180deg);
   background: var(--tm-magenta);
-  color: #ffffff;
+  color: var(--color-heading);
 }
 
 .tm-faq__panel {
@@ -1735,7 +1735,7 @@
   font-size: clamp(0.9rem, 1.2vw, 1.025rem);
   line-height: 1.75;
   color: var(--color-text-muted);
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid rgba(var(--ink-rgb), 0.08);
   padding-top: 1rem;
 }
 

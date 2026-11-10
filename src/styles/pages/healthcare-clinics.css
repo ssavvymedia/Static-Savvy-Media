@@ -49,11 +49,11 @@
   background:
     radial-gradient(60% 70% at 50% 20%, rgba(139, 92, 246, 0.16), transparent 60%),
     radial-gradient(45% 55% at 85% 100%, rgba(34, 211, 238, 0.1), transparent 60%),
-    linear-gradient(180deg, rgba(17, 26, 51, 0.72), rgba(7, 11, 24, 0.9)),
+    linear-gradient(180deg, rgba(var(--base-rgb), 0.72), rgba(var(--base-rgb), 0.9)),
     var(--color-surface-glass);
   border: 1px solid rgba(139, 92, 246, 0.28);
   box-shadow:
-    0 30px 60px rgba(2, 6, 23, 0.55),
+    0 30px 60px rgba(var(--shadow-rgb), calc(0.55 * var(--shadow-k))),
     var(--shadow-glow);
   backdrop-filter: blur(16px);
   overflow: hidden;
@@ -77,7 +77,7 @@
   height: clamp(120px, 22vw, 170px);
   border-radius: 50%;
   background: radial-gradient(70% 70% at 50% 30%, rgba(168, 85, 247, 0.28), transparent 70%),
-    rgba(7, 11, 24, 0.7);
+    rgba(var(--base-rgb), 0.7);
   border: 1px solid rgba(139, 92, 246, 0.4);
   box-shadow:
     0 0 0 1px rgba(139, 92, 246, 0.15),
@@ -151,7 +151,7 @@
   font-weight: 800;
   letter-spacing: 0.12em;
   color: var(--color-text);
-  box-shadow: 0 8px 24px rgba(2, 6, 23, 0.5);
+  box-shadow: 0 8px 24px rgba(var(--shadow-rgb), calc(0.5 * var(--shadow-k)));
   animation: hcChipFloat 6s ease-in-out infinite;
   white-space: nowrap;
 }
@@ -182,20 +182,20 @@
 .hc-chip--whatsapp {
   bottom: 24%;
   left: 0;
-  color: #4ade80;
+  color: var(--color-success);
   border-color: rgba(74, 222, 128, 0.4);
   animation-delay: 1.2s;
 }
 
 .hc-chip--whatsapp svg {
-  color: #4ade80;
+  color: var(--color-success);
 }
 
 .hc-chip--maps {
   bottom: 16%;
   right: 0;
   color: var(--color-pink);
-  border-color: rgba(236, 72, 153, 0.4);
+  border-color: rgba(91,108,249, 0.4);
   animation-delay: 0.4s;
 }
 
@@ -206,13 +206,13 @@
 .hc-chip--appointment {
   bottom: 6%;
   left: 20%;
-  color: #fbbf24;
+  color: var(--color-star);
   border-color: rgba(251, 191, 36, 0.4);
   animation-delay: 1.6s;
 }
 
 .hc-chip--appointment svg {
-  color: #fbbf24;
+  color: var(--color-star);
 }
 
 .hc-chip--reviews {
@@ -244,10 +244,10 @@
   gap: 0.6rem;
   padding: 0.55rem 0.85rem;
   border-radius: var(--radius-md);
-  background: rgba(7, 11, 24, 0.82);
+  background: rgba(var(--base-rgb), 0.82);
   border: 1px solid rgba(139, 92, 246, 0.35);
   backdrop-filter: blur(10px);
-  box-shadow: 0 10px 24px rgba(2, 6, 23, 0.5);
+  box-shadow: 0 10px 24px rgba(var(--shadow-rgb), calc(0.5 * var(--shadow-k)));
   animation: hcChipFloat 6s ease-in-out infinite;
   transition: transform var(--transition), border-color var(--transition);
 }
@@ -548,9 +548,9 @@
   gap: 0.45rem;
   padding: 0.55rem 0.9rem;
   border-radius: var(--radius-sm);
-  background: linear-gradient(180deg, rgba(17, 26, 51, 0.85), rgba(11, 17, 36, 0.9));
+  background: linear-gradient(180deg, rgba(var(--base-rgb), 0.85), rgba(var(--base-rgb), 0.9));
   border: 1px solid var(--color-border);
-  box-shadow: 0 6px 18px rgba(2, 6, 23, 0.45);
+  box-shadow: 0 6px 18px rgba(var(--shadow-rgb), calc(0.45 * var(--shadow-k)));
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.06em;
@@ -574,8 +574,8 @@
 }
 
 .hc-node--hot {
-  border-color: rgba(236, 72, 153, 0.5);
-  box-shadow: 0 0 18px rgba(236, 72, 153, 0.3);
+  border-color: rgba(91,108,249, 0.5);
+  box-shadow: 0 0 18px rgba(91,108,249, 0.3);
 }
 
 .hc-node--hot .hc-node__icon {
@@ -859,7 +859,7 @@
   background:
     radial-gradient(50% 60% at 15% 15%, rgba(139, 92, 246, 0.12), transparent 60%),
     radial-gradient(40% 50% at 85% 85%, rgba(34, 211, 238, 0.1), transparent 60%),
-    linear-gradient(180deg, #0b1124, #070b18);
+    linear-gradient(180deg, var(--color-bg-secondary), var(--color-bg));
   border-block: 1px solid rgba(139, 92, 246, 0.12);
 }
 
@@ -878,7 +878,7 @@
   padding: clamp(1.5rem, 2.5vw, 2.25rem);
   border-radius: var(--radius-lg);
   border: 1px solid var(--color-border);
-  background: rgba(7, 11, 24, 0.6);
+  background: rgba(var(--base-rgb), 0.6);
   backdrop-filter: blur(14px);
   box-shadow: var(--shadow-card);
 }
@@ -889,7 +889,7 @@
   gap: 0.75rem;
   margin-bottom: 1.25rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(var(--ink-rgb), 0.06);
 }
 
 .hc-gbp__mock-avatar {
@@ -933,7 +933,7 @@
   align-items: center;
   gap: 0.65rem;
   padding: 0.65rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(var(--ink-rgb), 0.06);
   font-size: clamp(0.85rem, 1.1vw, 0.95rem);
   line-height: 1.5;
   color: var(--color-text);
@@ -959,7 +959,7 @@
   background:
     radial-gradient(50% 60% at 15% 15%, rgba(139, 92, 246, 0.12), transparent 60%),
     radial-gradient(40% 50% at 85% 85%, rgba(34, 211, 238, 0.1), transparent 60%),
-    linear-gradient(180deg, #0b1124, #070b18);
+    linear-gradient(180deg, var(--color-bg-secondary), var(--color-bg));
   border-block: 1px solid rgba(139, 92, 246, 0.12);
 }
 
@@ -1188,7 +1188,7 @@
   padding: clamp(1.5rem, 2.5vw, 2.25rem);
   border-radius: var(--radius-lg);
   border: 1px solid var(--color-border);
-  background: rgba(7, 11, 24, 0.6);
+  background: rgba(var(--base-rgb), 0.6);
   backdrop-filter: blur(14px);
   box-shadow: var(--shadow-card);
 }
@@ -1196,13 +1196,13 @@
 .hc-compare__panel--generic {
   border-color: rgba(59, 130, 246, 0.35);
   background: radial-gradient(80% 120% at 50% 0%, rgba(59, 130, 246, 0.1), transparent 70%),
-    rgba(7, 11, 24, 0.6);
+    rgba(var(--base-rgb), 0.6);
 }
 
 .hc-compare__panel--healthcare {
   border-color: rgba(139, 92, 246, 0.45);
   background: radial-gradient(80% 120% at 50% 0%, rgba(139, 92, 246, 0.16), transparent 70%),
-    rgba(7, 11, 24, 0.6);
+    rgba(var(--base-rgb), 0.6);
   box-shadow: 0 0 30px rgba(139, 92, 246, 0.25);
 }
 
@@ -1259,7 +1259,7 @@
   font-weight: 900;
   letter-spacing: 0.1em;
   color: var(--color-pink);
-  text-shadow: 0 0 16px rgba(236, 72, 153, 0.6);
+  text-shadow: 0 0 16px rgba(91,108,249, 0.6);
 }
 
 /* ====================================================

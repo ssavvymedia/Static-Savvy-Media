@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { FOOTER_LINKS } from '../../data/navigation.js'
-import { SITE_NAME, SOCIAL_LINKS, WHATSAPP_NUMBER, WHATSAPP_MESSAGE, MALAYSIA_OFFICE } from '../../utils/constants.js'
+import { SITE_NAME, SOCIAL_LINKS, WHATSAPP_NUMBER, WHATSAPP_MESSAGE, MALAYSIA_OFFICE, CONTACT_EMAIL } from '../../utils/constants.js'
 import { useActiveRoute } from '../../hooks/useActiveRoute.js'
 import { cx, buildWhatsAppLink } from '../../utils/helpers.js'
 import logoImg from '../../assets/images/logo/SSMLOGO.webp'
@@ -85,7 +85,9 @@ export default function Footer() {
         <div className="site-footer__grid">
           <div className="site-footer__brand">
             <Link to="/" className="site-footer__logo" aria-label={`${SITE_NAME}, home`}>
-              <img src={logoImg} width={480} height={320} loading="lazy" decoding="async" alt={SITE_NAME} className="site-footer__logo-img" />
+              <span className="site-footer__logo-plate">
+                <img src={logoImg} width={480} height={320} loading="lazy" decoding="async" alt={SITE_NAME} className="site-footer__logo-img" />
+              </span>
             </Link>
 
             {/* Visible contact lines on every page (Malaysia pages included): one WhatsApp line
@@ -93,7 +95,15 @@ export default function Footer() {
             <ul className="site-footer__contact" aria-label="Contact Static Savvy Media">
               <li>WhatsApp / call (India HQ): <a href={buildWhatsAppLink(WHATSAPP_NUMBER, WHATSAPP_MESSAGE)} target="_blank" rel="noopener noreferrer">{WHATSAPP_NUMBER}</a></li>
               <li>Malaysia office, call: <a href={MALAYSIA_OFFICE.phoneHref}>{MALAYSIA_OFFICE.phoneDisplay}</a></li>
+              <li>Email: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a></li>
             </ul>
+
+            {/* Offices, Madurai HQ first. */}
+            <address className="site-footer__offices">
+              <p><strong>Madurai (HQ)</strong><br />2nd Floor, 4/3, Srinivasa Perumal Koil St, Kamarajar Salai, Madurai, Tamil Nadu 625009</p>
+              <p><strong>Thoothukudi</strong><br />90, Peria Kadai St, Matha Koil, Thoothukudi, Tamil Nadu 628001</p>
+              <p><strong>Rawang, Malaysia</strong><br />{MALAYSIA_OFFICE.streetAddress}, {MALAYSIA_OFFICE.postalCode} {MALAYSIA_OFFICE.addressLocality}, {MALAYSIA_OFFICE.addressRegion}</p>
+            </address>
 
             <div className="site-footer__socials">
               <a

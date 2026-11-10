@@ -141,6 +141,8 @@ export default function ContactFormSection() {
 
   return (
     <section id="enquiry" className="section section--alt contact-form-section">
+      {/* #form: target of the header "Get a Growth Audit" button until the Growth Audit page ships (PR-F). */}
+      <span id="form" className="scroll-anchor" aria-hidden="true" />
       <div className="container">
         <ScrollReveal>
           <div className="contact-form-container glass-card">

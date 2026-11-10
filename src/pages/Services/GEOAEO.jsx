@@ -345,8 +345,8 @@ export default function GEOAEO() {
 
         /* --- AEO Signal Card Icons --- */
         .geo-aeo .geo-aeo-signals__grid > *:nth-child(1) .geo-aeo-signal-card__icon {
-          background: linear-gradient(135deg, #ec4899, #db2777) !important;
-          box-shadow: 0 0 18px rgba(236, 72, 153, 0.45) !important;
+          background: linear-gradient(135deg, #5b6cf9, #4f46e5) !important;
+          box-shadow: 0 0 18px rgba(91,108,249, 0.45) !important;
         }
 
         .geo-aeo .geo-aeo-signals__grid > *:nth-child(2) .geo-aeo-signal-card__icon {

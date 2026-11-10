@@ -3,6 +3,7 @@ import { createRoot, hydrateRoot } from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
 import './index.css'
 import App from './App.jsx'
+import { preloadPages } from './routes/lazyPage.js'
 
 /* After a deploy, a tab (or a cached HTML shell) can still reference JS/CSS chunks that no longer
  * exist. Vite fires vite:preloadError when such a chunk fails to load: reload once to get the new
@@ -42,7 +43,10 @@ if (root.dataset.ssr && root.dataset.ssr === path) {
       .catch(() => {})
       .then(() => hydrateRoot(root, app))
   } else {
-    hydrateRoot(root, app)
+    /* Code-split routes: load this page's chunk (preloaded in <head>) first, so hydration matches the
+     * server HTML in one pass instead of suspending. */
+    const pages = root.dataset.page ? root.dataset.page.split(',') : []
+    preloadPages(pages).catch(() => {}).then(() => hydrateRoot(root, app))
   }
 } else {
   root.textContent = ''

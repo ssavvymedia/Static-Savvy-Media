@@ -69,6 +69,14 @@ export default defineConfig(({ mode }) => {
         },
       },
     ],
+    build: {
+      /* One stylesheet for the whole site (as before route splitting): page chunks are JS only, so a
+       * prerendered page never paints unstyled while its chunk loads. */
+      cssCodeSplit: false,
+      /* dist/.vite/manifest.json: prerender-heads.mjs maps each route's page module to its chunk
+       * (modulepreload), then deletes the manifest from dist. */
+      manifest: true,
+    },
     resolve: {
       alias: {
         '@': fileURLToPath(new URL('./src', import.meta.url)),
