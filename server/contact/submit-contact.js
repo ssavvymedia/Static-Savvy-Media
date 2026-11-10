@@ -88,6 +88,9 @@ export async function handleContactSubmission(payload, options = {}) {
 
   const { name, email, phone, service, message, website, recaptchaToken, sourcePagePath, sourcePageUrl, sourcePageTitle } =
     payload
+  // Growth Audit form (GrowthAuditForm.jsx): phone-first, so email and message are optional,
+  // consent is required, and the qualifying fields travel in the email as extra rows.
+  const isAudit = payload.formType === 'growth_audit'
 
   // Honeypot: a hidden field real visitors never fill in. Fake a success so bots
   // don't learn the trap exists.
@@ -112,11 +115,21 @@ export async function handleContactSubmission(payload, options = {}) {
   const trimmedMessage = String(message || '').trim()
 
   if (trimmedName.length < 2 || trimmedName.length > 100) errors.name = 'Please enter a valid name.'
-  if (!EMAIL_REGEX.test(trimmedEmail) || trimmedEmail.length > 150) errors.email = 'Please enter a valid email address.'
+  if (isAudit ? trimmedEmail && (!EMAIL_REGEX.test(trimmedEmail) || trimmedEmail.length > 150) : !EMAIL_REGEX.test(trimmedEmail) || trimmedEmail.length > 150) {
+    errors.email = 'Please enter a valid email address.'
+  }
   if (!PHONE_REGEX.test(trimmedPhone)) errors.phone = 'Please enter a valid phone number.'
-  if (trimmedService.length < 2 || trimmedService.length > 100) errors.service = 'Please select a service.'
-  if (trimmedMessage.length < 10 || trimmedMessage.length > 3000) {
+  if (!isAudit && (trimmedService.length < 2 || trimmedService.length > 100)) errors.service = 'Please select a service.'
+  if (isAudit ? trimmedMessage.length > 3000 : trimmedMessage.length < 10 || trimmedMessage.length > 3000) {
     errors.message = 'Message should be between 10 and 3000 characters.'
+  }
+  const audit = isAudit ? auditFields(payload) : null
+  if (isAudit) {
+    if (!audit.business) errors.business = 'Please enter your business name.'
+    if (!audit.industry) errors.industry = 'Please select your industry.'
+    if (!audit.budget) errors.budget = 'Please select a budget range.'
+    if (!audit.city) errors.city = 'Please select your city.'
+    if (payload.consent !== true) errors.consent = 'Please agree to be contacted about your audit.'
   }
 
   if (Object.keys(errors).length > 0) {
@@ -136,10 +149,12 @@ export async function handleContactSubmission(payload, options = {}) {
 
   const { subject, html, text } = buildEnquiryEmail({
     name: trimmedName,
-    email: trimmedEmail,
+    email: trimmedEmail || 'Not given',
     phone: trimmedPhone,
-    service: trimmedService,
-    message: trimmedMessage,
+    service: isAudit ? 'Growth Audit' : trimmedService,
+    message: trimmedMessage || (isAudit ? 'Growth Audit request (no message added).' : ''),
+    extra: audit ? audit.rows : [],
+    formType: isAudit ? 'growth_audit' : 'contact',
     submittedAt,
     sourcePagePath,
     sourcePageUrl,
@@ -154,7 +169,7 @@ export async function handleContactSubmission(payload, options = {}) {
     await transporter.sendMail({
       from: `"${mailFromName}" <${mailFrom}>`,
       to: env.ADMIN_EMAIL,
-      replyTo: trimmedEmail,
+      ...(trimmedEmail ? { replyTo: trimmedEmail } : {}),
       subject,
       text,
       html,
@@ -174,6 +189,36 @@ export async function handleContactSubmission(payload, options = {}) {
     success: true,
     message: 'Thank you. Your request has been received — our team will get back to you shortly.',
   })
+}
+
+const clip = (v, max = 200) => String(v ?? '').trim().slice(0, max)
+
+// Qualifying + attribution fields sent by the Growth Audit form. Everything is optional except
+// the four checked above; values are clipped so a crafted payload cannot bloat the email.
+function auditFields(p) {
+  const f = {
+    business: clip(p.business, 150),
+    siteUrl: clip(p.siteUrl, 300),
+    industry: clip(p.industry, 80),
+    budget: clip(p.budget, 80),
+    city: clip(p.city, 80),
+  }
+  const utm = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid']
+    .map((k) => [k, clip(p[k], 150)])
+    .filter(([, v]) => v)
+  const rows = [
+    ['Business', f.business],
+    ['Website / GBP', f.siteUrl || 'Not given'],
+    ['Industry', f.industry],
+    ['Budget', f.budget],
+    ['City', f.city],
+    ['Consent', p.consent === true ? 'Yes, agreed to be contacted' : 'No'],
+    ['Form', clip(p.formId, 60) || 'growth_audit'],
+    ['Landing page', clip(p.landingPage, 300) || 'Not captured'],
+    ['Referrer', clip(p.referrer, 300) || 'Direct / none'],
+    ...utm.map(([k, v]) => [k, v]),
+  ]
+  return { ...f, rows }
 }
 
 // Parses a raw JSON request body. Returns undefined for invalid JSON.

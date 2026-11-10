@@ -25,4 +25,19 @@ export const HOME_FAQS = [
     answer:
       'Yes. Several of our digital marketing services are eligible for MDEC and SMECorp grant funding. We help qualifying Malaysian clients navigate the application process. Contact us on WhatsApp for details specific to your business.',
   },
+  {
+    question: 'How soon will I see results?',
+    answer:
+      'It depends on the channel. Google Business Profile fixes can lift Google Maps visibility within weeks. Rankings for competitive keywords usually take three to six months. Google Ads can bring enquiries within days of launch. We agree what to measure first in your Growth Audit.',
+  },
+  {
+    question: 'Do you guarantee rankings or a number of leads?',
+    answer:
+      'No, and be careful with anyone who does. Google and AI engines decide rankings. We commit to the agreed monthly work, honest reporting from your own Google accounts, and a clear plan for what we do next.',
+  },
+  {
+    question: 'What does the free Growth Audit include?',
+    answer:
+      'A review of your website and SEO health, your Google Business Profile, how you appear in AI answers (ChatGPT, Perplexity, Google AI Overviews) and a snapshot of the competitors you lose enquiries to, with a prioritised plan. Our team prepares it by hand; it is not an automated score.',
+  },
 ]

@@ -233,7 +233,7 @@ const FAQS = [
 ]
 
 const RELATED_SERVICES = [
-  { name: 'SEO', path: '/services/seo/' },
+  { name: 'SEO Company in Madurai', path: '/services/seo/madurai/' },
   { name: 'Local SEO', path: '/services/local-seo/' },
   { name: 'Website Design & Development', path: '/services/website-design-development/' },
   { name: 'Google Ads', path: '/services/google-ads/' },

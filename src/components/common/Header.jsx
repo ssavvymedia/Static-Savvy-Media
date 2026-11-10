@@ -49,7 +49,7 @@ export default function Header() {
         <div className="site-header__actions">
           <ThemeToggle />
           {/* Book a Consultation: WhatsApp for now; Growth Audit form lands with PR-F (contact form until then). */}
-          <a href={whatsappHref} target="_blank" rel="noopener noreferrer" className="site-header__cta site-header__cta--ghost">Book a Consultation</a>
+          <a href={whatsappHref} target="_blank" rel="noopener noreferrer" className="site-header__cta site-header__cta--ghost" data-track="consultation">Book a Consultation</a>
           <Link to="/contact/#form" className="site-header__cta site-header__cta--primary">Get a Growth Audit</Link>
           <button
             type="button"

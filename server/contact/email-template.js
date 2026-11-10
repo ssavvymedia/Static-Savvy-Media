@@ -13,6 +13,7 @@ function escapeHtml(value = '') {
 }
 
 const SITE_URL = 'https://www.staticsavvymedia.com'
+const EMAIL_OK = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
 // Friendly label for a route path, so the email reads "Contact Page" instead
 // of a raw "/contact/". Falls back to the raw path for anything not listed.
@@ -37,7 +38,12 @@ export function buildEnquiryEmail({
   sourcePagePath,
   sourcePageUrl,
   sourcePageTitle,
+  extra = [],
+  formType = 'contact',
 }) {
+  const isAudit = formType === 'growth_audit'
+  const hasEmail = EMAIL_OK.test(String(email || ''))
+  const business = (extra.find(([k]) => k === 'Business') || [])[1]
   const safeName = escapeHtml(name)
   const safeEmail = escapeHtml(email)
   const safePhone = escapeHtml(phone)
@@ -90,12 +96,12 @@ export function buildEnquiryEmail({
 
             <!-- Header -->
             <tr>
-              <td style="background:linear-gradient(135deg,#8b5cf6 0%,#7c3aed 45%,#db2777 100%);background-color:#8b5cf6;padding:28px 32px;">
+              <td style="background:linear-gradient(135deg,#8b5cf6 0%,#7c3aed 45%,#2f6bf2 100%);background-color:#8b5cf6;padding:28px 32px;">
                 <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
                   <tr>
                     <td style="font-family:Arial,Helvetica,sans-serif;color:#ffffff;">
                       <div style="font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;opacity:.85;margin-bottom:6px;">Static Savvy Media</div>
-                      <div style="font-size:22px;font-weight:800;">New Website Enquiry</div>
+                      <div style="font-size:22px;font-weight:800;">${isAudit ? 'New Growth Audit Request' : 'New Website Enquiry'}</div>
                     </td>
                     <td align="right" style="vertical-align:top;">
                       <span style="display:inline-block;background:rgba(255,255,255,0.18);color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:6px 12px;border-radius:999px;">New Lead</span>
@@ -129,6 +135,7 @@ export function buildEnquiryEmail({
                   ${row('Phone', `<a href="tel:${safePhone.replace(/[^0-9+]/g, '')}" style="color:#7c3aed;text-decoration:none;font-weight:600;">${safePhone}</a>`)}
                   ${row('Service', `<span style="display:inline-block;background:#eef2ff;color:#4338ca;font-weight:700;padding:4px 10px;border-radius:999px;font-size:13px;">${safeService}</span>`)}
                   ${row('Message', safeMessageHtml)}
+                  ${extra.map(([label, value]) => row(escapeHtml(label), escapeHtml(value))).join('')}
                   ${row('Submitted', `${escapeHtml(submittedAt)} IST`)}
                 </table>
               </td>
@@ -138,12 +145,13 @@ export function buildEnquiryEmail({
             <tr>
               <td style="padding:0 32px 32px 32px;">
                 <table role="presentation" cellpadding="0" cellspacing="0"><tr>
+${hasEmail ? `
                   <td style="padding-right:12px;">
                     <a href="mailto:${safeEmail}?subject=Re: Your enquiry to Static Savvy Media"
-                       style="display:inline-block;background:linear-gradient(135deg,#8b5cf6,#db2777);background-color:#8b5cf6;color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:700;text-decoration:none;padding:12px 24px;border-radius:999px;">
+                       style="display:inline-block;background:linear-gradient(135deg,#8b5cf6,#2f6bf2);background-color:#8b5cf6;color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:700;text-decoration:none;padding:12px 24px;border-radius:999px;">
                       Email ${safeName.split(' ')[0] || 'Lead'}
                     </a>
-                  </td>${whatsappHref ? `
+                  </td>` : ''}${whatsappHref ? `
                   <td>
                     <a href="${whatsappHref}"
                        style="display:inline-block;background:#25d366;color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:700;text-decoration:none;padding:12px 24px;border-radius:999px;">
@@ -184,11 +192,13 @@ Service: ${service}
 
 Message:
 ${message}
-
+${extra.length ? `\n${extra.map(([k, v]) => `${k}: ${v}`).join('\n')}\n` : ''}
 Submitted: ${submittedAt} IST`
 
   return {
-    subject: `New Enquiry: ${service} — ${name} (via ${pageLabel(sourcePagePath)})`,
+    subject: isAudit
+      ? `New Growth Audit: ${business || name} — ${name} (via ${pageLabel(sourcePagePath)})`
+      : `New Enquiry: ${service} — ${name} (via ${pageLabel(sourcePagePath)})`,
     html,
     text,
   }

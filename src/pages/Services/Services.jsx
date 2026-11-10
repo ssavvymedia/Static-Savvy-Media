@@ -57,8 +57,8 @@ const colorStyles = {
     boxShadow: '0 0 15px rgba(249, 115, 22, 0.35)',
   },
   'social-media-marketing': {
-    background: 'linear-gradient(135deg, #ec4899, #db2777)',
-    boxShadow: '0 0 15px rgba(236, 72, 153, 0.35)',
+    background: 'linear-gradient(135deg, #6d5dfc, #2f6bf2)',
+    boxShadow: '0 0 15px rgba(47, 107, 242, 0.35)',
   },
   'website-design-development': {
     background: 'linear-gradient(135deg, #06b6d4, #0891b2)',

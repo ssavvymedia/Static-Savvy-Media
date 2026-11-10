@@ -154,15 +154,15 @@ export const seoConfig = {
     },
   },
   "/services/seo": {
-    title: "SEO Services — Search Engine Optimization | Static Savvy Media",
+    title: "SEO Services for India & Malaysia | Static Savvy Media",
     slug: "services/seo",
     seo: {
-      title: "SEO Services — Search Engine Optimization | Static Savvy Media",
+      title: "SEO Services for India & Malaysia | Static Savvy Media",
       description:
-        "Drive sustainable organic growth with technical SEO, keyword strategy, high-intent content, and link building from Static Savvy Media.",
+        "SEO services for businesses across India, Malaysia, Singapore & the UAE: technical SEO, keywords, content and AI search (GEO/AEO), reported monthly from GSC.",
       canonical: `${BASE_URL}/services/seo`,
       focusKeyword: "SEO services",
-      ogTitle: "SEO Services — Search Engine Optimization | Static Savvy Media",
+      ogTitle: "SEO Services for India & Malaysia | Static Savvy Media",
       ogDescription:
         "Drive sustainable organic growth with technical SEO, keyword strategy, high-intent content, and link building.",
       ogImage: `${BASE_URL}/og/services-01seo.jpg`,
@@ -1500,7 +1500,7 @@ export const seoConfig = {
     seo: {
       title: "Digital Marketing Companies in Madurai Compared (2026): Services, Focus & Ratings",
       description:
-        "A plain comparison of well-known digital marketing companies in Madurai: services, focus, locations and Google ratings as seen in October 2026, plus how to choose.",
+        "Madurai digital marketing companies compared (Nov 2026): services, focus, office areas and dated Google ratings for 14 agencies, plus how to choose and typical costs.",
       canonical: `${BASE_URL}/blog/top-digital-marketing-companies-in-madurai`,
       ogImage: `${BASE_URL}/og/blog/top-digital-marketing-companies-in-madurai.jpg`,
       robots: "index,follow",

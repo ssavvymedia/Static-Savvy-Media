@@ -16,11 +16,16 @@ const PHONE = '+91 99440 40345'
 export const ORG_ID = `${HOST}/#organization`
 export const MADURAI_ID = `${HOST}/locations/madurai/#localbusiness`
 
+/* v2 hero (approved 10 Nov 2026). The H1 keeps the Madurai head term first: the homepage owns
+ * "digital marketing agency in Madurai" (gap-audit P0 #2); /locations/madurai/ is the HQ hub and
+ * /services/seo/madurai/ owns "SEO company in Madurai". */
 export const HOME_H1 = {
-  lead: 'Digital Marketing Agency in Madurai,',
-  markets: 'Serving India, Malaysia, Singapore & Dubai',
+  kw: 'Digital Marketing Agency in Madurai',
+  lead: 'Turn Search Visibility into',
+  grad: 'Qualified Leads',
+  tail: '& Real Business Growth',
 }
-export const HOME_H1_TEXT = `${HOME_H1.lead} ${HOME_H1.markets}`
+export const HOME_H1_TEXT = `${HOME_H1.kw}: ${HOME_H1.lead} ${HOME_H1.grad} ${HOME_H1.tail}`
 
 export const HOME_INTRO =
   'Static Savvy Media is a Madurai-headquartered digital marketing agency, founded in 2021, that helps businesses get found on Google, Google Maps and AI answer engines like ChatGPT and Perplexity. We run SEO, Local SEO, Google Ads, social media and websites for clients across Tamil Nadu, Malaysia, Singapore and Dubai, with offices in Madurai, Thoothukudi and Rawang (Selangor).'

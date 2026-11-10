@@ -71,7 +71,9 @@ export function formatTwoColorTitle(title) {
     return <span className="hero__title-white">{part1}</span>
   }
 
-  const needSpace = (!part1.endsWith(' ') && !part2.startsWith(' '))
+  // part2 is trimmed when rendered, so a leading space there must become a real space between the spans
+  // ("Agency in Madurai, Static…" used to render as "Madurai,Static").
+  const needSpace = !part1.endsWith(' ') && part2.startsWith(' ')
 
   return (
     <>

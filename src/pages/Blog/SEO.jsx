@@ -1,4 +1,5 @@
 import RelatedReading from '../../components/blog/RelatedReading.jsx'
+import { AuditBlock } from '../../components/v2/V2Blocks.jsx'
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import Breadcrumbs from '../../components/common/Breadcrumbs.jsx'
@@ -451,7 +452,9 @@ export default function SEO() {
                 <p>{QUICK_ANSWER}</p>
                 <p style={{ marginTop: '0.75rem', marginBottom: 0 }}>
                   Next: use the deliverables list, red flags and checklist below, then compare written proposals. For Madurai SEO execution details, see our{' '}
-                  <Link to="/services/seo/madurai/">SEO services in Madurai</Link> (HQ) page.
+                  <Link to="/services/seo/madurai/">SEO company in Madurai</Link> page, or visit our{' '}
+                  <Link to="/locations/madurai/">Madurai HQ office</Link>.{' '}
+                  <a href="#audit">Want a second opinion? Get a free SEO audit</a>.
                 </p>
               </div>
 
@@ -653,7 +656,7 @@ export default function SEO() {
               <p>
                 Static Savvy Media is headquartered in Madurai (Kamarajar Salai) with additional offices in Thoothukudi and Rawang, Malaysia. GEO and AEO sit alongside traditional SEO and local SEO — not as a bolt-on slogan. We quote after a free review, keep plans monthly with no lock-in sales pitch, and keep your accounts in your name. Explore{' '}
                 <Link to="/services/seo/madurai/">SEO services from our Madurai HQ</Link>,{' '}
-                <Link to="/locations/madurai/">the Madurai agency page</Link>, or the{' '}
+                <Link to="/locations/madurai/">digital marketing services in Madurai (our HQ)</Link>, or the{' '}
                 <Link to="/blog/affordable-seo-company-madurai-pricing/">Madurai SEO cost guide</Link> for market ranges and plan shapes.
               </p>
 
@@ -741,10 +744,17 @@ export default function SEO() {
         </div>
       </section>
 
+      <AuditBlock
+        formId="growth_audit_seo_guide_madurai"
+        eyebrow="Free SEO audit · Madurai"
+        title="Want an SEO agency’s honest view of your site? Get a free audit."
+        lead="Use this checklist on us too. We review your website, Google Business Profile, rankings for your main Madurai searches and AI search presence, then send a prioritised plan, prepared by our Madurai team. No obligation."
+      />
+
       {/* ============================================================
           FINAL CTA
           ============================================================ */}
-      <RelatedReading links={[['/services/seo/madurai/', 'SEO services in Madurai'], ['/services/local-seo/madurai/', 'Local SEO in Madurai'], ['/blog/affordable-seo-company-madurai-pricing/', 'Affordable SEO in Madurai: 2026 prices'], ['/blog/how-long-does-seo-take-madurai/', 'How long does SEO take?'], ['/blog/is-seo-worth-it-small-business-madurai/', 'Is SEO worth it for a small business?'], ['/contact/', 'Get a custom quote'], ['/locations/madurai/', 'Digital marketing agency in Madurai']]} />
+      <RelatedReading links={[['/services/seo/madurai/', 'SEO company in Madurai'], ['/services/local-seo/madurai/', 'Local SEO in Madurai'], ['/blog/affordable-seo-company-madurai-pricing/', 'Affordable SEO in Madurai: 2026 prices'], ['/blog/how-long-does-seo-take-madurai/', 'How long does SEO take?'], ['/blog/is-seo-worth-it-small-business-madurai/', 'Is SEO worth it for a small business?'], ['/contact/', 'Get a custom quote'], ['/locations/madurai/', 'Digital marketing services in Madurai (HQ)']]} />
 
       <CTASection
         eyebrow="SEO Services"

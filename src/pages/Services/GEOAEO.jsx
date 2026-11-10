@@ -252,8 +252,8 @@ const aeoCardStyles = {
     boxShadow: '0 0 15px rgba(6, 182, 212, 0.35)',
   },
   link: {
-    background: 'linear-gradient(135deg, #ec4899, #db2777)',
-    boxShadow: '0 0 15px rgba(236, 72, 153, 0.35)',
+    background: 'linear-gradient(135deg, #6d5dfc, #2f6bf2)',
+    boxShadow: '0 0 15px rgba(47, 107, 242, 0.35)',
   },
 }
 

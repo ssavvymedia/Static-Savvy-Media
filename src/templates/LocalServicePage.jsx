@@ -6,6 +6,7 @@ import { formatTwoColorTitle } from '../components/hero/HeroSection.jsx'
 import FAQSection from '../components/sections/FAQSection.jsx'
 import CTASection from '../components/sections/CTASection.jsx'
 import QuoteCTA from '../components/sections/QuoteCTA.jsx'
+import { AuditBlock } from '../components/v2/V2Blocks.jsx'
 import { ScrollReveal } from '../components/animations/ScrollReveal.jsx'
 import { setSeo } from '../utils/seo.js'
 import { faqPageSchema, breadcrumbListSchema } from '../utils/schema.js'
@@ -143,7 +144,17 @@ export default function LocalServicePage({ content }) {
                 {sec.subtitle && <p className="section-heading__subtitle">{sec.subtitle}</p>}
               </div>
             </ScrollReveal>
-            {sec.kind === 'checks' ? (
+            {sec.kind === 'table' ? (
+              <div className="hv2-table-wrap">
+                <table className="hv2-table">
+                  {sec.caption && <caption className="hv2-sr">{sec.caption}</caption>}
+                  <thead><tr>{sec.table.head.map((h) => <th key={h} scope="col">{h}</th>)}</tr></thead>
+                  <tbody>{sec.table.rows.map((r) => <tr key={r[0]}>{r.map((c, i) => <td key={i}>{c}</td>)}</tr>)}</tbody>
+                </table>
+              </div>
+            ) : sec.kind === 'text' ? (
+              <div className="seo-mdu-text">{sec.paragraphs.map((p) => <p key={p.slice(0, 40)} style={{ marginBottom: '1rem', maxWidth: '75ch' }}>{p}</p>)}</div>
+            ) : sec.kind === 'checks' ? (
               <div className="seo-mdu-measurement-grid">
                 {sec.items.map((item) => (
                   <div key={item} className="seo-mdu-measurement-item glass-card">
@@ -176,6 +187,8 @@ export default function LocalServicePage({ content }) {
       ))}
 
       {content.contactBlock}
+
+      {content.auditForm && <AuditBlock {...content.auditForm} />}
 
       <section className="section seo-mdu-related-section">
         <div className="container">

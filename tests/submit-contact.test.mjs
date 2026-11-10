@@ -190,6 +190,53 @@ test('reCAPTCHA is enforced when RECAPTCHA_SECRET_KEY is set', async () => {
   }
 })
 
+const audit = {
+  formType: 'growth_audit',
+  formId: 'growth_audit_home',
+  name: 'Test Person',
+  phone: '+91 98765 43210',
+  email: '',
+  business: 'Test Clinic',
+  siteUrl: 'https://example.com',
+  industry: 'Healthcare & Medical',
+  budget: '₹20,000 – ₹35,000 / month',
+  city: 'Madurai',
+  consent: true,
+  website: '',
+  utm_source: 'google',
+  utm_campaign: 'audit-test',
+  sourcePagePath: '/',
+  sourcePageUrl: 'https://www.staticsavvymedia.com/',
+  sourcePageTitle: 'Home',
+}
+
+test('growth audit: emails qualifying fields without an email address', async () => {
+  const before = messages.length
+  const r = await call('POST', JSON.stringify(audit))
+  assert.equal(r.status, 200)
+  assert.equal(r.json.success, true)
+  assert.equal(messages.length, before + 1)
+  const data = messages.at(-1).data
+  assert.match(data, /Growth Audit/)
+  assert.match(data, /Test Clinic/)
+  assert.match(data, /Healthcare/)
+  assert.match(data, /audit-test/)
+})
+
+test('growth audit: consent and qualifying fields are required', async () => {
+  const r = await call('POST', JSON.stringify({ ...audit, consent: false, industry: '', budget: '', city: '', business: '' }))
+  assert.equal(r.status, 400)
+  assert.equal(r.json.code, 'VALIDATION_ERROR')
+  for (const k of ['consent', 'industry', 'budget', 'city', 'business']) assert.ok(r.json.errors[k], k)
+})
+
+test('growth audit: honeypot still fakes success and sends nothing', async () => {
+  const before = messages.length
+  const r = await call('POST', JSON.stringify({ ...audit, website: 'http://spam.example' }))
+  assert.equal(r.status, 200)
+  assert.equal(messages.length, before)
+})
+
 test('missing SMTP config returns 502 CONFIG_ERROR', async () => {
   const saved = process.env.SMTP_PASS
   delete process.env.SMTP_PASS

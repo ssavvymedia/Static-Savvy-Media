@@ -39,7 +39,7 @@ const SERVICES = [
     title: 'SEO for Madurai Textile Businesses',
     icon: 'search',
     color: 'icon-badge--magenta',
-    path: '/services/seo/',
+    path: '/services/seo/madurai/',
     text: 'Local and regional keyword targeting specific to your industry category and buyer search patterns in Tamil Nadu and Malaysia.',
   },
   {

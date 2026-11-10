@@ -17,12 +17,12 @@ import {
   WHATSAPP_NUMBER,
   WHATSAPP_MESSAGE,
   SITE_URL,
-  GOOGLE_TRUST_LINE,
 } from '../../../utils/constants.js'
 import GoogleReviewsSection from '../../../components/sections/GoogleReviewsSection.jsx'
 import { pickReviews, GBP_REVIEW_SUMMARY } from '../../../data/googleReviews.js'
 import { GBP_MAPS } from '../../../data/sameAs.js'
 import '../../../styles/pages/seo-madurai.css'
+import { AnswerFirst, AuditBlock, MarketRangeTable, REVIEW_PROOF } from '../../../components/v2/V2Blocks.jsx'
 
 /* ============================================================
    CONTENT, SEO Madurai
@@ -387,12 +387,12 @@ const FAQS = [
   {
     question: 'How much does SEO cost in Madurai?',
     answer:
-      'It depends on scope, competition and how much content your site needs. We offer three monthly plans: Google Business Profile management with 12 posts, GBP plus website SEO with 4 blogs, and GBP plus website SEO, AEO and GEO, with no minimum contract term. Each is quoted after a free review of your website and Google Business Profile. Message us on WhatsApp at +91 99440 40345 or send an enquiry for a custom quote.',
+      'When we checked published Madurai SEO packages in late October 2026, the general market range was about ₹8,000–₹15,000 a month for local or starter SEO, ₹15,000–₹25,000 for growth plans and ₹25,000–₹40,000+ for competitive or multi-location work. These are market ranges, not our prices. Static Savvy Media quotes after a free audit of your website and Google Business Profile, with no minimum contract term.',
   },
   {
     question: 'Who is the best SEO company in Madurai?',
     answer:
-      'The best SEO company in Madurai for you is the one that shows its process, gives you a clear written quote, reports on enquiries rather than just rankings, and never promises guaranteed positions or sells bulk links. Static Savvy Media is a Madurai-based SEO company rated 4.9★ from 106 Google reviews; compare us on those criteria alongside other agencies before you decide.',
+      'There is no single best SEO company in Madurai for every business. It depends on whether you need Google Maps, website SEO, AI search or mainly ads. Static Savvy Media is a Madurai SEO company at Kamarajar Salai since 2021, rated 4.9★ from 106 Google reviews (Nov 2026), strongest in website SEO, Local SEO and Google Business Profile, and AI search (GEO/AEO). If you mainly want Google Ads, an ads-first specialist may suit you better. Compare any agency, including us, on a written audit, a clear quote, reporting on enquiries from your own Google accounts, and no guaranteed rankings.',
   },
   {
     question: 'Can SEO help local businesses in Madurai?',
@@ -441,6 +441,16 @@ const CTA = {
 /* ============================================================
    COMPONENT
    ============================================================ */
+
+/* Answer-first (40–60 words) for AI answers; /services/seo/madurai/ owns "SEO company in Madurai". */
+const SEO_ANSWER =
+  'Static Savvy Media is an SEO company headquartered in Madurai (Kamarajar Salai) since 2021, rated 4.9★ from 106 Google reviews (Nov 2026). We run technical, on-page, content and local SEO plus AI search (GEO/AEO) for Madurai businesses, report calls and enquiries from your own Google accounts, quote after a free audit and never guarantee rankings.'
+
+const SEO_MARKET_RANGES = [
+  ['Starter / local SEO', '₹8,000 – ₹15,000 / month', 'Small sites, one location, a focused set of Madurai keywords'],
+  ['Growth SEO', '₹15,000 – ₹25,000 / month', 'Several services, regular content, more competitive keywords'],
+  ['Competitive / advanced SEO', '₹25,000 – ₹40,000+ / month', 'Competitive industries, large or multi-location sites, technical SEO, GEO/AEO'],
+]
 
 export default function SEO_Madurai() {
   const hasRun = useRef(false)
@@ -509,15 +519,15 @@ export default function SEO_Madurai() {
                   <Button href={whatsappHref} variant="primary" size="lg" target="_blank" rel="noopener noreferrer">
                     WhatsApp for a Free Consultation
                   </Button>
-                  <Button to="/contact/" variant="outline" size="lg">
-                    Contact Us
+                  <Button href="#audit" variant="outline" size="lg" data-cta="seo_madurai_hero_audit">
+                    Get a Free SEO Audit
                   </Button>
                 </div>
                 <p className="seo-mdu-hero__trust">
-                  {GOOGLE_TRUST_LINE} · <Link to="/about/reviews/">Read our reviews</Link>
+                  {REVIEW_PROOF} · Madurai HQ · <Link to="/about/reviews/">Read our reviews</Link>
                 </p>
                 <p className="seo-mdu-hero__trust">
-                  Custom SEO quotes after a free review, no lock-in. <Link to="/contact/">Get a custom quote</Link>
+                  Custom SEO quotes after a free review, no lock-in. <a href="#audit">Request your free audit</a>
                 </p>
                 <p className="seo-mdu-hero__trust">
                   Reviewed by <Link to="/about/deepan-kanz/">Deepan Kanz</Link>, founder · Last updated 4 November 2026
@@ -527,6 +537,13 @@ export default function SEO_Madurai() {
           </div>
         </div>
       </section>
+
+      <AnswerFirst
+        eyebrow="SEO company in Madurai · quick answer"
+        heading="What does Static Savvy Media’s SEO service in Madurai include?"
+        text={SEO_ANSWER}
+        facts={['Madurai HQ since 2021', REVIEW_PROOF, 'Quoted after a free audit', 'No minimum term', 'No guaranteed rankings']}
+      />
 
       {/* ---- SEO That Moves the Needle ---- */}
       <section className="section">
@@ -1141,6 +1158,17 @@ export default function SEO_Madurai() {
           </div>
         </div>
       </section>
+
+      <MarketRangeTable
+        eyebrow="SEO cost in Madurai"
+        heading="What SEO costs in Madurai (market ranges)"
+        intro="General ranges from published Madurai SEO packages we checked on 28 October 2026. They are market ranges, not Static Savvy Media prices: we quote after a free audit, with no minimum term."
+        rows={SEO_MARKET_RANGES}
+        note="Market ranges only; scope, competition and site size decide the real number. Ad spend for Google Ads is always separate."
+        link={{ to: '/blog/digital-marketing-service-costs-in-madurai-2026-pricing-guide/', label: 'Read the Madurai digital marketing cost guide' }}
+      />
+
+      <AuditBlock formId="growth_audit_seo_madurai" title="Get a free SEO & Growth Audit for your Madurai business." lead="We review your website, Google Business Profile, rankings for your main Madurai searches, AI search presence and three competitors, then send a prioritised plan. Prepared by our Madurai team, not an automated score." />
 
       {/* ---- FAQ ---- */}
       <FAQSection

@@ -4,6 +4,10 @@ import { BrowserRouter } from 'react-router-dom'
 import './index.css'
 import App from './App.jsx'
 import { preloadPages } from './routes/lazyPage.js'
+import { installClickTracking, captureAttribution } from './utils/track.js'
+
+captureAttribution()
+installClickTracking()
 
 /* After a deploy, a tab (or a cached HTML shell) can still reference JS/CSS chunks that no longer
  * exist. Vite fires vite:preloadError when such a chunk fails to load: reload once to get the new

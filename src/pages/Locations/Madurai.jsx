@@ -5,10 +5,8 @@ import Breadcrumbs from '../../components/common/Breadcrumbs.jsx'
 import Button from '../../components/common/Button.jsx'
 import HeroSection from '../../components/hero/HeroSection.jsx'
 import FAQSection from '../../components/sections/FAQSection.jsx'
-import GoogleReviewsSection from '../../components/sections/GoogleReviewsSection.jsx'
-import { pickReviews } from '../../data/googleReviews.js'
 import CTASection from '../../components/sections/CTASection.jsx'
-import ContactFormSection from '../../components/sections/ContactFormSection.jsx'
+import { AnswerFirst, AuditBlock, FounderBlock, ReviewsCarousel, MarketRangeTable, REVIEW_PROOF } from '../../components/v2/V2Blocks.jsx'
 import { ScrollReveal } from '../../components/animations/ScrollReveal.jsx'
 import { setSeo } from '../../utils/seo.js'
 import {
@@ -178,19 +176,39 @@ const INDUSTRIES = [
 const FAQS = MADURAI_FAQS
 
 const RELATED_SERVICES = [
-  { name: 'SEO', path: '/services/seo/' },
-  { name: 'Local SEO', path: '/services/local-seo/' },
-  { name: 'GEO & AEO, AI Search', path: '/services/geo-aeo-ai-search/' },
-  { name: 'Google Ads', path: '/services/google-ads/' },
-  { name: 'Social Media Marketing in Madurai', path: '/services/social-media-marketing/madurai/' },
   { name: 'SEO Company in Madurai', path: '/services/seo/madurai/' },
+  { name: 'Local SEO & Google Maps in Madurai', path: '/services/local-seo/madurai/' },
+  { name: 'GEO & AEO (AI Search) in Madurai', path: '/services/geo-aeo-ai-search/madurai/' },
   { name: 'Advertising Agency in Madurai', path: '/services/advertising-agency/madurai/' },
-  { name: 'Top Digital Marketing Companies in Madurai (guide)', path: '/blog/top-digital-marketing-companies-in-madurai/' },
+  { name: 'Social Media Marketing in Madurai', path: '/services/social-media-marketing/madurai/' },
   { name: 'Website Design & Development in Madurai', path: '/services/website-design-development/madurai/' },
+  { name: 'Digital Marketing Companies in Madurai Compared (guide)', path: '/blog/top-digital-marketing-companies-in-madurai/' },
+  { name: 'How to Choose an SEO Agency in Madurai (guide)', path: '/blog/seo-agency-madurai-complete-guide/' },
+  { name: 'Digital Marketing Costs in Madurai (2026 guide)', path: '/blog/digital-marketing-service-costs-in-madurai-2026-pricing-guide/' },
   { name: 'AI Business Automation', path: '/services/ai-business-automation/' },
   { name: 'Corporate Photography & Video', path: '/services/corporate-photography-video/' },
   { name: 'AI Video Creation', path: '/services/ai-video-creation/' },
   { name: 'Product Photography & Creative Design', path: '/services/product-photography-creative-design/' },
+]
+
+/* HQ hub (gap-audit P0 #2): office, areas served, every Madurai service. Answer-first block is
+ * 40–60 words for AI answers. Market ranges are from our Madurai cost guide, never our prices. */
+const HQ_ANSWER =
+  'Static Savvy Media’s headquarters is at Kamarajar Salai, Madurai, open Monday to Saturday since 2021. From this office our in-house team runs SEO, Google Maps (Local SEO), Google and Meta ads, social media, websites and AI search for Madurai businesses, in Tamil and English. We are rated 4.9★ from 106 Google reviews.'
+
+const HQ_FACTS = ['Madurai HQ · Kamarajar Salai 625009', 'Since 1 Oct 2021', REVIEW_PROOF, 'Mon–Sat 9:00 AM–6:30 PM IST', 'WhatsApp +91 99440 40345']
+
+const AREAS = [
+  'Kamarajar Salai (our office)', 'Anna Nagar', 'K.K. Nagar', 'S.S. Colony', 'Goripalayam', 'Tallakulam', 'Simmakkal',
+  'Bypass Road', 'Vilangudi', 'Thirunagar', 'Mattuthavani', 'Thiruparankundram', 'Avaniyapuram', 'Melur', 'Usilampatti', 'Thirumangalam',
+]
+
+const MADURAI_MARKET_RANGES = [
+  ['Local SEO & Google Business Profile', '₹5,000 – ₹10,000 / month', 'Number of locations, review volume, how crowded your category is in Google Maps'],
+  ['SEO & AEO (website + AI search)', '₹12,000 – ₹25,000 / month', 'Site size, technical fixes, content volume, competition for city-wide terms'],
+  ['Google & Meta ads management', '₹8,000 – ₹20,000 / month + ad spend', 'Number of campaigns, landing pages, tracking set-up; ad spend is paid to Google/Meta'],
+  ['Social media marketing', '₹8,000 – ₹18,000 / month', 'Posts and reels per month, Tamil/English copy, shoots'],
+  ['Website design & development', '₹10,000 – ₹35,000 one-time', 'Pages, features, e-commerce, copywriting'],
 ]
 
 const OTHER_LOCATIONS = [
@@ -281,6 +299,7 @@ export default function Madurai() {
         title="Digital Marketing Agency in Madurai, Static Savvy Media HQ"
         subtitle={HERO_SUBTITLE}
         actions={
+          <>
           <Button
             href={whatsappHref}
             variant="primary"
@@ -290,6 +309,10 @@ export default function Madurai() {
           >
             WhatsApp: +91 99440 40345
           </Button>
+          <Button href="#audit" variant="outline" size="lg" data-cta="madurai_hq_hero_audit">
+            Get a Free Growth Audit
+          </Button>
+          </>
         }
       >
         <div className="hero__visual-side">
@@ -304,11 +327,13 @@ export default function Madurai() {
         </div>
       </HeroSection>
 
+      <AnswerFirst eyebrow="Madurai HQ · quick answer" heading="Where is Static Savvy Media in Madurai, and what do we do here?" text={HQ_ANSWER} facts={HQ_FACTS} />
+
       {/* ---- Quick answer (answer-first for search & AI engines) ---- */}
       <section className="section madurai-quick">
         <div className="container">
           <div className="glass-card" style={{ padding: '2rem' }}>
-            <h2 className="section-heading__title">Looking for a digital marketing agency in Madurai?</h2>
+            <h2 className="section-heading__title">Our Madurai HQ at a glance</h2>
             <p>{QUICK_ANSWER}</p>
             <dl style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1rem', marginTop: '1.5rem' }}>
               {QUICK_FACTS.map((f) => (
@@ -605,6 +630,34 @@ export default function Madurai() {
         </div>
       </section>
 
+      {/* ---- Areas served ---- */}
+      <section className="section madurai-areas" aria-labelledby="madurai-areas-title">
+        <div className="container">
+          <div className="section-heading section-heading--left">
+            <span className="section-heading__eyebrow">Areas served</span>
+            <h2 className="section-heading__title" id="madurai-areas-title">Madurai Areas We Serve From Kamarajar Salai</h2>
+            <p className="section-heading__subtitle">
+              Our Madurai office works with businesses across the city and district. Most clients never need to visit: updates come on WhatsApp and a monthly call, and in-person meetings at our office are by appointment.
+            </p>
+          </div>
+          <ul className="madurai-areas__list">
+            {AREAS.map((a) => <li key={a}>{a}</li>)}
+          </ul>
+        </div>
+      </section>
+
+      <MarketRangeTable
+        eyebrow="Cost in Madurai"
+        heading="What digital marketing costs in Madurai (market ranges)"
+        intro="Typical monthly market ranges for Madurai small and mid-sized businesses, from our 2026 Madurai cost guide. These are general market ranges, not Static Savvy Media prices: we quote after a free audit, with no minimum term."
+        rows={MADURAI_MARKET_RANGES}
+        note="Source: Static Savvy Media Madurai cost guide (2026), market ranges only. Your quote depends on scope and competition."
+        link={{ to: '/blog/digital-marketing-service-costs-in-madurai-2026-pricing-guide/', label: 'Read the Madurai digital marketing cost guide' }}
+      />
+
+      <div style={{ height: 'clamp(48px,6vw,80px)' }} aria-hidden="true" />
+      <FounderBlock heading="Meet the founder at our Madurai HQ." />
+
       {/* ---- Related Content ---- */}
       <section className="section madurai-related section--alt">
         <div className="container">
@@ -664,10 +717,8 @@ export default function Madurai() {
       </section>
 
       {/* ---- Google reviews (verbatim, visible only, no schema) ---- */}
-      <GoogleReviewsSection
-        reviews={pickReviews(1, 4)}
-        title="What Madurai clients say on Google"
-      />
+      <div style={{ height: 'clamp(48px,6vw,80px)' }} aria-hidden="true" />
+      <ReviewsCarousel eyebrow="Madurai clients on Google" title="What Madurai clients say on Google." grid limit={6} />
 
       {/* ---- FAQ ---- */}
       <FAQSection
@@ -683,7 +734,7 @@ export default function Madurai() {
         primaryLabel="WhatsApp: +91 99440 40345"
         primaryHref={whatsappHref}
       />
-      <ContactFormSection />
+      <AuditBlock formId="growth_audit_madurai_hq" title="Get a free Growth Audit from our Madurai team." />
     </div>
   )
 }

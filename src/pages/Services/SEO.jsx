@@ -27,11 +27,12 @@ import seoHeroImg from '../../assets/images/services/01SEO.webp'
    CONTENT, Approved Static Savvy Media SEO Page Content
    ============================================================ */
 
-const PAGE_TITLE =
-  'SEO Services in Madurai & Tamil Nadu, Rank Higher, Get More Clients | Static Savvy Media'
+/* Generic/national SEO page (gap-audit P0 #2). Madurai intent belongs to /services/seo/madurai/,
+ * so this page avoids Madurai wording and links down to each city SEO page instead. */
+const PAGE_TITLE = 'SEO Services for India & Malaysia | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
-  'Expert SEO services for Madurai, Thoothukudi, and Tamil Nadu businesses. Technical SEO, keyword strategy, content development, and link building. Results verified monthly via GSC and GA4.'
+  'SEO services for businesses across India, Malaysia, Singapore & the UAE: technical SEO, keywords, content and AI search (GEO/AEO), reported monthly from GSC.'
 
 const HERO_SUBTITLE =
   'Ranking on page one of Google is not a vanity metric. It is the difference between a steady stream of inbound enquiries and spending every month chasing cold leads. Our SEO service is built around one outcome: getting your business in front of the right people at the exact moment they are ready to buy.'
@@ -45,7 +46,7 @@ const SERVICE_FEATURES = [
   {
     number: '02',
     title: 'Keyword Research & Strategy',
-    text: 'We map every keyword your target audience uses across the full buying journey, from awareness queries (“what is SEO?”) to high-intent commercial queries (“SEO agency Madurai”). Every keyword has verified search volume, realistic competition assessment, and a clear link to business value. No vanity keywords with zero conversion potential.',
+    text: 'We map every keyword your target audience uses across the full buying journey, from awareness queries (“what is SEO?”) to high-intent commercial queries (“SEO agency near me”). Every keyword has verified search volume, realistic competition assessment, and a clear link to business value. No vanity keywords with zero conversion potential.',
   },
   {
     number: '03',
@@ -124,9 +125,9 @@ const FAQS = [
       'Yes. We manage multi-market SEO campaigns including hreflang implementation. We understand the keyword and content differences between Tamil Nadu and Malaysia markets and build separate strategies for each.',
   },
   {
-    question: 'How is your SEO different from other agencies in Madurai?',
+    question: 'How is your SEO different from other SEO agencies?',
     answer:
-      'We integrate GEO and AEO into every SEO engagement, optimising not just for Google’s blue links but for AI Overviews and AI search engines. Most agencies in Tamil Nadu are still building 2019-era SEO strategies. We build for where search is going in 2026 and beyond.',
+      'We integrate GEO and AEO into every SEO engagement, optimising not just for Google’s blue links but for AI Overviews and AI search engines. Many agencies still run 2019-era SEO strategies. We build for where search is going in 2026 and beyond, and report from your own Search Console and GA4.',
   },
 ]
 
@@ -138,9 +139,9 @@ const RELATED_SERVICES = [
 
 const RELATED_LOCATIONS = [
   { name: 'SEO Company in Madurai', path: '/services/seo/madurai/' },
-  { name: 'Thoothukudi', path: '/services/seo/thoothukudi/' },
-  { name: 'Malaysia', path: '/services/seo/malaysia/' },
-  { name: 'SEO Kuala Lumpur', path: '/services/seo/kuala-lumpur/' },
+  { name: 'SEO Services in Thoothukudi', path: '/services/seo/thoothukudi/' },
+  { name: 'SEO Company in Malaysia', path: '/services/seo/malaysia/' },
+  { name: 'SEO Agency in Kuala Lumpur', path: '/services/seo/kuala-lumpur/' },
 ]
 
 const RELATED_INDUSTRIES = [
@@ -180,8 +181,8 @@ const seoFeatureStyles = {
     boxShadow: '0 0 15px rgba(249, 115, 22, 0.35)',
   },
   '05': {
-    background: 'linear-gradient(135deg, #ec4899, #db2777)',
-    boxShadow: '0 0 15px rgba(236, 72, 153, 0.35)',
+    background: 'linear-gradient(135deg, #6d5dfc, #2f6bf2)',
+    boxShadow: '0 0 15px rgba(47, 107, 242, 0.35)',
   },
   '06': {
     background: 'linear-gradient(135deg, #22c55e, #16a34a)',
@@ -270,9 +271,10 @@ export default function SEO() {
         url: SITE_URL,
       },
       areaServed: [
-        { '@type': 'City', name: 'Madurai' },
-        { '@type': 'City', name: 'Thoothukudi' },
+        { '@type': 'Country', name: 'India' },
         { '@type': 'Country', name: 'Malaysia' },
+        { '@type': 'Country', name: 'Singapore' },
+        { '@type': 'Country', name: 'United Arab Emirates' },
       ],
     })
 
@@ -313,7 +315,7 @@ export default function SEO() {
       {/* ---- Hero ---- */}
       <HeroSection
         layout="two-column"
-        title="SEO Services That Move the Needle, Madurai, Tamil Nadu & Malaysia"
+        title="SEO Services That Grow Organic Leads, India, Malaysia & Beyond"
         subtitle={HERO_SUBTITLE}
         actions={
           <Button

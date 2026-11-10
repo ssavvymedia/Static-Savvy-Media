@@ -11,7 +11,6 @@
 import { HOME_FAQS } from './pages/homeFaqs.js'
 import { content as ADS } from './pages/advertisingAgencyMadurai.js'
 import { content as TN } from './pages/tamilNadu.js'
-import { content as TOP } from './pages/topCompaniesMadurai.js'
 
 const HOST = 'https://www.staticsavvymedia.com'
 const PHONE = '+91 99440 40345'
@@ -37,7 +36,12 @@ function fromContent(c, extraNodes = []) {
     intro: c.intro,
     sections: c.sections.map((s) => ({
       heading: s.heading,
-      items: s.items.map((it) => (typeof it === 'string' ? { text: it } : { title: it.title, text: it.text, link: it.link })),
+      items:
+        s.kind === 'table'
+          ? s.table.rows.map((r) => ({ title: r[0], text: r.slice(1).join(' · ') }))
+          : s.kind === 'text'
+            ? s.paragraphs.map((p) => ({ text: p }))
+            : s.items.map((it) => (typeof it === 'string' ? { text: it } : { title: it.title, text: it.text, link: it.link })),
     })),
     related: c.related,
     faqs: c.faqs,
@@ -73,7 +77,6 @@ export const prerenderBodies = {
   /* /locations/madurai/ is server-rendered from its real component via src/data/ssrRoutes.js. */
   [ADS.path]: fromContent(ADS, [{ '@type': 'Service', name: 'Digital Advertising in Madurai', serviceType: 'Online advertising', provider: { '@id': MADURAI_ID }, areaServed: { '@type': 'City', name: 'Madurai' }, url: `${HOST}${ADS.path}` }, maduraiBusiness]),
   [TN.path]: fromContent(TN, [{ '@type': 'Service', name: 'Digital Marketing in Tamil Nadu', serviceType: 'Digital marketing', provider: { '@id': ORG_ID }, areaServed: { '@type': 'State', name: 'Tamil Nadu' }, url: `${HOST}${TN.path}` }, organization]),
-  [TOP.path]: fromContent(TOP, [{ '@type': 'Article', headline: TOP.h1, datePublished: '2026-10-22', dateModified: '2026-10-22', author: { '@id': ORG_ID }, publisher: { '@id': ORG_ID }, url: `${HOST}${TOP.path}` }, organization]),
 }
 
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
