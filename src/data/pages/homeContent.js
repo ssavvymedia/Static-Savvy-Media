@@ -10,6 +10,7 @@
  */
 import { HOME_FAQS } from './homeFaqs.js'
 import { ORG_SAME_AS, GBP_MAPS } from '../sameAs.js'
+import { founderId, founderPerson } from '../founder.js'
 
 const HOST = 'https://www.staticsavvymedia.com'
 const PHONE = '+91 99440 40345'
@@ -127,7 +128,7 @@ export const organization = {
   telephone: PHONE,
   email: 'info@staticsavvymedia.com',
   foundingDate: '2021-10-01',
-  founder: { '@type': 'Person', name: 'Deepan Kanz', url: `${HOST}/about/deepan-kanz/` },
+  founder: { '@id': founderId(HOST) },
   address: MADURAI_ADDRESS,
   areaServed: [
     { '@type': 'Country', name: 'India' },
@@ -174,6 +175,7 @@ export const homeSchemaGraph = {
   '@context': 'https://schema.org',
   '@graph': [
     organization,
+    founderPerson(HOST),
     maduraiBusiness,
     { '@type': 'WebSite', name: 'Static Savvy Media', url: `${HOST}/`, publisher: { '@id': ORG_ID } },
     faqPage(HOME_FAQS),

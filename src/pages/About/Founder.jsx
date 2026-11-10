@@ -12,6 +12,7 @@ import { personSchema, faqPageSchema, breadcrumbListSchema } from '../../utils/s
 import { buildWhatsAppLink } from '../../utils/helpers.js'
 import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, SITE_URL } from '../../utils/constants.js'
 import deepanFounderImg from '../../assets/images/About/DeepanFounder.webp'
+import { FOUNDER } from '../../data/founder.js'
 
 /* ============================================================
    CONTENT, Approved Static Savvy Media Founder Page Content
@@ -109,6 +110,10 @@ export default function Founder() {
         'Digital Marketing',
       ],
       url: `${SITE_URL}/about/deepan-kanz/`,
+      '@id': `${SITE_URL}/about/deepan-kanz/#person`,
+      image: `${SITE_URL}${FOUNDER.imagePath}`,
+      sameAs: FOUNDER.sameAs,
+      description: FOUNDER.bio,
     })
 
     const profilePage = {
@@ -119,6 +124,9 @@ export default function Founder() {
       url: `${SITE_URL}/about/deepan-kanz/`,
       mainEntity: {
         '@type': 'Person',
+        '@id': `${SITE_URL}/about/deepan-kanz/#person`,
+        image: `${SITE_URL}${FOUNDER.imagePath}`,
+        sameAs: FOUNDER.sameAs,
         name: 'Deepan Kanz',
         jobTitle: 'Founder & AI Search Specialist',
         worksFor: {

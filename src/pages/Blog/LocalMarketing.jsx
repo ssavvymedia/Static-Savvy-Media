@@ -158,7 +158,7 @@ export default function LocalMarketing() {
     const blogPost = blogPostingSchema({
       headline: PAGE_TITLE,
       description: PAGE_DESCRIPTION,
-      author: { '@type': 'Organization', name: 'Static Savvy Media' },
+      author: { '@type': 'Person', '@id': `${SITE_URL}/about/deepan-kanz/#person`, name: 'Deepan Kanz', jobTitle: 'Founder', url: `${SITE_URL}/about/deepan-kanz/`, image: `${SITE_URL}/images/deepan-kanz-founder.webp` },
       publisher: {
         '@type': 'Organization',
         name: 'Static Savvy Media',

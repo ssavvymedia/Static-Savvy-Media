@@ -10,6 +10,7 @@ import * as React from 'react'
 import { MemoryRouter } from 'react-router-dom'
 import { createServer } from 'vite'
 import { ORG_SAME_AS, GBP_MAPS } from '../../src/data/sameAs.js'
+import { founderId, founderPerson } from '../../src/data/founder.js'
 
 const HOST = 'https://www.staticsavvymedia.com'
 const PHONE = '+91 99440 40345'
@@ -113,7 +114,8 @@ export async function ssrBodies(root, distAssets) {
       const biz = r.office === 'madurai' ? madurai : r.office === 'org' ? null : malaysia
       const isAbout = r.kind === 'about'
       const crumbList = { '@type': 'BreadcrumbList', itemListElement: crumbs.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: `${HOST}${c.path}` })) }
-      const org = { '@type': 'Organization', '@id': ORG_ID, name: 'Static Savvy Media', url: `${HOST}/`, telephone: PHONE, email: EMAIL, sameAs: ORG_SAME_AS }
+      const org = { '@type': 'Organization', '@id': ORG_ID, name: 'Static Savvy Media', url: `${HOST}/`, telephone: PHONE, email: EMAIL, sameAs: ORG_SAME_AS, founder: { '@id': founderId(HOST) } }
+      const person = founderPerson(HOST)
       /* 'article' = guide post (no Service claim); 'page' = hub/utility page (WebPage subtype, e.g. CollectionPage, ContactPage). */
       const nodes = r.kind === 'article' ? [org, crumbList]
         : r.kind === 'page' ? [
@@ -126,7 +128,7 @@ export async function ssrBodies(root, distAssets) {
         : isAbout ? [
         { '@type': 'AboutPage', '@id': `${HOST}${r.route}#webpage`, name: decode(h1[1]), url: `${HOST}${r.route}`, about: { '@id': ORG_ID }, mainEntity: { '@id': ORG_ID } },
         { '@type': 'Organization', '@id': ORG_ID, name: 'Static Savvy Media', url: `${HOST}/`, telephone: PHONE, email: EMAIL, sameAs: ORG_SAME_AS, foundingDate: '2021-10-01', foundingLocation: { '@type': 'Place', name: 'Madurai, Tamil Nadu, India' }, founder: { '@id': `${HOST}/about/deepan-kanz/#person` }, areaServed: [{ '@type': 'City', name: 'Madurai' }, { '@type': 'City', name: 'Thoothukudi' }, { '@type': 'Country', name: 'Malaysia' }], subOrganization: [{ '@id': madurai['@id'] }, { '@id': malaysia['@id'] }] },
-        { '@type': 'Person', '@id': `${HOST}/about/deepan-kanz/#person`, name: 'Deepan Kanz', jobTitle: 'Founder', url: `${HOST}/about/deepan-kanz/`, worksFor: { '@id': ORG_ID } },
+        person,
         madurai,
         malaysia,
         { '@type': 'BreadcrumbList', itemListElement: crumbs.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: `${HOST}${c.path}` })) },
@@ -138,8 +140,12 @@ export async function ssrBodies(root, distAssets) {
       ]
       if (r.route.startsWith('/blog/') && r.kind !== 'page') {
         const slug = segs[segs.length - 1]
-        nodes.push({ '@type': r.kind === 'article' ? 'Article' : 'BlogPosting', headline: decode(h1[1]), image: `${HOST}/og/blog/${slug}.jpg`, url: `${HOST}${r.route}`, mainEntityOfPage: `${HOST}${r.route}`, datePublished: r.published || '2026-10-24', dateModified: r.modified || r.published || '2026-10-24', author: { '@type': 'Person', name: 'Deepan Kanz', url: `${HOST}/about/deepan-kanz/` }, publisher: { '@id': ORG_ID } })
+        nodes.push({ '@type': r.kind === 'article' ? 'Article' : 'BlogPosting', headline: decode(h1[1]), image: `${HOST}/og/blog/${slug}.jpg`, url: `${HOST}${r.route}`, mainEntityOfPage: `${HOST}${r.route}`, datePublished: r.published || '2026-10-24', dateModified: r.modified || r.published || '2026-10-24', author: { '@id': founderId(HOST) }, publisher: { '@id': ORG_ID } })
+        if (!nodes.includes(person)) nodes.push(person)
       }
+      /* Founder Person node: profile page (mainEntity), and any page that shows the founder block or byline. */
+      if (r.pageType === 'ProfilePage') nodes[0].mainEntity = { '@id': founderId(HOST) }
+      if (!nodes.includes(person) && (r.pageType === 'ProfilePage' || /hv2-founder|city-founder|author-box/.test(html))) nodes.push(person)
       if (faqs.length) nodes.push({ '@type': 'FAQPage', mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) })
       let app = null
       try { app = renderApp(r.route) } catch (e) { console.warn(`ssr-bodies: ${r.route} full-app render failed, shipping page body only: ${String(e?.message || e).slice(0, 200)}`) }

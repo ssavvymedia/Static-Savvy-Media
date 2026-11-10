@@ -7,7 +7,7 @@ import WhatsAppButton from '../components/common/WhatsAppButton.jsx'
 import SEO from '../utils/seo.js'
 import { cx } from '../utils/helpers.js'
 
-export default function MainLayout({ className = '' }) {
+export default function MainLayout({ className = '', afterOutlet = null }) {
   return (
     <div className={cx('site', className)}>
       <SEO />
@@ -17,6 +17,7 @@ export default function MainLayout({ className = '' }) {
         <Suspense fallback={null}>
           <Outlet />
         </Suspense>
+        {afterOutlet}
       </main>
       <Footer />
       <WhatsAppButton />

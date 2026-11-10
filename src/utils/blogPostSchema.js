@@ -48,8 +48,12 @@ export function blogPostSchema(post, imageUrl) {
   const slug = String(post.slug || '').replace(/^\/+|\/+$/g, '')
   const url = `${HOST}/blog/${slug}/`
   const faqs = portableTextFaqs(post.body)
-  const author = post.author
-    ? { '@type': 'Person', name: post.author, ...(AUTHOR_URLS[post.author] ? { url: AUTHOR_URLS[post.author], '@id': `${AUTHOR_URLS[post.author]}#person` } : {}) }
+  /* Posts with no author in Sanity are credited to the founder (matches the author box); the agency name stays an Organization. */
+  if (!post.author) post = { ...post, author: 'Deepan Kanz' }
+  const author = post.author === 'Static Savvy Media'
+    ? { '@id': ORG_ID }
+    : post.author
+    ? { '@type': 'Person', name: post.author, ...(AUTHOR_URLS[post.author] ? { url: AUTHOR_URLS[post.author], '@id': `${AUTHOR_URLS[post.author]}#person`, image: `${HOST}/images/deepan-kanz-founder.webp`, jobTitle: 'Founder', sameAs: ['https://www.linkedin.com/in/deepankanz/', 'https://www.instagram.com/deepankanz', 'https://www.facebook.com/deepankanz', 'https://x.com/deepankanz'] } : {}) }
     : { '@id': ORG_ID }
   const graph = [
     {

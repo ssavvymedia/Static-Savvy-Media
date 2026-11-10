@@ -277,7 +277,7 @@ export default function SEOAgencyMaduraiGuide() {
     const blogPost = blogPostingSchema({
       headline: PAGE_TITLE,
       description: PAGE_DESCRIPTION,
-      author: { '@type': 'Person', name: AUTHOR, jobTitle: AUTHOR_ROLE },
+      author: { '@type': 'Person', '@id': `${SITE_URL}/about/deepan-kanz/#person`, name: AUTHOR, jobTitle: AUTHOR_ROLE, url: `${SITE_URL}/about/deepan-kanz/`, image: `${SITE_URL}/images/deepan-kanz-founder.webp` },
       publisher: {
         '@type': 'Organization',
         name: 'Static Savvy Media',

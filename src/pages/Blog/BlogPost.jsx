@@ -300,26 +300,7 @@ export default function BlogPost() {
         </div>
       </section>
 
-      {post.author && (
-        <section className="section section--alt">
-          <div className="container">
-            <ScrollReveal>
-              <div className="blog-author" style={{ maxWidth: '720px' }}>
-                <div className="blog-author__avatar" aria-hidden="true">
-                  {post.author.split(' ').map((n) => n[0]).slice(0, 2).join('')}
-                </div>
-                <div className="blog-author__info">
-                  <h3 className="blog-author__name">{post.author}</h3>
-                  <p className="blog-author__role">Static Savvy Media</p>
-                  <p className="blog-author__text">
-                    Practical insights on SEO, GEO, AEO, AI search and digital marketing strategy.
-                  </p>
-                </div>
-              </div>
-            </ScrollReveal>
-          </div>
-        </section>
-      )}
+      {/* Author box: rendered for every post by BlogLayout (src/components/blog/AuthorBox.jsx). */}
 
       <CTASection
         eyebrow="Grow Your Business"
