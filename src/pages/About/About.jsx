@@ -13,6 +13,7 @@ import { organizationSchema, faqPageSchema, breadcrumbListSchema } from '../../u
 import { buildWhatsAppLink } from '../../utils/helpers.js'
 import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, SITE_URL, GOOGLE_RATING, GOOGLE_REVIEW_COUNT } from '../../utils/constants.js'
 import aboutHeroImg from '../../assets/images/About/About.webp'
+import aboutHeroSm from '../../assets/images/About/About-640.webp'
 
 /* ============================================================
    CONTENT, Approved Static Savvy Media About Page Content
@@ -193,7 +194,7 @@ export default function About() {
             </div>
           </div>
           <div className="pv2-hero__img">
-            <img src={aboutHeroImg} width={1672} height={941} fetchPriority="high" alt="Static Savvy Media team and office in Madurai" />
+            <img src={aboutHeroImg} srcSet={`${aboutHeroSm} 640w, ${aboutHeroImg} 1200w`} sizes="(max-width: 900px) 92vw, 560px" width={1200} height={800} fetchPriority="high" alt="Static Savvy Media team and office in Madurai" />
           </div>
         </div>
       </section>

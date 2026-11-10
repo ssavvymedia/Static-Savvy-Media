@@ -21,7 +21,7 @@ walk(DIST)
 const beasties = new Beasties({
   path: DIST,
   publicPath: '/',
-  preload: 'swap',
+  preload: 'media',
   noscriptFallback: true,
   inlineFonts: false,
   preloadFonts: false,

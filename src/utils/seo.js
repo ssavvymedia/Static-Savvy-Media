@@ -1,6 +1,8 @@
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
-import { getSeoForPath } from '../data/seoConfig.js'
+/* seoConfig (~90 KB of route data) loads on demand: prerendered HTML already carries each route's head. */
+let seoConfigPromise = null
+export const loadSeoConfig = () => (seoConfigPromise ||= import('../data/seoConfig.js'))
 import { SITE_NAME, SITE_URL, SITE_DESCRIPTION } from './constants.js'
 
 // 1200x630 share image in /public (also the static default in index.html), used for routes
@@ -130,6 +132,9 @@ export function useRouteSEO(customPath) {
   const path = customPath || location.pathname
 
   useEffect(() => {
+    let live = true
+    const run = () => loadSeoConfig().then(({ getSeoForPath }) => {
+    if (!live) return
     const config = getSeoForPath(path)
     if (config && config.seo) {
       const pageHasSchema = pageSchemaPath === window.location.pathname
@@ -140,6 +145,13 @@ export function useRouteSEO(customPath) {
         fromRouteConfig: true,
       })
     }
+    })
+    /* First load: the HTML head is already right, so wait for idle; client navigations update at once. */
+    if (document.readyState !== 'complete') {
+      const ric = window.requestIdleCallback || ((f) => setTimeout(f, 1500))
+      window.addEventListener('load', () => ric(run), { once: true })
+    } else run()
+    return () => { live = false }
   }, [path])
 }
 

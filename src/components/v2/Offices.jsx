@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { WHATSAPP_NUMBER, MALAYSIA_OFFICE } from '../../utils/constants.js'
 import '../../styles/pages/page-v2.css'
@@ -27,6 +28,25 @@ export const OFFICES = [
   },
 ]
 
+/* Map iframe mounts only once its slot scrolls into view (Google Maps embed is ~300 KB of JS). */
+function MapFrame({ name, q }) {
+  const ref = useRef(null)
+  const [show, setShow] = useState(false)
+  useEffect(() => {
+    const el = ref.current
+    if (!el || show) return undefined
+    if (!('IntersectionObserver' in window)) { const t = setTimeout(() => setShow(true)); return () => clearTimeout(t) }
+    const io = new IntersectionObserver((es) => { if (es.some((e) => e.isIntersecting)) { setShow(true); io.disconnect() } }, { rootMargin: '0px 0px 200px 0px' })
+    io.observe(el)
+    return () => io.disconnect()
+  }, [show])
+  return (
+    <div ref={ref} className="pv2-map" aria-hidden={show ? undefined : 'true'}>
+      {show && <iframe className="pv2-map" title={`Map: Static Savvy Media ${name}`} src={`https://www.google.com/maps?q=${encodeURIComponent(q)}&output=embed`} referrerPolicy="no-referrer-when-downgrade" width="600" height="220" />}
+    </div>
+  )
+}
+
 export default function Offices({ title = 'Three offices, one team.', eyebrow = 'Our offices', maps = false, id = 'offices' }) {
   return (
     <section className="hv2 hv2-section pv2-sec" data-section="offices" aria-labelledby={`${id}-title`}>
@@ -37,7 +57,7 @@ export default function Offices({ title = 'Three offices, one team.', eyebrow = 
           {OFFICES.map((o) => (
             <li key={o.key} className="pv2-office">
               {maps && (
-                <iframe className="pv2-map" title={`Map: Static Savvy Media ${o.name}`} src={`https://www.google.com/maps?q=${encodeURIComponent(o.map)}&output=embed`} loading="lazy" referrerPolicy="no-referrer-when-downgrade" width="600" height="220" />
+                <MapFrame name={o.name} q={o.map} />
               )}
               <div className="pv2-office__body">
                 <span className="pv2-tag">{o.tag}</span>

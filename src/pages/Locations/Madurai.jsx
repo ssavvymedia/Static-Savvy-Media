@@ -22,6 +22,7 @@ import {
 } from '../../utils/constants.js'
 import '../../styles/pages/madurai.css'
 import maduraiHeroImg from '../../assets/images/locations/01Madurai.webp'
+import maduraiHeroSm from '../../assets/images/locations/01Madurai-640.webp'
 
 /* ============================================================
    CONTENT, Approved Static Savvy Media Madurai Page Content
@@ -318,6 +319,8 @@ export default function Madurai() {
         <div className="hero__visual-side">
           <img
             src={maduraiHeroImg}
+            srcSet={`${maduraiHeroSm} 640w, ${maduraiHeroImg} 1000w`}
+            sizes="(max-width: 900px) 92vw, 560px"
             width={1536}
             height={1024}
             fetchPriority="high"

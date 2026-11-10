@@ -3,7 +3,7 @@ import { FOOTER_LINKS } from '../../data/navigation.js'
 import { SITE_NAME, SOCIAL_LINKS, WHATSAPP_NUMBER, WHATSAPP_MESSAGE, MALAYSIA_OFFICE, CONTACT_EMAIL } from '../../utils/constants.js'
 import { useActiveRoute } from '../../hooks/useActiveRoute.js'
 import { cx, buildWhatsAppLink } from '../../utils/helpers.js'
-import logoImg from '../../assets/images/logo/SSMLOGO.webp'
+import logoImg from '../../assets/images/logo/SSMLOGO-300.webp'
 
 const COLUMN_ICONS = {
   Services: (

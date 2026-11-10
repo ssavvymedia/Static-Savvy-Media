@@ -21,7 +21,7 @@ const portableTextComponents = {
       if (!value?.asset) return null
       return (
         <figure>
-          <img src={urlFor(value).width(1400).url()} alt={value.alt || ''} loading="lazy" />
+          <img src={urlFor(value).width(1200).auto('format').quality(72).url()} srcSet={`${urlFor(value).width(640).auto('format').quality(70).url()} 640w, ${urlFor(value).width(1200).auto('format').quality(72).url()} 1200w`} sizes="(max-width: 900px) 92vw, 800px" alt={value.alt || ''} loading="lazy" decoding="async" />
           {value.caption && <figcaption>{value.caption}</figcaption>}
         </figure>
       )
@@ -244,7 +244,7 @@ export default function BlogPost() {
           {post.mainImage && (
             <ScrollReveal delay={80}>
               <div className="blog-post-cover">
-                <img src={urlFor(post.mainImage).width(1400).url()} alt={post.title} />
+                <img src={urlFor(post.mainImage).width(1200).auto('format').quality(72).url()} srcSet={`${urlFor(post.mainImage).width(480).auto('format').quality(65).url()} 480w, ${urlFor(post.mainImage).width(800).auto('format').quality(70).url()} 800w, ${urlFor(post.mainImage).width(1200).auto('format').quality(72).url()} 1200w`} sizes="(max-width: 900px) 92vw, 900px" alt={post.title} fetchPriority="high" decoding="async" />
               </div>
             </ScrollReveal>
           )}
