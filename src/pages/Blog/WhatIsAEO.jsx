@@ -188,7 +188,7 @@ const FAQS = [
   },
   {
     question: 'How much does AEO cost with Static Savvy Media?',
-    answer: 'AEO and GEO are included in our top monthly plan, together with Google Business Profile management and website SEO, with no lock-in. We quote it after a free review of your site: WhatsApp +91 99440 40345 (India) or +60 12-453 7030 (Malaysia), or send an enquiry.',
+    answer: 'AEO and GEO are included in our top monthly plan, together with Google Business Profile management and website SEO, with no lock-in. We quote it after a free review of your site: WhatsApp +91 99440 40345, or call +60 12-453 7030 in Malaysia, or send an enquiry.',
   },
 ]
 

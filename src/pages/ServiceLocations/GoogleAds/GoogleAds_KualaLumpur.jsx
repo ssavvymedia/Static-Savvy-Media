@@ -78,7 +78,7 @@ const content = {
         'Recommended ad spend: we suggest a starting budget after checking cost per click in your sector and area; competitive sectors such as legal or aesthetics need more.',
         'Ad spend is paid directly to Google from your own account; our fee is invoiced separately.',
       ],
-      after: <>For a custom quote, WhatsApp <a href="https://wa.me/60124537030">+60 12-453 7030</a> or <Link to="/contact/">send an enquiry</Link>. We reply with a recommended budget and a written management-fee quote.</>,
+      after: <>For a custom quote, WhatsApp <a href="https://wa.me/919944040345">+91 99440 40345</a>, call <a href="tel:+60124537030">+60 12-453 7030</a> or <Link to="/contact/">send an enquiry</Link>. We reply with a recommended budget and a written management-fee quote.</>,
     },
     {
       eyebrow: 'Industries',
@@ -128,7 +128,7 @@ const content = {
   faqTitle: 'Frequently Asked Questions, Google Ads in Kuala Lumpur',
   quote: { region: 'malaysia', service: 'Google Ads management in Kuala Lumpur', text: 'We review your account, sector and competitors first, then send a written plan with a recommended ad budget and a flat monthly management fee. No percentage of spend, no lock-in.' },
   faqs: [
-    { question: 'What is the minimum Google Ads budget in KL?', answer: 'It depends on your sector, area and cost per click. We recommend a starting ad budget, paid directly to Google, after a free review of your market, alongside a flat monthly management fee quoted for your scope. Very competitive sectors such as legal or aesthetics usually need more. Message us on WhatsApp at +60 12-453 7030 or send an enquiry for a custom quote.' },
+    { question: 'What is the minimum Google Ads budget in KL?', answer: 'It depends on your sector, area and cost per click. We recommend a starting ad budget, paid directly to Google, after a free review of your market, alongside a flat monthly management fee quoted for your scope. Very competitive sectors such as legal or aesthetics usually need more. Message us on WhatsApp at +91 99440 40345 (or call +60 12-453 7030) or send an enquiry for a custom quote.' },
     { question: 'Do you charge a percentage of ad spend or a flat fee?', answer: 'A flat monthly management fee (Starter, Growth or Scale), quoted for your campaign scope after a free review. It is not a percentage of your ad spend.' },
     { question: 'How fast do Google Ads bring leads?', answer: 'Typically within the first few weeks, once ads are approved and conversion tracking is working. Cost per lead usually improves over the first 60 to 90 days as we cut wasted searches and refine bids.' },
     { question: 'Do you own my ad account?', answer: 'No. The Google Ads account stays in your company’s name and you pay Google directly. We work in it with manager access, which you can remove at any time.' },

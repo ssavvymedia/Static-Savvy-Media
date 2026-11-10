@@ -108,7 +108,6 @@ export default function Portfolio() {
   const [filter, setFilter] = useState('all')
   const s = GBP_REVIEW_SUMMARY
   const wa = buildWhatsAppLink(IN_PHONE.display, 'Hi Static Savvy Media, I saw your client portfolio and would like to discuss my business.')
-  const waMy = buildWhatsAppLink(MY_PHONE.display, 'Hi Static Savvy Media, I saw your client portfolio and would like to discuss my business in Malaysia.')
   const tel = `tel:${IN_PHONE.tel}`
   const counts = useMemo(() => {
     const m = {}
@@ -282,8 +281,8 @@ export default function Portfolio() {
               <a className="lp-action lp-action--wa" href={wa} {...ext}>
                 <WhatsAppIcon size={24} variant="white" /><span><strong>WhatsApp (India)</strong><small>{IN_PHONE.display}</small></span>
               </a>
-              <a className="lp-action" href={waMy} {...ext}>
-                <WhatsAppIcon size={24} /><span><strong>WhatsApp (Malaysia)</strong><small>{MY_PHONE.display}</small></span>
+              <a className="lp-action" href={`tel:${MY_PHONE.tel}`}>
+                <Icon name="phone" /><span><strong>Call (Malaysia)</strong><small>{MY_PHONE.display}</small></span>
               </a>
               <a className="lp-action" href={tel}>
                 <Icon name="phone" /><span><strong>Call us</strong><small>{IN_PHONE.display}</small></span>

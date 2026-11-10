@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom'
 import { FOOTER_LINKS } from '../../data/navigation.js'
-import { SITE_NAME, SOCIAL_LINKS } from '../../utils/constants.js'
+import { SITE_NAME, SOCIAL_LINKS, WHATSAPP_NUMBER, WHATSAPP_MESSAGE, MALAYSIA_OFFICE } from '../../utils/constants.js'
 import { useActiveRoute } from '../../hooks/useActiveRoute.js'
-import { cx } from '../../utils/helpers.js'
+import { cx, buildWhatsAppLink } from '../../utils/helpers.js'
 import logoImg from '../../assets/images/logo/SSMLOGO.webp'
 
 const COLUMN_ICONS = {
@@ -87,6 +87,13 @@ export default function Footer() {
             <Link to="/" className="site-footer__logo" aria-label={`${SITE_NAME}, home`}>
               <img src={logoImg} width={480} height={320} loading="lazy" decoding="async" alt={SITE_NAME} className="site-footer__logo-img" />
             </Link>
+
+            {/* Visible contact lines on every page (Malaysia pages included): one WhatsApp line
+                site-wide; +60 is the Malaysia call line only (owner, 10 Nov 2026). */}
+            <ul className="site-footer__contact" aria-label="Contact Static Savvy Media">
+              <li>WhatsApp / call (India HQ): <a href={buildWhatsAppLink(WHATSAPP_NUMBER, WHATSAPP_MESSAGE)} target="_blank" rel="noopener noreferrer">{WHATSAPP_NUMBER}</a></li>
+              <li>Malaysia office, call: <a href={MALAYSIA_OFFICE.phoneHref}>{MALAYSIA_OFFICE.phoneDisplay}</a></li>
+            </ul>
 
             <div className="site-footer__socials">
               <a

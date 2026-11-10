@@ -85,6 +85,9 @@ export default function CityLandingTemplate({ city }) {
               <Button href={waHref} variant="primary" size="lg" target="_blank" rel="noopener noreferrer">
                 WhatsApp {city.whatsapp.display}
               </Button>
+              {city.phone && (
+                <Button href={city.phone.href} variant="outline" size="lg">Call {city.phone.display}</Button>
+              )}
               <Button href="#city-enquiry" variant="ghost" size="lg">Get a free review</Button>
             </div>
             <ul className="city-trust" aria-label="Why businesses trust Static Savvy Media">
@@ -194,7 +197,7 @@ export default function CityLandingTemplate({ city }) {
             ))}
           </div>
           <p className="city-note">
-            Prefer email? <a href="#city-enquiry">Send an enquiry</a> or WhatsApp {city.whatsapp.display}. Website builds, ads management and photography are quoted separately.
+            Prefer email? <a href="#city-enquiry">Send an enquiry</a> or WhatsApp {city.whatsapp.display}{city.phone && <> (or call <a href={city.phone.href}>{city.phone.display}</a>)</>}. Website builds, ads management and photography are quoted separately.
           </p>
         </div>
       </section>
@@ -265,8 +268,9 @@ export default function CityLandingTemplate({ city }) {
         subtitle="Send us your website or Google Business Profile link. We reply with what to fix first, no obligation."
         primaryLabel={`WhatsApp ${city.whatsapp.display}`}
         primaryHref={waHref}
-        secondaryLabel="View all services"
-        secondaryTo="/services/"
+        secondaryLabel={city.phone ? `Call ${city.phone.display}` : 'View all services'}
+        secondaryTo={city.phone ? '' : '/services/'}
+        secondaryHref={city.phone ? city.phone.href : ''}
       />
 
       {/* ---------------- ENQUIRY FORM ---------------- */}

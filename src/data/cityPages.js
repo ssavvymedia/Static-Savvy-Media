@@ -44,7 +44,9 @@ export const PLAN_TIERS = {
 }
 
 const IN_WA = { display: '+91 99440 40345', number: '+91 99440 40345' }
-const MY_WA = { display: '+60 12-453 7030', number: '+60 12-453 7030' }
+// Malaysia pages: WhatsApp is the Indian line (owner, 10 Nov 2026); +60 is the call line only.
+const MY_WA = IN_WA
+const MY_PHONE = { display: '+60 12-453 7030', href: 'tel:+60124537030' }
 
 export const cityPages = [
   /* ================================ CHENNAI ================================ */
@@ -398,6 +400,7 @@ export const cityPages = [
     areaType: 'State',
     containedIn: 'Malaysia',
     whatsapp: MY_WA,
+    phone: MY_PHONE,
     office: 'malaysia',
     title: 'Digital Marketing Agency in Selangor | Static Savvy Media',
     description: 'Selangor digital marketing from our Rawang office: SEO, Google Business Profile, Ads and websites for Petaling Jaya, Shah Alam, Subang Jaya and Klang. Custom quotes.',
@@ -433,9 +436,9 @@ export const cityPages = [
     faqs: [
       { question: 'Where is your Selangor office?', answer: 'NO.9, Jalan Anggun 2J, Taman Anggun 2, 48000 Rawang, Selangor, near AEON Mall Rawang. We are open Monday to Friday, 9 AM to 6 PM (MYT).' },
       { question: 'Do you serve Petaling Jaya, Shah Alam and Klang?', answer: 'Yes. We work with businesses across Selangor and meet clients in PJ, Shah Alam, Subang Jaya and Klang by appointment.' },
-      { question: 'How much does SEO cost in Selangor?', answer: 'It depends on how competitive your services and area are. Our monthly plans cover Google Business Profile management (12 posts), GBP plus website SEO with 4 blogs a month, and GBP, SEO, AEO and GEO, each quoted after a free review. Message us on WhatsApp at +60 12-453 7030 or send the enquiry form for a custom quote. Ad spend is separate.' },
+      { question: 'How much does SEO cost in Selangor?', answer: 'It depends on how competitive your services and area are. Our monthly plans cover Google Business Profile management (12 posts), GBP plus website SEO with 4 blogs a month, and GBP, SEO, AEO and GEO, each quoted after a free review. Message us on WhatsApp at +91 99440 40345, call +60 12-453 7030, or send the enquiry form for a custom quote. Ad spend is separate.' },
       { question: 'Can you write in Bahasa Malaysia?', answer: 'Yes, we produce English and Bahasa Malaysia content and plan the language per channel and audience.' },
-      { question: 'How do I contact your Malaysia team?', answer: 'Call or WhatsApp +60 12-453 7030, or use the form on this page.' },
+      { question: 'How do I contact your Malaysia team?', answer: 'Call +60 12-453 7030 or WhatsApp +91 99440 40345, or use the form on this page.' },
       { question: 'Can my business use a grant for digital marketing?', answer: 'Some SMEs qualify for government digitalisation programmes. We can prepare documentation for eligible services, but the programme decides eligibility.' },
       { question: 'Do you also serve Kuala Lumpur?', answer: 'Yes. See our Kuala Lumpur page for KL-specific details; the same Rawang team serves the whole Klang Valley.' },
     ],
@@ -571,6 +574,7 @@ export const cityPages = [
     areaType: 'City',
     containedIn: 'Malaysia',
     whatsapp: MY_WA,
+    phone: MY_PHONE,
     office: 'malaysia',
     title: 'Digital Marketing & Ads Agency in Kuala Lumpur (KL) | Static Savvy Media',
     description: 'Digital marketing and ads agency for Kuala Lumpur SMEs: SEO, Google Maps, Google Ads, social media and websites from our Selangor office. Custom quotes: +60 12-453 7030.',
@@ -609,13 +613,13 @@ export const cityPages = [
       { question: 'Why is my KL outlet not showing on Google Maps?', answer: 'Common causes are an unverified or suspended profile, a wrong pin inside a mall or tower, a duplicate listing, or a weak category. Distance from the searcher also matters a lot in KL. We audit the profile and fix what Google’s guidelines allow.' },
       { question: 'Do you cover Petaling Jaya and Shah Alam too?', answer: 'Yes. The same Rawang team serves the whole Klang Valley. See our Petaling Jaya and Shah Alam pages for local details.' },
       { question: 'Do you have an office in Kuala Lumpur?', answer: 'Our Malaysia office is in Rawang, Selangor (NO.9, Jalan Anggun 2J, Taman Anggun 2, 48000 Rawang, near AEON Mall Rawang). We serve clients across Kuala Lumpur and the Klang Valley and meet in KL by appointment.' },
-      { question: 'How much does a digital marketing agency in KL cost?', answer: 'It depends on the services and how much work is included, and ad spend is usually paid separately. Our SEO plans cover Google Business Profile management (12 posts), GBP plus website SEO with 4 blogs a month, and GBP, SEO, AEO and GEO, each quoted after a free review. Message us on WhatsApp at +60 12-453 7030 or send the enquiry form for a custom quote. Websites and ads management are quoted separately.' },
+      { question: 'How much does a digital marketing agency in KL cost?', answer: 'It depends on the services and how much work is included, and ad spend is usually paid separately. Our SEO plans cover Google Business Profile management (12 posts), GBP plus website SEO with 4 blogs a month, and GBP, SEO, AEO and GEO, each quoted after a free review. Message us on WhatsApp at +91 99440 40345, call +60 12-453 7030, or send the enquiry form for a custom quote. Websites and ads management are quoted separately.' },
       { question: 'Which service should a KL small business start with?', answer: 'If customers find you on Google Maps or by searching "near me", start with your Google Business Profile and local SEO. If they compare options on websites, add SEO for your service pages. If you need leads quickly, run Google Ads with tracking while SEO builds. Our buyer’s checklist for choosing a digital marketing agency in Malaysia (linked below) explains how to decide.' },
       { question: 'How long does SEO take to work in Kuala Lumpur?', answer: 'Google Business Profile improvements can lift Maps visibility within weeks. Website rankings for competitive KL keywords usually take several months and build as content, reviews and links grow. Google Ads can bring enquiries within days of launch.' },
       { question: 'Do you run Google Ads (SEM) and social media for KL businesses?', answer: 'Yes. We manage Google Ads search and Performance Max campaigns and social media for Instagram, Facebook, TikTok and LinkedIn, with conversion tracking on calls, forms and WhatsApp.' },
       { question: 'Can you create content in Bahasa Malaysia?', answer: 'Yes. We produce English and Bahasa Malaysia content and plan the language per channel and audience instead of translating everything.' },
       { question: 'Do you lock clients into long contracts?', answer: 'No. Our plans are monthly with no lock-in, and your Google Business Profile, Search Console, Analytics and ad accounts stay in your name.' },
-      { question: 'How can I contact your Malaysia team?', answer: 'Call or WhatsApp +60 12-453 7030 (Mon–Fri, 9 AM–6 PM MYT), or use the form on this page for a free review.' },
+      { question: 'How can I contact your Malaysia team?', answer: 'Call +60 12-453 7030 or WhatsApp +91 99440 40345 (Mon–Fri, 9 AM–6 PM MYT), or use the form on this page for a free review.' },
     ],
     related: [
       { to: '/services/seo/kuala-lumpur/', label: 'SEO services in Kuala Lumpur' },
@@ -748,6 +752,7 @@ export const cityPages = [
     areaType: 'City',
     containedIn: 'Malaysia',
     whatsapp: MY_WA,
+    phone: MY_PHONE,
     office: 'malaysia',
     title: 'Digital Marketing Agency in Shah Alam | Static Savvy Media Malaysia',
     description: 'SEO, Google Maps, Google Ads and websites for Shah Alam manufacturers, clinics, F&B and services, from our Rawang, Selangor office. Custom quotes: +60 12-453 7030.',
@@ -780,7 +785,7 @@ export const cityPages = [
     ],
     faqs: [
       { question: 'Do you have an office in Shah Alam?', answer: 'No. Our Malaysia office is in Rawang, Selangor, and we meet Shah Alam clients by appointment. Static Savvy Media is headquartered in Madurai, India.' },
-      { question: 'How much does digital marketing cost in Shah Alam?', answer: 'It depends on services, competition and languages. We quote in MYR after a free review. Call or WhatsApp +60 12-453 7030 for a custom quote. Ad spend is paid directly to Google or Meta.' },
+      { question: 'How much does digital marketing cost in Shah Alam?', answer: 'It depends on services, competition and languages. We quote in MYR after a free review. Call +60 12-453 7030 or WhatsApp +91 99440 40345 for a custom quote. Ad spend is paid directly to Google or Meta.' },
       { question: 'Can you help an industrial company in Shah Alam get B2B leads?', answer: 'Yes, through capability pages, search campaigns on specific product terms and LinkedIn. We track enquiries by source; we do not promise lead numbers.' },
       { question: 'Do you write content in Bahasa Malaysia?', answer: 'Yes. We plan English and Bahasa Malaysia content per audience and channel.' },
       { question: 'Can my SME use a grant for digital marketing?', answer: 'Some Malaysian SMEs qualify for government digitalisation programmes. We can prepare documentation for eligible services, but the programme decides eligibility.' },
@@ -803,6 +808,7 @@ export const cityPages = [
     areaType: 'City',
     containedIn: 'Malaysia',
     whatsapp: MY_WA,
+    phone: MY_PHONE,
     office: 'malaysia',
     title: 'Digital Marketing Agency in Petaling Jaya (PJ) | Static Savvy Media Malaysia',
     description: 'SEO, Google Maps, Google Ads and social media for Petaling Jaya cafes, clinics, offices and retailers, from our Selangor office. Custom quotes: +60 12-453 7030.',
@@ -835,7 +841,7 @@ export const cityPages = [
     ],
     faqs: [
       { question: 'Do you have an office in Petaling Jaya?', answer: 'No. Our Malaysia office is in Rawang, Selangor, and we meet PJ clients by appointment. The company is headquartered in Madurai, India.' },
-      { question: 'How much does digital marketing cost for a PJ business?', answer: 'It depends on services and competition in your neighbourhood. We quote in MYR after a free review. Call or WhatsApp +60 12-453 7030. Ad spend is paid directly to Google or Meta.' },
+      { question: 'How much does digital marketing cost for a PJ business?', answer: 'It depends on services and competition in your neighbourhood. We quote in MYR after a free review. Call +60 12-453 7030 or WhatsApp +91 99440 40345. Ad spend is paid directly to Google or Meta.' },
       { question: 'Why is my PJ cafe not showing on Google Maps?', answer: 'Common causes are an unverified or suspended profile, a wrong pin, a duplicate listing or a weak category choice. Distance from the searcher also matters a lot in a dense area like PJ. We audit and fix what Google’s guidelines allow.' },
       { question: 'Do you handle both Petaling Jaya and Kuala Lumpur?', answer: 'Yes. The same Rawang team serves the whole Klang Valley. See our Kuala Lumpur page for KL-specific details.' },
       { question: 'Do you do social media for PJ businesses?', answer: 'Yes: Instagram, Facebook, TikTok and LinkedIn, in English, Bahasa Malaysia or Chinese where your audience needs it.' },

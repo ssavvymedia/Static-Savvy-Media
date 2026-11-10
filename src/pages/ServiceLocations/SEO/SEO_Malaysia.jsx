@@ -303,7 +303,7 @@ const FAQS = [
   {
     question: 'Where is your Malaysia office and which areas do you serve?',
     answer:
-      'Our Malaysia office is in Rawang, Selangor. We provide SEO services to businesses in Rawang, Kuala Lumpur, Petaling Jaya, Shah Alam and the wider Klang Valley, and work with clients elsewhere in Malaysia remotely. You can call +60 12-453 7030 or message us on WhatsApp.',
+      'Our Malaysia office is in Rawang, Selangor. We provide SEO services to businesses in Rawang, Kuala Lumpur, Petaling Jaya, Shah Alam and the wider Klang Valley, and work with clients elsewhere in Malaysia remotely. You can call +60 12-453 7030 or message us on WhatsApp at +91 99440 40345.',
   },
   {
     question: 'Do you do SEO in Bahasa Malaysia as well as English?',
@@ -313,7 +313,7 @@ const FAQS = [
   {
     question: 'How much do SEO services cost in Malaysia?',
     answer:
-      'It depends on how many services and locations you want to rank for, how competitive they are and the current condition of your website. Book a free consultation and we will recommend a scope and send a custom quote. Message us on WhatsApp at +60 12-453 7030 or send an enquiry for a custom quote.',
+      'It depends on how many services and locations you want to rank for, how competitive they are and the current condition of your website. Book a free consultation and we will recommend a scope and send a custom quote. Message us on WhatsApp at +91 99440 40345 (or call +60 12-453 7030) or send an enquiry for a custom quote.',
   },
   {
     question: 'What is the difference between SEO and Local SEO?',

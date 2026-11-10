@@ -106,7 +106,7 @@ const content = {
         'Every plan is quoted after a free review: the fee depends on keywords, locations, languages and content volume. Retainers are monthly with no minimum contract term.',
         'One-off audits are available if you want a diagnosis before committing to monthly work.',
       ],
-      after: <>For a custom quote, WhatsApp <a href="https://wa.me/60124537030">+60 12-453 7030</a> or <Link to="/contact/">send an enquiry</Link>. For what agencies typically charge, read <Link to="/blog/seo-cost-malaysia-price-guide/">how much SEO costs in Malaysia</Link>.</>,
+      after: <>For a custom quote, WhatsApp <a href="https://wa.me/919944040345">+91 99440 40345</a>, call <a href="tel:+60124537030">+60 12-453 7030</a> or <Link to="/contact/">send an enquiry</Link>. For what agencies typically charge, read <Link to="/blog/seo-cost-malaysia-price-guide/">how much SEO costs in Malaysia</Link>.</>,
     },
     {
       eyebrow: 'Choosing an agency',
@@ -186,7 +186,7 @@ const content = {
   faqTitle: 'Frequently Asked Questions, SEO Services in Kuala Lumpur',
   quote: { region: 'malaysia', service: 'SEO in Kuala Lumpur' },
   faqs: [
-    { question: 'How much do SEO services cost in KL?', answer: 'It depends on keywords, locations, languages and content volume. We offer three monthly plans (GBP, GBP + website SEO, and GBP + SEO + AEO + GEO) with no minimum contract term, each quoted after a free review. Message us on WhatsApp at +60 12-453 7030 or send an enquiry for a custom quote.' },
+    { question: 'How much do SEO services cost in KL?', answer: 'It depends on keywords, locations, languages and content volume. We offer three monthly plans (GBP, GBP + website SEO, and GBP + SEO + AEO + GEO) with no minimum contract term, each quoted after a free review. Message us on WhatsApp at +91 99440 40345 (or call +60 12-453 7030) or send an enquiry for a custom quote.' },
     { question: 'How long does SEO take in Kuala Lumpur?', answer: 'Usually 3 to 6 months for local and neighbourhood terms, and longer for competitive city-wide terms. Technical and Google Business Profile fixes can show movement within weeks. We do not guarantee rankings.' },
     { question: 'Do you do Bahasa Malaysia SEO?', answer: 'Yes. We research and optimise English and Bahasa Malaysia content separately, because the search terms and intent are often different. Chinese-language content can be planned where your audience needs it.' },
     { question: 'Do you have an office in Malaysia?', answer: `Yes. Our Malaysia office is at ${MALAYSIA_OFFICE.streetAddress}, ${MALAYSIA_OFFICE.postalCode} ${MALAYSIA_OFFICE.addressLocality}, ${MALAYSIA_OFFICE.addressRegion} (${MALAYSIA_OFFICE.landmark}), north of Kuala Lumpur. Meetings can be in person or online.` },

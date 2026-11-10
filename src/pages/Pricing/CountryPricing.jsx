@@ -143,8 +143,10 @@ export default function CountryPricing({ country = 'india' }) {
   const faqs = useMemo(() => pricingFaqsFor(c.key), [c.key])
   const [tab, setTab] = useState(PRICING_SERVICES[0].key)
   const phone = copy.phone
-  const wa = buildWhatsAppLink(phone.display, `Hi Static Savvy Media, I've seen the ${c.label} plans and would like to discuss my proposal.`)
-  const waCall = buildWhatsAppLink(phone.display, `Hi Static Savvy Media, I'd like to book a video call (Google Meet or Zoom) about the ${c.label} plans. My preferred day and time: `)
+  /* WhatsApp is the Indian line in every country (owner, 10 Nov 2026); `phone` stays the call line. */
+  const waNumber = c.whatsapp
+  const wa = buildWhatsAppLink(waNumber, `Hi Static Savvy Media, I've seen the ${c.label} plans and would like to discuss my proposal.`)
+  const waCall = buildWhatsAppLink(waNumber, `Hi Static Savvy Media, I'd like to book a video call (Google Meet or Zoom) about the ${c.label} plans. My preferred day and time: `)
   const tel = `tel:${phone.tel}`
   const s = GBP_REVIEW_SUMMARY
 
@@ -195,7 +197,7 @@ export default function CountryPricing({ country = 'india' }) {
             <h1 id="lp-h1" className="lp-hero__title">{copy.headline}</h1>
             <p className="lp-hero__lead">{copy.promise}</p>
             <div className="lp-hero__ctas">
-              <a className="lp-btn lp-btn--primary lp-btn--lg" href={wa} target="_blank" rel="noopener noreferrer"><WhatsAppIcon size={20} variant="white" /> WhatsApp {phone.display}</a>
+              <a className="lp-btn lp-btn--primary lp-btn--lg" href={wa} target="_blank" rel="noopener noreferrer"><WhatsAppIcon size={20} variant="white" /> WhatsApp {waNumber}</a>
               <a className="lp-btn lp-btn--ghost lp-btn--lg" href="#plans">See plans &amp; prices</a>
             </div>
             <ul className="lp-badges" aria-label="Why clients trust us">
@@ -332,7 +334,7 @@ export default function CountryPricing({ country = 'india' }) {
                   <p>{sv.blurb}</p>
                 </div>
                 <div className="lp-plans">
-                  {plans.map((p) => <PlanCard key={p.name} service={sv} plan={p} country={c} phone={phone.display} />)}
+                  {plans.map((p) => <PlanCard key={p.name} service={sv} plan={p} country={c} phone={waNumber} />)}
                 </div>
                 <CompareTable service={sv} plans={plans} countryKey={c.key} />
               </div>
@@ -375,7 +377,7 @@ export default function CountryPricing({ country = 'india' }) {
             <p>Tell us which plan you are looking at. We will confirm the scope, answer your questions and send the written quote.</p>
             <div className="lp-final__grid">
               <a className="lp-action lp-action--wa" href={wa} target="_blank" rel="noopener noreferrer">
-                <WhatsAppIcon size={24} variant="white" /><span><strong>WhatsApp us</strong><small>{phone.display}</small></span>
+                <WhatsAppIcon size={24} variant="white" /><span><strong>WhatsApp us</strong><small>{waNumber}</small></span>
               </a>
               <a className="lp-action" href={tel}>
                 <Icon name="phone" /><span><strong>Call us</strong><small>{phone.display}</small></span>

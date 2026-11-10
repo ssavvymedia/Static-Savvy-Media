@@ -4,7 +4,7 @@
  */
 export const PRICING_COUNTRIES = [
   { key: 'india', label: 'India', flag: '🇮🇳', currency: 'INR', symbol: '₹', iso: 'IN', countryName: 'India', whatsapp: '+91 99440 40345' },
-  { key: 'malaysia', label: 'Malaysia', flag: '🇲🇾', currency: 'MYR', symbol: 'RM ', iso: 'MY', countryName: 'Malaysia', whatsapp: '+60 12-453 7030' },
+  { key: 'malaysia', label: 'Malaysia', flag: '🇲🇾', currency: 'MYR', symbol: 'RM ', iso: 'MY', countryName: 'Malaysia', whatsapp: '+91 99440 40345' },
   { key: 'dubai', label: 'Dubai', flag: '🇦🇪', currency: 'AED', symbol: 'AED ', iso: 'AE', countryName: 'United Arab Emirates', whatsapp: '+91 99440 40345' },
   { key: 'singapore', label: 'Singapore', flag: '🇸🇬', currency: 'SGD', symbol: 'SGD ', iso: 'SG', countryName: 'Singapore', whatsapp: '+91 99440 40345' },
 ]

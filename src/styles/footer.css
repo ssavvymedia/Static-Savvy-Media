@@ -256,3 +256,18 @@
 .site-footer__links .site-footer__group .site-footer__link-arrow {
   display: none;
 }
+
+/* Contact lines (both numbers visible on every page) */
+.site-footer__contact {
+  margin: 0.75rem 0 1rem;
+  display: grid;
+  gap: 0.35rem;
+  font-size: var(--fs-small);
+  color: var(--color-text-muted);
+}
+.site-footer__contact a {
+  color: var(--color-text);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

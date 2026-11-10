@@ -3,12 +3,12 @@ import { buildWhatsAppLink } from '../../utils/helpers.js'
 import '../../styles/quote-cta.css'
 
 const INDIA_WA = '+91 99440 40345'
-const MALAYSIA_WA = '+60 12-453 7030'
+const MALAYSIA_CALL = { display: '+60 12-453 7030', href: 'tel:+60124537030' }
 
 /**
  * "Get a custom quote" block. Replaces every public price card (owner's instruction, 29 Oct 2026):
- * prices are shared only at proposal time, never on public pages. WhatsApp +91 99440 40345, or
- * +60 12-453 7030 on Malaysia pages (region="malaysia"), plus the enquiry form.
+ * prices are shared only at proposal time, never on public pages. WhatsApp +91 99440 40345 everywhere;
+ * Malaysia pages (region="malaysia") also show the call line +60 12-453 7030 (owner, 10 Nov 2026).
  */
 export default function QuoteCTA({
   region = 'india',
@@ -20,7 +20,8 @@ export default function QuoteCTA({
   formHref = '#enquiry',
   className = '',
 }) {
-  const wa = region === 'malaysia' ? MALAYSIA_WA : INDIA_WA
+  const wa = INDIA_WA
+  const call = region === 'malaysia' ? MALAYSIA_CALL : null
   const waHref = buildWhatsAppLink(wa, `Hi Static Savvy Media, I'd like a custom quote for ${service}.`)
   const formIsAnchor = formHref.startsWith('#')
   return (
@@ -41,6 +42,9 @@ export default function QuoteCTA({
             <Button href={waHref} variant="primary" size="lg" target="_blank" rel="noopener noreferrer">
               {`WhatsApp ${wa}`}
             </Button>
+            {call && (
+              <Button href={call.href} variant="outline" size="lg">{`Call ${call.display}`}</Button>
+            )}
             {formIsAnchor ? (
               <Button href={formHref} variant="ghost" size="lg">Send an enquiry</Button>
             ) : (
