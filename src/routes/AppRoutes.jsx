@@ -44,6 +44,7 @@ const CityLanding = lazyPage('src/pages/Locations/CityLanding.jsx', () => import
 
 const Industries = lazyPage('src/pages/Industries/Industries.jsx', () => import('../pages/Industries/Industries.jsx'))
 const ManufacturingB2B = lazyPage('src/pages/Industries/ManufacturingB2B.jsx', () => import('../pages/Industries/ManufacturingB2B.jsx'))
+const GrowthAudit = lazyPage('src/pages/GrowthAudit/GrowthAudit.jsx', () => import('../pages/GrowthAudit/GrowthAudit.jsx'))
 const Solutions = lazyPage('src/pages/Solutions/Solutions.jsx', () => import('../pages/Solutions/Solutions.jsx'))
 const RetailEcommerce = lazyPage('src/pages/Industries/RetailEcommerce.jsx', () => import('../pages/Industries/RetailEcommerce.jsx'))
 const HealthcareClinics = lazyPage('src/pages/Industries/HealthcareClinics.jsx', () => import('../pages/Industries/HealthcareClinics.jsx'))
@@ -204,6 +205,7 @@ export default function AppRoutes() {
         <Route path="/industries" element={<Industries />} />
         <Route path="/industries/manufacturing-b2b" element={<ManufacturingB2B />} />
         <Route path="/solutions" element={<Solutions />} />
+        <Route path="/growth-audit" element={<GrowthAudit />} />
         <Route
           path="/industries/retail-ecommerce"
           element={<RetailEcommerce />}

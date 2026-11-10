@@ -1838,6 +1838,11 @@
       "statusCode": 308
     },
     {
+      "source": "/growth-audit",
+      "destination": "/growth-audit/",
+      "statusCode": 308
+    },
+    {
       "source": "/industries/retail-ecommerce",
       "destination": "/industries/retail-ecommerce/",
       "statusCode": 308
@@ -2345,6 +2350,10 @@
     },
     {
       "source": "/solutions/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/growth-audit/",
       "destination": "/index.html"
     },
     {

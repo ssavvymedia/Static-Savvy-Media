@@ -764,6 +764,28 @@ export const seoConfig = {
   },
 
   // Industry Hub & Pages
+  "/growth-audit": {
+    title: "Free Business Growth Audit | Static Savvy Media, Madurai",
+    slug: "growth-audit",
+    seo: {
+      title: "Free Business Growth Audit | Static Savvy Media, Madurai",
+      description:
+        "Request a free Business Growth Audit: website & SEO health, Google Business Profile, AI search presence, competitors and a prioritised 90-day plan, prepared by our Madurai team.",
+      canonical: `${BASE_URL}/growth-audit`,
+      focusKeyword: "free growth audit",
+      ogTitle: "Free Business Growth Audit | Static Savvy Media, Madurai",
+      ogDescription:
+        "Request a free Business Growth Audit: website & SEO health, Google Business Profile, AI search presence, competitors and a prioritised 90-day plan, prepared by our Madurai team.",
+      ogImage: `${BASE_URL}/og/industries-industriesmain.jpg`,
+      schema: {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: "Free Business Growth Audit | Static Savvy Media, Madurai",
+        url: `${BASE_URL}/growth-audit`,
+      },
+      robots: "index,follow",
+    },
+  },
   "/solutions": {
     title: "Growth Solutions: SEO, AI Search & Google Ads | Static Savvy Media",
     slug: "solutions",

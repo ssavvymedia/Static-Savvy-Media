@@ -158,7 +158,7 @@ export default function MobileNav({ open = false, onClose, className = '' }) {
         </nav>
 
         <div className="mobile-nav__cta">
-          <Button to="/contact/#form" variant="primary" size="lg" onClick={onClose}>
+          <Button to="/growth-audit/" variant="primary" size="lg" onClick={onClose}>
             Get a Growth Audit
           </Button>
           <ThemeToggle className="mobile-nav__theme" />

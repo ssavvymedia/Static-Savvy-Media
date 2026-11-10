@@ -70,6 +70,7 @@ export const ssrRoutes = [
   {'route': '/locations/thoothukudi/', 'module': '/src/pages/Locations/Thoothukudi.jsx', 'kind': 'page', 'pageType': 'WebPage', 'office': 'madurai'},
   {'route': '/industries/', 'module': '/src/pages/Industries/Industries.jsx', 'kind': 'page', 'pageType': 'CollectionPage'},
   { route: '/industries/manufacturing-b2b/', module: '/src/pages/Industries/ManufacturingB2B.jsx', office: 'madurai', service: 'Digital marketing for manufacturing and B2B companies', serviceType: 'Digital marketing', area: [{ '@type': 'State', name: 'Tamil Nadu' }, { '@type': 'Country', name: 'India' }, { '@type': 'Country', name: 'Malaysia' }] },
+  { route: '/growth-audit/', module: '/src/pages/GrowthAudit/GrowthAudit.jsx', kind: 'page', pageType: 'WebPage', office: 'madurai' },
   { route: '/solutions/', module: '/src/pages/Solutions/Solutions.jsx', kind: 'page', pageType: 'CollectionPage' },
   {'route': '/industries/retail-ecommerce/', 'module': '/src/pages/Industries/RetailEcommerce.jsx', 'kind': 'page', 'pageType': 'WebPage'},
   {'route': '/industries/healthcare-clinics/', 'module': '/src/pages/Industries/HealthcareClinics.jsx', 'kind': 'page', 'pageType': 'WebPage'},

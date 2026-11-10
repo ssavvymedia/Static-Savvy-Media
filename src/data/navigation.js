@@ -83,6 +83,7 @@ export const BREADCRUMB_LABELS = {
   malaysia: "Malaysia",
   industries: "Industries",
   solutions: "Growth Solutions",
+  "growth-audit": "Growth Audit",
   "manufacturing-b2b": "Manufacturing & B2B",
   "retail-ecommerce": "Retail & E-Commerce",
   "healthcare-clinics": "Healthcare & Clinics",
