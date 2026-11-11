@@ -19,6 +19,18 @@ window.addEventListener('vite:preloadError', (event) => {
   event.preventDefault()
   window.location.reload()
 })
+/* Same stale-deploy case for images: a hashed /assets/ image (e.g. the founder photo) that 404s because
+ * the page was built before the latest deploy gets one reload to pick up the new file names. */
+window.addEventListener('error', (event) => {
+  const el = event.target
+  if (!el || el.tagName !== 'IMG') return
+  const src = el.currentSrc || el.src || ''
+  if (!src.includes('/assets/')) return
+  const KEY = 'ssm-chunk-reload'
+  if (sessionStorage.getItem(KEY)) return
+  sessionStorage.setItem(KEY, '1')
+  window.location.reload()
+}, true)
 window.addEventListener('load', () => setTimeout(() => sessionStorage.removeItem('ssm-chunk-reload'), 10000))
 
 const app = (
