@@ -1,1 +1,2645 @@
-FULL_CONTENT_PLACEHOLDER
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/images/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=2592000, stale-while-revalidate=86400"
+        }
+      ]
+    },
+    {
+      "source": "/og/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=2592000, stale-while-revalidate=86400"
+        }
+      ]
+    },
+    {
+      "source": "/fonts/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/p/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/case-studies/client-(\\d+){/}?",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, follow"
+        }
+      ]
+    },
+    {
+      "source": "/diwali-2026{/}?",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://*.google-analytics.com https://*.googletagmanager.com https://www.clarity.ms https://*.clarity.ms https://*.doubleclick.net https://connect.facebook.net https://*.google.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https:; font-src 'self' data:; media-src 'self' blob: data:; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.clarity.ms https://*.doubleclick.net https://*.google.com https://www.facebook.com; frame-src https://www.googletagmanager.com https://*.doubleclick.net https://www.facebook.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=(), payment=()"
+        }
+      ]
+    },
+    {
+      "source": "/api/diwali-lead",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        },
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/blog/seo{/}?",
+      "destination": "/blog/seo-agency-madurai-complete-guide/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/geo-aeo{/}?",
+      "destination": "/blog/what-is-generative-engine-optimization/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post/best-digital-marketing-agency-in-malaysia-for-small-businesses-a-buyer-s-checklist{/}?",
+      "destination": "/blog/how-to-choose-digital-marketing-agency-malaysia/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post/best-digital-marketing-company-in-madurai{/}?",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/on-pageseoservicesinmadurai{/}?",
+      "destination": "/services/seo/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/technicalseoagencyinmadurai{/}?",
+      "destination": "/services/seo/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/local-seo-services-madurai{/}?",
+      "destination": "/services/local-seo/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/website-development-madurai{/}?",
+      "destination": "/services/website-design-development/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ecommerceseoservicesinmadurai{/}?",
+      "destination": "/services/seo/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seobloggingservicesmadurai{/}?",
+      "destination": "/services/seo/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/localseoservicesinmadurai{/}?",
+      "destination": "/services/local-seo/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/websitedevelopmentcompanyinmadurai{/}?",
+      "destination": "/services/website-design-development/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blogs/digital-marketing-strategies-for-small-businesses-in-madurai{/}?",
+      "destination": "/locations/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/youtubemarketingservicesinmadurai{/}?",
+      "destination": "/services/social-media-marketing/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/videomarketingservicesinmadurai{/}?",
+      "destination": "/services/corporate-photography-video/",
+      "statusCode": 301
+    },
+    {
+      "source": "/aiseoservicesinmadurai{/}?",
+      "destination": "/services/geo-aeo-ai-search/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/u1designservicesinmadurai{/}?",
+      "destination": "/services/website-design-development/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/digitalmarketingagencyinmadurai{/}?",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/linkedinmarketingservicesinmadurai{/}?",
+      "destination": "/services/social-media-marketing/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blogs/local-seo-services-in-madurai{/}?",
+      "destination": "/services/local-seo/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post/seo-for-jewellery-shops-to-boost-online-visibility-and-sales{/}?",
+      "destination": "/industries/retail-ecommerce/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo-blogging-services-madurai{/}?",
+      "destination": "/services/seo/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blogs/complete-guide-to-digital-marketing-in-madurai{/}?",
+      "destination": "/locations/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/facebook-marketing-services-in-madurai{/}?",
+      "destination": "/services/social-media-marketing/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/googleadsagencyinmadurai{/}?",
+      "destination": "/services/google-ads/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post/best-digital-marketing-agency-in-madurai-how-to-choose-the-right-one-for-your-business{/}?",
+      "destination": "/blog/how-to-choose-the-right-digital-marketing-agency-in-madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ai-seo-services-madurai{/}?",
+      "destination": "/services/geo-aeo-ai-search/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/generativeengineoptimizationagencyinmadurai{/}?",
+      "destination": "/services/geo-aeo-ai-search/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/instagrammarketingagencyinmadurai{/}?",
+      "destination": "/services/social-media-marketing/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post/craft-a-winning-sme-digital-growth-plan-a-practical-sme-digital-strategies-guide{/}?",
+      "destination": "/services/",
+      "statusCode": 301
+    },
+    {
+      "source": "/meta-ads-agency-madurai{/}?",
+      "destination": "/services/social-media-marketing/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/aimarketingautomationservicesinmadurai{/}?",
+      "destination": "/services/ai-business-automation/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ecommercewebsitedevelopmentinmadurai{/}?",
+      "destination": "/services/website-design-development/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/digital-marketing-agency-thoothukudi{/}?",
+      "destination": "/locations/thoothukudi/",
+      "statusCode": 301
+    },
+    {
+      "source": "/whatsapp-automation-madurai{/}?",
+      "destination": "/services/ai-business-automation/",
+      "statusCode": 301
+    },
+    {
+      "source": "/answerengineoptimizationserviceinmadurai{/}?",
+      "destination": "/services/geo-aeo-ai-search/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/metaadsagencyinmadurai{/}?",
+      "destination": "/services/social-media-marketing/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post/social-media-marketing-for-jewellery-shops-in-madurai-a-practical-guide{/}?",
+      "destination": "/services/social-media-marketing/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/linkedin-marketing-madurai{/}?",
+      "destination": "/services/social-media-marketing/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post/unlocking-growth-with-static-savvy-media-solutions{/}?",
+      "destination": "/about/",
+      "statusCode": 301
+    },
+    {
+      "source": "/aeo-services-madurai{/}?",
+      "destination": "/services/geo-aeo-ai-search/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/google-ads-agency-madurai{/}?",
+      "destination": "/services/google-ads/",
+      "statusCode": 301
+    },
+    {
+      "source": "/youtube-ads-services-in-madurai{/}?",
+      "destination": "/services/google-ads/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ecommerce-website-development-madurai{/}?",
+      "destination": "/services/website-design-development/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/industries-we-serve{/}?",
+      "destination": "/industries/",
+      "statusCode": 301
+    },
+    {
+      "source": "/uxresearch{/}?",
+      "destination": "/services/website-design-development/",
+      "statusCode": 301
+    },
+    {
+      "source": "/geo-services-madurai{/}?",
+      "destination": "/services/geo-aeo-ai-search/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/instagram-marketing-madurai{/}?",
+      "destination": "/services/social-media-marketing/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/brandingservicesinmadurai{/}?",
+      "destination": "/services/product-photography-creative-design/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ai-video-production-madurai{/}?",
+      "destination": "/services/ai-video-creation/",
+      "statusCode": 301
+    },
+    {
+      "source": "/cmswebsitedevelopmentcompanyinmadurai{/}?",
+      "destination": "/services/website-design-development/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/digital-marketing-agency-malaysia{/}?",
+      "destination": "/locations/malaysia/",
+      "statusCode": 301
+    },
+    {
+      "source": "/facebookmarketingservicesinmadurai{/}?",
+      "destination": "/services/social-media-marketing/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blogs{/}?",
+      "destination": "/blog/",
+      "statusCode": 301
+    },
+    {
+      "source": "/cms-website-development-madurai{/}?",
+      "destination": "/services/website-design-development/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post/local-seo-pricing-in-madurai-what-should-you-actually-pay-in-2026{/}?",
+      "destination": "/services/local-seo/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post/practical-ways-to-use-ai-for-sme-development{/}?",
+      "destination": "/services/ai-business-automation/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post/digital-marketing-for-madurai-textile-businesses-a-practical-guide{/}?",
+      "destination": "/industries/textiles-madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post/how-a-digital-marketing-agency-in-madurai-can-transform-your-business-growth{/}?",
+      "destination": "/locations/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post/how-can-google-business-profile-optimization-improve-local-rankings{/}?",
+      "destination": "/services/local-seo/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post/transforming-sme-growth-with-ai-applications-for-sme-growth{/}?",
+      "destination": "/services/ai-business-automation/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post/ai-usage-in-sme-growth-effective-ways-to-use-ai-for-sme-growth{/}?",
+      "destination": "/services/ai-business-automation/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post/where-to-find-affordable-seo-services-in-madurai{/}?",
+      "destination": "/services/seo/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post/where-to-find-seo-social-media-marketing-google-my-business-google-ads-and-content-creation-serv{/}?",
+      "destination": "/services/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/page/3{/}?",
+      "destination": "/blog/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post/digital-growth-strategies-for-smes-effective-plans-to-accelerate-your-business{/}?",
+      "destination": "/services/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post/how-to-get-your-madurai-business-to-show-up-on-google-in-2026{/}?",
+      "destination": "/services/local-seo/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post/facebook-marketing-for-malaysian-small-businesses-what-still-works-in-2026{/}?",
+      "destination": "/services/social-media-marketing/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post/how-local-seo-and-gmb-optimization-can-boost-your-business-in-madurai{/}?",
+      "destination": "/services/local-seo/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post/choosing-the-best-seo-agency-in-malaysia-for-your-business-growth{/}?",
+      "destination": "/services/seo/malaysia/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post/how-local-seo-helps-madurai-businesses-rank-on-google-maps-and-get-more-customers{/}?",
+      "destination": "/services/local-seo/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post/seo-agency-in-malaysia-why-selangor-businesses-need-local-search-optimization{/}?",
+      "destination": "/services/seo/malaysia/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post/using-ai-for-sme-development-amplify-growth-with-smart-technology{/}?",
+      "destination": "/services/ai-business-automation/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post/what-are-ai-automation-tools-for-marketing{/}?",
+      "destination": "/services/ai-business-automation/",
+      "statusCode": 301
+    },
+    {
+      "source": "/conversiondesign{/}?",
+      "destination": "/services/website-design-development/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post/best-seo-tools-for-sme-automation-unlocking-growth-with-smart-technology{/}?",
+      "destination": "/services/seo/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post/develop-a-winning-digital-growth-plan-for-smes-digital-growth-strategies-for-smes{/}?",
+      "destination": "/services/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post/google-my-business-optimization-guide-for-madurai-shop-owners{/}?",
+      "destination": "/services/local-seo/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post/how-to-automate-marketing-with-ai-and-find-digital-marketing-support-in-tamil-nadu{/}?",
+      "destination": "/locations/tamil-nadu/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ui-ux-design-madurai{/}?",
+      "destination": "/services/website-design-development/",
+      "statusCode": 301
+    },
+    {
+      "source": "/websiteredesignservicesinmadurai{/}?",
+      "destination": "/services/website-design-development/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/page/2{/}?",
+      "destination": "/blog/",
+      "statusCode": 301
+    },
+    {
+      "source": "/landing-page-design-madurai{/}?",
+      "destination": "/services/website-design-development/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post/using-ai-for-sme-growth-unlocking-new-opportunities-for-your-business{/}?",
+      "destination": "/services/ai-business-automation/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post/how-ai-powered-lead-generation-transforms-growth-for-smes{/}?",
+      "destination": "/services/ai-business-automation/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post/seo-automation-tools-for-smes-in-india-boost-your-digital-presence{/}?",
+      "destination": "/services/seo/",
+      "statusCode": 301
+    },
+    {
+      "source": "/website-redesign-services-madurai{/}?",
+      "destination": "/services/website-design-development/",
+      "statusCode": 301
+    },
+    {
+      "source": "/landingpagedesigninmadurai{/}?",
+      "destination": "/services/website-design-development/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post/how-local-seo-helps-madurai-businesses-rank-on-google-maps-get-more-customers{/}?",
+      "destination": "/services/local-seo/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post/static-media-marketing-insights-unlocking-growth-for-ambitious-smes{/}?",
+      "destination": "/about/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post/top-e-commerce-website-services-india-unlocking-growth-for-your-business-1{/}?",
+      "destination": "/services/website-design-development/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post/where-can-i-find-seo-services-in-madurai{/}?",
+      "destination": "/services/seo/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post/why-most-madurai-business-websites-don-t-rank-on-google-and-how-to-fix-it{/}?",
+      "destination": "/services/seo/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post/why-most-madurai-businesses-are-invisible-online-and-how-to-fix-it{/}?",
+      "destination": "/services/local-seo/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post/ai-tools-for-lead-generation-unlocking-growth-for-smes{/}?",
+      "destination": "/services/ai-business-automation/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post/how-madurai-restaurants-can-get-more-customers-using-google-maps-and-local-seo{/}?",
+      "destination": "/services/local-seo/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post/lead-generation-strategies-that-work-for-ambitious-smes-in-madurai{/}?",
+      "destination": "/services/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post/mastering-digital-growth-plans-for-smes-proven-digital-strategies-for-smes-success{/}?",
+      "destination": "/services/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post/static-media-strategies-for-smes-understanding-static-savvy-media-for-smes{/}?",
+      "destination": "/about/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post/who-offers-integrated-digital-marketing-solutions-in-tamil-nadu{/}?",
+      "destination": "/locations/tamil-nadu/",
+      "statusCode": 301
+    },
+    {
+      "source": "/10-best-ai-agent-tools-for-digital-marketing-in-2025{/}?",
+      "destination": "/services/ai-business-automation/",
+      "statusCode": 301
+    },
+    {
+      "source": "/2025-paid-ad-trends-madurai{/}?",
+      "destination": "/services/google-ads/",
+      "statusCode": 301
+    },
+    {
+      "source": "/2025-seo-trends-madurai-companies-cant-ignore{/}?",
+      "destination": "/services/seo/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/about-us{/}?",
+      "destination": "/about/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ai-content-optimization-eeat-framework-2025{/}?",
+      "destination": "/blog/how-to-rank-in-ai-search/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ai-digital-marketing-madurai-top-7-ways{/}?",
+      "destination": "/services/ai-business-automation/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ai-seo-in-2025-complete-guide-to-optimize-for-artificial-intelligence-search{/}?",
+      "destination": "/blog/how-to-rank-in-ai-search/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ai-tools-every-madurai-entrepreneur-should-know{/}?",
+      "destination": "/services/ai-business-automation/",
+      "statusCode": 301
+    },
+    {
+      "source": "/best-practices-for-social-media-marketing-in-madurai-2025{/}?",
+      "destination": "/services/social-media-marketing/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/branding-and-identity{/}?",
+      "destination": "/services/product-photography-creative-design/",
+      "statusCode": 301
+    },
+    {
+      "source": "/branding-service-in-madurai{/}?",
+      "destination": "/services/product-photography-creative-design/",
+      "statusCode": 301
+    },
+    {
+      "source": "/case-study-how-static-savvy-media-boosted-sales-for-a-madurai-retailer{/}?",
+      "destination": "/case-studies/",
+      "statusCode": 301
+    },
+    {
+      "source": "/chatgpt-seo-prompts-2025{/}?",
+      "destination": "/blog/how-to-rank-in-ai-search/",
+      "statusCode": 301
+    },
+    {
+      "source": "/contact-us{/}?",
+      "destination": "/contact/",
+      "statusCode": 301
+    },
+    {
+      "source": "/contact.php{/}?",
+      "destination": "/contact/",
+      "statusCode": 301
+    },
+    {
+      "source": "/content-marketing{/}?",
+      "destination": "/services/seo/",
+      "statusCode": 301
+    },
+    {
+      "source": "/content-marketing-service-in-madurai{/}?",
+      "destination": "/services/seo/",
+      "statusCode": 301
+    },
+    {
+      "source": "/digital-marketing{/}?",
+      "destination": "/services/",
+      "statusCode": 301
+    },
+    {
+      "source": "/digital-marketing-is-not-a-luxury-anymore-how-madurai-businesses-are-losing-customers-without-it{/}?",
+      "destination": "/locations/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/digital-marketing-madurai-2025{/}?",
+      "destination": "/locations/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/digital-marketing-madurai-local-businesses-2025-guide{/}?",
+      "destination": "/locations/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/digital-marketing-service-in-madurai{/}?",
+      "destination": "/locations/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/digital-marketing-strategies-for-dental-clinics-in-2025{/}?",
+      "destination": "/industries/healthcare-clinics/",
+      "statusCode": 301
+    },
+    {
+      "source": "/digitalmarketingagencythoothukudi{/}?",
+      "destination": "/locations/thoothukudi/",
+      "statusCode": 301
+    },
+    {
+      "source": "/digitalmarketingservice{/}?",
+      "destination": "/services/",
+      "statusCode": 301
+    },
+    {
+      "source": "/e-commerce-seo-madurai{/}?",
+      "destination": "/services/seo/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/e-commerce-solutions{/}?",
+      "destination": "/services/website-design-development/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ecommerce-solutions{/}?",
+      "destination": "/services/website-design-development/",
+      "statusCode": 301
+    },
+    {
+      "source": "/empowering-your-digital-presence-content-marketing{/}?",
+      "destination": "/services/seo/",
+      "statusCode": 301
+    },
+    {
+      "source": "/experience-next-level-growth-with-the-best-branding-company-in-madurai-elevate-your-identity-in-2025{/}?",
+      "destination": "/services/product-photography-creative-design/",
+      "statusCode": 301
+    },
+    {
+      "source": "/generative-engine-optimization-ai-seo{/}?",
+      "destination": "/blog/what-is-generative-engine-optimization/",
+      "statusCode": 301
+    },
+    {
+      "source": "/generative-engine-optimization-geo-changing-seo-2025{/}?",
+      "destination": "/blog/what-is-generative-engine-optimization/",
+      "statusCode": 301
+    },
+    {
+      "source": "/geo-generative-engine-optimization-the-must-know-seo-revolution-for-2025{/}?",
+      "destination": "/blog/what-is-generative-engine-optimization/",
+      "statusCode": 301
+    },
+    {
+      "source": "/geo-the-complete-guide-to-generative-engine-optimization-in-2025{/}?",
+      "destination": "/blog/what-is-generative-engine-optimization/",
+      "statusCode": 301
+    },
+    {
+      "source": "/google-ads-management-madurai{/}?",
+      "destination": "/services/google-ads/",
+      "statusCode": 301
+    },
+    {
+      "source": "/google-my-business-optimization-madurai{/}?",
+      "destination": "/services/local-seo/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hi{/}?",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hi/about{/}?",
+      "destination": "/about/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hi/blog{/}?",
+      "destination": "/blog/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hi/branding-service-in-madurai{/}?",
+      "destination": "/services/product-photography-creative-design/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hi/contact-us{/}?",
+      "destination": "/contact/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hi/content-marketing-service-in-madurai{/}?",
+      "destination": "/services/seo/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hi/digital-marketing-service-in-madurai{/}?",
+      "destination": "/locations/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hi/ecommerce-solutions{/}?",
+      "destination": "/services/website-design-development/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hi/pay-per-click-advertising-in-madurai{/}?",
+      "destination": "/services/google-ads/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hi/pricing{/}?",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hi/privacy-policy{/}?",
+      "destination": "/privacy-policy/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hi/search-engine-optimization-in-madurai{/}?",
+      "destination": "/services/seo/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hi/services{/}?",
+      "destination": "/services/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hi/social-media-marketing-in-madurai{/}?",
+      "destination": "/services/social-media-marketing/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hi/terms-and-coniditions{/}?",
+      "destination": "/terms/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hi/ui-ux-designing-service-in-madurai{/}?",
+      "destination": "/services/website-design-development/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hi/website-design-and-development-in-madurai{/}?",
+      "destination": "/services/website-design-development/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hi/whatsapp-marketing-service-in-madurai{/}?",
+      "destination": "/services/ai-business-automation/",
+      "statusCode": 301
+    },
+    {
+      "source": "/how-generative-engine-optimization-is-changing-digital-marketing-in-madurai{/}?",
+      "destination": "/services/geo-aeo-ai-search/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/how-to-select-the-right-advertising-agency-in-madurai-7-essential-criteria-for-business-success{/}?",
+      "destination": "/services/advertising-agency/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/local-seo-madurai-near-me{/}?",
+      "destination": "/services/local-seo/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/local-seo-secrets-how-madurai-companies-dominate-google-maps{/}?",
+      "destination": "/services/local-seo/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/local-seo-services{/}?",
+      "destination": "/services/local-seo/",
+      "statusCode": 301
+    },
+    {
+      "source": "/madurai-digital-marketing-guide-2025-seo-website-social-media-ai-branding{/}?",
+      "destination": "/locations/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pay-per-click-advertising{/}?",
+      "destination": "/services/google-ads/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pay-per-click-advertising-in-madurai{/}?",
+      "destination": "/services/google-ads/",
+      "statusCode": 301
+    },
+    {
+      "source": "/portfolio{/}?",
+      "destination": "/case-studies/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post/ai-overviews-vs-google-search-what-madurai-businesses-need-to-know-in-2026{/}?",
+      "destination": "/blog/how-to-rank-in-ai-search/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post/ai-powered-strategies-for-lead-generation{/}?",
+      "destination": "/services/ai-business-automation/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post/ai-tools-for-lead-generation-boosting-growth-for-smes{/}?",
+      "destination": "/services/ai-business-automation/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post/best-ai-tools-for-writing-web-seo{/}?",
+      "destination": "/services/seo/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post/google-ads-vs-seo-for-madurai-small-businesses-which-gets-results-faster{/}?",
+      "destination": "/blog/seo-vs-google-ads-madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post/how-ai-powered-lead-generation-transforms-growth-for-smes-in-india{/}?",
+      "destination": "/services/ai-business-automation/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post/how-ai-search-and-geo-optimization-can-boost-your-business-reach{/}?",
+      "destination": "/blog/how-to-rank-in-ai-search/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post/how-much-does-it-cost-to-hire-a-digital-marketer-in-madurai{/}?",
+      "destination": "/blog/digital-marketing-service-costs-in-madurai-2026-pricing-guide/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post/how-we-helped-a-madurai-restaurant-get-300-more-walk-in-customers-with-local-seo{/}?",
+      "destination": "/case-studies/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post/mastering-seo-in-2024-the-ultimate-guide-to-ranking-1-on-google{/}?",
+      "destination": "/services/seo/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post/revolutionizing-lead-generation-with-ai-driven-lead-generation-tools{/}?",
+      "destination": "/services/ai-business-automation/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post/seo-for-salons-how-to-boost-your-salon-s-online-presence-and-attract-more-clients{/}?",
+      "destination": "/blog/social-media-marketing-salons-aesthetics-madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post/the-top-ai-tools-you-need-to-succeed-in-2024-a-comprehensive-guide-for-professionals{/}?",
+      "destination": "/services/ai-business-automation/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post/the-ultimate-guide-to-google-business-profile-seo-rank-1-on-google-maps-in-2024{/}?",
+      "destination": "/services/local-seo/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post/top-automated-seo-tools-for-smes{/}?",
+      "destination": "/services/seo/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pricing{/}?",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/project-category/web-design{/}?",
+      "destination": "/services/website-design-development/",
+      "statusCode": 301
+    },
+    {
+      "source": "/search-engine-optimization{/}?",
+      "destination": "/services/seo/",
+      "statusCode": 301
+    },
+    {
+      "source": "/search-engine-optimization-in-madurai{/}?",
+      "destination": "/services/seo/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo-mistakes-madurai-2{/}?",
+      "destination": "/services/seo/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo-services-in-madurai{/}?",
+      "destination": "/services/seo/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/service{/}?",
+      "destination": "/services/",
+      "statusCode": 301
+    },
+    {
+      "source": "/service/branding{/}?",
+      "destination": "/services/product-photography-creative-design/",
+      "statusCode": 301
+    },
+    {
+      "source": "/service/content-marketing{/}?",
+      "destination": "/services/seo/",
+      "statusCode": 301
+    },
+    {
+      "source": "/service/digital-marketing{/}?",
+      "destination": "/services/",
+      "statusCode": 301
+    },
+    {
+      "source": "/service/e-commerce-development{/}?",
+      "destination": "/services/website-design-development/",
+      "statusCode": 301
+    },
+    {
+      "source": "/service/pay-per-click-advertising{/}?",
+      "destination": "/services/google-ads/",
+      "statusCode": 301
+    },
+    {
+      "source": "/service/search-engine-optimisation{/}?",
+      "destination": "/services/seo/",
+      "statusCode": 301
+    },
+    {
+      "source": "/service/social-media-marketing{/}?",
+      "destination": "/services/social-media-marketing/",
+      "statusCode": 301
+    },
+    {
+      "source": "/service/u1-ux-designing{/}?",
+      "destination": "/services/website-design-development/",
+      "statusCode": 301
+    },
+    {
+      "source": "/service/ui-ux-designing{/}?",
+      "destination": "/services/website-design-development/",
+      "statusCode": 301
+    },
+    {
+      "source": "/service/website-design-development{/}?",
+      "destination": "/services/website-design-development/",
+      "statusCode": 301
+    },
+    {
+      "source": "/services-6{/}?",
+      "destination": "/services/",
+      "statusCode": 301
+    },
+    {
+      "source": "/services-faq{/}?",
+      "destination": "/faq/",
+      "statusCode": 301
+    },
+    {
+      "source": "/social-media-marketing{/}?",
+      "destination": "/services/social-media-marketing/",
+      "statusCode": 301
+    },
+    {
+      "source": "/social-media-marketing-agency-madurai{/}?",
+      "destination": "/services/social-media-marketing/",
+      "statusCode": 301
+    },
+    {
+      "source": "/social-media-marketing-in-madurai{/}?",
+      "destination": "/services/social-media-marketing/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ta{/}?",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ta/about{/}?",
+      "destination": "/about/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ta/blog{/}?",
+      "destination": "/blog/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ta/branding-service-in-madurai{/}?",
+      "destination": "/services/product-photography-creative-design/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ta/contact-us{/}?",
+      "destination": "/contact/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ta/content-marketing-service-in-madurai{/}?",
+      "destination": "/services/seo/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ta/digital-marketing-service-in-madurai{/}?",
+      "destination": "/locations/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ta/ecommerce-solutions{/}?",
+      "destination": "/services/website-design-development/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ta/pay-per-click-advertising-in-madurai{/}?",
+      "destination": "/services/google-ads/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ta/pricing{/}?",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ta/privacy-policy{/}?",
+      "destination": "/privacy-policy/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ta/search-engine-optimization-in-madurai{/}?",
+      "destination": "/services/seo/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ta/services{/}?",
+      "destination": "/services/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ta/social-media-marketing-in-madurai{/}?",
+      "destination": "/services/social-media-marketing/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ta/terms-and-coniditions{/}?",
+      "destination": "/terms/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ta/ui-ux-designing-service-in-madurai{/}?",
+      "destination": "/services/website-design-development/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ta/website-design-and-development-in-madurai{/}?",
+      "destination": "/services/website-design-development/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ta/whatsapp-marketing-service-in-madurai{/}?",
+      "destination": "/services/ai-business-automation/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/2025-seo{/}?",
+      "destination": "/services/seo/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/2025-seo-trends{/}?",
+      "destination": "/services/seo/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/advertising-agency{/}?",
+      "destination": "/services/advertising-agency/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/advertising-agency-in-madurai{/}?",
+      "destination": "/services/advertising-agency/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/advertising-company-madurai{/}?",
+      "destination": "/services/advertising-agency/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/advertising-services-madurai-for-small-business{/}?",
+      "destination": "/services/advertising-agency/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/ai-agent-tools{/}?",
+      "destination": "/services/ai-business-automation/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/ai-citation{/}?",
+      "destination": "/services/geo-aeo-ai-search/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/ai-marketing-tools{/}?",
+      "destination": "/services/ai-business-automation/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/ai-search-optimization{/}?",
+      "destination": "/services/geo-aeo-ai-search/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/ai-seo{/}?",
+      "destination": "/services/geo-aeo-ai-search/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/ai-seo-tools-2025{/}?",
+      "destination": "/services/geo-aeo-ai-search/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/answer-engine-optimisation{/}?",
+      "destination": "/blog/what-is-answer-engine-optimization/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/artificial-intelligence-seo{/}?",
+      "destination": "/services/geo-aeo-ai-search/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/backlinking{/}?",
+      "destination": "/services/seo/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/bert{/}?",
+      "destination": "/services/seo/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/best-advertising-agency-for-business-in-madurai{/}?",
+      "destination": "/services/advertising-agency/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/brand-identity{/}?",
+      "destination": "/services/product-photography-creative-design/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/branding-company-madurai{/}?",
+      "destination": "/services/product-photography-creative-design/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/business-seo{/}?",
+      "destination": "/services/seo/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/case-study{/}?",
+      "destination": "/case-studies/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/chatgpt-for-seo-optimization{/}?",
+      "destination": "/blog/how-to-rank-in-ai-search/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/chatgpt-seo{/}?",
+      "destination": "/blog/how-to-rank-in-ai-search/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/chatgpt-seo-prompts-2025{/}?",
+      "destination": "/blog/how-to-rank-in-ai-search/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/dental-clinics{/}?",
+      "destination": "/industries/healthcare-clinics/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/dental-marketing{/}?",
+      "destination": "/industries/healthcare-clinics/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/digital-advertising{/}?",
+      "destination": "/services/google-ads/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/digital-marketing-agency-madurai{/}?",
+      "destination": "/locations/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/digital-marketing-madurai{/}?",
+      "destination": "/locations/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/facebook-marketing{/}?",
+      "destination": "/services/social-media-marketing/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/generative-engine-optimization{/}?",
+      "destination": "/blog/what-is-generative-engine-optimization/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/generative-engine-optimization-geo{/}?",
+      "destination": "/blog/what-is-generative-engine-optimization/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/geo{/}?",
+      "destination": "/blog/what-is-generative-engine-optimization/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/google-ads{/}?",
+      "destination": "/services/google-ads/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/google-ads-madurai{/}?",
+      "destination": "/services/google-ads/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/google-business-profile{/}?",
+      "destination": "/services/local-seo/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/google-my-business{/}?",
+      "destination": "/services/local-seo/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/google-sge{/}?",
+      "destination": "/services/geo-aeo-ai-search/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/healthcare-marketing{/}?",
+      "destination": "/industries/healthcare-clinics/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/how-to-choose-advertising-agency-madurai{/}?",
+      "destination": "/services/advertising-agency/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/instagram-marketing{/}?",
+      "destination": "/services/social-media-marketing/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/local-advertising-agency-madurai-criteria{/}?",
+      "destination": "/services/advertising-agency/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/local-search{/}?",
+      "destination": "/services/local-seo/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/local-seo{/}?",
+      "destination": "/services/local-seo/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/local-seo-madurai{/}?",
+      "destination": "/services/local-seo/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/logo-design{/}?",
+      "destination": "/services/product-photography-creative-design/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/madurai-advertising-agency-checklist{/}?",
+      "destination": "/services/advertising-agency/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/madurai-business-seo{/}?",
+      "destination": "/services/seo/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/madurai-case-study{/}?",
+      "destination": "/case-studies/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/madurai-marketing{/}?",
+      "destination": "/locations/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/madurai-seo{/}?",
+      "destination": "/services/seo/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/marketing-automation-ai{/}?",
+      "destination": "/services/ai-business-automation/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/near-me-searches{/}?",
+      "destination": "/services/local-seo/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/online-marketing-madurai{/}?",
+      "destination": "/locations/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/paid-ads{/}?",
+      "destination": "/services/google-ads/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/paid-advertising{/}?",
+      "destination": "/services/google-ads/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/perplexity-ai{/}?",
+      "destination": "/services/geo-aeo-ai-search/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pricing/india{/}?",
+      "destination": "/locations/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pricing/india/seo{/}?",
+      "destination": "/services/seo/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pricing/india/local-seo{/}?",
+      "destination": "/services/local-seo/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pricing/india/google-ads{/}?",
+      "destination": "/services/google-ads/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pricing/india/social-media{/}?",
+      "destination": "/services/social-media-marketing/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pricing/india/social-media-marketing{/}?",
+      "destination": "/services/social-media-marketing/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pricing/india/website{/}?",
+      "destination": "/services/website-design-development/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pricing/india/website-design-development{/}?",
+      "destination": "/services/website-design-development/madurai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pricing/india/ai-services{/}?",
+      "destination": "/services/ai-business-automation/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pricing/india/photography-video{/}?",
+      "destination": "/services/corporate-photography-video/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pricing/malaysia{/}?",
+      "destination": "/locations/malaysia/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pricing/malaysia/seo{/}?",
+      "destination": "/services/seo/malaysia/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pricing/malaysia/local-seo{/}?",
+      "destination": "/services/local-seo/malaysia/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pricing/malaysia/google-ads{/}?",
+      "destination": "/services/google-ads/kuala-lumpur/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pricing/malaysia/social-media{/}?",
+      "destination": "/services/social-media-marketing/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pricing/malaysia/social-media-marketing{/}?",
+      "destination": "/services/social-media-marketing/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pricing/malaysia/website{/}?",
+      "destination": "/services/website-design-development/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pricing/malaysia/website-design-development{/}?",
+      "destination": "/services/website-design-development/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pricing/malaysia/ai-services{/}?",
+      "destination": "/services/ai-business-automation/malaysia/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pricing/malaysia/photography-video{/}?",
+      "destination": "/services/corporate-photography-video/",
+      "statusCode": 301
+    },
+    {
+      "source": "/diwali{/}?",
+      "destination": "/diwali-2026/",
+      "statusCode": 301
+    },
+    {
+      "source": "/contactus{/}?",
+      "destination": "/contact/",
+      "statusCode": 301
+    },
+    {
+      "source": "/contact-me{/}?",
+      "destination": "/contact/",
+      "statusCode": 301
+    },
+    {
+      "source": "/get-in-touch{/}?",
+      "destination": "/contact/",
+      "statusCode": 301
+    },
+    {
+      "source": "/reach-us{/}?",
+      "destination": "/contact/",
+      "statusCode": 301
+    },
+    {
+      "source": "/aboutus{/}?",
+      "destination": "/about/",
+      "statusCode": 301
+    },
+    {
+      "source": "/p/india-9xajei",
+      "destination": "/p/india-9xajei/",
+      "statusCode": 308
+    },
+    {
+      "source": "/p/malaysia-2josdx",
+      "destination": "/p/malaysia-2josdx/",
+      "statusCode": 308
+    },
+    {
+      "source": "/p/dubai-a8aokh",
+      "destination": "/p/dubai-a8aokh/",
+      "statusCode": 308
+    },
+    {
+      "source": "/p/singapore-xseszo",
+      "destination": "/p/singapore-xseszo/",
+      "statusCode": 308
+    },
+    {
+      "source": "/p/portfolio-6g3sak",
+      "destination": "/p/portfolio-6g3sak/",
+      "statusCode": 308
+    },
+    {
+      "source": "/diwali-2026",
+      "destination": "/diwali-2026/",
+      "statusCode": 308
+    },
+    {
+      "source": "/about",
+      "destination": "/about/",
+      "statusCode": 308
+    },
+    {
+      "source": "/about/deepan-kanz",
+      "destination": "/about/deepan-kanz/",
+      "statusCode": 308
+    },
+    {
+      "source": "/about/reviews",
+      "destination": "/about/reviews/",
+      "statusCode": 308
+    },
+    {
+      "source": "/services",
+      "destination": "/services/",
+      "statusCode": 308
+    },
+    {
+      "source": "/services/seo",
+      "destination": "/services/seo/",
+      "statusCode": 308
+    },
+    {
+      "source": "/services/geo-aeo-ai-search",
+      "destination": "/services/geo-aeo-ai-search/",
+      "statusCode": 308
+    },
+    {
+      "source": "/services/local-seo",
+      "destination": "/services/local-seo/",
+      "statusCode": 308
+    },
+    {
+      "source": "/services/google-ads",
+      "destination": "/services/google-ads/",
+      "statusCode": 308
+    },
+    {
+      "source": "/services/social-media-marketing",
+      "destination": "/services/social-media-marketing/",
+      "statusCode": 308
+    },
+    {
+      "source": "/services/website-design-development",
+      "destination": "/services/website-design-development/",
+      "statusCode": 308
+    },
+    {
+      "source": "/services/ai-business-automation",
+      "destination": "/services/ai-business-automation/",
+      "statusCode": 308
+    },
+    {
+      "source": "/services/corporate-photography-video",
+      "destination": "/services/corporate-photography-video/",
+      "statusCode": 308
+    },
+    {
+      "source": "/services/ai-video-creation",
+      "destination": "/services/ai-video-creation/",
+      "statusCode": 308
+    },
+    {
+      "source": "/services/product-photography-creative-design",
+      "destination": "/services/product-photography-creative-design/",
+      "statusCode": 308
+    },
+    {
+      "source": "/services/seo/madurai",
+      "destination": "/services/seo/madurai/",
+      "statusCode": 308
+    },
+    {
+      "source": "/services/website-design-development/madurai",
+      "destination": "/services/website-design-development/madurai/",
+      "statusCode": 308
+    },
+    {
+      "source": "/services/seo/thoothukudi",
+      "destination": "/services/seo/thoothukudi/",
+      "statusCode": 308
+    },
+    {
+      "source": "/services/seo/malaysia",
+      "destination": "/services/seo/malaysia/",
+      "statusCode": 308
+    },
+    {
+      "source": "/services/seo/kuala-lumpur",
+      "destination": "/services/seo/kuala-lumpur/",
+      "statusCode": 308
+    },
+    {
+      "source": "/services/google-ads/kuala-lumpur",
+      "destination": "/services/google-ads/kuala-lumpur/",
+      "statusCode": 308
+    },
+    {
+      "source": "/services/social-media-marketing/madurai",
+      "destination": "/services/social-media-marketing/madurai/",
+      "statusCode": 308
+    },
+    {
+      "source": "/services/local-seo/madurai",
+      "destination": "/services/local-seo/madurai/",
+      "statusCode": 308
+    },
+    {
+      "source": "/services/local-seo/thoothukudi",
+      "destination": "/services/local-seo/thoothukudi/",
+      "statusCode": 308
+    },
+    {
+      "source": "/services/local-seo/malaysia",
+      "destination": "/services/local-seo/malaysia/",
+      "statusCode": 308
+    },
+    {
+      "source": "/services/geo-aeo-ai-search/madurai",
+      "destination": "/services/geo-aeo-ai-search/madurai/",
+      "statusCode": 308
+    },
+    {
+      "source": "/services/google-ads/thoothukudi",
+      "destination": "/services/google-ads/thoothukudi/",
+      "statusCode": 308
+    },
+    {
+      "source": "/services/ai-business-automation/malaysia",
+      "destination": "/services/ai-business-automation/malaysia/",
+      "statusCode": 308
+    },
+    {
+      "source": "/locations",
+      "destination": "/locations/",
+      "statusCode": 308
+    },
+    {
+      "source": "/locations/madurai",
+      "destination": "/locations/madurai/",
+      "statusCode": 308
+    },
+    {
+      "source": "/locations/thoothukudi",
+      "destination": "/locations/thoothukudi/",
+      "statusCode": 308
+    },
+    {
+      "source": "/locations/malaysia",
+      "destination": "/locations/malaysia/",
+      "statusCode": 308
+    },
+    {
+      "source": "/locations/kuala-lumpur",
+      "destination": "/locations/kuala-lumpur/",
+      "statusCode": 308
+    },
+    {
+      "source": "/locations/tamil-nadu",
+      "destination": "/locations/tamil-nadu/",
+      "statusCode": 308
+    },
+    {
+      "source": "/locations/chennai",
+      "destination": "/locations/chennai/",
+      "statusCode": 308
+    },
+    {
+      "source": "/locations/coimbatore",
+      "destination": "/locations/coimbatore/",
+      "statusCode": 308
+    },
+    {
+      "source": "/locations/trichy",
+      "destination": "/locations/trichy/",
+      "statusCode": 308
+    },
+    {
+      "source": "/locations/salem",
+      "destination": "/locations/salem/",
+      "statusCode": 308
+    },
+    {
+      "source": "/locations/tirunelveli",
+      "destination": "/locations/tirunelveli/",
+      "statusCode": 308
+    },
+    {
+      "source": "/locations/tiruppur",
+      "destination": "/locations/tiruppur/",
+      "statusCode": 308
+    },
+    {
+      "source": "/locations/selangor",
+      "destination": "/locations/selangor/",
+      "statusCode": 308
+    },
+    {
+      "source": "/locations/rawang",
+      "destination": "/locations/rawang/",
+      "statusCode": 308
+    },
+    {
+      "source": "/locations/singapore",
+      "destination": "/locations/singapore/",
+      "statusCode": 308
+    },
+    {
+      "source": "/locations/dubai",
+      "destination": "/locations/dubai/",
+      "statusCode": 308
+    },
+    {
+      "source": "/locations/dindigul",
+      "destination": "/locations/dindigul/",
+      "statusCode": 308
+    },
+    {
+      "source": "/locations/sivakasi",
+      "destination": "/locations/sivakasi/",
+      "statusCode": 308
+    },
+    {
+      "source": "/locations/shah-alam",
+      "destination": "/locations/shah-alam/",
+      "statusCode": 308
+    },
+    {
+      "source": "/locations/petaling-jaya",
+      "destination": "/locations/petaling-jaya/",
+      "statusCode": 308
+    },
+    {
+      "source": "/services/advertising-agency/madurai",
+      "destination": "/services/advertising-agency/madurai/",
+      "statusCode": 308
+    },
+    {
+      "source": "/industries",
+      "destination": "/industries/",
+      "statusCode": 308
+    },
+    {
+      "source": "/industries/manufacturing-b2b",
+      "destination": "/industries/manufacturing-b2b/",
+      "statusCode": 308
+    },
+    {
+      "source": "/solutions",
+      "destination": "/solutions/",
+      "statusCode": 308
+    },
+    {
+      "source": "/growth-audit",
+      "destination": "/growth-audit/",
+      "statusCode": 308
+    },
+    {
+      "source": "/free-visibility-checklist",
+      "destination": "/free-visibility-checklist/",
+      "statusCode": 308
+    },
+    {
+      "source": "/industries/retail-ecommerce",
+      "destination": "/industries/retail-ecommerce/",
+      "statusCode": 308
+    },
+    {
+      "source": "/industries/healthcare-clinics",
+      "destination": "/industries/healthcare-clinics/",
+      "statusCode": 308
+    },
+    {
+      "source": "/industries/education-training",
+      "destination": "/industries/education-training/",
+      "statusCode": 308
+    },
+    {
+      "source": "/industries/hospitality-hotels",
+      "destination": "/industries/hospitality-hotels/",
+      "statusCode": 308
+    },
+    {
+      "source": "/industries/textiles-madurai",
+      "destination": "/industries/textiles-madurai/",
+      "statusCode": 308
+    },
+    {
+      "source": "/industries/port-marine-industrial-thoothukudi",
+      "destination": "/industries/port-marine-industrial-thoothukudi/",
+      "statusCode": 308
+    },
+    {
+      "source": "/industries/smes-malaysia-grant-eligible",
+      "destination": "/industries/smes-malaysia-grant-eligible/",
+      "statusCode": 308
+    },
+    {
+      "source": "/industries/real-estate-builders",
+      "destination": "/industries/real-estate-builders/",
+      "statusCode": 308
+    },
+    {
+      "source": "/case-studies",
+      "destination": "/case-studies/",
+      "statusCode": 308
+    },
+    {
+      "source": "/case-studies/client-1",
+      "destination": "/case-studies/client-1/",
+      "statusCode": 308
+    },
+    {
+      "source": "/case-studies/client-2",
+      "destination": "/case-studies/client-2/",
+      "statusCode": 308
+    },
+    {
+      "source": "/case-studies/client-3",
+      "destination": "/case-studies/client-3/",
+      "statusCode": 308
+    },
+    {
+      "source": "/case-studies/client-4",
+      "destination": "/case-studies/client-4/",
+      "statusCode": 308
+    },
+    {
+      "source": "/contact",
+      "destination": "/contact/",
+      "statusCode": 308
+    },
+    {
+      "source": "/faq",
+      "destination": "/faq/",
+      "statusCode": 308
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/privacy-policy/",
+      "statusCode": 308
+    },
+    {
+      "source": "/terms",
+      "destination": "/terms/",
+      "statusCode": 308
+    },
+    {
+      "source": "/sitemap",
+      "destination": "/sitemap/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog",
+      "destination": "/blog/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog/local-marketing",
+      "destination": "/blog/local-marketing/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog/top-digital-marketing-companies-in-madurai",
+      "destination": "/blog/top-digital-marketing-companies-in-madurai/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog/what-is-generative-engine-optimization",
+      "destination": "/blog/what-is-generative-engine-optimization/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog/what-is-answer-engine-optimization",
+      "destination": "/blog/what-is-answer-engine-optimization/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog/seo-agency-madurai-complete-guide",
+      "destination": "/blog/seo-agency-madurai-complete-guide/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog/digital-marketing-malaysia-sme-grant-guide",
+      "destination": "/blog/digital-marketing-malaysia-sme-grant-guide/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog/facebook-instagram-google-ads-agency-madurai",
+      "destination": "/blog/facebook-instagram-google-ads-agency-madurai/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog/whatsapp-marketing-madurai-businesses",
+      "destination": "/blog/whatsapp-marketing-madurai-businesses/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog/website-design-company-madurai-checklist",
+      "destination": "/blog/website-design-company-madurai-checklist/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog/how-to-choose-digital-marketing-agency-malaysia",
+      "destination": "/blog/how-to-choose-digital-marketing-agency-malaysia/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog/seo-cost-malaysia-price-guide",
+      "destination": "/blog/seo-cost-malaysia-price-guide/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog/small-business-marketing-company-malaysia",
+      "destination": "/blog/small-business-marketing-company-malaysia/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog/affordable-seo-company-madurai-pricing",
+      "destination": "/blog/affordable-seo-company-madurai-pricing/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog/how-long-does-seo-take-madurai",
+      "destination": "/blog/how-long-does-seo-take-madurai/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog/gbp-not-showing-on-google-maps-causes-fixes",
+      "destination": "/blog/gbp-not-showing-on-google-maps-causes-fixes/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog/is-seo-worth-it-small-business-madurai",
+      "destination": "/blog/is-seo-worth-it-small-business-madurai/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog/rawang-local-seo-google-business-profile",
+      "destination": "/blog/rawang-local-seo-google-business-profile/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog/seo-services-selangor-shah-alam-petaling-jaya",
+      "destination": "/blog/seo-services-selangor-shah-alam-petaling-jaya/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog/google-business-profile-optimisation-malaysia",
+      "destination": "/blog/google-business-profile-optimisation-malaysia/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog/social-media-marketing-malaysia-smes",
+      "destination": "/blog/social-media-marketing-malaysia-smes/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog/digital-marketing-agency-chennai-businesses",
+      "destination": "/blog/digital-marketing-agency-chennai-businesses/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog/digital-marketing-coimbatore-manufacturers-b2b",
+      "destination": "/blog/digital-marketing-coimbatore-manufacturers-b2b/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog/digital-marketing-trichy-businesses",
+      "destination": "/blog/digital-marketing-trichy-businesses/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog/digital-marketing-tirunelveli-businesses",
+      "destination": "/blog/digital-marketing-tirunelveli-businesses/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog/best-web-hosting-india-malaysia-small-business",
+      "destination": "/blog/best-web-hosting-india-malaysia-small-business/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog/agentic-ai-tools-small-business-marketing",
+      "destination": "/blog/agentic-ai-tools-small-business-marketing/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog/local-seo-thoothukudi-businesses",
+      "destination": "/blog/local-seo-thoothukudi-businesses/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog/how-to-rank-in-ai-search",
+      "destination": "/blog/how-to-rank-in-ai-search/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog/social-media-marketing-madurai-small-businesses",
+      "destination": "/blog/social-media-marketing-madurai-small-businesses/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog/google-business-profile-checklist-madurai",
+      "destination": "/blog/google-business-profile-checklist-madurai/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog/seo-vs-google-ads-madurai",
+      "destination": "/blog/seo-vs-google-ads-madurai/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog/social-media-marketing-salons-aesthetics-madurai",
+      "destination": "/blog/social-media-marketing-salons-aesthetics-madurai/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog/seo-audit-services-madurai",
+      "destination": "/blog/seo-audit-services-madurai/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog/local-seo-guide-hardware-stores-retail-madurai",
+      "destination": "/blog/local-seo-guide-hardware-stores-retail-madurai/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog/digital-marketing-service-costs-in-madurai-2026-pricing-guide",
+      "destination": "/blog/digital-marketing-service-costs-in-madurai-2026-pricing-guide/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog/how-to-choose-the-right-digital-marketing-agency-in-madurai",
+      "destination": "/blog/how-to-choose-the-right-digital-marketing-agency-in-madurai/",
+      "statusCode": 308
+    },
+    {
+      "source": "/blog/what-is-geo-generative-engine-optimization-in-digital-marketing",
+      "destination": "/blog/what-is-geo-generative-engine-optimization-in-digital-marketing/",
+      "statusCode": 308
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/p/india-9xajei/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/p/malaysia-2josdx/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/p/dubai-a8aokh/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/p/singapore-xseszo/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/p/portfolio-6g3sak/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/diwali-2026/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/about/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/about/deepan-kanz/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/about/reviews/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/services/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/services/seo/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/services/geo-aeo-ai-search/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/services/local-seo/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/services/google-ads/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/services/social-media-marketing/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/services/website-design-development/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/services/ai-business-automation/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/services/corporate-photography-video/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/services/ai-video-creation/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/services/product-photography-creative-design/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/services/seo/madurai/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/services/website-design-development/madurai/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/services/seo/thoothukudi/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/services/seo/malaysia/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/services/seo/kuala-lumpur/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/services/google-ads/kuala-lumpur/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/services/social-media-marketing/madurai/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/services/local-seo/madurai/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/services/local-seo/thoothukudi/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/services/local-seo/malaysia/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/services/geo-aeo-ai-search/madurai/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/services/google-ads/thoothukudi/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/services/ai-business-automation/malaysia/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/locations/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/locations/madurai/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/locations/thoothukudi/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/locations/malaysia/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/locations/kuala-lumpur/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/locations/tamil-nadu/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/locations/chennai/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/locations/coimbatore/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/locations/trichy/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/locations/salem/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/locations/tirunelveli/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/locations/tiruppur/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/locations/selangor/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/locations/rawang/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/locations/singapore/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/locations/dubai/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/locations/dindigul/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/locations/sivakasi/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/locations/shah-alam/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/locations/petaling-jaya/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/services/advertising-agency/madurai/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/industries/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/industries/manufacturing-b2b/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/solutions/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/growth-audit/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/free-visibility-checklist/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/industries/retail-ecommerce/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/industries/healthcare-clinics/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/industries/education-training/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/industries/hospitality-hotels/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/industries/textiles-madurai/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/industries/port-marine-industrial-thoothukudi/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/industries/smes-malaysia-grant-eligible/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/industries/real-estate-builders/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/case-studies/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/case-studies/client-1/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/case-studies/client-2/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/case-studies/client-3/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/case-studies/client-4/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/contact/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/faq/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/privacy-policy/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/terms/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/sitemap/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/local-marketing/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/top-digital-marketing-companies-in-madurai/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/what-is-generative-engine-optimization/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/what-is-answer-engine-optimization/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/seo-agency-madurai-complete-guide/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/digital-marketing-malaysia-sme-grant-guide/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/facebook-instagram-google-ads-agency-madurai/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/whatsapp-marketing-madurai-businesses/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/website-design-company-madurai-checklist/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/how-to-choose-digital-marketing-agency-malaysia/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/seo-cost-malaysia-price-guide/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/small-business-marketing-company-malaysia/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/affordable-seo-company-madurai-pricing/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/how-long-does-seo-take-madurai/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/gbp-not-showing-on-google-maps-causes-fixes/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/is-seo-worth-it-small-business-madurai/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/rawang-local-seo-google-business-profile/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/seo-services-selangor-shah-alam-petaling-jaya/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/google-business-profile-optimisation-malaysia/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/social-media-marketing-malaysia-smes/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/digital-marketing-agency-chennai-businesses/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/digital-marketing-coimbatore-manufacturers-b2b/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/digital-marketing-trichy-businesses/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/digital-marketing-tirunelveli-businesses/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/best-web-hosting-india-malaysia-small-business/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/agentic-ai-tools-small-business-marketing/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/local-seo-thoothukudi-businesses/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/how-to-rank-in-ai-search/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/social-media-marketing-madurai-small-businesses/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/google-business-profile-checklist-madurai/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/seo-vs-google-ads-madurai/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/social-media-marketing-salons-aesthetics-madurai/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/seo-audit-services-madurai/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/local-seo-guide-hardware-stores-retail-madurai/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/digital-marketing-service-costs-in-madurai-2026-pricing-guide/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/how-to-choose-the-right-digital-marketing-agency-in-madurai/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/what-is-geo-generative-engine-optimization-in-digital-marketing/",
+      "destination": "/index.html"
+    }
+  ]
+}

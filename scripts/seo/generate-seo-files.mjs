@@ -52,6 +52,7 @@ const SITEMAP_RULES = [
   [/^\/services$/, 'weekly', '0.9'],
   [/^\/solutions$/, 'weekly', '0.9'],
   [/^\/growth-audit$/, 'monthly', '0.8'],
+  [/^\/free-visibility-checklist$/, 'monthly', '0.7'],
   [/^\/services\/(corporate-photography-video|ai-video-creation|product-photography-creative-design)$/, 'weekly', '0.7'],
   [/^\/services\//, 'weekly', '0.8'],
   [/^\/locations/, 'weekly', '0.8'],
