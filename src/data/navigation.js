@@ -44,6 +44,7 @@ export const FOOTER_LINKS = {
 
 export const BREADCRUMB_LABELS = {
   about: "About",
+  "free-visibility-checklist": "Free Visibility Checklist",
   "deepan-kanz": "Deepan Kanz",
   reviews: "Reviews",
   services: "Services",

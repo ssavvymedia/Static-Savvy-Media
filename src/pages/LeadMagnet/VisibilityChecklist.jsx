@@ -5,6 +5,7 @@ import GrowthAuditForm from '../../components/sections/GrowthAuditForm.jsx'
 import { setSeo } from '../../utils/seo.js'
 import { SITE_URL } from '../../utils/constants.js'
 import '../../styles/pages/growth-audit.css'
+import '../../styles/pages/visibility-checklist.css'
 
 const PAGE_TITLE = 'Free Local Visibility Checklist | Google + Maps + AI | Static Savvy Media'
 const PAGE_DESCRIPTION = 'Get the free 2026 Local Business Visibility Checklist: practical steps for Google Search, Google Maps and AI answers (GEO/AEO). Instant value for Madurai, Tamil Nadu & Malaysia businesses.'
@@ -71,12 +72,12 @@ export default function VisibilityChecklist() {
         <div className="hv2-wrap">
           <h2 className="hv2-h2">What you will check</h2>
           <p className="hv2-lead">A short, actionable list — no fluff. Use it yourself or as the starting point for our free Growth Audit.</p>
-          <div style={{ marginTop: 24, display: 'grid', gap: 20 }}>
+          <div className="vc-grid">
             {CHECKLIST.map((block) => (
-              <div key={block.section} style={{ background: 'var(--hv2-card, #f8fafc)', padding: 20, borderRadius: 12 }}>
-                <h3 style={{ margin: '0 0 12px' }}>{block.section}</h3>
-                <ul style={{ margin: 0, paddingLeft: 20 }}>
-                  {block.items.map((item) => <li key={item} style={{ marginBottom: 6 }}>{item}</li>)}
+              <div key={block.section} className="vc-card">
+                <h3 className="vc-card__title">{block.section}</h3>
+                <ul className="vc-list">
+                  {block.items.map((item) => <li key={item}>{item}</li>)}
                 </ul>
               </div>
             ))}
