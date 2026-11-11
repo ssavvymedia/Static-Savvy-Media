@@ -1,1 +1,1 @@
-$(cat /tmp/AppRoutes.jsx)
+PLACEHOLDER_WILL_REPLACE
