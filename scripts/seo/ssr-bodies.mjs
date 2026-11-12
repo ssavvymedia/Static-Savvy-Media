@@ -9,7 +9,7 @@ import { renderToString } from 'react-dom/server'
 import * as React from 'react'
 import { MemoryRouter } from 'react-router-dom'
 import { createServer } from 'vite'
-import { ORG_SAME_AS, GBP_MAPS } from '../../src/data/sameAs.js'
+import { ORG_SAME_AS } from '../../src/data/sameAs.js'
 import { founderId, founderPerson } from '../../src/data/founder.js'
 
 const HOST = 'https://www.staticsavvymedia.com'
@@ -61,7 +61,6 @@ export async function ssrBodies(root, distAssets) {
   try {
     const { ssrRoutes } = await vite.ssrLoadModule('/src/data/ssrRoutes.js')
     const { getBreadcrumbLabel } = await vite.ssrLoadModule('/src/data/navigation.js')
-    const C = await vite.ssrLoadModule('/src/utils/constants.js')
     const App = (await vite.ssrLoadModule('/src/App.jsx')).default
     /* The unlisted /p/ price pages are code-split (prices kept out of the main bundle): load that chunk
      * first so the full-app render includes the page, matching the client, which preloads before hydrating. */
@@ -80,15 +79,9 @@ export async function ssrBodies(root, distAssets) {
       return html
     }
     try { out.set('/', { app: renderApp('/'), pages: lastPages }) } catch (e) { console.warn(`ssr-bodies: home app render skipped: ${String(e?.message || e).slice(0, 300)}`) }
-    const madurai = {
-      '@type': 'ProfessionalService', '@id': `${HOST}/locations/madurai/#localbusiness`, name: 'Static Savvy Media', url: `${HOST}/locations/madurai/`, telephone: PHONE,
-      address: { '@type': 'PostalAddress', streetAddress: '2nd Floor, 4/3, Srinivasa Perumal Koil St, Kamarajar Salai', addressLocality: 'Madurai', addressRegion: 'Tamil Nadu', postalCode: '625009', addressCountry: 'IN' },
-      hasMap: GBP_MAPS.madurai, parentOrganization: { '@id': ORG_ID },
-    }
-    const malaysia = {
-      '@type': 'ProfessionalService', '@id': `${HOST}/locations/malaysia/#localbusiness`, name: C.MALAYSIA_OFFICE.name, url: `${HOST}/locations/malaysia/`,
-      address: C.MALAYSIA_POSTAL_ADDRESS, telephone: C.MALAYSIA_OFFICE.phoneE164, hasMap: GBP_MAPS.malaysia, parentOrganization: { '@id': ORG_ID },
-    }
+    const { officeLocalBusiness, OFFICE_LOCATION_ROUTES } = await vite.ssrLoadModule('/src/data/officeSchema.js')
+    const madurai = officeLocalBusiness('madurai')
+    const malaysia = officeLocalBusiness('malaysia')
     for (const r of ssrRoutes) {
      /* One page failing to render must not strip the crawlable body from every other route:
       * skip it (it ships as the plain shell, as before) and say so in the build log. */
@@ -111,7 +104,8 @@ export async function ssrBodies(root, distAssets) {
       /* Unmapped slugs (blog posts etc.) would show the raw slug: use the page H1 for the last crumb. */
       const crumbName = (s, i) => { const l = getBreadcrumbLabel(s); return l === s && i === segs.length - 1 ? decode(h1[1]) : l }
       const crumbs = [{ name: 'Home', path: '/' }, ...segs.map((s, i) => ({ name: crumbName(s, i), path: `/${segs.slice(0, i + 1).join('/')}/` }))]
-      const biz = r.office === 'madurai' ? madurai : r.office === 'org' ? null : malaysia
+      const officeKey = r.office === 'madurai' || r.office === 'malaysia' || r.office === 'thoothukudi' ? r.office : r.office === 'org' || !r.office ? null : 'malaysia'
+      const biz = officeKey ? officeLocalBusiness(officeKey, { includeRating: Boolean(OFFICE_LOCATION_ROUTES[r.route]) }) : null
       const isAbout = r.kind === 'about'
       const crumbList = { '@type': 'BreadcrumbList', itemListElement: crumbs.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: `${HOST}${c.path}` })) }
       const org = { '@type': 'Organization', '@id': ORG_ID, name: 'Static Savvy Media', url: `${HOST}/`, telephone: PHONE, email: EMAIL, sameAs: ORG_SAME_AS, founder: { '@id': founderId(HOST) } }

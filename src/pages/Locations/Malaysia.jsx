@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Breadcrumbs from '../../components/common/Breadcrumbs.jsx'
 import Button from '../../components/common/Button.jsx'
@@ -9,18 +9,17 @@ import { AnswerFirst, AuditBlock, MarketRangeTable, FounderBlock, ReviewsCarouse
 import { ScrollReveal } from '../../components/animations/ScrollReveal.jsx'
 import { setSeo } from '../../utils/seo.js'
 import {
-  localBusinessSchema,
+  organizationSchema,
   faqPageSchema,
   breadcrumbListSchema,
 } from '../../utils/schema.js'
+import { officeLocalBusiness, schemaGraph } from '../../data/officeSchema.js'
 import { buildWhatsAppLink, cx } from '../../utils/helpers.js'
 import {
   WHATSAPP_NUMBER,
   WHATSAPP_MESSAGE,
   SITE_URL,
   MALAYSIA_OFFICE,
-  MALAYSIA_POSTAL_ADDRESS,
-  MALAYSIA_OPENING_HOURS_SPEC,
 } from '../../utils/constants.js'
 import { myRangeTable, MY_COST_ANSWER } from '../../data/malaysiaMarketRanges.js'
 import '../../styles/pages/malaysia.css'
@@ -239,36 +238,7 @@ const OTHER_LOCATIONS = [
    ============================================================ */
 
 export default function Malaysia() {
-  const jsonLdRef = useRef([])
-
   useEffect(() => {
-    setSeo({
-      title: PAGE_TITLE,
-      description: PAGE_DESCRIPTION,
-      canonical: `${SITE_URL}/locations/malaysia/`,
-      ogType: 'website',
-    })
-
-    const faqEntities = FAQS.map((faq) => ({
-      '@type': 'Question',
-      name: faq.question,
-      acceptedAnswer: { '@type': 'Answer', text: faq.answer },
-    }))
-
-    const localBiz = localBusinessSchema({
-      name: 'Static Savvy Media, Malaysia',
-      description: PAGE_DESCRIPTION,
-      url: `${SITE_URL}/locations/malaysia/`,
-      telephone: MALAYSIA_OFFICE.phoneE164,
-      address: MALAYSIA_POSTAL_ADDRESS,
-      openingHoursSpecification: MALAYSIA_OPENING_HOURS_SPEC,
-      areaServed: [
-        { '@type': 'City', name: 'Rawang' },
-        { '@type': 'State', name: 'Selangor' },
-        { '@type': 'Country', name: 'Malaysia' },
-      ],
-    })
-
     const breadcrumbs = breadcrumbListSchema({
       items: [
         { name: 'Home', item: `${SITE_URL}/` },
@@ -277,23 +247,18 @@ export default function Malaysia() {
       ],
     })
 
-    const scripts = [
-      localBiz,
-      faqPageSchema({ faqs: faqEntities }),
-      breadcrumbs,
-    ].map((data) => {
-      const script = document.createElement('script')
-      script.type = 'application/ld+json'
-      script.text = JSON.stringify(data)
-      document.head.appendChild(script)
-      return script
+    setSeo({
+      title: PAGE_TITLE,
+      description: PAGE_DESCRIPTION,
+      canonical: `${SITE_URL}/locations/malaysia/`,
+      ogType: 'website',
+      schema: schemaGraph(
+        organizationSchema(),
+        officeLocalBusiness('malaysia', { includeRating: true }),
+        faqPageSchema(FAQS),
+        breadcrumbs,
+      ),
     })
-    jsonLdRef.current = scripts
-
-    return () => {
-      jsonLdRef.current.forEach((script) => script.remove())
-      jsonLdRef.current = []
-    }
   }, [])
 
   const whatsappHref = buildWhatsAppLink(WHATSAPP_NUMBER, WHATSAPP_MESSAGE)

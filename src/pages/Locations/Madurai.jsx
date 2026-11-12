@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect } from 'react'
 import { MADURAI_FAQS } from '../../data/pages/maduraiFaqs.js'
 import { Link } from 'react-router-dom'
 import Breadcrumbs from '../../components/common/Breadcrumbs.jsx'
@@ -10,10 +10,11 @@ import { AnswerFirst, AuditBlock, FounderBlock, ReviewsCarousel, MarketRangeTabl
 import { ScrollReveal } from '../../components/animations/ScrollReveal.jsx'
 import { setSeo } from '../../utils/seo.js'
 import {
-  localBusinessSchema,
+  organizationSchema,
   faqPageSchema,
   breadcrumbListSchema,
 } from '../../utils/schema.js'
+import { officeLocalBusiness, schemaGraph } from '../../data/officeSchema.js'
 import { buildWhatsAppLink, cx } from '../../utils/helpers.js'
 import {
   WHATSAPP_NUMBER,
@@ -224,41 +225,7 @@ const OTHER_LOCATIONS = [
    ============================================================ */
 
 export default function Madurai() {
-  const jsonLdRef = useRef([])
-
   useEffect(() => {
-    setSeo({
-      title: PAGE_TITLE,
-      description: PAGE_DESCRIPTION,
-      canonical: `${SITE_URL}/locations/madurai/`,
-      ogType: 'website',
-    })
-
-    const faqEntities = FAQS.map((faq) => ({
-      '@type': 'Question',
-      name: faq.question,
-      acceptedAnswer: { '@type': 'Answer', text: faq.answer },
-    }))
-
-    const localBiz = localBusinessSchema({
-      name: 'Static Savvy Media, Madurai',
-      description: PAGE_DESCRIPTION,
-      url: `${SITE_URL}/locations/madurai/`,
-      telephone: '+919944040345',
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: '2nd Floor, 4/3, Srinivasa Perumal Koil St, Kamarajar Salai',
-        addressLocality: 'Madurai',
-        addressRegion: 'Tamil Nadu',
-        postalCode: '625009',
-        addressCountry: 'IN',
-      },
-      areaServed: [
-        { '@type': 'City', name: 'Madurai' },
-        { '@type': 'State', name: 'Tamil Nadu' },
-      ],
-    })
-
     const breadcrumbs = breadcrumbListSchema({
       items: [
         { name: 'Home', item: `${SITE_URL}/` },
@@ -267,23 +234,18 @@ export default function Madurai() {
       ],
     })
 
-    const scripts = [
-      localBiz,
-      faqPageSchema({ faqs: faqEntities }),
-      breadcrumbs,
-    ].map((data) => {
-      const script = document.createElement('script')
-      script.type = 'application/ld+json'
-      script.text = JSON.stringify(data)
-      document.head.appendChild(script)
-      return script
+    setSeo({
+      title: PAGE_TITLE,
+      description: PAGE_DESCRIPTION,
+      canonical: `${SITE_URL}/locations/madurai/`,
+      ogType: 'website',
+      schema: schemaGraph(
+        organizationSchema(),
+        officeLocalBusiness('madurai', { includeRating: true }),
+        faqPageSchema(FAQS),
+        breadcrumbs,
+      ),
     })
-    jsonLdRef.current = scripts
-
-    return () => {
-      jsonLdRef.current.forEach((script) => script.remove())
-      jsonLdRef.current = []
-    }
   }, [])
 
   const whatsappHref = buildWhatsAppLink(WHATSAPP_NUMBER, WHATSAPP_MESSAGE)

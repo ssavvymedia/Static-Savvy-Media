@@ -11,6 +11,7 @@ import { auditCityFor } from '../data/auditOptions.js'
 import { ScrollReveal } from '../components/animations/ScrollReveal.jsx'
 import { setSeo } from '../utils/seo.js'
 import { faqPageSchema, breadcrumbListSchema } from '../utils/schema.js'
+import { officeLocalBusiness, schemaGraph } from '../data/officeSchema.js'
 import { buildWhatsAppLink } from '../utils/helpers.js'
 import { SITE_URL } from '../utils/constants.js'
 import { ORG_SAME_AS, GBP_MAPS } from '../data/sameAs.js'
@@ -57,17 +58,16 @@ export default function CityLandingTemplate({ city }) {
       { name: 'Locations', item: '/locations/' },
       { name: city.name, item: path },
     ])
-    const strip = (node) => {
-      const rest = { ...node }
-      delete rest['@context']
-      return rest
-    }
+    const includeRating = city.slug === 'rawang'
+    const office = city.office && city.office !== 'org'
+      ? officeLocalBusiness(city.office, { includeRating })
+      : null
     setSeo({
       title: city.title,
       description: city.description,
       canonical: pageUrl,
       ogImage: `${SITE_URL}${networkImg}`,
-      schema: { '@context': 'https://schema.org', '@graph': [service, org, strip(faq), strip(crumbs)] },
+      schema: schemaGraph(service, office, org, faq, crumbs),
     })
   }, [city, path, pageUrl])
 

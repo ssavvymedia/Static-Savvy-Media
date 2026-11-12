@@ -75,3 +75,53 @@ export const SOCIAL_LINKS = {
   youtube: "https://www.youtube.com/@staticsavvymedia",
   pinterest: "https://in.pinterest.com/Staticsavvymedia/",
 };
+
+// Madurai HQ (visible hours from the offices block: Mon–Sat, 9:00 AM – 6:30 PM IST).
+export const MADURAI_OFFICE = {
+  name: "Static Savvy Media, Madurai",
+  phoneDisplay: "+91 99440 40345",
+  streetAddress: "2nd Floor, 4/3, Srinivasa Perumal Koil St, Kamarajar Salai",
+  postalCode: "625009",
+  addressLocality: "Madurai",
+  addressRegion: "Tamil Nadu",
+  addressCountry: "IN",
+  hoursDisplay: "Mon–Sat, 9:00 AM – 6:30 PM IST",
+};
+
+export const MADURAI_POSTAL_ADDRESS = {
+  "@type": "PostalAddress",
+  streetAddress: MADURAI_OFFICE.streetAddress,
+  addressLocality: MADURAI_OFFICE.addressLocality,
+  addressRegion: MADURAI_OFFICE.addressRegion,
+  postalCode: MADURAI_OFFICE.postalCode,
+  addressCountry: MADURAI_OFFICE.addressCountry,
+};
+
+export const MADURAI_OPENING_HOURS_SPEC = [
+  {
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+    opens: "09:00",
+    closes: "18:30",
+  },
+];
+
+// Thoothukudi office. Hours on the site are "By appointment" only — no OpeningHoursSpecification.
+export const THOOTHUKUDI_OFFICE = {
+  name: "Static Savvy Media, Thoothukudi",
+  phoneDisplay: "+91 99440 40345",
+  streetAddress: "90, Peria Kadai St, Matha Koil",
+  postalCode: "628001",
+  addressLocality: "Thoothukudi",
+  addressRegion: "Tamil Nadu",
+  addressCountry: "IN",
+};
+
+export const THOOTHUKUDI_POSTAL_ADDRESS = {
+  "@type": "PostalAddress",
+  streetAddress: THOOTHUKUDI_OFFICE.streetAddress,
+  addressLocality: THOOTHUKUDI_OFFICE.addressLocality,
+  addressRegion: THOOTHUKUDI_OFFICE.addressRegion,
+  postalCode: THOOTHUKUDI_OFFICE.postalCode,
+  addressCountry: THOOTHUKUDI_OFFICE.addressCountry,
+};

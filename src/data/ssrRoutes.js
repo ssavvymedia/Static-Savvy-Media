@@ -67,7 +67,7 @@ export const ssrRoutes = [
   {'route': '/services/local-seo/thoothukudi/', 'module': '/src/pages/ServiceLocations/LocalSEO/LocalSEO_Thoothukudi.jsx', 'office': 'madurai', 'service': 'Local SEO services in Thoothukudi', 'serviceType': 'Local SEO', 'area': {'@type': 'City', 'name': 'Thoothukudi'}},
   {'route': '/services/google-ads/thoothukudi/', 'module': '/src/pages/ServiceLocations/GoogleAds/GoogleAds_Thoothukudi.jsx', 'office': 'madurai', 'service': 'Google Ads management in Thoothukudi', 'serviceType': 'Pay-per-click advertising', 'area': {'@type': 'City', 'name': 'Thoothukudi'}},
   {'route': '/locations/', 'module': '/src/pages/Locations/Locations.jsx', 'kind': 'page', 'pageType': 'CollectionPage'},
-  {'route': '/locations/thoothukudi/', 'module': '/src/pages/Locations/Thoothukudi.jsx', 'kind': 'page', 'pageType': 'WebPage', 'office': 'madurai'},
+  {'route': '/locations/thoothukudi/', 'module': '/src/pages/Locations/Thoothukudi.jsx', 'kind': 'page', 'pageType': 'WebPage', 'office': 'thoothukudi'},
   {'route': '/industries/', 'module': '/src/pages/Industries/Industries.jsx', 'kind': 'page', 'pageType': 'CollectionPage'},
   { route: '/industries/manufacturing-b2b/', module: '/src/pages/Industries/ManufacturingB2B.jsx', office: 'madurai', service: 'Digital marketing for manufacturing and B2B companies', serviceType: 'Digital marketing', area: [{ '@type': 'State', name: 'Tamil Nadu' }, { '@type': 'Country', name: 'India' }, { '@type': 'Country', name: 'Malaysia' }] },
   { route: '/growth-audit/', module: '/src/pages/GrowthAudit/GrowthAudit.jsx', kind: 'page', pageType: 'WebPage', office: 'madurai' },

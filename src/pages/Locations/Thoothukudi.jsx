@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Breadcrumbs from '../../components/common/Breadcrumbs.jsx'
 import Button from '../../components/common/Button.jsx'
@@ -9,10 +9,11 @@ import { AuditBlock } from '../../components/v2/V2Blocks.jsx'
 import { ScrollReveal } from '../../components/animations/ScrollReveal.jsx'
 import { setSeo } from '../../utils/seo.js'
 import {
-  localBusinessSchema,
+  organizationSchema,
   faqPageSchema,
   breadcrumbListSchema,
 } from '../../utils/schema.js'
+import { officeLocalBusiness, schemaGraph } from '../../data/officeSchema.js'
 import { buildWhatsAppLink, cx } from '../../utils/helpers.js'
 import {
   WHATSAPP_NUMBER,
@@ -159,41 +160,7 @@ const OTHER_LOCATIONS = [
    ============================================================ */
 
 export default function Thoothukudi() {
-  const jsonLdRef = useRef([])
-
   useEffect(() => {
-    setSeo({
-      title: PAGE_TITLE,
-      description: PAGE_DESCRIPTION,
-      canonical: `${SITE_URL}/locations/thoothukudi/`,
-      ogType: 'website',
-    })
-
-    const faqEntities = FAQS.map((faq) => ({
-      '@type': 'Question',
-      name: faq.question,
-      acceptedAnswer: { '@type': 'Answer', text: faq.answer },
-    }))
-
-    const localBiz = localBusinessSchema({
-      name: 'Static Savvy Media, Thoothukudi',
-      description: PAGE_DESCRIPTION,
-      url: `${SITE_URL}/locations/thoothukudi/`,
-      telephone: '+919944040345',
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: '90, Peria Kadai St, Matha Koil',
-        addressLocality: 'Thoothukudi',
-        addressRegion: 'Tamil Nadu',
-        postalCode: '628001',
-        addressCountry: 'IN',
-      },
-      areaServed: [
-        { '@type': 'City', name: 'Thoothukudi' },
-        { '@type': 'State', name: 'Tamil Nadu' },
-      ],
-    })
-
     const breadcrumbs = breadcrumbListSchema({
       items: [
         { name: 'Home', item: `${SITE_URL}/` },
@@ -202,23 +169,18 @@ export default function Thoothukudi() {
       ],
     })
 
-    const scripts = [
-      localBiz,
-      faqPageSchema({ faqs: faqEntities }),
-      breadcrumbs,
-    ].map((data) => {
-      const script = document.createElement('script')
-      script.type = 'application/ld+json'
-      script.text = JSON.stringify(data)
-      document.head.appendChild(script)
-      return script
+    setSeo({
+      title: PAGE_TITLE,
+      description: PAGE_DESCRIPTION,
+      canonical: `${SITE_URL}/locations/thoothukudi/`,
+      ogType: 'website',
+      schema: schemaGraph(
+        organizationSchema(),
+        officeLocalBusiness('thoothukudi'),
+        faqPageSchema(FAQS),
+        breadcrumbs,
+      ),
     })
-    jsonLdRef.current = scripts
-
-    return () => {
-      jsonLdRef.current.forEach((script) => script.remove())
-      jsonLdRef.current = []
-    }
   }, [])
 
   const whatsappHref = buildWhatsAppLink(WHATSAPP_NUMBER, WHATSAPP_MESSAGE)
