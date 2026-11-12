@@ -41,6 +41,7 @@ const OFFICES = {
     name: MADURAI_OFFICE.name,
     url: `${SITE_URL}/locations/madurai/`,
     id: `${SITE_URL}/locations/madurai/#localbusiness`,
+    geo: { '@type': 'GeoCoordinates', latitude: 9.925, longitude: 78.1195 },
     telephone: MADURAI_OFFICE.phoneDisplay,
     address: MADURAI_POSTAL_ADDRESS,
     openingHoursSpecification: MADURAI_OPENING_HOURS_SPEC,
@@ -51,6 +52,7 @@ const OFFICES = {
     name: THOOTHUKUDI_OFFICE.name,
     url: `${SITE_URL}/locations/thoothukudi/`,
     id: `${SITE_URL}/locations/thoothukudi/#localbusiness`,
+    geo: { '@type': 'GeoCoordinates', latitude: 8.8032, longitude: 78.157 },
     telephone: THOOTHUKUDI_OFFICE.phoneDisplay,
     address: THOOTHUKUDI_POSTAL_ADDRESS,
     image: `${SITE_URL}/og/locations-03thoothukudi.jpg`,
@@ -59,6 +61,7 @@ const OFFICES = {
     name: MALAYSIA_OFFICE.name,
     url: `${SITE_URL}/locations/malaysia/`,
     id: `${SITE_URL}/locations/malaysia/#localbusiness`,
+    geo: { '@type': 'GeoCoordinates', latitude: 3.3164, longitude: 101.5373 },
     telephone: MALAYSIA_OFFICE.phoneDisplay,
     address: MALAYSIA_POSTAL_ADDRESS,
     openingHoursSpecification: MALAYSIA_OPENING_HOURS_SPEC,
@@ -83,6 +86,7 @@ export function officeLocalBusiness(key, { includeRating = false } = {}) {
   }
   if (o.openingHoursSpecification) node.openingHoursSpecification = o.openingHoursSpecification
   if (o.hasMap) node.hasMap = o.hasMap
+  if (o.geo) node.geo = o.geo
   if (includeRating && RATINGS[key]) {
     node.aggregateRating = { '@type': 'AggregateRating', ...RATINGS[key] }
   }
