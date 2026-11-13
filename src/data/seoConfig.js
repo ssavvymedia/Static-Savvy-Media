@@ -677,13 +677,13 @@ export const seoConfig = {
   },
   "/locations/madurai": {
     title:
-      "Digital Marketing Company in Madurai | Static Savvy Media HQ",
+      "SEO Agency in Madurai | Local SEO & AI Search | Static Savvy Media",
     slug: "locations/madurai",
     seo: {
       title:
-        "Digital Marketing Company in Madurai | Static Savvy Media HQ",
+        "SEO Agency in Madurai | Local SEO & AI Search | Static Savvy Media",
       description:
-        "Madurai digital marketing agency at Kamarajar Salai since 2021, rated 4.9★ from 106 Google reviews. SEO, Local SEO, Ads, social & websites.",
+        "Madurai SEO agency for Local SEO, Google Business Profile, websites and AI search (GEO/AEO). 4.9★ from 106 reviews. Free growth audit. WhatsApp +91 99440 40345.",
       canonical: `${BASE_URL}/locations/madurai`,
       focusKeyword: "digital marketing agency Madurai",
       ogTitle: "Digital Marketing Company in Madurai | Static Savvy Media",
