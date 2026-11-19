@@ -501,30 +501,17 @@ export default function HealthcareClinics() {
         subtitle={HERO_PARAGRAPH}
         actions={
           <>
+            <Button href="#audit" variant="primary" size="lg" data-cta="industry_healthcare_hero_audit">
+              Get Your Free Growth Audit
+            </Button>
             <Button
               href={whatsappHref}
-              variant="primary"
+              variant="ghost"
               size="lg"
               target="_blank"
               rel="noopener noreferrer"
             >
-              WhatsApp for a Free Consultation
-            </Button>
-            <Button to="/services/" variant="ghost" size="lg">
-              Explore Our Services
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                aria-hidden="true"
-              >
-                <path d="M5 12h14M13 6l6 6-6 6" />
-              </svg>
+              WhatsApp +91 99440 40345
             </Button>
           </>
         }

@@ -115,22 +115,18 @@ export async function handleContactSubmission(payload, options = {}) {
   const trimmedMessage = String(message || '').trim()
 
   if (trimmedName.length < 2 || trimmedName.length > 100) errors.name = 'Please enter a valid name.'
-  if (isAudit ? trimmedEmail && (!EMAIL_REGEX.test(trimmedEmail) || trimmedEmail.length > 150) : !EMAIL_REGEX.test(trimmedEmail) || trimmedEmail.length > 150) {
+  // Short forms (19 Nov 2026): name + phone/WhatsApp + message. Email and service are optional on
+  // both forms (validated only when given); the audit form's qualifying fields are optional too.
+  if (trimmedEmail && (!EMAIL_REGEX.test(trimmedEmail) || trimmedEmail.length > 150)) {
     errors.email = 'Please enter a valid email address.'
   }
   if (!PHONE_REGEX.test(trimmedPhone)) errors.phone = 'Please enter a valid phone number.'
-  if (!isAudit && (trimmedService.length < 2 || trimmedService.length > 100)) errors.service = 'Please select a service.'
-  if (isAudit ? trimmedMessage.length > 3000 : trimmedMessage.length < 10 || trimmedMessage.length > 3000) {
-    errors.message = 'Message should be between 10 and 3000 characters.'
+  if (trimmedService.length > 100) errors.service = 'Please select a service.'
+  if (isAudit ? trimmedMessage.length > 3000 : trimmedMessage.length < 2 || trimmedMessage.length > 3000) {
+    errors.message = 'Please add a short message (up to 3000 characters).'
   }
   const audit = isAudit ? auditFields(payload) : null
-  if (isAudit) {
-    if (!audit.business) errors.business = 'Please enter your business name.'
-    if (!audit.industry) errors.industry = 'Please select your industry.'
-    if (!audit.budget) errors.budget = 'Please select a budget range.'
-    if (!audit.city) errors.city = 'Please select your city.'
-    if (payload.consent !== true) errors.consent = 'Please agree to be contacted about your audit.'
-  }
+  if (isAudit && payload.consent !== true) errors.consent = 'Please agree to be contacted about your audit.'
 
   if (Object.keys(errors).length > 0) {
     return result(400, {
@@ -151,7 +147,7 @@ export async function handleContactSubmission(payload, options = {}) {
     name: trimmedName,
     email: trimmedEmail || 'Not given',
     phone: trimmedPhone,
-    service: isAudit ? 'Growth Audit' : trimmedService,
+    service: isAudit ? 'Growth Audit' : trimmedService || 'General enquiry',
     message: trimmedMessage || (isAudit ? 'Growth Audit request (no message added).' : ''),
     extra: audit ? audit.rows : [],
     formType: isAudit ? 'growth_audit' : 'contact',
@@ -194,7 +190,7 @@ export async function handleContactSubmission(payload, options = {}) {
 const clip = (v, max = 200) => String(v ?? '').trim().slice(0, max)
 
 // Qualifying + attribution fields sent by the Growth Audit form. Everything is optional except
-// the four checked above; values are clipped so a crafted payload cannot bloat the email.
+// consent; values are clipped so a crafted payload cannot bloat the email.
 function auditFields(p) {
   const f = {
     business: clip(p.business, 150),
@@ -207,11 +203,11 @@ function auditFields(p) {
     .map((k) => [k, clip(p[k], 150)])
     .filter(([, v]) => v)
   const rows = [
-    ['Business', f.business],
+    ['Business', f.business || 'Not given'],
     ['Website / GBP', f.siteUrl || 'Not given'],
-    ['Industry', f.industry],
-    ['Budget', f.budget],
-    ['City', f.city],
+    ['Industry', f.industry || 'Not given'],
+    ['Budget', f.budget || 'Not given'],
+    ['City', f.city || 'Not given'],
     ['Consent', p.consent === true ? 'Yes, agreed to be contacted' : 'No'],
     ['Form', clip(p.formId, 60) || 'growth_audit'],
     ['Landing page', clip(p.landingPage, 300) || 'Not captured'],

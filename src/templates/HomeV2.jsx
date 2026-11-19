@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { AuditBlock, ReviewsCarousel, FounderBlock, Ico, REVIEW_PROOF } from '../components/v2/V2Blocks.jsx'
 import ClientWork from '../components/v2/ClientWork.jsx'
-import { HOME_H1, HOME_INTRO, HOME_MARKETS, HOME_MADURAI_LINKS } from '../data/pages/homeContent.js'
+import { HOME_EYEBROW, HOME_H1, HOME_SUB, HOME_PROOF_STRIP, HOME_INTRO, HOME_MARKETS, HOME_MADURAI_LINKS } from '../data/pages/homeContent.js'
 import { HOME_FAQS } from '../data/pages/homeFaqs.js'
 import { GBP_REVIEW_SUMMARY } from '../data/googleReviews.js'
 import HeroLaptop from '../assets/images/home/hero-laptop.webp'
@@ -74,27 +74,27 @@ export default function HomeV2({ whatsappHref }) {
       <section className="hv2-hero" data-section="hero">
         <div className="hv2-wrap">
           <div>
-            <span className="hv2-eyebrow">AI Search · SEO · Lead Generation</span>
+            <span className="hv2-eyebrow">{HOME_EYEBROW}</span>
             <h1>
-              <span className="hv2-kw">{HOME_H1.kw}</span>
-              <span className="hv2-sr">: </span>
               <span className="hv2-big">
                 {HOME_H1.lead} <span className="hv2-grad">{HOME_H1.grad}</span> {HOME_H1.tail}
               </span>
             </h1>
-            <p className="hv2-lead">{HOME_INTRO}</p>
+            <p className="hv2-lead">{HOME_SUB}</p>
             <div className="hv2-cta-row">
-              <a className="hv2-btn hv2-btn--primary" href="#audit" data-cta="hero_growth_audit">Get a Free Growth Audit <span className="hv2-arrow" aria-hidden="true">→</span></a>
+              <a className="hv2-btn hv2-btn--primary" href="#audit" data-cta="hero_growth_audit">Get Your Free Growth Audit <span className="hv2-arrow" aria-hidden="true">→</span></a>
               <a className="hv2-btn hv2-btn--ghost" href={whatsappHref} target="_blank" rel="noopener noreferrer" data-track="consultation">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" aria-hidden="true"><path d={P.cal} /></svg>
                 Book a Consultation
               </a>
             </div>
-            <ul className="hv2-benefits">
-              <li><Ico d={P.search} />Be visible<br />on Google &amp; AI</li>
-              <li><Ico d={P.people} />Attract<br />qualified leads</li>
-              <li><Ico d={P.trend} />Grow<br />revenue</li>
-            </ul>
+            <p className="hv2-proofstrip">
+              <a href={GBP_REVIEW_SUMMARY.url} target="_blank" rel="noopener noreferrer" data-track="hero_reviews">
+                <span className="hv2-stars" aria-hidden="true">★★★★★</span> {HOME_PROOF_STRIP[0]}
+              </a>
+              {HOME_PROOF_STRIP.slice(1).map((c) => <span key={c}><span aria-hidden="true">•</span> {c}</span>)}
+            </p>
+            <p className="hv2-intro-sm">{HOME_INTRO}</p>
           </div>
           <div className="hv2-visual">
             <div className="hv2-frame">
@@ -280,7 +280,7 @@ export default function HomeV2({ whatsappHref }) {
             <div><h2>Ready to accelerate your business growth?</h2><p>Let&apos;s discuss your goals and create a customised growth plan for your business.</p></div>
             <div className="hv2-cta-row">
               <a className="hv2-btn hv2-btn--ghost" href={whatsappHref} target="_blank" rel="noopener noreferrer" data-track="consultation">Book a Consultation</a>
-              <a className="hv2-btn hv2-btn--white" href="#audit" data-cta="final_growth_audit">Get a Free Growth Audit <span className="hv2-arrow" aria-hidden="true">→</span></a>
+              <a className="hv2-btn hv2-btn--white" href="#audit" data-cta="final_growth_audit">Get Your Free Growth Audit <span className="hv2-arrow" aria-hidden="true">→</span></a>
             </div>
           </div>
         </div>

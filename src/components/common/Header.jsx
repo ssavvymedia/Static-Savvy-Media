@@ -60,7 +60,7 @@ export default function Header() {
         <div className="site-header__actions">
           <ThemeToggle />
           <a href={whatsappHref} target="_blank" rel="noopener noreferrer" className="site-header__cta site-header__cta--ghost" data-track="consultation">Book a Consultation</a>
-          <Link to="/growth-audit/" className="site-header__cta site-header__cta--primary" data-track="cta_growth_audit">Get a Growth Audit</Link>
+          <Link to="/growth-audit/" className="site-header__cta site-header__cta--primary" data-track="cta_growth_audit">Get Your Free Growth Audit</Link>
           <button
             type="button"
             className="site-header__toggle"

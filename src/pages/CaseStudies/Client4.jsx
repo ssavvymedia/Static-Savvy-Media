@@ -1,5 +1,4 @@
 import { useEffect } from 'react'
-import { Link } from 'react-router-dom'
 import Breadcrumbs from '../../components/common/Breadcrumbs.jsx'
 import Button from '../../components/common/Button.jsx'
 import HeroSection from '../../components/hero/HeroSection.jsx'
@@ -335,7 +334,7 @@ export default function Client4() {
             <p>WhatsApp click tracking can be implemented as a conversion event in Google Ads and GA4. Every tracked WhatsApp click can be associated with the campaign, ad group and keyword that generated it.</p>
           </div>
           <div className="c4-wa-cta">
-            <Button variant="primary" as={Link} to={buildWhatsAppLink(WHATSAPP_NUMBER, WHATSAPP_MESSAGE)}>
+            <Button variant="primary" href={buildWhatsAppLink(WHATSAPP_NUMBER, WHATSAPP_MESSAGE)} target="_blank" rel="noopener noreferrer">
               Start a Conversation
             </Button>
           </div>
@@ -473,12 +472,12 @@ export default function Client4() {
             <div className="c4-service-card">
               <h4>Google Ads</h4>
               <p>High-intent paid search campaigns designed around relevant industrial search demand.</p>
-              <Button variant="secondary" as={Link} to="/services/google-ads/">Learn More</Button>
+              <Button variant="secondary" to="/services/google-ads/">Learn More</Button>
             </div>
             <div className="c4-service-card">
               <h4>Social Media Marketing</h4>
               <p>Professional content and platform-specific marketing designed for B2B audience visibility and credibility.</p>
-              <Button variant="secondary" as={Link} to="/services/social-media-marketing/">Learn More</Button>
+              <Button variant="secondary" to="/services/social-media-marketing/">Learn More</Button>
             </div>
           </div>
         </section>
@@ -492,7 +491,7 @@ export default function Client4() {
             {RELATED_SERVICES.map((svc, i) => (
               <div key={i} className="c4-related-card">
                 <h4>{svc.name}</h4>
-                <Button variant="secondary" as={Link} to={svc.path}>Explore</Button>
+                <Button variant="secondary" to={svc.path}>Explore</Button>
               </div>
             ))}
           </div>
@@ -507,7 +506,7 @@ export default function Client4() {
             {RELATED_CASES.map((cs, i) => (
               <div key={i} className="c4-case-card">
                 <h4>{cs.label}</h4>
-                <Button variant="secondary" as={Link} to={cs.path}>View Case Study</Button>
+                <Button variant="secondary" to={cs.path}>View Case Study</Button>
               </div>
             ))}
           </div>
@@ -521,8 +520,8 @@ export default function Client4() {
             <h2>Need More Industrial Leads in Thoothukudi?</h2>
             <p>Build stronger search visibility and a measurable lead generation system with Google Ads, Social Media and conversion-focused digital marketing.</p>
             <div className="c4-location-cta-buttons">
-              <Button variant="primary" as={Link} to="/contact/">Get a Free Consultation</Button>
-              <Button variant="secondary" as={Link} to="/locations/thoothukudi/">Explore Thoothukudi Services</Button>
+              <Button variant="primary" to="/contact/">Get a Free Consultation</Button>
+              <Button variant="secondary" to="/locations/thoothukudi/">Explore Thoothukudi Services</Button>
             </div>
           </div>
         </section>

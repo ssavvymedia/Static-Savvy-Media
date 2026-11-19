@@ -516,11 +516,11 @@ export default function SEO_Madurai() {
               </ScrollReveal>
               <ScrollReveal delay={240}>
                 <div className="seo-mdu-hero__actions">
-                  <Button href={whatsappHref} variant="primary" size="lg" target="_blank" rel="noopener noreferrer">
-                    WhatsApp for a Free Consultation
+                  <Button href="#audit" variant="primary" size="lg" data-cta="seo_madurai_hero_audit">
+                    Get Your Free Growth Audit
                   </Button>
-                  <Button href="#audit" variant="outline" size="lg" data-cta="seo_madurai_hero_audit">
-                    Get a Free SEO Audit
+                  <Button href={whatsappHref} variant="ghost" size="lg" target="_blank" rel="noopener noreferrer">
+                    WhatsApp +91 99440 40345
                   </Button>
                 </div>
                 <p className="seo-mdu-hero__trust">

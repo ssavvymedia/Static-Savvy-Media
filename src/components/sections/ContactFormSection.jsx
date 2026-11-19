@@ -27,18 +27,6 @@ function trackLead(service) {
   }
 }
 
-const SERVICES = [
-  'SEO',
-  'GEO & AEO',
-  'Local SEO',
-  'Google Ads',
-  'Social Media Marketing',
-  'Website Design & Development',
-  'AI Business Automation',
-  'Corporate Photography & Video',
-  'AI Video Creation',
-  'Product Photography & Creative Design',
-]
 
 export default function ContactFormSection() {
   const [formData, setFormData] = useState({
@@ -168,8 +156,8 @@ export default function ContactFormSection() {
           {formSubmitted ? (
             <div className="contact-form-success cf2-success" role="status" aria-live="polite">
               <span className="cf2-tick" aria-hidden="true">✓</span>
-              <h3 className="success-title">Thank you!</h3>
-              <p className="success-message">Your request has been received. Our team will review your details and get back to you shortly.</p>
+              <h3 className="success-title">Message received.</h3>
+              <p className="success-message">We’ll reply on WhatsApp within 1 business day.</p>
               <button type="button" className="success-reset-btn cf2-reset" onClick={handleResetForm}>Send another message</button>
             </div>
           ) : (
@@ -180,19 +168,8 @@ export default function ContactFormSection() {
                 <input type="text" id="form-name" name="name" value={formData.name} onChange={handleInputChange} autoComplete="name" required />
               </div>
               <div className="cf2-field">
-                <label htmlFor="form-email">Email</label>
-                <input type="email" id="form-email" name="email" value={formData.email} onChange={handleInputChange} autoComplete="email" required />
-              </div>
-              <div className="cf2-field">
                 <label htmlFor="form-phone">Phone / WhatsApp</label>
                 <input type="tel" id="form-phone" name="phone" value={formData.phone} onChange={handleInputChange} autoComplete="tel" placeholder="+91 98765 43210" required />
-              </div>
-              <div className="cf2-field">
-                <label htmlFor="form-service">Service needed</label>
-                <select id="form-service" name="service" value={formData.service} onChange={handleInputChange} required>
-                  <option value="" disabled hidden>Select a service</option>
-                  {SERVICES.map((s) => <option key={s} value={s}>{s}</option>)}
-                </select>
               </div>
               <div className="cf2-field cf2-field--full">
                 <label htmlFor="form-message">Message</label>

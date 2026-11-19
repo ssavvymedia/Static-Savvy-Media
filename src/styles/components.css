@@ -153,28 +153,54 @@
 /* ---- Floating action buttons ---- */
 .whatsapp-btn {
   position: fixed;
-  bottom: 1.5rem;
-  right: 1.5rem;
+  bottom: 1.25rem;
+  right: 1.25rem;
   z-index: 100;
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  display: flex;
+  height: 56px;
+  min-width: 56px;
+  padding: 0 20px 0 16px;
+  gap: 10px;
+  border-radius: 999px;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #25d366, #128c7e);
+  background: #25d366;
   color: #fff;
-  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+  font: 700 15px/1 var(--font-sans, system-ui, sans-serif);
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  border: 2px solid #fff;
+  box-shadow: 0 10px 28px rgba(18, 140, 126, 0.55), 0 0 0 0 rgba(37, 211, 102, 0.6);
   transition: transform var(--transition);
+  animation: wa-pulse 2.6s ease-out 1.5s 3;
 }
 
+.whatsapp-btn__label { white-space: nowrap; }
+
 .whatsapp-btn:hover {
-  transform: scale(1.08);
+  transform: scale(1.05);
+  color: #fff;
+}
+
+@keyframes wa-pulse {
+  0% { box-shadow: 0 10px 28px rgba(18, 140, 126, 0.55), 0 0 0 0 rgba(37, 211, 102, 0.6); }
+  70% { box-shadow: 0 10px 28px rgba(18, 140, 126, 0.55), 0 0 0 16px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 10px 28px rgba(18, 140, 126, 0.55), 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .whatsapp-btn { animation: none; }
+}
+
+/* Phones: icon-only circle (bigger than before), so it never covers text columns. */
+@media (max-width: 640px) {
+  .whatsapp-btn { padding: 0; width: 56px; }
+  .whatsapp-btn__label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
 }
 
 .back-to-top {
   position: fixed;
-  bottom: 5.25rem;
+  bottom: 5.75rem;
   right: 1.5rem;
   z-index: 100;
   width: 46px;

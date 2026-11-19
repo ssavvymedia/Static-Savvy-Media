@@ -89,7 +89,7 @@ export default function VisibilityChecklist() {
         <div className="hv2-wrap">
           <span className="hv2-eyebrow">Unlock & get your copy</span>
           <h2 className="hv2-h2">Send me the checklist</h2>
-          <p className="hv2-lead">Enter your details. We’ll email you the checklist and, if it makes sense, follow up with your free Business Growth Audit.</p>
+          <p className="hv2-lead">Enter your details. We’ll send you the checklist on WhatsApp and, if it makes sense, follow up with your free Business Growth Audit.</p>
           <div style={{ marginTop: 24, maxWidth: 640 }}>
             <GrowthAuditForm formId="visibility_checklist" defaultCity="Madurai" compact />
           </div>

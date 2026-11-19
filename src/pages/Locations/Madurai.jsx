@@ -273,7 +273,7 @@ export default function Madurai() {
             WhatsApp: +91 99440 40345
           </Button>
           <Button href="#audit" variant="outline" size="lg" data-cta="madurai_hq_hero_audit">
-            Get a Free Growth Audit
+            Get Your Free Growth Audit
           </Button>
           </>
         }

@@ -137,7 +137,7 @@ test('honeypot gets a fake success and sends no email', async () => {
 })
 
 test('validation errors return 400 with field errors', async () => {
-  const r = await call('POST', JSON.stringify({ ...valid, email: 'nope', message: 'short' }))
+  const r = await call('POST', JSON.stringify({ ...valid, email: 'nope', message: 'x' }))
   assert.equal(r.status, 400)
   assert.equal(r.json.code, 'VALIDATION_ERROR')
   assert.ok(r.json.errors.email)
@@ -223,11 +223,22 @@ test('growth audit: emails qualifying fields without an email address', async ()
   assert.match(data, /audit-test/)
 })
 
-test('growth audit: consent and qualifying fields are required', async () => {
-  const r = await call('POST', JSON.stringify({ ...audit, consent: false, industry: '', budget: '', city: '', business: '' }))
+test('growth audit: only name, phone and consent are required (short form)', async () => {
+  let r = await call('POST', JSON.stringify({ ...audit, consent: false }))
   assert.equal(r.status, 400)
-  assert.equal(r.json.code, 'VALIDATION_ERROR')
-  for (const k of ['consent', 'industry', 'budget', 'city', 'business']) assert.ok(r.json.errors[k], k)
+  assert.ok(r.json.errors.consent)
+  const before = messages.length
+  r = await call('POST', JSON.stringify({ ...audit, industry: '', budget: '', city: '', business: '', siteUrl: '', message: 'More calls please' }))
+  assert.equal(r.status, 200, JSON.stringify(r.json))
+  assert.equal(messages.length, before + 1)
+})
+
+test('contact: name + phone + message is enough (email/service optional)', async () => {
+  const before = messages.length
+  const r = await call('POST', JSON.stringify({ ...valid, email: '', service: '' }))
+  assert.equal(r.status, 200, JSON.stringify(r.json))
+  assert.equal(messages.length, before + 1)
+  assert.match(messages.at(-1).data, /General enquiry/)
 })
 
 test('growth audit: honeypot still fakes success and sends nothing', async () => {

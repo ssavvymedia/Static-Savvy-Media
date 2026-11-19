@@ -20,13 +20,17 @@ export const MADURAI_ID = `${HOST}/locations/madurai/#localbusiness`
 /* v2 hero (approved 10 Nov 2026). The H1 keeps the Madurai head term first: the homepage owns
  * "digital marketing agency in Madurai" (gap-audit P0 #2); /locations/madurai/ is the HQ hub and
  * /services/seo/madurai/ owns "SEO company in Madurai". */
+// Hero copy approved by the owner on 19 Nov 2026 (exact wording).
+export const HOME_EYEBROW = 'Digital Marketing Agency in Madurai · SEO · AI Search'
 export const HOME_H1 = {
-  kw: 'Digital Marketing Agency in Madurai',
-  lead: 'Turn Search Visibility into',
-  grad: 'Qualified Leads',
-  tail: '& Real Business Growth',
+  lead: 'We Turn Google & AI Search Into',
+  grad: 'Daily Enquiries',
+  tail: 'for Clinics & Local Businesses.',
 }
-export const HOME_H1_TEXT = `${HOME_H1.kw}: ${HOME_H1.lead} ${HOME_H1.grad} ${HOME_H1.tail}`
+export const HOME_H1_TEXT = `${HOME_H1.lead} ${HOME_H1.grad} ${HOME_H1.tail}`
+export const HOME_SUB = 'Get more calls and WhatsApp leads from Google Maps and AI Search across Madurai and Malaysia.'
+// Proof strip under the hero. 4.9 / 106 = Madurai GBP (googleReviews.js GBP_REVIEW_SUMMARY).
+export const HOME_PROOF_STRIP = ['4.9★ from 106 Google reviews', 'Madurai', 'Thoothukudi', 'Malaysia']
 
 export const HOME_INTRO =
   'Static Savvy Media is a Madurai-headquartered digital marketing agency, founded in 2021, that helps businesses get found on Google, Google Maps and AI answer engines like ChatGPT and Perplexity. We run SEO, Local SEO, Google Ads, social media and websites for clients across Tamil Nadu, Malaysia, Singapore and Dubai, with offices in Madurai, Thoothukudi and Rawang (Selangor).'

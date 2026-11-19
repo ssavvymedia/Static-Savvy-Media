@@ -189,7 +189,7 @@ export default function About() {
               <li><b>Tamil &amp; English</b><span>One team, monthly plans</span></li>
             </ul>
             <div className="pv2-actions">
-              <Link className="hv2-btn hv2-btn--primary" to="/growth-audit/">Get a free growth audit</Link>
+              <Link className="hv2-btn hv2-btn--primary" to="/growth-audit/">Get Your Free Growth Audit</Link>
               <a className="hv2-btn hv2-btn--ghost" href={whatsappHref} target="_blank" rel="noopener noreferrer">WhatsApp {WHATSAPP_NUMBER}</a>
             </div>
           </div>
@@ -240,7 +240,7 @@ export default function About() {
         subtitle="Let's build a digital presence that makes your business visible across search, social and AI."
         primaryLabel="WhatsApp for a Free Consultation"
         primaryHref={whatsappHref}
-        secondaryLabel="Get a free growth audit"
+        secondaryLabel="Get Your Free Growth Audit"
         secondaryTo="/growth-audit/"
       />
       <ContactFormSection />

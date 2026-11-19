@@ -12,12 +12,12 @@ import { HOME_FAQS } from './pages/homeFaqs.js'
 
 const PHONE = '+91 99440 40345'
 
-import { homeSchemaGraph, HOME_H1_TEXT, HOME_INTRO, HOME_PROOF, HOME_MARKETS, HOME_MADURAI_LINKS } from './pages/homeContent.js'
+import { homeSchemaGraph, HOME_H1_TEXT, HOME_SUB, HOME_PROOF_STRIP, HOME_INTRO, HOME_MARKETS, HOME_MADURAI_LINKS } from './pages/homeContent.js'
 
 export const prerenderBodies = {
   '/': {
     h1: HOME_H1_TEXT,
-    intro: [HOME_INTRO, HOME_PROOF.map((p) => `${p.value} ${p.label}`).join(' · ')],
+    intro: [HOME_SUB, HOME_PROOF_STRIP.join(' • '), HOME_INTRO],
     sections: [
       {
         heading: 'Where we work',

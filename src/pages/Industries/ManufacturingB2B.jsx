@@ -76,7 +76,7 @@ export default function ManufacturingB2B() {
         subtitle="B2B SEO, Google Ads, AI search and websites for manufacturers, exporters and industrial suppliers, run from our Madurai HQ for businesses across Tamil Nadu, India and Malaysia. Built to bring qualified RFQs from buyers who search by product and specification."
         actions={
           <>
-            <Button href="#audit" variant="primary" size="lg">Get a free Growth Audit</Button>
+            <Button href="#audit" variant="primary" size="lg">Get Your Free Growth Audit</Button>
             <Button href={wa} variant="ghost" size="lg" target="_blank" rel="noopener noreferrer">WhatsApp: +91 99440 40345</Button>
           </>
         }

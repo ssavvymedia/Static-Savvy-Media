@@ -59,7 +59,7 @@ export default function GrowthAudit() {
           <h1 className="hv2-h2" style={{ fontSize: 'clamp(32px,4.4vw,52px)', marginTop: 12 }}>Get a Free Business Growth Audit</h1>
           <p className="hv2-lead" style={{ marginTop: 16, maxWidth: 760 }}>Find out why customers are, or are not, finding you on Google, Google Maps and AI assistants, and what to fix first. A hand-prepared review of your website, Google Business Profile, AI search presence and competitors, with a prioritised 90-day plan.</p>
           <p style={{ marginTop: 22, display: 'flex', gap: 22, flexWrap: 'wrap' }}>
-            <a className="hv2-btn hv2-btn--primary" href="#audit">Request my free audit</a>
+            <a className="hv2-btn hv2-btn--primary" href="#audit">Get Your Free Growth Audit</a>
             <a className="hv2-link" href="#sample-report">See a sample report <span className="hv2-arrow" aria-hidden="true">→</span></a>
           </p>
         </div>
