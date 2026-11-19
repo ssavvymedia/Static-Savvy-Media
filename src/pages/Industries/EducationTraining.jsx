@@ -38,7 +38,7 @@ const HERO_TITLE =
   'Digital Marketing for Education, Fill Your Seats, Build Your Reputation'
 
 const HERO_PARAGRAPH =
-  'The parent or student researching an educational institution today goes through a digital journey before making contact: Google searches, visiting websites, reading reviews, checking social media. The institution that controls this digital journey effectively wins the admission enquiry before a single brochure is handed out.'
+  'Digital marketing for education helps schools, colleges, coaching centres and training institutes get found by students and parents, then turns that interest into admission enquiries. Static Savvy Media runs SEO, Google Business Profile, Google Ads, social media and WhatsApp follow-up for institutions in Tamil Nadu and Malaysia, planned around your admission season.'
 
 const JOURNEY = [
   { label: 'Search', sub: 'Google & AI search', icon: 'search' },
@@ -133,6 +133,21 @@ const FAQS = [
     question: 'How quickly can I expect admissions enquiries from digital marketing?',
     answer:
       'Google Ads for admissions-intent keywords can generate enquiries within days of going live. SEO and social media take 2–4 months to build meaningful organic reach. For admission seasons, we recommend starting Google Ads 3–4 months before the primary application window.',
+  },
+  {
+    question: 'Can a school, college or coaching centre rank on Google Maps?',
+    answer:
+      'Yes. A verified Google Business Profile with the right category, courses listed as services, accurate hours, photos and genuine reviews helps your campus appear when people search for courses or institutions nearby.',
+  },
+  {
+    question: 'How should we collect reviews from students and parents?',
+    answer:
+      'Ask after a good experience, such as results day or course completion, with a direct review link, and reply to every review. Do not offer rewards for reviews or post fake ones: Google’s policies prohibit incentivised and fake reviews.',
+  },
+  {
+    question: 'Do you work with institutions outside Madurai?',
+    answer:
+      'Yes. We work with institutions across Tamil Nadu and in Malaysia, from our offices in Madurai, Thoothukudi and Rawang (Selangor), with meetings online or in person.',
   },
 ]
 
@@ -534,7 +549,7 @@ export default function EducationTraining() {
         <div className="container">
           <div className="section-heading">
             <span className="section-heading__eyebrow">The Student Journey</span>
-            <h2 className="section-heading__title">Education Decisions Start Online</h2>
+            <h2 className="section-heading__title">Where Do Students and Parents Start Their Search?</h2>
           </div>
 
           <ScrollReveal>
@@ -575,7 +590,7 @@ export default function EducationTraining() {
         <div className="container">
           <div className="section-heading">
             <span className="section-heading__eyebrow">Our Services</span>
-            <h2 className="section-heading__title">How We Help Education &amp; Training Businesses</h2>
+            <h2 className="section-heading__title">How Can We Help Your Institution Get More Admission Enquiries?</h2>
           </div>
           <ScrollReveal>
             <p className="edu-services__intro">
@@ -644,7 +659,7 @@ export default function EducationTraining() {
         <div className="container">
           <div className="section-heading">
             <span className="section-heading__eyebrow">Search + AI</span>
-            <h2 className="section-heading__title">Be Visible Where Students and Parents Are Searching</h2>
+            <h2 className="section-heading__title">Where Are Students and Parents Searching?</h2>
           </div>
           <ScrollReveal>
             <p className="edu-ai__intro">

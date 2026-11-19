@@ -551,7 +551,7 @@ export default function SEO_Madurai() {
           <ScrollReveal>
             <div className="section-heading section-heading--left">
               <span className="section-heading__eyebrow">SEO Results</span>
-              <h2 className="section-heading__title">SEO That Moves the Needle for Madurai Businesses</h2>
+              <h2 className="section-heading__title">How Does SEO Help Madurai Businesses Get More Enquiries?</h2>
               <p className="section-heading__subtitle">
                 Ranking is not simply a vanity metric. The objective is to connect your business
                 with people who are actively searching for relevant products or services.
@@ -586,7 +586,7 @@ export default function SEO_Madurai() {
           <ScrollReveal>
             <div className="section-heading section-heading--left">
               <span className="section-heading__eyebrow">Services</span>
-              <h2 className="section-heading__title">What Our SEO Service Includes</h2>
+              <h2 className="section-heading__title">What Does Our SEO Service Include?</h2>
             </div>
           </ScrollReveal>
           <div className="seo-mdu-services-grid">
@@ -609,7 +609,7 @@ export default function SEO_Madurai() {
           <ScrollReveal>
             <div className="section-heading section-heading--left">
               <span className="section-heading__eyebrow">Technical SEO</span>
-              <h2 className="section-heading__title">Technical SEO for Madurai Websites</h2>
+              <h2 className="section-heading__title">What Does Technical SEO Fix on a Madurai Website?</h2>
               <p className="section-heading__subtitle">
                 A strong technical foundation is essential before expecting organic performance.
                 We analyze and optimize the technical aspects of your website to ensure search
@@ -636,7 +636,7 @@ export default function SEO_Madurai() {
           <ScrollReveal>
             <div className="section-heading section-heading--left">
               <span className="section-heading__eyebrow">Keywords</span>
-              <h2 className="section-heading__title">Keyword Research for Madurai Businesses</h2>
+              <h2 className="section-heading__title">Which Keywords Should a Madurai Business Target?</h2>
               <p className="section-heading__subtitle">
                 Keyword research maps the complete buying journey from awareness to commercial
                 intent. We select keywords based on search intent, relevance, competition

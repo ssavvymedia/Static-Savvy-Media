@@ -60,7 +60,7 @@ const MY_HOW = [
   { title: 'WhatsApp is the enquiry channel', text: 'Most Malaysian customers would rather send a WhatsApp message than fill a form. Every page and ad we build starts a WhatsApp chat in one tap, with tracking so you can see which source each enquiry came from.' },
   { title: 'AI assistants are the new shortlist', text: 'Buyers now ask ChatGPT, Perplexity and Google AI Overviews which agency, clinic or supplier to use. Answer-first pages, FAQs, schema and consistent business details across Malaysian directories help you get cited.' },
   { title: 'MYR quotes, Malaysian hours, your accounts', text: 'Quotes and invoices are in MYR, calls are on a Malaysian number during Malaysian working hours, and your Google Business Profile, Search Console, Analytics and ad accounts stay in your business name.' },
-  { title: 'Backed by our Madurai HQ', text: 'Static Savvy Media was founded in Madurai, India, in 2021. Our Malaysia clients get the same specialists in SEO, AI search and Google Ads that serve our head-office market, rated 4.9★ from 106 Google reviews (November 2026).' },
+  { title: 'Backed by our Madurai HQ', text: 'Static Savvy Media was founded in Madurai, India, in 2021. Our Malaysia clients get the same specialists in SEO, AI search and Google Ads that serve our head-office market, rated 4.9★ from 106 Google reviews (November 2026). Our Rawang office profile is rated 5.0★ from 1 Google review.' },
 ]
 
 const GRANTS = [

@@ -36,7 +36,7 @@ const HERO_TITLE =
   'Digital Marketing for Real Estate & Property Developers, Generate Quality Enquiries Online'
 
 const HERO_PARAGRAPH =
-  'Real estate is one of the highest-stakes digital marketing categories in India. Buyers research extensively before enquiring, competition is intense, and the value of a single converted enquiry is substantial. A well-executed digital marketing strategy can help property developers build visibility, attract high-intent prospects and convert property interest into enquiries.'
+  'Digital marketing for real estate turns property searches into qualified site-visit enquiries. Static Savvy Media helps builders, developers and agents with project landing pages, Google Ads, Meta lead ads, Local SEO, Google Maps visibility and WhatsApp follow-up, so buyers comparing projects online find yours, trust it and enquire. We focus on enquiry quality, not just volume.'
 
 const SERVICES = [
   {
@@ -125,6 +125,21 @@ const FAQS = [
     question: 'How can I use WhatsApp for real estate lead nurturing?',
     answer:
       'WhatsApp can support structured lead follow-up. A sequence can include initial enquiry acknowledgement, project brochure delivery, floor plan sharing, project information, site visit scheduling, and follow-up messages. Where appropriate, parts of this process can be automated to reduce manual follow-up.',
+  },
+  {
+    question: 'How soon can a property project start getting enquiries online?',
+    answer:
+      'Paid campaigns on Google and Meta can start bringing enquiries soon after launch, once the landing page and tracking are ready. SEO and Google Maps visibility build more slowly, over months, but keep working without paying per click.',
+  },
+  {
+    question: 'Do I need a separate landing page for each project?',
+    answer:
+      'Yes, we recommend it. A page per project with location, configuration, amenities, approvals such as RERA where applicable, photos and a WhatsApp button converts better than sending ad traffic to a general home page, and makes tracking each project easier.',
+  },
+  {
+    question: 'Can SEO help a builder or real estate agent?',
+    answer:
+      'Yes. Buyers search by locality, project type and builder name. Project and locality pages, a well-maintained Google Business Profile for your sales office, reviews and clear schema help you appear for those searches on Google, Maps and AI answers.',
   },
 ]
 
@@ -510,7 +525,7 @@ export default function RealEstateBuilders() {
         <div className="container">
           <div className="section-heading">
             <span className="section-heading__eyebrow">Property Buyers</span>
-            <h2 className="section-heading__title">Property Buyers Research Before They Enquire</h2>
+            <h2 className="section-heading__title">How Do Property Buyers Research Before They Enquire?</h2>
           </div>
           <ScrollReveal>
             <div className="re-intro__card glass-card">
@@ -558,7 +573,7 @@ export default function RealEstateBuilders() {
           <div className="section-heading">
             <span className="section-heading__eyebrow">Our Services</span>
             <h2 className="section-heading__title">
-              How We Help Real Estate &amp; Property Developers
+              How Can We Help Builders Get More Site-Visit Enquiries?
             </h2>
           </div>
           <div className="re-services__grid">
@@ -822,7 +837,7 @@ export default function RealEstateBuilders() {
         <div className="container">
           <div className="section-heading">
             <span className="section-heading__eyebrow">Lead Quality</span>
-            <h2 className="section-heading__title">More Enquiries Is Not Always Better</h2>
+            <h2 className="section-heading__title">Are More Enquiries Always Better?</h2>
           </div>
           <ScrollReveal>
             <p className="re-lead-quality__text">
@@ -939,7 +954,7 @@ export default function RealEstateBuilders() {
         <div className="container">
           <div className="section-heading">
             <span className="section-heading__eyebrow">Local SEO</span>
-            <h2 className="section-heading__title">Be Visible When Buyers Search Nearby</h2>
+            <h2 className="section-heading__title">How Do You Show Up When Buyers Search Nearby?</h2>
           </div>
           <ScrollReveal>
             <div className="re-local-seo__card glass-card">
@@ -977,7 +992,7 @@ export default function RealEstateBuilders() {
         <div className="container">
           <div className="section-heading">
             <span className="section-heading__eyebrow">AI Search</span>
-            <h2 className="section-heading__title">Prepare Your Property Business for AI Search</h2>
+            <h2 className="section-heading__title">Is Your Property Business Ready for AI Search?</h2>
           </div>
           <ScrollReveal>
             <p className="re-geo__text">
@@ -1014,7 +1029,7 @@ export default function RealEstateBuilders() {
         <div className="container">
           <div className="section-heading">
             <span className="section-heading__eyebrow">Trust</span>
-            <h2 className="section-heading__title">Real Estate Buyers Need Reasons to Trust You</h2>
+            <h2 className="section-heading__title">Why Should Property Buyers Trust You?</h2>
           </div>
           <ScrollReveal>
             <p className="re-trust__text">

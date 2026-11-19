@@ -37,7 +37,7 @@ const HERO_TITLE =
   'Digital Marketing for Healthcare & Clinics, Be Found When Patients Are Looking'
 
 const HERO_PARAGRAPH =
-  'Patients search online before they visit a clinic. A healthcare practice that is discoverable, credible, and easy to contact wins the enquiry, and the appointment, before a competitor does. Digital marketing for healthcare clinics means controlling that journey from first search to first visit.'
+  'Digital marketing for clinics means making your practice easy to find, trust and contact when patients search on Google, Google Maps or AI tools. Static Savvy Media helps clinics, hospitals and healthcare practices with Local SEO, Google Business Profile, policy-compliant Google Ads, websites and AI search visibility, so more searches turn into calls, WhatsApp messages and booked appointments.'
 
 const SERVICES = [
   {
@@ -146,6 +146,21 @@ const FAQS = [
     question: 'How does AI search affect healthcare marketing?',
     answer:
       'AI search tools like ChatGPT, Perplexity, and Google AI Overviews are increasingly used by patients researching health topics and clinic options. To be visible in these results, your practice needs clear entity signals, authoritative healthcare content, structured information on your website, consistent NAP across directories, and proper schema markup. We do not promise AI will recommend your practice, we ensure the digital signals that AI systems reference are accurate and well-structured.',
+  },
+  {
+    question: 'How can my clinic get more patients from Google Maps?',
+    answer:
+      'Start with a complete, verified Google Business Profile: the right primary category, accurate hours, services, photos and the same name, address and phone as your website. Add a page for each treatment on your website, ask patients for honest reviews and reply to them, and track calls, direction requests and WhatsApp clicks every month.',
+  },
+  {
+    question: 'Can you market my clinic without breaking healthcare advertising rules?',
+    answer:
+      'Yes. We avoid guaranteed outcomes and misleading claims, follow Google Ads healthcare policies, and write copy within the rules of your professional council. You review and approve medical claims before anything goes live.',
+  },
+  {
+    question: 'How do you measure results for a clinic?',
+    answer:
+      'We report calls, WhatsApp clicks, direction requests and form enquiries from Google Business Profile, GA4 and Search Console, plus rankings for your main treatment and location searches, in a plain-English monthly summary.',
   },
 ]
 
@@ -555,7 +570,7 @@ export default function HealthcareClinics() {
         <div className="container">
           <div className="section-heading">
             <span className="section-heading__eyebrow">The Patient Journey</span>
-            <h2 className="section-heading__title">Patients Search Before They Visit</h2>
+            <h2 className="section-heading__title">How Do Patients Choose a Clinic Online?</h2>
           </div>
 
           <ScrollReveal>
@@ -623,7 +638,7 @@ export default function HealthcareClinics() {
         <div className="container">
           <div className="section-heading">
             <span className="section-heading__eyebrow">Our Services</span>
-            <h2 className="section-heading__title">How We Help Healthcare &amp; Clinics Businesses</h2>
+            <h2 className="section-heading__title">How Can We Help Your Clinic Get More Patient Enquiries?</h2>
           </div>
           <ScrollReveal>
             <p className="hc-services__intro">
@@ -670,7 +685,7 @@ export default function HealthcareClinics() {
         <div className="container">
           <div className="section-heading">
             <span className="section-heading__eyebrow">Local SEO</span>
-            <h2 className="section-heading__title">When Patients Search &quot;Near Me&quot;</h2>
+            <h2 className="section-heading__title">How Does Your Clinic Show Up for &quot;Near Me&quot; Searches?</h2>
           </div>
           <ScrollReveal>
             <p className="hc-local__intro">
@@ -786,7 +801,7 @@ export default function HealthcareClinics() {
         <div className="container">
           <div className="section-heading">
             <span className="section-heading__eyebrow">AI Search</span>
-            <h2 className="section-heading__title">Be Visible When Patients Ask AI</h2>
+            <h2 className="section-heading__title">Can Patients Find Your Clinic in AI Search?</h2>
           </div>
           <ScrollReveal>
             <p className="hc-ai__intro">
@@ -889,7 +904,7 @@ export default function HealthcareClinics() {
         <div className="container">
           <div className="section-heading">
             <span className="section-heading__eyebrow">Why Healthcare Is Different</span>
-            <h2 className="section-heading__title">Healthcare Marketing Is Different</h2>
+            <h2 className="section-heading__title">Why Is Healthcare Marketing Different?</h2>
           </div>
           <ScrollReveal>
             <div className="hc-compare__panels">

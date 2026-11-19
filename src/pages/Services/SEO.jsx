@@ -35,13 +35,13 @@ const PAGE_DESCRIPTION =
   'SEO services for businesses across India, Malaysia, Singapore & the UAE: technical SEO, keywords, content and AI search (GEO/AEO), reported monthly from GSC.'
 
 const HERO_SUBTITLE =
-  'Ranking on page one of Google is not a vanity metric. It is the difference between a steady stream of inbound enquiries and spending every month chasing cold leads. Our SEO service is built around one outcome: getting your business in front of the right people at the exact moment they are ready to buy.'
+  'SEO services get your business found on Google, Google Maps and AI answers when buyers search for what you sell. Static Savvy Media runs SEO for businesses in India, Malaysia, Singapore and the UAE: technical fixes, keyword research, on-page optimisation, content, link building and GEO/AEO for AI search. Every month you get a plain-English report from your own Search Console and GA4.'
 
 const SERVICE_FEATURES = [
   {
     number: '01',
     title: 'Technical SEO Audit & Foundation',
-    text: 'Before any content or links, the technical foundation must be right. We audit your site for crawlability issues, Core Web Vitals performance, indexability errors, duplicate content, broken links, and missing or incorrect schema markup. Most websites we audit have 15–30 fixable issues actively suppressing rankings. We fix them before anything else.',
+    text: 'Before any content or links, the technical foundation must be right. We audit your site for crawlability issues, Core Web Vitals performance, indexability errors, duplicate content, broken links, and missing or incorrect schema markup. Most sites we audit have several fixable technical and content issues holding rankings back. We fix them before anything else.',
   },
   {
     number: '02',
@@ -128,6 +128,11 @@ const FAQS = [
     question: 'How is your SEO different from other SEO agencies?',
     answer:
       'We integrate GEO and AEO into every SEO engagement, optimising not just for Google’s blue links but for AI Overviews and AI search engines. Many agencies still run 2019-era SEO strategies. We build for where search is going in 2026 and beyond, and report from your own Search Console and GA4.',
+  },
+  {
+    question: 'How much do SEO services cost?',
+    answer:
+      'It depends on your market, competition, number of locations and how much technical and content work your site needs. We do not publish fixed packages; we quote after a free growth audit, on monthly plans with no lock-in.',
   },
 ]
 
@@ -339,7 +344,7 @@ export default function SEO() {
         <div className="container">
           <div className="section-heading">
             <span className="section-heading__eyebrow">What We Deliver</span>
-            <h2 className="section-heading__title">What Our SEO Service Includes</h2>
+            <h2 className="section-heading__title">What Does Our SEO Service Include?</h2>
           </div>
           <div className="service-features__grid">
             {SERVICE_FEATURES.map((feature, index) => {
@@ -379,7 +384,7 @@ export default function SEO() {
       {/* ---- Our SEO Process ---- */}
       <ProcessSection
         eyebrow="Process"
-        title="Our SEO Process"
+        title="How Does Our SEO Process Work?"
         steps={PROCESS_STEPS}
       />
 
