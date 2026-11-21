@@ -225,6 +225,51 @@ const LOCATIONS = [
     path: '/locations/petaling-jaya/',
     icon: 'malaysia',
   },
+  {
+    number: '19',
+    name: 'Theni',
+    badge: 'Near Madurai HQ',
+    description: 'Google Maps for Theni town, and pages for cardamom, Cumbum produce and hill-season stays. No Theni office.',
+    services: ['GBP and local SEO', 'Farm and stay pages', 'Seasonal campaigns'],
+    path: '/locations/theni/',
+    icon: 'pin',
+  },
+  {
+    number: '20',
+    name: 'Virudhunagar',
+    badge: 'Near Madurai HQ',
+    description: 'Maps and websites for Virudhunagar traders, mills and schools. Printing stays on the Sivakasi page.',
+    services: ['GBP and local SEO', 'Trade pages', 'Tamil and English'],
+    path: '/locations/virudhunagar/',
+    icon: 'pin',
+  },
+  {
+    number: '21',
+    name: 'Karaikudi',
+    badge: 'Remote · Madurai HQ',
+    description: 'Hotels, Chettinad restaurants, Athangudi tiles and colleges. Visits from Madurai by appointment.',
+    services: ['GBP and reviews', 'Stay and menu pages', 'Catalogues'],
+    path: '/locations/karaikudi/',
+    icon: 'pin',
+  },
+  {
+    number: '22',
+    name: 'Ramanathapuram',
+    badge: 'Remote · Madurai HQ',
+    description: 'Rameswaram pilgrim hotels and travel pages, plus Maps for Ramanathapuram town. No invented address.',
+    services: ['Hotel and travel pages', 'GBP per premises', 'Tamil and English'],
+    path: '/locations/ramanathapuram/',
+    icon: 'pin',
+  },
+  {
+    number: '23',
+    name: 'Erode',
+    badge: 'Remote · Madurai HQ',
+    description: 'Turmeric, powerloom and oil pages, plus town Maps. Knitwear stays on the Tiruppur page.',
+    services: ['B2B product pages', 'GBP and local SEO', 'Enquiry tracking'],
+    path: '/locations/erode/',
+    icon: 'pin',
+  },
 ]
 
 const FAQS = [
@@ -241,7 +286,7 @@ const FAQS = [
   {
     question: 'Do you serve clients outside your office locations?',
     answer:
-      'Yes. Besides Madurai, Thoothukudi and Rawang, we work with businesses across Tamil Nadu (Chennai, Coimbatore, Trichy, Tirunelveli, Salem and more), elsewhere in India, across Malaysia, and in Singapore and Dubai. Most SEO, Google Maps, ads and website work is delivered remotely by video call and WhatsApp, with in-person meetings by appointment where we have an office.',
+      'Yes. Besides Madurai, Thoothukudi and Rawang, we work with businesses across Tamil Nadu, including Chennai, Coimbatore, Trichy, Salem, Erode, Tiruppur, Dindigul, Theni, Karaikudi, Virudhunagar, Sivakasi, Ramanathapuram and Tirunelveli, plus Malaysia, Singapore and Dubai. Each city has its own page. We do not publish an office address in a city where we have no office. Most work is by video call and WhatsApp, with in-person meetings by appointment where we have an office.',
   },
 ]
 

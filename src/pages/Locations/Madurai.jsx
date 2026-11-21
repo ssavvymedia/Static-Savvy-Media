@@ -11,6 +11,7 @@ import { ScrollReveal } from '../../components/animations/ScrollReveal.jsx'
 import { setSeo } from '../../utils/seo.js'
 import {
   organizationSchema,
+  serviceSchema,
   faqPageSchema,
   breadcrumbListSchema,
 } from '../../utils/schema.js'
@@ -30,10 +31,10 @@ import maduraiHeroSm from '../../assets/images/locations/01Madurai-640.webp'
    ============================================================ */
 
 const PAGE_TITLE =
-  'SEO Agency in Madurai | Local SEO & AI Search | Static Savvy Media'
+  'Digital Marketing Company in Madurai | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
-  'Madurai SEO agency for Local SEO, Google Business Profile, websites and AI search (GEO/AEO). 4.9★ from 106 reviews. Free growth audit. WhatsApp +91 99440 40345.'
+  'Static Savvy Media is a digital marketing company headquartered in Madurai. SEO, Local SEO, websites and AI search from Kamarajar Salai. 4.9★ from 106 reviews. Custom quotes. WhatsApp +91 99440 40345.'
 
 const HERO_EYEBROW = 'Madurai • Static Savvy Media HQ'
 
@@ -214,9 +215,16 @@ const MADURAI_MARKET_RANGES = [
 ]
 
 const OTHER_LOCATIONS = [
-  { name: 'Thoothukudi', path: '/locations/thoothukudi/' },
-  { name: 'Malaysia', path: '/locations/malaysia/' },
   { name: 'Tamil Nadu', path: '/locations/tamil-nadu/' },
+  { name: 'Dindigul', path: '/locations/dindigul/' },
+  { name: 'Theni', path: '/locations/theni/' },
+  { name: 'Sivakasi', path: '/locations/sivakasi/' },
+  { name: 'Virudhunagar', path: '/locations/virudhunagar/' },
+  { name: 'Karaikudi', path: '/locations/karaikudi/' },
+  { name: 'Ramanathapuram', path: '/locations/ramanathapuram/' },
+  { name: 'Thoothukudi', path: '/locations/thoothukudi/' },
+  { name: 'Trichy', path: '/locations/trichy/' },
+  { name: 'Malaysia', path: '/locations/malaysia/' },
   { name: 'All Locations', path: '/locations/' },
 ]
 
@@ -242,6 +250,14 @@ export default function Madurai() {
       schema: schemaGraph(
         organizationSchema(),
         officeLocalBusiness('madurai', { includeRating: true }),
+        serviceSchema({
+          name: 'Digital marketing in Madurai',
+          serviceType: 'Digital marketing',
+          description: PAGE_DESCRIPTION,
+          url: `${SITE_URL}/locations/madurai/`,
+          areaServed: 'Madurai, Tamil Nadu',
+          provider: { '@id': `${SITE_URL}/#organization` },
+        }),
         faqPageSchema(FAQS),
         breadcrumbs,
       ),
@@ -298,7 +314,7 @@ export default function Madurai() {
       <section className="section madurai-quick">
         <div className="container">
           <div className="glass-card" style={{ padding: '2rem' }}>
-            <h2 className="section-heading__title">Our Madurai HQ at a glance</h2>
+            <h2 className="section-heading__title">Who is Static Savvy Media in Madurai?</h2>
             <p>{QUICK_ANSWER}</p>
             <dl style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1rem', marginTop: '1.5rem' }}>
               {QUICK_FACTS.map((f) => (
@@ -325,7 +341,7 @@ export default function Madurai() {
         <div className="container">
           <div className="section-heading">
             <span className="section-heading__eyebrow">How It Works</span>
-            <h2 className="section-heading__title">How We Work With Madurai Businesses</h2>
+            <h2 className="section-heading__title">How do we work with Madurai businesses?</h2>
           </div>
           <ol style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1rem', listStyle: 'none', padding: 0 }}>
             {HOW_WE_WORK.map((step) => (
@@ -347,7 +363,7 @@ export default function Madurai() {
         <div className="container">
           <div className="section-heading">
             <span className="section-heading__eyebrow">What We Deliver</span>
-            <h2 className="section-heading__title">Digital Marketing Services in Madurai</h2>
+            <h2 className="section-heading__title">What digital marketing services do we offer in Madurai?</h2>
             <p className="section-heading__subtitle">
               This page covers our Madurai office and local team. For an overview of Static Savvy Media as a{' '}
               <Link to="/">digital marketing company in Madurai</Link>, visit our homepage.
@@ -477,7 +493,7 @@ export default function Madurai() {
         <div className="container">
           <div className="section-heading">
             <span className="section-heading__eyebrow">Industries</span>
-            <h2 className="section-heading__title">Industries We Serve in Madurai</h2>
+            <h2 className="section-heading__title">Which Madurai industries do we work with?</h2>
           </div>
           <div className="madurai-industries__grid">
             {INDUSTRIES.map((industry, index) => (
@@ -600,7 +616,7 @@ export default function Madurai() {
         <div className="container">
           <div className="section-heading section-heading--left">
             <span className="section-heading__eyebrow">Areas served</span>
-            <h2 className="section-heading__title" id="madurai-areas-title">Madurai Areas We Serve From Kamarajar Salai</h2>
+            <h2 className="section-heading__title" id="madurai-areas-title">Which Madurai areas do we serve from Kamarajar Salai?</h2>
             <p className="section-heading__subtitle">
               Our Madurai office works with businesses across the city and district. Most clients never need to visit: updates come on WhatsApp and a monthly call, and in-person meetings at our office are by appointment.
             </p>

@@ -1860,6 +1860,31 @@
       "statusCode": 308
     },
     {
+      "source": "/locations/theni",
+      "destination": "/locations/theni/",
+      "statusCode": 308
+    },
+    {
+      "source": "/locations/virudhunagar",
+      "destination": "/locations/virudhunagar/",
+      "statusCode": 308
+    },
+    {
+      "source": "/locations/karaikudi",
+      "destination": "/locations/karaikudi/",
+      "statusCode": 308
+    },
+    {
+      "source": "/locations/ramanathapuram",
+      "destination": "/locations/ramanathapuram/",
+      "statusCode": 308
+    },
+    {
+      "source": "/locations/erode",
+      "destination": "/locations/erode/",
+      "statusCode": 308
+    },
+    {
       "source": "/locations/shah-alam",
       "destination": "/locations/shah-alam/",
       "statusCode": 308
@@ -2383,6 +2408,26 @@
     },
     {
       "source": "/locations/sivakasi/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/locations/theni/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/locations/virudhunagar/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/locations/karaikudi/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/locations/ramanathapuram/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/locations/erode/",
       "destination": "/index.html"
     },
     {

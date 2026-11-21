@@ -12,6 +12,7 @@ import { ScrollReveal } from '../components/animations/ScrollReveal.jsx'
 import { setSeo } from '../utils/seo.js'
 import { faqPageSchema, breadcrumbListSchema } from '../utils/schema.js'
 import { officeLocalBusiness, schemaGraph } from '../data/officeSchema.js'
+import { founderPerson } from '../data/founder.js'
 import { buildWhatsAppLink } from '../utils/helpers.js'
 import { SITE_URL } from '../utils/constants.js'
 import { ORG_SAME_AS, GBP_MAPS } from '../data/sameAs.js'
@@ -42,6 +43,11 @@ export default function CityLandingTemplate({ city }) {
 
   useEffect(() => {
     const area = { '@type': city.areaType, name: city.name, ...(city.containedIn ? { containedInPlace: { '@type': city.containedIn === 'Tamil Nadu' ? 'State' : 'Country', name: city.containedIn } } : {}) }
+    /* The serving business keeps its real office address. The city is only areaServed, so a
+     * Theni or Dubai page never invents a local street address. */
+    const officeKey = city.office && city.office !== 'org' ? city.office : 'madurai'
+    const includeRating = city.slug === 'rawang'
+    const office = officeLocalBusiness(officeKey, { includeRating })
     const service = {
       '@type': 'Service',
       '@id': `${pageUrl}#service`,
@@ -49,25 +55,21 @@ export default function CityLandingTemplate({ city }) {
       serviceType: 'Digital marketing',
       url: pageUrl,
       areaServed: area,
-      provider: { '@id': `${SITE_URL}/#organization` },
+      provider: { '@id': office?.['@id'] || `${SITE_URL}/#organization` },
     }
-    const org = { '@type': 'Organization', '@id': `${SITE_URL}/#organization`, name: 'Static Savvy Media', url: `${SITE_URL}/`, telephone: '+91 99440 40345', email: 'info@staticsavvymedia.com', sameAs: ORG_SAME_AS, foundingDate: '2021-10-01' }
+    const org = { '@type': 'Organization', '@id': `${SITE_URL}/#organization`, name: 'Static Savvy Media', url: `${SITE_URL}/`, telephone: '+91 99440 40345', email: 'info@staticsavvymedia.com', sameAs: ORG_SAME_AS, foundingDate: '2021-10-01', founder: { '@id': `${SITE_URL}/about/deepan-kanz/#person` } }
     const faq = faqPageSchema(city.faqs)
     const crumbs = breadcrumbListSchema([
       { name: 'Home', item: '/' },
       { name: 'Locations', item: '/locations/' },
       { name: city.name, item: path },
     ])
-    const includeRating = city.slug === 'rawang'
-    const office = city.office && city.office !== 'org'
-      ? officeLocalBusiness(city.office, { includeRating })
-      : null
     setSeo({
       title: city.title,
       description: city.description,
       canonical: pageUrl,
       ogImage: `${SITE_URL}${networkImg}`,
-      schema: schemaGraph(service, office, org, faq, crumbs),
+      schema: schemaGraph(service, office, org, founderPerson(SITE_URL), faq, crumbs),
     })
   }, [city, path, pageUrl])
 

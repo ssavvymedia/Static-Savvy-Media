@@ -677,15 +677,15 @@ export const seoConfig = {
   },
   "/locations/madurai": {
     title:
-      "SEO Agency in Madurai | Local SEO & AI Search | Static Savvy Media",
+      "Digital Marketing Company in Madurai | Static Savvy Media",
     slug: "locations/madurai",
     seo: {
       title:
-        "SEO Agency in Madurai | Local SEO & AI Search | Static Savvy Media",
+        "Digital Marketing Company in Madurai | Static Savvy Media",
       description:
-        "Madurai SEO agency for Local SEO, Google Business Profile, websites and AI search (GEO/AEO). 4.9★ from 106 reviews. Free growth audit. WhatsApp +91 99440 40345.",
+        "Static Savvy Media is a digital marketing company headquartered in Madurai. SEO, Local SEO, websites and AI search from Kamarajar Salai. 4.9★ from 106 reviews. Custom quotes. WhatsApp +91 99440 40345.",
       canonical: `${BASE_URL}/locations/madurai`,
-      focusKeyword: "digital marketing agency Madurai",
+      focusKeyword: "digital marketing company in Madurai",
       ogTitle: "Digital Marketing Company in Madurai | Static Savvy Media",
       ogDescription:
         "Headquartered in Madurai, Static Savvy Media delivers full-service SEO, GEO/AEO, and Google Ads.",

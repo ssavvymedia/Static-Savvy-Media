@@ -11,6 +11,7 @@ import { AuditBlock } from '../components/v2/V2Blocks.jsx'
 import { ScrollReveal } from '../components/animations/ScrollReveal.jsx'
 import { setSeo } from '../utils/seo.js'
 import { faqPageSchema, breadcrumbListSchema } from '../utils/schema.js'
+import { officeLocalBusiness, schemaGraph } from '../data/officeSchema.js'
 import { buildWhatsAppLink } from '../utils/helpers.js'
 import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, SITE_URL } from '../utils/constants.js'
 import '../styles/pages/seo-madurai.css'
@@ -26,6 +27,14 @@ import '../styles/pages/seo-madurai.css'
  *            quote?: QuoteCTA props ({ region, service, text }), shown instead of public prices }
  */
 /* Last path segment as a city name (e.g. /services/seo/kuala-lumpur/ -> "Kuala Lumpur"). */
+/* Real office behind a service page. Address stays on that office; the page URL is the service. */
+const officeKeyFor = (path = '') => {
+  if (/malaysia|kuala-lumpur|rawang|shah-alam|petaling-jaya|selangor/.test(path)) return 'malaysia'
+  if (path.includes('thoothukudi')) return 'thoothukudi'
+  if (/madurai|tamil-nadu/.test(path)) return 'madurai'
+  return null
+}
+
 const cityFromPath = (path = '') => {
   const seg = path.split('/').filter(Boolean).pop() || ''
   return seg.split('-').map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')
@@ -44,11 +53,12 @@ export default function LocalServicePage({ content }) {
       canonical: url,
       ogImage: content.ogImage ? `${SITE_URL}${content.ogImage}` : undefined,
       ogType: 'website',
-      schema: [
+      schema: schemaGraph(
         ...(content.schema || []),
+        officeKeyFor(content.path) ? officeLocalBusiness(officeKeyFor(content.path)) : null,
         faqPageSchema(content.faqs),
         breadcrumbListSchema(content.crumbs),
-      ],
+      ),
     })
   }, [content, url])
 

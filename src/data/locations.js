@@ -19,7 +19,12 @@ export const locationGroups = [
       { slug: 'tiruppur', name: 'Tiruppur', path: '/locations/tiruppur/' },
       { slug: 'thoothukudi', name: 'Thoothukudi', path: '/locations/thoothukudi/' },
       { slug: 'dindigul', name: 'Dindigul', path: '/locations/dindigul/' },
+      { slug: 'theni', name: 'Theni', path: '/locations/theni/' },
       { slug: 'sivakasi', name: 'Sivakasi', path: '/locations/sivakasi/' },
+      { slug: 'virudhunagar', name: 'Virudhunagar', path: '/locations/virudhunagar/' },
+      { slug: 'karaikudi', name: 'Karaikudi', path: '/locations/karaikudi/' },
+      { slug: 'ramanathapuram', name: 'Ramanathapuram', path: '/locations/ramanathapuram/' },
+      { slug: 'erode', name: 'Erode', path: '/locations/erode/' },
     ],
   },
   {

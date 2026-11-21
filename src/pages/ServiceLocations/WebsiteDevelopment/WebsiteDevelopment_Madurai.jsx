@@ -44,7 +44,7 @@ const content = {
   sections: [
     {
       eyebrow: 'Services',
-      heading: 'Website Development Services in Madurai',
+      heading: 'What website services do we build in Madurai?',
       kind: 'cards',
       items: [
         { title: 'Business Websites', text: 'Service, about, location and contact pages written around what your Madurai customers actually search for, with clear calls to action on every page.' },
@@ -57,7 +57,7 @@ const content = {
     },
     {
       eyebrow: 'Packages',
-      heading: 'Website Packages in Madurai',
+      heading: 'How do we quote a website in Madurai?',
       subtitle: 'Every website is quoted for your project. You get a written quote after a short discovery call, and you own the finished site.',
       kind: 'cards',
       items: [
@@ -68,7 +68,7 @@ const content = {
     },
     {
       eyebrow: 'Industries',
-      heading: 'Websites Built Around How Madurai Customers Buy',
+      heading: 'Which Madurai businesses do we build websites for?',
       kind: 'cards',
       items: [
         { title: 'Textiles, Sarees & Handloom', text: 'Product catalogues with clear photos, price ranges and WhatsApp ordering, plus pages that can rank for searches beyond Madurai.', link: { to: '/industries/textiles-madurai/', label: 'Digital marketing for textiles' } },
@@ -81,7 +81,7 @@ const content = {
     },
     {
       eyebrow: 'Process',
-      heading: 'How We Build Your Website',
+      heading: 'How do we build a website for a Madurai business?',
       kind: 'numbered',
       items: [
         { title: 'Discovery', text: 'We look at your business, competitors in Madurai and the keywords your customers use.' },
@@ -94,7 +94,7 @@ const content = {
     },
     {
       eyebrow: 'Included',
-      heading: 'What Every Website Includes',
+      heading: 'What does every Madurai website include?',
       kind: 'checks',
       items: [
         'Mobile-responsive design',
@@ -123,7 +123,10 @@ const content = {
     { name: 'SEO Company in Madurai', path: '/services/seo/madurai/' },
     { name: 'Local SEO Services in Madurai', path: '/services/local-seo/madurai/' },
     { name: 'Social Media Marketing in Madurai', path: '/services/social-media-marketing/madurai/' },
-    { name: 'Digital Marketing in Madurai', path: '/locations/madurai/' },
+    { name: 'Digital Marketing Company in Madurai', path: '/locations/madurai/' },
+    { name: 'Dindigul', path: '/locations/dindigul/' },
+    { name: 'Theni', path: '/locations/theni/' },
+    { name: 'Tamil Nadu', path: '/locations/tamil-nadu/' },
     { name: 'Best Web Hosting: Top 5 Compared', path: '/blog/best-web-hosting-india-malaysia-small-business/' },
     { name: 'Contact', path: '/contact/' },
   ],
@@ -148,11 +151,13 @@ const content = {
   },
   schema: [
     serviceSchema({
+      '@id': `${SITE_URL}${PATH}#service`,
       name: 'Website Design & Development in Madurai',
       serviceType: 'Website design and development',
       description: DESCRIPTION,
       url: `${SITE_URL}${PATH}`,
-      areaServed: 'Madurai, Tamil Nadu',
+      areaServed: { '@type': 'City', name: 'Madurai', containedInPlace: { '@type': 'State', name: 'Tamil Nadu' } },
+      provider: { '@id': `${SITE_URL}/locations/madurai/#localbusiness` },
     }),
   ],
 }

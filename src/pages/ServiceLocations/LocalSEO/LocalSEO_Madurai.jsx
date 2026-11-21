@@ -12,6 +12,7 @@ import {
   faqPageSchema,
   breadcrumbListSchema,
 } from '../../../utils/schema.js'
+import { officeLocalBusiness, schemaGraph } from '../../../data/officeSchema.js'
 import { buildWhatsAppLink } from '../../../utils/helpers.js'
 import {
   WHATSAPP_NUMBER,
@@ -219,8 +220,11 @@ const RELATED_SERVICES = [
   { name: 'SEO Company in Madurai', path: '/services/seo/madurai/' },
   { name: 'Google Ads', path: '/services/google-ads/' },
   { name: 'GEO & AEO', path: '/services/geo-aeo-ai-search/' },
-  { name: 'Website Design & Development', path: '/services/website-design-development/' },
-  { name: 'Social Media Marketing', path: '/services/social-media-marketing/' },
+  { name: 'Website Design in Madurai', path: '/services/website-design-development/madurai/' },
+  { name: 'Nearby: Dindigul', path: '/locations/dindigul/' },
+  { name: 'Nearby: Theni', path: '/locations/theni/' },
+  { name: 'Nearby: Sivakasi', path: '/locations/sivakasi/' },
+  { name: 'Tamil Nadu', path: '/locations/tamil-nadu/' },
   { name: 'AI Business Automation', path: '/services/ai-business-automation/' },
 ]
 
@@ -292,14 +296,17 @@ export default function LocalSEO_Madurai() {
       description: PAGE_DESCRIPTION,
       canonical: `${SITE_URL}/services/local-seo/madurai/`,
       ogType: 'website',
-      schema: [
+      schema: schemaGraph(
         serviceSchema({
-          name: 'Local SEO Services, Madurai',
+          '@id': `${SITE_URL}/services/local-seo/madurai/#service`,
+          name: 'Local SEO and Google Business Profile optimisation in Madurai',
+          serviceType: 'Local SEO',
           description: PAGE_DESCRIPTION,
           url: `${SITE_URL}/services/local-seo/madurai/`,
-          areaServed: 'Madurai, Tamil Nadu',
-          provider: 'Static Savvy Media',
+          areaServed: { '@type': 'City', name: 'Madurai', containedInPlace: { '@type': 'State', name: 'Tamil Nadu' } },
+          provider: { '@id': `${SITE_URL}/locations/madurai/#localbusiness` },
         }),
+        officeLocalBusiness('madurai'),
         faqPageSchema(FAQS),
         breadcrumbListSchema([
           { name: 'Home', url: SITE_URL },
@@ -307,7 +314,7 @@ export default function LocalSEO_Madurai() {
           { name: 'Local SEO', url: `${SITE_URL}/services/local-seo/` },
           { name: 'Madurai', url: `${SITE_URL}/services/local-seo/madurai/` },
         ]),
-      ],
+      ),
     })
   }, [])
 
@@ -365,7 +372,7 @@ export default function LocalSEO_Madurai() {
           <ScrollReveal>
             <div className="section-heading section-heading--left">
               <span className="section-heading__eyebrow">Why Local SEO</span>
-              <h2 className="section-heading__title">Why Local SEO Matters for Madurai Businesses</h2>
+              <h2 className="section-heading__title">Why does local SEO matter for Madurai businesses?</h2>
               <p className="section-heading__subtitle">
                 Customers increasingly search with local intent, "near me," "in Madurai,"
                 "best [service] Madurai." When customers search for a business near them,
@@ -384,7 +391,7 @@ export default function LocalSEO_Madurai() {
           <ScrollReveal>
             <div className="section-heading section-heading--left">
               <span className="section-heading__eyebrow">Services</span>
-              <h2 className="section-heading__title">What Local SEO Covers</h2>
+              <h2 className="section-heading__title">What does local SEO in Madurai cover?</h2>
             </div>
           </ScrollReveal>
           <div className="lseo-services-grid">
@@ -407,7 +414,7 @@ export default function LocalSEO_Madurai() {
           <ScrollReveal>
             <div className="section-heading section-heading--left">
               <span className="section-heading__eyebrow">GBP</span>
-              <h2 className="section-heading__title">Google Business Profile Optimization for Madurai</h2>
+              <h2 className="section-heading__title">How do we optimise a Google Business Profile in Madurai?</h2>
               <p className="section-heading__subtitle">
                 Your Google Business Profile is a critical local-search asset. Optimizing your
                 GBP ensures potential customers find accurate, complete information when
@@ -434,7 +441,7 @@ export default function LocalSEO_Madurai() {
           <ScrollReveal>
             <div className="section-heading section-heading--left">
               <span className="section-heading__eyebrow">NAP</span>
-              <h2 className="section-heading__title">NAP Consistency, Name, Address & Phone</h2>
+              <h2 className="section-heading__title">Why must your Madurai name, address and phone match everywhere?</h2>
               <p className="section-heading__subtitle">
                 Your business Name, Address and Phone information should be consistent across
                 your website, Google Business Profile and relevant directories. Inconsistent
@@ -461,7 +468,7 @@ export default function LocalSEO_Madurai() {
           <ScrollReveal>
             <div className="section-heading section-heading--left">
               <span className="section-heading__eyebrow">Citations</span>
-              <h2 className="section-heading__title">Local Citations for Madurai Businesses</h2>
+              <h2 className="section-heading__title">Which citations matter for a Madurai business?</h2>
               <p className="section-heading__subtitle">
                 Relevant citations reinforce business credibility and location signals.
                 Consistent mentions of your business name, address and phone number across
@@ -478,7 +485,7 @@ export default function LocalSEO_Madurai() {
           <ScrollReveal>
             <div className="section-heading section-heading--left">
               <span className="section-heading__eyebrow">Reviews</span>
-              <h2 className="section-heading__title">Reviews & Reputation for Local Search</h2>
+              <h2 className="section-heading__title">How do reviews affect Google Maps rankings in Madurai?</h2>
               <p className="section-heading__subtitle">
                 Reviews contribute to customer trust and local search visibility. A systematic
                 approach to requesting and responding to reviews helps build your online
@@ -514,7 +521,7 @@ export default function LocalSEO_Madurai() {
           <ScrollReveal>
             <div className="section-heading section-heading--left">
               <span className="section-heading__eyebrow">Industries</span>
-              <h2 className="section-heading__title">Local SEO for Different Madurai Businesses</h2>
+              <h2 className="section-heading__title">How does local SEO differ by Madurai business type?</h2>
             </div>
           </ScrollReveal>
           <div className="lseo-industry-grid">
@@ -536,7 +543,7 @@ export default function LocalSEO_Madurai() {
           <ScrollReveal>
             <div className="section-heading section-heading--left">
               <span className="section-heading__eyebrow">Process</span>
-              <h2 className="section-heading__title">Our Local SEO Process for Madurai</h2>
+              <h2 className="section-heading__title">What is our local SEO process in Madurai?</h2>
             </div>
           </ScrollReveal>
           <div className="lseo-process-grid">
@@ -559,7 +566,7 @@ export default function LocalSEO_Madurai() {
           <ScrollReveal>
             <div className="section-heading section-heading--left">
               <span className="section-heading__eyebrow">Comparison</span>
-              <h2 className="section-heading__title">Local SEO vs Traditional SEO</h2>
+              <h2 className="section-heading__title">How is local SEO different from website SEO?</h2>
               <p className="section-heading__subtitle">
                 Most local businesses benefit from both Local SEO and traditional SEO.
                 Local SEO specifically targets location-based search intent while
@@ -663,7 +670,7 @@ export default function LocalSEO_Madurai() {
           <ScrollReveal>
             <div className="section-heading section-heading--left">
               <span className="section-heading__eyebrow">Locations</span>
-              <h2 className="section-heading__title">Explore Local SEO by Location</h2>
+              <h2 className="section-heading__title">Where else do we run local SEO?</h2>
             </div>
           </ScrollReveal>
           <div className="lseo-location-grid">

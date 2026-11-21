@@ -44,7 +44,7 @@ export const ssrRoutes = [
   { route: '/blog/digital-marketing-trichy-businesses/', module: '/src/pages/Blog/StaticBlogPost.jsx', office: 'madurai', service: "Digital Marketing in Trichy: Local SEO and Lead Generation for Hospitals, Colleges and Retail", serviceType: 'Digital marketing', area: { '@type': 'State', name: 'Tamil Nadu' } },
   { route: '/blog/digital-marketing-tirunelveli-businesses/', module: '/src/pages/Blog/StaticBlogPost.jsx', office: 'madurai', service: "Digital Marketing in Tirunelveli: How Local Brands Can Sell Beyond the District", serviceType: 'Digital marketing', area: { '@type': 'State', name: 'Tamil Nadu' } },
   { route: '/services/advertising-agency/madurai/', module: '/src/pages/ServiceLocations/Advertising/AdvertisingAgency_Madurai.jsx', office: 'madurai', service: 'Digital Advertising in Madurai', serviceType: 'Online advertising', area: { '@type': 'City', name: 'Madurai' } },
-  { route: '/locations/tamil-nadu/', module: '/src/pages/Locations/TamilNadu.jsx', office: 'org', service: 'Digital Marketing in Tamil Nadu', serviceType: 'Digital marketing', area: { '@type': 'State', name: 'Tamil Nadu' } },
+  { route: '/locations/tamil-nadu/', module: '/src/pages/Locations/TamilNadu.jsx', office: 'madurai', service: 'Digital Marketing in Tamil Nadu', serviceType: 'Digital marketing', area: { '@type': 'State', name: 'Tamil Nadu' } },
   { route: '/blog/top-digital-marketing-companies-in-madurai/', module: '/src/pages/Blog/TopCompaniesMadurai.jsx', kind: 'article', office: 'madurai', published: '2026-10-22', modified: '2026-11-10' },
   { route: '/blog/best-web-hosting-india-malaysia-small-business/', module: '/src/pages/Blog/StaticBlogPost.jsx', kind: 'article', office: 'madurai', published: '2026-10-28' },
   { route: '/blog/agentic-ai-tools-small-business-marketing/', module: '/src/pages/Blog/StaticBlogPost.jsx', kind: 'article', office: 'malaysia', published: '2026-10-28' },
@@ -101,13 +101,14 @@ export const ssrRoutes = [
   { route: PORTFOLIO_PATH, module: '/src/pages/Portfolio/Portfolio.jsx', kind: 'page', pageType: 'WebPage', office: 'org', noCrumbs: true },
   /* Diwali 2026 campaign page: WebPage + Organization, no breadcrumb trail. */
   { route: '/diwali-2026/', module: '/src/pages/Diwali/Diwali2026.jsx', kind: 'page', pageType: 'WebPage', office: 'org', noCrumbs: true },
-  /* City landing pages (src/data/cityPages.js). office 'org' = provider is the Organization, so no
-   * LocalBusiness node with an address in another city is emitted; Selangor uses the real Rawang office. */
+  /* City landing pages (src/data/cityPages.js). The LocalBusiness node is always a real office
+   * (Madurai HQ, or the Rawang office for Malaysia). areaServed is the city. No street address
+   * is invented for Theni, Erode, Singapore or Dubai. */
   ...cityPages.map((c) => ({
     route: `/locations/${c.slug}/`,
     module: '/src/pages/Locations/CityLanding.jsx',
     props: { slug: c.slug },
-    office: c.office || 'org',
+    office: c.office && c.office !== 'org' ? c.office : 'madurai',
     service: `Digital marketing in ${c.name}`,
     serviceType: 'Digital marketing',
     area: { '@type': c.areaType, name: c.name, ...(c.containedIn ? { containedInPlace: { '@type': c.containedIn === 'Tamil Nadu' ? 'State' : 'Country', name: c.containedIn } } : {}) },

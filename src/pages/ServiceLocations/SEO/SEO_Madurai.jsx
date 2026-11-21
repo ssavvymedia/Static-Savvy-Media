@@ -12,6 +12,7 @@ import {
   faqPageSchema,
   breadcrumbListSchema,
 } from '../../../utils/schema.js'
+import { officeLocalBusiness, schemaGraph } from '../../../data/officeSchema.js'
 import { buildWhatsAppLink } from '../../../utils/helpers.js'
 import {
   WHATSAPP_NUMBER,
@@ -274,8 +275,10 @@ const WHY_US = [
 ]
 
 const RELATED_SERVICES = [
-  { name: 'Digital Marketing in Madurai', path: '/locations/madurai/' },
-  { name: 'Local SEO Madurai', path: '/services/local-seo/madurai/' },
+  { name: 'Digital Marketing Company in Madurai', path: '/locations/madurai/' },
+  { name: 'Local SEO in Madurai', path: '/services/local-seo/madurai/' },
+  { name: 'Website Development in Madurai', path: '/services/website-design-development/madurai/' },
+  { name: 'Tamil Nadu', path: '/locations/tamil-nadu/' },
   { name: 'Google Ads', path: '/services/google-ads/' },
   { name: 'GEO & AEO Madurai', path: '/services/geo-aeo-ai-search/madurai/' },
   { name: 'Website Design & Development', path: '/services/website-design-development/' },
@@ -463,14 +466,17 @@ export default function SEO_Madurai() {
       description: PAGE_DESCRIPTION,
       canonical: `${SITE_URL}/services/seo/madurai/`,
       ogType: 'website',
-      schema: [
+      schema: schemaGraph(
         serviceSchema({
-          name: 'SEO Services in Madurai',
+          '@id': `${SITE_URL}/services/seo/madurai/#service`,
+          name: 'SEO services in Madurai',
+          serviceType: 'Search engine optimization',
           description: PAGE_DESCRIPTION,
           url: `${SITE_URL}/services/seo/madurai/`,
-          areaServed: 'Madurai, Tamil Nadu',
-          provider: 'Static Savvy Media',
+          areaServed: { '@type': 'City', name: 'Madurai', containedInPlace: { '@type': 'State', name: 'Tamil Nadu' } },
+          provider: { '@id': `${SITE_URL}/locations/madurai/#localbusiness` },
         }),
+        officeLocalBusiness('madurai'),
         faqPageSchema(FAQS),
         breadcrumbListSchema([
           { name: 'Home', url: SITE_URL },
@@ -478,7 +484,7 @@ export default function SEO_Madurai() {
           { name: 'SEO', url: `${SITE_URL}/services/seo/` },
           { name: 'Madurai', url: `${SITE_URL}/services/seo/madurai/` },
         ]),
-      ],
+      ),
     })
   }, [])
 
@@ -663,7 +669,7 @@ export default function SEO_Madurai() {
           <ScrollReveal>
             <div className="section-heading section-heading--left">
               <span className="section-heading__eyebrow">On-Page SEO</span>
-              <h2 className="section-heading__title">On-Page SEO Optimization</h2>
+              <h2 className="section-heading__title">What does on-page SEO change on a Madurai website?</h2>
               <p className="section-heading__subtitle">
                 We optimize individual pages to rank higher and earn more relevant traffic.
                 On-page SEO covers both content and HTML source code optimizations.
@@ -689,7 +695,7 @@ export default function SEO_Madurai() {
           <ScrollReveal>
             <div className="section-heading section-heading--left">
               <span className="section-heading__eyebrow">Content</span>
-              <h2 className="section-heading__title">Content Development for Madurai Businesses</h2>
+              <h2 className="section-heading__title">What content do we write for Madurai businesses?</h2>
               <p className="section-heading__subtitle">
                 Thin content can weaken search performance. We create and improve content that
                 satisfies search intent, demonstrates E-E-A-T and provides genuine value
@@ -716,7 +722,7 @@ export default function SEO_Madurai() {
           <ScrollReveal>
             <div className="section-heading section-heading--left">
               <span className="section-heading__eyebrow">Local SEO</span>
-              <h2 className="section-heading__title">Local SEO + SEO for Madurai</h2>
+              <h2 className="section-heading__title">How do website SEO and local SEO work together in Madurai?</h2>
               <p className="section-heading__subtitle">
                 Traditional organic SEO and Local SEO can work together. While organic SEO
                 targets broader search visibility, Local SEO focuses on Google Maps and
@@ -758,7 +764,7 @@ export default function SEO_Madurai() {
           <ScrollReveal>
             <div className="section-heading section-heading--left">
               <span className="section-heading__eyebrow">What You Get</span>
-              <h2 className="section-heading__title">Your Monthly SEO Deliverables in Madurai</h2>
+              <h2 className="section-heading__title">What do you receive each month from SEO in Madurai?</h2>
               <p className="section-heading__subtitle">
                 Clear deliverables, so you always know what you are paying for.
               </p>
@@ -787,7 +793,7 @@ export default function SEO_Madurai() {
           <ScrollReveal>
             <div className="section-heading section-heading--left">
               <span className="section-heading__eyebrow">Timeline</span>
-              <h2 className="section-heading__title">Your First 90 Days With Our SEO Team</h2>
+              <h2 className="section-heading__title">What happens in the first 90 days of SEO?</h2>
             </div>
           </ScrollReveal>
           <div className="seo-mdu-process-grid">
@@ -815,7 +821,7 @@ export default function SEO_Madurai() {
         <div className="container">
           <div className="section-heading section-heading--left">
             <span className="section-heading__eyebrow">Madurai Office</span>
-            <h2 className="section-heading__title">Meet Our SEO Team in Madurai</h2>
+            <h2 className="section-heading__title">Who runs SEO for Madurai businesses?</h2>
             <p className="section-heading__subtitle">
               Static Savvy Media, 2nd Floor, 4/3, Srinivasa Perumal Koil St, Kamarajar Salai, Madurai, Tamil Nadu 625009.
               Call or WhatsApp <a href="tel:+919944040345">+91 99440 40345</a>. We work with businesses across Madurai,
@@ -832,7 +838,7 @@ export default function SEO_Madurai() {
           <ScrollReveal>
             <div className="section-heading section-heading--left">
               <span className="section-heading__eyebrow">Industries</span>
-              <h2 className="section-heading__title">SEO for Madurai's Key Industries</h2>
+              <h2 className="section-heading__title">Which Madurai industries do we do SEO for?</h2>
               <p className="section-heading__subtitle">
                 Search behaviour in Madurai is shaped by its textile trade, its hospitals,
                 its colleges and the steady flow of temple visitors. We plan keywords around
@@ -864,7 +870,7 @@ export default function SEO_Madurai() {
           <ScrollReveal>
             <div className="section-heading section-heading--left">
               <span className="section-heading__eyebrow">Process</span>
-              <h2 className="section-heading__title">Our SEO Process for Madurai Businesses</h2>
+              <h2 className="section-heading__title">What is our SEO process for a Madurai business?</h2>
             </div>
           </ScrollReveal>
           <div className="seo-mdu-process-grid">
@@ -994,7 +1000,7 @@ export default function SEO_Madurai() {
           <ScrollReveal>
             <div className="section-heading section-heading--left">
               <span className="section-heading__eyebrow">Areas</span>
-              <h2 className="section-heading__title">SEO for Every Part of Madurai</h2>
+              <h2 className="section-heading__title">Which parts of Madurai can a page target?</h2>
               <p className="section-heading__subtitle">
                 We work from our head office on Kamarajar Salai and plan pages and service areas only for the
                 localities a business really serves. Areas we regularly plan for include:
@@ -1121,7 +1127,7 @@ export default function SEO_Madurai() {
           <ScrollReveal>
             <div className="section-heading section-heading--left">
               <span className="section-heading__eyebrow">Locations</span>
-              <h2 className="section-heading__title">SEO Services by Location</h2>
+              <h2 className="section-heading__title">Where else do we offer SEO?</h2>
             </div>
           </ScrollReveal>
           <div className="seo-mdu-location-grid">
