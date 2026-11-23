@@ -5,7 +5,7 @@ import { SITE_URL, GOOGLE_TRUST_LINE } from '../../../utils/constants.js'
 
 const PATH = '/services/social-media-marketing/madurai/'
 const DESCRIPTION =
-  'Social media marketing company in Madurai: Facebook, Instagram and YouTube marketing, Meta ads, reels and content in Tamil and English. Rated 4.9★ on Google.'
+  'Social media marketing company in Madurai: Facebook, Instagram, YouTube and Meta ads, with content in Tamil and English. 4.9★ from 106 Google reviews. WhatsApp +91 99440 40345.'
 
 const content = {
   path: PATH,
@@ -28,7 +28,7 @@ const content = {
   sections: [
     {
       eyebrow: 'Services',
-      heading: 'Social Media Marketing Services in Madurai',
+      heading: 'Who is a social media marketing company in Madurai?',
       kind: 'cards',
       items: [
         {
@@ -123,6 +123,10 @@ const content = {
   faqTitle: 'Frequently Asked Questions, Social Media Marketing Madurai',
   quote: { service: 'social media marketing in Madurai' },
   faqs: [
+    {
+      question: 'Who is a social media marketing company in Madurai?',
+      answer: 'Static Savvy Media is a social media marketing company in Madurai. We plan Facebook, Instagram, YouTube and Meta ads, and we write in Tamil and English, from our Kamarajar Salai office. Rated 4.9★ from 106 Google reviews. WhatsApp +91 99440 40345. We do not publish prices.',
+    },
     {
       question: 'Which is better for a Madurai business, Facebook or Instagram?',
       answer: 'It depends on who your customers are. Instagram tends to work better for visual, younger-audience businesses like fashion, salons and cafes. Facebook still reaches families, parents and business owners well. Most businesses do best with both, sharing content but running different ads.',

@@ -31,10 +31,10 @@ import maduraiHeroSm from '../../assets/images/locations/01Madurai-640.webp'
    ============================================================ */
 
 const PAGE_TITLE =
-  'Digital Marketing Company in Madurai | Static Savvy Media'
+  'Digital Marketing & SEO Company in Madurai | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
-  'Static Savvy Media is a digital marketing company headquartered in Madurai. SEO, Local SEO, websites and AI search from Kamarajar Salai. 4.9★ from 106 reviews. Custom quotes. WhatsApp +91 99440 40345.'
+  'Digital marketing and SEO company in Madurai since 2021. Local SEO, websites and AI search from our Kamarajar Salai HQ. 4.9★ from 106 Google reviews. WhatsApp +91 99440 40345.'
 
 const HERO_EYEBROW = 'Madurai • Static Savvy Media HQ'
 
@@ -179,12 +179,13 @@ const INDUSTRIES = [
 const FAQS = MADURAI_FAQS
 
 const RELATED_SERVICES = [
-  { name: 'SEO Company in Madurai', path: '/services/seo/madurai/' },
-  { name: 'Local SEO & Google Maps in Madurai', path: '/services/local-seo/madurai/' },
+  { name: 'SEO company in Madurai', path: '/services/seo/madurai/' },
+  { name: 'local SEO in Madurai', path: '/services/local-seo/madurai/' },
+  { name: 'local SEO services in Madurai', path: '/services/local-seo/madurai/' },
   { name: 'GEO & AEO (AI Search) in Madurai', path: '/services/geo-aeo-ai-search/madurai/' },
-  { name: 'Advertising Agency in Madurai', path: '/services/advertising-agency/madurai/' },
-  { name: 'Social Media Marketing in Madurai', path: '/services/social-media-marketing/madurai/' },
-  { name: 'Website Design & Development in Madurai', path: '/services/website-design-development/madurai/' },
+  { name: 'Google Ads agency in Madurai', path: '/services/advertising-agency/madurai/' },
+  { name: 'social media marketing company in Madurai', path: '/services/social-media-marketing/madurai/' },
+  { name: 'Website design and development in Madurai', path: '/services/website-design-development/madurai/' },
   { name: 'Digital Marketing Companies in Madurai Compared (guide)', path: '/blog/top-digital-marketing-companies-in-madurai/' },
   { name: 'How to Choose an SEO Agency in Madurai (guide)', path: '/blog/seo-agency-madurai-complete-guide/' },
   { name: 'Digital Marketing Costs in Madurai (2026 guide)', path: '/blog/digital-marketing-service-costs-in-madurai-2026-pricing-guide/' },
@@ -197,7 +198,7 @@ const RELATED_SERVICES = [
 /* HQ hub (gap-audit P0 #2): office, areas served, every Madurai service. Answer-first block is
  * 40–60 words for AI answers. Market ranges are from our Madurai cost guide, never our prices. */
 const HQ_ANSWER =
-  'Static Savvy Media’s headquarters is at Kamarajar Salai, Madurai, open Monday to Saturday since 2021. From this office our in-house team runs SEO, Google Maps (Local SEO), Google and Meta ads, social media, websites and AI search for Madurai businesses, in Tamil and English. We are rated 4.9★ from 106 Google reviews.'
+  'Static Savvy Media is a Madurai-headquartered digital marketing and SEO company, established on 1 October 2021 at Kamarajar Salai. We are rated 4.9★ from 106 Google reviews. WhatsApp +91 99440 40345. From this office the team runs SEO, local SEO and Google Maps, Google and Meta ads, social media, websites and AI search, in Tamil and English.'
 
 const HQ_FACTS = ['Madurai HQ · Kamarajar Salai 625009', 'Since 1 Oct 2021', REVIEW_PROOF, 'Mon–Sat 9:00 AM–6:30 PM IST', 'WhatsApp +91 99440 40345']
 

@@ -5,7 +5,7 @@ import { SITE_URL, GOOGLE_TRUST_LINE } from '../../../utils/constants.js'
 
 const PATH = '/services/website-design-development/madurai/'
 const DESCRIPTION =
-  'Web design company in Madurai since 2021: mobile-first, SEO-ready business, WordPress and e-commerce websites and landing pages. Rated 4.9★ on Google.'
+  'Web design and website development company in Madurai since 2021: mobile-first, SEO-ready business, WordPress and e-commerce sites. 4.9★ from 106 Google reviews. WhatsApp +91 99440 40345.'
 
 const content = {
   path: PATH,
@@ -42,6 +42,16 @@ const content = {
     { name: 'Madurai', path: PATH },
   ],
   sections: [
+    {
+      eyebrow: 'Online stores',
+      heading: 'Do you build e-commerce and Shopify websites in Madurai?',
+      kind: 'cards',
+      items: [
+        { title: 'Shopify and other stores', text: 'We build Shopify stores and other online catalogues for Madurai retailers, textile, jewellery and food businesses when that platform fits the catalogue. You approve the platform before we start. There is no public price.' },
+        { title: 'WooCommerce and custom catalogues', text: 'When you need Razorpay, WhatsApp order alerts or a catalogue your team can edit, we scope that in the written quote after a short call.' },
+        { title: 'What we do not publish', text: 'We do not list package prices for website development, web design or Shopify builds. Ask for a custom quote on WhatsApp at +91 99440 40345.' },
+      ],
+    },
     {
       eyebrow: 'Services',
       heading: 'What website services do we build in Madurai?',
@@ -133,6 +143,8 @@ const content = {
   faqTitle: 'Frequently Asked Questions, Website Development Madurai',
   quote: { service: 'a website in Madurai', text: 'Tell us what the site needs to do. After a short discovery call we send a written quote with pages, features, timeline and support, and you own the finished site.', points: ['Written quote after a short call', 'You own the domain and site', 'SEO foundation built in'] },
   faqs: [
+    { question: 'Are you a website development company in Madurai?', answer: 'Yes. Static Savvy Media is a website development company in Madurai, at Kamarajar Salai, building business sites, WordPress sites and online stores since 2021. Rated 4.9★ from 106 Google reviews. WhatsApp +91 99440 40345. We quote after a short call and do not publish prices.' },
+    { question: 'Are you a web design company in Madurai?', answer: 'Yes. Web design is the layout and content plan. Website development is the build. We do both from the Madurai office, mobile-first, with SEO basics before launch. Website developers in Madurai on our team also set up WhatsApp and enquiry tracking.' },
     { question: 'How much does a website cost in Madurai?', answer: 'It depends on the type of site (a landing page, a business website of up to 20 pages, or an e-commerce store), the number of pages, features and content. We send a written quote after a short discovery call. Message us on WhatsApp at +91 99440 40345 or send an enquiry for a custom quote.' },
     { question: 'What is the best web design company in Madurai for a small business?', answer: 'Choose a Madurai web design company that gives you a clear written quote, builds mobile-first, sets up SEO basics (titles, schema, sitemap, Search Console) before launch, adds WhatsApp and call buttons, and gives you full ownership of your domain and website. Static Savvy Media does all of these from its Madurai office and is rated 4.9★ from 106 Google reviews.' },
     { question: 'What is the difference between web design and website development?', answer: 'Web design is the layout, look and content plan of each page. Website development is the build: code or CMS, speed, forms, payments, tracking and security. We handle both, so the design you approve is the site that goes live.' },

@@ -101,6 +101,7 @@ export const cityPages = [
     ],
     related: [
       { to: '/blog/digital-marketing-agency-chennai-businesses/', label: 'Guide: digital marketing for Chennai businesses' },
+      { to: '/services/seo/chennai/', label: 'SEO company in Chennai' },
       { to: '/services/seo/', label: 'SEO services' },
       { to: '/services/local-seo/', label: 'Local SEO & Google Business Profile' },
       { to: '/services/google-ads/', label: 'Google Ads management' },
@@ -162,6 +163,7 @@ export const cityPages = [
       { to: '/services/website-design-development/', label: 'Website design & development' },
       { to: '/services/product-photography-creative-design/', label: 'Product photography' },
       { to: '/locations/tiruppur/', label: 'Digital marketing in Tiruppur' },
+      { to: '/locations/erode/', label: 'Digital marketing in Erode' },
     ],
   },
 
@@ -409,7 +411,7 @@ export const cityPages = [
     description: 'Selangor digital marketing from our Rawang office: SEO, Google Business Profile, Ads and websites for Petaling Jaya, Shah Alam, Subang Jaya and Klang.',
     eyebrow: 'Selangor · Our Malaysia office is in Rawang',
     h1: 'Digital Marketing Agency in Selangor: Petaling Jaya, Shah Alam, Subang Jaya and Klang',
-    answer: 'Static Savvy Media’s Malaysia office is in Rawang, Selangor, so Selangor is home ground. We run SEO, Google Business Profile, Google and Meta ads, websites and AI search optimisation for businesses in Petaling Jaya, Shah Alam, Subang Jaya, Klang and the rest of the state, with meetings at our office or yours. Every plan is quoted for your business after a free review.',
+    answer: 'Static Savvy Media’s Malaysia office is in Rawang, Selangor, so Selangor is home ground. We run SEO, Google Business Profile, Google and Meta ads, websites and AI search for businesses in Petaling Jaya, Shah Alam, Subang Jaya, Klang and the rest of the state. For local SEO in Selangor, start with the local SEO Malaysia page and this state page together. Call +60 12-453 7030 or WhatsApp +91 99440 40345. Every plan is quoted after a free review. Our Rawang profile is rated 5.0★ from 1 review.',
     intro: [
       'Selangor is Malaysia’s most populous and industrialised state, and it behaves like several markets at once: manufacturing and logistics in Shah Alam and around Port Klang, dense retail and F&B in Petaling Jaya and Subang Jaya, private colleges and tech firms around Cyberjaya, and fast-growing townships in the north such as Rawang.',
       'Customers here search on google.com.my in English, Bahasa Malaysia and Chinese, check reviews, then start a WhatsApp chat. We plan pages, Google Business Profiles and ad targeting around the townships you actually serve, and language per channel rather than translating everything.',
@@ -438,6 +440,7 @@ export const cityPages = [
     ],
     marketRanges: myRangeTable('What SEO costs in Selangor (market ranges)'),
     faqs: [
+      { question: 'Do you do local SEO in Selangor?', answer: 'Yes. Local SEO for Selangor businesses is run from our Rawang office: Google Business Profile, citations and reviews. The service detail is on the local SEO Malaysia page, and this page covers the state. Call +60 12-453 7030 or WhatsApp +91 99440 40345.' },
       { question: 'Where is your Selangor office?', answer: 'NO.9, Jalan Anggun 2J, Taman Anggun 2, 48000 Rawang, Selangor, near AEON Mall Rawang. We are open Monday to Friday, 9 AM to 6 PM (MYT).' },
       { question: 'Do you serve Petaling Jaya, Shah Alam and Klang?', answer: 'Yes. We work with businesses across Selangor and meet clients in PJ, Shah Alam, Subang Jaya and Klang by appointment.' },
       { question: 'How much does SEO cost in Selangor?', answer: MY_COST_ANSWER },
@@ -451,7 +454,7 @@ export const cityPages = [
       { to: '/blog/rawang-local-seo-google-business-profile/', label: 'Guide: Rawang local SEO' },
       { to: '/locations/malaysia/', label: 'Our Malaysia office (Rawang)' },
       { to: '/locations/kuala-lumpur/', label: 'Digital marketing in Kuala Lumpur' },
-      { to: '/services/local-seo/malaysia/', label: 'Local SEO in Malaysia' },
+      { to: '/services/local-seo/malaysia/', label: 'local SEO Selangor' },
       { to: '/locations/rawang/', label: 'Our Malaysia office in Rawang' },
       { to: '/locations/madurai/', label: 'Our headquarters in Madurai, India' },
       { to: '/blog/seo-cost-malaysia-price-guide/', label: 'Guide: how much SEO costs in Malaysia' },
@@ -661,7 +664,7 @@ export const cityPages = [
     description: 'Digital marketing and ads agency for Kuala Lumpur SMEs: SEO, Google Maps, Google Ads, social media and websites from our Selangor office.',
     eyebrow: 'Kuala Lumpur · Served from our Rawang, Selangor office',
     h1: 'Digital Marketing Agency in Kuala Lumpur for SMEs: SEO, Google Maps, Ads and Social Media',
-    answer: 'Static Savvy Media is a digital marketing agency serving Kuala Lumpur and the Klang Valley from our Malaysia office in Rawang, Selangor. We run SEO, Google Business Profile (Google Maps), Google Ads, social media, websites and AI search optimisation for KL businesses. Every plan is quoted for your business after a free review, with no lock-in.',
+    answer: 'Static Savvy Media is a digital marketing agency in Kuala Lumpur for SMEs, working from our Malaysia office in Rawang, Selangor. We run SEO, Google Business Profile, Google Ads, social media, websites and AI search for KL businesses, in English and Bahasa Malaysia. There is no KL street address. Call +60 12-453 7030 or WhatsApp +91 99440 40345. Every plan is quoted after a free review. Our Rawang profile is rated 5.0★ from 1 review.',
     intro: [
       'Customers in Kuala Lumpur compare options quickly: a Google search or a "near me" search on Maps, a look at your reviews, a scroll through your Instagram, then a WhatsApp message. We help KL businesses show up and make a good impression at each of those steps.',
       'KL is also several markets in one. Bangsar, Mont Kiara, Cheras, KLCC, Bukit Bintang and nearby Petaling Jaya each have their own competition, and the same customer may search in English, read reviews in Bahasa Malaysia and chat in Chinese or Tamil. We plan pages, Google Business Profiles, ad targeting and language per channel around the areas you actually serve.',
@@ -692,6 +695,7 @@ export const cityPages = [
     ],
     marketRanges: myRangeTable('What SEO costs in Kuala Lumpur (market ranges)'),
     faqs: [
+      { question: 'What does a digital marketing agency in Kuala Lumpur do?', answer: 'A digital marketing agency in Kuala Lumpur plans Google Maps, SEO on google.com.my, ads, social media and websites for the areas you actually serve, in English and Bahasa Malaysia. Static Savvy Media does that from Rawang, Selangor, and meets in KL by appointment. Call +60 12-453 7030 or WhatsApp +91 99440 40345. We do not publish prices.' },
       { question: 'Why is my KL outlet not showing on Google Maps?', answer: 'Common causes are an unverified or suspended profile, a wrong pin inside a mall or tower, a duplicate listing, or a weak category. Distance from the searcher also matters a lot in KL. We audit the profile and fix what Google’s guidelines allow.' },
       { question: 'Do you cover Petaling Jaya and Shah Alam too?', answer: 'Yes. The same Rawang team serves the whole Klang Valley. See our Petaling Jaya and Shah Alam pages for local details.' },
       { question: 'Do you have an office in Kuala Lumpur?', answer: 'Our Malaysia office is in Rawang, Selangor (NO.9, Jalan Anggun 2J, Taman Anggun 2, 48000 Rawang, near AEON Mall Rawang). We serve clients across Kuala Lumpur and the Klang Valley and meet in KL by appointment.' },
@@ -1104,6 +1108,7 @@ export const cityPages = [
     related: [
       { to: '/locations/madurai/', label: 'Our Madurai headquarters' },
       { to: '/locations/trichy/', label: 'Digital marketing in Trichy' },
+      { to: '/locations/ramanathapuram/', label: 'Digital marketing in Ramanathapuram' },
       { to: '/locations/tamil-nadu/', label: 'Digital marketing across Tamil Nadu' },
       { to: '/services/local-seo/madurai/', label: 'Local SEO in Madurai' },
       { to: '/services/seo/madurai/', label: 'SEO company in Madurai' },
@@ -1159,6 +1164,7 @@ export const cityPages = [
     related: [
       { to: '/locations/thoothukudi/', label: 'Our Thoothukudi office' },
       { to: '/locations/madurai/', label: 'Our Madurai headquarters' },
+      { to: '/locations/karaikudi/', label: 'Digital marketing in Karaikudi' },
       { to: '/locations/tirunelveli/', label: 'Digital marketing in Tirunelveli' },
       { to: '/locations/tamil-nadu/', label: 'Digital marketing across Tamil Nadu' },
       { to: '/services/local-seo/', label: 'Local SEO and Google Business Profile' },

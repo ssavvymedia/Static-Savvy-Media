@@ -55,7 +55,7 @@ export default function LocalServicePage({ content }) {
       ogType: 'website',
       schema: schemaGraph(
         ...(content.schema || []),
-        officeKeyFor(content.path) ? officeLocalBusiness(officeKeyFor(content.path)) : null,
+        (content.office || officeKeyFor(content.path)) ? officeLocalBusiness(content.office || officeKeyFor(content.path)) : null,
         faqPageSchema(content.faqs),
         breadcrumbListSchema(content.crumbs),
       ),
@@ -83,8 +83,8 @@ export default function LocalServicePage({ content }) {
                 <h1 className="seo-mdu-hero__title">{formatTwoColorTitle(content.h1)}</h1>
               </ScrollReveal>
               <ScrollReveal delay={160}>
-                {content.intro.map((para) => (
-                  <p key={para.slice(0, 40)} className="seo-mdu-hero__paragraph">{para}</p>
+                {content.intro.map((para, i) => (
+                  <p key={typeof para === 'string' ? para.slice(0, 40) : i} className="seo-mdu-hero__paragraph">{para}</p>
                 ))}
               </ScrollReveal>
               <ScrollReveal delay={240}>

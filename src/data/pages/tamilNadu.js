@@ -35,7 +35,7 @@ export const content = {
       heading: 'Digital Marketing Services for Tamil Nadu Businesses',
       kind: 'cards',
       items: [
-        { title: 'SEO', text: 'Technical, on-page and content SEO so your website ranks for the searches your customers make.', link: { to: '/services/seo/', label: 'SEO services' } },
+        { title: 'SEO', text: 'Technical, on-page and content SEO so your website ranks for the searches your customers make. Chennai businesses have a dedicated SEO page, run from Madurai.', link: { to: '/services/seo/chennai/', label: 'SEO company in Chennai' } },
         { title: 'Local SEO & Google Business Profile', text: 'Google Maps visibility, profile optimisation, reviews and local citations for each branch or town you serve.', link: { to: '/services/local-seo/', label: 'Local SEO' } },
         { title: 'Google Ads', text: 'Search, Maps, Performance Max and YouTube campaigns with conversion tracking.', link: { to: '/services/google-ads/', label: 'Google Ads' } },
         { title: 'Social Media Marketing', text: 'Facebook and Instagram content and Meta ads in Tamil and English.', link: { to: '/services/social-media-marketing/', label: 'Social media marketing' } },

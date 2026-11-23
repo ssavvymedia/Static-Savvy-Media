@@ -1730,6 +1730,11 @@
       "statusCode": 308
     },
     {
+      "source": "/services/seo/chennai",
+      "destination": "/services/seo/chennai/",
+      "statusCode": 308
+    },
+    {
       "source": "/services/google-ads/kuala-lumpur",
       "destination": "/services/google-ads/kuala-lumpur/",
       "statusCode": 308
@@ -1737,6 +1742,11 @@
     {
       "source": "/services/social-media-marketing/madurai",
       "destination": "/services/social-media-marketing/madurai/",
+      "statusCode": 308
+    },
+    {
+      "source": "/services/social-media-marketing/malaysia",
+      "destination": "/services/social-media-marketing/malaysia/",
       "statusCode": 308
     },
     {
@@ -2307,11 +2317,19 @@
       "destination": "/index.html"
     },
     {
+      "source": "/services/seo/chennai/",
+      "destination": "/index.html"
+    },
+    {
       "source": "/services/google-ads/kuala-lumpur/",
       "destination": "/index.html"
     },
     {
       "source": "/services/social-media-marketing/madurai/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/services/social-media-marketing/malaysia/",
       "destination": "/index.html"
     },
     {

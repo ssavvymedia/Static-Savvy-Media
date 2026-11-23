@@ -755,7 +755,7 @@ export const newBlogPosts = [
     h1: 'Social Media Marketing in Malaysia: A Practical Plan for SMEs',
     description: 'How Malaysian SMEs can plan social media marketing on Facebook, Instagram, TikTok, WhatsApp and Xiaohongshu: audiences, multilingual content.',
     imageAlt: 'Social media marketing plan for Malaysian SMEs, Static Savvy Media',
-    intro: 'Malaysians spend a lot of time on social media, but posting every day is not a strategy. This guide helps SMEs in Kuala Lumpur, Selangor and across Malaysia choose the right platforms, plan content for a multilingual audience and turn followers into enquiries.',
+    intro: 'Malaysians spend a lot of time on social media, but posting every day is not a strategy. This guide helps SMEs in Kuala Lumpur, Selangor and across Malaysia choose platforms. If you want us to run the work, see [social media marketing Malaysia](/services/social-media-marketing/malaysia/).',
     body: [
       { h2: 'Choose platforms by audience, not trend', h3: [
         { t: 'Facebook', p: 'Still important for local services, family audiences, community groups and lead ads.' },
@@ -778,7 +778,7 @@ export const newBlogPosts = [
     ],
     related: [
       { to: '/blog/agentic-ai-tools-small-business-marketing/', label: 'Agentic AI tools for small business marketing' },
-      { to: '/services/social-media-marketing/', label: 'Social media marketing services' },
+      { to: '/services/social-media-marketing/malaysia/', label: 'social media marketing Malaysia' },
       { to: '/locations/malaysia/', label: 'Digital marketing agency in Malaysia' },
       { to: '/industries/smes-malaysia-grant-eligible/', label: 'Digital marketing for Malaysian SMEs' },
     ],

@@ -2,12 +2,12 @@
 // to write crawlable HTML into the route's raw HTML).
 export const PATH = '/services/advertising-agency/madurai/'
 export const DESCRIPTION =
-  'Advertising agency in Madurai for Google Ads, Meta (Facebook & Instagram) ads, YouTube ads and WhatsApp lead campaigns, with conversion tracking.'
+  'Google Ads and advertising agency in Madurai for Search, Meta, YouTube and WhatsApp lead campaigns. Custom quotes. WhatsApp +91 99440 40345.'
 
 export const content = {
   path: PATH,
   ogImage: '/og/locations-01madurai.jpg',
-  title: 'Advertising Agency Madurai: Google, Meta Ads | Static Savvy Media',
+  title: 'Google Ads & Advertising Agency in Madurai | Static Savvy Media',
   description: DESCRIPTION,
   eyebrow: 'ADVERTISING · MADURAI',
   h1: 'Advertising Agency in Madurai for Google, Meta and YouTube Ads',
@@ -23,7 +23,7 @@ export const content = {
   sections: [
     {
       eyebrow: 'Channels',
-      heading: 'Advertising Services We Run for Madurai Businesses',
+      heading: 'What is a Google Ads agency in Madurai?',
       kind: 'cards',
       items: [
         { title: 'Google Search Ads', text: 'Ads for people already searching for what you sell, such as "dentist near me" or "saree shop in Madurai". Keyword research, ad copy in English and Tamil, negative keywords and call/WhatsApp extensions.', link: { to: '/services/google-ads/', label: 'Google Ads management' } },
@@ -68,6 +68,8 @@ export const content = {
   ],
   faqTitle: 'Advertising in Madurai: Common Questions',
   faqs: [
+    { question: 'Do you run Google Ads in Madurai?', answer: 'Yes. Static Savvy Media runs Google Search, Maps and YouTube ads for Madurai businesses from our Kamarajar Salai office, with call and WhatsApp tracking. Ad spend is paid to Google. We quote management separately and do not publish prices. WhatsApp +91 99440 40345.' },
+    { question: 'What is a Google Ads agency in Madurai?', answer: 'A Google Ads agency plans keywords, ads and landing pages, and reports cost per enquiry. Static Savvy Media is that team in Madurai. We also run Meta ads. This page is the advertising page. We do not publish a separate Google Ads Madurai URL, so this one stays the target for Google Ads and pay-per-click searches.' },
     { question: 'Are you a traditional advertising agency?', answer: 'No. We are a digital advertising agency. We run Google, YouTube, Facebook and Instagram ads and the tracking behind them. We do not sell outdoor, print, radio or TV media.' },
     { question: 'How much should a Madurai business spend on ads?', answer: 'It depends on your category and goal. We usually start with a modest test budget, measure cost per enquiry, and only recommend increasing spend once a campaign is paying back. Ad spend is paid directly to Google or Meta from your own account, separate from our management fee.' },
     { question: 'Do you run ads in Tamil?', answer: 'Yes. We write ad copy and creative in Tamil, English or Tanglish, depending on how your customers in Madurai search and speak. Search ads often work best in English because that is how many people type into Google, while Facebook, Instagram and YouTube ads often perform better in Tamil. We test both and keep what brings enquiries.' },

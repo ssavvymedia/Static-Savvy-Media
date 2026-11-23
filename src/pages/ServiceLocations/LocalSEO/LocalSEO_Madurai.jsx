@@ -31,7 +31,7 @@ const PAGE_TITLE =
   'Local SEO Company in Madurai: Google Maps | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
-  'Local SEO services in Madurai to rank on Google Maps. GBP optimisation, citations & reviews from a team rated 4.9★ from 106 Google reviews. WhatsApp us today.'
+  'Local SEO company in Madurai for Google Maps and near-me searches. GBP, citations and reviews. 4.9★ from 106 Google reviews. WhatsApp +91 99440 40345.'
 
 const HERO_EYEBROW = 'LOCAL SEO · MADURAI'
 
@@ -39,7 +39,7 @@ const HERO_TITLE =
   'Local SEO Company in Madurai, Rank on Google Maps & Get Found Near Me'
 
 const HERO_PARAGRAPH =
-  'When customers search for a business near them, Google often shows the local map results before traditional organic results. Static Savvy Media helps Madurai businesses improve their local search presence through Google Business Profile optimization, local citations, review strategy, local landing pages and consistent business information.'
+  'Static Savvy Media is a local SEO company in Madurai. We work on Google Maps, Google Business Profile, citations and reviews so nearby customers can find a real Madurai premises. Website SEO for broader searches lives on our SEO company page, not here. Rated 4.9★ from 106 Google reviews. WhatsApp +91 99440 40345.'
 
 const WHAT_LOCAL_SEO_COVERS = [
   {
@@ -247,6 +247,16 @@ const LOCATION_PAGES = [
 ]
 
 const FAQS = [
+  {
+    question: 'What are local SEO services in Madurai?',
+    answer:
+      'Local SEO services in Madurai cover your Google Business Profile, categories, photos, reviews, citations and the map pack for near-me searches. Static Savvy Media does that work from Kamarajar Salai. WhatsApp +91 99440 40345. We do not guarantee a top-three Maps place.',
+  },
+  {
+    question: 'What is a local SEO company in Madurai?',
+    answer:
+      'A local SEO company focuses on Google Maps and Google Business Profile, not on every organic keyword. Static Savvy Media is that team for Madurai businesses with a real address. Broader website SEO is a different page.',
+  },
   {
     question: 'Does my Madurai business need SEO or Local SEO?',
     answer:

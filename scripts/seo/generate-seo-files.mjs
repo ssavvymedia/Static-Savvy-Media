@@ -54,6 +54,7 @@ const SITEMAP_RULES = [
   [/^\/growth-audit$/, 'monthly', '0.8'],
   [/^\/free-visibility-checklist$/, 'monthly', '0.7'],
   [/^\/services\/(corporate-photography-video|ai-video-creation|product-photography-creative-design)$/, 'weekly', '0.7'],
+  /* Also covers /services/social-media-marketing/malaysia/ and /services/seo/chennai/ (23 Nov 2026). */
   [/^\/services\//, 'weekly', '0.8'],
   [/^\/locations/, 'weekly', '0.8'],
   [/^\/industries$/, 'weekly', '0.7'],

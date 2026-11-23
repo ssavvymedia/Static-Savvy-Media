@@ -26,8 +26,10 @@ const SEO_Madurai = lazyPage('src/pages/ServiceLocations/SEO/SEO_Madurai.jsx', (
 const SEO_Thoothukudi = lazyPage('src/pages/ServiceLocations/SEO/SEO_Thoothukudi.jsx', () => import('../pages/ServiceLocations/SEO/SEO_Thoothukudi.jsx'))
 const SEO_Malaysia = lazyPage('src/pages/ServiceLocations/SEO/SEO_Malaysia.jsx', () => import('../pages/ServiceLocations/SEO/SEO_Malaysia.jsx'))
 const SEO_KualaLumpur = lazyPage('src/pages/ServiceLocations/SEO/SEO_KualaLumpur.jsx', () => import('../pages/ServiceLocations/SEO/SEO_KualaLumpur.jsx'))
+const SEO_Chennai = lazyPage('src/pages/ServiceLocations/SEO/SEO_Chennai.jsx', () => import('../pages/ServiceLocations/SEO/SEO_Chennai.jsx'))
 const GoogleAds_KualaLumpur = lazyPage('src/pages/ServiceLocations/GoogleAds/GoogleAds_KualaLumpur.jsx', () => import('../pages/ServiceLocations/GoogleAds/GoogleAds_KualaLumpur.jsx'))
 const SocialMedia_Madurai = lazyPage('src/pages/ServiceLocations/SocialMedia/SocialMedia_Madurai.jsx', () => import('../pages/ServiceLocations/SocialMedia/SocialMedia_Madurai.jsx'))
+const SocialMedia_Malaysia = lazyPage('src/pages/ServiceLocations/SocialMedia/SocialMedia_Malaysia.jsx', () => import('../pages/ServiceLocations/SocialMedia/SocialMedia_Malaysia.jsx'))
 const WebsiteDevelopment_Madurai = lazyPage('src/pages/ServiceLocations/WebsiteDevelopment/WebsiteDevelopment_Madurai.jsx', () => import('../pages/ServiceLocations/WebsiteDevelopment/WebsiteDevelopment_Madurai.jsx'))
 const LocalSEO_Madurai = lazyPage('src/pages/ServiceLocations/LocalSEO/LocalSEO_Madurai.jsx', () => import('../pages/ServiceLocations/LocalSEO/LocalSEO_Madurai.jsx'))
 const LocalSEO_Thoothukudi = lazyPage('src/pages/ServiceLocations/LocalSEO/LocalSEO_Thoothukudi.jsx', () => import('../pages/ServiceLocations/LocalSEO/LocalSEO_Thoothukudi.jsx'))
@@ -151,10 +153,15 @@ export default function AppRoutes() {
         <Route path="/services/seo/thoothukudi" element={<SEO_Thoothukudi />} />
         <Route path="/services/seo/malaysia" element={<SEO_Malaysia />} />
         <Route path="/services/seo/kuala-lumpur" element={<SEO_KualaLumpur />} />
+        <Route path="/services/seo/chennai" element={<SEO_Chennai />} />
         <Route path="/services/google-ads/kuala-lumpur" element={<GoogleAds_KualaLumpur />} />
         <Route
           path="/services/social-media-marketing/madurai"
           element={<SocialMedia_Madurai />}
+        />
+        <Route
+          path="/services/social-media-marketing/malaysia"
+          element={<SocialMedia_Malaysia />}
         />
         <Route
           path="/services/local-seo/madurai"

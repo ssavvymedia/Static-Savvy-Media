@@ -30,10 +30,10 @@ import { AnswerFirst, AuditBlock, MarketRangeTable, REVIEW_PROOF } from '../../.
    ============================================================ */
 
 const PAGE_TITLE =
-  'SEO Company in Madurai | SEO Services | Static Savvy Media'
+  'SEO Company in Madurai | SEO Services & Strategy | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
-  'SEO company in Madurai rated 4.9★ from 106 Google reviews. Technical, on-page and content SEO that turns Google searches into enquiries. Get a custom quote.'
+  'SEO company in Madurai for technical, on-page and content SEO that turns Google searches into enquiries. 4.9★ from 106 Google reviews. WhatsApp +91 99440 40345.'
 
 const HERO_EYEBROW = 'SEO · MADURAI'
 
@@ -41,7 +41,7 @@ const HERO_TITLE =
   'SEO Company in Madurai — SEO Services That Bring Real Enquiries'
 
 const HERO_PARAGRAPH =
-  'Static Savvy Media is an SEO company based in Madurai. We help local shops, clinics, schools, manufacturers and service businesses show up when people in Madurai and across Tamil Nadu search Google for what they sell. Get your Madurai business in front of the right customers when they are actively searching for your products and services. Static Savvy Media combines technical SEO, keyword strategy, on-page optimization, content development, internal linking, schema and performance measurement to build sustainable organic search visibility.'
+  'Static Savvy Media is an SEO company in Madurai offering technical, on-page and content SEO, plus local SEO via our dedicated local SEO page. The wider digital marketing agency page is separate, so this URL stays about SEO services in Madurai. We are rated 4.9★ from 106 Google reviews. WhatsApp +91 99440 40345.'
 
 const SEO_SERVICES = [
   {
@@ -276,7 +276,9 @@ const WHY_US = [
 
 const RELATED_SERVICES = [
   { name: 'Digital Marketing Company in Madurai', path: '/locations/madurai/' },
-  { name: 'Local SEO in Madurai', path: '/services/local-seo/madurai/' },
+  { name: 'local SEO in Madurai', path: '/services/local-seo/madurai/' },
+  { name: 'local SEO services in Madurai', path: '/services/local-seo/madurai/' },
+  { name: 'digital marketing agency in Madurai', path: '/locations/madurai/' },
   { name: 'Website Development in Madurai', path: '/services/website-design-development/madurai/' },
   { name: 'Tamil Nadu', path: '/locations/tamil-nadu/' },
   { name: 'Google Ads', path: '/services/google-ads/' },
@@ -352,6 +354,21 @@ const MADURAI_AREAS = [
 ]
 
 const FAQS = [
+  {
+    question: 'What does an SEO company in Madurai do?',
+    answer:
+      'An SEO company in Madurai researches the searches your customers type, fixes technical issues, and improves the pages that should rank. Static Savvy Media does that from its Madurai office: technical, on-page and content SEO, reported from your own Search Console. WhatsApp +91 99440 40345.',
+  },
+  {
+    question: 'How is an SEO company different from a digital marketing agency?',
+    answer:
+      'An SEO company focuses on organic search. A digital marketing agency also runs ads, social media and websites. Static Savvy Media does both. This page is the SEO company page. The digital marketing agency page is /locations/madurai/.',
+  },
+  {
+    question: 'What SEO services are available in Madurai?',
+    answer:
+      'Technical SEO, on-page SEO, content, and a separate local SEO service for Google Maps. SEO services in Madurai on this page are the website work. Local SEO services in Madurai are on the local SEO page, so the two URLs do not compete.',
+  },
   {
     question: 'What is the difference between SEO services and Local SEO in Madurai?',
     answer:
@@ -447,7 +464,7 @@ const CTA = {
 
 /* Answer-first (40–60 words) for AI answers; /services/seo/madurai/ owns "SEO company in Madurai". */
 const SEO_ANSWER =
-  'Static Savvy Media is an SEO company headquartered in Madurai (Kamarajar Salai) since 2021, rated 4.9★ from 106 Google reviews (Nov 2026). We run technical, on-page, content and local SEO plus AI search (GEO/AEO) for Madurai businesses, report calls and enquiries from your own Google accounts, quote after a free audit and never guarantee rankings.'
+  'Static Savvy Media is an SEO company in Madurai offering technical, on-page and content SEO, plus local SEO via our dedicated local SEO page. Headquartered at Kamarajar Salai since 2021, rated 4.9★ from 106 Google reviews. We quote after a free audit and never guarantee rankings. WhatsApp +91 99440 40345.'
 
 const SEO_MARKET_RANGES = [
   ['Starter / local SEO', '₹8,000 – ₹15,000 / month', 'Small sites, one location, a focused set of Madurai keywords'],

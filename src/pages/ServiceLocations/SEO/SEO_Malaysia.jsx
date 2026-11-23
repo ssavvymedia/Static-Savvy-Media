@@ -333,6 +333,16 @@ const FAQS = [
       'Our Malaysia office is in Rawang, Selangor, north of Kuala Lumpur, and we serve KL businesses in person by appointment. If you are in KL, see our dedicated SEO agency in Kuala Lumpur page for KL-specific details.',
   },
   {
+    question: 'Are you an SEO agency in Malaysia?',
+    answer:
+      'Yes. Static Savvy Media is an SEO agency working across Malaysia from our Rawang, Selangor office, with the company headquartered in Madurai. We handle technical, on-page and content SEO on google.com.my, in English and Bahasa Malaysia. Call +60 12-453 7030 or WhatsApp +91 99440 40345. We do not publish SEO package prices.',
+  },
+  {
+    question: 'Can I hire you as an SEO specialist in Malaysia?',
+    answer:
+      'Yes. An SEO specialist here means the person who researches your google.com.my queries, fixes the site and reports from your Search Console. Deepan Kanz reviews new plans, and the Malaysia work is delivered from the Rawang office. Our Rawang Google profile is rated 5.0★ from 1 review. We do not describe that as a large Malaysian review base.',
+  },
+  {
     question: 'How is SEO measured?',
     answer:
       'SEO performance is measured using actual data from Google Search Console and GA4. Key metrics include organic clicks, impressions, average position, indexed pages and conversions where tracking is available.',

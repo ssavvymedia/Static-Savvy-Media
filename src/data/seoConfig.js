@@ -38,19 +38,19 @@ export const seoConfig = {
   ...Object.fromEntries(newBlogPosts.map((p) => [`/blog/${p.slug}`, { title: p.title, slug: `blog/${p.slug}`, seo: { title: p.title, description: p.description, canonical: `${BASE_URL}/blog/${p.slug}/`, ogTitle: p.title, ogDescription: p.description, ogImage: `${BASE_URL}/og/blog/${p.slug}.jpg`, robots: "index,follow" } }])),
   "/": {
     title:
-      "Digital Marketing Agency in Madurai & Malaysia | Static Savvy Media",
+      "Digital Marketing Agency in Madurai | 4.9★ from 106 Reviews",
     slug: "",
     seo: {
       title:
-        "Digital Marketing Agency in Madurai & Malaysia | Static Savvy Media",
+        "Digital Marketing Agency in Madurai | 4.9★ from 106 Reviews",
       description:
-        "Madurai-headquartered digital marketing agency since 2021: SEO, Google Ads, social media & websites for India, Malaysia, Singapore & Dubai.",
+        "Madurai digital marketing agency since 2021: SEO, Google Ads, social and websites. 4.9★ from 106 Google reviews. Offices in Madurai, Thoothukudi and Rawang. WhatsApp +91 99440 40345.",
       canonical: `${BASE_URL}/`,
       focusKeyword: "digital marketing agency in madurai",
       ogTitle:
-        "Digital Marketing Agency in Madurai & Malaysia | Static Savvy Media",
+        "Digital Marketing Agency in Madurai | 4.9★ from 106 Reviews",
       ogDescription:
-        "Madurai-headquartered digital marketing agency since 2021: SEO, Google Ads, social media & websites for India, Malaysia, Singapore & Dubai.",
+        "Madurai digital marketing agency since 2021: SEO, Google Ads, social and websites. 4.9★ from 106 Google reviews. Offices in Madurai, Thoothukudi and Rawang. WhatsApp +91 99440 40345.",
       ogImage: `${BASE_URL}/og/heroimage.jpg`,
       schema: {
         "@context": "https://schema.org",
@@ -388,17 +388,17 @@ export const seoConfig = {
 
   // Service Location Pages
   "/services/seo/madurai": {
-    title: "SEO Company in Madurai | SEO Services | Static Savvy Media",
+    title: "SEO Company in Madurai | SEO Services & Strategy | Static Savvy Media",
     slug: "services/seo/madurai",
     seo: {
-      title: "SEO Company in Madurai | SEO Services | Static Savvy Media",
+      title: "SEO Company in Madurai | SEO Services & Strategy | Static Savvy Media",
       description:
-        "SEO company in Madurai rated 4.9★ from 106 Google reviews. Technical, on-page and content SEO that turns Google searches into enquiries. Get a custom quote.",
+        "SEO company in Madurai for technical, on-page and content SEO that turns Google searches into enquiries. 4.9★ from 106 Google reviews. WhatsApp +91 99440 40345.",
       canonical: `${BASE_URL}/services/seo/madurai`,
       focusKeyword: "SEO company in Madurai",
-      ogTitle: "SEO Company in Madurai | SEO Services | Static Savvy Media",
+      ogTitle: "SEO Company in Madurai | SEO Services & Strategy | Static Savvy Media",
       ogDescription:
-        "SEO company in Madurai rated 4.9★ from 106 Google reviews. Technical, on-page and content SEO that turns Google searches into enquiries. Get a custom quote.",
+        "SEO company in Madurai for technical, on-page and content SEO that turns Google searches into enquiries. 4.9★ from 106 Google reviews. WhatsApp +91 99440 40345.",
       ogImage: `${BASE_URL}/og/locations-01madurai.jpg`,
       schema: {
         "@context": "https://schema.org",
@@ -474,7 +474,7 @@ export const seoConfig = {
     seo: {
       title: "Web Design & Development Company in Madurai | Static Savvy Media",
       description:
-        "Web design company in Madurai since 2021: mobile-first, SEO-ready business, WordPress and e-commerce websites and landing pages. Rated 4.9★ on Google.",
+        "Web design and website development company in Madurai since 2021: mobile-first, SEO-ready business, WordPress and e-commerce sites. 4.9★ from 106 Google reviews. WhatsApp +91 99440 40345.",
       canonical: `${BASE_URL}/services/website-design-development/madurai`,
       focusKeyword: "website development company in Madurai",
       ogTitle: "Web Design & Development Company in Madurai | Static Savvy Media",
@@ -497,13 +497,13 @@ export const seoConfig = {
     seo: {
       title: "Local SEO Company in Madurai: Google Maps | Static Savvy Media",
       description:
-        "Local SEO services in Madurai to rank on Google Maps. GBP optimisation, citations & reviews from a team rated 4.9★ from 106 Google reviews. WhatsApp us today.",
+        "Local SEO company in Madurai for Google Maps and near-me searches. GBP, citations and reviews. 4.9★ from 106 Google reviews. WhatsApp +91 99440 40345.",
       canonical: `${BASE_URL}/services/local-seo/madurai`,
       focusKeyword: "local SEO services Madurai",
       ogTitle:
         "Local SEO Company in Madurai: Google Maps | Static Savvy Media",
       ogDescription:
-        "Local SEO services in Madurai to rank on Google Maps. GBP optimisation, citations & reviews from a team rated 4.9★ from 106 Google reviews. WhatsApp us today.",
+        "Local SEO company in Madurai for Google Maps and near-me searches. GBP, citations and reviews. 4.9★ from 106 Google reviews. WhatsApp +91 99440 40345.",
       ogImage: `${BASE_URL}/og/locations-01madurai.jpg`,
       schema: {
         "@context": "https://schema.org",
@@ -677,16 +677,16 @@ export const seoConfig = {
   },
   "/locations/madurai": {
     title:
-      "Digital Marketing Company in Madurai | Static Savvy Media",
+      "Digital Marketing & SEO Company in Madurai | Static Savvy Media",
     slug: "locations/madurai",
     seo: {
       title:
-        "Digital Marketing Company in Madurai | Static Savvy Media",
+        "Digital Marketing & SEO Company in Madurai | Static Savvy Media",
       description:
-        "Static Savvy Media is a digital marketing company headquartered in Madurai. SEO, Local SEO, websites and AI search from Kamarajar Salai. 4.9★ from 106 reviews. Custom quotes. WhatsApp +91 99440 40345.",
+        "Digital marketing and SEO company in Madurai since 2021. Local SEO, websites and AI search from our Kamarajar Salai HQ. 4.9★ from 106 Google reviews. WhatsApp +91 99440 40345.",
       canonical: `${BASE_URL}/locations/madurai`,
       focusKeyword: "digital marketing company in Madurai",
-      ogTitle: "Digital Marketing Company in Madurai | Static Savvy Media",
+      ogTitle: "Digital Marketing & SEO Company in Madurai | Static Savvy Media",
       ogDescription:
         "Headquartered in Madurai, Static Savvy Media delivers full-service SEO, GEO/AEO, and Google Ads.",
       ogImage: `${BASE_URL}/og/locations-01madurai.jpg`,
@@ -1534,20 +1534,50 @@ export const seoConfig = {
     seo: {
       title: "Social Media Marketing Agency in Madurai | Static Savvy Media",
       description:
-        "Social media marketing company in Madurai: Facebook, Instagram and YouTube marketing, Meta ads, reels and content in Tamil and English. Rated 4.9★ on Google.",
+        "Social media marketing company in Madurai: Facebook, Instagram, YouTube and Meta ads, with content in Tamil and English. 4.9★ from 106 Google reviews. WhatsApp +91 99440 40345.",
       canonical: `${BASE_URL}/services/social-media-marketing/madurai`,
       ogImage: `${BASE_URL}/og/services-05socialmediamarketing.jpg`,
       robots: "index,follow",
     },
   },
   "/services/advertising-agency/madurai": {
-    title: "Advertising Agency Madurai: Google, Meta Ads | Static Savvy Media",
+    title: "Google Ads & Advertising Agency in Madurai | Static Savvy Media",
     slug: "services/advertising-agency/madurai",
     seo: {
-      title: "Advertising Agency Madurai: Google, Meta Ads | Static Savvy Media",
+      title: "Google Ads & Advertising Agency in Madurai | Static Savvy Media",
       description:
-        "Advertising agency in Madurai for Google Ads, Meta (Facebook & Instagram) ads, YouTube ads and WhatsApp lead campaigns, with conversion tracking.",
+        "Google Ads and advertising agency in Madurai for Search, Meta, YouTube and WhatsApp lead campaigns. Custom quotes. WhatsApp +91 99440 40345.",
       canonical: `${BASE_URL}/services/advertising-agency/madurai`,
+      ogImage: `${BASE_URL}/og/locations-01madurai.jpg`,
+      robots: "index,follow",
+    },
+  },
+  "/services/social-media-marketing/malaysia": {
+    title: "Social Media Marketing Malaysia for SMEs | Static Savvy Media",
+    slug: "services/social-media-marketing/malaysia",
+    seo: {
+      title: "Social Media Marketing Malaysia for SMEs | Static Savvy Media",
+      description:
+        "Social media marketing for Malaysian SMEs: Facebook, Instagram, TikTok, WhatsApp and Xiaohongshu, in English and Bahasa Malaysia, from our Rawang office. WhatsApp +60 12-453 7030.",
+      canonical: `${BASE_URL}/services/social-media-marketing/malaysia`,
+      ogTitle: "Social Media Marketing Malaysia for SMEs | Static Savvy Media",
+      ogDescription:
+        "Social media marketing for Malaysian SMEs: Facebook, Instagram, TikTok, WhatsApp and Xiaohongshu, in English and Bahasa Malaysia, from our Rawang office. WhatsApp +60 12-453 7030.",
+      ogImage: `${BASE_URL}/og/locations-02malaysia.jpg`,
+      robots: "index,follow",
+    },
+  },
+  "/services/seo/chennai": {
+    title: "SEO Company in Chennai | SEO Services | Static Savvy Media",
+    slug: "services/seo/chennai",
+    seo: {
+      title: "SEO Company in Chennai | SEO Services | Static Savvy Media",
+      description:
+        "SEO company serving Chennai businesses from our Madurai headquarters: technical, on-page and local SEO, with AI search (GEO/AEO). Custom quotes. WhatsApp +91 99440 40345.",
+      canonical: `${BASE_URL}/services/seo/chennai`,
+      ogTitle: "SEO Company in Chennai | SEO Services | Static Savvy Media",
+      ogDescription:
+        "SEO company serving Chennai businesses from our Madurai headquarters: technical, on-page and local SEO, with AI search (GEO/AEO). Custom quotes. WhatsApp +91 99440 40345.",
       ogImage: `${BASE_URL}/og/locations-01madurai.jpg`,
       robots: "index,follow",
     },

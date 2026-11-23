@@ -217,6 +217,7 @@ const WHY_US = [
 ]
 
 const RELATED_SERVICES = [
+  { name: 'local SEO Selangor', path: '/locations/selangor/' },
   { name: 'SEO', path: '/services/seo/' },
   { name: 'Google Ads', path: '/services/google-ads/' },
   { name: 'GEO & AEO', path: '/services/geo-aeo-ai-search/' },
@@ -268,6 +269,11 @@ const FAQS = [
     question: 'How long does Local SEO take?',
     answer:
       'Timelines vary depending on competition, business category, location, existing authority, GBP quality, citations, reviews and local search demand. For low-competition areas, improvements may be visible within weeks. For competitive categories, expect consistent effort over several months.',
+  },
+  {
+    question: 'Do you offer local SEO in Selangor?',
+    answer:
+      'Yes. Local SEO in Selangor is run from our Rawang office for businesses in Petaling Jaya, Shah Alam, Subang Jaya, Klang and Rawang. See the Selangor location page for how we serve the state, and this page for the local SEO work itself. Call +60 12-453 7030.',
   },
   {
     question: 'Do I need separate Google Business Profiles for different physical locations?',

@@ -1,6 +1,21 @@
 // Shared with scripts/seo/prerender-heads.mjs (raw-HTML FAQ + FAQPage schema).
 export const MADURAI_FAQS = [
   {
+    question: 'What does a digital marketing agency in Madurai do?',
+    answer:
+      'A digital marketing agency in Madurai plans and runs the channels that bring enquiries: SEO, local SEO and Google Maps, Google and Meta ads, social media, websites and AI search. Static Savvy Media does that work from its Kamarajar Salai headquarters, in Tamil and English, and quotes each plan after a free review. WhatsApp +91 99440 40345.',
+  },
+  {
+    question: 'Who is the best SEO company in Madurai?',
+    answer:
+      'There is no single best SEO company for every business, and we do not claim to be number one. Static Savvy Media is a Madurai SEO company rated 4.9★ from 106 Google reviews. Compare written quotes, who owns the accounts, and whether the agency reports calls and enquiries. Our SEO service page is at /services/seo/madurai/.',
+  },
+  {
+    question: 'What SEO services do you offer in Madurai?',
+    answer:
+      'Technical SEO, on-page SEO, content, and local SEO for Google Maps. The SEO company page covers website search. Local SEO and Google Business Profile work has its own page, so the two do not compete. Internet marketing and SEO marketing for a Madurai business start with whichever of those matches how customers find you.',
+  },
+  {
     question: 'What types of businesses do you work with in Madurai?',
     answer:
       'Businesses across Madurai’s main economic sectors: textiles and garments, education, healthcare, hospitality, retail, and professional services. Our smallest Madurai clients are 2–3 person businesses; our largest have 50+ staff. Message us on WhatsApp and we will advise on the right starting point for your business.',
