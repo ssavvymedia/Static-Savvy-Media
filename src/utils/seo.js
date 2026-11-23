@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
+import { schedulePageView } from './track.js'
 /* seoConfig (~90 KB of route data) loads on demand: prerendered HTML already carries each route's head. */
 let seoConfigPromise = null
 let seoNavigated = false
@@ -76,6 +77,7 @@ export function setSeo({
   const finalCanonical = canonical === false ? null : toCanonicalUrl(canonical || window.location.pathname)
 
   setDocumentTitle(finalTitle)
+  schedulePageView()
 
   // Standard Meta Tags
   setMetaTag('name', 'description', finalDesc)

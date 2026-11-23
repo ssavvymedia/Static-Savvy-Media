@@ -31,13 +31,52 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content="https://www.staticsavvymedia.com/og-image.jpg" />
 
-    <!-- Google Tag Manager + Microsoft Clarity: loaded on first interaction or 5s after load (keeps them off the critical path) -->
-    <script>(function(w,d){w.dataLayer=w.dataLayer||[];w.clarity=w.clarity||function(){(w.clarity.q=w.clarity.q||[]).push(arguments)};
-    var done=false,ev=['pointerdown','keydown','touchstart','scroll','mousemove'];
-    function add(src){var j=d.createElement('script');j.async=true;j.src=src;d.head.appendChild(j)}
+    <!-- GTM-TT9MF95 loads immediately so the Google tag (G-PTL99PJMRS) can start a session
+         on land. Its config page_view is turned off here; the app sends exactly one page_view
+         via gtag after the title is set (see src/utils/track.js). Do not also add a GTM
+         page_view or generate_lead tag, or those hits will be counted twice.
+         Clarity stays off the critical path. Do not add G-8C96WH0QBM. -->
+    <script>(function(w,d){
+      w.dataLayer=w.dataLayer||[];
+      var dl=w.dataLayer, GA='G-PTL99PJMRS';
+      function mute(cmd){
+        if(!cmd)return;
+        if(cmd[0]==='config'&&cmd[1]===GA){
+          var p=cmd[2]&&typeof cmd[2]==='object'?cmd[2]:{};
+          p.send_page_view=false;
+          try{cmd[2]=p;}catch(e){}
+        }
+        /* Drop page_view hits we did not mark (config auto hit and enhanced-measurement
+           history hits) so a route sends one page_view. */
+        if(cmd[0]==='event'&&cmd[1]==='page_view'&&!(cmd[2]&&cmd[2].ssm_pv===1)){
+          try{cmd[1]='ssm_ignored_page_view';}catch(e){}
+        }
+      }
+      function patch(fn){
+        if(fn&&fn.__ssm)return fn;
+        var wrapped=function(){
+          for(var i=0;i<arguments.length;i++)mute(arguments[i]);
+          return fn.apply(dl,arguments);
+        };
+        wrapped.__ssm=true;
+        return wrapped;
+      }
+      dl.push=patch(dl.push.bind(dl));
+      var n=0,watch=setInterval(function(){
+        if(!dl.push.__ssm)dl.push=patch(dl.push.bind(dl));
+        if(++n>100)clearInterval(watch);
+      },25);
+      w.gtag=w.gtag||function(){dl.push(arguments);};
+    })(window,document);</script>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TT9MF95');</script>
+    <script>(function(w,d){w.clarity=w.clarity||function(){(w.clarity.q=w.clarity.q||[]).push(arguments)};
+    var done=false,ev=['pointerdown','keydown','touchstart','scroll'];
     function go(){if(done)return;done=true;ev.forEach(function(e){w.removeEventListener(e,go,{passive:true})});
-    w.dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});
-    add('https://www.googletagmanager.com/gtm.js?id=GTM-TT9MF95');add('https://www.clarity.ms/tag/ybukc0fqtr')}
+    var j=d.createElement('script');j.async=true;j.src='https://www.clarity.ms/tag/ybukc0fqtr';d.head.appendChild(j)}
     ev.forEach(function(e){w.addEventListener(e,go,{passive:true,once:true})});
     w.addEventListener('load',function(){setTimeout(go,5000)});
     })(window,document);</script>

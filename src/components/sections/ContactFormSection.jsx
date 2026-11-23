@@ -1,5 +1,6 @@
 import { lazy, Suspense, useRef, useState } from 'react'
 import { buildWhatsAppLink } from '../../utils/helpers.js'
+import { pagePathname, sendGa4Event } from '../../utils/track.js'
 import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, MALAYSIA_OFFICE, CONTACT_EMAIL } from '../../utils/constants.js'
 import '../../styles/contact-form-v2.css'
 
@@ -16,12 +17,14 @@ const CONTACT_ENDPOINT = '/api/submit-contact'
 function trackLead(service) {
   try {
     window.dataLayer = window.dataLayer || []
-    window.dataLayer.push({
+    const hit = {
       event: 'generate_lead',
       form_id: 'contact_form',
       lead_service: service || undefined,
-      page_path: window.location.pathname,
-    })
+      page_path: pagePathname(),
+    }
+    window.dataLayer.push(hit)
+    sendGa4Event('generate_lead', hit)
   } catch {
     // Analytics must never break the form.
   }
