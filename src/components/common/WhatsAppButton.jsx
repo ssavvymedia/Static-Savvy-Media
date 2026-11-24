@@ -3,7 +3,7 @@ import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE } from '../../utils/constants.js'
 
 
 export default function WhatsAppButton() {
-  // One WhatsApp line site-wide, Malaysia pages included (owner, 10 Nov 2026). +60 is call-only.
+  // One WhatsApp line site-wide, Malaysia pages included (owner, 24 Nov 2026). No other number.
   const href = buildWhatsAppLink(WHATSAPP_NUMBER, WHATSAPP_MESSAGE)
 
   return (

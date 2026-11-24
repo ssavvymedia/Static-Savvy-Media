@@ -29,44 +29,12 @@ export const GOOGLE_RATING = "4.9";
 export const GOOGLE_REVIEW_COUNT = "106";
 export const GOOGLE_TRUST_LINE = `${GOOGLE_RATING}★ from ${GOOGLE_REVIEW_COUNT} Google reviews · Madurai HQ`;
 
-// Malaysia office (Rawang, Selangor). Owner-confirmed details: calls go to the Malaysian
-// number; WhatsApp stays on the Indian number (WHATSAPP_NUMBER). Keep visible text and
-// LocalBusiness JSON-LD in sync by reading from here.
-export const MALAYSIA_OFFICE = {
-  name: "Static Savvy Media, Malaysia",
-  phoneDisplay: "+60 12-453 7030",
-  phoneE164: "+60124537030",
-  phoneHref: "tel:+60124537030",
-  whatsappDisplay: "+91 99440 40345",
-  whatsappNumber: WHATSAPP_NUMBER,
-  hoursDisplay: "Mon–Fri, 9 AM – 6 PM (MYT)",
-  hoursNote: "Sat & Sun closed",
-  streetAddress: "NO.9, Jalan Anggun 2J, Taman Anggun 2",
-  postalCode: "48000",
-  addressLocality: "Rawang",
-  addressRegion: "Selangor",
-  addressCountry: "MY",
-  landmark: "Near AEON Mall Rawang",
-};
+// One phone line site-wide (owner, 24 Nov 2026): +91 99440 40345 on WhatsApp, for every market,
+// Malaysia included. No Malaysian address or number on the site (owner, 24 Nov 2026); Malaysian
+// pages are service areas served by the Madurai business (shared Madurai @id in JSON-LD).
+export const WHATSAPP_HREF = "https://wa.me/919944040345";
+export const CALL_HREF = "tel:+919944040345";
 
-// schema.org fragments for the Malaysia office (used by LocalBusiness / ProfessionalService JSON-LD).
-export const MALAYSIA_POSTAL_ADDRESS = {
-  "@type": "PostalAddress",
-  streetAddress: MALAYSIA_OFFICE.streetAddress,
-  addressLocality: MALAYSIA_OFFICE.addressLocality,
-  addressRegion: MALAYSIA_OFFICE.addressRegion,
-  postalCode: MALAYSIA_OFFICE.postalCode,
-  addressCountry: MALAYSIA_OFFICE.addressCountry,
-};
-
-export const MALAYSIA_OPENING_HOURS_SPEC = [
-  {
-    "@type": "OpeningHoursSpecification",
-    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-    opens: "09:00",
-    closes: "18:00",
-  },
-];
 export const SOCIAL_LINKS = {
   instagram: "https://www.instagram.com/staticsavvymedia",
   facebook: "https://www.facebook.com/staticsavvymedia",

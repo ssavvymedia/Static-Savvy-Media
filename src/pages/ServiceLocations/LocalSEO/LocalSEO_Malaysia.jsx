@@ -273,7 +273,7 @@ const FAQS = [
   {
     question: 'Do you offer local SEO in Selangor?',
     answer:
-      'Yes. Local SEO in Selangor is run from our Rawang office for businesses in Petaling Jaya, Shah Alam, Subang Jaya, Klang and Rawang. See the Selangor location page for how we serve the state, and this page for the local SEO work itself. Call +60 12-453 7030.',
+      'Yes. We run local SEO for Selangor businesses in Petaling Jaya, Shah Alam, Subang Jaya, Klang and Rawang. See the Selangor location page for how we serve the state, and this page for the local SEO work itself. WhatsApp +91 99440 40345.',
   },
   {
     question: 'Do I need separate Google Business Profiles for different physical locations?',

@@ -188,7 +188,7 @@ const FAQS = [
   },
   {
     question: 'How much does AEO cost with Static Savvy Media?',
-    answer: 'AEO and GEO are included in our top monthly plan, together with Google Business Profile management and website SEO, with no lock-in. We quote it after a free review of your site: WhatsApp +91 99440 40345, or call +60 12-453 7030 in Malaysia, or send an enquiry.',
+    answer: 'AEO and GEO are included in our top monthly plan, together with Google Business Profile management and website SEO, with no lock-in. We quote it after a free review of your site: WhatsApp +91 99440 40345, or send an enquiry.',
   },
 ]
 
@@ -517,7 +517,7 @@ export default function WhatIsAEO() {
                   </div>
                 ))}
               </div>
-              <p>Want this done for you? AEO and GEO are part of our <Link to="/services/geo-aeo-ai-search/">GEO and AEO (AI search optimisation) service</Link>, available in India from our Madurai head office and in Malaysia from our Rawang office.</p>
+              <p>Want this done for you? AEO and GEO are part of our <Link to="/services/geo-aeo-ai-search/">GEO and AEO (AI search optimisation) service</Link>, available in India and Malaysia from our Madurai head office.</p>
 
               {/* 12 Common Mistakes */}
               <h2 id="common-mistakes">Common AEO Mistakes</h2>

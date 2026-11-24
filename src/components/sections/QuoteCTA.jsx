@@ -3,15 +3,14 @@ import { buildWhatsAppLink } from '../../utils/helpers.js'
 import '../../styles/quote-cta.css'
 
 const INDIA_WA = '+91 99440 40345'
-const MALAYSIA_CALL = { display: '+60 12-453 7030', href: 'tel:+60124537030' }
 
 /**
  * "Get a custom quote" block. Replaces every public price card (owner's instruction, 29 Oct 2026):
- * prices are shared only at proposal time, never on public pages. WhatsApp +91 99440 40345 everywhere;
- * Malaysia pages (region="malaysia") also show the call line +60 12-453 7030 (owner, 10 Nov 2026).
+ * prices are shared only at proposal time, never on public pages. One WhatsApp line (+91 99440 40345)
+ * everywhere, Malaysia included, shown as "Chat on WhatsApp" rather than the raw number (owner, 24 Nov 2026).
+ * Callers may still pass `region`; it no longer changes the contact line.
  */
 export default function QuoteCTA({
-  region = 'india',
   eyebrow = 'Custom quote',
   title = 'Get a custom quote',
   text = 'Every business needs a different mix of work, so we quote after a free review of your website, Google Business Profile and competitors. You get a written plan with scope, milestones and a monthly fee before you commit.',
@@ -21,7 +20,6 @@ export default function QuoteCTA({
   className = '',
 }) {
   const wa = INDIA_WA
-  const call = region === 'malaysia' ? MALAYSIA_CALL : null
   const waHref = buildWhatsAppLink(wa, `Hi Static Savvy Media, I'd like a custom quote for ${service}.`)
   const formIsAnchor = formHref.startsWith('#')
   return (
@@ -40,11 +38,8 @@ export default function QuoteCTA({
           </div>
           <div className="quote-cta__actions">
             <Button href={waHref} variant="primary" size="lg" target="_blank" rel="noopener noreferrer">
-              {`WhatsApp ${wa}`}
+              Chat on WhatsApp
             </Button>
-            {call && (
-              <Button href={call.href} variant="outline" size="lg">{`Call ${call.display}`}</Button>
-            )}
             {formIsAnchor ? (
               <Button href={formHref} variant="ghost" size="lg">Send an enquiry</Button>
             ) : (

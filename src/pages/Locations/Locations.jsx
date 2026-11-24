@@ -23,13 +23,13 @@ const PAGE_TITLE =
   'Locations: Madurai HQ, Thoothukudi, Malaysia | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
-  'Static Savvy Media offices in Madurai, Thoothukudi, and Rawang, Selangor (Malaysia). Premium digital marketing, SEO, GEO/AEO, Google Ads, and AI automation.'
+  'Static Savvy Media offices in Madurai and Thoothukudi, serving Tamil Nadu, Malaysia, Singapore and Dubai. Premium digital marketing, SEO, GEO/AEO, Google Ads, and AI automation.'
 
 const HERO_SUBTITLE =
-  'We are genuinely local. Tamil-speaking team. Offices in Madurai, Thoothukudi, and Rawang. We understand the markets we serve from the inside.'
+  'We are genuinely local. Tamil-speaking team. Offices in Madurai and Thoothukudi. We understand the markets we serve from the inside.'
 
 const INTRO_TEXT =
-  'Static Savvy Media operates across three markets, Madurai, Thoothukudi, and Rawang, Selangor (Malaysia). Each location brings deep local knowledge, industry understanding, and market-specific digital marketing strategies. We do not apply a one-size-fits-all approach. We build around how each market actually works, from local search behaviour and AI visibility to paid campaigns, content, and conversion-focused websites.'
+  'Static Savvy Media works from offices in Madurai and Thoothukudi and serves clients across Tamil Nadu and Malaysia. Each location brings deep local knowledge, industry understanding, and market-specific digital marketing strategies. We do not apply a one-size-fits-all approach. We build around how each market actually works, from local search behaviour and AI visibility to paid campaigns, content, and conversion-focused websites.'
 
 const LOCATIONS = [
   {
@@ -78,9 +78,9 @@ const LOCATIONS = [
   {
     number: '04',
     name: 'Rawang',
-    badge: 'Malaysia office',
+    badge: 'Selangor',
     description:
-      'Our Malaysia office at Taman Anggun, near AEON Mall Rawang: Google Maps, local SEO, Google Ads and websites for Rawang, Bandar Country Homes, Bukit Sentosa, Kuang and Serendah businesses.',
+      'Google Maps, local SEO, Google Ads and websites for Rawang, Bandar Country Homes, Bukit Sentosa, Kuang and Serendah businesses.',
     services: ['Google Maps & Local SEO', 'SEO & AI search', 'Google Ads & Social Media'],
     path: '/locations/rawang/',
     icon: 'malaysia',
@@ -90,7 +90,7 @@ const LOCATIONS = [
     name: 'Kuala Lumpur',
     badge: 'Klang Valley',
     description:
-      'Serving Kuala Lumpur and the Klang Valley from our Rawang, Selangor office: SEO for google.com.my in English and Bahasa Malaysia, Google Ads, social media and WhatsApp automation.',
+      'Serving Kuala Lumpur and the Klang Valley: SEO for google.com.my in English and Bahasa Malaysia, Google Ads, social media and WhatsApp automation.',
     services: ['SEO in Kuala Lumpur', 'Google Ads & Social Media', 'WhatsApp & AI Automation'],
     path: '/locations/kuala-lumpur/',
     icon: 'malaysia',
@@ -158,9 +158,9 @@ const LOCATIONS = [
   {
     number: '12',
     name: 'Selangor',
-    badge: 'Rawang office',
+    badge: 'Klang Valley',
     description:
-      'Petaling Jaya, Shah Alam, Subang Jaya and Klang, served from our office in Rawang, Selangor. Quotes in MYR.',
+      'Petaling Jaya, Shah Alam, Subang Jaya, Klang and Rawang, served from our Madurai HQ. Quotes in MYR.',
     services: ['SEO & GBP', 'Google Ads', 'Bahasa Malaysia content'],
     path: '/locations/selangor/',
     icon: 'malaysia',
@@ -168,7 +168,7 @@ const LOCATIONS = [
   {
     number: '13',
     name: 'Singapore',
-    badge: 'Remote · MY & IN',
+    badge: 'Remote · India',
     description:
       'Google Business Profile, SEO and AI-search optimisation for Singapore SMEs, run remotely on Singapore time. Quotes in SGD.',
     services: ['GBP & local SEO', 'GEO/AEO', 'Answer-first pages'],
@@ -208,7 +208,7 @@ const LOCATIONS = [
   {
     number: '17',
     name: 'Shah Alam',
-    badge: 'Rawang office',
+    badge: 'Klang Valley',
     description:
       'B2B pages for Shah Alam manufacturers and Maps work for neighbourhood clinics, workshops and F&B. Quotes in MYR.',
     services: ['SEO & GBP', 'B2B lead pages', 'Bahasa Malaysia content'],
@@ -218,7 +218,7 @@ const LOCATIONS = [
   {
     number: '18',
     name: 'Petaling Jaya',
-    badge: 'Rawang office',
+    badge: 'Klang Valley',
     description:
       'Neighbourhood map-pack, Google Ads and social media for PJ cafes, clinics, offices and home services. Quotes in MYR.',
     services: ['GBP & local SEO', 'Google Ads', 'Social media'],
@@ -276,17 +276,17 @@ const FAQS = [
   {
     question: 'Which office should I contact?',
     answer:
-      'For businesses in India, contact our Madurai head office on WhatsApp at +91 99440 40345; the same team covers Thoothukudi and the rest of Tamil Nadu. For Malaysia, call our Rawang office on +60 12-453 7030 or WhatsApp +91 99440 40345. You can also send the free Growth Audit form on any page and we route it to the right team.',
+      'For businesses in India, contact our Madurai head office on WhatsApp at +91 99440 40345; the same team covers Thoothukudi and the rest of Tamil Nadu. Malaysia, Singapore and Dubai use the same WhatsApp number. You can also send the free Growth Audit form on any page and we route it to the right team.',
   },
   {
     question: 'Where are Static Savvy Media offices located?',
     answer:
-      'We have offices in Madurai (headquarters), Thoothukudi, and Rawang, Selangor (Malaysia). Our Madurai office is our primary base, and we serve clients across Tamil Nadu and Malaysia from there.',
+      'We have offices in Madurai (headquarters) and Thoothukudi. Our Madurai office is our primary base, and we serve clients across Tamil Nadu and Malaysia from there.',
   },
   {
     question: 'Do you serve clients outside your office locations?',
     answer:
-      'Yes. Besides Madurai, Thoothukudi and Rawang, we work with businesses across Tamil Nadu, including Chennai, Coimbatore, Trichy, Salem, Erode, Tiruppur, Dindigul, Theni, Karaikudi, Virudhunagar, Sivakasi, Ramanathapuram and Tirunelveli, plus Malaysia, Singapore and Dubai. Each city has its own page. We do not publish an office address in a city where we have no office. Most work is by video call and WhatsApp, with in-person meetings by appointment where we have an office.',
+      'Yes. Besides Madurai and Thoothukudi, we work with businesses across Tamil Nadu, including Chennai, Coimbatore, Trichy, Salem, Erode, Tiruppur, Dindigul, Theni, Karaikudi, Virudhunagar, Sivakasi, Ramanathapuram and Tirunelveli, plus Malaysia (Kuala Lumpur, Selangor, Rawang), Singapore and Dubai. Each city has its own page. We do not publish an office address in a city where we have no office. Most work is by video call and WhatsApp, with in-person meetings by appointment where we have an office.',
   },
 ]
 
@@ -519,7 +519,7 @@ export default function Locations() {
                 </span>
                 <h3 className="lh-presence__title">International</h3>
                 <p className="lh-presence__text">
-                  Malaysia office in Rawang, Selangor. Grant-eligible digital marketing for
+                  Serving Kuala Lumpur, Selangor and all of Malaysia. Grant-eligible digital marketing for
                   Malaysian SMEs through MDEC and SMECorp digital transformation programmes.
                 </p>
               </div>
@@ -538,7 +538,7 @@ export default function Locations() {
       <CTASection
         title="Ready to Grow Your Business Locally?"
         subtitle="Message us on WhatsApp, we respond within the hour, every business day."
-        primaryLabel="WhatsApp: +91 99440 40345"
+        primaryLabel="Chat on WhatsApp"
         primaryHref={whatsappHref}
         secondaryLabel="Explore Our Services"
         secondaryTo="/services/"

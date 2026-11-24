@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { FOOTER_LINKS } from '../../data/navigation.js'
-import { SITE_NAME, SOCIAL_LINKS, WHATSAPP_NUMBER, WHATSAPP_MESSAGE, MALAYSIA_OFFICE, CONTACT_EMAIL } from '../../utils/constants.js'
+import { SITE_NAME, SOCIAL_LINKS, WHATSAPP_NUMBER, WHATSAPP_MESSAGE, CONTACT_EMAIL } from '../../utils/constants.js'
 import { useActiveRoute } from '../../hooks/useActiveRoute.js'
 import { cx, buildWhatsAppLink } from '../../utils/helpers.js'
 import logoImg from '../../assets/images/logo/SSMLOGO-300.webp'
@@ -90,19 +90,17 @@ export default function Footer() {
               </span>
             </Link>
 
-            {/* Visible contact lines on every page (Malaysia pages included): one WhatsApp line
-                site-wide; +60 is the Malaysia call line only (owner, 10 Nov 2026). */}
+            {/* Visible contact lines on every page: one WhatsApp line site-wide, shown as a link
+                rather than a raw number (owner, 24 Nov 2026). */}
             <ul className="site-footer__contact" aria-label="Contact Static Savvy Media">
-              <li>WhatsApp / call (India HQ): <a href={buildWhatsAppLink(WHATSAPP_NUMBER, WHATSAPP_MESSAGE)} target="_blank" rel="noopener noreferrer">{WHATSAPP_NUMBER}</a></li>
-              <li>Malaysia office, call: <a href={MALAYSIA_OFFICE.phoneHref}>{MALAYSIA_OFFICE.phoneDisplay}</a></li>
+              <li><a href={buildWhatsAppLink(WHATSAPP_NUMBER, WHATSAPP_MESSAGE)} target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a></li>
               <li>Email: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a></li>
             </ul>
 
-            {/* Offices, Madurai HQ first. */}
+            {/* Offices, Madurai HQ first. No Malaysian address (owner, 24 Nov 2026). */}
             <address className="site-footer__offices">
               <p><strong>Madurai (HQ)</strong><br />2nd Floor, 4/3, Srinivasa Perumal Koil St, Kamarajar Salai, Madurai, Tamil Nadu 625009</p>
               <p><strong>Thoothukudi</strong><br />90, Peria Kadai St, Matha Koil, Thoothukudi, Tamil Nadu 628001</p>
-              <p><strong>Rawang, Malaysia</strong><br />{MALAYSIA_OFFICE.streetAddress}, {MALAYSIA_OFFICE.postalCode} {MALAYSIA_OFFICE.addressLocality}, {MALAYSIA_OFFICE.addressRegion}</p>
             </address>
 
             <div className="site-footer__socials">
@@ -188,7 +186,7 @@ export default function Footer() {
 
         <div className="site-footer__bottom">
           <span suppressHydrationWarning>&copy; {new Date().getFullYear()} {SITE_NAME}. All rights reserved.</span>
-          <span>Madurai (HQ) · Thoothukudi · Rawang, Malaysia</span>
+          <span>Madurai (HQ) · Thoothukudi</span>
         </div>
       </div>
     </footer>

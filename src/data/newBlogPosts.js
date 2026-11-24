@@ -6,7 +6,6 @@
  * kind: 'article' = guide post (Article schema, no Service/LocalBusiness node); disclosure = affiliate disclosure line.
  */
 export const WA = '+91 99440 40345'
-export const MY_LINE = '+60 12-453 7030'
 
 export const newBlogPosts = [
   /* ============================== MADURAI ============================== */
@@ -39,7 +38,7 @@ export const newBlogPosts = [
       { q: 'How do I fix a suspended Google Business Profile?', a: 'Correct the guideline issue first, such as a keyword-stuffed name, a virtual address or duplicate profiles, then submit a reinstatement request with genuine documents like a trade licence, GST certificate, utility bill and signboard photos. Do not create a new profile meanwhile.' },
       { q: 'Why does my business show for its name but not for "near me" searches?', a: 'That is a ranking issue. Google weighs relevance, distance and prominence, so improve your categories, services, photos, reviews and website, and remember results change depending on where the searcher is.' },
       { q: 'Can I have more than one Google Business Profile in Madurai?', a: 'Only one per real, staffed location. Creating profiles for areas where you have no premises breaks Google’s guidelines and risks suspension.' },
-      { q: 'Can Static Savvy Media fix my Google Business Profile?', a: 'Yes. Our Madurai head office audits and fixes profiles within Google’s guidelines and manages them monthly if you want. WhatsApp +91 99440 40345, or call +60 12-453 7030 in Malaysia.' },
+      { q: 'Can Static Savvy Media fix my Google Business Profile?', a: 'Yes. Our Madurai head office audits and fixes profiles within Google’s guidelines and manages them monthly if you want. WhatsApp +91 99440 40345.' },
     ],
     related: [
       { to: '/services/local-seo/madurai/', label: 'Local SEO & Google Business Profile in Madurai' },
@@ -293,7 +292,7 @@ export const newBlogPosts = [
     "h1": "Hiring a Small Business Marketing Company in Malaysia: What to Expect in the First 90 Days",
     "description": "What a small business marketing company in Malaysia should do in the first 90 days: Google profile, website, WhatsApp, bilingual SEO and honest reports.",
     "imageAlt": "Small business marketing company in Malaysia: a 90-day plan for SMEs in Kuala Lumpur, Selangor and Rawang, Static Savvy Media",
-    "intro": "Short answer: a good small business marketing company in Malaysia starts by fixing what customers see first: your Google Business Profile, your website on a phone and how fast you reply on WhatsApp. It then builds search visibility in English and Bahasa Malaysia and reports results from accounts you own. In the first 90 days, expect an audit, a short written plan, the foundations fixed and early signals such as more profile views and enquiries. Do not expect guaranteed rankings or instant sales. Written by [Deepan Kanz](/about/deepan-kanz/), founder of Static Savvy Media, with our Malaysia team in Rawang, Selangor.",
+    "intro": "Short answer: a good small business marketing company in Malaysia starts by fixing what customers see first: your Google Business Profile, your website on a phone and how fast you reply on WhatsApp. It then builds search visibility in English and Bahasa Malaysia and reports results from accounts you own. In the first 90 days, expect an audit, a short written plan, the foundations fixed and early signals such as more profile views and enquiries. Do not expect guaranteed rankings or instant sales. Written by [Deepan Kanz](/about/deepan-kanz/), founder of Static Savvy Media, for Malaysian businesses.",
     "body": [
       {
         "h2": "What digital marketing services does a small business actually need?",
@@ -441,7 +440,7 @@ export const newBlogPosts = [
           "Reporting: from your own Google accounts, or screenshots from the agency's tools?"
         ],
         "after": [
-          "For typical market ranges, see our [SEO cost in Malaysia guide](/blog/seo-cost-malaysia-price-guide/). If you are looking at government digitalisation support, read our [SME grant guide](/blog/digital-marketing-malaysia-sme-grant-guide/) and check eligibility with the official programme before you budget around it. For a written quote in MYR for your business, call our Malaysia line +60 12-453 7030 or WhatsApp +91 99440 40345."
+          "For typical market ranges, see our [SEO cost in Malaysia guide](/blog/seo-cost-malaysia-price-guide/). If you are looking at government digitalisation support, read our [SME grant guide](/blog/digital-marketing-malaysia-sme-grant-guide/) and check eligibility with the official programme before you budget around it. For a written quote in MYR for your business, WhatsApp +91 99440 40345."
         ]
       },
       {
@@ -482,7 +481,7 @@ export const newBlogPosts = [
         "h2": "How Static Savvy Media works with Malaysian SMEs",
         "id": "ssm",
         "p": [
-          "Static Savvy Media is headquartered in [Madurai, India](/locations/madurai/), and has its Malaysia office in Rawang, Selangor, near AEON Mall Rawang. We work with businesses across Selangor, Kuala Lumpur and the rest of Malaysia, in person or online, on SEO, local SEO, AI search optimisation, website design, social media and WhatsApp automation, with content in English and Bahasa Malaysia and reports from your own accounts. Read more on our [Malaysia page](/locations/malaysia/) or our [Kuala Lumpur page](/locations/kuala-lumpur/)."
+          "Static Savvy Media is headquartered in [Madurai, India](/locations/madurai/), and works with businesses across Selangor, Kuala Lumpur and the rest of Malaysia online, on SEO, local SEO, AI search optimisation, website design, social media and WhatsApp automation, with content in English and Bahasa Malaysia and reports from your own accounts. Read more on our [Malaysia page](/locations/malaysia/) or our [Kuala Lumpur page](/locations/kuala-lumpur/)."
         ],
         "cta": {
           "to": "/contact/",
@@ -531,7 +530,7 @@ export const newBlogPosts = [
     "related": [
       {
         "to": "/locations/malaysia/",
-        "label": "Digital marketing in Malaysia (Rawang office)"
+        "label": "Digital marketing in Malaysia"
       },
       {
         "to": "/locations/kuala-lumpur/",
@@ -569,7 +568,7 @@ export const newBlogPosts = [
     h1: 'How Much Does SEO Cost in Malaysia? A 2026 Price Guide for KL and Selangor SMEs',
     description: 'SEO cost in Malaysia for SMEs: typical market ranges, what each level of service includes and what drives cost in KL and Selangor.',
     imageAlt: 'SEO cost in Malaysia 2026 price guide for Kuala Lumpur and Selangor SMEs, Static Savvy Media',
-    intro: 'Short answer: most Malaysian SMEs pay somewhere between RM500 and RM5,000 a month for SEO, and competitive national or e-commerce campaigns can run well above RM10,000. Where you land depends on how many keywords and locations you target, how competitive your industry is in Kuala Lumpur and Selangor, and how much content and technical work your website needs. This guide, written by our Malaysia team in Rawang, breaks down what you get at each price level and how to judge a quote.',
+    intro: 'Short answer: most Malaysian SMEs pay somewhere between RM500 and RM5,000 a month for SEO, and competitive national or e-commerce campaigns can run well above RM10,000. Where you land depends on how many keywords and locations you target, how competitive your industry is in Kuala Lumpur and Selangor, and how much content and technical work your website needs. This guide breaks down what you get at each price level and how to judge a quote.',
     body: [
       { h2: 'SEO prices in Malaysia at a glance', p: ['SEO in Malaysia is mostly sold as a monthly retainer. Agencies publish very different prices: an October 2026 survey by Dijumpai of 16 Malaysian agencies that print their prices found packages from RM650 to RM10,000 a month, with half starting below roughly RM1,850. Treat the bands below as a guide to scope, not a fixed price list.'], list: ['Starter / local SEO (about RM500 to RM1,500 a month): technical audit and fixes, a small set of keywords, on-page work on key pages, Google Business Profile basics, monthly report.', 'Growth (about RM1,500 to RM5,000 a month): more keywords and pages, regular content, schema markup, quality link building, local SEO across several Klang Valley areas.', 'Competitive / national (RM5,000 a month and above): large sites, e-commerce, many locations, PR-level links, advanced technical SEO and conversion tracking.', 'One-off SEO audit: a fixed fee for a technical and keyword audit without ongoing work, useful before you commit to a retainer.'] },
       { h2: 'What drives the cost of SEO in KL and Selangor', h3: [
@@ -579,13 +578,13 @@ export const newBlogPosts = [
         { t: 'Content volume', p: 'Service pages, location pages and blog posts that answer real customer questions are usually the biggest cost inside a retainer, and the biggest driver of results.' },
         { t: 'AI search (GEO and AEO)', p: 'More buyers now ask ChatGPT, Gemini or Google AI Overviews which agency or supplier to choose. Optimising to be cited in those answers is increasingly part of SEO packages. See [what generative engine optimization is](/blog/what-is-generative-engine-optimization/).' },
       ] },
-      { h2: 'Getting a quote from us', p: ['Static Savvy Media SEO retainers in Malaysia come in three scopes: Google Business Profile management, GBP + website SEO, and GBP + SEO + AEO + GEO, all monthly with no minimum contract term. We quote each business in MYR after a free review of its website, Google Business Profile and competitors, so you know exactly what is included before you start. Message us on WhatsApp at +91 99440 40345 (or call +60 12-453 7030) or [send an enquiry](/contact/) for a custom quote. See what we deliver on our [SEO company in Malaysia](/services/seo/malaysia/) and [local SEO in Malaysia](/services/local-seo/malaysia/) pages.'], cta: { to: '/contact/', label: 'Get a custom quote' } },
+      { h2: 'Getting a quote from us', p: ['Static Savvy Media SEO retainers in Malaysia come in three scopes: Google Business Profile management, GBP + website SEO, and GBP + SEO + AEO + GEO, all monthly with no minimum contract term. We quote each business in MYR after a free review of its website, Google Business Profile and competitors, so you know exactly what is included before you start. Message us on WhatsApp at +91 99440 40345 or [send an enquiry](/contact/) for a custom quote. See what we deliver on our [SEO company in Malaysia](/services/seo/malaysia/) and [local SEO in Malaysia](/services/local-seo/malaysia/) pages.'], cta: { to: '/contact/', label: 'Get a custom quote' } },
       { h2: 'How long before SEO pays off?', p: ['Technical fixes and Google Business Profile improvements can lift local visibility within weeks. Competitive keyword rankings usually take three to six months, and results compound over the following months as content and links build up. If you need enquiries this week, pair SEO with Google Ads while organic rankings grow.'] },
       { h2: 'Red flags in cheap SEO quotes', list: ['Guaranteed number one rankings on Google', '"Thousands of backlinks" for a small monthly fee (often spam that can hurt you)', 'No list of monthly deliverables in writing', 'Reports that show only rankings and traffic, never calls, WhatsApp chats or form enquiries', 'The agency keeps ownership of your Search Console, Analytics or Google Business Profile', 'Long lock-in contracts with no review point'] },
-      { h2: 'How to compare SEO quotes', p: ['Ask every agency for the same things: the keywords and locations they will target, the pages they will create or improve each month, how they build links, how they track enquiries, and who owns the accounts. Then compare cost per deliverable, not just the headline monthly fee. Our [checklist for choosing a digital marketing agency in Malaysia](/blog/how-to-choose-digital-marketing-agency-malaysia/) has the full list of questions.', 'If you are in the Klang Valley, read our guides to [SEO agency in Kuala Lumpur](/services/seo/kuala-lumpur/) and [SEO in Selangor (Shah Alam, Petaling Jaya, Klang and Rawang)](/blog/seo-services-selangor-shah-alam-petaling-jaya/), or talk to our Rawang team on +60 12-453 7030.'] },
+      { h2: 'How to compare SEO quotes', p: ['Ask every agency for the same things: the keywords and locations they will target, the pages they will create or improve each month, how they build links, how they track enquiries, and who owns the accounts. Then compare cost per deliverable, not just the headline monthly fee. Our [checklist for choosing a digital marketing agency in Malaysia](/blog/how-to-choose-digital-marketing-agency-malaysia/) has the full list of questions.', 'If you are in the Klang Valley, read our guides to [SEO agency in Kuala Lumpur](/services/seo/kuala-lumpur/) and [SEO in Selangor (Shah Alam, Petaling Jaya, Klang and Rawang)](/blog/seo-services-selangor-shah-alam-petaling-jaya/), or chat with us on WhatsApp.'] },
     ],
     faqs: [
-      { q: 'How much does SEO cost per month in Malaysia?', a: 'Most Malaysian SMEs pay between about RM500 and RM5,000 a month. Local or starter SEO sits at the lower end, growth campaigns with regular content and links in the middle, and competitive national or e-commerce SEO can exceed RM5,000 to RM10,000 a month. Static Savvy Media quotes each business after a free review; WhatsApp +91 99440 40345 (or call +60 12-453 7030) for a custom quote.' },
+      { q: 'How much does SEO cost per month in Malaysia?', a: 'Most Malaysian SMEs pay between about RM500 and RM5,000 a month. Local or starter SEO sits at the lower end, growth campaigns with regular content and links in the middle, and competitive national or e-commerce SEO can exceed RM5,000 to RM10,000 a month. Static Savvy Media quotes each business after a free review; WhatsApp +91 99440 40345 for a custom quote.' },
       { q: 'Is SEO worth it for a small business in Malaysia?', a: 'Usually yes, if customers search for what you sell. SEO keeps bringing enquiries after the work is done, unlike ads that stop when you stop paying. It is less suitable if you need sales within days, in which case start with Google Ads and build SEO alongside.' },
       { q: 'Why is SEO so expensive?', a: 'Good SEO is mostly skilled labour: technical fixes, research, writing useful pages, earning links and reporting every month. Very cheap packages usually cut those parts or rely on spammy links that can hurt your site later.' },
       { q: 'How much does local SEO cost in Kuala Lumpur?', a: 'Local SEO for a single location, focused on Google Business Profile, reviews, citations and a few location pages, usually costs less than a full SEO retainer. Price rises with the number of branches and areas you want to rank in across KL and Selangor.' },
@@ -630,19 +629,19 @@ export const newBlogPosts = [
       { h2: '10 questions to ask every digital marketing agency', id: 'questions', list: ['Who will actually work on my account, and are they in-house or outsourced?', 'Which channels do you recommend for my goal, and why not the others?', 'What will you deliver each month, in writing?', 'How do you track enquiries and sales, not just traffic and likes?', 'Can you show me a real monthly report from a current client (with their permission)?', 'Will ad accounts, Google Business Profile, Search Console and the website be in my company’s name?', 'Is ad spend included in your fee or paid separately to Google and Meta?', 'What is the minimum contract period and notice period, and what do I get back if I leave?', 'How do you handle PDPA consent on enquiry forms and WhatsApp leads?', 'Can you work in Bahasa Malaysia, English and, if relevant, Chinese or Tamil?'] },
       { h2: 'How to compare agency quotes in 5 steps', id: 'compare-quotes', list: ['Send every agency the same brief: your goal, locations, budget range and the channels you are considering.', 'Ask for itemised quotes: management fee, deliverables per month, setup costs and reporting.', 'Take ad spend out of the comparison so you compare agency fees like for like.', 'Score each quote on the same points: fit to your goal, deliverables, tracking, ownership and exit terms.', 'Choose on value over 6 to 12 months, not the lowest first month, and agree a review point before you sign.'] },
       { h2: 'Red flags', id: 'red-flags', list: ['Guaranteed number one rankings on Google', 'Very cheap packages that bundle "thousands of backlinks"', 'Refusing to give you admin access to your own accounts', 'Reports with only impressions, reach and likes, never enquiries', 'Locked long contracts with no performance review point', 'Case studies they cannot explain or verify'] },
-      { h2: 'How much does a digital marketing agency in Malaysia cost?', id: 'cost', p: ['Prices vary widely because agencies price different scopes: SEO, ads management, social media content and websites are usually priced separately, and ad spend is normally paid directly to Google or Meta on top of the agency fee. That is why two quotes with the same monthly number can include very different amounts of work.', 'For reference, Static Savvy Media offers three Malaysia SEO plans: Google Business Profile management (12 posts a month), Google Business Profile plus website SEO with 4 blogs a month, and GBP, SEO, AEO and GEO. Each is quoted after a free review. Message us on WhatsApp at +91 99440 40345 (or call +60 12-453 7030) or [send an enquiry](/contact/) for a custom quote. See what each plan includes on our [SEO agency in Kuala Lumpur](/services/seo/kuala-lumpur/) page.'] },
+      { h2: 'How much does a digital marketing agency in Malaysia cost?', id: 'cost', p: ['Prices vary widely because agencies price different scopes: SEO, ads management, social media content and websites are usually priced separately, and ad spend is normally paid directly to Google or Meta on top of the agency fee. That is why two quotes with the same monthly number can include very different amounts of work.', 'For reference, Static Savvy Media offers three Malaysia SEO plans: Google Business Profile management (12 posts a month), Google Business Profile plus website SEO with 4 blogs a month, and GBP, SEO, AEO and GEO. Each is quoted after a free review. Message us on WhatsApp at +91 99440 40345 or [send an enquiry](/contact/) for a custom quote. See what each plan includes on our [SEO agency in Kuala Lumpur](/services/seo/kuala-lumpur/) page.'] },
       { h2: 'Local knowledge matters', id: 'local', p: ['Search behaviour differs between Kuala Lumpur, Selangor towns such as Shah Alam, Petaling Jaya and Rawang, and other states. An agency should understand local search terms, the Google Business Profile map pack, and channels Malaysians actually use: Facebook, Instagram, TikTok, WhatsApp, and Xiaohongshu for some audiences.', 'If you are considering a grant-funded project, read our [MDEC and SMECorp grant guide](/blog/digital-marketing-malaysia-sme-grant-guide/) first and check current programme rules.'] },
-      { h2: 'How Static Savvy Media works in Malaysia', id: 'ssm-malaysia', p: ['Static Savvy Media was founded on 1 October 2021 by Deepan Kanz. Our Malaysia team is in Rawang, Selangor, serving Kuala Lumpur and the Klang Valley, backed by our head office in Madurai, India. We focus on [SEO company in Malaysia](/services/seo/malaysia/), [local SEO and Google Business Profile](/services/local-seo/malaysia/), social media and websites, with accounts in your name, monthly reports tied to enquiries and no lock-in. Learn more on our [digital marketing agency in Malaysia](/locations/malaysia/) page, our [Kuala Lumpur page](/locations/kuala-lumpur/) or our [Selangor page](/locations/selangor/).'] },
+      { h2: 'How Static Savvy Media works in Malaysia', id: 'ssm-malaysia', p: ['Static Savvy Media was founded on 1 October 2021 by Deepan Kanz. We serve Kuala Lumpur, the Klang Valley and the rest of Malaysia from our head office in Madurai, India. We focus on [SEO company in Malaysia](/services/seo/malaysia/), [local SEO and Google Business Profile](/services/local-seo/malaysia/), social media and websites, with accounts in your name, monthly reports tied to enquiries and no lock-in. Learn more on our [digital marketing agency in Malaysia](/locations/malaysia/) page, our [Kuala Lumpur page](/locations/kuala-lumpur/) or our [Selangor page](/locations/selangor/).'] },
     ],
     faqs: [
       { q: 'What is the best digital marketing agency in Malaysia for a small business?', a: 'There is no single best agency for every business. The best fit is the one that understands your goal and local market, lists monthly deliverables and pricing in writing, keeps accounts in your name, reports on enquiries or sales, and offers a fair notice period. Use the 10 questions in this checklist to compare your shortlist.' },
       { q: 'What does a digital marketing agency actually do?', a: 'It plans and runs the channels that bring you customers online: SEO, Google Business Profile, paid ads, social media, websites and tracking. A good agency ties all of that to enquiries and sales, not only traffic.' },
       { q: 'Which digital marketing services does a small business need first?', a: 'Start with the channel that matches how your customers buy. Shops and clinics usually start with Google Business Profile and local SEO, service businesses with SEO for their service pages, and businesses that need leads quickly with Google Ads and tracking. Add the next channel once the first is measured and working.' },
-      { q: 'How much does a digital marketing agency in Malaysia cost?', a: 'It depends on scope: SEO, ads management, social media content and websites are priced differently, and ad spend is usually separate from the agency fee. Compare written scopes, not just monthly prices. Static Savvy Media quotes its Malaysia SEO plans after a free review; WhatsApp +91 99440 40345 (or call +60 12-453 7030) for a custom quote.' },
+      { q: 'How much does a digital marketing agency in Malaysia cost?', a: 'It depends on scope: SEO, ads management, social media content and websites are priced differently, and ad spend is usually separate from the agency fee. Compare written scopes, not just monthly prices. Static Savvy Media quotes its Malaysia SEO plans after a free review; WhatsApp +91 99440 40345 for a custom quote.' },
       { q: 'Should I sign a 12-month contract with a marketing agency?', a: 'For a first engagement, a shorter commitment with a review point after the first few months is safer. If an agency asks for a long lock-in, make sure the contract lists deliverables, reporting and what you get back if you leave.' },
       { q: 'Should I hire an agency in Kuala Lumpur or can it be remote?', a: 'Digital work can be done remotely, but local knowledge and the ability to meet when needed help. Choose on expertise, transparency and reporting, then confirm they understand your local market.' },
       { q: 'How long before digital marketing shows results?', a: 'Paid ads can produce enquiries within days of launch. SEO usually takes several months to build. Ask the agency for a realistic timeline for your channel mix.' },
-      { q: 'Does Static Savvy Media have an office in Malaysia?', a: 'Yes. Our Malaysia team is based in Rawang, Selangor, serving Kuala Lumpur and the Klang Valley. You can call +60 12-453 7030.' },
+      { q: 'How does Static Savvy Media work with Malaysian clients?', a: 'From our head office in Madurai, India, over WhatsApp and video calls, serving Kuala Lumpur, the Klang Valley and the rest of Malaysia. WhatsApp +91 99440 40345.' },
     ],
     related: [
       { to: '/locations/malaysia/', label: 'Digital marketing agency in Malaysia' },
@@ -660,7 +659,7 @@ export const newBlogPosts = [
     h1: 'Local SEO in Rawang: How Rawang Businesses Get Found on Google Maps',
     description: 'A local SEO guide for businesses in Rawang, Selangor: Google Business Profile, Bandar Country Homes and Bukit Beruntung searches, reviews, citations.',
     imageAlt: 'Local SEO and Google Maps guide for Rawang, Selangor businesses, Static Savvy Media',
-    intro: 'Rawang has grown from a town on the old trunk road into a busy residential and commercial hub in Gombak district, with families moving into areas such as Bandar Country Homes, Rawang Perdana, Bandar Tasik Puteri and nearby Bukit Beruntung and Serendah. When those residents need a clinic, tuition centre, workshop or contractor, they search Google Maps. Our Malaysia team is based in Rawang, and this is how we approach local SEO here.',
+    intro: 'Rawang has grown from a town on the old trunk road into a busy residential and commercial hub in Gombak district, with families moving into areas such as Bandar Country Homes, Rawang Perdana, Bandar Tasik Puteri and nearby Bukit Beruntung and Serendah. When those residents need a clinic, tuition centre, workshop or contractor, they search Google Maps. This is how we approach local SEO here.',
     body: [
       { h2: 'Why "near me" matters more in Rawang', p: ['Many Rawang residents commute towards Kuala Lumpur via the North-South Expressway or KTM Komuter, so their local errands happen in a tight time window near home. Searches like "klinik gigi Rawang", "car service near me" or "tuition Bandar Country Homes" are decided in the Google map pack, mostly on phones.'] },
       { h2: 'Google Business Profile: the essentials', list: ['Exact business name as on your signboard and SSM registration, with no keyword stuffing', 'Correct primary category, plus relevant secondary categories', 'Pin placed exactly on your shop, with a full address including taman and postcode', 'Service area set to the neighbourhoods you really serve, if you visit customers', 'Opening hours, including public holiday hours for Hari Raya, Chinese New Year and Deepavali', 'Real photos of shopfront, interior, team and work, updated regularly'] },
@@ -676,7 +675,7 @@ export const newBlogPosts = [
       { q: 'How do I get my Rawang business on Google Maps?', a: 'Create or claim a Google Business Profile, complete verification, choose the right category and add your exact address, hours and photos. Then build reviews and keep the profile active.' },
       { q: 'How long does local SEO take in Rawang?', a: 'Profile fixes can improve visibility within weeks, especially if the profile was incomplete. Competitive categories take longer and depend on reviews, relevance and distance to the searcher.' },
       { q: 'Can I rank in Kuala Lumpur from a Rawang address?', a: 'In the map pack, proximity matters, so a Rawang address mainly ranks near Rawang. To win KL searches, use organic SEO with service pages, content and links, or Google Ads.' },
-      { q: 'Where is Static Savvy Media’s Malaysia office?', a: 'Our Malaysia team is based in Rawang, Selangor. Call +60 12-453 7030 or WhatsApp +91 99440 40345.' },
+      { q: 'How do I contact Static Savvy Media from Rawang?', a: 'WhatsApp +91 99440 40345, the one number we use for every market. We serve Rawang businesses from our head office in Madurai, India.' },
     ],
     related: [
       { to: '/locations/malaysia/', label: 'Static Savvy Media Malaysia (Rawang)' },
@@ -702,13 +701,13 @@ export const newBlogPosts = [
       { h2: 'Location pages without duplicate content', p: ['If you serve several Selangor areas, create a page only where you have something specific to say: the team or branch there, projects in that area, local FAQs, directions, and service differences. Ten near-identical pages with the town name swapped can be treated as doorway pages and rarely rank well.'] },
       { h2: 'Technical basics Selangor competitors often miss', list: ['Fast mobile pages (many searches happen on the move in traffic or on the LRT and MRT)', 'One clear H1 and unique title per page', 'LocalBusiness or Organization schema with your real address', 'Search Console set up so you can see which Selangor queries you appear for', 'Internal links from your homepage to key service and location pages'] },
       { h2: 'Earning links the right way', p: ['Links still matter, but bought link packages are a risk. Better sources for Selangor businesses: trade associations, local chambers of commerce, supplier and partner pages, local news coverage of genuine events, and useful guides that other sites want to reference.'] },
-      { h2: 'Choosing an SEO partner in Selangor', p: ['Ask for a written plan, access to your own Search Console and Analytics, and monthly reporting on enquiries. Static Savvy Media’s Malaysia team is based in Rawang and works with businesses across Selangor and Kuala Lumpur. See [SEO company in Malaysia](/services/seo/malaysia/), [SEO agency in Kuala Lumpur](/services/seo/kuala-lumpur/) and our [agency buyer’s checklist](/blog/how-to-choose-digital-marketing-agency-malaysia/).'] },
+      { h2: 'Choosing an SEO partner in Selangor', p: ['Ask for a written plan, access to your own Search Console and Analytics, and monthly reporting on enquiries. Static Savvy Media works with businesses across Selangor and Kuala Lumpur. See [SEO company in Malaysia](/services/seo/malaysia/), [SEO agency in Kuala Lumpur](/services/seo/kuala-lumpur/) and our [agency buyer’s checklist](/blog/how-to-choose-digital-marketing-agency-malaysia/).'] },
     ],
     faqs: [
       { q: 'Do I need a separate page for every Selangor town?', a: 'No. Create location pages only where you have genuinely different, useful content for that area. Otherwise one strong service page plus Google Business Profile coverage is better.' },
       { q: 'Is SEO worth it for B2B companies in Shah Alam or Klang?', a: 'Often yes. B2B buyers research suppliers online before calling, and specific product or capability searches have less competition than consumer terms.' },
       { q: 'How long does SEO take in Selangor?', a: 'Expect several months before meaningful organic growth, longer in competitive niches. Local map pack improvements can come sooner if your profile was incomplete.' },
-      { q: 'Does Static Savvy Media offer SEO in Selangor?', a: 'Yes. Our Malaysia team in Rawang serves Selangor and Kuala Lumpur. Call +60 12-453 7030.' },
+      { q: 'Does Static Savvy Media offer SEO in Selangor?', a: 'Yes. We serve Selangor and Kuala Lumpur from our head office in Madurai, India. WhatsApp +91 99440 40345.' },
     ],
     related: [
       { to: '/locations/selangor/', label: 'Digital marketing agency in Selangor' },
@@ -739,7 +738,7 @@ export const newBlogPosts = [
       { q: 'Is Google Business Profile free in Malaysia?', a: 'Yes. Creating and managing a Google Business Profile is free. Be wary of callers claiming you must pay Google to stay listed.' },
       { q: 'Why was my Google Business Profile suspended?', a: 'Common reasons are keywords added to the business name, a virtual or unstaffed address, duplicate listings, or suspicious edits. Fix the cause, then request reinstatement through Google.' },
       { q: 'Should my profile be in English or Bahasa Malaysia?', a: 'Use the language your customers search in. Many Malaysian businesses use English with Bahasa Malaysia in services and posts. Keep the business name exactly as registered.' },
-      { q: 'Can Static Savvy Media manage my Google Business Profile?', a: 'Yes. Our Malaysia team optimises and manages profiles for businesses in Kuala Lumpur, Selangor and other states. Call +60 12-453 7030.' },
+      { q: 'Can Static Savvy Media manage my Google Business Profile?', a: 'Yes. We optimise and manage profiles for businesses in Kuala Lumpur, Selangor and other states. WhatsApp +91 99440 40345.' },
     ],
     related: [
       { to: '/services/local-seo/malaysia/', label: 'Local SEO in Malaysia' },
@@ -767,14 +766,14 @@ export const newBlogPosts = [
       { h2: 'Content for a multilingual audience', p: ['Decide your main language by customer, then adapt rather than translate word for word. A Klang Valley bakery might post in English and Bahasa Malaysia with Chinese captions for festive orders. Use local references, real people and real products instead of generic stock images.'] },
       { h2: 'Plan around the Malaysian calendar', list: ['Chinese New Year, Ramadan and Hari Raya Aidilfitri, Deepavali and Christmas', 'Back-to-school periods and school holidays', 'Mega sale dates like 9.9, 11.11 and 12.12 for e-commerce', 'Your own industry peaks and local events'] },
       { h2: 'Organic plus paid', p: ['Organic reach on Facebook and Instagram is limited, so a modest, well-targeted ad budget usually amplifies your best posts. Use objectives that create actions such as messages, leads or website visits, and target by area (for example a radius around your outlet in Petaling Jaya or Rawang) rather than all of Malaysia.'] },
-      { h2: 'Measure what matters', p: ['Track enquiries, WhatsApp chats, bookings and sales from social, not only likes and followers. Review monthly: which posts drove messages, which ads produced customers, what to stop.', 'Social works best alongside search. Pair it with [SEO company in Malaysia](/services/seo/malaysia/) and a strong [Google Business Profile](/blog/google-business-profile-optimisation-malaysia/). Talk to our [Malaysia team](/locations/malaysia/) if you want a plan built for your business.'] },
+      { h2: 'Measure what matters', p: ['Track enquiries, WhatsApp chats, bookings and sales from social, not only likes and followers. Review monthly: which posts drove messages, which ads produced customers, what to stop.', 'Social works best alongside search. Pair it with [SEO company in Malaysia](/services/seo/malaysia/) and a strong [Google Business Profile](/blog/google-business-profile-optimisation-malaysia/). Talk to [our team](/locations/malaysia/) if you want a plan built for your business.'] },
     ],
     faqs: [
       { q: "How much does social media advertising cost in Malaysia?", a: "There is no fixed price. Meta and TikTok ads run on auctions, so cost depends on audience, competition, season and creative quality. Start with a small test budget, measure cost per enquiry, then scale what works. Agency management fees are separate from ad spend." },
       { q: 'Which social media platform is best for Malaysian SMEs?', a: 'It depends on your customers. Facebook and Instagram suit most local businesses, TikTok suits consumer brands that can produce short video, and Xiaohongshu can help reach some Chinese-speaking audiences.' },
       { q: 'How often should a Malaysian business post on social media?', a: 'Consistency matters more than volume. A few strong posts a week, plus stories and quick replies to messages, usually beats daily low-quality posting.' },
       { q: 'Do I need to run ads on social media?', a: 'Not always, but organic reach is limited. A small, targeted ad budget helps your best content reach local customers and produces measurable enquiries.' },
-      { q: 'Does Static Savvy Media manage social media in Malaysia?', a: 'Yes. Our Malaysia team plans content, manages ads and tracks enquiries for SMEs in Kuala Lumpur, Selangor and beyond. Call +60 12-453 7030.' },
+      { q: 'Does Static Savvy Media manage social media in Malaysia?', a: 'Yes. We plan content, manage ads and track enquiries for SMEs in Kuala Lumpur, Selangor and beyond. WhatsApp +91 99440 40345.' },
     ],
     related: [
       { to: '/blog/agentic-ai-tools-small-business-marketing/', label: 'Agentic AI tools for small business marketing' },
@@ -906,7 +905,7 @@ export const newBlogPosts = [
     slug: 'best-web-hosting-india-malaysia-small-business',
     kind: 'article',
     region: 'madurai',
-    locationLabel: 'Madurai, Tamil Nadu (HQ) · Rawang, Malaysia',
+    locationLabel: 'Madurai, Tamil Nadu (HQ)',
     category: 'Website Guides',
     published: '2026-10-28',
     publishedLabel: '28 October 2026',
@@ -967,12 +966,12 @@ export const newBlogPosts = [
       },
       { h2: 'Which host should you choose?', h3: [
         { t: 'A first website for a shop, clinic or service business', p: 'Hostinger or MilesWeb. Both start at ₹69 a month in India. Choose MilesWeb if a steady renewal price matters more than the lowest first bill.' },
-        { t: 'A Malaysian business with mostly local customers', p: 'Exabytes for a Malaysian data centre and WhatsApp support, or Hostinger Malaysia for the lowest price. For a website quote, WhatsApp +91 99440 40345 (or call +60 12-453 7030) or [send an enquiry](/contact/).' },
+        { t: 'A Malaysian business with mostly local customers', p: 'Exabytes for a Malaysian data centre and WhatsApp support, or Hostinger Malaysia for the lowest price. For a website quote, WhatsApp +91 99440 40345 or [send an enquiry](/contact/).' },
         { t: 'A WordPress site you want looked after', p: 'SiteGround, if you are comfortable paying in US dollars and planning for the renewal price.' },
         { t: 'An online store or a site that is growing fast', p: 'Cloudways, because you can add server resources without moving host. Pair it with [website design and development](/services/website-design-development/) that is built for speed.' },
       ] },
       { h2: 'Hosting checklist before you pay', list: ['Compare the renewal price, not just the intro price', 'Check the term needed for the advertised price (12, 36 or 48 months)', 'Add GST (18% in India) or SST in Malaysia to the total', 'Confirm free SSL, daily backups and business email', 'Pick a data centre close to your customers: India for Tamil Nadu buyers, Malaysia or Singapore for Malaysian buyers', 'Keep the domain in your own name and your own account', 'Ask what the refund window covers (some plans are excluded)'] },
-      { h2: 'Hosting is only the start: speed, SEO and enquiries', p: ['Good hosting keeps your site online. It does not bring enquiries by itself. Pages still need to load fast on mobile, answer buyer questions and show up on Google and Maps.', 'Static Savvy Media builds fast business websites from our Madurai head office and our Malaysia team in Rawang. See [website design in Madurai](/services/website-design-development/madurai/), [a custom website quote](/contact/), our [website design checklist](/blog/website-design-company-madurai-checklist/) and [SEO services in Madurai](/services/seo/madurai/).'],
+      { h2: 'Hosting is only the start: speed, SEO and enquiries', p: ['Good hosting keeps your site online. It does not bring enquiries by itself. Pages still need to load fast on mobile, answer buyer questions and show up on Google and Maps.', 'Static Savvy Media builds fast business websites from our Madurai head office. See [website design in Madurai](/services/website-design-development/madurai/), [a custom website quote](/contact/), our [website design checklist](/blog/website-design-company-madurai-checklist/) and [SEO services in Madurai](/services/seo/madurai/).'],
         cta: { to: '/services/website-design-development/', label: 'Website design and development' },
       },
     ],
@@ -983,7 +982,7 @@ export const newBlogPosts = [
       { q: 'Is 99.9% uptime good enough for a business website?', a: '99.9% allows roughly 43 minutes of downtime a month. That is fine for most small business websites. Stores that take many orders may prefer a host advertising 99.99%, such as Cloudways.' },
       { q: 'Should I host in India, Malaysia or Singapore?', a: 'Host close to your customers. Choose an Indian data centre for Tamil Nadu customers, and a Malaysian or Singapore data centre for customers in Kuala Lumpur and Selangor.' },
       { q: 'Are the links on this page affiliate links?', a: 'Provider buttons may become affiliate links. If they do, we may earn a commission at no extra cost to you. It does not change our ranking or the prices shown, which come from each provider\'s own page.' },
-      { q: 'Can Static Savvy Media set up hosting and build my website?', a: 'Yes. We build business websites and can set up hosting, domain, SSL and email in your own name. WhatsApp +91 99440 40345, or call our Malaysia line +60 12-453 7030.' },
+      { q: 'Can Static Savvy Media set up hosting and build my website?', a: 'Yes. We build business websites and can set up hosting, domain, SSL and email in your own name. WhatsApp +91 99440 40345.' },
     ],
     related: [
       { to: '/services/website-design-development/madurai/', label: 'Website design in Madurai' },
@@ -996,7 +995,7 @@ export const newBlogPosts = [
     slug: 'agentic-ai-tools-small-business-marketing',
     kind: 'article',
     region: 'malaysia',
-    locationLabel: 'Rawang, Malaysia · Madurai, Tamil Nadu (HQ)',
+    locationLabel: 'Madurai, Tamil Nadu (HQ) · serving Malaysia',
     category: 'AI Automation',
     published: '2026-10-28',
     publishedLabel: '28 October 2026',
@@ -1055,7 +1054,7 @@ export const newBlogPosts = [
       { q: 'Can an AI agent reply to WhatsApp leads?', a: 'Yes, through the WhatsApp Business Platform and a connected tool. We recommend a person approves replies at first, and that the agent hands over to your team for pricing and bookings.' },
       { q: 'Is it safe to give AI agents customer data?', a: 'It can be, if you limit what the agent can access, keep human approval for customer messages, and follow the DPDP Act 2023 in India or the PDPA 2010 in Malaysia.' },
       { q: 'Are the tool links on this page affiliate links?', a: 'They may become affiliate links. If they do, we may earn a commission at no extra cost to you. It does not change our picks or the prices shown.' },
-      { q: 'Can Static Savvy Media set up AI automation for me?', a: 'Yes. Our Malaysia team in Rawang and our Madurai head office set up AI lead follow-up and reporting. Call +60 12-453 7030 in Malaysia or WhatsApp +91 99440 40345.' },
+      { q: 'Can Static Savvy Media set up AI automation for me?', a: 'Yes. Our Madurai head office sets up AI lead follow-up and reporting for Indian and Malaysian businesses. WhatsApp +91 99440 40345.' },
     ],
     related: [
       { to: '/services/ai-business-automation/malaysia/', label: 'AI business automation in Malaysia' },

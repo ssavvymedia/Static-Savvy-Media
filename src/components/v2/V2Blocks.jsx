@@ -10,7 +10,7 @@ import '../../styles/pages/home-v2.css'
 
 /* Shared v2 blocks used on the homepage, /locations/madurai/, /services/seo/madurai/ and Madurai guides.
  * All facts here are verified: 4.9★ from 106 Google reviews (Madurai GBP, re-checked 9 Nov 2026),
- * founded in Madurai in 2021, offices in Madurai (HQ), Thoothukudi and Rawang (Malaysia). */
+ * founded in Madurai in 2021, offices in Madurai (HQ) and Thoothukudi. */
 export const REVIEW_PROOF = `${GBP_REVIEW_SUMMARY.rating}★ from ${GBP_REVIEW_SUMMARY.count} Google reviews (Nov 2026)`
 
 const Svg = ({ d, children }) => (

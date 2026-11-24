@@ -88,7 +88,7 @@ export const content = {
   ],
   faqTitle: 'Digital Marketing in Tamil Nadu: Common Questions',
   faqs: [
-    { question: 'Where are your offices in Tamil Nadu?', answer: 'Our head office is in Madurai (Kamarajar Salai) and we have a second office in Thoothukudi. We also have an office in Rawang, Selangor, Malaysia.' },
+    { question: 'Where are your offices in Tamil Nadu?', answer: 'Our head office is in Madurai (Kamarajar Salai) and we have a second office in Thoothukudi.' },
     { question: 'Do you work with businesses outside Madurai and Thoothukudi?', answer: 'Yes. Chennai, Coimbatore, Trichy, Salem, Erode, Tiruppur, Dindigul, Theni, Sivakasi, Virudhunagar, Karaikudi, Ramanathapuram and Tirunelveli each have a page. The work is remote, on WhatsApp and video calls, with visits by appointment. The only Tamil Nadu street addresses we publish are Madurai and Thoothukudi.' },
     { question: 'Do you provide marketing in Tamil?', answer: 'Yes. Our team writes social media, ad and website content in Tamil and English.' },
     { question: 'Why is there one page per city?', answer: 'So a Theni hotel page does not compete with the Madurai SEO page, and a Sivakasi printer page does not compete with the Virudhunagar town page. Each URL has one primary topic.' },

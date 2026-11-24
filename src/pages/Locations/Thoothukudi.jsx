@@ -125,7 +125,7 @@ const FAQS = [
   {
     question: 'Do you have a physical office in Thoothukudi?',
     answer:
-      'Yes. Our Thoothukudi office is at 90, Peria Kadai St, Matha Koil, Thoothukudi 628001, one of our three offices alongside the Madurai head office and Rawang, Malaysia. The local team serves Thoothukudi businesses, with meetings at the office or at your premises by appointment. Call or WhatsApp +91 99440 40345.',
+      'Yes. Our Thoothukudi office is at 90, Peria Kadai St, Matha Koil, Thoothukudi 628001, one of our two offices alongside the Madurai head office. The local team serves Thoothukudi businesses, with meetings at the office or at your premises by appointment. Call or WhatsApp +91 99440 40345.',
   },
   {
     question: 'Can you help B2B industrial businesses generate leads online?',
@@ -204,7 +204,7 @@ export default function Thoothukudi() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            WhatsApp: +91 99440 40345
+            Chat on WhatsApp
           </Button>
         }
       >
@@ -504,7 +504,7 @@ export default function Thoothukudi() {
       <CTASection
         title="Grow your Thoothukudi business with digital marketing that understands the port city economy."
         subtitle=""
-        primaryLabel="WhatsApp: +91 99440 40345"
+        primaryLabel="Chat on WhatsApp"
         primaryHref={whatsappHref}
       />
       <AuditBlock formId="growth_audit_thoothukudi" defaultCity="Thoothukudi" />

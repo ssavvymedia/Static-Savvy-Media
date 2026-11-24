@@ -7,7 +7,7 @@ import Offices from '../../components/v2/Offices.jsx'
 import { setSeo } from '../../utils/seo.js'
 import { localBusinessSchema, breadcrumbListSchema } from '../../utils/schema.js'
 import { buildWhatsAppLink } from '../../utils/helpers.js'
-import { WHATSAPP_NUMBER, SITE_URL, SITE_NAME, MALAYSIA_OFFICE, ORG_SAME_AS, CONTACT_EMAIL, GOOGLE_RATING, GOOGLE_REVIEW_COUNT } from '../../utils/constants.js'
+import { WHATSAPP_NUMBER, SITE_URL, SITE_NAME, ORG_SAME_AS, CONTACT_EMAIL, GOOGLE_RATING, GOOGLE_REVIEW_COUNT } from '../../utils/constants.js'
 import '../../styles/pages/home-v2.css'
 import '../../styles/pages/page-v2.css'
 
@@ -15,8 +15,8 @@ const WHATSAPP_MSG_GENERAL = 'Hi Static Savvy Media, I would like to know more a
 
 const FAQS = [
   { question: 'How quickly will you reply?', answer: 'We reply within one business day (Mon–Sat, 9:00 AM–6:30 PM IST). WhatsApp +91 99440 40345 is usually the fastest way to reach us.' },
-  { question: 'Which number should I use in Malaysia?', answer: `Call our Malaysia office on ${MALAYSIA_OFFICE.phoneDisplay} (${MALAYSIA_OFFICE.hoursDisplay}). WhatsApp stays on +91 99440 40345 for all markets.` },
-  { question: 'Can I visit your office?', answer: 'Yes. Our head office is at 2nd Floor, 4/3, Srinivasa Perumal Koil St, Kamarajar Salai, Madurai 625009. The Thoothukudi and Rawang offices take meetings by appointment.' },
+  { question: 'Which number should I use in Malaysia?', answer: 'The same WhatsApp line as everywhere else: +91 99440 40345. We use one number for every market, including Malaysia, Singapore and the UAE.' },
+  { question: 'Can I visit your office?', answer: 'Yes. Our head office is at 2nd Floor, 4/3, Srinivasa Perumal Koil St, Kamarajar Salai, Madurai 625009. The Thoothukudi office takes meetings by appointment.' },
   { question: 'What happens after I send the form?', answer: 'Our Madurai team reviews your website, Google Business Profile and competitors, then calls or WhatsApps you to agree the next step. There is no obligation and no lock-in.' },
 ]
 
@@ -89,17 +89,16 @@ export default function Contact() {
         <div className="hv2-wrap">
           <span className="hv2-eyebrow">Contact Static Savvy Media</span>
           <h1 id="contact-title">Let&apos;s Talk About Your <span className="hv2-grad">Digital Growth</span></h1>
-          <p className="hv2-lead">Talk to our Madurai team on WhatsApp, call our Malaysia office, email us or send the form below. Rated {GOOGLE_RATING}★ from {GOOGLE_REVIEW_COUNT} Google reviews.</p>
+          <p className="hv2-lead">Talk to our Madurai team on WhatsApp, email us or send the form below. Rated {GOOGLE_RATING}★ from {GOOGLE_REVIEW_COUNT} Google reviews.</p>
           <ul className="pv2-channels" aria-label="Ways to contact us">
-            <li><a href={whatsappGeneral} target="_blank" rel="noopener noreferrer" data-track="whatsapp_contact"><b>WhatsApp / call (India)</b><span>{WHATSAPP_NUMBER}</span></a></li>
-            <li><a href={MALAYSIA_OFFICE.phoneHref} data-track="call_malaysia"><b>Call (Malaysia)</b><span>{MALAYSIA_OFFICE.phoneDisplay}</span></a></li>
+            <li><a href={whatsappGeneral} target="_blank" rel="noopener noreferrer" data-track="whatsapp_contact"><b>WhatsApp</b><span>Chat on WhatsApp</span></a></li>
             <li><a href={`mailto:${CONTACT_EMAIL}`} data-track="email_contact"><b>Email</b><span>{CONTACT_EMAIL}</span></a></li>
           </ul>
           <p className="pv2-actions" style={{ marginTop: 16 }}><Link className="hv2-link" to="/growth-audit/">Prefer a full review? Request a free growth audit <span className="hv2-arrow" aria-hidden="true">→</span></Link></p>
         </div>
       </section>
       <ContactFormSection />
-      <Offices title="Visit or call an office." maps id="contact-offices" />
+      <Offices title="Visit an office." maps id="contact-offices" />
       <FAQSection eyebrow="FAQ" title="Contact questions" faqs={FAQS} />
     </div>
   )

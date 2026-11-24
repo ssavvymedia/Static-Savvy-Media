@@ -38,10 +38,10 @@ const HERO_TITLE =
   'SEO Company in Malaysia, Nationwide SEO Services for SMEs'
 
 const SEO_MY_ANSWER =
-  'Static Savvy Media is an SEO company serving SMEs across Malaysia, from Kuala Lumpur and Selangor to Penang, Johor Bahru and Ipoh, with a Malaysia office in Rawang, Selangor. We fix technical SEO, write English and Bahasa Malaysia pages for google.com.my, and make you citable in AI search. Quoted in MYR, no lock-in.'
+  'Static Savvy Media is an SEO company serving SMEs across Malaysia, from Kuala Lumpur and Selangor to Penang, Johor Bahru and Ipoh, from our head office in Madurai, India. We fix technical SEO, write English and Bahasa Malaysia pages for google.com.my, and make you citable in AI search. Quoted in MYR, no lock-in.'
 
 const HERO_PARAGRAPH =
-  'Static Savvy Media is an SEO company with a Malaysia office in Rawang, Selangor, serving SMEs nationwide, from the Klang Valley to Penang, Johor Bahru and Ipoh. (Based in Kuala Lumpur? See our dedicated SEO services in Kuala Lumpur page.) Get your Malaysian business in front of the right customers when they are actively searching for your products and services. Static Savvy Media combines technical SEO, keyword strategy, on-page optimization, content development, internal linking, schema and performance measurement to build sustainable organic search visibility.'
+  'Static Savvy Media is an SEO company serving SMEs nationwide, from the Klang Valley to Penang, Johor Bahru and Ipoh. (Based in Kuala Lumpur? See our dedicated SEO services in Kuala Lumpur page.) Get your Malaysian business in front of the right customers when they are actively searching for your products and services. Static Savvy Media combines technical SEO, keyword strategy, on-page optimization, content development, internal linking, schema and performance measurement to build sustainable organic search visibility.'
 
 const SEO_SERVICES = [
   {
@@ -168,7 +168,7 @@ const MALAYSIA_LINKS = [
   { name: 'SEO agency in Kuala Lumpur (KL)', path: '/services/seo/kuala-lumpur/' },
   { name: 'Local SEO and Google Maps in Malaysia', path: '/services/local-seo/malaysia/' },
   { name: 'How much SEO costs in Malaysia (guide)', path: '/blog/seo-cost-malaysia-price-guide/' },
-  { name: 'Our Malaysia office in Rawang', path: '/locations/rawang/' },
+  { name: 'Digital marketing in Rawang', path: '/locations/rawang/' },
   { name: 'Digital marketing in Selangor', path: '/locations/selangor/' },
   { name: 'Our headquarters in Madurai, India', path: '/locations/madurai/' },
 ]
@@ -304,9 +304,9 @@ const FAQS = [
       'Yes. SEO helps Malaysian businesses become more discoverable when customers actively search for relevant products and services. Both traditional organic SEO and Local SEO can work together to improve overall search visibility.',
   },
   {
-    question: 'Where is your Malaysia office and which areas do you serve?',
+    question: 'Which areas of Malaysia do you serve?',
     answer:
-      'Our Malaysia office is in Rawang, Selangor. We provide SEO services to businesses in Rawang, Kuala Lumpur, Petaling Jaya, Shah Alam and the wider Klang Valley, and work with clients elsewhere in Malaysia remotely. You can call +60 12-453 7030 or message us on WhatsApp at +91 99440 40345.',
+      'We provide SEO services to businesses in Rawang, Kuala Lumpur, Petaling Jaya, Shah Alam and the wider Klang Valley, and work with clients elsewhere in Malaysia, all over WhatsApp and video calls from our Madurai head office. Message us on WhatsApp at +91 99440 40345.',
   },
   {
     question: 'Do you do SEO in Bahasa Malaysia as well as English?',
@@ -330,17 +330,17 @@ const FAQS = [
   {
     question: 'Are you based in Kuala Lumpur?',
     answer:
-      'Our Malaysia office is in Rawang, Selangor, north of Kuala Lumpur, and we serve KL businesses in person by appointment. If you are in KL, see our dedicated SEO agency in Kuala Lumpur page for KL-specific details.',
+      'No. We serve KL businesses from our head office in Madurai, India, over WhatsApp and video calls. If you are in KL, see our dedicated SEO agency in Kuala Lumpur page for KL-specific details.',
   },
   {
     question: 'Are you an SEO agency in Malaysia?',
     answer:
-      'Yes. Static Savvy Media is an SEO agency working across Malaysia from our Rawang, Selangor office, with the company headquartered in Madurai. We handle technical, on-page and content SEO on google.com.my, in English and Bahasa Malaysia. Call +60 12-453 7030 or WhatsApp +91 99440 40345. We do not publish SEO package prices.',
+      'Yes. Static Savvy Media is an SEO agency working across Malaysia from our head office in Madurai, India. We handle technical, on-page and content SEO on google.com.my, in English and Bahasa Malaysia. WhatsApp +91 99440 40345. We do not publish SEO package prices.',
   },
   {
     question: 'Can I hire you as an SEO specialist in Malaysia?',
     answer:
-      'Yes. An SEO specialist here means the person who researches your google.com.my queries, fixes the site and reports from your Search Console. Deepan Kanz reviews new plans, and the Malaysia work is delivered from the Rawang office. Our Rawang Google profile is rated 5.0★ from 1 review. We do not describe that as a large Malaysian review base.',
+      'Yes. An SEO specialist here means the person who researches your google.com.my queries, fixes the site and reports from your Search Console. Deepan Kanz reviews new plans, and the Malaysia work is delivered by our Madurai team.',
   },
   {
     question: 'How is SEO measured?',
@@ -437,7 +437,7 @@ export default function SEO_Malaysia() {
         </div>
       </section>
 
-      <AnswerFirst eyebrow="SEO Malaysia · Quick answer" heading="What does an SEO company in Malaysia do for an SME?" text={SEO_MY_ANSWER} facts={['Nationwide, office in Rawang', 'English & Bahasa Malaysia', 'Call +60 12-453 7030', 'WhatsApp +91 99440 40345']} />
+      <AnswerFirst eyebrow="SEO Malaysia · Quick answer" heading="What does an SEO company in Malaysia do for an SME?" text={SEO_MY_ANSWER} facts={['Nationwide, from our Madurai HQ', 'English & Bahasa Malaysia', 'One line: WhatsApp']} />
 
       {/* ---- SEO for Malaysian Businesses ---- */}
       <section className="section">

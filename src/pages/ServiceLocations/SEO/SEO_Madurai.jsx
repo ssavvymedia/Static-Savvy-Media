@@ -543,7 +543,7 @@ export default function SEO_Madurai() {
                     Get Your Free Growth Audit
                   </Button>
                   <Button href={whatsappHref} variant="ghost" size="lg" target="_blank" rel="noopener noreferrer">
-                    WhatsApp +91 99440 40345
+                    Chat on WhatsApp
                   </Button>
                 </div>
                 <p className="seo-mdu-hero__trust">

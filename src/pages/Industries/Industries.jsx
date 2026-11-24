@@ -27,7 +27,7 @@ const MORE = [
   { title: 'Retail & E-Commerce', text: 'Product discovery and conversion across Google, social platforms, marketplaces and your own online store.', link: '/industries/retail-ecommerce/', linkLabel: 'Retail & e-commerce' },
   { title: 'Textiles (Madurai)', text: 'Visibility for textile retailers, mills and garment makers selling to regional, national and export buyers.', link: '/industries/textiles-madurai/', linkLabel: 'Textiles in Madurai' },
   { title: 'Port, Marine & Industrial (Thoothukudi)', text: 'B2B visibility for shipping, logistics, marine and industrial firms targeting procurement teams.', link: '/industries/port-marine-industrial-thoothukudi/', linkLabel: 'Port, marine & industrial' },
-  { title: 'SMEs (Malaysia)', text: 'Growth marketing and digital adoption support for Malaysian SMEs, from our Rawang office in Selangor.', link: '/industries/smes-malaysia-grant-eligible/', linkLabel: 'Malaysian SMEs' },
+  { title: 'SMEs (Malaysia)', text: 'Growth marketing and digital adoption support for Malaysian SMEs, served from our Madurai HQ.', link: '/industries/smes-malaysia-grant-eligible/', linkLabel: 'Malaysian SMEs' },
 ]
 
 const COMPARISON = [
@@ -51,7 +51,7 @@ const VALUES = [
 const COVERAGE = [
   { title: 'Madurai (HQ)', text: 'Healthcare, education, textiles, hospitality, real estate and retail: deep experience with Madurai’s core industries from our headquarters.', link: '/locations/madurai/', linkLabel: 'Madurai HQ' },
   { title: 'Thoothukudi', text: 'Industrial, marine, logistics and B2B marketing for port and manufacturing businesses.', link: '/locations/thoothukudi/', linkLabel: 'Thoothukudi office' },
-  { title: 'Malaysia', text: 'SMEs, manufacturing, retail and professional services, from our Rawang office in Selangor.', link: '/locations/malaysia/', linkLabel: 'Malaysia office' },
+  { title: 'Malaysia', text: 'SMEs, manufacturing, retail and professional services across Kuala Lumpur and Selangor.', link: '/locations/malaysia/', linkLabel: 'Malaysia page' },
 ]
 
 export default function Industries() {
@@ -67,10 +67,10 @@ export default function Industries() {
         <div className="hv2-wrap">
           <span className="hv2-eyebrow">Industries we serve</span>
           <h1 className="hv2-h2" style={{ fontSize: 'clamp(32px,4.4vw,52px)', marginTop: 12 }}>Digital Marketing Built Around Your Industry</h1>
-          <p className="hv2-lead" style={{ marginTop: 16, maxWidth: 780 }}>Every industry has different customers, search behaviour, buying cycles, competition and conversion paths. From our Madurai HQ and offices in Thoothukudi and Rawang, Malaysia, we build SEO, AI search, Google Maps, ads and websites around how your market actually buys.</p>
+          <p className="hv2-lead" style={{ marginTop: 16, maxWidth: 780 }}>Every industry has different customers, search behaviour, buying cycles, competition and conversion paths. From our Madurai HQ and our office in Thoothukudi, we build SEO, AI search, Google Maps, ads and websites around how your market actually buys.</p>
           <p style={{ marginTop: 22, display: 'flex', gap: 22, flexWrap: 'wrap' }}>
             <a className="hv2-link" href="#audit">Get a free Growth Audit <span className="hv2-arrow" aria-hidden="true">→</span></a>
-            <a className="hv2-link" href={wa} target="_blank" rel="noopener noreferrer">WhatsApp +91 99440 40345 <span className="hv2-arrow" aria-hidden="true">→</span></a>
+            <a className="hv2-link" href={wa} target="_blank" rel="noopener noreferrer">Chat on WhatsApp <span className="hv2-arrow" aria-hidden="true">→</span></a>
           </p>
         </div>
       </section>

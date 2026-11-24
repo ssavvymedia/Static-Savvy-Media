@@ -46,7 +46,7 @@ export default function CityLandingTemplate({ city }) {
     /* The serving business keeps its real office address. The city is only areaServed, so a
      * Theni or Dubai page never invents a local street address. */
     const officeKey = city.office && city.office !== 'org' ? city.office : 'madurai'
-    const includeRating = city.slug === 'rawang'
+    const includeRating = false
     const office = officeLocalBusiness(officeKey, { includeRating })
     const service = {
       '@type': 'Service',
@@ -86,18 +86,15 @@ export default function CityLandingTemplate({ city }) {
             <p className="city-hero__lead">{city.answer}</p>
             <div className="city-hero__actions">
               <Button href={waHref} variant="primary" size="lg" target="_blank" rel="noopener noreferrer">
-                WhatsApp {city.whatsapp.display}
+                Chat on WhatsApp
               </Button>
-              {city.phone && (
-                <Button href={city.phone.href} variant="outline" size="lg">Call {city.phone.display}</Button>
-              )}
               <Button href="#city-enquiry" variant="ghost" size="lg">Get a free review</Button>
             </div>
             <ul className="city-trust" aria-label="Why businesses trust Static Savvy Media">
               <li><a href={reviewsHref} target="_blank" rel="noopener noreferrer"><strong>4.9★</strong> from 106 Google reviews</a></li>
               <li><strong>Since 2021</strong> founded 1 Oct 2021</li>
               <li><a href={SORTLIST_URL} target="_blank" rel="noopener noreferrer"><strong>Sortlist</strong> verified agency profile</a></li>
-              <li><strong>3 offices</strong> Madurai · Thoothukudi · Rawang</li>
+              <li><strong>2 offices</strong> Madurai · Thoothukudi</li>
             </ul>
           </div>
           <figure className="city-hero__founder">
@@ -120,7 +117,7 @@ export default function CityLandingTemplate({ city }) {
             <ul className="city-checklist">
               {city.howWeServe.points.map((p) => <li key={p}>{p}</li>)}
             </ul>
-            <img className="city-serve__img" src={networkImg} width={1536} height={1024} loading="lazy" alt={`Map of Static Savvy Media offices in Madurai, Thoothukudi and Rawang (Malaysia), the team that serves ${city.name} clients`} />
+            <img className="city-serve__img" src={networkImg} width={1536} height={1024} loading="lazy" alt={`Map of Static Savvy Media offices in Madurai and Thoothukudi, the team that serves ${city.name} clients`} />
           </aside>
         </div>
       </section>
@@ -200,7 +197,7 @@ export default function CityLandingTemplate({ city }) {
             ))}
           </div>
           <p className="city-note">
-            Prefer email? <a href="#city-enquiry">Send an enquiry</a> or WhatsApp {city.whatsapp.display}{city.phone && <> (or call <a href={city.phone.href}>{city.phone.display}</a>)</>}. Website builds, ads management and photography are quoted separately.
+            Prefer email? <a href="#city-enquiry">Send an enquiry</a> or <a href={waHref} target="_blank" rel="noopener noreferrer">chat on WhatsApp</a>. Website builds, ads management and photography are quoted separately.
           </p>
         </div>
       </section>
@@ -215,7 +212,7 @@ export default function CityLandingTemplate({ city }) {
             <p className="city-serve__label">Google reviews</p>
             <p className="city-reviews__score">4.9<span>/5</span></p>
             <p className="city-reviews__stars" aria-hidden="true">★★★★★</p>
-            <p>Rated 4.9★ from 106 Google reviews on our Madurai Google Business Profile. Read every review, unedited, on Google.{city.slug === 'rawang' && ' Our Rawang office profile is rated 5.0★ from 1 Google review.'}</p>
+            <p>Rated 4.9★ from 106 Google reviews on our Madurai Google Business Profile. Read every review, unedited, on Google.</p>
             <Button href={reviewsHref} variant="ghost" size="md" target="_blank" rel="noopener noreferrer">Read our Google reviews</Button>
           </div>
           <div className="city-card city-results">
@@ -272,11 +269,10 @@ export default function CityLandingTemplate({ city }) {
         eyebrow={`Grow in ${city.name}`}
         title={`Get a free review of your ${city.name} business on Google`}
         subtitle="Send us your website or Google Business Profile link. We reply with what to fix first, no obligation."
-        primaryLabel={`WhatsApp ${city.whatsapp.display}`}
+        primaryLabel="Chat on WhatsApp"
         primaryHref={waHref}
-        secondaryLabel={city.phone ? `Call ${city.phone.display}` : 'View all services'}
-        secondaryTo={city.phone ? '' : '/services/'}
-        secondaryHref={city.phone ? city.phone.href : ''}
+        secondaryLabel="View all services"
+        secondaryTo="/services/"
       />
 
       {/* ---------------- ENQUIRY FORM ---------------- */}

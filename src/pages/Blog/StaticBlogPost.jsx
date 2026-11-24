@@ -6,7 +6,7 @@ import BlogFeaturedImage from '../../components/blog/BlogFeaturedImage.jsx'
 import { setSeo } from '../../utils/seo.js'
 import { buildWhatsAppLink } from '../../utils/helpers.js'
 import { WHATSAPP_NUMBER, SITE_URL, ORG_SAME_AS } from '../../utils/constants.js'
-import { getNewBlogPost, WA, MY_LINE } from '../../data/newBlogPosts.js'
+import { getNewBlogPost } from '../../data/newBlogPosts.js'
 import { getAffiliate, AFFILIATE_REL } from '../../data/affiliateLinks.js'
 
 /* Outbound provider link from the single swap-ready map in src/data/affiliateLinks.js. */
@@ -78,10 +78,9 @@ export default function StaticBlogPost() {
         '@graph': [
           { '@type': isArticle ? 'Article' : 'BlogPosting', headline: post.h1, description: post.description, image, url, mainEntityOfPage: url, datePublished: post.published || '2026-10-24', dateModified: post.modified || post.published || '2026-10-24', author: { '@type': 'Person', '@id': `${SITE_URL}/about/deepan-kanz/#person`, name: 'Deepan Kanz', url: `${SITE_URL}/about/deepan-kanz/`, image: `${SITE_URL}/images/deepan-kanz-founder.webp` }, publisher: { '@type': 'Organization', name: 'Static Savvy Media', url: SITE_URL, logo: { '@type': 'ImageObject', url: `${SITE_URL}/favicon.png` } } },
           { '@type': 'Organization', '@id': `${SITE_URL}/#organization`, name: 'Static Savvy Media', url: `${SITE_URL}/`, telephone: '+91 99440 40345', email: 'info@staticsavvymedia.com', sameAs: ORG_SAME_AS },
-          ...(isArticle ? [] : [myRegion
-            ? { '@type': 'ProfessionalService', '@id': `${SITE_URL}/locations/malaysia/#localbusiness`, name: 'Static Savvy Media Malaysia', url: `${SITE_URL}/locations/malaysia/`, telephone: '+60 12-453 7030', address: { '@type': 'PostalAddress', addressLocality: 'Rawang', addressRegion: 'Selangor', addressCountry: 'MY' }, parentOrganization: { '@id': `${SITE_URL}/#organization` } }
-            : { '@type': 'ProfessionalService', '@id': `${SITE_URL}/locations/madurai/#localbusiness`, name: 'Static Savvy Media', url: `${SITE_URL}/locations/madurai/`, telephone: '+91 99440 40345', address: { '@type': 'PostalAddress', streetAddress: '2nd Floor, 4/3, Srinivasa Perumal Koil St, Kamarajar Salai', addressLocality: 'Madurai', addressRegion: 'Tamil Nadu', postalCode: '625009', addressCountry: 'IN' }, parentOrganization: { '@id': `${SITE_URL}/#organization` } },
-          { '@type': 'Service', name: post.h1, serviceType: 'Digital marketing', provider: { '@id': `${SITE_URL}/locations/${myRegion ? 'malaysia' : 'madurai'}/#localbusiness` }, areaServed: myRegion ? { '@type': 'Country', name: 'Malaysia' } : { '@type': 'State', name: 'Tamil Nadu' }, url }]),
+          ...(isArticle ? [] : [
+            { '@type': 'ProfessionalService', '@id': `${SITE_URL}/locations/madurai/#localbusiness`, name: 'Static Savvy Media', url: `${SITE_URL}/locations/madurai/`, telephone: '+91 99440 40345', address: { '@type': 'PostalAddress', streetAddress: '2nd Floor, 4/3, Srinivasa Perumal Koil St, Kamarajar Salai', addressLocality: 'Madurai', addressRegion: 'Tamil Nadu', postalCode: '625009', addressCountry: 'IN' }, parentOrganization: { '@id': `${SITE_URL}/#organization` } },
+          { '@type': 'Service', name: post.h1, serviceType: 'Digital marketing', provider: { '@id': `${SITE_URL}/locations/madurai/#localbusiness` }, areaServed: myRegion ? { '@type': 'Country', name: 'Malaysia' } : { '@type': 'State', name: 'Tamil Nadu' }, url }]),
           { '@type': 'FAQPage', mainEntity: post.faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) },
           { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/` }, { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE_URL}/blog/` }, { '@type': 'ListItem', position: 3, name: post.h1, item: url }] },
         ],
@@ -105,7 +104,7 @@ export default function StaticBlogPost() {
             <div className="blog-post-header__meta">
               <span className="blog-post-header__meta-item"><Link to="/about/deepan-kanz/">Deepan Kanz</Link>, Static Savvy Media</span>
               <span className="blog-post-header__meta-item">{post.publishedLabel || '24 October 2026'}</span>
-              <span className="blog-post-header__meta-item">{post.locationLabel || (myRegion ? 'Rawang, Selangor, Malaysia' : 'Madurai, Tamil Nadu (HQ)')}</span>
+              <span className="blog-post-header__meta-item">{post.locationLabel || (myRegion ? 'Madurai HQ · serving Malaysia' : 'Madurai, Tamil Nadu (HQ)')}</span>
             </div>
           </header>
         </div>
@@ -139,10 +138,9 @@ export default function StaticBlogPost() {
 
               <h2>Talk to Static Savvy Media</h2>
               <p>
-                Want this done for your business? WhatsApp us on{' '}
-                <a href={waHref} target="_blank" rel="noopener noreferrer">{WA}</a>
-                {' '}or call our Malaysia line{' '}
-                <a href="tel:+60124537030">{MY_LINE}</a>. Our head office is in Madurai, Tamil Nadu, and our Malaysia team is in Rawang, Selangor.
+                Want this done for your business?{' '}
+                <a href={waHref} target="_blank" rel="noopener noreferrer">Chat with us on WhatsApp</a>.
+                {' '}Our head office is in Madurai, Tamil Nadu, and we serve clients across India and Malaysia.
               </p>
 
               <h2>Frequently asked questions</h2>
@@ -165,9 +163,9 @@ export default function StaticBlogPost() {
         </div>
       </section>
       <CTASection
-        eyebrow={myRegion ? 'Malaysia: Rawang · Kuala Lumpur · Selangor' : 'Madurai HQ · Tamil Nadu'}
+        eyebrow={myRegion ? 'Malaysia: Kuala Lumpur · Selangor' : 'Madurai HQ · Tamil Nadu'}
         title="Get More Enquiries From Google, Maps and Social"
-        subtitle={`WhatsApp ${WA} or call ${MY_LINE} (Malaysia) for a free consultation.`}
+        subtitle="Chat with us on WhatsApp for a free consultation."
         primaryLabel="WhatsApp for a Free Consultation"
         primaryHref={waHref}
         secondaryLabel="Contact Us"

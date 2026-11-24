@@ -1,12 +1,9 @@
 import { Link } from 'react-router-dom'
 import LocalServicePage from '../../../templates/LocalServicePage.jsx'
 import MalaysiaContactBlock from '../../../components/sections/MalaysiaContactBlock.jsx'
-import { serviceSchema, professionalServiceSchema } from '../../../utils/schema.js'
+import { serviceSchema } from '../../../utils/schema.js'
 import {
   SITE_URL,
-  MALAYSIA_OFFICE,
-  MALAYSIA_POSTAL_ADDRESS,
-  MALAYSIA_OPENING_HOURS_SPEC,
 } from '../../../utils/constants.js'
 import { MY_SEO_RANGES, MY_RANGES_INTRO, MY_RANGES_NOTE, MY_COST_ANSWER } from '../../../data/malaysiaMarketRanges.js'
 
@@ -17,7 +14,7 @@ const DESCRIPTION =
 const content = {
   path: PATH,
   ogImage: '/og/services-seo-kuala-lumpur.jpg',
-  image: { jpg: '/og/services-seo-kuala-lumpur.jpg', webp: '/og/services-seo-kuala-lumpur.webp', alt: 'SEO services in Kuala Lumpur for SMEs, Static Savvy Media Malaysia team' },
+  image: { jpg: '/og/services-seo-kuala-lumpur.jpg', webp: '/og/services-seo-kuala-lumpur.webp', alt: 'SEO services in Kuala Lumpur for SMEs, Static Savvy Media' },
   title: 'SEO Agency Kuala Lumpur: SEO Services in KL | Static Savvy Media',
   description: DESCRIPTION,
   eyebrow: 'SEO · KUALA LUMPUR',
@@ -25,9 +22,8 @@ const content = {
   intro: [
     'In short: Static Savvy Media is an SEO agency for Kuala Lumpur businesses. We provide SEO services in KL for small and mid-sized businesses. We fix technical issues, build English and Bahasa Malaysia pages around how KL customers search, align your Google Business Profile, and report on calls, WhatsApp chats and form enquiries every month, with no lock-in contract.',
     'Kuala Lumpur is one of the most competitive search markets in Southeast Asia. Your customers might search in English, Bahasa Malaysia or Chinese, on google.com.my, often from a phone and often with "near me" or a neighbourhood name attached. We build SEO that reflects how KL actually searches.',
-    'We work with Kuala Lumpur and Klang Valley businesses from our Malaysia office in Rawang, Selangor, just north of the city, with calls on a Malaysian number during Malaysian business hours. Strategy is led by our founder, Deepan Kanz. Page reviewed and updated 4 November 2026.',
+    'We work with Kuala Lumpur and Klang Valley businesses from our head office in Madurai, India, over WhatsApp and video calls. Strategy is led by our founder, Deepan Kanz. Page reviewed and updated 4 November 2026.',
   ],
-  phone: { href: MALAYSIA_OFFICE.phoneHref, display: MALAYSIA_OFFICE.phoneDisplay },
   crumbs: [
     { name: 'Home', path: '/' },
     { name: 'Services', path: '/services/' },
@@ -107,7 +103,7 @@ const content = {
         'Every plan is quoted after a free review: the fee depends on keywords, locations, languages and content volume. Retainers are monthly with no minimum contract term.',
         'One-off audits are available if you want a diagnosis before committing to monthly work.',
       ],
-      after: <>For a custom quote, WhatsApp <a href="https://wa.me/919944040345">+91 99440 40345</a>, call <a href="tel:+60124537030">+60 12-453 7030</a> or <Link to="/contact/">send an enquiry</Link>. For what agencies typically charge, read <Link to="/blog/seo-cost-malaysia-price-guide/">how much SEO costs in Malaysia</Link>.</>,
+      after: <>For a custom quote, <a href="https://wa.me/919944040345">chat with us on WhatsApp</a> or <Link to="/contact/">send an enquiry</Link>. For what agencies typically charge, read <Link to="/blog/seo-cost-malaysia-price-guide/">how much SEO costs in Malaysia</Link>.</>,
     },
     {
       eyebrow: 'Choosing an agency',
@@ -161,11 +157,11 @@ const content = {
     },
     {
       eyebrow: 'Why us',
-      heading: 'Why a Madurai-and-Rawang Agency for SEO in KL?',
+      heading: 'Why Static Savvy Media for SEO in KL?',
       kind: 'checks',
       items: [
-        'A Malaysia office in Rawang, Selangor, with calls on +60 12-453 7030 during Malaysian business hours (Mon–Fri, 9 AM – 6 PM MYT).',
-        'A larger SEO and content team at our Madurai headquarters, so work keeps moving across both time zones.',
+        'One WhatsApp line for every enquiry, with replies within one business day.',
+        'An SEO and content team at our Madurai headquarters, working in English and Bahasa Malaysia.',
         'Rated 4.9★ from 106 Google reviews on our Madurai office profile.',
         'Clear written quotes, monthly contracts and full account ownership for you.',
       ],
@@ -188,14 +184,14 @@ const content = {
     title: 'Get a free SEO audit for your KL business.',
     lead: 'We review your website, Google Business Profile, AI search presence and your top KL competitors on google.com.my, then send what to fix first. Prepared by our team, not an automated score.',
   },
-  contactBlock: <MalaysiaContactBlock heading="Talk to Our Malaysia Team About SEO in KL" />,
+  contactBlock: <MalaysiaContactBlock heading="Talk to Us About SEO in KL" />,
   related: [
     { name: 'Google Ads Agency Kuala Lumpur', path: '/services/google-ads/kuala-lumpur/' },
     { name: 'Digital Marketing in Kuala Lumpur', path: '/locations/kuala-lumpur/' },
     { name: 'SEO company in Malaysia', path: '/services/seo/malaysia/' },
     { name: 'Local SEO Malaysia', path: '/services/local-seo/malaysia/' },
     { name: 'Google Business Profile optimisation in Malaysia', path: '/blog/google-business-profile-optimisation-malaysia/' },
-    { name: 'Our Malaysia office in Rawang', path: '/locations/rawang/' },
+    { name: 'Digital marketing in Rawang', path: '/locations/rawang/' },
     { name: 'Digital marketing agency in Malaysia', path: '/locations/malaysia/' },
     { name: 'Digital Marketing in Petaling Jaya', path: '/locations/petaling-jaya/' },
     { name: 'Digital Marketing in Shah Alam', path: '/locations/shah-alam/' },
@@ -207,7 +203,7 @@ const content = {
     { question: 'How much do SEO services cost in KL?', answer: MY_COST_ANSWER },
     { question: 'How long does SEO take in Kuala Lumpur?', answer: 'Usually 3 to 6 months for local and neighbourhood terms, and longer for competitive city-wide terms. Technical and Google Business Profile fixes can show movement within weeks. We do not guarantee rankings.' },
     { question: 'Do you do Bahasa Malaysia SEO?', answer: 'Yes. We research and optimise English and Bahasa Malaysia content separately, because the search terms and intent are often different. Chinese-language content can be planned where your audience needs it.' },
-    { question: 'Do you have an office in Malaysia?', answer: `Yes. Our Malaysia office is at ${MALAYSIA_OFFICE.streetAddress}, ${MALAYSIA_OFFICE.postalCode} ${MALAYSIA_OFFICE.addressLocality}, ${MALAYSIA_OFFICE.addressRegion} (${MALAYSIA_OFFICE.landmark}), north of Kuala Lumpur. Meetings can be in person or online.` },
+    { question: 'Do you have an office in Kuala Lumpur?', answer: 'No. Static Savvy Media is headquartered in Madurai, India, and works with KL businesses over WhatsApp and video calls.' },
     { question: 'Do you buy backlinks?', answer: 'No. Links are earned through Malaysian directories, associations, suppliers, PR and useful content. Bought links and private blog networks can lead to Google penalties.' },
     { question: 'Is SEO in Malaysia different from SEO in India?', answer: 'The principles are the same, but the market is not. Malaysian searches use google.com.my, mix several languages, and local directories and media differ. That is why our KL pages, keywords and outreach are planned separately.' },
     { question: 'What does an SEO agency in KL do each month?', answer: 'Each month we fix technical issues, improve or add service and area pages, publish content that answers customer questions, keep your Google Business Profile active, earn relevant Malaysian links, and send a plain-language report from your Search Console and GA4.' },
@@ -215,12 +211,12 @@ const content = {
     { question: 'Do you offer SEO consulting in Kuala Lumpur?', answer: 'Yes. If you have an in-house team, we can run a one-off SEO audit and strategy session, then advise your team monthly instead of doing all the work ourselves.' },
     { question: 'Can you help my business show up for "SEO near me" style searches in KL?', answer: 'Yes. "Near me" searches are mostly decided by Google Maps, so we optimise your Google Business Profile, reviews routine and local citations alongside area pages on your website.' },
     { question: 'Why does my KL business show on Google Maps in one area but not another?', answer: 'Distance from the searcher is one of Google’s main local ranking factors, and in a dense city like KL the results can change within a few hundred metres. We strengthen relevance and prominence (categories, content, reviews, citations) and build pages for the areas you genuinely serve.' },
-    { question: 'Do you also serve Petaling Jaya and Shah Alam?', answer: 'Yes. The same Rawang team serves the whole Klang Valley, including Petaling Jaya, Shah Alam, Subang Jaya and Klang.' },
-    { question: 'How do I contact your SEO team for Kuala Lumpur?', answer: `Call ${MALAYSIA_OFFICE.phoneDisplay} (${MALAYSIA_OFFICE.hoursDisplay}) or WhatsApp ${MALAYSIA_OFFICE.whatsappDisplay}.` },
+    { question: 'Do you also serve Petaling Jaya and Shah Alam?', answer: 'Yes. The same team serves the whole Klang Valley, including Petaling Jaya, Shah Alam, Subang Jaya and Klang.' },
+    { question: 'How do I contact your SEO team for Kuala Lumpur?', answer: 'Chat with us on WhatsApp (+91 99440 40345, the one number we use for every market), or send the audit form on this page.' },
   ],
   cta: {
     title: 'Want More Customers From Google in Kuala Lumpur?',
-    subtitle: 'Call +60 12-453 7030 or message us for a free SEO review of your website and your top KL competitors.',
+    subtitle: 'Chat with us on WhatsApp for a free SEO review of your website and your top KL competitors.',
     label: 'Get a Free SEO Review',
   },
   schema: [
@@ -230,24 +226,7 @@ const content = {
       description: DESCRIPTION,
       url: `${SITE_URL}${PATH}`,
       areaServed: { '@type': 'City', name: 'Kuala Lumpur' },
-      provider: {
-        '@type': 'ProfessionalService',
-        name: MALAYSIA_OFFICE.name,
-        url: `${SITE_URL}/locations/malaysia/`,
-        telephone: MALAYSIA_OFFICE.phoneE164,
-        address: MALAYSIA_POSTAL_ADDRESS,
-      },
-    }),
-    professionalServiceSchema({
-      name: MALAYSIA_OFFICE.name,
-      url: `${SITE_URL}/locations/malaysia/`,
-      telephone: MALAYSIA_OFFICE.phoneE164,
-      address: MALAYSIA_POSTAL_ADDRESS,
-      openingHoursSpecification: MALAYSIA_OPENING_HOURS_SPEC,
-      areaServed: [
-        { '@type': 'City', name: 'Kuala Lumpur' },
-        { '@type': 'State', name: 'Selangor' },
-      ],
+      provider: { '@id': `${SITE_URL}/locations/madurai/#localbusiness` },
     }),
   ],
 }

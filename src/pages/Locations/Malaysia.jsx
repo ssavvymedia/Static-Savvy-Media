@@ -19,7 +19,6 @@ import {
   WHATSAPP_NUMBER,
   WHATSAPP_MESSAGE,
   SITE_URL,
-  MALAYSIA_OFFICE,
 } from '../../utils/constants.js'
 import { myRangeTable, MY_COST_ANSWER } from '../../data/malaysiaMarketRanges.js'
 import '../../styles/pages/malaysia.css'
@@ -30,28 +29,28 @@ import malaysiaHeroImg from '../../assets/images/locations/02malaysia.webp'
    ============================================================ */
 
 const PAGE_TITLE =
-  'Digital Marketing Agency Malaysia (Rawang) | Static Savvy Media'
+  'Digital Marketing Agency Malaysia | Static Savvy Media'
 
 const PAGE_DESCRIPTION =
-  "Digital marketing agency for Malaysian SMEs with an office in Rawang, Selangor: SEO, Google Maps, AI search, Google Ads, social and websites."
+  "Digital marketing agency for Malaysian SMEs in Kuala Lumpur and Selangor: SEO, Google Maps, AI search, Google Ads, social and websites."
 
-const HERO_EYEBROW = 'Malaysia • Office in Rawang, Selangor'
+const HERO_EYEBROW = 'Malaysia • Served from our Madurai HQ'
 
 const HERO_SUBTITLE =
-  'Static Savvy Media’s Malaysia office is in Rawang, Selangor. Our team helps Malaysian SMEs get found on google.com.my, Google Maps and AI assistants, and turn that visibility into calls, WhatsApp chats and enquiries. We work in English and Bahasa Malaysia, quote in MYR and report from your own Google accounts. Where a government digitalisation programme fits your business, we help you prepare for it, without promising approval.'
+  'Static Savvy Media helps Malaysian SMEs get found on google.com.my, Google Maps and AI assistants, and turn that visibility into calls, WhatsApp chats and enquiries. We work in English and Bahasa Malaysia, quote in MYR and report from your own Google accounts. Where a government digitalisation programme fits your business, we help you prepare for it, without promising approval.'
 
 const MY_ANSWER =
-  'Static Savvy Media is a digital marketing agency with a Malaysia office in Rawang, Selangor (NO.9, Jalan Anggun 2J, Taman Anggun 2, near AEON Mall Rawang). We run SEO, Google Maps, AI search (GEO/AEO), Google and Meta ads, social media and websites for SMEs in Kuala Lumpur, Selangor and nationwide. Call +60 12-453 7030 or WhatsApp +91 99440 40345.'
+  'Static Savvy Media is a digital marketing agency headquartered in Madurai, India, serving Malaysian SMEs. We run SEO, Google Maps, AI search (GEO/AEO), Google and Meta ads, social media and websites for SMEs in Kuala Lumpur, Selangor and nationwide, over WhatsApp and video calls.'
 
-const MY_FACTS = ['Office: Rawang, Selangor', 'Call +60 12-453 7030', 'WhatsApp +91 99440 40345', 'Mon–Fri 9 AM–6 PM (MYT)', 'HQ: Madurai, India (since 2021)']
+const MY_FACTS = ['HQ: Madurai, India (since 2021)', 'One line: WhatsApp', 'English & Bahasa Malaysia', 'Quotes in MYR']
 
 const MY_CITIES = [
-  { title: 'Rawang (our office)', text: 'Our Malaysia office town. Google Maps, local SEO and websites for Rawang, Bandar Country Homes, Bukit Sentosa, Kundang, Kuang and Serendah businesses.', link: '/locations/rawang/', linkLabel: 'Rawang office page' },
-  { title: 'Kuala Lumpur', text: 'SEO, Google Maps and Google Ads for KL SMEs, planned by area: KLCC, Bangsar, Mont Kiara, Cheras, Kepong and more. Meetings in KL by appointment.', link: '/locations/kuala-lumpur/', linkLabel: 'Kuala Lumpur page' },
-  { title: 'Selangor', text: 'Our home state. Township-level SEO, Google Business Profiles and ad targeting across Petaling Jaya, Shah Alam, Subang Jaya, Klang and Puchong.', link: '/locations/selangor/', linkLabel: 'Selangor page' },
+  { title: 'Rawang', text: 'Google Maps, local SEO and websites for Rawang, Bandar Country Homes, Bukit Sentosa, Kundang, Kuang and Serendah businesses.', link: '/locations/rawang/', linkLabel: 'Rawang page' },
+  { title: 'Kuala Lumpur', text: 'SEO, Google Maps and Google Ads for KL SMEs, planned by area: KLCC, Bangsar, Mont Kiara, Cheras, Kepong and more. Work runs on WhatsApp and video calls.', link: '/locations/kuala-lumpur/', linkLabel: 'Kuala Lumpur page' },
+  { title: 'Selangor', text: 'Township-level SEO, Google Business Profiles and ad targeting across Petaling Jaya, Shah Alam, Subang Jaya, Klang and Puchong.', link: '/locations/selangor/', linkLabel: 'Selangor page' },
   { title: 'Shah Alam', text: 'B2B pages for manufacturers in the industrial zones, plus Bahasa Malaysia-first local SEO for clinics, tuition centres and F&B in the residential sections.', link: '/locations/shah-alam/', linkLabel: 'Shah Alam page' },
   { title: 'Petaling Jaya', text: 'Dense retail, F&B, clinics and professional services in PJ compete on reviews and map rankings. We plan a profile and page per outlet.', link: '/locations/petaling-jaya/', linkLabel: 'Petaling Jaya page' },
-  { title: 'Nationwide (Penang, Johor Bahru, Ipoh and beyond)', text: 'Website SEO, AI search and Google Ads work anywhere in Malaysia. Outside the Klang Valley we work by video call and WhatsApp, with the same team and reporting.', link: '/services/seo/malaysia/', linkLabel: 'SEO company in Malaysia' },
+  { title: 'Nationwide (Penang, Johor Bahru, Ipoh and beyond)', text: 'Website SEO, AI search and Google Ads work anywhere in Malaysia. We work by video call and WhatsApp, with the same team and reporting.', link: '/services/seo/malaysia/', linkLabel: 'SEO company in Malaysia' },
 ]
 
 const MY_HOW = [
@@ -59,8 +58,8 @@ const MY_HOW = [
   { title: 'Google Maps decides local buying', text: 'For clinics, F&B, tuition, workshops and home services, most enquiries come from the map pack. We fix your Google Business Profile first: categories, service area, pin, photos, hours and a steady reviews routine.' },
   { title: 'WhatsApp is the enquiry channel', text: 'Most Malaysian customers would rather send a WhatsApp message than fill a form. Every page and ad we build starts a WhatsApp chat in one tap, with tracking so you can see which source each enquiry came from.' },
   { title: 'AI assistants are the new shortlist', text: 'Buyers now ask ChatGPT, Perplexity and Google AI Overviews which agency, clinic or supplier to use. Answer-first pages, FAQs, schema and consistent business details across Malaysian directories help you get cited.' },
-  { title: 'MYR quotes, Malaysian hours, your accounts', text: 'Quotes and invoices are in MYR, calls are on a Malaysian number during Malaysian working hours, and your Google Business Profile, Search Console, Analytics and ad accounts stay in your business name.' },
-  { title: 'Backed by our Madurai HQ', text: 'Static Savvy Media was founded in Madurai, India, in 2021. Our Malaysia clients get the same specialists in SEO, AI search and Google Ads that serve our head-office market, rated 4.9★ from 106 Google reviews (November 2026). Our Rawang office profile is rated 5.0★ from 1 Google review.' },
+  { title: 'MYR quotes, one WhatsApp line, your accounts', text: 'Quotes and invoices are in MYR, enquiries come to one WhatsApp line, and your Google Business Profile, Search Console, Analytics and ad accounts stay in your business name.' },
+  { title: 'Backed by our Madurai HQ', text: 'Static Savvy Media was founded in Madurai, India, in 2021. Our Malaysia clients get the same specialists in SEO, AI search and Google Ads that serve our head-office market, rated 4.9★ from 106 Google reviews (November 2026).' },
 ]
 
 const GRANTS = [
@@ -173,19 +172,14 @@ const FAQS = [
       'Yes. We help businesses set up and optimize their presence on Lazada and Shopee Malaysia, product listing optimization, product photography formatted for platform requirements, and Shopee/Lazada ad management. This is typically paired with our product photography service for best results.',
   },
   {
-    question: 'Where is your Malaysia office?',
+    question: 'How do I contact you from Malaysia?',
     answer:
-      'NO.9, Jalan Anggun 2J, Taman Anggun 2, 48000 Rawang, Selangor, near AEON Mall Rawang. The office is open Monday to Friday, 9 AM to 6 PM (MYT), and visits are by appointment.',
-  },
-  {
-    question: 'How do I contact your Malaysia team?',
-    answer:
-      'Call +60 12-453 7030 or WhatsApp +91 99440 40345, or use the audit form on this page. We reply within one business day.',
+      'Chat with us on WhatsApp (+91 99440 40345, the one number we use for every market), or use the audit form on this page. We reply within one business day.',
   },
   {
     question: 'Which Malaysian cities do you serve?',
     answer:
-      'Rawang, Kuala Lumpur and the rest of Selangor (Petaling Jaya, Shah Alam, Subang Jaya, Klang, Puchong) in person, and SMEs anywhere in Malaysia, including Penang, Johor Bahru and Ipoh, by video call and WhatsApp.',
+      'Kuala Lumpur and Selangor (Rawang, Petaling Jaya, Shah Alam, Subang Jaya, Klang, Puchong), and SMEs anywhere in Malaysia, including Penang, Johor Bahru and Ipoh, by video call and WhatsApp.',
   },
   {
     question: 'How much does digital marketing or SEO cost in Malaysia?',
@@ -195,7 +189,7 @@ const FAQS = [
   {
     question: 'Is Static Savvy Media a Malaysian company?',
     answer:
-      'Static Savvy Media is headquartered in Madurai, India, where it was founded in 2021, and has a Malaysia office in Rawang, Selangor, with a Malaysian phone line and MYR invoicing. Our Madurai team is rated 4.9★ from 106 Google reviews (November 2026).',
+      'No. Static Savvy Media is headquartered in Madurai, India, where it was founded in 2021, and serves Malaysian clients with MYR quotes and invoicing. Our Madurai team is rated 4.9★ from 106 Google reviews (November 2026).',
   },
   {
     question: 'Do you guarantee first-page rankings on google.com.my?',
@@ -223,7 +217,7 @@ const RELATED_SERVICES = [
 ]
 
 const OTHER_LOCATIONS = [
-  { name: 'Rawang (our Malaysia office)', path: '/locations/rawang/' },
+  { name: 'Rawang', path: '/locations/rawang/' },
   { name: 'Kuala Lumpur', path: '/locations/kuala-lumpur/' },
   { name: 'Selangor', path: '/locations/selangor/' },
   { name: 'Shah Alam', path: '/locations/shah-alam/' },
@@ -254,7 +248,16 @@ export default function Malaysia() {
       ogType: 'website',
       schema: schemaGraph(
         organizationSchema(),
-        officeLocalBusiness('malaysia', { includeRating: true }),
+        officeLocalBusiness('malaysia'),
+        {
+          '@type': 'Service',
+          '@id': `${SITE_URL}/locations/malaysia/#service`,
+          name: 'Digital marketing in Malaysia',
+          serviceType: 'Digital marketing',
+          url: `${SITE_URL}/locations/malaysia/`,
+          provider: { '@id': `${SITE_URL}/locations/madurai/#localbusiness` },
+          areaServed: { '@type': 'Country', name: 'Malaysia' },
+        },
         faqPageSchema(FAQS),
         breadcrumbs,
       ),
@@ -272,7 +275,7 @@ export default function Malaysia() {
       <HeroSection
         layout="two-column"
         eyebrow={HERO_EYEBROW}
-        title="Digital Marketing Agency in Malaysia: Rawang Office Serving SMEs Nationwide"
+        title="Digital Marketing Agency in Malaysia, Serving SMEs Nationwide"
         subtitle={HERO_SUBTITLE}
         actions={
           <>
@@ -283,15 +286,7 @@ export default function Malaysia() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              {`WhatsApp: ${MALAYSIA_OFFICE.whatsappDisplay}`}
-            </Button>
-            <Button
-              href={MALAYSIA_OFFICE.phoneHref}
-              variant="ghost"
-              size="lg"
-              aria-label={`Call Static Savvy Media Malaysia on ${MALAYSIA_OFFICE.phoneDisplay}`}
-            >
-              {`Call: ${MALAYSIA_OFFICE.phoneDisplay}`}
+              Chat on WhatsApp
             </Button>
           </>
         }
@@ -308,9 +303,9 @@ export default function Malaysia() {
         </div>
       </HeroSection>
 
-      <AnswerFirst eyebrow="Malaysia office · Quick answer" heading="Where is Static Savvy Media in Malaysia, and what do you do?" text={MY_ANSWER} facts={MY_FACTS} />
+      <AnswerFirst eyebrow="Malaysia · Quick answer" heading="Where is Static Savvy Media in Malaysia, and what do you do?" text={MY_ANSWER} facts={MY_FACTS} />
 
-      <CardGrid section="my-cities" eyebrow="Where we work" heading="Malaysian cities we serve" intro="In person across the Klang Valley from our Rawang office, and nationwide by video call and WhatsApp." items={MY_CITIES} />
+      <CardGrid section="my-cities" eyebrow="Where we work" heading="Malaysian cities we serve" intro="Across the Klang Valley and nationwide, by video call and WhatsApp." items={MY_CITIES} />
 
       <CardGrid section="my-how" eyebrow="How we work" heading="How we market Malaysian businesses" intro="What we have learned running search, Maps and ads for Malaysian SMEs, and how it shapes every plan." items={MY_HOW} />
 
@@ -486,7 +481,7 @@ export default function Malaysia() {
 
       <MarketRangeTable {...myRangeTable('What SEO costs in Malaysia (market ranges)')} />
 
-      {/* ---- Malaysia Office ---- */}
+      {/* ---- Contact (no Malaysian address or number, owner 24 Nov 2026) ---- */}
       <section className="section malaysia-office">
         <div className="container">
           <div className="malaysia-office__inner glass-card gradient-border">
@@ -506,48 +501,38 @@ export default function Malaysia() {
                   <circle cx="12" cy="10" r="3" />
                 </svg>
               </div>
-              <span className="malaysia-office__label">Rawang, Selangor</span>
+              <span className="malaysia-office__label">Serving all of Malaysia</span>
             </div>
             <div className="malaysia-office__details">
-              <h2 className="malaysia-office__title">Malaysia Office Details</h2>
+              <h2 className="malaysia-office__title">How to reach us from Malaysia</h2>
               <div className="malaysia-office__card glass-card">
-                <h3 className="malaysia-office__name">Static Savvy Media, Malaysia</h3>
+                <h3 className="malaysia-office__name">Static Savvy Media</h3>
                 <p className="malaysia-office__address" style={{ display: 'flex', alignItems: 'flex-start', gap: '0.6rem' }}>
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: '#22d3ee', flexShrink: 0, marginTop: '2px' }} aria-hidden="true">
                     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
                     <circle cx="12" cy="10" r="3" />
                   </svg>
                   <span>
-                    {MALAYSIA_OFFICE.streetAddress},<br />
-                    {MALAYSIA_OFFICE.postalCode} {MALAYSIA_OFFICE.addressLocality}, {MALAYSIA_OFFICE.addressRegion}, Malaysia<br />
-                    <small>({MALAYSIA_OFFICE.landmark})</small>
+                    Served from our head office in Madurai, India,<br />
+                    over WhatsApp and video calls.
                   </span>
                 </p>
                 <div className="malaysia-office__meta">
                   <div className="malaysia-office__meta-item">
-                    <span className="malaysia-office__meta-label">Call</span>
-                    <a href={MALAYSIA_OFFICE.phoneHref} className="malaysia-office__meta-value" aria-label={`Call Static Savvy Media Malaysia on ${MALAYSIA_OFFICE.phoneDisplay}`} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem' }}>
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: '#22d3ee', flexShrink: 0 }} aria-hidden="true">
-                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
-                      </svg>
-                      {MALAYSIA_OFFICE.phoneDisplay}
-                    </a>
-                  </div>
-                  <div className="malaysia-office__meta-item">
                     <span className="malaysia-office__meta-label">WhatsApp</span>
-                    <a href={whatsappHref} className="malaysia-office__meta-value" target="_blank" rel="noopener noreferrer" aria-label={`WhatsApp Static Savvy Media on ${MALAYSIA_OFFICE.whatsappDisplay}`} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem' }}>
+                    <a href={whatsappHref} className="malaysia-office__meta-value" target="_blank" rel="noopener noreferrer" aria-label="Chat with Static Savvy Media on WhatsApp" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem' }}>
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style={{ color: '#25D366', flexShrink: 0 }} aria-hidden="true">
                         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
                       </svg>
-                      {MALAYSIA_OFFICE.whatsappDisplay}
+                      Chat on WhatsApp
                     </a>
                   </div>
                   <div className="malaysia-office__meta-item">
                     <span className="malaysia-office__meta-label">Hours</span>
                     <span className="malaysia-office__meta-value">
-                      {MALAYSIA_OFFICE.hoursDisplay}
+                      Mon–Sat, 9:00 AM – 6:30 PM IST
                       <br />
-                      <small>{MALAYSIA_OFFICE.hoursNote}</small>
+                      <small>Replies within one business day</small>
                     </span>
                   </div>
                 </div>
@@ -557,7 +542,7 @@ export default function Malaysia() {
         </div>
       </section>
 
-      <FounderBlock heading="Meet the founder behind our Malaysia office." text="Deepan Kanz founded Static Savvy Media in Madurai, India, in 2021 and leads strategy for our Malaysia office in Rawang, which serves Selangor and Kuala Lumpur. He specialises in SEO, Local SEO and AI search (GEO and AEO) and reviews every new Malaysian client’s plan himself." />
+      <FounderBlock heading="Meet the founder behind our Malaysia work." text="Deepan Kanz founded Static Savvy Media in Madurai, India, in 2021 and leads strategy for our Malaysian clients in Selangor, Kuala Lumpur and nationwide. He specialises in SEO, Local SEO and AI search (GEO and AEO) and reviews every new Malaysian client’s plan himself." />
 
       <ReviewsCarousel grid limit={3} eyebrow="Google reviews" title="What our clients say on Google." />
 
@@ -629,7 +614,7 @@ export default function Malaysia() {
       {/* ---- Final CTA ---- */}
       <CTASection
         title="Grow your Malaysian business with search, Maps and AI visibility."
-        subtitle="Call +60 12-453 7030 or WhatsApp +91 99440 40345 for a free review. Ask us whether a government digitalisation programme could apply to your business."
+        subtitle="Chat with us on WhatsApp for a free review. Ask us whether a government digitalisation programme could apply to your business."
         primaryLabel="WhatsApp for Malaysia Services & Grants"
         primaryHref={whatsappHref}
       />

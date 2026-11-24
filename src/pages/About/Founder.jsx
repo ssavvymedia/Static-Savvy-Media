@@ -61,7 +61,7 @@ const SOCIAL = [
 ]
 
 const FAQS = [
-  { question: 'Who is Deepan Kanz?', answer: 'Deepan Kanz is the founder of Static Savvy Media, a digital marketing agency headquartered in Madurai, India, with an office in Thoothukudi and a team in Rawang, Malaysia. He leads SEO, Local SEO and AI search (GEO and AEO) strategy for clients.' },
+  { question: 'Who is Deepan Kanz?', answer: 'Deepan Kanz is the founder of Static Savvy Media, a digital marketing agency headquartered in Madurai, India, with an office in Thoothukudi, serving India and Malaysia. He leads SEO, Local SEO and AI search (GEO and AEO) strategy for clients.' },
   { question: 'When did Deepan Kanz start Static Savvy Media?', answer: 'He founded Static Savvy Media in Madurai on 1 October 2021.' },
   { question: 'What does Deepan Kanz specialise in?', answer: 'Generative Engine Optimization (GEO), Answer Engine Optimization (AEO), Local SEO and Google Business Profile, technical SEO and AI business automation, for businesses in Tamil Nadu and Malaysia.' },
   { question: 'Can I speak to Deepan directly?', answer: 'Yes. Deepan handles first conversations about GEO/AEO or SEO strategy personally for new clients. Call or WhatsApp +91 99440 40345, or connect on LinkedIn.' },

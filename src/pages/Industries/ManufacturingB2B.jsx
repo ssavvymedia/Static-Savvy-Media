@@ -15,7 +15,7 @@ const PAGE_TITLE = 'Manufacturing & B2B Digital Marketing | Static Savvy Media'
 const PAGE_DESCRIPTION = 'B2B SEO, Google Ads, AI search and websites for manufacturers, exporters and industrial suppliers in Madurai, Tamil Nadu and Malaysia.'
 const WA_MSG = 'Hi Static Savvy Media, I run a manufacturing / B2B business and would like a Growth Audit.'
 
-const ANSWER = 'Static Savvy Media runs B2B digital marketing for manufacturers, exporters and industrial suppliers from its Madurai HQ, with offices in Thoothukudi and Rawang, Malaysia. We build product and capability pages that rank for the specifications buyers search, run Google Ads for high-intent enquiry terms, make your company easy for AI assistants to cite, and track every call, WhatsApp chat and RFQ back to its source.'
+const ANSWER = 'Static Savvy Media runs B2B digital marketing for manufacturers, exporters and industrial suppliers from its Madurai HQ, with an office in Thoothukudi. We build product and capability pages that rank for the specifications buyers search, run Google Ads for high-intent enquiry terms, make your company easy for AI assistants to cite, and track every call, WhatsApp chat and RFQ back to its source.'
 
 const WHO = [
   { title: 'Manufacturers & fabricators', text: 'Engineering works, fabrication units, foundries, plastics, packaging, food processing and component makers that sell to other businesses and want more qualified RFQs, not more traffic.' },
@@ -23,7 +23,7 @@ const WHO = [
   { title: 'Exporters', text: 'Businesses that need international buyers to find them on Google in English, trust the website, and send a proper enquiry with quantities and destination.' },
   { title: 'Industrial suppliers & distributors', text: 'Machinery dealers, spares, chemicals, electrical and safety-equipment suppliers whose buyers search by product name, part number, brand or application.' },
   { title: 'Port, marine & logistics', text: 'Shipping, clearing and forwarding, marine services and industrial firms around Thoothukudi and other port towns.', link: '/industries/port-marine-industrial-thoothukudi/', linkLabel: 'Port, marine & industrial' },
-  { title: 'Malaysian manufacturers', text: 'Factories and B2B suppliers in Shah Alam, Klang, Rawang and the wider Klang Valley, marketed in English and Bahasa Malaysia from our Rawang office.', link: '/locations/shah-alam/', linkLabel: 'Shah Alam page' },
+  { title: 'Malaysian manufacturers', text: 'Factories and B2B suppliers in Shah Alam, Klang, Rawang and the wider Klang Valley, marketed in English and Bahasa Malaysia from our Madurai HQ.', link: '/locations/shah-alam/', linkLabel: 'Shah Alam page' },
 ]
 
 const CHALLENGES = [
@@ -55,7 +55,7 @@ const FAQS = [
   { question: 'Do we still need B2B marketplaces?', answer: 'Marketplaces can bring volume, but the same lead often goes to several suppliers. Your own website and Google Business Profile bring direct enquiries that only you receive. Most manufacturers keep one or two marketplace listings and grow their own site alongside them.' },
   { question: 'Can you help us reach export buyers?', answer: 'Yes. We build English product pages around the terms international buyers use, target Google Ads by country where it makes sense, and make sure the website shows the details importers check: certifications, capacity, packing, ports and payment terms. We do not promise specific orders or countries.' },
   { question: 'How long before we see B2B enquiries from SEO?', answer: 'For specific product terms with little competition, pages can start ranking within two to four months. Broader or more competitive terms usually take six to twelve months. Google Ads can bring enquiries sooner. We show progress monthly from your own Search Console and Analytics.' },
-  { question: 'Do you work with manufacturers outside Madurai?', answer: 'Yes. Our HQ is in Madurai with an office in Thoothukudi, and we work with manufacturers across Tamil Nadu, including Coimbatore, Tiruppur and Sivakasi, by visit, video call and WhatsApp. Our Malaysia office in Rawang serves factories in Selangor and the Klang Valley.' },
+  { question: 'Do you work with manufacturers outside Madurai?', answer: 'Yes. Our HQ is in Madurai with an office in Thoothukudi, and we work with manufacturers across Tamil Nadu, including Coimbatore, Tiruppur and Sivakasi, by visit, video call and WhatsApp. We also serve factories in Selangor and the Klang Valley, Malaysia.' },
   { question: 'What do you need from us to start?', answer: 'Your product list or catalogue, any specifications and certifications you can share, access to your website and Google Business Profile, and an hour with the person who knows your buyers best. We handle the rest and agree every page with you before it goes live.' },
   { question: 'How much does B2B digital marketing cost?', answer: 'It depends on the number of product families, your markets and whether Google Ads is included. We quote after the free Growth Audit, once we know the scope. Our cost guide shows typical market ranges in Madurai, which are not our prices.' },
 ]
@@ -77,7 +77,7 @@ export default function ManufacturingB2B() {
         actions={
           <>
             <Button href="#audit" variant="primary" size="lg">Get Your Free Growth Audit</Button>
-            <Button href={wa} variant="ghost" size="lg" target="_blank" rel="noopener noreferrer">WhatsApp: +91 99440 40345</Button>
+            <Button href={wa} variant="ghost" size="lg" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</Button>
           </>
         }
       >
@@ -86,7 +86,7 @@ export default function ManufacturingB2B() {
         </div>
       </HeroSection>
 
-      <AnswerFirst heading="How does Static Savvy Media market manufacturing and B2B companies?" text={ANSWER} facts={['B2B SEO by product & specification', 'Google Ads for RFQs', 'AI search (GEO/AEO)', 'HQ: Madurai, Tamil Nadu', 'Malaysia office: Rawang']} />
+      <AnswerFirst heading="How does Static Savvy Media market manufacturing and B2B companies?" text={ANSWER} facts={['B2B SEO by product & specification', 'Google Ads for RFQs', 'AI search (GEO/AEO)', 'HQ: Madurai, Tamil Nadu', 'Serving India & Malaysia']} />
 
       <CardGrid section="mfg-who" eyebrow="Who it is for" heading="Manufacturing and B2B businesses we work with" items={WHO} />
       <CardGrid section="mfg-challenges" eyebrow="Why B2B is different" heading="What makes manufacturing marketing different" intro="Industrial buyers behave differently from retail customers. These are the four things we plan around." items={CHALLENGES} cols={2} />

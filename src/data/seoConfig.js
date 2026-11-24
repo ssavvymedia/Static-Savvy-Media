@@ -6,9 +6,6 @@ import { sanityPostOverrides } from "./blogOverrides.js";
 import {
   SITE_NAME,
   SITE_URL,
-  MALAYSIA_OFFICE,
-  MALAYSIA_POSTAL_ADDRESS,
-  MALAYSIA_OPENING_HOURS_SPEC,
 } from "../utils/constants.js";
 
 // Single source of truth for the site origin (see utils/constants.js). Canonicals below are
@@ -44,13 +41,13 @@ export const seoConfig = {
       title:
         "Digital Marketing Agency in Madurai | 4.9★ from 106 Reviews",
       description:
-        "Madurai digital marketing agency since 2021: SEO, Google Ads, social and websites. 4.9★ from 106 Google reviews. Offices in Madurai, Thoothukudi and Rawang. WhatsApp +91 99440 40345.",
+        "Madurai digital marketing agency since 2021: SEO, Google Ads, social and websites. 4.9★ from 106 Google reviews. Offices in Madurai and Thoothukudi. WhatsApp +91 99440 40345.",
       canonical: `${BASE_URL}/`,
       focusKeyword: "digital marketing agency in madurai",
       ogTitle:
         "Digital Marketing Agency in Madurai | 4.9★ from 106 Reviews",
       ogDescription:
-        "Madurai digital marketing agency since 2021: SEO, Google Ads, social and websites. 4.9★ from 106 Google reviews. Offices in Madurai, Thoothukudi and Rawang. WhatsApp +91 99440 40345.",
+        "Madurai digital marketing agency since 2021: SEO, Google Ads, social and websites. 4.9★ from 106 Google reviews. Offices in Madurai and Thoothukudi. WhatsApp +91 99440 40345.",
       ogImage: `${BASE_URL}/og/heroimage.jpg`,
       schema: {
         "@context": "https://schema.org",
@@ -67,12 +64,12 @@ export const seoConfig = {
     seo: {
       title: "About Static Savvy Media | Madurai Digital Marketing Since 2021",
       description:
-        "Meet the Madurai digital marketing agency founded by Deepan Kanz in 2021, rated 4.9★ from 106 Google reviews, with offices in Madurai, Thoothukudi and Rawang.",
+        "Meet the Madurai digital marketing agency founded by Deepan Kanz in 2021, rated 4.9★ from 106 Google reviews, with offices in Madurai and Thoothukudi.",
       canonical: `${BASE_URL}/about`,
       focusKeyword: "about static savvy media",
       ogTitle: "About Static Savvy Media | Madurai Digital Marketing Since 2021",
       ogDescription:
-        "Meet the Madurai digital marketing agency founded by Deepan Kanz in 2021, rated 4.9★ from 106 Google reviews, with offices in Madurai, Thoothukudi and Rawang.",
+        "Meet the Madurai digital marketing agency founded by Deepan Kanz in 2021, rated 4.9★ from 106 Google reviews, with offices in Madurai and Thoothukudi.",
       ogImage: `${BASE_URL}/og/about-about.jpg`,
       schema: {
         "@context": "https://schema.org",
@@ -459,11 +456,10 @@ export const seoConfig = {
       ogImage: `${BASE_URL}/og/locations-02malaysia.jpg`,
       schema: {
         "@context": "https://schema.org",
-        "@type": "ProfessionalService",
+        "@type": "Service",
         name: `${SITE_NAME} - SEO Malaysia`,
-        telephone: MALAYSIA_OFFICE.phoneE164,
-        address: MALAYSIA_POSTAL_ADDRESS,
-        openingHoursSpecification: MALAYSIA_OPENING_HOURS_SPEC,
+        provider: { "@id": `${BASE_URL}/locations/madurai/#localbusiness` },
+        areaServed: { "@type": "Country", name: "Malaysia" },
       },
       robots: "index,follow",
     },
@@ -559,11 +555,10 @@ export const seoConfig = {
       ogImage: `${BASE_URL}/og/locations-02malaysia.jpg`,
       schema: {
         "@context": "https://schema.org",
-        "@type": "ProfessionalService",
+        "@type": "Service",
         name: `${SITE_NAME} - Local SEO Malaysia`,
-        telephone: MALAYSIA_OFFICE.phoneE164,
-        address: MALAYSIA_POSTAL_ADDRESS,
-        openingHoursSpecification: MALAYSIA_OPENING_HOURS_SPEC,
+        provider: { "@id": `${BASE_URL}/locations/madurai/#localbusiness` },
+        areaServed: { "@type": "Country", name: "Malaysia" },
       },
       robots: "index,follow",
     },
@@ -639,11 +634,10 @@ export const seoConfig = {
       ogImage: `${BASE_URL}/og/locations-02malaysia.jpg`,
       schema: {
         "@context": "https://schema.org",
-        "@type": "ProfessionalService",
+        "@type": "Service",
         name: `${SITE_NAME} - AI Automation Malaysia`,
-        telephone: MALAYSIA_OFFICE.phoneE164,
-        address: MALAYSIA_POSTAL_ADDRESS,
-        openingHoursSpecification: MALAYSIA_OPENING_HOURS_SPEC,
+        provider: { "@id": `${BASE_URL}/locations/madurai/#localbusiness` },
+        areaServed: { "@type": "Country", name: "Malaysia" },
       },
       robots: "index,follow",
     },
@@ -738,13 +732,13 @@ export const seoConfig = {
   },
   "/locations/malaysia": {
     title:
-      "Digital Marketing Agency Malaysia (Rawang) | Static Savvy Media",
+      "Digital Marketing Agency Malaysia | Static Savvy Media",
     slug: "locations/malaysia",
     seo: {
       title:
-        "Digital Marketing Agency Malaysia (Rawang) | Static Savvy Media",
+        "Digital Marketing Agency Malaysia | Static Savvy Media",
       description:
-        "Digital marketing agency for Malaysian SMEs with an office in Rawang, Selangor: SEO, Google Maps, AI search, Google Ads, social and websites.",
+        "Digital marketing agency for Malaysian SMEs in Kuala Lumpur and Selangor: SEO, Google Maps, AI search, Google Ads, social and websites.",
       canonical: `${BASE_URL}/locations/malaysia`,
       focusKeyword: "digital marketing agency Malaysia",
       ogTitle: "Digital Marketing Agency Malaysia | Static Savvy Media",
@@ -753,11 +747,10 @@ export const seoConfig = {
       ogImage: `${BASE_URL}/og/locations-02malaysia.jpg`,
       schema: {
         "@context": "https://schema.org",
-        "@type": "ProfessionalService",
+        "@type": "Service",
         name: `${SITE_NAME} Malaysia`,
-        telephone: MALAYSIA_OFFICE.phoneE164,
-        address: MALAYSIA_POSTAL_ADDRESS,
-        openingHoursSpecification: MALAYSIA_OPENING_HOURS_SPEC,
+        provider: { "@id": `${BASE_URL}/locations/madurai/#localbusiness` },
+        areaServed: { "@type": "Country", name: "Malaysia" },
       },
       robots: "index,follow",
     },
@@ -1558,11 +1551,11 @@ export const seoConfig = {
     seo: {
       title: "Social Media Marketing Malaysia for SMEs | Static Savvy Media",
       description:
-        "Social media marketing for Malaysian SMEs: Facebook, Instagram, TikTok, WhatsApp and Xiaohongshu, in English and Bahasa Malaysia, from our Rawang office. WhatsApp +60 12-453 7030.",
+        "Social media marketing for Malaysian SMEs: Facebook, Instagram, TikTok, WhatsApp and Xiaohongshu, in English and Bahasa Malaysia, served from our Madurai team. Chat with us on WhatsApp.",
       canonical: `${BASE_URL}/services/social-media-marketing/malaysia`,
       ogTitle: "Social Media Marketing Malaysia for SMEs | Static Savvy Media",
       ogDescription:
-        "Social media marketing for Malaysian SMEs: Facebook, Instagram, TikTok, WhatsApp and Xiaohongshu, in English and Bahasa Malaysia, from our Rawang office. WhatsApp +60 12-453 7030.",
+        "Social media marketing for Malaysian SMEs: Facebook, Instagram, TikTok, WhatsApp and Xiaohongshu, in English and Bahasa Malaysia, served from our Madurai team. Chat with us on WhatsApp.",
       ogImage: `${BASE_URL}/og/locations-02malaysia.jpg`,
       robots: "index,follow",
     },

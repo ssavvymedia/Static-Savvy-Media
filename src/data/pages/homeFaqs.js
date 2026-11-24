@@ -8,12 +8,12 @@ export const HOME_FAQS = [
   {
     question: 'Do you work with businesses outside Madurai and Tamil Nadu?',
     answer:
-      'Yes. Our headquarters is in Madurai, with offices in Thoothukudi and Rawang (Selangor, Malaysia). We work with clients in Chennai, Coimbatore, Trichy, Salem, Tirunelveli and Tiruppur, in Kuala Lumpur and Selangor, and remotely in Singapore and Dubai. Each market has its own page under Locations, and we quote in your local currency after a free review.',
+      'Yes. Our headquarters is in Madurai, with an office in Thoothukudi. We work with clients in Chennai, Coimbatore, Trichy, Salem, Tirunelveli and Tiruppur, in Kuala Lumpur and Selangor, and remotely in Singapore and Dubai. Each market has its own page under Locations, and we quote in your local currency after a free review.',
   },
   {
     question: 'Where is Static Savvy Media based?',
     answer:
-      'Static Savvy Media was founded in Madurai, Tamil Nadu in 2021 and is headquartered there (2nd Floor, 4/3, Srinivasa Perumal Koil St, Kamarajar Salai, Madurai 625009). Our Malaysia office is in Rawang, Selangor (call +60 12-453 7030). For India, WhatsApp or call +91 99440 40345.',
+      'Static Savvy Media was founded in Madurai, Tamil Nadu in 2021 and is headquartered there (2nd Floor, 4/3, Srinivasa Perumal Koil St, Kamarajar Salai, Madurai 625009). One number for every market: WhatsApp +91 99440 40345.',
   },
   {
     question: 'How do I get started with Static Savvy Media?',

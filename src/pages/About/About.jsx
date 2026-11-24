@@ -22,7 +22,7 @@ import aboutHeroSm from '../../assets/images/About/About-640.webp'
 const PAGE_TITLE = 'About Static Savvy Media | Madurai Digital Marketing Since 2021'
 
 const PAGE_DESCRIPTION =
-  'Meet the Madurai digital marketing agency founded by Deepan Kanz in 2021, rated 4.9★ from 106 Google reviews, with offices in Madurai, Thoothukudi and Rawang.'
+  'Meet the Madurai digital marketing agency founded by Deepan Kanz in 2021, rated 4.9★ from 106 Google reviews, with offices in Madurai and Thoothukudi.'
 
 const SERVICES = [
   { number: '01', title: 'SEO', text: 'Search engine optimisation designed to improve organic visibility and long-term discoverability.', path: '/services/seo/madurai/' },
@@ -76,7 +76,7 @@ const FAQS = [
   },
   {
     question: 'Where is Static Savvy Media\u2019s head office?',
-    answer: 'The head office is at 2nd Floor, 4/3, Srinivasa Perumal Koil St, Kamarajar Salai, Madurai 625009, Tamil Nadu. Malaysian clients are served from the Rawang, Selangor office. For Madurai services, see the Madurai digital marketing agency page at staticsavvymedia.com/locations/madurai/.',
+    answer: 'The head office is at 2nd Floor, 4/3, Srinivasa Perumal Koil St, Kamarajar Salai, Madurai 625009, Tamil Nadu. Malaysian clients are served from the same Madurai head office. For Madurai services, see the Madurai digital marketing agency page at staticsavvymedia.com/locations/madurai/.',
   },
   {
     question: 'Where does Static Savvy Media operate?',
@@ -88,7 +88,7 @@ const FAQS = [
   },
   {
     question: 'Does Static Savvy Media work with businesses outside Tamil Nadu?',
-    answer: 'Yes. Our head office is in Madurai and we have an office in Rawang, Selangor, so we work with businesses across Tamil Nadu and Malaysia, and remotely with clients elsewhere in India, in Singapore and in Dubai. The same team, process and monthly reporting apply wherever you are.',
+    answer: 'Yes. Our head office is in Madurai, and we work with businesses across Tamil Nadu and Malaysia, and remotely with clients elsewhere in India, in Singapore and in Dubai. The same team, process and monthly reporting apply wherever you are.',
   },
   {
     question: 'How do I get started?',
@@ -185,12 +185,12 @@ export default function About() {
             <ul className="pv2-stats" aria-label="Key facts">
               <li><b>{GOOGLE_RATING}★</b><span>from {GOOGLE_REVIEW_COUNT} Google reviews</span></li>
               <li><b>Since 2021</b><span>Founded 1 Oct 2021, Madurai</span></li>
-              <li><b>3 offices</b><span>Madurai HQ, Thoothukudi, Rawang</span></li>
+              <li><b>2 offices</b><span>Madurai HQ, Thoothukudi</span></li>
               <li><b>Tamil &amp; English</b><span>One team, monthly plans</span></li>
             </ul>
             <div className="pv2-actions">
               <Link className="hv2-btn hv2-btn--primary" to="/growth-audit/">Get Your Free Growth Audit</Link>
-              <a className="hv2-btn hv2-btn--ghost" href={whatsappHref} target="_blank" rel="noopener noreferrer">WhatsApp {WHATSAPP_NUMBER}</a>
+              <a className="hv2-btn hv2-btn--ghost" href={whatsappHref} target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
             </div>
           </div>
           <div className="pv2-hero__img">

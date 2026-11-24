@@ -24,7 +24,7 @@ export const COMPANIES = [
   { name: 'Rajagiri Information Systems', area: 'Madurai', focus: 'SEO and IT services', rating: '5.0 from 26 (2 Nov 2026)' },
   { name: 'Rank You Higher', area: 'Anna Nagar', focus: 'Google Ads, Meta ads and Local SEO for lead generation; publishes package prices', rating: '4.8 from 338 (2 Nov 2026)' },
   { name: 'SEO Business Company (EIBS Global)', area: 'Madurai', focus: 'SEO-led: local and e-commerce SEO, PPC and content', rating: '4.8 from 46 (2 Nov 2026)' },
-  { name: 'Static Savvy Media (us)', area: 'Kamarajar Salai (also Thoothukudi, Rawang)', focus: 'SEO, Local SEO & GBP, AI search (GEO/AEO), Google/Meta ads, social, websites', rating: '4.9 from 106 (23 Nov 2026)' },
+  { name: 'Static Savvy Media (us)', area: 'Kamarajar Salai (also Thoothukudi)', focus: 'SEO, Local SEO & GBP, AI search (GEO/AEO), Google/Meta ads, social, websites', rating: '4.9 from 106 (23 Nov 2026)' },
 ]
 
 export const content = {
@@ -88,7 +88,7 @@ export const content = {
         { title: 'Rajagiri Information Systems', text: 'SEO and IT services company that often appears in web results for “SEO company in Madurai”. ' + R('5.0', 26) + '.' },
         { title: 'Rank You Higher', text: 'Anna Nagar. Focused on Google Ads, Meta ads and Local SEO for lead generation; operating since 2016 according to its site. One of the few Madurai agencies that publishes package price ranges, and it has the largest review count we saw. ' + R('4.8', 338) + '.' },
         { title: 'SEO Business Company (EIBS Global)', text: 'SEO-led agency covering local and e-commerce SEO, PPC and content, and very visible in the Madurai Google Maps pack. ' + R('4.8', 46) + '.' },
-        { title: 'Static Savvy Media (us)', text: 'Kamarajar Salai, Madurai, since 2021, with offices in Thoothukudi and Rawang, Malaysia. SEO, Local SEO and Google Business Profile, AI search (GEO/AEO), Google and Meta ads, social media and websites, in Tamil and English. ' + R('4.9', 106, '23 Nov 2026') + '. Hiring page: /locations/madurai/. SEO page: /services/seo/madurai/.', link: { to: '/services/seo/madurai/', label: 'SEO company in Madurai' } },
+        { title: 'Static Savvy Media (us)', text: 'Kamarajar Salai, Madurai, since 2021, with an office in Thoothukudi. SEO, Local SEO and Google Business Profile, AI search (GEO/AEO), Google and Meta ads, social media and websites, in Tamil and English. ' + R('4.9', 106, '23 Nov 2026') + '. Hiring page: /locations/madurai/. SEO page: /services/seo/madurai/.', link: { to: '/services/seo/madurai/', label: 'SEO company in Madurai' } },
       ],
     },
     {

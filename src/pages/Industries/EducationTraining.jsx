@@ -147,7 +147,7 @@ const FAQS = [
   {
     question: 'Do you work with institutions outside Madurai?',
     answer:
-      'Yes. We work with institutions across Tamil Nadu and in Malaysia, from our offices in Madurai, Thoothukudi and Rawang (Selangor), with meetings online or in person.',
+      'Yes. We work with institutions across Tamil Nadu and in Malaysia, from our offices in Madurai and Thoothukudi, with meetings online or in person.',
   },
 ]
 
@@ -506,7 +506,7 @@ export default function EducationTraining() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              WhatsApp +91 99440 40345
+              Chat on WhatsApp
             </Button>
           </>
         }

@@ -1,5 +1,5 @@
 /**
- * Shared LocalBusiness / ProfessionalService nodes for the three real offices.
+ * Shared LocalBusiness / ProfessionalService nodes for the real offices (Madurai, Thoothukudi).
  * Used by prerender (scripts/seo/ssr-bodies.mjs) and the location pages, so crawlers
  * and the hydrated client emit the same entity (same @id) instead of duplicate blocks.
  *
@@ -15,9 +15,6 @@ import {
   MADURAI_OPENING_HOURS_SPEC,
   THOOTHUKUDI_OFFICE,
   THOOTHUKUDI_POSTAL_ADDRESS,
-  MALAYSIA_OFFICE,
-  MALAYSIA_POSTAL_ADDRESS,
-  MALAYSIA_OPENING_HOURS_SPEC,
 } from '../utils/constants.js'
 
 export const ORG_ID = `${SITE_URL}/#organization`
@@ -26,14 +23,11 @@ export const ORG_ID = `${SITE_URL}/#organization`
 export const OFFICE_LOCATION_ROUTES = {
   '/locations/madurai/': 'madurai',
   '/locations/thoothukudi/': 'thoothukudi',
-  '/locations/malaysia/': 'malaysia',
-  '/locations/rawang/': 'malaysia',
 }
 
 /* Real Google review totals. Thoothukudi has 0 reviews, so it has no entry. */
 const RATINGS = {
   madurai: { ratingValue: '4.9', reviewCount: 106, bestRating: 5 },
-  malaysia: { ratingValue: '5.0', reviewCount: 1, bestRating: 5 },
 }
 
 const OFFICES = {
@@ -57,21 +51,13 @@ const OFFICES = {
     address: THOOTHUKUDI_POSTAL_ADDRESS,
     image: `${SITE_URL}/og/locations-03thoothukudi.jpg`,
   },
-  malaysia: {
-    name: MALAYSIA_OFFICE.name,
-    url: `${SITE_URL}/locations/malaysia/`,
-    id: `${SITE_URL}/locations/malaysia/#localbusiness`,
-    geo: { '@type': 'GeoCoordinates', latitude: 3.3164, longitude: 101.5373 },
-    telephone: MALAYSIA_OFFICE.phoneDisplay,
-    address: MALAYSIA_POSTAL_ADDRESS,
-    openingHoursSpecification: MALAYSIA_OPENING_HOURS_SPEC,
-    hasMap: GBP_MAPS.malaysia,
-    image: `${SITE_URL}/og/locations-02malaysia.jpg`,
-  },
 }
 
+/* Malaysia has no office (owner, 24 Nov 2026): Malaysian pages point at the Madurai business. */
+const OFFICE_ALIAS = { malaysia: 'madurai' }
+
 export function officeLocalBusiness(key, { includeRating = false } = {}) {
-  const o = OFFICES[key]
+  const o = OFFICES[OFFICE_ALIAS[key] || key]
   if (!o) return null
   const node = {
     '@type': ['LocalBusiness', 'ProfessionalService'],

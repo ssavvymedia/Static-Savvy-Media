@@ -79,7 +79,7 @@ const MORE = [
 const FAQS = [
   { question: 'Which growth solution should I start with?', answer: 'It depends on how your customers find you. If most enquiries come from people searching near them, start with Local SEO and your Google Business Profile. If buyers compare options online before calling, SEO and content come first. Google Ads is the fastest way to test demand while SEO builds. The free Growth Audit tells you which one to start with for your business.' },
   { question: 'Can I combine several solutions?', answer: 'Yes, and most clients do. SEO, Local SEO and AI search share the same groundwork (a fast website, clear service pages, consistent business details), so running them together costs less effort than running them separately. We agree the scope and priorities with you before any work starts.' },
-  { question: 'Do you offer these solutions outside Madurai?', answer: 'Yes. Our HQ is in Madurai, Tamil Nadu, with an office in Thoothukudi and a Malaysia office in Rawang, Selangor. We work with businesses across Tamil Nadu, India and Malaysia, in person where we have an office and by video call and WhatsApp elsewhere.' },
+  { question: 'Do you offer these solutions outside Madurai?', answer: 'Yes. Our HQ is in Madurai, Tamil Nadu, with an office in Thoothukudi. We work with businesses across Tamil Nadu, India and Malaysia, in person where we have an office and by video call and WhatsApp elsewhere.' },
   { question: 'How do you report results?', answer: 'You get a monthly plain-English report from your own Google accounts (Search Console, Analytics, Business Profile and Ads), covering rankings, Maps actions, calls, WhatsApp chats and form enquiries, plus a shared log of the work done and what comes next.' },
   { question: 'How much do these solutions cost?', answer: 'Pricing depends on your market, competition and scope, so we quote after the audit. Our cost guides for Madurai and Malaysia show typical market ranges for each type of work, and those ranges are not our prices.' },
 ]
@@ -96,12 +96,12 @@ export default function Solutions() {
         <div className="hv2-wrap">
           <span className="hv2-eyebrow">Growth solutions · Madurai HQ · India & Malaysia</span>
           <h1 className="hv2-h2" style={{ fontSize: 'clamp(32px,4.4vw,52px)', marginTop: 12 }}>Growth Solutions: SEO, AI Search, Local SEO, Google Ads and Websites</h1>
-          <p className="hv2-lead" style={{ marginTop: 16, maxWidth: 760 }}>Five ways we help small and mid-sized businesses get found and get enquiries, run from our Madurai HQ with offices in Thoothukudi and Rawang, Malaysia. Each solution links to the full service page and the city pages where we offer it.</p>
+          <p className="hv2-lead" style={{ marginTop: 16, maxWidth: 760 }}>Five ways we help small and mid-sized businesses get found and get enquiries, run from our Madurai HQ with an office in Thoothukudi. Each solution links to the full service page and the city pages where we offer it.</p>
           <p style={{ marginTop: 22 }}><a className="hv2-link" href="#audit">Not sure where to start? Get a free Growth Audit <span className="hv2-arrow" aria-hidden="true">→</span></a></p>
         </div>
       </section>
 
-      <AnswerFirst heading="What are Static Savvy Media’s growth solutions?" text="Static Savvy Media groups its services into five growth solutions: SEO & Content Growth, AI Search (GEO/AEO), Local SEO & Google Business Profile, Google Ads (PPC) and Website Development. They are delivered from our Madurai HQ for businesses in Tamil Nadu, India and Malaysia, and reported monthly from your own Google accounts." facts={['5 growth solutions', 'Madurai HQ since 2021', 'Offices: Thoothukudi, Rawang (Malaysia)', 'WhatsApp +91 99440 40345']} />
+      <AnswerFirst heading="What are Static Savvy Media’s growth solutions?" text="Static Savvy Media groups its services into five growth solutions: SEO & Content Growth, AI Search (GEO/AEO), Local SEO & Google Business Profile, Google Ads (PPC) and Website Development. They are delivered from our Madurai HQ for businesses in Tamil Nadu, India and Malaysia, and reported monthly from your own Google accounts." facts={['5 growth solutions', 'Madurai HQ since 2021', 'Office: Thoothukudi', 'One line: WhatsApp']} />
 
       <section className="hv2 hv2-section hv2-section--flush" data-section="solutions" style={{ paddingTop: 'clamp(40px,5vw,64px)' }}>
         <div className="hv2-wrap">

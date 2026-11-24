@@ -81,7 +81,6 @@ export async function ssrBodies(root, distAssets) {
     try { out.set('/', { app: renderApp('/'), pages: lastPages }) } catch (e) { console.warn(`ssr-bodies: home app render skipped: ${String(e?.message || e).slice(0, 300)}`) }
     const { officeLocalBusiness, OFFICE_LOCATION_ROUTES } = await vite.ssrLoadModule('/src/data/officeSchema.js')
     const madurai = officeLocalBusiness('madurai')
-    const malaysia = officeLocalBusiness('malaysia')
     for (const r of ssrRoutes) {
      /* One page failing to render must not strip the crawlable body from every other route:
       * skip it (it ships as the plain shell, as before) and say so in the build log. */
@@ -121,10 +120,9 @@ export async function ssrBodies(root, distAssets) {
         ]
         : isAbout ? [
         { '@type': 'AboutPage', '@id': `${HOST}${r.route}#webpage`, name: decode(h1[1]), url: `${HOST}${r.route}`, about: { '@id': ORG_ID }, mainEntity: { '@id': ORG_ID } },
-        { '@type': 'Organization', '@id': ORG_ID, name: 'Static Savvy Media', url: `${HOST}/`, telephone: PHONE, email: EMAIL, sameAs: ORG_SAME_AS, foundingDate: '2021-10-01', foundingLocation: { '@type': 'Place', name: 'Madurai, Tamil Nadu, India' }, founder: { '@id': `${HOST}/about/deepan-kanz/#person` }, areaServed: [{ '@type': 'City', name: 'Madurai' }, { '@type': 'City', name: 'Thoothukudi' }, { '@type': 'Country', name: 'Malaysia' }], subOrganization: [{ '@id': madurai['@id'] }, { '@id': malaysia['@id'] }] },
+        { '@type': 'Organization', '@id': ORG_ID, name: 'Static Savvy Media', url: `${HOST}/`, telephone: PHONE, email: EMAIL, sameAs: ORG_SAME_AS, foundingDate: '2021-10-01', foundingLocation: { '@type': 'Place', name: 'Madurai, Tamil Nadu, India' }, founder: { '@id': `${HOST}/about/deepan-kanz/#person` }, areaServed: [{ '@type': 'City', name: 'Madurai' }, { '@type': 'City', name: 'Thoothukudi' }, { '@type': 'Country', name: 'Malaysia' }], subOrganization: [{ '@id': madurai['@id'] }] },
         person,
         madurai,
-        malaysia,
         { '@type': 'BreadcrumbList', itemListElement: crumbs.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: `${HOST}${c.path}` })) },
       ] : [
         { '@type': 'Service', name: r.service || decode(h1[1]), serviceType: r.serviceType, provider: { '@id': biz ? biz['@id'] : ORG_ID }, areaServed: r.area, url: `${HOST}${r.route}` },

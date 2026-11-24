@@ -237,7 +237,7 @@ const FAQS = [
   },
   {
     question: 'Can Static Savvy Media help with Malaysia grant-aware digital marketing?',
-    answer: 'Static Savvy Media operates from Rawang, Selangor. We provide SEO, GEO/AEO, Local SEO, Google Ads, Social Media Marketing, Website Design & Development, AI Business Automation, and creative services. We can help businesses understand which digital marketing requirements they need to address and prepare a suitable digital project scope.',
+    answer: 'Static Savvy Media serves Malaysian SMEs from its head office in Madurai, India. We provide SEO, GEO/AEO, Local SEO, Google Ads, Social Media Marketing, Website Design & Development, AI Business Automation, and creative services. We can help businesses understand which digital marketing requirements they need to address and prepare a suitable digital project scope.',
   },
 ]
 
@@ -356,7 +356,7 @@ export default function MalaysiaGrantGuide() {
                   {AUTHOR}
                 </span>
                 <span className="malaysia-hero__meta-item">Static Savvy Media</span>
-                <span className="malaysia-hero__meta-item">Rawang, Selangor, Malaysia</span>
+                <span className="malaysia-hero__meta-item">Kuala Lumpur & Selangor, Malaysia</span>
                 <span className="malaysia-hero__meta-item">{READING_TIME}</span>
               </div>
               <p className="malaysia-hero__intro">
@@ -637,7 +637,7 @@ export default function MalaysiaGrantGuide() {
               {/* ---- Section 09: Why Static Savvy Media ---- */}
               <h2 id="why-ssm">Why Static Savvy Media for Malaysian SMEs?</h2>
               <p>
-                Static Savvy Media serves Malaysian SMEs from Rawang, Selangor with grant-aware digital marketing strategies. We understand the Malaysian market and SME-focused approach to digital transformation.
+                Static Savvy Media serves Malaysian SMEs with grant-aware digital marketing strategies. We understand the Malaysian market and SME-focused approach to digital transformation.
               </p>
 
               <div className="malaysia-why-us">
@@ -645,7 +645,7 @@ export default function MalaysiaGrantGuide() {
                   <div className="malaysia-why-card">
                     <div className="malaysia-why-card__number">01</div>
                     <h3 className="malaysia-why-card__title">Malaysia Market Understanding</h3>
-                    <p className="malaysia-why-card__text">Based in Rawang, Selangor. We understand the local SME landscape, market dynamics, and digital transformation needs.</p>
+                    <p className="malaysia-why-card__text">Working with SMEs in Kuala Lumpur and Selangor. We understand the local SME landscape, market dynamics, and digital transformation needs.</p>
                   </div>
                 </ScrollReveal>
                 <ScrollReveal delay={80}>
@@ -709,7 +709,7 @@ export default function MalaysiaGrantGuide() {
       {/* ============================================================
           FINAL CTA
           ============================================================ */}
-      <RelatedReading links={[['/industries/smes-malaysia-grant-eligible/', 'Digital marketing for grant-eligible SMEs'], ['/services/seo/malaysia/', 'SEO company in Malaysia'], ['/services/ai-business-automation/malaysia/', 'AI business automation in Malaysia'], ['/blog/seo-cost-malaysia-price-guide/', 'SEO cost in Malaysia: 2026 price guide'], ['/locations/malaysia/', 'Digital marketing in Malaysia'], ['/locations/malaysia/', 'Static Savvy Media Malaysia (Rawang)']]} />
+      <RelatedReading links={[['/industries/smes-malaysia-grant-eligible/', 'Digital marketing for grant-eligible SMEs'], ['/services/seo/malaysia/', 'SEO company in Malaysia'], ['/services/ai-business-automation/malaysia/', 'AI business automation in Malaysia'], ['/blog/seo-cost-malaysia-price-guide/', 'SEO cost in Malaysia: 2026 price guide'], ['/locations/malaysia/', 'Digital marketing in Malaysia'], ['/locations/malaysia/', 'Digital marketing agency in Malaysia']]} />
 
       <CTASection
         eyebrow="Malaysia SME Services"

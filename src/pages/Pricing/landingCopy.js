@@ -4,7 +4,6 @@
  * Terms); no invented numbers.
  */
 const IN_PHONE = { display: '+91 99440 40345', tel: '+919944040345' }
-const MY_PHONE = { display: '+60 12-453 7030', tel: '+60124537030' }
 
 export const LANDING_COPY = {
   india: {
@@ -20,11 +19,11 @@ export const LANDING_COPY = {
     ],
   },
   malaysia: {
-    phone: MY_PHONE,
+    phone: IN_PHONE,
     eyebrow: 'Your proposal · Malaysia pricing in RM',
     headline: 'Get found on google.com.my and Google Maps, and turn searches into WhatsApp enquiries',
-    promise: 'Our Malaysia team in Rawang, Selangor runs your Google Business Profile, SEO, website, social media and lead campaigns in English and Bahasa Malaysia, with monthly reports from your own accounts.',
-    serve: 'Office in Rawang, Selangor (near AEON Mall Rawang) · Mon–Fri, 9 AM–6 PM MYT · meetings in KL by appointment',
+    promise: 'Our team at our Madurai head office runs your Google Business Profile, SEO, website, social media and lead campaigns in English and Bahasa Malaysia, with monthly reports from your own accounts.',
+    serve: 'Served from our Madurai head office · English and Bahasa Malaysia content · meetings on video',
     pains: [
       { title: 'The map pack decides "near me"', text: 'Customers in KL and the Klang Valley pick from the top Google Maps results. Weak categories, photos and reviews push you out of it.' },
       { title: 'English-only content misses buyers', text: 'Many customers search and compare in Bahasa Malaysia. Content planned per channel and audience reaches more of them than a straight translation.' },
@@ -47,7 +46,7 @@ export const LANDING_COPY = {
     phone: IN_PHONE,
     eyebrow: 'Your proposal · Singapore pricing in SGD',
     headline: 'Digital marketing on Singapore time, without Singapore agency overheads',
-    promise: 'Our team in Rawang, Malaysia (same time zone as Singapore) and Madurai, India runs your Google Business Profile, SEO, website, social media and lead campaigns, with reports from your own accounts.',
+    promise: 'Our team at our Madurai head office in India runs your Google Business Profile, SEO, website, social media and lead campaigns, with reports from your own accounts.',
     serve: 'Remote from Malaysia and India · same clock as Singapore (UTC+8) · no Singapore office claimed',
     pains: [
       { title: 'Fees set for a high-cost city', text: 'Singapore SMEs face agency fees set for a high-cost city, yet most of the work that drives enquiries does not need to be done in Singapore.' },
@@ -77,7 +76,7 @@ export const PROCESS = [
 export const TRUST_FACTS = [
   { k: '4.9★', v: 'from 106 Google reviews' },
   { k: '2021', v: 'founded, 1 October 2021' },
-  { k: '3 offices', v: 'Madurai, Thoothukudi & Rawang' },
+  { k: '2 offices', v: 'Madurai & Thoothukudi' },
   { k: '100%', v: 'of accounts stay in your name' },
 ]
 

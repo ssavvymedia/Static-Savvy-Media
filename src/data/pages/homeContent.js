@@ -33,12 +33,12 @@ export const HOME_SUB = 'Get more calls and WhatsApp leads from Google Maps and 
 export const HOME_PROOF_STRIP = ['4.9★ from 106 Google reviews', 'Madurai', 'Thoothukudi', 'Malaysia']
 
 export const HOME_INTRO =
-  'Static Savvy Media is a Madurai-headquartered digital marketing agency, founded in 2021, that helps businesses get found on Google, Google Maps and AI answer engines like ChatGPT and Perplexity. We run SEO, Local SEO, Google Ads, social media and websites for clients across Tamil Nadu, Malaysia, Singapore and Dubai, with offices in Madurai, Thoothukudi and Rawang (Selangor).'
+  'Static Savvy Media is a Madurai-headquartered digital marketing agency, founded in 2021, that helps businesses get found on Google, Google Maps and AI answer engines like ChatGPT and Perplexity. We run SEO, Local SEO, Google Ads, social media and websites for clients across Tamil Nadu, Malaysia, Singapore and Dubai, with offices in Madurai and Thoothukudi.'
 
 export const HOME_PROOF = [
   { value: '4.9★', label: 'from 106 Google reviews' },
   { value: '2021', label: 'Founded in Madurai' },
-  { value: '3 offices', label: 'Madurai · Thoothukudi · Rawang (Malaysia)' },
+  { value: '2 offices', label: 'Madurai (HQ) · Thoothukudi' },
   { value: '4 markets', label: 'India · Malaysia · Singapore · UAE' },
 ]
 
@@ -51,7 +51,7 @@ export const HOME_MARKETS = [
     path: '/locations/tamil-nadu/',
     pathLabel: 'Digital marketing across Tamil Nadu',
     summary: 'Headquarters in Madurai and an office in Thoothukudi. Local SEO, Google Maps, Ads and websites for Tamil Nadu businesses, quoted in INR.',
-    contact: 'WhatsApp / call +91 99440 40345',
+    contact: 'WhatsApp us',
     cities: [
       { name: 'Madurai (HQ)', path: '/locations/madurai/' },
       { name: 'Chennai', path: '/locations/chennai/' },
@@ -76,8 +76,8 @@ export const HOME_MARKETS = [
     country: 'Malaysia',
     path: '/locations/malaysia/',
     pathLabel: 'Digital marketing in Malaysia',
-    summary: 'Office in Rawang, Selangor. SEO for google.com.my, Google Business Profile, Ads and grant-aware plans for Malaysian SMEs, quoted in MYR.',
-    contact: 'Call +60 12-453 7030',
+    summary: 'Served from our Madurai HQ. SEO for google.com.my, Google Business Profile, Ads and grant-aware plans for Malaysian SMEs, quoted in MYR.',
+    contact: 'WhatsApp us',
     cities: [
       { name: 'Kuala Lumpur', path: '/locations/kuala-lumpur/' },
       { name: 'Selangor', path: '/locations/selangor/' },
@@ -92,7 +92,7 @@ export const HOME_MARKETS = [
     path: '/locations/singapore/',
     pathLabel: 'Digital marketing in Singapore',
     summary: 'Remote SEO, Google Business Profile, Ads and AI-search (GEO/AEO) programmes for Singapore SMEs, quoted in SGD.',
-    contact: 'WhatsApp +91 99440 40345',
+    contact: 'WhatsApp us',
     cities: [{ name: 'Singapore', path: '/locations/singapore/' }],
   },
   {
@@ -102,7 +102,7 @@ export const HOME_MARKETS = [
     path: '/locations/dubai/',
     pathLabel: 'Digital marketing in Dubai',
     summary: 'Remote SEO, Google Maps, Ads and websites for Dubai businesses, quoted in AED.',
-    contact: 'WhatsApp +91 99440 40345',
+    contact: 'WhatsApp us',
     cities: [{ name: 'Dubai', path: '/locations/dubai/' }],
   },
 ]

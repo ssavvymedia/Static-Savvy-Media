@@ -143,7 +143,7 @@ export default function CountryPricing({ country = 'india' }) {
   const faqs = useMemo(() => pricingFaqsFor(c.key), [c.key])
   const [tab, setTab] = useState(PRICING_SERVICES[0].key)
   const phone = copy.phone
-  /* WhatsApp is the Indian line in every country (owner, 10 Nov 2026); `phone` stays the call line. */
+  /* One line everywhere (owner, 24 Nov 2026): WhatsApp and calls both go to +91 99440 40345. */
   const waNumber = c.whatsapp
   const wa = buildWhatsAppLink(waNumber, `Hi Static Savvy Media, I've seen the ${c.label} plans and would like to discuss my proposal.`)
   const waCall = buildWhatsAppLink(waNumber, `Hi Static Savvy Media, I'd like to book a video call (Google Meet or Zoom) about the ${c.label} plans. My preferred day and time: `)
@@ -183,7 +183,7 @@ export default function CountryPricing({ country = 'india' }) {
             <img src={logoImg} width={480} height={320} alt="Static Savvy Media" />
           </span>
           <div className="lp-top__actions">
-            <a className="lp-top__call" href={tel}><Icon name="phone" size={16} /> <span>{phone.display}</span></a>
+            <a className="lp-top__call" href={tel}><Icon name="phone" size={16} /> <span>Call us</span></a>
             <a className="lp-btn lp-btn--primary lp-btn--sm" href={wa} target="_blank" rel="noopener noreferrer"><WhatsAppIcon size={16} variant="white" /> WhatsApp</a>
           </div>
         </div>
@@ -197,13 +197,13 @@ export default function CountryPricing({ country = 'india' }) {
             <h1 id="lp-h1" className="lp-hero__title">{copy.headline}</h1>
             <p className="lp-hero__lead">{copy.promise}</p>
             <div className="lp-hero__ctas">
-              <a className="lp-btn lp-btn--primary lp-btn--lg" href={wa} target="_blank" rel="noopener noreferrer"><WhatsAppIcon size={20} variant="white" /> WhatsApp {waNumber}</a>
+              <a className="lp-btn lp-btn--primary lp-btn--lg" href={wa} target="_blank" rel="noopener noreferrer"><WhatsAppIcon size={20} variant="white" /> Chat on WhatsApp</a>
               <a className="lp-btn lp-btn--ghost lp-btn--lg" href="#plans">See plans &amp; prices</a>
             </div>
             <ul className="lp-badges" aria-label="Why clients trust us">
               <li><a href={s.url} target="_blank" rel="noopener noreferrer"><GoogleG /> <strong>{s.rating}★</strong> from {s.count} Google reviews</a></li>
               <li><Icon name="calendar" size={16} /> Founded 2021</li>
-              <li><Icon name="pin" size={16} /> Madurai · Thoothukudi · Rawang</li>
+              <li><Icon name="pin" size={16} /> Madurai · Thoothukudi</li>
             </ul>
             <p className="lp-hero__serve">{copy.serve}</p>
           </div>
@@ -377,10 +377,10 @@ export default function CountryPricing({ country = 'india' }) {
             <p>Tell us which plan you are looking at. We will confirm the scope, answer your questions and send the written quote.</p>
             <div className="lp-final__grid">
               <a className="lp-action lp-action--wa" href={wa} target="_blank" rel="noopener noreferrer">
-                <WhatsAppIcon size={24} variant="white" /><span><strong>WhatsApp us</strong><small>{waNumber}</small></span>
+                <WhatsAppIcon size={24} variant="white" /><span><strong>WhatsApp us</strong><small>Chat on WhatsApp</small></span>
               </a>
               <a className="lp-action" href={tel}>
-                <Icon name="phone" /><span><strong>Call us</strong><small>{phone.display}</small></span>
+                <Icon name="phone" /><span><strong>Call us</strong><small>Tap to call</small></span>
               </a>
               <a className="lp-action" href={waCall} target="_blank" rel="noopener noreferrer">
                 <Icon name="calendar" /><span><strong>Book a video call</strong><small>Google Meet or Zoom</small></span>
@@ -399,7 +399,7 @@ export default function CountryPricing({ country = 'india' }) {
 
       <footer className="lp-foot">
         <div className="lp-wrap">
-          <p>© Static Savvy Media · Madurai · Thoothukudi · Rawang, Selangor · <a href={`mailto:${EMAIL}`}>{EMAIL}</a></p>
+          <p>© Static Savvy Media · Madurai · Thoothukudi · <a href={`mailto:${EMAIL}`}>{EMAIL}</a></p>
           <p className="lp-foot__small">This page was shared with you privately as part of a proposal. Prices are valid for {c.label} in {c.currency}.</p>
         </div>
       </footer>

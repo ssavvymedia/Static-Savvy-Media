@@ -40,7 +40,7 @@ const FAQS = [
   { question: 'What do I receive?', answer: 'A written review of your website and SEO health, Google Business Profile, AI search presence, competitors and enquiry tracking, plus a prioritised 90-day plan. We walk you through it on a short call or by WhatsApp.' },
   { question: 'How soon will you reply?', answer: 'We reply within 1 working day on WhatsApp, phone or email to confirm the details. The audit itself follows once we have confirmed your main services, locations and competitors.' },
   { question: 'Do you need access to my accounts?', answer: 'No. The audit uses what is publicly visible: your website, Google Business Profile, search results and AI assistant answers. If you later want a deeper review, we can look at Search Console or Analytics with your permission.' },
-  { question: 'Which businesses and locations do you audit?', answer: 'Small and mid-sized businesses in Madurai (our HQ), Thoothukudi and across Tamil Nadu and India, in Malaysia through our Rawang office, and selected businesses in Singapore and the UAE.' },
+  { question: 'Which businesses and locations do you audit?', answer: 'Small and mid-sized businesses in Madurai (our HQ), Thoothukudi and across Tamil Nadu and India, in Malaysia, and selected businesses in Singapore and the UAE.' },
   { question: 'Is the sample report on this page a real client?', answer: 'No. The sample report is illustrative only. It shows the format and the kind of findings we report, not a real client’s data or results.' },
   { question: 'Why do you ask for a budget range?', answer: 'It helps us suggest a plan you can actually run. The ranges are your marketing budget, not our fees, and you can choose “not sure yet”.' },
 ]

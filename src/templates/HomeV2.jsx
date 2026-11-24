@@ -3,6 +3,7 @@ import { AuditBlock, ReviewsCarousel, FounderBlock, Ico, REVIEW_PROOF } from '..
 import ClientWork from '../components/v2/ClientWork.jsx'
 import { HOME_EYEBROW, HOME_H1, HOME_SUB, HOME_PROOF_STRIP, HOME_INTRO, HOME_MARKETS, HOME_MADURAI_LINKS } from '../data/pages/homeContent.js'
 import { HOME_FAQS } from '../data/pages/homeFaqs.js'
+import { WHATSAPP_HREF } from '../utils/constants.js'
 import { GBP_REVIEW_SUMMARY } from '../data/googleReviews.js'
 import HeroLaptop from '../assets/images/home/hero-laptop.webp'
 import HeroLaptopSm from '../assets/images/home/hero-laptop-640.webp'
@@ -118,7 +119,7 @@ export default function HomeV2({ whatsappHref }) {
               <a href={GBP_REVIEW_SUMMARY.url} target="_blank" rel="noopener noreferrer"><strong>{GBP_REVIEW_SUMMARY.rating} <span className="hv2-stars" aria-hidden="true">★★★★★</span></strong><small>{GBP_REVIEW_SUMMARY.count} Google reviews · Madurai</small></a>
             </li>
             <li><Ico d={P.cal} /><span><strong>Est. 2021</strong><small>Founded in Madurai</small></span></li>
-            <li><Ico d={P.pin} /><span><strong>3 Offices</strong><small>Madurai (HQ) · Thoothukudi · Rawang</small></span></li>
+            <li><Ico d={P.pin} /><span><strong>2 Offices</strong><small>Madurai (HQ) · Thoothukudi</small></span></li>
             <li><Ico d={P.globe} /><span><strong>Serving businesses in</strong><small>India · Malaysia · Singapore · UAE</small></span></li>
           </ul>
         </div>
@@ -227,7 +228,7 @@ export default function HomeV2({ whatsappHref }) {
       <section className="hv2-section" data-section="where-we-work" id="where-we-work">
         <div className="hv2-wrap">
           <div className="hv2-head">
-            <div><span className="hv2-eyebrow">Where we work</span><h2 className="hv2-h2">Madurai HQ, with offices in Thoothukudi and Rawang.</h2></div>
+            <div><span className="hv2-eyebrow">Where we work</span><h2 className="hv2-h2">Madurai HQ, with an office in Thoothukudi.</h2></div>
             <p className="hv2-lead">Headquartered in Madurai since 2021. Pick your city for local services and contact details.</p>
           </div>
           <div className="hv2-where">
@@ -245,7 +246,7 @@ export default function HomeV2({ whatsappHref }) {
                   {m.cities.filter((c) => c.path !== '/locations/madurai/').slice(0, 6).map((c, i, arr) => (
                     <span key={c.path}><Link to={c.path} style={{ fontWeight: 500 }}>{c.name}</Link>{i < arr.length - 1 ? ', ' : ''}</span>
                   ))}
-                  <br />{m.contact}
+                  <br /><a href={WHATSAPP_HREF} target="_blank" rel="noopener noreferrer">{m.contact}</a>
                 </p>
               ))}
             </div>

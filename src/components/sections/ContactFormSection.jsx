@@ -1,7 +1,7 @@
 import { lazy, Suspense, useRef, useState } from 'react'
 import { buildWhatsAppLink } from '../../utils/helpers.js'
 import { pagePathname, sendGa4Event } from '../../utils/track.js'
-import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, MALAYSIA_OFFICE, CONTACT_EMAIL } from '../../utils/constants.js'
+import { WHATSAPP_NUMBER, WHATSAPP_MESSAGE, CONTACT_EMAIL } from '../../utils/constants.js'
 import '../../styles/contact-form-v2.css'
 
 // reCAPTCHA loads only after the visitor starts the form (focus/tap), not on page load.
@@ -150,8 +150,7 @@ export default function ContactFormSection() {
               <li>Monthly plans, no lock-in</li>
             </ul>
             <div className="cf2-direct">
-              <a href={waHref} target="_blank" rel="noopener noreferrer" data-track="whatsapp_form_side">WhatsApp {WHATSAPP_NUMBER}</a>
-              <a href={MALAYSIA_OFFICE.phoneHref}>Malaysia call {MALAYSIA_OFFICE.phoneDisplay}</a>
+              <a href={waHref} target="_blank" rel="noopener noreferrer" data-track="whatsapp_form_side">Chat on WhatsApp</a>
               <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
             </div>
           </div>

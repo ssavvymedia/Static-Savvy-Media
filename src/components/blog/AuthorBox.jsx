@@ -18,7 +18,7 @@ export default function AuthorBox({ org = false }) {
               <Link to="/about/">Static Savvy Media team</Link>
               <span>Digital marketing agency, Madurai HQ</span>
             </p>
-            <p className="author-box__bio">Written by the Static Savvy Media team, the digital marketing agency headquartered in Madurai, Tamil Nadu since 2021, with an office in Rawang, Malaysia. We work on SEO, Google Maps, AI search, ads and websites for small and mid-sized businesses.</p>
+            <p className="author-box__bio">Written by the Static Savvy Media team, the digital marketing agency headquartered in Madurai, Tamil Nadu since 2021, serving India and Malaysia. We work on SEO, Google Maps, AI search, ads and websites for small and mid-sized businesses.</p>
             <p className="author-box__links">
               <Link to="/about/">About Static Savvy Media</Link>
             </p>

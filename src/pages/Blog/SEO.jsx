@@ -654,7 +654,7 @@ export default function SEO() {
               {/* ---- Section 08: Why Static Savvy Media ---- */}
               <h2 id="why-ssm">What Makes Static Savvy Media Different?</h2>
               <p>
-                Static Savvy Media is headquartered in Madurai (Kamarajar Salai) with additional offices in Thoothukudi and Rawang, Malaysia. GEO and AEO sit alongside traditional SEO and local SEO — not as a bolt-on slogan. We quote after a free review, keep plans monthly with no lock-in sales pitch, and keep your accounts in your name. Explore{' '}
+                Static Savvy Media is headquartered in Madurai (Kamarajar Salai) with an additional office in Thoothukudi. GEO and AEO sit alongside traditional SEO and local SEO — not as a bolt-on slogan. We quote after a free review, keep plans monthly with no lock-in sales pitch, and keep your accounts in your name. Explore{' '}
                 <Link to="/services/seo/madurai/">SEO services from our Madurai HQ</Link>,{' '}
                 <Link to="/locations/madurai/">digital marketing services in Madurai (our HQ)</Link>, or the{' '}
                 <Link to="/blog/affordable-seo-company-madurai-pricing/">Madurai SEO cost guide</Link> for market ranges and plan shapes.

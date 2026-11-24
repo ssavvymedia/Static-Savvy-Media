@@ -13,7 +13,7 @@ const content = {
       description: DESCRIPTION,
       url: `${SITE_URL}${PATH}`,
       areaServed: { '@type': 'Country', name: 'Malaysia' },
-      provider: { '@id': `${SITE_URL}/locations/malaysia/#localbusiness` },
+      provider: { '@id': `${SITE_URL}/locations/madurai/#localbusiness` },
     }),
   ],
 }

@@ -1,12 +1,9 @@
 import { Link } from 'react-router-dom'
 import LocalServicePage from '../../../templates/LocalServicePage.jsx'
 import MalaysiaContactBlock from '../../../components/sections/MalaysiaContactBlock.jsx'
-import { serviceSchema, professionalServiceSchema } from '../../../utils/schema.js'
+import { serviceSchema } from '../../../utils/schema.js'
 import {
   SITE_URL,
-  MALAYSIA_OFFICE,
-  MALAYSIA_POSTAL_ADDRESS,
-  MALAYSIA_OPENING_HOURS_SPEC,
 } from '../../../utils/constants.js'
 
 const PATH = '/services/google-ads/kuala-lumpur/'
@@ -24,9 +21,8 @@ const content = {
   intro: [
     'In short: Static Savvy Media manages Google Ads for Kuala Lumpur and Klang Valley businesses. We build Search, Performance Max and call campaigns around the enquiries you actually want, track calls, forms and WhatsApp chats back to each campaign, and charge a flat monthly management fee that is separate from your ad spend.',
     'KL is a crowded ad market: clinics, lawyers, property agents, tuition centres and restaurants all bid on the same mobile searches. Good management is less about spending more and more about cutting wasted clicks, tightening locations and sending people to pages that convert.',
-    'We run KL campaigns from our Malaysia office in Rawang, Selangor, with calls on a Malaysian number during Malaysian business hours. Your ad account stays in your company’s name. Page reviewed and updated 25 October 2026 by Deepan Kanz, founder.',
+    'We run KL campaigns from our head office in Madurai, India, over WhatsApp and video calls. Your ad account stays in your company’s name. Page reviewed and updated 25 October 2026 by Deepan Kanz, founder.',
   ],
-  phone: { href: MALAYSIA_OFFICE.phoneHref, display: MALAYSIA_OFFICE.phoneDisplay },
   crumbs: [
     { name: 'Home', path: '/' },
     { name: 'Services', path: '/services/' },
@@ -78,7 +74,7 @@ const content = {
         'Recommended ad spend: we suggest a starting budget after checking cost per click in your sector and area; competitive sectors such as legal or aesthetics need more.',
         'Ad spend is paid directly to Google from your own account; our fee is invoiced separately.',
       ],
-      after: <>For a custom quote, WhatsApp <a href="https://wa.me/919944040345">+91 99440 40345</a>, call <a href="tel:+60124537030">+60 12-453 7030</a> or <Link to="/contact/">send an enquiry</Link>. We reply with a recommended budget and a written management-fee quote.</>,
+      after: <>For a custom quote, <a href="https://wa.me/919944040345">chat with us on WhatsApp</a> or <Link to="/contact/">send an enquiry</Link>. We reply with a recommended budget and a written management-fee quote.</>,
     },
     {
       eyebrow: 'Industries',
@@ -112,10 +108,10 @@ const content = {
         { title: 'Google captures demand', text: 'People already searching for what you sell.' },
         { title: 'Meta builds demand', text: 'Facebook and Instagram ads reach people before they search, useful for F&B, events, beauty and new launches.', link: { to: '/services/social-media-marketing/', label: 'Social media marketing' } },
       ],
-      after: <>Want both organic and paid? See <Link to="/locations/kuala-lumpur/">all our services in Kuala Lumpur</Link> or the <Link to="/locations/malaysia/">Malaysia office</Link>.</>,
+      after: <>Want both organic and paid? See <Link to="/locations/kuala-lumpur/">all our services in Kuala Lumpur</Link> or our <Link to="/locations/malaysia/">Malaysia page</Link>.</>,
     },
   ],
-  contactBlock: <MalaysiaContactBlock heading="Talk to Our Malaysia Team About Google Ads in KL" />,
+  contactBlock: <MalaysiaContactBlock heading="Talk to Us About Google Ads in KL" />,
   related: [
     { name: 'Google Ads management', path: '/services/google-ads/' },
     { name: 'SEO agency in Kuala Lumpur', path: '/services/seo/kuala-lumpur/' },
@@ -128,7 +124,7 @@ const content = {
   faqTitle: 'Frequently Asked Questions, Google Ads in Kuala Lumpur',
   quote: { region: 'malaysia', service: 'Google Ads management in Kuala Lumpur', text: 'We review your account, sector and competitors first, then send a written plan with a recommended ad budget and a flat monthly management fee. No percentage of spend, no lock-in.' },
   faqs: [
-    { question: 'What is the minimum Google Ads budget in KL?', answer: 'It depends on your sector, area and cost per click. We recommend a starting ad budget, paid directly to Google, after a free review of your market, alongside a flat monthly management fee quoted for your scope. Very competitive sectors such as legal or aesthetics usually need more. Message us on WhatsApp at +91 99440 40345 (or call +60 12-453 7030) or send an enquiry for a custom quote.' },
+    { question: 'What is the minimum Google Ads budget in KL?', answer: 'It depends on your sector, area and cost per click. We recommend a starting ad budget, paid directly to Google, after a free review of your market, alongside a flat monthly management fee quoted for your scope. Very competitive sectors such as legal or aesthetics usually need more. Message us on WhatsApp at +91 99440 40345 or send an enquiry for a custom quote.' },
     { question: 'Do you charge a percentage of ad spend or a flat fee?', answer: 'A flat monthly management fee (Starter, Growth or Scale), quoted for your campaign scope after a free review. It is not a percentage of your ad spend.' },
     { question: 'How fast do Google Ads bring leads?', answer: 'Typically within the first few weeks, once ads are approved and conversion tracking is working. Cost per lead usually improves over the first 60 to 90 days as we cut wasted searches and refine bids.' },
     { question: 'Do you own my ad account?', answer: 'No. The Google Ads account stays in your company’s name and you pay Google directly. We work in it with manager access, which you can remove at any time.' },
@@ -137,7 +133,7 @@ const content = {
   ],
   cta: {
     title: 'Want Google Ads That Bring KL Enquiries?',
-    subtitle: 'Call +60 12-453 7030 or message us for a free review of your account or campaign plan.',
+    subtitle: 'Chat with us on WhatsApp for a free review of your account or campaign plan.',
     label: 'Get a Free Google Ads Review',
   },
   schema: [
@@ -147,24 +143,7 @@ const content = {
       description: DESCRIPTION,
       url: `${SITE_URL}${PATH}`,
       areaServed: { '@type': 'City', name: 'Kuala Lumpur' },
-      provider: {
-        '@type': 'ProfessionalService',
-        name: MALAYSIA_OFFICE.name,
-        url: `${SITE_URL}/locations/malaysia/`,
-        telephone: MALAYSIA_OFFICE.phoneE164,
-        address: MALAYSIA_POSTAL_ADDRESS,
-      },
-    }),
-    professionalServiceSchema({
-      name: MALAYSIA_OFFICE.name,
-      url: `${SITE_URL}/locations/malaysia/`,
-      telephone: MALAYSIA_OFFICE.phoneE164,
-      address: MALAYSIA_POSTAL_ADDRESS,
-      openingHoursSpecification: MALAYSIA_OPENING_HOURS_SPEC,
-      areaServed: [
-        { '@type': 'City', name: 'Kuala Lumpur' },
-        { '@type': 'State', name: 'Selangor' },
-      ],
+      provider: { '@id': `${SITE_URL}/locations/madurai/#localbusiness` },
     }),
   ],
 }

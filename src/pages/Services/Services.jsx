@@ -32,7 +32,7 @@ const LOCATION_SERVICE_LINKS = [
 ]
 
 const INTRO =
-  'Static Savvy Media is a Madurai-based digital marketing agency delivering services across Search Engine Optimization (SEO), GEO & AEO AI search, Local SEO, Google Ads & PPC, social media marketing, website design & development, AI business automation, and photography-video content creation, with offices in Madurai, Thoothukudi, and Rawang, Malaysia.'
+  'Static Savvy Media is a Madurai-based digital marketing agency delivering services across Search Engine Optimization (SEO), GEO & AEO AI search, Local SEO, Google Ads & PPC, social media marketing, website design & development, AI business automation, and photography-video content creation, with offices in Madurai and Thoothukudi, serving India and Malaysia.'
 
 const CTA = {
   title: 'Ready to be found everywhere your clients are looking?',
@@ -281,7 +281,7 @@ export default function Services() {
   const ctaLabelWithHeaderIcon = (
     <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.55rem', verticalAlign: 'middle' }}>
       <WhatsAppIcon size={20} />
-      <span>WhatsApp: +91 99440 40345</span>
+      <span>Chat on WhatsApp</span>
     </span>
   )
 

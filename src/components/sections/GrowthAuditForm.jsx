@@ -109,7 +109,7 @@ export default function GrowthAuditForm({ formId = 'growth_audit', defaultCity =
       </div>
       <div className="audit-form__field">
         <label htmlFor={id('phone')}>Phone / WhatsApp</label>
-        <input id={id('phone')} name="phone" type="tel" value={data.phone} onChange={onChange} autoComplete="tel" placeholder={market === 'MY' ? '+60 12-345 6789' : '+91 98765 43210'} required {...aria('phone')} />
+        <input id={id('phone')} name="phone" type="tel" value={data.phone} onChange={onChange} autoComplete="tel" placeholder={market === 'MY' ? 'Your mobile or WhatsApp number' : '+91 98765 43210'} required {...aria('phone')} />
         {err('phone')}
       </div>
       <div className="audit-form__field audit-form__field--full">

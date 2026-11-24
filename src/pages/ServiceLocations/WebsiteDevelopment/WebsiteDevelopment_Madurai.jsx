@@ -19,7 +19,7 @@ const content = {
     'Every site we build is set up for search from day one: clean URLs, page titles and meta descriptions, schema markup, Core Web Vitals and Google Search Console, so your SEO does not have to start with a rebuild.',
   ],
   trust: GOOGLE_TRUST_LINE,
-  phone: { href: 'tel:+919944040345', display: '+91 99440 40345' },
+  phone: { href: 'tel:+919944040345', display: 'us' },
   image: { jpg: '/og/services-06website.jpg', webp: '/og/services-06website.webp', alt: 'Website design and development company in Madurai, Static Savvy Media' },
   quickAnswer: {
     heading: 'Looking for a web design company in Madurai?',

@@ -53,6 +53,6 @@ export const MADURAI_FAQS = [
   {
     question: 'Where is your Madurai office and since when have you been operating?',
     answer:
-      'Our headquarters is at 2nd Floor, 4/3, Srinivasa Perumal Koil St, Kamarajar Salai, Madurai 625009, open Monday to Saturday, 9:00 AM to 6:30 PM IST. Static Savvy Media has served Madurai businesses since 1 October 2021 and also has offices in Thoothukudi and Rawang, Malaysia.',
+      'Our headquarters is at 2nd Floor, 4/3, Srinivasa Perumal Koil St, Kamarajar Salai, Madurai 625009, open Monday to Saturday, 9:00 AM to 6:30 PM IST. Static Savvy Media has served Madurai businesses since 1 October 2021 and also has an office in Thoothukudi.',
   },
 ]

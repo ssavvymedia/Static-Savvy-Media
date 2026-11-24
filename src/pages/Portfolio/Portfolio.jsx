@@ -14,7 +14,6 @@ import logoImg from '../../assets/images/logo/SSMLOGO.webp'
 const ORG_ID = `${SITE_URL}/#organization`
 const EMAIL = 'info@staticsavvymedia.com'
 const IN_PHONE = { display: '+91 99440 40345', tel: '+919944040345' }
-const MY_PHONE = { display: '+60 12-453 7030', tel: '+60124537030' }
 const SHOTS = '/p/pf'
 
 const ICONS = {
@@ -141,7 +140,7 @@ export default function Portfolio() {
             <img src={logoImg} width={480} height={320} alt="Static Savvy Media" />
           </span>
           <div className="lp-top__actions">
-            <a className="lp-top__call" href={tel}><Icon name="phone" size={16} /> <span>{IN_PHONE.display}</span></a>
+            <a className="lp-top__call" href={tel}><Icon name="phone" size={16} /> <span>Call us</span></a>
             <a className="lp-btn lp-btn--primary lp-btn--sm" href={wa} {...ext}><WhatsAppIcon size={16} variant="white" /> WhatsApp</a>
           </div>
         </div>
@@ -160,10 +159,10 @@ export default function Portfolio() {
           <ul className="lp-badges pf-trust" aria-label="Why clients trust us">
             <li><a href={s.url} {...ext}><GoogleG /> <strong>{s.rating}★</strong> from {s.count} Google reviews</a></li>
             <li><Icon name="calendar" size={16} /> Founded 2021</li>
-            <li><Icon name="pin" size={16} /> 3 offices: Madurai · Thoothukudi · Rawang</li>
+            <li><Icon name="pin" size={16} /> 2 offices: Madurai · Thoothukudi</li>
           </ul>
           <div className="lp-hero__ctas pf-hero__ctas">
-            <a className="lp-btn lp-btn--primary lp-btn--lg" href={wa} {...ext}><WhatsAppIcon size={20} variant="white" /> WhatsApp {IN_PHONE.display}</a>
+            <a className="lp-btn lp-btn--primary lp-btn--lg" href={wa} {...ext}><WhatsAppIcon size={20} variant="white" /> Chat on WhatsApp</a>
             <a className="lp-btn lp-btn--ghost lp-btn--lg" href="#gbp-clients">See client work</a>
           </div>
         </div>
@@ -279,13 +278,10 @@ export default function Portfolio() {
             <p>Send us your Google Business Profile or website. We will check where you rank today against your top competitors and tell you honestly what we would fix first.</p>
             <div className="lp-final__grid">
               <a className="lp-action lp-action--wa" href={wa} {...ext}>
-                <WhatsAppIcon size={24} variant="white" /><span><strong>WhatsApp (India)</strong><small>{IN_PHONE.display}</small></span>
-              </a>
-              <a className="lp-action" href={`tel:${MY_PHONE.tel}`}>
-                <Icon name="phone" /><span><strong>Call (Malaysia)</strong><small>{MY_PHONE.display}</small></span>
+                <WhatsAppIcon size={24} variant="white" /><span><strong>WhatsApp us</strong><small>Chat on WhatsApp</small></span>
               </a>
               <a className="lp-action" href={tel}>
-                <Icon name="phone" /><span><strong>Call us</strong><small>{IN_PHONE.display}</small></span>
+                <Icon name="phone" /><span><strong>Call us</strong><small>Tap to call</small></span>
               </a>
               <a className="lp-action" href="#portfolio-enquiry">
                 <Icon name="mail" /><span><strong>Send an enquiry</strong><small>Form below or {EMAIL}</small></span>
@@ -299,7 +295,7 @@ export default function Portfolio() {
       </div>
       <footer className="lp-foot">
         <div className="lp-wrap">
-          <p>© Static Savvy Media · Madurai · Thoothukudi · Rawang, Selangor · <a href={`mailto:${EMAIL}`}>{EMAIL}</a></p>
+          <p>© Static Savvy Media · Madurai · Thoothukudi · <a href={`mailto:${EMAIL}`}>{EMAIL}</a></p>
           <p className="lp-foot__small">This page was shared with you privately. Rankings are snapshots on the dates shown and change over time.</p>
         </div>
       </footer>

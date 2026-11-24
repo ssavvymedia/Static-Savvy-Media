@@ -6,7 +6,7 @@ import { PORTFOLIO_PATH } from './portfolioLinks.js'
  * Routes whose real page component is server-rendered at build time (scripts/seo/prerender-heads.mjs)
  * so the raw HTML carries the same H1, body copy, FAQs and internal links visitors see, plus a
  * Service + LocalBusiness + FAQPage + BreadcrumbList JSON-LD graph built from that render.
- * Order: Madurai first, then Malaysia (Rawang / Kuala Lumpur). `office` picks the LocalBusiness node.
+ * Order: Madurai first, then Malaysia (Rawang / Kuala Lumpur). `office` picks the LocalBusiness node ('malaysia' now maps to the Madurai node: no Malaysian address, 24 Nov 2026).
  * Plain data only (no JSX): loaded by Node at build time.
  */
 export const ssrRoutes = [
@@ -104,7 +104,7 @@ export const ssrRoutes = [
   /* Diwali 2026 campaign page: WebPage + Organization, no breadcrumb trail. */
   { route: '/diwali-2026/', module: '/src/pages/Diwali/Diwali2026.jsx', kind: 'page', pageType: 'WebPage', office: 'org', noCrumbs: true },
   /* City landing pages (src/data/cityPages.js). The LocalBusiness node is always a real office
-   * (Madurai HQ, or the Rawang office for Malaysia). areaServed is the city. No street address
+   * (Madurai HQ, also for Malaysian pages). areaServed is the city. No street address
    * is invented for Theni, Erode, Singapore or Dubai. */
   ...cityPages.map((c) => ({
     route: `/locations/${c.slug}/`,
